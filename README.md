@@ -29,6 +29,34 @@ library. It covers the three things you asked for:
 
 ---
 
+## 📱 Running on Google Colab (mobile-friendly, no laptop needed)
+
+If you're on a phone/Colab, skip the scripts below and use the notebook
+**`schwab_colab.ipynb`** instead — it's self-contained and walks you through
+each step in cells.
+
+**Open it directly in Colab** (replace nothing — this repo's path is baked in):
+
+```
+https://colab.research.google.com/github/caleblschulte0-ux/schwab-trader/blob/claude/schwab-trading-integration-wRfeP/schwab_colab.ipynb
+```
+
+Then run the cells top to bottom:
+1. Install + paste your App Key/Secret (hidden input — nothing is saved to the file).
+2. Tap the login URL → approve in your browser.
+3. Paste the `https://127.0.0.1/?code=...` URL back → saves `token.json`.
+4. View balances & positions.
+5. Place a test limit order (priced so it won't fill).
+
+> Colab wipes files when the runtime resets, so `token.json` won't persist
+> forever there. The notebook's last cell explains how to reconnect, and you
+> can mount Google Drive to keep tokens across sessions.
+
+The rest of this README covers the **command-line scripts** (for running on a
+regular computer).
+
+---
+
 ## One-time setup
 
 ### 1. Install dependencies
