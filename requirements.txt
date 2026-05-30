@@ -1,0 +1,4 @@
+schwab-trader>=1.2.0
+python-dotenv>=1.0.0
+# Pulled in by schwab-trader's streaming module; pinned so imports work.
+websockets>=12.0

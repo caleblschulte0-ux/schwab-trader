@@ -1,0 +1,17 @@
+# Secrets & tokens — NEVER commit these
+.env
+token.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.Python
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
