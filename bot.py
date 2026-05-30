@@ -1,24 +1,28 @@
-"""Day-trade executor — entries + exits, dry-run by default.
+"""Swing/day-trade executor — bracket entries + brain-set exits, dry-run by default.
 
 Pipeline: a scheduled Claude routine (the "brain") researches the market and
 writes picks to `signals/orders.json`. This bot, run every 30 min by GitHub
-Actions, reads them, RE-CHECKS every guardrail in code, and manages a full
-day-trade lifecycle:
+Actions, reads them, RE-CHECKS every guardrail in code, and manages positions.
 
-  ENTRIES  buy a DAY limit (buy-only, <= $65, skip if already held). DAY orders
-           expire at the close, so nothing unfilled lingers overnight.
+ENTRIES — for each fresh BUY pick:
+  Place a BRACKET order: a GTC limit buy with the brain's take-profit and
+  stop-loss attached as resting child orders. The exits live ON THE EXCHANGE,
+  so they fire automatically whenever price hits the target/stop — even when
+  this bot isn't running and even after hours. We do NOT force-sell at the
+  close; winners can ride / hold overnight.
+  Guardrails (enforced here regardless of what the brain wrote):
+    * BUY-only, stocks only, quantity * limit <= MAX_DOLLARS_PER_TRADE
+    * skip symbols already HELD or with a WORKING/PENDING order (no double-buys)
+    * the brain MUST supply take_profit and stop_loss prices, and they must be
+      sane (stop < entry < target) or the entry is skipped.
 
-  EXITS    (all SELL-to-close — we only ever sell what we already own, never short)
-    1. Profit target / stop: each run, compare live price to entry; sell at
-       +TAKE_PROFIT_PCT or -STOP_LOSS_PCT.
-    2. Brain exit: a {"action":"SELL"} entry in orders.json for a held symbol
-       closes it.
-    3. End-of-day flatten: on the run shortly before the close, sell everything
-       still open so the day ends flat (true day trading).
+EXITS — three layers, all SELL-to-close (we only sell shares we own, never short):
+  1. The bracket's resting target/stop (primary; works while bot is offline).
+  2. Brain SELL signal: {"action":"SELL"} for a held symbol -> close it now.
+  (No end-of-day flatten — positions may be held overnight by design.)
 
-SAFETY: DRY_RUN defaults to "true" — it only logs "would buy/sell" and places
-nothing until a DRY_RUN repo variable is set to "false". Buy-to-open only;
-sell only to close a held long. Quantities are clamped to what is actually held.
+SAFETY: DRY_RUN defaults to "true" — only logs "would buy/sell", places nothing,
+until a DRY_RUN repo variable is set to "false".
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
 Optional: SCHWAB_CALLBACK_URL, DRY_RUN
@@ -27,20 +31,20 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from schwab import SchwabAuth, SchwabClient
-from schwab.models.generated.trading_models import Instruction, Duration
+from schwab.models.generated.trading_models import Instruction, Duration, OrderType
 
-# ===== GUARDRAILS / KNOBS (enforced here no matter what the brain says) =====
+# ===== GUARDRAILS / KNOBS =====
 MAX_DOLLARS_PER_TRADE = 65.00   # never spend more than this on one entry
-TAKE_PROFIT_PCT       = 0.08    # sell a winner at +8%
-STOP_LOSS_PCT         = 0.05    # sell a loser at -5%
 MAX_SIGNAL_AGE_HOURS  = 18      # ignore a stale orders.json
-# Flatten window (UTC). US close = 20:00 UTC; we flatten on the ~19:30 run.
-FLATTEN_AFTER_UTC_MIN = 19 * 60 + 25   # 19:25 UTC  (~2:25 PM CDT)
 ORDERS_FILE           = "signals/orders.json"
-# ===========================================================================
+# Win/loss levels are NOT fixed here — the brain sets take_profit & stop_loss
+# per pick. These bounds only reject obviously-broken values.
+MIN_TP_OVER_ENTRY     = 0.005   # target must be >= 0.5% above entry
+MIN_STOP_UNDER_ENTRY  = 0.005   # stop must be >= 0.5% below entry
+# ==============================
 
 APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
 APP_SECRET    = os.environ["SCHWAB_APP_SECRET"].strip()
@@ -85,9 +89,14 @@ def is_fresh(generated_utc: str | None) -> bool:
     return age_h <= MAX_SIGNAL_AGE_HOURS
 
 
-def in_flatten_window() -> bool:
-    now = datetime.now(timezone.utc)
-    return (now.hour * 60 + now.minute) >= FLATTEN_AFTER_UTC_MIN
+def _as_dict(o):
+    if o is None:
+        return {}
+    if hasattr(o, "model_dump"):
+        return o.model_dump()
+    if isinstance(o, dict):
+        return o
+    return dict(o)
 
 
 def get_positions(client: SchwabClient) -> dict[str, dict]:
@@ -95,10 +104,9 @@ def get_positions(client: SchwabClient) -> dict[str, dict]:
     out: dict[str, dict] = {}
     try:
         for acct in client.get_accounts(include_positions=True):
-            sec = getattr(acct, "securities_account", None)
-            d = sec.model_dump() if hasattr(sec, "model_dump") else (sec or {})
+            d = _as_dict(getattr(acct, "securities_account", None))
             for p in (d.get("positions") or []):
-                pd = p.model_dump() if hasattr(p, "model_dump") else (p or {})
+                pd = _as_dict(p)
                 instr = pd.get("instrument") or {}
                 sym = instr.get("symbol") if isinstance(instr, dict) else None
                 qty = pd.get("longQuantity") or 0
@@ -109,10 +117,38 @@ def get_positions(client: SchwabClient) -> dict[str, dict]:
     return out
 
 
+def get_working_symbols(client: SchwabClient, account_number: str) -> set[str]:
+    """Symbols with an open/working/pending order — so we never double-order."""
+    working: set[str] = set()
+    open_states = {"WORKING", "PENDING_ACTIVATION", "QUEUED", "ACCEPTED",
+                   "AWAITING_PARENT_ORDER", "AWAITING_CONDITION", "NEW"}
+    try:
+        now = datetime.now(timezone.utc)
+        orders = client.get_orders(
+            account_number,
+            from_entered_time=now - timedelta(days=2),
+            to_entered_time=now + timedelta(minutes=5),
+        )
+        for o in orders:
+            od = _as_dict(o)
+            status = str(od.get("status", "")).upper()
+            if status and status not in open_states:
+                continue
+            for leg in (od.get("orderLegCollection") or []):
+                ld = _as_dict(leg)
+                instr = ld.get("instrument") or {}
+                sym = instr.get("symbol") if isinstance(instr, dict) else None
+                if sym:
+                    working.add(sym)
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not read working orders: {exc}")
+    return working
+
+
 def last_price(client: SchwabClient, symbol: str) -> float | None:
     try:
         q = client.get_quotes(symbol)
-        d = q.model_dump() if hasattr(q, "model_dump") else dict(q)
+        d = _as_dict(q)
         found: dict[str, float] = {}
 
         def walk(o):
@@ -134,106 +170,100 @@ def last_price(client: SchwabClient, symbol: str) -> float | None:
     return None
 
 
-def sell_to_close(client, acct, symbol: str, qty, limit: float, why: str):
-    """Place a SELL limit to close a held long (or log it in dry-run)."""
-    qty = int(qty)
-    if qty <= 0:
-        return
-    if DRY_RUN:
-        print(f"[{symbol}] DRY-RUN: would SELL {qty} @ ${limit:.2f} to close ({why})")
-        return
-    try:
-        order = client.create_limit_order(
-            symbol=symbol, quantity=qty, limit_price=round(limit, 2),
-            instruction=Instruction.sell, duration=Duration.day,
-        )
-        client.place_order(acct.hash_value, order)
-        print(f"[{symbol}] ✅ LIVE SELL {qty} @ ${limit:.2f} to close ({why})")
-    except Exception as exc:  # noqa: BLE001
-        print(f"[{symbol}] sell error: {exc}")
-
-
-def buy_entry(client, acct, symbol: str, qty: int, limit: float):
-    if DRY_RUN:
-        print(f"[{symbol}] DRY-RUN: would BUY {qty} @ ${limit:.2f} = ${qty * limit:.2f}")
-        return
-    try:
-        order = client.create_limit_order(
-            symbol=symbol, quantity=qty, limit_price=round(limit, 2),
-            instruction=Instruction.buy, duration=Duration.day,
-        )
-        client.place_order(acct.hash_value, order)
-        print(f"[{symbol}] ✅ LIVE BUY {qty} @ ${limit:.2f}")
-    except Exception as exc:  # noqa: BLE001
-        print(f"[{symbol}] buy error: {exc}")
-
-
-def manage_exits(client, acct, positions: dict, brain_sells: set[str]):
-    """Sell-to-close on target/stop or when the brain says to."""
-    for sym, pos in positions.items():
-        price = last_price(client, sym)
-        if price is None:
-            continue
-        avg = pos["avg"] or price
-        change = (price - avg) / avg if avg else 0
-        if sym in brain_sells:
-            sell_to_close(client, acct, sym, pos["qty"], price, "brain SELL signal")
-        elif change >= TAKE_PROFIT_PCT:
-            sell_to_close(client, acct, sym, pos["qty"], price, f"+{change*100:.1f}% target")
-        elif change <= -STOP_LOSS_PCT:
-            sell_to_close(client, acct, sym, pos["qty"], price, f"{change*100:.1f}% stop")
-        else:
-            print(f"[{sym}] hold — {change*100:+.1f}% vs entry (target +{TAKE_PROFIT_PCT*100:.0f}% / stop -{STOP_LOSS_PCT*100:.0f}%)")
-
-
-def flatten_all(client, acct, positions: dict):
-    print("--- END-OF-DAY FLATTEN: closing all open positions ---")
-    if not positions:
-        print("Already flat — nothing to close.")
-        return
-    for sym, pos in positions.items():
-        price = last_price(client, sym) or pos["avg"]
-        sell_to_close(client, acct, sym, pos["qty"], price, "EOD flatten")
-
-
-def passes_entry_guardrails(order: dict) -> tuple[bool, str]:
+def validate_entry(order: dict) -> tuple[bool, str]:
     if order.get("action") != "BUY":
         return False, "not a BUY"
     if order.get("instrument", "stock") != "stock":
         return False, "only stocks supported for now"
     qty = order.get("quantity") or 0
     limit = order.get("limit_price") or 0
+    tp = order.get("take_profit") or 0
+    sl = order.get("stop_loss") or 0
     if qty <= 0 or limit <= 0:
         return False, "bad quantity/limit_price"
     if qty * limit > MAX_DOLLARS_PER_TRADE:
         return False, f"${qty*limit:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap"
+    if tp <= 0 or sl <= 0:
+        return False, "brain must supply take_profit and stop_loss prices"
+    if tp < limit * (1 + MIN_TP_OVER_ENTRY):
+        return False, f"take_profit ${tp:.2f} not above entry ${limit:.2f}"
+    if sl > limit * (1 - MIN_STOP_UNDER_ENTRY):
+        return False, f"stop_loss ${sl:.2f} not below entry ${limit:.2f}"
     return True, "ok"
+
+
+def open_bracket(client, acct, order: dict):
+    sym = order["symbol"]
+    qty = int(order["quantity"])
+    limit = round(float(order["limit_price"]), 2)
+    tp = round(float(order["take_profit"]), 2)
+    sl = round(float(order["stop_loss"]), 2)
+    if DRY_RUN:
+        print(f"[{sym}] DRY-RUN: would BUY {qty} @ ${limit:.2f} "
+              f"| target ${tp:.2f} | stop ${sl:.2f} | ${qty*limit:.2f} (GTC bracket)")
+        return
+    try:
+        bracket = client.create_bracket_order(
+            symbol=sym, quantity=qty, instruction=Instruction.buy,
+            entry_price=limit, profit_target_price=tp, stop_loss_price=sl,
+            order_type=OrderType.limit, duration=Duration.good_till_cancel,
+        )
+        client.place_order(acct.hash_value, bracket)
+        print(f"[{sym}] ✅ LIVE BUY {qty} @ ${limit:.2f} | target ${tp:.2f} | stop ${sl:.2f}")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[{sym}] entry error: {exc}")
+
+
+def sell_to_close(client, acct, symbol: str, qty, why: str):
+    qty = int(qty)
+    if qty <= 0:
+        return
+    price = last_price(client, symbol)
+    if DRY_RUN:
+        px = f"${price:.2f}" if price else "market"
+        print(f"[{symbol}] DRY-RUN: would SELL {qty} @ {px} to close ({why})")
+        return
+    try:
+        if price:
+            order = client.create_limit_order(
+                symbol=symbol, quantity=qty, limit_price=round(price, 2),
+                instruction=Instruction.sell, duration=Duration.day,
+            )
+        else:
+            order = client.create_market_order(
+                symbol=symbol, quantity=qty, instruction=Instruction.sell,
+                duration=Duration.day,
+            )
+        client.place_order(acct.hash_value, order)
+        print(f"[{symbol}] ✅ LIVE SELL {qty} to close ({why})")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[{symbol}] sell error: {exc}")
 
 
 def main() -> int:
     mode = "DRY-RUN (no real orders)" if DRY_RUN else "LIVE (real orders!)"
-    print(f"=== Day-trade executor | mode: {mode} ===")
+    print(f"=== Executor | mode: {mode} ===")
 
     client = get_client()
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
-    print(f"Open positions: {', '.join(positions) if positions else '(none)'}")
+    working = get_working_symbols(client, acct.account_number)
+    print(f"Held: {', '.join(positions) or '(none)'} | Working orders: {', '.join(working) or '(none)'}")
 
-    # 1. End-of-day: flatten everything and stop (no new entries near the close).
-    if in_flatten_window():
-        flatten_all(client, acct, positions)
-        print("=== done (flatten) ===")
-        return 0
-
-    # 2. Load the brain's picks.
     generated_utc, orders = load_orders()
-    fresh = orders and is_fresh(generated_utc)
-    brain_sells = {o.get("symbol") for o in orders if o.get("action") == "SELL"} if fresh else set()
+    fresh = bool(orders) and is_fresh(generated_utc)
 
-    # 3. Manage exits on anything we hold (target / stop / brain signal).
-    manage_exits(client, acct, positions, brain_sells)
+    # 1. Brain SELL signals — close held positions the brain wants out of.
+    if fresh:
+        for o in orders:
+            if o.get("action") == "SELL":
+                sym = o.get("symbol")
+                if sym in positions:
+                    sell_to_close(client, acct, sym, positions[sym]["qty"], "brain SELL signal")
+                else:
+                    print(f"[{sym}] SELL signal ignored — not held")
 
-    # 4. Open new entries from fresh BUY picks.
+    # 2. New bracket entries from fresh BUY picks.
     if not fresh:
         print("No fresh BUY picks to act on.")
         print("=== done ===")
@@ -243,14 +273,17 @@ def main() -> int:
         if order.get("action") != "BUY":
             continue
         sym = order.get("symbol", "?")
-        ok, why = passes_entry_guardrails(order)
+        ok, why = validate_entry(order)
         if not ok:
             print(f"[{sym}] SKIP entry — {why}")
             continue
         if sym in positions:
             print(f"[{sym}] SKIP entry — already holding")
             continue
-        buy_entry(client, acct, sym, int(order["quantity"]), float(order["limit_price"]))
+        if sym in working:
+            print(f"[{sym}] SKIP entry — already has a working/pending order")
+            continue
+        open_bracket(client, acct, order)
 
     print("=== done ===")
     return 0
