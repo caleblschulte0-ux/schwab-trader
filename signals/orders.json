@@ -1,0 +1,7 @@
+{
+  "generated_utc": "2026-05-30T12:00:00Z",
+  "orders": [
+    {"symbol": "HLIT", "action": "BUY", "instrument": "stock", "quantity": 4, "limit_price": 15.50},
+    {"symbol": "SOFI", "action": "BUY", "instrument": "stock", "quantity": 3, "limit_price": 18.25}
+  ]
+}
