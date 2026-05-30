@@ -21,13 +21,15 @@ import os
 import sys
 
 from schwab import SchwabAuth, SchwabClient
-from schwab.models.generated.trading_models import Instruction
+from schwab.models.generated.trading_models import Instruction, Duration, OrderType
 
 # ============== STRATEGY + GUARDRAILS (edit these) ==============
-WATCHLIST   = ["AAPL", "MSFT"]   # symbols the bot is allowed to consider
-MAX_SHARES  = 1                  # never buy more than this many shares
-MAX_DOLLARS = 50.00              # never spend more than this on one order
-BUY_DIP_PCT = 0.02               # buy if price is >= 2% below today's open
+WATCHLIST       = ["AAPL", "MSFT"]  # symbols the bot is allowed to consider
+MAX_SHARES      = 1                 # never buy more than this many shares
+MAX_DOLLARS     = 50.00             # never spend more than this on one order
+BUY_DIP_PCT     = 0.02              # buy if price is >= 2% below today's open
+TAKE_PROFIT_PCT = 0.05             # auto-sell for +5% profit
+STOP_LOSS_PCT   = 0.03             # auto-sell to cap a -3% loss
 # ===============================================================
 
 APP_KEY       = os.environ["SCHWAB_APP_KEY"]
@@ -102,15 +104,22 @@ def main() -> int:
             print(f"[{symbol}] {action} {qty} @ {limit}  ({reason})")
             if action != "BUY":
                 continue
+            tp = round(limit * (1 + TAKE_PROFIT_PCT), 2)
+            sl = round(limit * (1 - STOP_LOSS_PCT), 2)
             if DRY_RUN:
-                print(f"   DRY-RUN: would BUY {qty} {symbol} limit ${limit:.2f}")
+                print(f"   DRY-RUN: would BUY {qty} {symbol} @ ${limit:.2f} "
+                      f"(take-profit ${tp:.2f} / stop ${sl:.2f})")
                 continue
-            order = client.create_limit_order(
-                symbol=symbol, quantity=qty, limit_price=limit,
-                instruction=Instruction.buy,
+            # Bracket = entry + auto take-profit + auto stop-loss, resting GTC,
+            # so each position manages its own exit with no further watching.
+            order = client.create_bracket_order(
+                symbol=symbol, quantity=qty, instruction=Instruction.buy,
+                entry_price=limit, profit_target_price=tp, stop_loss_price=sl,
+                order_type=OrderType.limit, duration=Duration.good_till_cancel,
             )
             client.place_order(acct.hash_value, order)
-            print(f"   ✅ LIVE: submitted BUY {qty} {symbol} limit ${limit:.2f}")
+            print(f"   ✅ LIVE: BUY {qty} {symbol} @ ${limit:.2f} "
+                  f"| TP ${tp:.2f} | SL ${sl:.2f}")
         except Exception as exc:  # noqa: BLE001 - keep going on per-symbol errors
             print(f"[{symbol}] error: {exc}")
 
