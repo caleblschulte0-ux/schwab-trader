@@ -1,0 +1,32 @@
+name: schwab-trader-bot
+
+# Runs the bot on a schedule (free) AND via a manual "Run workflow" button.
+# NOTE: scheduled runs only fire when this file is on the repo's DEFAULT branch
+# (usually main). Until then, use the manual "Run workflow" button to test.
+on:
+  workflow_dispatch: {}          # manual run button in the Actions tab
+  schedule:
+    # Every 30 min, roughly U.S. market hours (UTC). Tune to taste.
+    - cron: "*/30 14-20 * * 1-5"
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install schwab-trader websockets
+
+      - name: Run the bot
+        env:
+          SCHWAB_APP_KEY: ${{ secrets.SCHWAB_APP_KEY }}
+          SCHWAB_APP_SECRET: ${{ secrets.SCHWAB_APP_SECRET }}
+          SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
+          # Safety: stays in dry-run unless you add a DRY_RUN variable set to "false".
+          DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
+        run: python bot.py
