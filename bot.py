@@ -32,18 +32,27 @@ TAKE_PROFIT_PCT = 0.05             # auto-sell for +5% profit
 STOP_LOSS_PCT   = 0.03             # auto-sell to cap a -3% loss
 # ===============================================================
 
-APP_KEY       = os.environ["SCHWAB_APP_KEY"]
-APP_SECRET    = os.environ["SCHWAB_APP_SECRET"]
-REFRESH_TOKEN = os.environ["SCHWAB_REFRESH_TOKEN"]
-CALLBACK      = os.environ.get("SCHWAB_CALLBACK_URL", "https://127.0.0.1/")
+APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
+APP_SECRET    = os.environ["SCHWAB_APP_SECRET"].strip()
+REFRESH_TOKEN = os.environ["SCHWAB_REFRESH_TOKEN"].strip()
+CALLBACK      = os.environ.get("SCHWAB_CALLBACK_URL", "https://127.0.0.1/").strip()
 DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 
 
 def get_client() -> SchwabClient:
     """Authenticate using the stored refresh token (no browser needed)."""
+    # Lengths only (not the secret values) help spot a truncated/typo'd paste.
+    print(f"(debug) lengths -> key:{len(APP_KEY)} secret:{len(APP_SECRET)} "
+          f"refresh_token:{len(REFRESH_TOKEN)}  (expected key:48 secret:64)")
     auth = SchwabAuth(APP_KEY, APP_SECRET, CALLBACK)
     auth.refresh_token = REFRESH_TOKEN
-    auth.refresh_access_token()  # mint a fresh ~30-min access token
+    try:
+        auth.refresh_access_token()  # mint a fresh ~30-min access token
+    except Exception as exc:  # noqa: BLE001 - surface Schwab's exact reason
+        resp = getattr(exc, "response", None)
+        if resp is not None:
+            print(f"Schwab token endpoint said: HTTP {resp.status_code} -> {resp.text}")
+        raise
     return SchwabClient(APP_KEY, APP_SECRET, CALLBACK, auth=auth)
 
 
