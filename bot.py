@@ -11,6 +11,10 @@ So entries are now DEAD SIMPLE and priced off Schwab's LIVE quote:
            if price >= the pick's take_profit or <= its stop_loss, SELL to close.
            Also honors a brain {"action":"SELL"} signal.
 
+Ground truth: every run the bot writes the account's REAL positions to
+signals/holdings.json. The brain reads that file to know what it actually owns —
+no hardcoding holdings anywhere.
+
 Risk rules still enforced in code (your one rule is safe):
   * BUY-only; we only ever SELL shares we already own (never short).
   * quantity * entry <= MAX_DOLLARS_PER_TRADE.
@@ -19,8 +23,6 @@ Risk rules still enforced in code (your one rule is safe):
   * don't chase: skip a BUY if the live ask is already > limit_price * (1+MAX_SLIPPAGE).
 
 DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
-Targets/stops are remembered via the pick file; the bot re-reads orders.json each
-run to know each held symbol's take_profit / stop_loss.
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
 Optional: SCHWAB_CALLBACK_URL, DRY_RUN
@@ -40,6 +42,7 @@ MAX_SIGNAL_AGE_HOURS  = 18      # ignore a stale orders.json
 MAX_SLIPPAGE          = 0.03    # skip a BUY if live ask is >3% above the pick's limit
 MARKETABLE_BUFFER     = 0.002   # buy limit = live ask * (1 + this) so it fills now
 ORDERS_FILE           = "signals/orders.json"
+HOLDINGS_FILE         = "signals/holdings.json"
 MIN_TP_OVER_ENTRY     = 0.005
 MIN_STOP_UNDER_ENTRY  = 0.005
 # ==============================
@@ -112,6 +115,24 @@ def get_positions(client: SchwabClient) -> dict[str, dict]:
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not read positions: {exc}")
     return out
+
+
+def write_holdings(positions: dict) -> None:
+    """Write the account's REAL holdings to a file the brain trusts as ground truth."""
+    data = {
+        "updated_utc": datetime.now(timezone.utc).isoformat(),
+        "holdings": [
+            {"symbol": s, "quantity": p["qty"], "avg_price": p["avg"]}
+            for s, p in sorted(positions.items())
+        ],
+    }
+    try:
+        os.makedirs(os.path.dirname(HOLDINGS_FILE), exist_ok=True)
+        with open(HOLDINGS_FILE, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, indent=2)
+        print(f"Wrote {HOLDINGS_FILE}: {len(data['holdings'])} holding(s)")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not write holdings file: {exc}")
 
 
 def get_working_symbols(client: SchwabClient, account_hash: str) -> tuple[set[str], bool]:
@@ -235,6 +256,7 @@ def main() -> int:
     client = get_client()
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
+    write_holdings(positions)  # ground-truth holdings file for the brain
     working, orders_ok = get_working_symbols(client, acct.hash_value)
     print(f"Held: {', '.join(positions) or '(none)'} | Working: "
           f"{', '.join(working) or '(none)'} | read_ok={orders_ok}")
