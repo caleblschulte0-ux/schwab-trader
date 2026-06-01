@@ -1,9 +1,7 @@
 {
-  "generated_utc": "2026-06-01T16:00:00Z",
+  "generated_utc": "2026-06-02T14:00:00Z",
   "orders": [
-    {"symbol": "BBAI", "action": "BUY", "instrument": "stock",
-     "quantity": 12, "limit_price": 5.10, "take_profit": 5.75, "stop_loss": 4.70},
-    {"symbol": "SOUN", "action": "BUY", "instrument": "stock",
-     "quantity": 7, "limit_price": 9.10, "take_profit": 10.40, "stop_loss": 8.25}
+    {"symbol": "RCAT", "action": "BUY", "instrument": "stock",
+     "quantity": 4, "limit_price": 14.65, "take_profit": 17.50, "stop_loss": 13.20}
   ]
 }

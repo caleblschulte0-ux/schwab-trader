@@ -1,57 +1,64 @@
-# Trading Signals — 2026-06-01T16:00:00Z
+# Trading Signals — 2026-06-02T14:00:00Z
 
-**Generated:** 2026-06-01T16:00:00Z
-**Run type:** Intraday hourly (midday session ~noon EDT)
-**Go-live reset:** Account is FLAT — prior paper positions (SOUN, SOFI, BBAI) were never executed live. Starting fresh with ~$200 cash.
-**Capital deployed this run:** BBAI ~$61.20 + SOUN ~$63.70 = ~$124.90
-**Cash reserve after fills (est.):** ~$75.10
+**Generated:** 2026-06-02T14:00:00Z
+**Run type:** Intraday hourly (morning session ~10 AM EDT)
+**Capital deployed (est. after June 1 fills):** BBAI ~$60.60 + SOUN ~$63.56 = ~$124.16
+**Cash reserve before today's order:** ~$75.84 | **After RCAT fill (est.):** ~$17.24
 
 ---
 
 ## Market Overview
 
-June 1 session is broadly risk-on, extending May's record-setting rally. The primary catalyst: Nvidia CEO Jensen Huang unveiled the N1X PC processor (developed with Microsoft), set to integrate into Windows laptops from Dell, HP, and Lenovo in fall 2026. This boosted AI-adjacent names — IBM +12%, ServiceNow +10% premarket — while pressuring legacy chip vendors (Qualcomm -9.6%, Intel -5.8%, Wolfspeed -8%). S&P 500 futures were up ~0.3% at the open. The AI infrastructure theme remains the dominant macro driver. For our low-priced small/mid-cap focus, the Nvidia AI tailwind is a clear sector lift for software and application-layer AI names.
+June 2 opens with a split macro picture. Tech/AI names are broadly higher on continued Nvidia tailwinds — Nvidia's "RTX Spark" PC chip announcement and Dell's new AI-powered XPS laptops provide an AI hardware refresh narrative that lifted Nasdaq futures +0.5% pre-open. However, renewed U.S.–Iran geopolitical tension is injecting a risk-off undercurrent: oil nudged higher and sentiment in speculative small-caps is cautious at the open. Net read: AI theme intact but bid under defense and drone names specifically, as Iran tensions increase the market's appetite for U.S. defense spending plays. Good setup for RCAT; more neutral for BBAI/SOUN.
 
 ---
 
-## BUY — BBAI (BigBear.ai Holdings, 12 shares @ $5.10 limit)
+## HOLD — BBAI (BigBear.ai Holdings, 12 shares)
 
-**Take-profit:** $5.75 | **Stop-loss:** $4.70 | **Cost:** $61.20
+**Estimated fill (June 1):** ~$5.05 | **Current:** $5.03 | **Unrealized:** ~−$0.24
+**Take-profit:** $5.75 | **Stop-loss:** $4.70
 
-BBAI is an AI-powered decision-intelligence platform serving national security, supply chain, and digital identity markets — exactly the application-layer AI theme getting a lift today. The immediate catalyst: on May 30, BigBear.ai's AI defense deals sparked sector speculation and pushed the stock to an intraday high of $5.50. The stock then pulled back to close May 31 around $4.94, and is recovering today at ~$5.04 (+2%). This is a clean retest-of-catalyst setup: the May 30 spike on deal news established a new support band around $4.70–$4.75 (the May 31 intraday low), and today's positive action suggests buyers are defending that level.
-
-Entry at $5.10 is just above the current price, reflecting normal market friction on the limit. Stop at $4.70 is the May 31 swing low — losing that level invalidates the thesis. Target $5.75 targets the prior intraday high ($5.50) and adds a modest extension, giving a 1.6:1 reward-to-risk ratio. With 12 shares at $5.10 = $61.20, this fits squarely within the $65 per-trade cap. Position may be held overnight if the stop holds and no contrary news emerges.
-
----
-
-## BUY — SOUN (SoundHound AI, 7 shares @ $9.10 limit)
-
-**Take-profit:** $10.40 | **Stop-loss:** $8.25 | **Cost:** $63.70
-
-SoundHound AI is a voice and agentic AI platform with a 52-week analyst target of $14.00 (Strong Buy, 7 analysts, 0 sells). Today SOUN is trading in the $9.07–$9.22 range, pressing against the key $9.22 resistance level that has acted as a ceiling. The Nvidia PC chip announcement is a tailwind for application-layer AI companies: as AI moves into consumer PCs, voice/agentic AI platforms like SoundHound benefit from broader ecosystem adoption. Q1 fundamentals remain compelling: 52% revenue growth, OASYS platform launch, LivePerson acquisition, and $225–260M 2026 guidance. The stock is down 30%+ YTD — which creates significant mean-reversion potential if sentiment turns.
-
-Entry at $9.10 is near-current-price, capturing the setup just below resistance. A breakout above $9.22 opens a clear run toward $10.40 (the next consolidation zone from late 2025). Stop at $8.25 reflects the clear support floor below the current range — losing $8.25 means the range-bound pattern has broken down. Seven shares at $9.10 = $63.70, within the $65 cap. R/R: $1.30 upside vs $0.85 downside = 1.53:1. Acceptable given the strong analyst consensus and sector tailwind.
+BBAI likely filled on June 1 around $5.04–$5.05 (limit was $5.10; stock was trading at $5.04 at the time, so the limit was immediately eligible). Today the stock is at $5.03, essentially at our entry cost. The thesis (AI defense decision-intelligence, application-layer AI tailwind) is intact. No adverse news; stop at $4.70 remains a comfortable distance below. With the Iran-US tension backdrop actually modestly positive for defense AI names, there is no reason to exit. Hold and let the bracket work.
 
 ---
 
-## Passed — RCAT (Red Cat Holdings, ~$13.85–$14.50)
+## HOLD — SOUN (SoundHound AI, 7 shares)
 
-Strong fundamental story — Q4 2025 revenue +2,500% YoY, Ladenburg $20 price target, AI defense drone contracts. However, no fresh catalyst today beyond general sector momentum, and the stock's wide 52-week range ($5.73–$18.78) makes support/resistance harder to define on a quick entry. At 4 shares × $14.00 = $56.00 the size is feasible, but without a clear intraday level to lean on I'm passing this run. RCAT remains top of the watchlist — if BBAI or SOUN fills and the stock finds a clean setup, RCAT is the next entry.
+**Estimated fill (June 1):** ~$9.08 | **Current:** $9.10 | **Unrealized:** ~+$0.14
+**Take-profit:** $10.40 | **Stop-loss:** $8.25
 
----
-
-## Passed — SOFI (SoFi Technologies, ~$18.22)
-
-Not a small-cap setup at this price given our $65 limit (only 3 shares). The fintech thesis is intact but no fresh catalyst today. Pass.
+SOUN filled near $9.08 on June 1 (limit $9.10; stock was at $9.07–$9.08). Today the stock is at $9.10 — slightly in profit. The AI voice/agentic platform thesis (52% Q1 revenue growth, LivePerson acquisition, $14.75 average analyst target) is unchanged. The $9.22 resistance level remains the near-term breakout trigger; a daily close above $9.22 would be a clear confirmation signal. Stop at $8.25 is well below current price. Hold and watch the $9.22 level.
 
 ---
 
-## Passed — Large-cap AI movers (IBM, ServiceNow, Palantir)
+## BUY — RCAT (Red Cat Holdings, 4 shares @ $14.65 limit)
 
-IBM +12%, ServiceNow +10% on the Nvidia PC chip catalyst. All are extended intraday and well above our $5–$20 focus range. Palantir at the $20+ range also outside target. Pass all.
+**Take-profit:** $17.50 | **Stop-loss:** $13.20 | **Cost:** $58.60
+
+Red Cat Holdings is the dominant fresh setup this session. Two catalysts converged on June 1–2:
+1. **Roth Capital $25 PT initiation (June 1):** Roth/MKM initiated coverage with a BUY rating and $25 price target, implying 72% upside from Friday's close. This is a same-day analyst catalyst — institutions often buy into new initiations from recognized firms.
+2. **U.S. government drone investment (May 28):** The Wall Street Journal reported the government is planning direct investment in U.S.-based drone companies. Red Cat (maker of BLACK WIDOW and TEAL 2 tactical drones for DoD) is a direct beneficiary; the stock surged 35% on that news and has held the gain.
+
+The geopolitical setup amplifies both catalysts: Iran-US tensions argue for elevated defense spending and urgency in domestic drone production. RCAT has a Japan defense drone contract in progress and a production footprint designed for $1B in revenue (vs. $150–180M 2026 guide), meaning there is substantial operating leverage ahead.
+
+At $14.65, this is a post-spike consolidation entry — the initial 35% burst was May 28, and the stock has digested that move over the subsequent 4–5 sessions, holding above the breakout level. The Roth initiation on June 1 at $14.50 territory is a fresh "fresh eyes on the thesis" catalyst. Limit at $14.65 is +1% above current ($14.50), respecting the fill-priority rule without chasing.
+
+Stop at $13.20 sits below the May 28 breakout support zone. Target $17.50 is a conservative first objective (midpoint between current and $20 Ladenburg target), giving ~2:1 reward-to-risk ($2.85 up / $1.45 down). Position may be held overnight — the thesis is multi-day.
 
 ---
 
-## Passed — Parabolic micro-caps (REPL, PRFX, STG, ASTC)
+## Passed — HKIT (Hitek Global)
 
-Friday runners with no fresh catalyst structure for entry. Continuation risk too high without a defined support level. Pass.
+Gapping +149% in pre-market on zero fundamental catalyst. Low-float momentum spike with no anchor level. Classic gap-and-trap setup. Skip.
+
+---
+
+## Passed — BKSY, ONDS (defense AI / satellite)
+
+Both have credible 2026 AI-defense narratives (DoD observation contracts, autonomous drone platforms). However, BKSY and ONDS lack a today-specific catalyst beyond the general AI-defense tailwind we're already capturing via RCAT. With only ~$17 in powder after today's orders, no room to add anyway.
+
+---
+
+## Passed — Large-cap AI (DELL, NVDA, IBM)
+
+All are extended intraday and above the $5–$20 target range. Pass.
