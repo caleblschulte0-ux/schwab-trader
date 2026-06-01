@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-06-01T19:30:00Z",
+  "generated_utc": "2026-06-01T16:43:37Z",
   "orders": [
     {
       "symbol": "RCAT",
       "action": "BUY",
       "instrument": "stock",
       "quantity": 4,
-      "limit_price": 14.10,
+      "limit_price": 14.20,
       "take_profit": 17.00,
       "stop_loss": 12.70
     }
