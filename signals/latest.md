@@ -1,64 +1,60 @@
-# Trading Signals — 2026-06-02T14:00:00Z
+# Trading Signals — 2026-06-01T15:41:00Z
 
-**Generated:** 2026-06-02T14:00:00Z
-**Run type:** Intraday hourly (morning session ~10 AM EDT)
-**Capital deployed (est. after June 1 fills):** BBAI ~$60.60 + SOUN ~$63.56 = ~$124.16
-**Cash reserve before today's order:** ~$75.84 | **After RCAT fill (est.):** ~$17.24
+**Generated:** 2026-06-01T15:41:00Z
+**Run type:** Intraday market hours (~10:41 AM EDT) — LIVE GO-LIVE RUN
+**Go-live reset:** Starting FLAT with ~$200 cash per BRAIN.md. All prior paper positions (SOUN, SOFI, BBAI) were NOT bought. Determining fresh holdings from account — treat as zero. Trading fresh.
+**Capital deployed:** $0 confirmed | **Powder:** ~$200
 
 ---
 
 ## Market Overview
 
-June 2 opens with a split macro picture. Tech/AI names are broadly higher on continued Nvidia tailwinds — Nvidia's "RTX Spark" PC chip announcement and Dell's new AI-powered XPS laptops provide an AI hardware refresh narrative that lifted Nasdaq futures +0.5% pre-open. However, renewed U.S.–Iran geopolitical tension is injecting a risk-off undercurrent: oil nudged higher and sentiment in speculative small-caps is cautious at the open. Net read: AI theme intact but bid under defense and drone names specifically, as Iran tensions increase the market's appetite for U.S. defense spending plays. Good setup for RCAT; more neutral for BBAI/SOUN.
+June 1 opens with a mild risk-off tone after a record-setting May. S&P 500 −0.08%, Dow −0.23%, Nasdaq −0.08%, Russell 2000 −0.59% — small-caps underperform at the open. The macro backdrop: U.S.–Iran tensions remain elevated with President Trump saying he will "make a final determination" on Iran shortly, injecting a risk-off undercurrent across speculative names broadly. That said, AI/tech remains resilient (Nvidia RTX Spark chip, Dell AI-PC cycle intact), and the defense/drone sector is directly benefiting from Iran-war urgency — higher defense spending expectations are bid into drone and AI-defense names specifically. Taylor Morrison (TMHC) +22.3% pre-market on a Berkshire all-cash deal confirms institutional appetite remains healthy for quality names.
+
+Net read: selective day to deploy. The drone/defense AI complex has the clearest fresh catalysts; AI software names with dilution overhangs (SOUN) are a pass. Entering two positions, holding ~$80 in reserve.
 
 ---
 
-## HOLD — BBAI (BigBear.ai Holdings, 12 shares)
+## BUY — RCAT (Red Cat Holdings, 4 shares @ $14.60 limit)
 
-**Estimated fill (June 1):** ~$5.05 | **Current:** $5.03 | **Unrealized:** ~−$0.24
-**Take-profit:** $5.75 | **Stop-loss:** $4.70
+**Take-profit:** $17.50 | **Stop-loss:** $13.20 | **Cost:** $58.40
 
-BBAI likely filled on June 1 around $5.04–$5.05 (limit was $5.10; stock was trading at $5.04 at the time, so the limit was immediately eligible). Today the stock is at $5.03, essentially at our entry cost. The thesis (AI defense decision-intelligence, application-layer AI tailwind) is intact. No adverse news; stop at $4.70 remains a comfortable distance below. With the Iran-US tension backdrop actually modestly positive for defense AI names, there is no reason to exit. Hold and let the bracket work.
+RCAT is the strongest setup of the session — two converging catalysts fire today:
 
----
+1. **Roth Capital BUY initiation, $25 PT (June 1):** Roth/MKM initiated coverage this morning with a buy rating and $25 price target — 72% upside from Friday's close (~$14.50). Analyst Craig Irwin cited Red Cat's expanding drone portfolio, DoD and allied procurement visibility, and production footprint designed for $1B in revenue vs. $150–180M 2026 guidance. CNBC picked up the story ("This drone stock has surged over the past year. Roth Capital says it can rally another 70%"), bringing the name to a wider audience mid-session.
 
-## HOLD — SOUN (SoundHound AI, 7 shares)
+2. **DoD direct equity investment in drone companies (WSJ, May 28):** The Pentagon is negotiating direct equity stakes in U.S. drone makers — an unprecedented step. Red Cat (BLACK WIDOW and TEAL 2 tactical drones, DoD-contracted production) is a named direct beneficiary; shares surged 35% on that news and have consolidated above the breakout level over the past 4–5 sessions, flagging rather than fading.
 
-**Estimated fill (June 1):** ~$9.08 | **Current:** $9.10 | **Unrealized:** ~+$0.14
-**Take-profit:** $10.40 | **Stop-loss:** $8.25
+Iran tension amplifies both catalysts — elevated geopolitical urgency accelerates DoD drone procurement timelines. The consolidation at ~$14.50 after a 35% burst is healthy structure; the Roth initiation provides institutional validation and fresh buying intent. Limit $14.60 (+0.69% above last price $14.50) ensures fill on continued bid or any intraday uptick without chasing. Not extended — the May 28 pop is the base, not this move.
 
-SOUN filled near $9.08 on June 1 (limit $9.10; stock was at $9.07–$9.08). Today the stock is at $9.10 — slightly in profit. The AI voice/agentic platform thesis (52% Q1 revenue growth, LivePerson acquisition, $14.75 average analyst target) is unchanged. The $9.22 resistance level remains the near-term breakout trigger; a daily close above $9.22 would be a clear confirmation signal. Stop at $8.25 is well below current price. Hold and watch the $9.22 level.
+Stop $13.20 is below the May 28 breakout support zone; TP $17.50 is a conservative first objective (well below the $25 Roth PT), giving ~2.1:1 reward-to-risk ($2.90 reward / $1.40 risk). Multi-day hold candidate; bracket handles the exit.
 
 ---
 
-## BUY — RCAT (Red Cat Holdings, 4 shares @ $14.65 limit)
+## BUY — BBAI (BigBear.ai Holdings, 12 shares @ $5.07 limit)
 
-**Take-profit:** $17.50 | **Stop-loss:** $13.20 | **Cost:** $58.60
+**Take-profit:** $5.75 | **Stop-loss:** $4.65 | **Cost:** $60.84
 
-Red Cat Holdings is the dominant fresh setup this session. Two catalysts converged on June 1–2:
-1. **Roth Capital $25 PT initiation (June 1):** Roth/MKM initiated coverage with a BUY rating and $25 price target, implying 72% upside from Friday's close. This is a same-day analyst catalyst — institutions often buy into new initiations from recognized firms.
-2. **U.S. government drone investment (May 28):** The Wall Street Journal reported the government is planning direct investment in U.S.-based drone companies. Red Cat (maker of BLACK WIDOW and TEAL 2 tactical drones for DoD) is a direct beneficiary; the stock surged 35% on that news and has held the gain.
+BBAI has a credible fresh catalyst cluster firing today: the company announced its **first commercial deployment** of an AI-powered shipping compliance platform in Panama, reported a $281.9M backlog, and **reaffirmed 2026 revenue guidance** — three confirming data points on the same day. New commercial wins (especially first-in-market deployments) demonstrate proof-of-concept for the platform and open the door to further enterprise expansion.
 
-The geopolitical setup amplifies both catalysts: Iran-US tensions argue for elevated defense spending and urgency in domestic drone production. RCAT has a Japan defense drone contract in progress and a production footprint designed for $1B in revenue (vs. $150–180M 2026 guide), meaning there is substantial operating leverage ahead.
+The AI defense / decision-intelligence narrative also aligns with the Iran backdrop: BBAI's core business is national-security and supply-chain decision AI — mission-critical, not discretionary spending. The backlog provides near-term revenue visibility. Stock at $5.03–$5.04 this morning, up ~2% but not extended. Limit $5.07 (+0.6% above $5.04 last) fills on any continuation without overpaying.
 
-At $14.65, this is a post-spike consolidation entry — the initial 35% burst was May 28, and the stock has digested that move over the subsequent 4–5 sessions, holding above the breakout level. The Roth initiation on June 1 at $14.50 territory is a fresh "fresh eyes on the thesis" catalyst. Limit at $14.65 is +1% above current ($14.50), respecting the fill-priority rule without chasing.
-
-Stop at $13.20 sits below the May 28 breakout support zone. Target $17.50 is a conservative first objective (midpoint between current and $20 Ladenburg target), giving ~2:1 reward-to-risk ($2.85 up / $1.45 down). Position may be held overnight — the thesis is multi-day.
+TP $5.75 is prior resistance (~13.4% above entry). Stop $4.65 is below the recent support cluster at ~$4.70 (~8.3% below entry). Reward-to-risk ~1.6:1 — acceptable given the multi-catalyst setup. Position may hold overnight if thesis intact heading into close.
 
 ---
 
-## Passed — HKIT (Hitek Global)
+## Passed — SOUN (SoundHound AI)
 
-Gapping +149% in pre-market on zero fundamental catalyst. Low-float momentum spike with no anchor level. Classic gap-and-trap setup. Skip.
-
----
-
-## Passed — BKSY, ONDS (defense AI / satellite)
-
-Both have credible 2026 AI-defense narratives (DoD observation contracts, autonomous drone platforms). However, BKSY and ONDS lack a today-specific catalyst beyond the general AI-defense tailwind we're already capturing via RCAT. With only ~$17 in powder after today's orders, no room to add anyway.
+Trading $9.07–$9.19, right at the $9.22 resistance level. Q1 revenue +52% YoY is real. But SoundHound filed a **$300M at-the-market equity program** — a dilution overhang that creates persistent selling pressure above current price and explains why the stock is down 30% YTD despite strong top-line growth. With ATM shares being dripped into the market, there is no clean catalyst to push through $9.22 today. Pass; watch for ATM overhang to clear before re-evaluating.
 
 ---
 
-## Passed — Large-cap AI (DELL, NVDA, IBM)
+## Passed — ONDS (Ondas Holdings)
 
-All are extended intraday and above the $5–$20 target range. Pass.
+At $13.05 (recent range $11.60–$13.41), ONDS has a genuinely strong thesis: counter-drone defense (Iron Drone Raider), Palantir AI partnership, 605% 2025 revenue growth, $19.83 consensus PT, and direct Iran-conflict tailwind. However: (1) the wide recent range lacks a clean stop level; (2) after RCAT + BBAI only ~$80 remains — insufficient for a full position; (3) RCAT already captures the drone/defense theme today. Keeping ONDS on the watchlist for next session or on a specific news catalyst.
+
+---
+
+## Passed — Large-cap AI (DELL, NVDA, IBM, KTOS)
+
+All either above the $5–$20 target price band or extended after recent runs. No edge for the sizing constraints.
