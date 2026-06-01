@@ -1,10 +1,14 @@
 name: schwab-trader-bot
 
+# ⏸️ SCHEDULE PAUSED (2026-06-01): the $200 ACH deposit is still PENDING (dated
+# 06/02) and not cleared for trading, so orders can't fill yet. Auto-runs are
+# disabled to avoid spamming canceled orders. To RESUME once funds clear:
+# uncomment the `schedule:` block below. The manual "Run workflow" button still
+# works anytime.
 on:
-  workflow_dispatch: {}          # manual run button in the Actions tab
-  schedule:
-    # Every 15 min during ~U.S. market hours (UTC). 13:00-21:00 UTC = ~8a-4p CDT.
-    - cron: "*/15 13-21 * * 1-5"
+  workflow_dispatch: {}          # manual run button (always available)
+  # schedule:
+  #   - cron: "*/15 13-21 * * 1-5"   # every 15 min, ~8a-4p CDT, Mon-Fri
 
 concurrency:
   group: schwab-trader-bot
@@ -35,7 +39,7 @@ jobs:
         run: python bot.py
 
       - name: Commit holdings snapshot
-        if: always()   # still record holdings even if the bot step erred
+        if: always()
         run: |
           git config user.name "schwab-bot"
           git config user.email "bot@users.noreply.github.com"
