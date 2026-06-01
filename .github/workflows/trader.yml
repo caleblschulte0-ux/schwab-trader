@@ -1,18 +1,17 @@
 name: schwab-trader-bot
 
-# Runs the bot on a schedule (free) AND via a manual "Run workflow" button.
-# NOTE: scheduled runs only fire when this file is on the repo's DEFAULT branch.
 on:
   workflow_dispatch: {}          # manual run button in the Actions tab
   schedule:
     # Every 15 min during ~U.S. market hours (UTC). 13:00-21:00 UTC = ~8a-4p CDT.
-    # (Was 5 min — slowed to reduce repeated place/cancel churn on a small account.)
     - cron: "*/15 13-21 * * 1-5"
 
-# Don't let two runs overlap and fight over the same orders.
 concurrency:
   group: schwab-trader-bot
   cancel-in-progress: false
+
+permissions:
+  contents: write   # allow committing the holdings file back to the repo
 
 jobs:
   trade:
@@ -34,3 +33,16 @@ jobs:
           SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python bot.py
+
+      - name: Commit holdings snapshot
+        if: always()   # still record holdings even if the bot step erred
+        run: |
+          git config user.name "schwab-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain signals/holdings.json)" ]; then
+            git add signals/holdings.json
+            git commit -m "bot: update holdings snapshot [skip ci]"
+            git push
+          else
+            echo "No holdings change to commit."
+          fi
