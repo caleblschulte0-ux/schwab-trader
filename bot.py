@@ -1,7 +1,7 @@
 """Swing/day-trade executor — bracket entries + brain-set exits, dry-run by default.
 
 Pipeline: a scheduled Claude routine (the "brain") researches the market and
-writes picks to `signals/orders.json`. This bot, run every 30 min by GitHub
+writes picks to `signals/orders.json`. This bot, run on a schedule by GitHub
 Actions, reads them, RE-CHECKS every guardrail in code, and manages positions.
 
 ENTRIES — for each fresh BUY pick:
@@ -13,10 +13,11 @@ ENTRIES — for each fresh BUY pick:
   Guardrails (enforced here regardless of what the brain wrote):
     * BUY-only, stocks only, quantity * limit <= MAX_DOLLARS_PER_TRADE
     * skip symbols already HELD or with a WORKING/PENDING order (no double-buys)
+    * if existing orders cannot be read, place NO new entries (fail safe)
     * the brain MUST supply take_profit and stop_loss prices, and they must be
       sane (stop < entry < target) or the entry is skipped.
 
-EXITS — three layers, all SELL-to-close (we only sell shares we own, never short):
+EXITS — all SELL-to-close (we only sell shares we own, never short):
   1. The bracket's resting target/stop (primary; works while bot is offline).
   2. Brain SELL signal: {"action":"SELL"} for a held symbol -> close it now.
   (No end-of-day flatten — positions may be held overnight by design.)
@@ -117,16 +118,23 @@ def get_positions(client: SchwabClient) -> dict[str, dict]:
     return out
 
 
-def get_working_symbols(client: SchwabClient, account_number: str) -> set[str]:
-    """Symbols with an open/working/pending order — so we never double-order."""
+def get_working_symbols(client: SchwabClient, account_hash: str) -> tuple[set[str], bool]:
+    """Symbols with an open/working/pending order — so we never double-order.
+
+    Returns (symbols, ok). ok=False means we could NOT read orders; callers must
+    treat that as "unknown" and refuse to place new entries (fail safe).
+    NOTE: Schwab's get_orders needs the ENCRYPTED account hash, not the plain
+    account number — passing the plain number returns 400 Bad Request.
+    """
     working: set[str] = set()
     open_states = {"WORKING", "PENDING_ACTIVATION", "QUEUED", "ACCEPTED",
-                   "AWAITING_PARENT_ORDER", "AWAITING_CONDITION", "NEW"}
+                   "AWAITING_PARENT_ORDER", "AWAITING_CONDITION", "NEW",
+                   "PENDING_RECALL", "AWAITING_MANUAL_REVIEW", "AWAITING_STOP_CONDITION"}
     try:
         now = datetime.now(timezone.utc)
         orders = client.get_orders(
-            account_number,
-            from_entered_time=now - timedelta(days=2),
+            account_hash,
+            from_entered_time=now - timedelta(days=5),
             to_entered_time=now + timedelta(minutes=5),
         )
         for o in orders:
@@ -140,9 +148,10 @@ def get_working_symbols(client: SchwabClient, account_number: str) -> set[str]:
                 sym = instr.get("symbol") if isinstance(instr, dict) else None
                 if sym:
                     working.add(sym)
+        return working, True
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not read working orders: {exc}")
-    return working
+        return working, False
 
 
 def last_price(client: SchwabClient, symbol: str) -> float | None:
@@ -247,8 +256,9 @@ def main() -> int:
     client = get_client()
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
-    working = get_working_symbols(client, acct.account_number)
-    print(f"Held: {', '.join(positions) or '(none)'} | Working orders: {', '.join(working) or '(none)'}")
+    working, orders_ok = get_working_symbols(client, acct.hash_value)
+    print(f"Held: {', '.join(positions) or '(none)'} | Working orders: "
+          f"{', '.join(working) or '(none)'} | read_ok={orders_ok}")
 
     generated_utc, orders = load_orders()
     fresh = bool(orders) and is_fresh(generated_utc)
@@ -266,6 +276,12 @@ def main() -> int:
     # 2. New bracket entries from fresh BUY picks.
     if not fresh:
         print("No fresh BUY picks to act on.")
+        print("=== done ===")
+        return 0
+
+    if not orders_ok:
+        print("SKIP all new entries — could not read existing orders "
+              "(fail-safe: refusing to risk duplicate orders this run).")
         print("=== done ===")
         return 0
 
