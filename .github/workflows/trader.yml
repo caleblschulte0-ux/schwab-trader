@@ -1,14 +1,12 @@
 name: schwab-trader-bot
 
-# ⏸️ SCHEDULE PAUSED (2026-06-01): the $200 ACH deposit is still PENDING (dated
-# 06/02) and not cleared for trading, so orders can't fill yet. Auto-runs are
-# disabled to avoid spamming canceled orders. To RESUME once funds clear:
-# uncomment the `schedule:` block below. The manual "Run workflow" button still
-# works anytime.
+# Running in PAPER mode (DRY_RUN=true) while the ACH deposit clears — the bot
+# logs what it WOULD trade but places nothing real. Flip DRY_RUN to false (and
+# confirm funds cleared) to go live.
 on:
   workflow_dispatch: {}          # manual run button (always available)
-  # schedule:
-  #   - cron: "*/15 13-21 * * 1-5"   # every 15 min, ~8a-4p CDT, Mon-Fri
+  schedule:
+    - cron: "*/15 13-21 * * 1-5"   # every 15 min, ~8a-4p CDT, Mon-Fri
 
 concurrency:
   group: schwab-trader-bot
