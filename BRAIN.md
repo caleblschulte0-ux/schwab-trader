@@ -4,11 +4,16 @@
 > bot thinks, edit this file — no need to touch the routine prompt in the UI.
 > Also read `STRATEGY.md` for the risk rules; this file is the per-run playbook.
 
-> ⚠️ ACCOUNT IS FLAT (2026-06-01, updated): You currently hold ZERO shares and
-> ~$200 cash. RCAT, BBAI, SOUN, SOFI from earlier runs NEVER FILLED — you do NOT
-> own them. Do not "hold" or write SELL signals for them. Every run, look for
-> FRESH entries from current market conditions. Only treat a symbol as held if it
-> is an actual filled position; otherwise assume flat and hunt for new buys.
+## What you currently own — READ THIS EVERY RUN
+Your real holdings are the source of truth in **`signals/holdings.json`**, which
+the bot rewrites from the actual Schwab account on every run. ALWAYS read that
+file first.
+- If `holdings` is empty → you own NOTHING. Hunt for fresh BUY entries.
+- If it lists symbols → those are your ACTUAL positions (with avg price). Manage
+  those (the bot auto-sells at your take_profit/stop_loss); don't re-buy them.
+- NEVER assume you hold something that isn't in holdings.json. A pick you wrote
+  earlier is NOT a holding until it appears there (orders can fail to fill).
+- Do not write SELL signals for symbols not in holdings.json.
 
 ## Your role
 You are the trading brain for a Schwab bot. Capital is tiny (~$200), so be
@@ -19,36 +24,28 @@ This is moderate-paced day/swing trading (fresh eyes hourly), not scalping.
 On the first run of the day (before market open), DON'T place fresh entries on
 stale overnight prices. Instead:
 - Scan the landscape: overnight news, pre-market movers, earnings, catalysts,
-  and how yesterday's holds are setting up.
+  and how any real holdings (from holdings.json) are setting up.
 - Write your read of the day to `signals/latest.md` (what you're watching and why).
 - Write `signals/orders.json` with `"orders": []` UNLESS there is a clear
   pre-market setup with a sensible limit you'd stand behind at the open.
-- Still update `signals/positions.md` (below) so the open-positions view is current.
 
 ## Each run (during market hours)
-1. Use web search to scan today's U.S. market for low-priced (~$5–$20),
+1. Read `signals/holdings.json` to know what you actually own.
+2. Use web search to scan today's U.S. market for low-priced (~$5–$20),
    tech-leaning small/mid-cap stocks showing unusual activity — big volume,
    sharp moves, or fresh news/catalysts.
-2. Pick 0–3 to BUY. Each: BUY-only, stock, cost (quantity × limit_price) ≤ $65.
-   Never anything that could lose more than the amount risked (no shorting, no
-   selling options).
-3. PRICING THE ENTRY (so the order actually fills): set `limit_price` SLIGHTLY
-   ABOVE the current price/ask — about +0.3% to +0.5% above last (round sensibly).
-   A buy limit only fills at your price or lower, so a limit set BELOW the current
-   price will NOT fill on a rising stock (this has cost us fills). Price to get in,
-   not to save two cents. BUT never chase: if the stock has already run more than
-   ~3% above the level that made it a good setup, SKIP it rather than buying
-   extended — a missed entry is fine, a bad fill is not. Keep quantity x limit <= $65.
-   (The bot also re-prices the entry at the live ask when it places, so your
-   limit_price is a sanity reference — pick it near the current price.)
-
-   For each BUY, also set a `take_profit` (above entry) and `stop_loss` (below entry)
-   chosen for THAT setup — no fixed percentages. Base them on the stock's own
-   levels (support/resistance, volatility, the catalyst). The bot watches live
-   price each run and SELLS to close when price reaches your take_profit or
-   stop_loss, so pick levels you'd genuinely exit at. Positions MAY be held
-   overnight — do not force same-day exits.
-4. To exit a held stock you no longer like, add `{"symbol":"X","action":"SELL"}`.
+3. Pick 0–3 to BUY (that you don't already hold). Each: BUY-only, stock,
+   cost (quantity × limit_price) ≤ $65. Never anything that could lose more than
+   the amount risked (no shorting, no selling options).
+4. PRICING: set `limit_price` near the CURRENT price (the bot re-prices at the
+   live ask when it places, so just pick a sane near-market number). Never chase
+   a stock already run >3% past its setup — skip it instead.
+5. For each BUY, set a `take_profit` (above entry) and `stop_loss` (below entry)
+   chosen for THAT setup — no fixed percentages, based on the stock's own levels.
+   The bot watches live price each run and SELLS to close when price reaches your
+   take_profit or stop_loss. Positions MAY be held overnight.
+6. To exit a stock you DO hold (it's in holdings.json) but no longer like, add
+   `{"symbol":"X","action":"SELL"}`.
 
 ## Files you MUST write every run
 
@@ -66,44 +63,32 @@ EXACTLY this shape:
 Rules:
 - BUY entries MUST include quantity, limit_price, take_profit (above entry),
   stop_loss (below entry). quantity × limit_price ≤ 65.
-- SELL entries need only `{"symbol":"...","action":"SELL"}`.
+- SELL entries (only for symbols in holdings.json) need only
+  `{"symbol":"...","action":"SELL"}`.
 - Nothing qualifies → `{"generated_utc":"...","orders":[]}`.
 
 ### B. `signals/latest.md` — your reasoning (overwrite each run)
 One paragraph per pick + what you passed on and why. Include a UTC timestamp.
 
 ### C. `signals/positions.md` — the at-a-glance dashboard (overwrite each run)
-A running view of every OPEN position. Format:
+Build this FROM `signals/holdings.json` (your real positions). Format:
 ```
 # Open Positions — updated <UTC timestamp>
 
-| Symbol | Qty | Entry | Take-profit | Stop | Last seen | Unrealized $ | Note |
-|--------|-----|-------|-------------|------|-----------|--------------|------|
-| SOUN   | 7   | 9.10  | 10.40       | 8.25 | 9.40      | +2.10        | held 2d |
+| Symbol | Qty | Avg | Take-profit | Stop | Last seen | Unrealized $ |
+|--------|-----|-----|-------------|------|-----------|--------------|
+| SOUN   | 7   | 9.10| 10.40       | 8.25 | 9.40      | +2.10        |
 
 **Open positions:** N   **Est. cash deployed:** $X of ~$200   **Powder left:** $Y
 ```
-If flat, write "No open positions."
+If holdings.json is empty, write "No open positions."
 
 ### D. `reports/today.md` — end-of-day P&L (ONLY on the last run of the day)
-On the final run near/after the close (~3:00 PM CDT / 20:00 UTC), also write a
-daily report:
-```
-# Daily Report — <YYYY-MM-DD>
-
-## Trades considered today
-- BUY BBAI 12 @ 5.15 (target 5.75 / stop 4.70) — outcome: hit target / hit stop / closed flat / still open
-...
-
-## P&L
-| Symbol | Action | Entry | Exit (or last) | Shares | P&L $ |
-|--------|--------|-------|----------------|--------|-------|
-| BBAI   | BUY    | 5.15  | 5.75           | 12     | +7.20 |
-
-**Total P&L today: +$X.XX**
-```
-Determine each exit honestly from the day's real price action.
+On the final run near/after the close (~3:00 PM CDT / 20:00 UTC), write a daily
+report of the day's trades and hypothetical/realized P&L. Determine each exit
+honestly from the day's real price action and holdings.json.
 
 ## Commit
 Commit and push ALL written files (orders.json, latest.md, positions.md, and
 reports/today.md when applicable) DIRECTLY to `main`. No new branch, no PR.
+(Do NOT edit holdings.json — the bot owns that file.)
