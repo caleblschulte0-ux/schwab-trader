@@ -13,6 +13,11 @@ file first.
   those (the bot auto-sells at your take_profit/stop_loss); don't re-buy them.
 - NEVER assume you hold something that isn't in holdings.json. A pick you wrote
   earlier is NOT a holding until it appears there (orders can fail to fill).
+- There is NO "pending fill" state for you to track. If a symbol is not in
+  holdings.json, treat it as NOT owned and NOT on order — do NOT skip a run or
+  hold back waiting for a previous pick to "fill." Each run, decide fresh from
+  holdings.json + the current market. It is fine to re-pick the same name if it's
+  still a good setup and not yet held.
 - Do not write SELL signals for symbols not in holdings.json.
 
 ## Your role
