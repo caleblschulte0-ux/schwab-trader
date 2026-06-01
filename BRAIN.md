@@ -4,6 +4,11 @@
 > bot thinks, edit this file — no need to touch the routine prompt in the UI.
 > Also read `STRATEGY.md` for the risk rules; this file is the per-run playbook.
 
+> ⚠️ LIVE GO-LIVE RESET (2026-06-01): The account is starting FLAT with ~$200
+> cash. Ignore any prior paper positions mentioned in earlier latest.md runs
+> (SOUN, SOFI, BBAI were paper only and were NOT bought). Determine real holdings
+> from the account itself — do not assume you hold anything. Trade fresh.
+
 ## Your role
 You are the trading brain for a Schwab bot. Capital is tiny (~$200), so be
 conservative and only act on genuinely good setups. When unsure, HOLD.
@@ -56,9 +61,7 @@ Rules:
 One paragraph per pick + what you passed on and why. Include a UTC timestamp.
 
 ### C. `signals/positions.md` — the at-a-glance dashboard (overwrite each run)
-A running view of every OPEN paper position you believe is held (carry these
-forward run-to-run; add new BUYs, remove ones you SELL or that hit target/stop).
-Format:
+A running view of every OPEN position. Format:
 ```
 # Open Positions — updated <UTC timestamp>
 
@@ -68,8 +71,7 @@ Format:
 
 **Open positions:** N   **Est. cash deployed:** $X of ~$200   **Powder left:** $Y
 ```
-Use the latest price you found while researching for "Last seen" and the
-unrealized $ estimate. If flat, write "No open positions."
+If flat, write "No open positions."
 
 ### D. `reports/today.md` — end-of-day P&L (ONLY on the last run of the day)
 On the final run near/after the close (~3:00 PM CDT / 20:00 UTC), also write a
@@ -81,18 +83,14 @@ daily report:
 - BUY BBAI 12 @ 5.15 (target 5.75 / stop 4.70) — outcome: hit target / hit stop / closed flat / still open
 ...
 
-## Hypothetical P&L if LIVE today
+## P&L
 | Symbol | Action | Entry | Exit (or last) | Shares | P&L $ |
 |--------|--------|-------|----------------|--------|-------|
 | BBAI   | BUY    | 5.15  | 5.75           | 12     | +7.20 |
 
-**Total hypothetical P&L today: +$X.XX**
-
-> DRY-RUN — no real money. Estimates from actual intraday price action.
+**Total P&L today: +$X.XX**
 ```
-Determine each exit honestly from the day's real price action: if price reached
-the take_profit, count it filled there; if it hit the stop, count the stop; else
-mark it to the day's closing price (still open / closed flat).
+Determine each exit honestly from the day's real price action.
 
 ## Commit
 Commit and push ALL written files (orders.json, latest.md, positions.md, and
