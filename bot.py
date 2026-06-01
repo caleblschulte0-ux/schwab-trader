@@ -18,7 +18,8 @@ no hardcoding holdings anywhere.
 Risk rules still enforced in code (your one rule is safe):
   * BUY-only; we only ever SELL shares we already own (never short).
   * quantity * entry <= MAX_DOLLARS_PER_TRADE.
-  * skip symbols already HELD or with a WORKING/PENDING order (no double-buys);
+  * skip symbols already HELD, with an OPEN buy, OR bought in the last
+    RECENT_BUY_COOLDOWN_MIN minutes (closes the settlement-lag double-buy gap);
     if orders can't be read, place NOTHING (fail safe).
   * don't chase: skip a BUY if the live ask is already > limit_price * (1+MAX_SLIPPAGE).
 
@@ -45,6 +46,7 @@ ORDERS_FILE           = "signals/orders.json"
 HOLDINGS_FILE         = "signals/holdings.json"
 MIN_TP_OVER_ENTRY     = 0.005
 MIN_STOP_UNDER_ENTRY  = 0.005
+RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
 # ==============================
 
 APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
@@ -135,13 +137,28 @@ def write_holdings(positions: dict) -> None:
         print(f"(warn) could not write holdings file: {exc}")
 
 
-def get_working_symbols(client: SchwabClient, account_hash: str) -> tuple[set[str], bool]:
-    working: set[str] = set()
+def _parse_dt(val):
+    if not val:
+        return None
+    try:
+        return datetime.fromisoformat(str(val).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def get_blocked_buy_symbols(client: SchwabClient, account_hash: str) -> tuple[set[str], bool]:
+    """Symbols we must NOT (re)buy this run: those with an OPEN buy order, OR a
+    BUY order that was entered/filled within the last RECENT_BUY_COOLDOWN_MIN
+    minutes. The cooldown closes the settlement-lag gap where a just-filled buy
+    isn't in positions yet, which previously caused double-buys.
+    Returns (symbols, ok); ok=False means we couldn't read orders (fail safe)."""
+    blocked: set[str] = set()
     open_states = {"WORKING", "PENDING_ACTIVATION", "QUEUED", "ACCEPTED",
                    "AWAITING_PARENT_ORDER", "AWAITING_CONDITION", "NEW",
                    "PENDING_RECALL", "AWAITING_MANUAL_REVIEW", "AWAITING_STOP_CONDITION"}
     try:
         now = datetime.now(timezone.utc)
+        cutoff = now - timedelta(minutes=RECENT_BUY_COOLDOWN_MIN)
         orders = client.get_orders(
             account_hash,
             from_entered_time=now - timedelta(days=5),
@@ -150,18 +167,24 @@ def get_working_symbols(client: SchwabClient, account_hash: str) -> tuple[set[st
         for o in orders:
             od = _as_dict(o)
             status = str(od.get("status", "")).upper()
-            if status and status not in open_states:
+            if status == "CANCELED" or status == "REJECTED" or status == "EXPIRED":
                 continue
+            entered = _parse_dt(od.get("enteredTime"))
+            recent = entered is not None and entered >= cutoff
             for leg in (od.get("orderLegCollection") or []):
                 ld = _as_dict(leg)
                 instr = ld.get("instrument") or {}
                 sym = instr.get("symbol") if isinstance(instr, dict) else None
-                if sym:
-                    working.add(sym)
-        return working, True
+                if not sym:
+                    continue
+                instruction = str(ld.get("instruction", "")).upper()
+                # Block if a BUY is currently open, or any recent (open/filled) buy.
+                if instruction.startswith("BUY") and (status in open_states or recent):
+                    blocked.add(sym)
+        return blocked, True
     except Exception as exc:  # noqa: BLE001
-        print(f"(warn) could not read working orders: {exc}")
-        return working, False
+        print(f"(warn) could not read orders: {exc}")
+        return blocked, False
 
 
 def quote(client: SchwabClient, symbol: str) -> dict:
@@ -257,9 +280,9 @@ def main() -> int:
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
     write_holdings(positions)  # ground-truth holdings file for the brain
-    working, orders_ok = get_working_symbols(client, acct.hash_value)
-    print(f"Held: {', '.join(positions) or '(none)'} | Working: "
-          f"{', '.join(working) or '(none)'} | read_ok={orders_ok}")
+    blocked, orders_ok = get_blocked_buy_symbols(client, acct.hash_value)
+    print(f"Held: {', '.join(positions) or '(none)'} | No-rebuy: "
+          f"{', '.join(blocked) or '(none)'} | read_ok={orders_ok}")
 
     generated_utc, orders = load_orders()
     fresh = bool(orders) and is_fresh(generated_utc)
@@ -306,8 +329,8 @@ def main() -> int:
         if sym in positions:
             print(f"[{sym}] SKIP — already holding")
             continue
-        if sym in working:
-            print(f"[{sym}] SKIP — already has a working order")
+        if sym in blocked:
+            print(f"[{sym}] SKIP — open or recent buy order (no double-buy)")
             continue
 
         q = quote(client, sym)
