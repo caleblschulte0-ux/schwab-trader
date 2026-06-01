@@ -1,13 +1,20 @@
 name: schwab-trader-bot
 
 # Runs the bot on a schedule (free) AND via a manual "Run workflow" button.
-# NOTE: scheduled runs only fire when this file is on the repo's DEFAULT branch
-# (usually main). Until then, use the manual "Run workflow" button to test.
+# NOTE: scheduled runs only fire when this file is on the repo's DEFAULT branch.
 on:
   workflow_dispatch: {}          # manual run button in the Actions tab
   schedule:
-    # Every 30 min, roughly U.S. market hours (UTC). Tune to taste.
-    - cron: "*/30 14-20 * * 1-5"
+    # Every 5 min during ~U.S. market hours + a bit before/after (UTC).
+    # 13:00-21:00 UTC = ~8:00 AM-4:00 PM CDT, Mon-Fri.
+    # NOTE: GitHub Actions cron is best-effort and can lag a few minutes under load.
+    - cron: "*/5 13-21 * * 1-5"
+
+# If a run is still going when the next 5-min tick fires, don't pile up — let the
+# in-progress one finish (avoids two bots placing orders at the same instant).
+concurrency:
+  group: schwab-trader-bot
+  cancel-in-progress: false
 
 jobs:
   trade:
@@ -27,6 +34,6 @@ jobs:
           SCHWAB_APP_KEY: ${{ secrets.SCHWAB_APP_KEY }}
           SCHWAB_APP_SECRET: ${{ secrets.SCHWAB_APP_SECRET }}
           SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
-          # Safety: stays in dry-run unless you add a DRY_RUN variable set to "false".
+          # Safety: stays in dry-run unless a DRY_RUN repo variable is set to "false".
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python bot.py
