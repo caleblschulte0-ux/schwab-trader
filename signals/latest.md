@@ -1,73 +1,56 @@
-# Trading Signals — 2026-06-01T15:54:00Z
+# Trading Signals — 2026-06-01T17:00:00Z
 
-**Generated:** 2026-06-01T15:54:00Z
-**Run type:** Intraday market hours (~10:54 AM EDT) — account flat, fresh entries
-**Capital deployed:** $0 confirmed (pending fills) | **Powder:** ~$200
+**Generated:** 2026-06-01T17:00:00Z
+**Run type:** Intraday market hours (~12:00 PM EDT) — hold run, no new entries
+**Capital deployed:** ~$119.56 (2 positions assumed filled) | **Powder:** ~$80
 
 ---
 
 ## Market Overview
 
-June 1, ~11 AM EDT. S&P 500 +0.18%, Nasdaq roughly flat, Russell 2000 −0.59% — small-caps lag again. The dominant macro theme this session: **U.S.-Iran peace talks have stalled** — Iran reportedly stopped exchanging messages with the U.S., triggering a Brent crude spike (+6.8% to $97.30). This directly lifts the geopolitical risk premium embedded in drone/defense names and validates staying in the sector. Tech broadly up 1.67%; notable big-cap movers include Dell +10%, HPE +5.3% on AI-PC/server cycle. MGM +16.4% on deal news. Risk appetite is bifurcated: large-cap tech strong, small-cap muted — selective entry warranted.
+S&P 500 roughly flat, Nasdaq modestly green, Russell 2000 slightly negative — same bifurcation as the prior run. Chicago PMI printed 62.7 in May, the highest in 4 years, signaling strong factory order books. That's a positive macro undercurrent for industrials and defense. The dominant macro theme — stalled U.S.-Iran peace talks — remains live and continues to support the defense/drone complex.
 
-Net read: same thesis as prior run, now reinforced. Drone/defense complex benefits directly from Iran escalation. Entering RCAT and BBAI with fresh bracket orders. Holding ~$80 in reserve (no third trade — small account, stay conservative).
-
----
-
-## BUY — RCAT (Red Cat Holdings, 4 shares @ $14.65 limit)
-
-**Take-profit:** $17.50 | **Stop-loss:** $13.20 | **Cost:** $58.60
-
-Thesis unchanged and strengthened. Two converging catalysts remain live:
-
-1. **Roth Capital BUY initiation, $25 PT (June 1):** Analyst Craig Irwin cited Red Cat's expanding drone portfolio, DoD procurement visibility, and production footprint sized for $1B revenue vs. $150–180M 2026 guidance. CNBC coverage brings retail awareness; institutional validation via Roth draws fresh buy-side attention.
-
-2. **DoD direct equity in drone companies (WSJ, May 28):** Pentagon negotiating direct equity stakes in U.S. drone makers. Red Cat (BLACK WIDOW, TEAL 2 tactical drones, DoD-contracted) is a named direct beneficiary. Stock consolidated above the May 28 breakout level — healthy flag structure.
-
-**Iran escalation amplifier:** With talks now stalled and Iran stopping message exchanges with the U.S., DoD drone procurement urgency increases further. This is the single most direct catalyst shift since the prior run and it moves in RCAT's favor.
-
-RCAT last at ~$14.50. Limit $14.65 (+1.0% above last) prices to fill on any intraday uptick without chasing. Not extended — stock is flagging at the breakout base, not running away.
-
-Stop $13.20 is below the May 28 breakout support zone. TP $17.50 is a conservative first objective (well below $25 Roth PT), giving ~2.1:1 reward-to-risk. Multi-day hold candidate.
+No new entries this run. Both prior positions (RCAT, BBAI) appear filled and are holding near entry. The thesis on each is intact; staying in.
 
 ---
 
-## BUY — BBAI (BigBear.ai Holdings, 12 shares @ $5.08 limit)
+## HOLD — RCAT (Red Cat Holdings, 4 shares @ $14.65 entry)
 
-**Take-profit:** $5.75 | **Stop-loss:** $4.65 | **Cost:** $60.96
+**Take-profit:** $17.50 | **Stop-loss:** $13.20 | **Last seen:** ~$14.62
 
-Thesis intact. BBAI reported its first commercial deployment of an AI-powered shipping compliance platform in Panama, a $281.9M backlog, and reaffirmed 2026 revenue guidance — three confirming data points in a single catalyst cluster. National-security and supply-chain decision AI fits the elevated-geopolitical-risk environment; defense/government AI spending is non-discretionary.
+Thesis strengthened today. Roth/MKM initiated coverage with a BUY and $25 price target; CNBC published an article this morning ("This drone stock has surged over the past year. Roth Capital says it can rally another 70%"). H.C. Wainwright also initiated BUY / $20 PT on the same day — dual analyst initiations signal broad institutional interest following the Japan MoD contract announcement (173 Black Widow systems to the Japan Ground Self-Defense Force under FY2026 funding).
 
-Stock trading ~$5.03. Limit $5.08 (+1.0% above last) fills on any continuation. Not chasing: stock is only modestly above recent base, well within the no-chase rule.
+RCAT is at ~$14.62, essentially at the $14.65 fill price. Not running away — we're in at a clean level before the bulk of institutional distribution from the initiations. TP $17.50 is conservative vs. both new PTs ($20 and $25). Stop $13.20 gives room for normal volatility while cutting sharply if the thesis breaks.
 
-TP $5.75 is prior resistance (~13.4% above entry). Stop $4.65 is below recent support cluster at $4.70 (~8.5% below entry). R:R ~1.6:1 — acceptable with multi-catalyst setup and overnight hold option.
-
----
-
-## Passed — DPRO (Draganfly)
-
-Draganfly ($6.67 last close) has genuine catalysts: two new DoD unit selections, ACSL distribution agreement, record Q1 revenue +49% YoY. Strong Buy consensus, $15 analyst PT. However: (1) after RCAT + BBAI only ~$80 remains — insufficient for a comfortable third position inside $65 cap; (2) RCAT already captures the drone/defense theme with better-established institutional coverage; (3) today's price action unconfirmed — may already be running on sector momentum. Pass; watchlist.
+**No action. Hold.**
 
 ---
 
-## Passed — ONDS (Ondas)
+## HOLD — BBAI (BigBear.ai Holdings, 12 shares @ $5.08 entry)
 
-$110M+ Q2 orders, $19.83 analyst PT, Strong Buy consensus. Compelling but same constraint: third position would leave minimal cash reserve on a $200 account, and RCAT already owns this theme. Watchlist for next session.
+**Take-profit:** $5.75 | **Stop-loss:** $4.65 | **Last seen:** ~$5.04
+
+Volume today is running at ~2× the 53M daily average (106M+ shares). Elevated institutional/retail participation coincides with the Panama shipping-compliance deployment news and $281.9M backlog. BBAI has held above $5 through the session — the prior day's low was $4.71 but BBAI recovered to $5.50 intraday high, and today consolidates near $5.04–$5.11.
+
+At $5.04 the position is marginally underwater vs. $5.08 fill — normal noise. The multi-catalyst cluster (commercial deployment, backlog reaffirmation, defense/FAA IT contracts) remains intact. TP $5.75 is prior resistance; stop $4.65 is below the $4.71 recent support low.
+
+**No action. Hold.**
 
 ---
 
-## Passed — UMAC (Unusual Machines)
+## Passed — DPRO (Draganfly, at $7.73 today)
 
-At $31.78 — above the $5–$20 target band and too expensive for $65-per-trade sizing constraints.
+DPRO is up ~3.5% today to $7.73, with fresh catalysts: DoD Flex FPV drone unit selections, Skip Dynamix fixed-wing acquisition (closing early June), ACSL exclusive Canada distribution. Northland Outperform, PT $16. Technically attractive.
+
+However: (1) adding a third drone/defense name concentrates sector risk — RCAT already owns the DoD hardware theme; (2) DPRO at $7.73 × 8 shares = $61.84 would leave only ~$18 in reserve, dangerously thin on a $200 account; (3) DPRO has moved from ~$6.67 last week to $7.73 today (+16%), pushing against the no-chase rule. Pass; remain watchlist.
 
 ---
 
-## Capital summary
+## Capital Summary
 
-| Symbol | Shares | Limit  | Cost   | TP    | Stop  |
-|--------|--------|--------|--------|-------|-------|
-| RCAT   | 4      | $14.65 | $58.60 | $17.50| $13.20|
-| BBAI   | 12     | $5.08  | $60.96 | $5.75 | $4.65 |
+| Symbol | Qty | Entry  | Last   | Take-profit | Stop  | Unrealized $   |
+|--------|-----|--------|--------|-------------|-------|----------------|
+| RCAT   | 4   | $14.65 | ~$14.62| $17.50      | $13.20| ~−$0.12        |
+| BBAI   | 12  | $5.08  | ~$5.04 | $5.75       | $4.65 | ~−$0.48        |
 
-**~$80 held in reserve**
-**Max downside if both stop out:** ~$10.96 | **Upside if both hit TP:** ~$19.44
+**Cash deployed:** ~$119.56 | **Reserve:** ~$80 | **Max downside (both stops hit):** ~$12.44 | **Upside (both TPs hit):** ~$19.44
