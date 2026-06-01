@@ -1,57 +1,55 @@
-# Trading Signals — 2026-06-01T19:35:00Z
+# Trading Signals — 2026-06-01T20:35:00Z
 
-**Generated:** 2026-06-01T19:35:00Z
-**Run type:** Intraday market hours (~2:35 PM ET) — sixth run of day
-**Holdings confirmed:** None (holdings.json empty as of 17:51 UTC)
+**Generated:** 2026-06-01T20:35:00Z
+**Run type:** Post-close / pre-market prep (market closed 4 PM ET)
+**Holdings confirmed:** None (holdings.json empty — no fills today)
 **Capital available:** ~$200
 
 ---
 
-## Market Overview
+## Day Summary — June 1, 2026
 
-S&P 500 +0.5% (record high), Nasdaq +0.7%, Dow flat. Dominant theme all day: Nvidia's N1X ARM-based PC chip announced at COMPUTEX 2026, sending NVDA +6%, DELL +8%, HP +8%. Oil holding near $90/bbl on US-Iran war flare — energy sector green alongside tech; industrials and consumer cyclicals mixed. Late-session tone is constructive; no macro reversals. Market closes in ~25 minutes.
+Nasdaq +0.42% (new record above 27K), S&P 500 +0.26% (new record). Dominant catalyst: Nvidia CEO Jensen Huang unveiled a new ARM-based PC chip (N1X) at COMPUTEX 2026, lifting NVDA +6%, DELL +10%, HP +8%, ARM +14%. Energy sector +2% as WTI crude spiked +7% to ~$93 on US-Iran tensions. Overall: broad risk-on, tech-heavy day with new records. Speculative tech (Goldman basket) up 57% YTD — caution warranted on extension.
 
----
-
-## BUY — BBAI (BigBear.ai Holdings, entry ~$5.12)
-
-**Thesis unchanged from 19:15 UTC run.** BBAI was $5.43 at the morning spike (too chased at that level), pulled back to $5.03–$5.04, and is now consolidating at $5.11. The Q1 catalyst base remains intact:
-- Q1 2026: $282M backlog (YoY improvement), $53M classified intelligence community sole-source award, revenue guidance reaffirmed $135M–$165M (~18% growth)
-- Commercial milestone: AI-powered shipping compliance platform deployed in Panama (first commercial deployment)
-- Macro tailwind: US-Iran geopolitical flare structurally lifts defense AI and intelligence spending
-
-**Entry rationale at $5.12 vs prior $5.05 limit:** Price settled $5.03→$5.11 through the afternoon session. The $5.00 level is holding as intraday support; the pullback from the $5.43 spike is healthy and the thesis hasn't been violated. Limit set at $5.12 — near current ask; bot will re-price to live ask on execution.
-
-**Sizing:** 12 shares × $5.12 = $61.44 (within $65 limit)
-**Take profit:** $5.90 — above the intraday spike zone ($5.43–$5.50); represents a clean exit if the catalyst resumes momentum
-**Stop loss:** $4.65 — below May 31 intraday low of $4.71; if that level breaks, the Q1 support base has failed
-**Risk/reward:** ($5.90 − $5.12) / ($5.12 − $4.65) = $0.78 / $0.47 ≈ 1.7:1
-**Overnight exposure:** Yes — this is a swing setup; comfortable holding overnight given multi-day catalyst
+**No fills today.** BBAI BUY limit at $5.05–$5.12 was not reached; stock held $5.03–$5.11 all session and never ticked through the ask decisively. Holdings remain empty.
 
 ---
 
-## Still Watching — AUR (Aurora Innovation, ~$7.41)
+## Orders
 
-Day range $7.12–$7.60; trading at $7.41. Target entry zone was $6.80–$7.10 on a pullback — price has not reached it. The commercial truck deployment catalysts (McLane, Hirschbach) remain intact; the setup is valid, the entry isn't. Maintaining watch, no order.
+**Empty — market is closed. No after-hours execution.**
 
 ---
 
-## Passed — All Broad-Market Movers
+## Watch List for Tomorrow (June 2)
 
-Most unusual-volume stocks today are either:
-- Already run >3% past any identifiable setup (HKIT +370%, TTRX +25%, SPCE +24%, RLYB +19%, ASAN +19% — all chased)
-- Chinese micro-caps with no verifiable catalyst (FOFO, JZXN, OPTU)
-- SPACs at ~$10 (TACH, HCAC, SSAC — no trade)
+### BBAI (BigBear.ai Holdings) — Primary Watch, ~$5.03
+The thesis remains intact and the setup is stronger after watching the stock absorb today's risk-on tape without selling off:
+- **$53M classified IC sole-source award** (incremental locked revenue, no competitive threat)
+- **Panama commercial deployment** (first commercial contract outside defense)
+- **Q1 2026 backlog $282M**, revenue guidance $135M–$165M reaffirmed
+- **Macro tailwind:** US-Iran escalation keeps defense AI spending elevated
+- **Technical:** $5.00 round-number support held all session. Entry zone $5.00–$5.15.
+- **Entry plan tomorrow:** BUY on open IF price holds above $4.90 (gap-down would violate the support thesis); limit near ask.
+- **Take profit:** $5.90 (above the intraday spike zone)
+- **Stop loss:** $4.65 (below May 31 intraday low)
+- **Sizing:** 12 shares × ~$5.05 = $60.60 (within $65 limit)
 
-RLYB (Rallybio) merger with Avenzo + $215M PIPE is a real catalyst, but stock opened and surged 19%+ immediately — no entry that isn't a full chase.
+### HLIT (Harmonic) — Secondary Watch, ~$15.32
+Strong Q1 (EPS beat +75%, broadband revenue +43%, raised 2026 guidance). Pulled back 11% from $17 highs and is testing $15.00 support. In a short-term downtrend (lower highs/lows) — needs the support to hold and show a reversal candle before entry.
+- **Watch for:** Daily close above $15.50 on volume to confirm support bounce
+- **Entry:** Only if confirmation comes; would not enter into continued downtrend
+
+### Broader setup for tomorrow
+COMPUTEX 2026 continues June 2–5; more NVIDIA announcements possible. AI infrastructure/PC chip ecosystem names (ARM, DELL, HP) remain in play. If crude holds above $90, energy-adjacent small caps worth scanning. Tight with no margin to chase.
 
 ---
 
 ## Capital Summary
 
-| Symbol | Status        | Notes                           |
-|--------|---------------|---------------------------------|
-| BBAI   | BUY order     | 12 shares @ $5.12 limit        |
+| Symbol | Status      | Notes                                         |
+|--------|-------------|-----------------------------------------------|
+| (none) | No orders   | Market closed — watching BBAI for tomorrow   |
 
-**Capital deployed if BBAI fills:** $61.44 of ~$200  
-**Powder remaining:** ~$138
+**Capital deployed:** $0 of ~$200
+**Powder:** ~$200
