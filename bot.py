@@ -1,29 +1,26 @@
-"""Swing/day-trade executor — bracket entries + brain-set exits, dry-run by default.
+"""Day-trade executor — simple marketable-limit entries + software-managed exits.
 
-Pipeline: a scheduled Claude routine (the "brain") researches the market and
-writes picks to `signals/orders.json`. This bot, run on a schedule by GitHub
-Actions, reads them, RE-CHECKS every guardrail in code, and manages positions.
+Why this design (learned the hard way on a small cash account):
+  * BRACKET/OCO orders were repeatedly auto-canceled by Schwab on this account.
+  * Buy limits priced off the brain's (stale, web-sourced) number sat BELOW the
+    live ask and never filled.
+So entries are now DEAD SIMPLE and priced off Schwab's LIVE quote:
+  ENTRY  = plain BUY limit at (live ask * 1.002) -> marketable, fills now at the
+           real price. DAY duration. No bracket.
+  EXITS  = managed in software here (runs on a schedule): for each held position,
+           if price >= the pick's take_profit or <= its stop_loss, SELL to close.
+           Also honors a brain {"action":"SELL"} signal.
 
-ENTRIES — for each fresh BUY pick:
-  Place a BRACKET order: a GTC limit buy with the brain's take-profit and
-  stop-loss attached as resting child orders. The exits live ON THE EXCHANGE,
-  so they fire automatically whenever price hits the target/stop — even when
-  this bot isn't running and even after hours. We do NOT force-sell at the
-  close; winners can ride / hold overnight.
-  Guardrails (enforced here regardless of what the brain wrote):
-    * BUY-only, stocks only, quantity * limit <= MAX_DOLLARS_PER_TRADE
-    * skip symbols already HELD or with a WORKING/PENDING order (no double-buys)
-    * if existing orders cannot be read, place NO new entries (fail safe)
-    * the brain MUST supply take_profit and stop_loss prices, and they must be
-      sane (stop < entry < target) or the entry is skipped.
+Risk rules still enforced in code (your one rule is safe):
+  * BUY-only; we only ever SELL shares we already own (never short).
+  * quantity * entry <= MAX_DOLLARS_PER_TRADE.
+  * skip symbols already HELD or with a WORKING/PENDING order (no double-buys);
+    if orders can't be read, place NOTHING (fail safe).
+  * don't chase: skip a BUY if the live ask is already > limit_price * (1+MAX_SLIPPAGE).
 
-EXITS — all SELL-to-close (we only sell shares we own, never short):
-  1. The bracket's resting target/stop (primary; works while bot is offline).
-  2. Brain SELL signal: {"action":"SELL"} for a held symbol -> close it now.
-  (No end-of-day flatten — positions may be held overnight by design.)
-
-SAFETY: DRY_RUN defaults to "true" — only logs "would buy/sell", places nothing,
-until a DRY_RUN repo variable is set to "false".
+DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
+Targets/stops are remembered via the pick file; the bot re-reads orders.json each
+run to know each held symbol's take_profit / stop_loss.
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
 Optional: SCHWAB_CALLBACK_URL, DRY_RUN
@@ -35,16 +32,16 @@ import os
 from datetime import datetime, timedelta, timezone
 
 from schwab import SchwabAuth, SchwabClient
-from schwab.models.generated.trading_models import Instruction, Duration, OrderType
+from schwab.models.generated.trading_models import Instruction, Duration
 
 # ===== GUARDRAILS / KNOBS =====
 MAX_DOLLARS_PER_TRADE = 65.00   # never spend more than this on one entry
 MAX_SIGNAL_AGE_HOURS  = 18      # ignore a stale orders.json
+MAX_SLIPPAGE          = 0.03    # skip a BUY if live ask is >3% above the pick's limit
+MARKETABLE_BUFFER     = 0.002   # buy limit = live ask * (1 + this) so it fills now
 ORDERS_FILE           = "signals/orders.json"
-# Win/loss levels are NOT fixed here — the brain sets take_profit & stop_loss
-# per pick. These bounds only reject obviously-broken values.
-MIN_TP_OVER_ENTRY     = 0.005   # target must be >= 0.5% above entry
-MIN_STOP_UNDER_ENTRY  = 0.005   # stop must be >= 0.5% below entry
+MIN_TP_OVER_ENTRY     = 0.005
+MIN_STOP_UNDER_ENTRY  = 0.005
 # ==============================
 
 APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
@@ -65,6 +62,16 @@ def get_client() -> SchwabClient:
             print(f"Schwab token endpoint said: HTTP {resp.status_code} -> {resp.text}")
         raise
     return SchwabClient(APP_KEY, APP_SECRET, CALLBACK, auth=auth)
+
+
+def _as_dict(o):
+    if o is None:
+        return {}
+    if hasattr(o, "model_dump"):
+        return o.model_dump()
+    if isinstance(o, dict):
+        return o
+    return dict(o)
 
 
 def load_orders() -> tuple[str | None, list[dict]]:
@@ -90,18 +97,7 @@ def is_fresh(generated_utc: str | None) -> bool:
     return age_h <= MAX_SIGNAL_AGE_HOURS
 
 
-def _as_dict(o):
-    if o is None:
-        return {}
-    if hasattr(o, "model_dump"):
-        return o.model_dump()
-    if isinstance(o, dict):
-        return o
-    return dict(o)
-
-
 def get_positions(client: SchwabClient) -> dict[str, dict]:
-    """{symbol: {"qty": longQty, "avg": averagePrice}} for held longs."""
     out: dict[str, dict] = {}
     try:
         for acct in client.get_accounts(include_positions=True):
@@ -119,13 +115,6 @@ def get_positions(client: SchwabClient) -> dict[str, dict]:
 
 
 def get_working_symbols(client: SchwabClient, account_hash: str) -> tuple[set[str], bool]:
-    """Symbols with an open/working/pending order — so we never double-order.
-
-    Returns (symbols, ok). ok=False means we could NOT read orders; callers must
-    treat that as "unknown" and refuse to place new entries (fail safe).
-    NOTE: Schwab's get_orders needs the ENCRYPTED account hash, not the plain
-    account number — passing the plain number returns 400 Bad Request.
-    """
     working: set[str] = set()
     open_states = {"WORKING", "PENDING_ACTIVATION", "QUEUED", "ACCEPTED",
                    "AWAITING_PARENT_ORDER", "AWAITING_CONDITION", "NEW",
@@ -154,7 +143,7 @@ def get_working_symbols(client: SchwabClient, account_hash: str) -> tuple[set[st
         return working, False
 
 
-def last_price(client: SchwabClient, symbol: str) -> float | None:
+def quote(client: SchwabClient, symbol: str) -> dict:
     try:
         q = client.get_quotes(symbol)
         d = _as_dict(q)
@@ -171,82 +160,72 @@ def last_price(client: SchwabClient, symbol: str) -> float | None:
                     walk(x)
 
         walk(d)
-        for key in ("lastprice", "last_price", "mark", "bidprice", "bid_price"):
-            if key in found:
-                return found[key]
+        return found
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) no quote for {symbol}: {exc}")
+        return {}
+
+
+def live_ask(q: dict) -> float | None:
+    for k in ("askprice", "ask_price", "ask", "lastprice", "last_price", "mark"):
+        if k in q and q[k]:
+            return q[k]
     return None
 
 
-def validate_entry(order: dict) -> tuple[bool, str]:
+def live_last(q: dict) -> float | None:
+    for k in ("lastprice", "last_price", "mark", "bidprice", "bid_price"):
+        if k in q and q[k]:
+            return q[k]
+    return None
+
+
+def validate_pick(order: dict) -> tuple[bool, str]:
     if order.get("action") != "BUY":
         return False, "not a BUY"
     if order.get("instrument", "stock") != "stock":
-        return False, "only stocks supported for now"
+        return False, "only stocks supported"
     qty = order.get("quantity") or 0
     limit = order.get("limit_price") or 0
     tp = order.get("take_profit") or 0
     sl = order.get("stop_loss") or 0
     if qty <= 0 or limit <= 0:
         return False, "bad quantity/limit_price"
-    if qty * limit > MAX_DOLLARS_PER_TRADE:
-        return False, f"${qty*limit:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap"
     if tp <= 0 or sl <= 0:
-        return False, "brain must supply take_profit and stop_loss prices"
-    if tp < limit * (1 + MIN_TP_OVER_ENTRY):
-        return False, f"take_profit ${tp:.2f} not above entry ${limit:.2f}"
-    if sl > limit * (1 - MIN_STOP_UNDER_ENTRY):
-        return False, f"stop_loss ${sl:.2f} not below entry ${limit:.2f}"
+        return False, "missing take_profit/stop_loss"
+    if tp < limit * (1 + MIN_TP_OVER_ENTRY) or sl > limit * (1 - MIN_STOP_UNDER_ENTRY):
+        return False, "tp/stop not on correct sides of entry"
     return True, "ok"
 
 
-def open_bracket(client, acct, order: dict):
-    sym = order["symbol"]
-    qty = int(order["quantity"])
-    limit = round(float(order["limit_price"]), 2)
-    tp = round(float(order["take_profit"]), 2)
-    sl = round(float(order["stop_loss"]), 2)
+def buy(client, acct, sym: str, qty: int, limit: float):
     if DRY_RUN:
-        print(f"[{sym}] DRY-RUN: would BUY {qty} @ ${limit:.2f} "
-              f"| target ${tp:.2f} | stop ${sl:.2f} | ${qty*limit:.2f} (GTC bracket)")
+        print(f"[{sym}] DRY-RUN: would BUY {qty} @ ${limit:.2f} = ${qty*limit:.2f}")
         return
     try:
-        bracket = client.create_bracket_order(
-            symbol=sym, quantity=qty, instruction=Instruction.buy,
-            entry_price=limit, profit_target_price=tp, stop_loss_price=sl,
-            order_type=OrderType.limit, duration=Duration.good_till_cancel,
+        order = client.create_limit_order(
+            symbol=sym, quantity=qty, limit_price=round(limit, 2),
+            instruction=Instruction.buy, duration=Duration.day,
         )
-        client.place_order(acct.hash_value, bracket)
-        print(f"[{sym}] ✅ LIVE BUY {qty} @ ${limit:.2f} | target ${tp:.2f} | stop ${sl:.2f}")
+        client.place_order(acct.hash_value, order)
+        print(f"[{sym}] ✅ LIVE BUY {qty} @ ${limit:.2f} (marketable limit)")
     except Exception as exc:  # noqa: BLE001
-        print(f"[{sym}] entry error: {exc}")
+        print(f"[{sym}] buy error: {exc}")
 
 
-def sell_to_close(client, acct, symbol: str, qty, why: str):
-    qty = int(qty)
-    if qty <= 0:
-        return
-    price = last_price(client, symbol)
+def sell(client, acct, sym: str, qty: int, limit: float, why: str):
     if DRY_RUN:
-        px = f"${price:.2f}" if price else "market"
-        print(f"[{symbol}] DRY-RUN: would SELL {qty} @ {px} to close ({why})")
+        print(f"[{sym}] DRY-RUN: would SELL {qty} @ ${limit:.2f} to close ({why})")
         return
     try:
-        if price:
-            order = client.create_limit_order(
-                symbol=symbol, quantity=qty, limit_price=round(price, 2),
-                instruction=Instruction.sell, duration=Duration.day,
-            )
-        else:
-            order = client.create_market_order(
-                symbol=symbol, quantity=qty, instruction=Instruction.sell,
-                duration=Duration.day,
-            )
+        order = client.create_limit_order(
+            symbol=sym, quantity=qty, limit_price=round(limit, 2),
+            instruction=Instruction.sell, duration=Duration.day,
+        )
         client.place_order(acct.hash_value, order)
-        print(f"[{symbol}] ✅ LIVE SELL {qty} to close ({why})")
+        print(f"[{sym}] ✅ LIVE SELL {qty} @ ${limit:.2f} to close ({why})")
     except Exception as exc:  # noqa: BLE001
-        print(f"[{symbol}] sell error: {exc}")
+        print(f"[{sym}] sell error: {exc}")
 
 
 def main() -> int:
@@ -257,31 +236,40 @@ def main() -> int:
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
     working, orders_ok = get_working_symbols(client, acct.hash_value)
-    print(f"Held: {', '.join(positions) or '(none)'} | Working orders: "
+    print(f"Held: {', '.join(positions) or '(none)'} | Working: "
           f"{', '.join(working) or '(none)'} | read_ok={orders_ok}")
 
     generated_utc, orders = load_orders()
     fresh = bool(orders) and is_fresh(generated_utc)
+    # Map each symbol -> its tp/stop from the latest picks (for exit management).
+    levels = {o["symbol"]: o for o in orders if o.get("action") == "BUY"} if orders else {}
+    brain_sells = {o.get("symbol") for o in orders if o.get("action") == "SELL"} if fresh else set()
 
-    # 1. Brain SELL signals — close held positions the brain wants out of.
-    if fresh:
-        for o in orders:
-            if o.get("action") == "SELL":
-                sym = o.get("symbol")
-                if sym in positions:
-                    sell_to_close(client, acct, sym, positions[sym]["qty"], "brain SELL signal")
-                else:
-                    print(f"[{sym}] SELL signal ignored — not held")
+    # ---- EXITS: manage held positions (sell-to-close on target/stop/brain) ----
+    for sym, pos in positions.items():
+        q = quote(client, sym)
+        last = live_last(q)
+        pick = levels.get(sym, {})
+        tp = pick.get("take_profit")
+        sl = pick.get("stop_loss")
+        if sym in brain_sells:
+            sell(client, acct, sym, int(pos["qty"]), last or pos["avg"], "brain SELL")
+        elif last and tp and last >= tp:
+            sell(client, acct, sym, int(pos["qty"]), last, f"hit target ${tp}")
+        elif last and sl and last <= sl:
+            sell(client, acct, sym, int(pos["qty"]), last, f"hit stop ${sl}")
+        else:
+            tptxt = f"${tp}" if tp else "?"
+            sltxt = f"${sl}" if sl else "?"
+            print(f"[{sym}] hold — last ${last} (target {tptxt} / stop {sltxt})")
 
-    # 2. New bracket entries from fresh BUY picks.
+    # ---- ENTRIES: only fresh BUY picks, priced off the LIVE ask ----
     if not fresh:
-        print("No fresh BUY picks to act on.")
+        print("No fresh BUY picks.")
         print("=== done ===")
         return 0
-
     if not orders_ok:
-        print("SKIP all new entries — could not read existing orders "
-              "(fail-safe: refusing to risk duplicate orders this run).")
+        print("SKIP entries — could not read existing orders (fail-safe).")
         print("=== done ===")
         return 0
 
@@ -289,17 +277,37 @@ def main() -> int:
         if order.get("action") != "BUY":
             continue
         sym = order.get("symbol", "?")
-        ok, why = validate_entry(order)
+        ok, why = validate_pick(order)
         if not ok:
-            print(f"[{sym}] SKIP entry — {why}")
+            print(f"[{sym}] SKIP — {why}")
             continue
         if sym in positions:
-            print(f"[{sym}] SKIP entry — already holding")
+            print(f"[{sym}] SKIP — already holding")
             continue
         if sym in working:
-            print(f"[{sym}] SKIP entry — already has a working/pending order")
+            print(f"[{sym}] SKIP — already has a working order")
             continue
-        open_bracket(client, acct, order)
+
+        q = quote(client, sym)
+        ask = live_ask(q)
+        if not ask:
+            print(f"[{sym}] SKIP — no live quote")
+            continue
+        pick_limit = float(order["limit_price"])
+        if ask > pick_limit * (1 + MAX_SLIPPAGE):
+            print(f"[{sym}] SKIP — ran away: live ask ${ask:.2f} > limit ${pick_limit:.2f} +{MAX_SLIPPAGE*100:.0f}%")
+            continue
+
+        # Marketable limit at the live ask so it actually fills now.
+        entry = round(ask * (1 + MARKETABLE_BUFFER), 2)
+        qty = int(order["quantity"])
+        # Re-check the dollar cap against the REAL entry price, and trim qty if needed.
+        while qty > 0 and qty * entry > MAX_DOLLARS_PER_TRADE:
+            qty -= 1
+        if qty <= 0:
+            print(f"[{sym}] SKIP — 1 share at ${entry:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap")
+            continue
+        buy(client, acct, sym, qty, entry)
 
     print("=== done ===")
     return 0
