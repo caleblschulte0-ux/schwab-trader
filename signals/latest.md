@@ -1,56 +1,50 @@
-# Trading Signals — 2026-06-01T17:00:00Z
+# Trading Signals — 2026-06-01T19:30:00Z
 
-**Generated:** 2026-06-01T17:00:00Z
-**Run type:** Intraday market hours (~12:00 PM EDT) — hold run, no new entries
-**Capital deployed:** ~$119.56 (2 positions assumed filled) | **Powder:** ~$80
+**Generated:** 2026-06-01T19:30:00Z
+**Run type:** Intraday market hours (~2:30 PM EDT) — fresh eyes, account flat
+**Holdings confirmed:** None (signals/holdings.json absent → Schwab account is flat)
+**Capital available:** ~$200
 
 ---
 
 ## Market Overview
 
-S&P 500 roughly flat, Nasdaq modestly green, Russell 2000 slightly negative — same bifurcation as the prior run. Chicago PMI printed 62.7 in May, the highest in 4 years, signaling strong factory order books. That's a positive macro undercurrent for industrials and defense. The dominant macro theme — stalled U.S.-Iran peace talks — remains live and continues to support the defense/drone complex.
-
-No new entries this run. Both prior positions (RCAT, BBAI) appear filled and are holding near entry. The thesis on each is intact; staying in.
+Monday June 1 opens soft: S&P 500 −0.08%, Dow −0.23%, Nasdaq −0.08%, Russell 2000 −0.59% at the session open after an unusually strong May. S&P and Nasdaq sit at RSI 73+ — broadly overbought. The dominant macro theme driving small-cap defense is U.S.-Iran tensions, which remain unresolved and keep the drone/defense complex bid. On the tech side, NVIDIA unveiled its N1X arm-based PC processor (partnered with Microsoft) at GTC Taipei today, catalyzing IBM +12% and ServiceNow +10% while crushing Qualcomm −9.6% and Intel −5.8% — a PC market share shake-up that has AI-adjacent names lit up.
 
 ---
 
-## HOLD — RCAT (Red Cat Holdings, 4 shares @ $14.65 entry)
+## BUY — RCAT (Red Cat Holdings, drone defense)
 
-**Take-profit:** $17.50 | **Stop-loss:** $13.20 | **Last seen:** ~$14.62
+**Order:** 4 shares × $14.10 limit = $56.40
 
-Thesis strengthened today. Roth/MKM initiated coverage with a BUY and $25 price target; CNBC published an article this morning ("This drone stock has surged over the past year. Roth Capital says it can rally another 70%"). H.C. Wainwright also initiated BUY / $20 PT on the same day — dual analyst initiations signal broad institutional interest following the Japan MoD contract announcement (173 Black Widow systems to the Japan Ground Self-Defense Force under FY2026 funding).
+**Take-profit:** $17.00 | **Stop-loss:** $12.70
 
-RCAT is at ~$14.62, essentially at the $14.65 fill price. Not running away — we're in at a clean level before the bulk of institutional distribution from the initiations. TP $17.50 is conservative vs. both new PTs ($20 and $25). Stop $13.20 gives room for normal volatility while cutting sharply if the thesis breaks.
-
-**No action. Hold.**
+RCAT is the cleanest setup available: today Roth/MKM initiated coverage at BUY with a $25 price target and H.C. Wainwright initiated BUY with a $20 PT — dual fresh institutional coverage. The catalyst underpinning both initiations is RCAT's Japan Ministry of Defense contract (173 Black Widow systems to the Japan Ground Self-Defense Force under FY2026 funding). With U.S.-Iran tensions keeping the defense/drone complex elevated, RCAT fits the macro backdrop. Previous attempts to fill RCAT at $14.65 never executed; today's softer open (predicted ~$13.85) offers a slightly better entry at the $14.10 limit. Take-profit $17.00 is below both analyst PTs ($20/$25) — not chasing the full target; stop $12.70 is below the $13.85 session open, giving room for normal volatility. Cost $56.40 leaves ~$143 in reserve for further opportunities.
 
 ---
 
-## HOLD — BBAI (BigBear.ai Holdings, 12 shares @ $5.08 entry)
+## Passed — TNDM (Tandem Diabetes Care)
 
-**Take-profit:** $5.75 | **Stop-loss:** $4.65 | **Last seen:** ~$5.04
-
-Volume today is running at ~2× the 53M daily average (106M+ shares). Elevated institutional/retail participation coincides with the Panama shipping-compliance deployment news and $281.9M backlog. BBAI has held above $5 through the session — the prior day's low was $4.71 but BBAI recovered to $5.50 intraday high, and today consolidates near $5.04–$5.11.
-
-At $5.04 the position is marginally underwater vs. $5.08 fill — normal noise. The multi-catalyst cluster (commercial deployment, backlog reaffirmation, defense/FAA IT contracts) remains intact. TP $5.75 is prior resistance; stop $4.65 is below the $4.71 recent support low.
-
-**No action. Hold.**
+Wells Fargo upgraded TNDM to Overweight with a $27 PT (from $21) on May 28. Strong catalyst, record Q1 revenue beat. However, the stock gapped 8%+ at open and now trades ~$19.44 (day range $17.72–$19.70) — already 8–13% above the pre-announcement level. Per the no-chase rule (skip anything already >3% past its setup), TNDM is off the table today. Will watch for a pullback toward $17 as a cleaner entry.
 
 ---
 
-## Passed — DPRO (Draganfly, at $7.73 today)
+## Passed — SOUN (SoundHound AI)
 
-DPRO is up ~3.5% today to $7.73, with fresh catalysts: DoD Flex FPV drone unit selections, Skip Dynamix fixed-wing acquisition (closing early June), ACSL exclusive Canada distribution. Northland Outperform, PT $16. Technically attractive.
+Revenue +52% YoY in Q1 2026, 7/7 analysts rate Buy with avg PT $14, and NVIDIA's N1X AI PC theme is a tailwind for voice AI. But SOUN filed to sell up to $300M in new shares — a meaningful dilution overhang that typically caps near-term upside until the offering clears. The stock ran ~10% last week and today is flat ($9.07–$9.19) on dramatically low volume (1.23M vs 24M daily avg). Not a fresh catalyst; passing while the offering cloud hangs.
 
-However: (1) adding a third drone/defense name concentrates sector risk — RCAT already owns the DoD hardware theme; (2) DPRO at $7.73 × 8 shares = $61.84 would leave only ~$18 in reserve, dangerously thin on a $200 account; (3) DPRO has moved from ~$6.67 last week to $7.73 today (+16%), pushing against the no-chase rule. Pass; remain watchlist.
+---
+
+## Passed — BBAI (BigBear.ai Holdings)
+
+Elevated volume (~2× daily avg) and live defense/commercial contracts ($281.9M backlog). Trading ~$5.04, near Friday's close. The setup isn't bad but BBAI is a money-losing company (P/E −5.74) and with Russell 2000 the weakest index today (−0.59%), the risk/reward on a second speculative small-cap isn't justified when RCAT already fills the "defense AI" slot with better analyst conviction.
 
 ---
 
 ## Capital Summary
 
-| Symbol | Qty | Entry  | Last   | Take-profit | Stop  | Unrealized $   |
-|--------|-----|--------|--------|-------------|-------|----------------|
-| RCAT   | 4   | $14.65 | ~$14.62| $17.50      | $13.20| ~−$0.12        |
-| BBAI   | 12  | $5.08  | ~$5.04 | $5.75       | $4.65 | ~−$0.48        |
+| Symbol | Qty | Limit  | Take-profit | Stop  | Cost    |
+|--------|-----|--------|-------------|-------|---------|
+| RCAT   | 4   | $14.10 | $17.00      | $12.70| $56.40  |
 
-**Cash deployed:** ~$119.56 | **Reserve:** ~$80 | **Max downside (both stops hit):** ~$12.44 | **Upside (both TPs hit):** ~$19.44
+**Orders submitted:** 1 | **Cash at risk if filled:** ~$56.40 | **Powder after fill:** ~$143.60

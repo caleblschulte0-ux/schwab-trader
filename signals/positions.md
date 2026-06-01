@@ -1,8 +1,7 @@
-# Open Positions — updated 2026-06-01T17:00:00Z
+# Open Positions — updated 2026-06-01T19:30:00Z
 
-| Symbol | Qty | Entry  | Take-profit | Stop  | Last seen | Unrealized $ | Note              |
-|--------|-----|--------|-------------|-------|-----------|--------------|-------------------|
-| RCAT   | 4   | 14.65  | 17.50       | 13.20 | ~14.62    | ~−$0.12      | filled, held ~1h  |
-| BBAI   | 12  | 5.08   | 5.75        | 4.65  | ~5.04     | ~−$0.48      | filled, 2× volume |
+No open positions.
 
-**Open positions:** 2   **Est. cash deployed:** ~$119.56 of ~$200   **Powder left:** ~$80
+*(holdings.json is absent — Schwab account is flat. RCAT order submitted this run; position will appear here once the bot confirms a fill.)*
+
+**Open positions:** 0   **Est. cash deployed:** $0 of ~$200   **Powder left:** ~$200
