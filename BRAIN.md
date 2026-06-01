@@ -31,7 +31,15 @@ stale overnight prices. Instead:
 2. Pick 0–3 to BUY. Each: BUY-only, stock, cost (quantity × limit_price) ≤ $65.
    Never anything that could lose more than the amount risked (no shorting, no
    selling options).
-3. For each BUY, set a `take_profit` (above entry) and `stop_loss` (below entry)
+3. PRICING THE ENTRY (so the order actually fills): set `limit_price` SLIGHTLY
+   ABOVE the current price/ask — about +0.3% to +0.5% above last (round sensibly).
+   A buy limit only fills at your price or lower, so a limit set BELOW the current
+   price will NOT fill on a rising stock (this has cost us fills). Price to get in,
+   not to save two cents. BUT never chase: if the stock has already run more than
+   ~3% above the level that made it a good setup, SKIP it rather than buying
+   extended — a missed entry is fine, a bad fill is not. Keep quantity x limit <= $65.
+
+   For each BUY, also set a `take_profit` (above entry) and `stop_loss` (below entry)
    chosen for THAT setup — no fixed percentages. Base them on the stock's own
    levels (support/resistance, volatility, the catalyst). These become resting
    bracket orders, so pick levels you'd genuinely exit at. Positions MAY be held
