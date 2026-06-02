@@ -23,12 +23,16 @@ the bot rewrites from the actual Schwab account on every run.
   that's still a good setup and not yet held.
 
 ## STEP 1 — WIDEN THE FUNNEL (the most important step)
-Each run, cast the WIDEST net you reasonably can via web search. Run MANY
-separate searches and MERGE + DEDUPE the results into one big pool. Target
-**100+ raw candidates** (more is better) before any filtering. Do NOT stop at the
-first list you find — keep pulling more until the pool is large.
+START from `signals/candidates.json` — the bot pre-fetches ~100-150 real market
+movers each run (top gainers, most-active/volume, biggest losers) with live
+price and % change. This is your structured base funnel; read it FIRST every run.
 
-Run a SEPARATE search for each of these (at minimum), then combine:
+Then EXPAND it with web search for anything the lists miss (fresh news catalysts,
+specific small-caps, sector themes). MERGE + DEDUPE everything into one pool.
+Target **100+ candidates** total. The candidates.json file alone should already
+give you ~100+, so a small funnel now means something is wrong — note it.
+
+Web searches to ADD on top of candidates.json (run several):
 1. Top % gainers today — market-wide, all US exchanges
 2. Most active / highest-volume stocks today
 3. Unusual volume (volume vs. average) names
@@ -141,4 +145,4 @@ day. Determine each exit honestly from the day's real price action + holdings.js
 ## Commit
 Commit and push ALL written files (orders.json, latest.md, positions.md, and
 reports/today.md when applicable) DIRECTLY to `main`. No new branch, no PR.
-(Do NOT edit holdings.json — the bot owns that file.)
+(Do NOT edit holdings.json or candidates.json — the bot owns those files.)
