@@ -1,55 +1,35 @@
-# Trading Signals — 2026-06-01T20:35:00Z
+Funnel: scanned 57 → 8 in price band → 4 with catalyst → 2 finalists → picked 1
 
-**Generated:** 2026-06-01T20:35:00Z
-**Run type:** Post-close / pre-market prep (market closed 4 PM ET)
-**Holdings confirmed:** None (holdings.json empty — no fills today)
-**Capital available:** ~$200
+**Generated:** 2026-06-02T18:45:00Z
 
 ---
 
-## Day Summary — June 1, 2026
+## Pick: ELMT — The Elmet Group Co.
 
-Nasdaq +0.42% (new record above 27K), S&P 500 +0.26% (new record). Dominant catalyst: Nvidia CEO Jensen Huang unveiled a new ARM-based PC chip (N1X) at COMPUTEX 2026, lifting NVDA +6%, DELL +10%, HP +8%, ARM +14%. Energy sector +2% as WTI crude spiked +7% to ~$93 on US-Iran tensions. Overall: broad risk-on, tech-heavy day with new records. Speculative tech (Goldman basket) up 57% YTD — caution warranted on extension.
+**Action:** BUY 3 shares @ $19.20 limit | TP $22.00 | Stop $17.50 | Max cost $57.60
 
-**No fills today.** BBAI BUY limit at $5.05–$5.12 was not reached; stock held $5.03–$5.11 all session and never ticked through the ask decisively. Holdings remain empty.
-
----
-
-## Orders
-
-**Empty — market is closed. No after-hours execution.**
+Elmet Group is a tungsten-based critical materials and components manufacturer supplying aerospace, defense, and government programs — including Next Generation Interceptor, Hellfire, Javelin, PrSM, and CERN. Q1 2026 results (released May 29) beat across the board: revenue +20.7% YoY to $56M, gross margin expanded 260 bps to 21.2%, adjusted EBITDA more than doubled to $9.2M. The headline number: open-order backlog hit a record $113.3M, up 52% sequentially and up 133% YoY in the aerospace, defense, and government segment. After a modest initial post-earnings pullback (-5.68% on May 29), institutional buying has been pushing the stock up strongly — today's +24% move is consistent with a delayed re-rating, not a blow-off. The company also completed an upsized IPO with $125.5M in net proceeds, eliminating the debt overhang and positioning it for acquisitions. Macro backdrop is supportive: defense budgets remain elevated, and tungsten is a strategic critical material increasingly on-shored for security reasons. Stop $17.50 is back below the pre-Q1 reaction zone (thesis invalidated if it fails this level); target $22.00 reflects continued backlog-driven re-rating.
 
 ---
 
-## Watch List for Tomorrow (June 2)
+## Notable Passes
 
-### BBAI (BigBear.ai Holdings) — Primary Watch, ~$5.03
-The thesis remains intact and the setup is stronger after watching the stock absorb today's risk-on tape without selling off:
-- **$53M classified IC sole-source award** (incremental locked revenue, no competitive threat)
-- **Panama commercial deployment** (first commercial contract outside defense)
-- **Q1 2026 backlog $282M**, revenue guidance $135M–$165M reaffirmed
-- **Macro tailwind:** US-Iran escalation keeps defense AI spending elevated
-- **Technical:** $5.00 round-number support held all session. Entry zone $5.00–$5.15.
-- **Entry plan tomorrow:** BUY on open IF price holds above $4.90 (gap-down would violate the support thesis); limit near ask.
-- **Take profit:** $5.90 (above the intraday spike zone)
-- **Stop loss:** $4.65 (below May 31 intraday low)
-- **Sizing:** 12 shares × ~$5.05 = $60.60 (within $65 limit)
+**FJET (Starfighters Space, ~$7.20 close, +40%):** Real catalysts — expanded Mu-g microgravity partnership, NASA parabolic flight RFI interest, new $17.5M private equity raise. However, the intraday blow-off pattern (ran to $9.50 intraday, sold back to $7.20 close) and the single-day +40% spike put this squarely in chase territory. Watching for a multi-day base before re-evaluating.
 
-### HLIT (Harmonic) — Secondary Watch, ~$15.32
-Strong Q1 (EPS beat +75%, broadband revenue +43%, raised 2026 guidance). Pulled back 11% from $17 highs and is testing $15.00 support. In a short-term downtrend (lower highs/lows) — needs the support to hold and show a reversal candle before entry.
-- **Watch for:** Daily close above $15.50 on volume to confirm support bounce
-- **Entry:** Only if confirmation comes; would not enter into continued downtrend
+**SUPX (SuperX AI, $12.21, +28.8%):** Immediate disqualification — J Capital Research formally accused the company of fabricating its AI infrastructure; Hagens Berman raised fraud allegations. Hard pass.
 
-### Broader setup for tomorrow
-COMPUTEX 2026 continues June 2–5; more NVIDIA announcements possible. AI infrastructure/PC chip ecosystem names (ARM, DELL, HP) remain in play. If crude holds above $90, energy-adjacent small caps worth scanning. Tight with no margin to chase.
+**FLNC (Fluence Energy, $27.15, +43.8%):** Real energy storage business with strong momentum, but $27 is above the $5–20 price band and a $65 budget only allows 2 shares with wide exposure. Pass.
+
+**TWLO ($227.54, +19.4%):** Exceptional Q1 — net income +350% to $90M, revenue +19.6% to $1.4B. Genuinely great catalyst but far above price band.
+
+**DAIC ($4.54, +29.6%):** 1-for-25 reverse split. Reverse-split rallies are structurally manipulated. Skip.
+
+**MASK, HKIT, ANY, SUUN, OPTU, FOFO, and other micro-cap gappers:** Chinese reverse-merger names with no identifiable business catalyst. Classic pump-and-dump risk. All passed.
+
+**BBAI (BigBear.ai, ~$5 zone):** Carried over from yesterday's watchlist — defense AI, $53M sole-source IC contract, $282M backlog. Still a valid thesis but no confirmation of today's price action to validate entry; ELMT is a cleaner setup today.
 
 ---
 
-## Capital Summary
+## Holdings
 
-| Symbol | Status      | Notes                                         |
-|--------|-------------|-----------------------------------------------|
-| (none) | No orders   | Market closed — watching BBAI for tomorrow   |
-
-**Capital deployed:** $0 of ~$200
-**Powder:** ~$200
+No open positions (holdings.json empty). Full ~$200 powder available.

@@ -1,4 +1,8 @@
 {
-  "generated_utc": "2026-06-01T20:35:00Z",
-  "orders": []
+  "generated_utc": "2026-06-02T18:45:00Z",
+  "funnel": {"scanned": 57, "in_price_band": 8, "had_catalyst": 4, "finalists": 2, "picked": 1},
+  "orders": [
+    {"symbol": "ELMT", "action": "BUY", "instrument": "stock",
+     "quantity": 3, "limit_price": 19.20, "take_profit": 22.00, "stop_loss": 17.50}
+  ]
 }
