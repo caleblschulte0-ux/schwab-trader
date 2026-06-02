@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-06-02T20:42:47Z",
-  "funnel": {"scanned": 155, "in_budget": 45, "had_catalyst": 15, "finalists": 5, "picked": 3},
+  "generated_utc": "2026-06-02T21:06:15Z",
+  "funnel": {"scanned": 160, "in_budget": 52, "had_catalyst": 18, "finalists": 5, "picked": 3},
   "orders": [
-    {"symbol": "LEGN", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 36.50, "take_profit": 45.00, "stop_loss": 30.00},
-    {"symbol": "SMCI", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 50.50, "take_profit": 59.00, "stop_loss": 45.50},
+    {"symbol": "HPE", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 56.50, "take_profit": 68.00, "stop_loss": 49.00},
     {"symbol": "SMR", "action": "BUY", "instrument": "stock",
-     "quantity": 4, "limit_price": 14.10, "take_profit": 16.50, "stop_loss": 12.50}
+     "quantity": 4, "limit_price": 14.00, "take_profit": 17.50, "stop_loss": 12.50},
+    {"symbol": "RGTI", "action": "BUY", "instrument": "stock",
+     "quantity": 2, "limit_price": 27.00, "take_profit": 34.00, "stop_loss": 23.50}
   ]
 }
