@@ -15,8 +15,9 @@ Ground truth: every run the bot writes the account's REAL positions to
 signals/holdings.json. The brain reads that file to know what it actually owns.
 The bot also builds signals/candidates.json — the brain's structured top-of-funnel.
 It combines LAGGING movers (gainers/most-active/losers) with LEADING signals
-(analyst upgrades, raised price targets, upcoming earnings) so the brain can
-position BEFORE a move, not just chase it. Each row is tagged with its reason(s).
+(analyst upgrades, raised price targets, upcoming earnings via FMP, and bullish
+stock news via Alpha Vantage) so the brain can position BEFORE a move, not just
+chase it. Each row is tagged with its reason(s).
 A brain-written signals/watchlist.json lets the bot auto-enter on a price/date
 trigger between brain runs (same guardrails); the bot only reads that file.
 
@@ -32,7 +33,8 @@ Risk rules still enforced in code (your one rule is safe):
 DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
-Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (market-mover candidates)
+Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (movers/leading candidates),
+ALPHAVANTAGE_API_KEY (bullish stock-news candidates)
 """
 from __future__ import annotations
 
@@ -62,6 +64,13 @@ EARNINGS_LOOKAHEAD_DAYS = 7     # enrich any candidate reporting within this win
 EARNINGS_ADD_DAYS       = 3     # also ADD covered names reporting within this window
 MAX_EARNINGS_ADD        = 50    # cap pre-earnings names added as fresh candidates
 ANALYST_LIMIT           = 100   # newest N analyst-action rows to scan per feed
+# --- stock-news funnel (Alpha Vantage News & Sentiment; free tier = 25 calls/day) ---
+NEWS_BASE             = "https://www.alphavantage.co/query"
+NEWS_REFRESH_MIN      = 40      # min minutes between AV calls (throttle: ~13/day < 25)
+NEWS_LIMIT            = 200     # articles to pull per AV call (free allows up to 1000)
+NEWS_MIN_RELEVANCE    = 0.30    # ignore tickers only loosely mentioned in an article
+NEWS_MIN_SENTIMENT    = 0.15    # only BULLISH-leaning coverage (it's a buy funnel)
+MAX_NEWS_ADD          = 60      # cap names added purely from the news feed
 # --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
 MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
 MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)
@@ -73,6 +82,7 @@ REFRESH_TOKEN = os.environ["SCHWAB_REFRESH_TOKEN"].strip()
 CALLBACK      = os.environ.get("SCHWAB_CALLBACK_URL", "https://127.0.0.1/").strip()
 DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
+AV_API_KEY    = os.environ.get("ALPHAVANTAGE_API_KEY", "").strip()  # stock-news feed
 
 
 def _fmp_get(endpoint: str, params: str = "") -> list:
@@ -225,13 +235,99 @@ def _fetch_leading(seen: dict) -> None:
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
 
 
-def _write_candidates(seen: dict) -> None:
+def _parse_av_feed(payload: dict) -> list[tuple[str, dict]]:
+    """Turn an Alpha Vantage NEWS_SENTIMENT response into (symbol, catalyst) pairs
+    for BULLISH, on-topic coverage only. Dedupes to each symbol's first (most
+    recent) qualifying mention. Skips CRYPTO:/FOREX: pseudo-tickers."""
+    feed = payload.get("feed")
+    if not isinstance(feed, list):
+        # AV signals rate-limit / bad key via an Information/Note/Error message.
+        note = payload.get("Information") or payload.get("Note") or payload.get("Error Message")
+        if note:
+            print(f"(news) AV said: {str(note)[:140]}")
+        return []
+    out: list[tuple[str, dict]] = []
+    picked: set[str] = set()
+    for item in feed:
+        title = item.get("title")
+        src = item.get("source")
+        for ts in (item.get("ticker_sentiment") or []):
+            sym = str(ts.get("ticker", "")).strip().upper()
+            if not sym or ":" in sym or sym in picked:
+                continue
+            try:
+                rel = float(ts.get("relevance_score", 0))
+                sent = float(ts.get("ticker_sentiment_score", 0))
+            except (TypeError, ValueError):
+                continue
+            label = str(ts.get("ticker_sentiment_label", ""))
+            if rel < NEWS_MIN_RELEVANCE:
+                continue
+            if not (sent >= NEWS_MIN_SENTIMENT or "Bull" in label):
+                continue  # neutral/bearish — not for a buy funnel
+            picked.add(sym)
+            out.append((sym, {"headline": title, "sentiment": label,
+                              "sentiment_score": round(sent, 3), "source": src}))
+    return out
+
+
+def _fetch_news(seen: dict, prev: dict) -> str | None:
+    """LEADING stock-news signal: names getting BULLISH coverage right now —
+    catching a story as it breaks, before the chart fully moves. Throttled via the
+    prior candidates.json timestamp so we stay under Alpha Vantage's 25 calls/day:
+    on a throttled run we carry forward the previous run's news names instead of
+    re-calling. Returns the news_updated_utc to persist. No-ops without a key."""
+    if not AV_API_KEY:
+        return None
+    last = _parse_dt(prev.get("news_updated_utc"))
+    if last is not None:
+        age_min = (datetime.now(timezone.utc) - last).total_seconds() / 60
+        if age_min < NEWS_REFRESH_MIN:
+            carried = 0
+            for row in prev.get("candidates", []):
+                if "news_bullish" in (row.get("signals") or []):
+                    _merge_candidate(seen, row.get("symbol"), name=row.get("name"),
+                                     price=row.get("price"), pct=row.get("pct_change"),
+                                     exch=row.get("exchange"), lst=row.get("list"),
+                                     signal="news_bullish", catalyst=row.get("catalyst"))
+                    carried += 1
+            print(f"(news) throttled ({age_min:.0f}m < {NEWS_REFRESH_MIN}m) — carried {carried} prior names")
+            return prev.get("news_updated_utc")
+    try:
+        import urllib.request
+        url = f"{NEWS_BASE}?function=NEWS_SENTIMENT&sort=LATEST&limit={NEWS_LIMIT}&apikey={AV_API_KEY}"
+        with urllib.request.urlopen(url, timeout=25) as r:
+            payload = json.loads(r.read().decode("utf-8"))
+        added = 0
+        for sym, catalyst in _parse_av_feed(payload):
+            if added >= MAX_NEWS_ADD:
+                break
+            _merge_candidate(seen, sym, signal="news_bullish", lst="news", catalyst=catalyst)
+            added += 1
+        print(f"(news) +{added} bullish-news names")
+        return datetime.now(timezone.utc).isoformat()
+    except Exception as exc:  # noqa: BLE001 - never let news break the run
+        print(f"(warn) news fetch failed: {exc}")
+        return prev.get("news_updated_utc")
+
+
+def _read_candidates() -> dict:
+    """Previous candidates.json (for the news throttle / carry-forward). {} if none."""
+    try:
+        with open(CANDIDATES_FILE, encoding="utf-8") as fh:
+            return json.load(fh)
+    except Exception:  # noqa: BLE001
+        return {}
+
+
+def _write_candidates(seen: dict, news_updated_utc: str | None = None) -> None:
     counts: dict[str, int] = {}
     for row in seen.values():
         for s in (row.get("signals") or ([row["signal"]] if row.get("signal") else [])):
             counts[s] = counts.get(s, 0) + 1
     data = {
         "updated_utc": datetime.now(timezone.utc).isoformat(),
+        "news_updated_utc": news_updated_utc,  # drives the AV news throttle
         "count": len(seen),
         "signal_counts": counts,
         "candidates": sorted(seen.values(), key=lambda x: x["symbol"]),
@@ -247,17 +343,23 @@ def _write_candidates(seen: dict) -> None:
 
 def fetch_fmp_candidates() -> None:
     """Build the brain's structured top-of-funnel and write signals/candidates.json.
-    Combines a LAGGING list (today's movers) with LEADING signals (analyst upgrades,
-    raised price targets, upcoming earnings) so the brain can act BEFORE the move.
-    ~6 FMP calls/run (free-tier safe, ~216/day < 250). No-ops without a key; any one
-    source failing is non-fatal — worst case the file is just today's movers."""
-    if not FMP_API_KEY:
-        print("(info) no FMP_API_KEY set — skipping candidate prefetch.")
+    Combines a LAGGING list (today's movers) with LEADING signals — analyst upgrades,
+    raised price targets, upcoming earnings (FMP), and BULLISH stock news (Alpha
+    Vantage) — so the brain can act BEFORE the move. Each source is keyed and
+    isolated: missing keys / failed endpoints just no-op (worst case = today's
+    movers, or an empty file). Throttles the news call to stay under AV's 25/day."""
+    if not (FMP_API_KEY or AV_API_KEY):
+        print("(info) no FMP_API_KEY or ALPHAVANTAGE_API_KEY set — skipping candidate prefetch.")
         return
+    prev = _read_candidates()
     seen: dict[str, dict] = {}
-    _fetch_movers(seen)    # lagging (already moved)
-    _fetch_leading(seen)   # leading (about to / catalyst pending)
-    _write_candidates(seen)
+    if FMP_API_KEY:
+        _fetch_movers(seen)    # lagging (already moved)
+        _fetch_leading(seen)   # leading (about to / catalyst pending)
+    else:
+        print("(info) no FMP_API_KEY — skipping FMP movers/leading sources.")
+    news_uts = _fetch_news(seen, prev)  # leading: bullish news as it breaks
+    _write_candidates(seen, news_updated_utc=news_uts)
 
 
 def get_client() -> SchwabClient:

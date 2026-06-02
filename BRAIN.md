@@ -41,7 +41,7 @@ the bot rewrites from the actual Schwab account on every run.
 ## STEP 1 — WIDEN THE FUNNEL (the most important step)
 Use TWO sources IN TANDEM every run and merge them into one big pool:
 
-SOURCE 1 — `signals/candidates.json` (FMP). The bot pre-fetches both LAGGING and
+SOURCE 1 — `signals/candidates.json`. The bot pre-fetches both LAGGING and
 LEADING names with live price + % change. Read this first. Each row now carries a
 `signal` (primary reason) and a `signals` list (ALL reasons), plus an optional
 `catalyst`. Tags you'll see (top-level `signal_counts` tallies them):
@@ -49,6 +49,11 @@ LEADING names with live price + % change. Read this first. Each row now carries 
 - `upgrade` — LEADING: fresh analyst upgrade (catalyst: firm, from/to grade).
 - `pt_raise` — LEADING: analyst price target set well above the current price.
 - `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date).
+- `news_bullish` — LEADING: getting BULLISH news coverage right now, caught as the
+  story breaks (catalyst: headline, sentiment, source). Often the EARLIEST signal —
+  a name can hit the news before its chart fully moves. READ the headline: confirm
+  it's a real, durable catalyst (deal, beat, approval, contract), not fluff, and
+  that the move isn't already spent.
 LEADING names are in the funnel because a catalyst is FRESH or PENDING — NOT
 because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this is
 how you get in BEFORE the move instead of chasing it after. A name carrying both a
