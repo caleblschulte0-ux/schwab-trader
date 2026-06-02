@@ -37,7 +37,9 @@ Run a SEPARATE search for each of these (at minimum), then combine:
 6. Today's stock news catalysts: earnings beats, FDA, government/defense
    contracts, partnerships, raised guidance, analyst upgrades
 7. Small-cap / micro-cap gainers specifically (these are often missed by the
-   broad gainer lists)
+   broad gainer lists) — include them, but don't limit the funnel to cheap
+   stocks; mid- and large-cap movers are fair game too (the $65 budget, not
+   share price, is the only sizing constraint).
 8. Sector/theme sweeps — run one search each for the hot themes of the day
    (e.g. AI, defense, biotech, energy, quantum, nuclear, crypto-adjacent)
 
@@ -52,7 +54,11 @@ Tips to maximize breadth:
 
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:
-- Price band ~$5–$20 while the account is small (flexible, not rigid).
+- NO price band — any share price is fine as long as the trade fits the $65
+  budget (quantity × entry ≤ $65). That means even 1 share of a ~$60 stock is OK
+  if it's the best setup. Don't reject a great name just because it's pricey, and
+  don't favor cheap names just because you can buy more shares. Pick the best
+  SETUP; size it to the $65 cap (fewer shares for pricier stocks is expected).
 - Enough liquidity to enter/exit a tiny position cleanly.
 - A real, identifiable catalyst or momentum reason.
 - Setup quality + reward/risk: is there room to a sensible target, and a clear
@@ -88,11 +94,11 @@ Holding an existing position is a FULLY VALID choice and often the right one.
 ## Files you MUST write every run
 
 ### A. `signals/orders.json` — what the bot executes (overwrite each run)
-EXACTLY this shape (note the new `funnel` field — your scan tally):
+EXACTLY this shape (note the `funnel` field — your scan tally):
 ```
 {
   "generated_utc": "<ISO-8601 UTC, e.g. 2026-06-02T14:00:00Z>",
-  "funnel": {"scanned": 80, "in_price_band": 22, "had_catalyst": 9, "finalists": 3, "picked": 1},
+  "funnel": {"scanned": 80, "in_budget": 22, "had_catalyst": 9, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
      "quantity": 4, "limit_price": 15.50, "take_profit": 17.40, "stop_loss": 14.20}
@@ -108,7 +114,7 @@ EXACTLY this shape (note the new `funnel` field — your scan tally):
 
 ### B. `signals/latest.md` — your reasoning (overwrite each run)
 Start with a one-line FUNNEL TALLY, e.g.:
-`Funnel: scanned 80 → 22 in price band → 9 with catalyst → 3 finalists → picked 1`
+`Funnel: scanned 80 → 22 fit budget → 9 with catalyst → 3 finalists → picked 1`
 Then: one paragraph per pick (why), the notable names you passed and why, and
 the read on any current holdings. Include a UTC timestamp.
 
