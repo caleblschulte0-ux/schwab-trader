@@ -66,7 +66,8 @@ MAX_EARNINGS_ADD        = 50    # cap pre-earnings names added as fresh candidat
 ANALYST_LIMIT           = 100   # newest N analyst-action rows to scan per feed
 # --- stock-news funnel (Alpha Vantage News & Sentiment; free tier = 25 calls/day) ---
 NEWS_BASE             = "https://www.alphavantage.co/query"
-NEWS_REFRESH_MIN      = 40      # min minutes between AV calls (throttle: ~13/day < 25)
+NEWS_DAILY_BUDGET     = 22      # max AV calls per UTC day (under the 25/day free cap)
+NEWS_REFRESH_MIN      = 13      # min minutes between AV calls (dedupe rapid/manual runs)
 NEWS_LIMIT            = 200     # articles to pull per AV call (free allows up to 1000)
 NEWS_MIN_RELEVANCE    = 0.30    # ignore tickers only loosely mentioned in an article
 NEWS_MIN_SENTIMENT    = 0.15    # only BULLISH-leaning coverage (it's a buy funnel)
@@ -82,7 +83,8 @@ REFRESH_TOKEN = os.environ["SCHWAB_REFRESH_TOKEN"].strip()
 CALLBACK      = os.environ.get("SCHWAB_CALLBACK_URL", "https://127.0.0.1/").strip()
 DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
-AV_API_KEY    = os.environ.get("ALPHAVANTAGE_API_KEY", "").strip()  # stock-news feed
+# Alpha Vantage stock-news key. Accept either name (the GitHub secret is ALPHA_API_KEY).
+AV_API_KEY    = (os.environ.get("ALPHA_API_KEY") or os.environ.get("ALPHAVANTAGE_API_KEY", "")).strip()
 
 
 def _fmp_get(endpoint: str, params: str = "") -> list:
@@ -271,28 +273,43 @@ def _parse_av_feed(payload: dict) -> list[tuple[str, dict]]:
     return out
 
 
-def _fetch_news(seen: dict, prev: dict) -> str | None:
-    """LEADING stock-news signal: names getting BULLISH coverage right now —
-    catching a story as it breaks, before the chart fully moves. Throttled via the
-    prior candidates.json timestamp so we stay under Alpha Vantage's 25 calls/day:
-    on a throttled run we carry forward the previous run's news names instead of
-    re-calling. Returns the news_updated_utc to persist. No-ops without a key."""
+def _carry_forward_news(seen: dict, prev: dict) -> int:
+    """Re-add the previous run's bullish-news names (used on throttled runs so the
+    news signal persists between actual Alpha Vantage calls)."""
+    carried = 0
+    for row in prev.get("candidates", []):
+        if "news_bullish" in (row.get("signals") or []):
+            _merge_candidate(seen, row.get("symbol"), name=row.get("name"),
+                             price=row.get("price"), pct=row.get("pct_change"),
+                             exch=row.get("exchange"), lst=row.get("list"),
+                             signal="news_bullish", catalyst=row.get("catalyst"))
+            carried += 1
+    return carried
+
+
+def _fetch_news(seen: dict, prev: dict) -> dict:
+    """LEADING stock-news signal: names getting BULLISH coverage right now — catching
+    a story as it breaks, before the chart fully moves. Throttled by a per-UTC-day
+    call counter (persisted in candidates.json) so we stay under Alpha Vantage's free
+    25/day cap while getting close to it: we call on every run until NEWS_DAILY_BUDGET
+    is spent (front-loading the news-heavy morning/midday), then carry forward prior
+    names for the rest of the day. Returns the news meta to persist. No-ops w/o a key."""
+    today = datetime.now(timezone.utc).date().isoformat()
+    meta = {"news_updated_utc": prev.get("news_updated_utc"),
+            "news_calls_date": prev.get("news_calls_date"),
+            "news_calls_today": prev.get("news_calls_today", 0) or 0}
     if not AV_API_KEY:
-        return None
-    last = _parse_dt(prev.get("news_updated_utc"))
-    if last is not None:
-        age_min = (datetime.now(timezone.utc) - last).total_seconds() / 60
-        if age_min < NEWS_REFRESH_MIN:
-            carried = 0
-            for row in prev.get("candidates", []):
-                if "news_bullish" in (row.get("signals") or []):
-                    _merge_candidate(seen, row.get("symbol"), name=row.get("name"),
-                                     price=row.get("price"), pct=row.get("pct_change"),
-                                     exch=row.get("exchange"), lst=row.get("list"),
-                                     signal="news_bullish", catalyst=row.get("catalyst"))
-                    carried += 1
-            print(f"(news) throttled ({age_min:.0f}m < {NEWS_REFRESH_MIN}m) — carried {carried} prior names")
-            return prev.get("news_updated_utc")
+        return meta
+    calls = meta["news_calls_today"] if meta["news_calls_date"] == today else 0  # reset on new day
+    meta["news_calls_date"] = today
+    last = _parse_dt(meta["news_updated_utc"])
+    age_min = (datetime.now(timezone.utc) - last).total_seconds() / 60 if last else 1e9
+    if calls >= NEWS_DAILY_BUDGET or age_min < NEWS_REFRESH_MIN:
+        why = "daily budget reached" if calls >= NEWS_DAILY_BUDGET else f"{age_min:.0f}m < {NEWS_REFRESH_MIN}m"
+        carried = _carry_forward_news(seen, prev)
+        print(f"(news) throttled ({why}; {calls}/{NEWS_DAILY_BUDGET} today) — carried {carried} prior names")
+        meta["news_calls_today"] = calls
+        return meta
     try:
         import urllib.request
         url = f"{NEWS_BASE}?function=NEWS_SENTIMENT&sort=LATEST&limit={NEWS_LIMIT}&apikey={AV_API_KEY}"
@@ -304,11 +321,14 @@ def _fetch_news(seen: dict, prev: dict) -> str | None:
                 break
             _merge_candidate(seen, sym, signal="news_bullish", lst="news", catalyst=catalyst)
             added += 1
-        print(f"(news) +{added} bullish-news names")
-        return datetime.now(timezone.utc).isoformat()
+        meta["news_updated_utc"] = datetime.now(timezone.utc).isoformat()
+        meta["news_calls_today"] = calls + 1
+        print(f"(news) +{added} bullish-news names ({meta['news_calls_today']}/{NEWS_DAILY_BUDGET} today)")
     except Exception as exc:  # noqa: BLE001 - never let news break the run
         print(f"(warn) news fetch failed: {exc}")
-        return prev.get("news_updated_utc")
+        _carry_forward_news(seen, prev)
+        meta["news_calls_today"] = calls  # a failed call shouldn't burn the budget
+    return meta
 
 
 def _read_candidates() -> dict:
@@ -320,16 +340,17 @@ def _read_candidates() -> dict:
         return {}
 
 
-def _write_candidates(seen: dict, news_updated_utc: str | None = None) -> None:
+def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
     counts: dict[str, int] = {}
     for row in seen.values():
         for s in (row.get("signals") or ([row["signal"]] if row.get("signal") else [])):
             counts[s] = counts.get(s, 0) + 1
     data = {
         "updated_utc": datetime.now(timezone.utc).isoformat(),
-        "news_updated_utc": news_updated_utc,  # drives the AV news throttle
         "count": len(seen),
         "signal_counts": counts,
+        # AV news throttle state (persisted across runs):
+        **(news_meta or {}),
         "candidates": sorted(seen.values(), key=lambda x: x["symbol"]),
     }
     try:
@@ -358,8 +379,8 @@ def fetch_fmp_candidates() -> None:
         _fetch_leading(seen)   # leading (about to / catalyst pending)
     else:
         print("(info) no FMP_API_KEY — skipping FMP movers/leading sources.")
-    news_uts = _fetch_news(seen, prev)  # leading: bullish news as it breaks
-    _write_candidates(seen, news_updated_utc=news_uts)
+    news_meta = _fetch_news(seen, prev)  # leading: bullish news as it breaks
+    _write_candidates(seen, news_meta=news_meta)
 
 
 def get_client() -> SchwabClient:
