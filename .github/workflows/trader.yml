@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write   # allow committing the holdings file back to the repo
+  contents: write   # allow committing holdings/candidates files back to the repo
 
 jobs:
   trade:
@@ -34,17 +34,18 @@ jobs:
           SCHWAB_APP_SECRET: ${{ secrets.SCHWAB_APP_SECRET }}
           SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
         run: python bot.py
 
-      - name: Commit holdings snapshot
+      - name: Commit data snapshots
         if: always()
         run: |
           git config user.name "schwab-bot"
           git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain signals/holdings.json)" ]; then
-            git add signals/holdings.json
-            git commit -m "bot: update holdings snapshot [skip ci]"
+          git add signals/holdings.json signals/candidates.json 2>/dev/null || true
+          if [ -n "$(git status --porcelain signals/holdings.json signals/candidates.json)" ]; then
+            git commit -m "bot: update holdings + candidates snapshot [skip ci]"
             git push
           else
-            echo "No holdings change to commit."
+            echo "No data changes to commit."
           fi
