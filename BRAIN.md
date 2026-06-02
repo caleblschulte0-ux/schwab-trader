@@ -46,9 +46,9 @@ LEADING names with live price + % change. Read this first. Each row now carries 
 `signal` (primary reason) and a `signals` list (ALL reasons), plus an optional
 `catalyst`. Tags you'll see (top-level `signal_counts` tallies them):
 - `mover` — LAGGING: already a top gainer / most-active / biggest loser today.
-- `upgrade` — LEADING: fresh analyst upgrade (catalyst: firm, from/to grade).
-- `pt_raise` — LEADING: analyst price target set well above the current price.
-- `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date).
+- `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date, and
+  eps_estimate when known). The "who's reporting soon" pre-position pool. Earnings
+  gaps cut both ways → a defined `stop_loss` is mandatory on these.
 - `news_bullish` — LEADING: getting BULLISH news coverage right now, caught as the
   story breaks (catalyst: headline, sentiment, source). Often the EARLIEST signal —
   a name can hit the news before its chart fully moves. READ the headline: confirm
@@ -184,8 +184,8 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 ```
 - `funnel` is REQUIRED every run — fill in the real counts from your scan so we
   can see how wide we looked (scanned → narrowed → finalists → picked). Include
-  `leading` = how many candidates carried a LEADING tag (upgrade/pt_raise/
-  earnings_soon), so we can track how proactive the funnel is each run.
+  `leading` = how many candidates carried a LEADING tag (earnings_soon/news_bullish),
+  so we can track how proactive the funnel is each run.
 - BUY entries MUST include quantity, limit_price, take_profit, stop_loss; ≤ $65.
 - SELL entries (only for symbols in holdings.json) need only
   `{"symbol":"...","action":"SELL"}`.

@@ -15,9 +15,8 @@ Ground truth: every run the bot writes the account's REAL positions to
 signals/holdings.json. The brain reads that file to know what it actually owns.
 The bot also builds signals/candidates.json — the brain's structured top-of-funnel.
 It combines LAGGING movers (gainers/most-active/losers) with LEADING signals
-(analyst upgrades, raised price targets, upcoming earnings via FMP, and bullish
-stock news via Alpha Vantage) so the brain can position BEFORE a move, not just
-chase it. Each row is tagged with its reason(s).
+(upcoming earnings via FMP, and bullish stock news via Alpha Vantage) so the brain
+can position BEFORE a move, not just chase it. Each row is tagged with its reason(s).
 A brain-written signals/watchlist.json lets the bot auto-enter on a price/date
 trigger between brain runs (same guardrails); the bot only reads that file.
 
@@ -61,9 +60,8 @@ WATCHLIST_FILE        = "signals/watchlist.json"
 FMP_BASE              = "https://financialmodelingprep.com/stable"
 # --- leading-signal funnel (proactive: find names BEFORE they run) ---
 EARNINGS_LOOKAHEAD_DAYS = 7     # enrich any candidate reporting within this window
-EARNINGS_ADD_DAYS       = 3     # also ADD covered names reporting within this window
-MAX_EARNINGS_ADD        = 50    # cap pre-earnings names added as fresh candidates
-ANALYST_LIMIT           = 100   # newest N analyst-action rows to scan per feed
+EARNINGS_ADD_DAYS       = 7     # also ADD covered names reporting within this window
+MAX_EARNINGS_ADD        = 80    # cap pre-earnings names added as fresh candidates
 # --- stock-news funnel (Alpha Vantage News & Sentiment; free tier = 25 calls/day) ---
 NEWS_BASE             = "https://www.alphavantage.co/query"
 NEWS_DAILY_BUDGET     = 22      # max AV calls per UTC day (under the 25/day free cap)
@@ -131,23 +129,6 @@ def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
     return False
 
 
-# Higher score = more bullish. Used to tell an UPGRADE from a downgrade so we
-# never inject a freshly-DOWNGRADED (bearish) name into a BUY funnel.
-_GRADE_SCORE = {
-    "strong sell": 0, "sell": 1, "underperform": 1, "underweight": 1, "reduce": 1,
-    "negative": 1, "hold": 2, "neutral": 2, "market perform": 2, "equal-weight": 2,
-    "equalweight": 2, "sector perform": 2, "in-line": 2, "peer perform": 2,
-    "accumulate": 3, "add": 3, "overweight": 3, "outperform": 4, "buy": 4,
-    "positive": 4, "market outperform": 4, "sector outperform": 4, "strong buy": 5,
-}
-
-
-def _grade_score(grade) -> int | None:
-    if not grade:
-        return None
-    return _GRADE_SCORE.get(str(grade).strip().lower())
-
-
 def _fetch_movers(seen: dict) -> None:
     """LAGGING funnel (unchanged from day one): names that ALREADY moved today."""
     lists = {"gainers": "biggest-gainers", "actives": "most-actives",
@@ -165,52 +146,16 @@ def _fetch_movers(seen: dict) -> None:
 
 
 def _fetch_leading(seen: dict) -> None:
-    """LEADING funnel (the proactive upgrade): names with a FRESH or PENDING
-    catalyst — analyst UPGRADES, raised PRICE TARGETS, and UPCOMING EARNINGS —
-    so the brain can position BEFORE the move, not just chase it after.
-    Each source is isolated in try/except: a failed/paid endpoint just no-ops."""
-    # 1) Analyst UPGRADES (bullish grade changes only).
-    try:
-        n = 0
-        for row in _fmp_get("grade-latest-news", f"page=0&limit={ANALYST_LIMIT}"):
-            sym = row.get("symbol")
-            new_s = _grade_score(row.get("newGrade"))
-            prev_s = _grade_score(row.get("previousGrade"))
-            action = str(row.get("action", "")).strip().lower()
-            is_up = (action in {"upgrade", "initialise", "initialize", "initiate"}
-                     or (new_s is not None and prev_s is not None and new_s > prev_s)
-                     or (prev_s is None and new_s is not None and new_s >= 4))
-            if not is_up:
-                continue  # skip downgrades / holds / unknowns — buy funnel only
-            _merge_candidate(seen, sym, signal="upgrade", lst="analyst", catalyst={
-                "analyst_firm": row.get("gradingCompany"),
-                "from_grade": row.get("previousGrade"), "to_grade": row.get("newGrade")})
-            n += 1
-        print(f"(fmp) upgrades: +{n}")
-    except Exception as exc:  # noqa: BLE001
-        print(f"(warn) FMP grade-latest-news failed (skipped): {exc}")
+    """LEADING funnel (the proactive upgrade): UPCOMING EARNINGS so the brain can
+    position BEFORE the report. (FMP's analyst grade/price-target feeds were dropped:
+    grade-latest-news 404s and price-target-latest-news is 402 Payment Required on
+    the free tier — analyst actions now reach the brain via the news feed + web
+    search.) Isolated in try/except: a failed endpoint just no-ops.
 
-    # 2) Raised PRICE TARGETS (target meaningfully above price when posted).
-    try:
-        n = 0
-        for row in _fmp_get("price-target-latest-news", f"page=0&limit={ANALYST_LIMIT}"):
-            sym = row.get("symbol")
-            pt = row.get("priceTarget") or row.get("adjPriceTarget")
-            when = row.get("priceWhenPosted")
-            if not (pt and when and pt > when * 1.05):  # need real implied upside
-                continue
-            _merge_candidate(seen, sym, signal="pt_raise", lst="analyst", catalyst={
-                "analyst_firm": row.get("analystCompany") or row.get("newsPublisher"),
-                "price_target": pt})
-            n += 1
-        print(f"(fmp) price-target raises: +{n}")
-    except Exception as exc:  # noqa: BLE001
-        print(f"(warn) FMP price-target-latest-news failed (skipped): {exc}")
-
-    # 3) UPCOMING EARNINGS — the highest-value leading signal. Two uses:
-    #    (a) ENRICH any existing candidate that reports soon (a mover reporting
-    #        tomorrow is high-priority); (b) ADD a capped set of covered names
-    #        reporting in the next few days that aren't on any list yet.
+    Two uses of the earnings calendar: (a) ENRICH any existing candidate that reports
+    soon (a mover reporting tomorrow is high-priority); (b) ADD covered names
+    reporting in the lookahead window that aren't on any list yet — "who's reporting
+    soon", the pre-position pool."""
     try:
         today = datetime.now(timezone.utc).date()
         end = today + timedelta(days=EARNINGS_LOOKAHEAD_DAYS)
@@ -223,16 +168,19 @@ def _fetch_leading(seen: dict) -> None:
                 edate = datetime.fromisoformat(raw).date()
             except ValueError:
                 continue
+            est = row.get("epsEstimated")
+            cat = {"earnings_date": raw}
+            if est is not None:
+                cat["eps_estimate"] = est
             if sym in seen:
-                _merge_candidate(seen, sym, signal="earnings_soon",
-                                 catalyst={"earnings_date": raw})
+                _merge_candidate(seen, sym, signal="earnings_soon", catalyst=cat)
                 enriched += 1
             elif (added < MAX_EARNINGS_ADD and edate <= today + timedelta(days=EARNINGS_ADD_DAYS)
-                  and row.get("epsEstimated") is not None):  # epsEstimated => covered/liquid
+                  and est is not None):  # epsEstimated => analyst-covered / liquid enough
                 _merge_candidate(seen, sym, name=sym, lst="calendar",
-                                 signal="earnings_soon", catalyst={"earnings_date": raw})
+                                 signal="earnings_soon", catalyst=cat)
                 added += 1
-        print(f"(fmp) earnings: enriched {enriched}, added {added} upcoming")
+        print(f"(fmp) earnings (next {EARNINGS_LOOKAHEAD_DAYS}d): enriched {enriched}, added {added} upcoming")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
 
@@ -364,9 +312,9 @@ def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
 
 def fetch_fmp_candidates() -> None:
     """Build the brain's structured top-of-funnel and write signals/candidates.json.
-    Combines a LAGGING list (today's movers) with LEADING signals — analyst upgrades,
-    raised price targets, upcoming earnings (FMP), and BULLISH stock news (Alpha
-    Vantage) — so the brain can act BEFORE the move. Each source is keyed and
+    Combines a LAGGING list (today's movers) with LEADING signals — upcoming earnings
+    (FMP) and BULLISH stock news (Alpha Vantage) — so the brain can act BEFORE the
+    move. Each source is keyed and
     isolated: missing keys / failed endpoints just no-op (worst case = today's
     movers, or an empty file). Throttles the news call to stay under AV's 25/day."""
     if not (FMP_API_KEY or AV_API_KEY):
