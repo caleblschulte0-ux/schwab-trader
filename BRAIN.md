@@ -84,6 +84,9 @@ From the wide pool, narrow with judgment:
   smaller-cap one; only go larger-cap when its setup is clearly stronger. Never
   reject a great name just for being pricey, and never force a weak small-cap just
   to stay small. Size everything to the $65 cap.
+- PRICE FLOOR: avoid stocks under ~$2/share. Sub-$2 names (and especially
+  sub-$1) are mostly pump-and-dump / reverse-split traps with manipulated
+  volume — skip them even if they're up big. No hard ceiling, but the floor is firm.
 - Enough liquidity to enter/exit a tiny position cleanly.
 - A real, identifiable catalyst or momentum reason.
 - Setup quality + reward/risk: is there room to a sensible target, and a clear
