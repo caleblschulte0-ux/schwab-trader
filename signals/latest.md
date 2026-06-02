@@ -1,35 +1,36 @@
-Funnel: scanned 57 → 8 in price band → 4 with catalyst → 2 finalists → picked 1
+# Trading Signals — 2026-06-02T19:30:00Z
 
-**Generated:** 2026-06-02T18:45:00Z
+Funnel: scanned 77 → 22 in price band → 12 with catalyst → 3 finalists → picked 2
 
 ---
 
-## Pick: ELMT — The Elmet Group Co.
+## Picks
 
-**Action:** BUY 3 shares @ $19.20 limit | TP $22.00 | Stop $17.50 | Max cost $57.60
+### BUY KVYO (Klaviyo) — 3 shares @ $18.50 limit | TP $20.80 | SL $17.10
 
-Elmet Group is a tungsten-based critical materials and components manufacturer supplying aerospace, defense, and government programs — including Next Generation Interceptor, Hellfire, Javelin, PrSM, and CERN. Q1 2026 results (released May 29) beat across the board: revenue +20.7% YoY to $56M, gross margin expanded 260 bps to 21.2%, adjusted EBITDA more than doubled to $9.2M. The headline number: open-order backlog hit a record $113.3M, up 52% sequentially and up 133% YoY in the aerospace, defense, and government segment. After a modest initial post-earnings pullback (-5.68% on May 29), institutional buying has been pushing the stock up strongly — today's +24% move is consistent with a delayed re-rating, not a blow-off. The company also completed an upsized IPO with $125.5M in net proceeds, eliminating the debt overhang and positioning it for acquisitions. Macro backdrop is supportive: defense budgets remain elevated, and tungsten is a strategic critical material increasingly on-shored for security reasons. Stop $17.50 is back below the pre-Q1 reaction zone (thesis invalidated if it fails this level); target $22.00 reflects continued backlog-driven re-rating.
+Klaviyo reported Q1 2026 results: revenue $358M (+28% YoY), returned to profitability ($9M net income), raised full-year guidance to $1.514–$1.522B, and announced a $500M share buyback. New AI capabilities (Custom Skills for Customer Agent) launched alongside. The stock gapped from ~$15.88 to $18.36 (+15.91%) on the earnings news — a clean re-rating, not a blow-off. At $18.36 it is still well below the 52-week high of $36.76 and the average analyst target of ~$30, leaving meaningful room to run. Stop at $17.10 is within the earnings gap but above the pre-earnings close (loss limited to 7.6%); target $20.80 is 12.4% above entry near the next round-number resistance. 3 shares × $18.50 = $55.50 ≤ $65.
+
+### BUY APPN (Appian) — 2 shares @ $27.90 limit | TP $31.50 | SL $25.60
+
+Appian's Q1 2026 results (reported June 1 after close) delivered a 50% EPS beat — $0.27 actual vs. $0.18 expected — on revenue of $202.2M vs. $191.8M expected. Management raised full-year 2026 guidance, citing 40% of customers now on AI-inclusive license tiers and cloud net ARR expansion to 115%. Multi-million-dollar new wins in oil & gas and automotive sectors signal upmarket momentum. The stock gapped from ~$23.40 to $27.77 (+18.68%). Price is slightly above the $5–20 target band but the 50% EPS surprise + guidance raise + AI adoption inflection is the strongest catalyst quality of any name scanned today. Entry at $27.90, stop at $25.60 (below gap base, 8.2% downside), target $31.50 (12.9% upside). 2 shares × $27.90 = $55.80 ≤ $65.
 
 ---
 
 ## Notable Passes
 
-**FJET (Starfighters Space, ~$7.20 close, +40%):** Real catalysts — expanded Mu-g microgravity partnership, NASA parabolic flight RFI interest, new $17.5M private equity raise. However, the intraday blow-off pattern (ran to $9.50 intraday, sold back to $7.20 close) and the single-day +40% spike put this squarely in chase territory. Watching for a multi-day base before re-evaluating.
-
-**SUPX (SuperX AI, $12.21, +28.8%):** Immediate disqualification — J Capital Research formally accused the company of fabricating its AI infrastructure; Hagens Berman raised fraud allegations. Hard pass.
-
-**FLNC (Fluence Energy, $27.15, +43.8%):** Real energy storage business with strong momentum, but $27 is above the $5–20 price band and a $65 budget only allows 2 shares with wide exposure. Pass.
-
-**TWLO ($227.54, +19.4%):** Exceptional Q1 — net income +350% to $90M, revenue +19.6% to $1.4B. Genuinely great catalyst but far above price band.
-
-**DAIC ($4.54, +29.6%):** 1-for-25 reverse split. Reverse-split rallies are structurally manipulated. Skip.
-
-**MASK, HKIT, ANY, SUUN, OPTU, FOFO, and other micro-cap gappers:** Chinese reverse-merger names with no identifiable business catalyst. Classic pump-and-dump risk. All passed.
-
-**BBAI (BigBear.ai, ~$5 zone):** Carried over from yesterday's watchlist — defense AI, $53M sole-source IC contract, $282M backlog. Still a valid thesis but no confirmation of today's price action to validate entry; ELMT is a cleaner setup today.
+- **FLNC (Fluence Energy, $27.15, +43.8%)** — Siemens/NVDA AI data center reference-architecture announcement drove the big move, but multiple analysts warn it is a blueprint, not a firm purchase order. High short interest adds uncertainty. After a near-vertical 44% single-day move, blow-off risk is too high; passing.
+- **ELMT (Elmet Group, ~$21.93)** — Prior run (18:45 UTC) picked ELMT at $19.20 limit but it never filled per empty holdings.json. At $21.93 it is now above the analyst target of $20.50 and near the original TP of $22.00; no room left to enter fresh.
+- **VERX (Vertex Inc, $14.96, +12%)** — Q1 revenue growth only 11.1% with slight EPS beat and small acquisitions; solid but clearly inferior catalyst to KVYO/APPN.
+- **EWTX (Edgewise Therapeutics, $40.26, +17.9%)** — Real catalyst (Servier deal worth up to $2.65B), but price is too far above the band.
+- **MDB (MongoDB, $403.88, +20.3%) / TWLO (Twilio, $227.54, +19.4%)** — Outstanding catalysts (Q1 beats, raised guidance, AI pivot), but both far above the price band.
+- **TMHC (Taylor Morrison, $71.55, +22.3%)** — Berkshire all-cash acquisition offer: M&A arb is capped upside with binary downside if deal falls. Pass.
+- **ONDS (Ondas, $13.22)** — AI defense story with $457M backlog intact; stock flat today (−0.23%), no fresh momentum to ride.
+- **POET Technologies ($13.89, +13%)** — AI photonics play, in-band, but specific June 2 catalyst unclear vs. the clean earnings stories for KVYO/APPN.
+- **HPE (Hewlett Packard Enterprise)** — Gapped 30–37% on earnings June 1; late-entry risk at elevated levels.
+- **Micro-cap rockets (HKIT +350%, JZ +325%, TGHL +288%, AIM +120%, ANY +111%, HUBC +97%)** — No identifiable fundamental catalysts; all exhibit pump characteristics. Hard pass.
 
 ---
 
-## Holdings
+## Holdings Read
 
-No open positions (holdings.json empty). Full ~$200 powder available.
+holdings.json is empty — no open positions. Full ~$200 powder available. This run deploys $55.50 (KVYO) + $55.80 (APPN) = $111.30 total, leaving ~$89 in reserve. Max stop-loss risk: KVYO 3×$1.40 = $4.20, APPN 2×$2.30 = $4.60 → combined worst-case drawdown ~$8.80 if both hit stops.
