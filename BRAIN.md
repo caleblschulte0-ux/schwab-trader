@@ -41,9 +41,20 @@ the bot rewrites from the actual Schwab account on every run.
 ## STEP 1 — WIDEN THE FUNNEL (the most important step)
 Use TWO sources IN TANDEM every run and merge them into one big pool:
 
-SOURCE 1 — `signals/candidates.json` (FMP movers). The bot pre-fetches ~100-150
-real market movers (top gainers, most-active/volume, biggest losers) with live
-price and % change. Read this first.
+SOURCE 1 — `signals/candidates.json` (FMP). The bot pre-fetches both LAGGING and
+LEADING names with live price + % change. Read this first. Each row now carries a
+`signal` (primary reason) and a `signals` list (ALL reasons), plus an optional
+`catalyst`. Tags you'll see (top-level `signal_counts` tallies them):
+- `mover` — LAGGING: already a top gainer / most-active / biggest loser today.
+- `upgrade` — LEADING: fresh analyst upgrade (catalyst: firm, from/to grade).
+- `pt_raise` — LEADING: analyst price target set well above the current price.
+- `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date).
+LEADING names are in the funnel because a catalyst is FRESH or PENDING — NOT
+because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this is
+how you get in BEFORE the move instead of chasing it after. A name carrying both a
+leading tag AND a small `pct_change` (e.g. `["mover","earnings_soon"]`, up only
+~3%) is an ideal early entry. Note: `earnings_soon` cuts both ways — an earnings
+gap can go either direction, so a defined `stop_loss` is mandatory on those.
 
 SOURCE 2 — WEB SEARCH, run side-by-side (not just afterward). A good search
 surfaces names, catalysts, and context the mover-lists miss. Run the searches
@@ -67,6 +78,11 @@ Web searches to run every run (several, in tandem with FMP):
    share price, is the only sizing constraint).
 8. Sector/theme sweeps — run one search each for the hot themes of the day
    (e.g. AI, defense, biotech, energy, quantum, nuclear, crypto-adjacent)
+9. PRE-CATALYST / anticipatory (the proactive edge — find names BEFORE they run):
+   stocks reporting earnings in the next 1–5 days, upcoming FDA/PDUFA decision
+   dates, scheduled investor days / product launches / conference presentations,
+   and fresh analyst upgrades or initiations. These pair with the LEADING tags in
+   candidates.json — the goal is to be positioned ahead of the move, not after it.
 
 Tips to maximize breadth:
 - Vary the wording across searches ("biggest gainers today", "top volume stocks",
@@ -95,17 +111,36 @@ From the wide pool, narrow with judgment:
 - A real, identifiable catalyst or momentum reason.
 - Setup quality + reward/risk: is there room to a sensible target, and a clear
   level to stop out?
+- STAGE OF THE MOVE — prefer EARLY (this is the proactive edge). The earlier you
+  are in a move, the more room and the better the reward/risk. Strongly PREFER a
+  name up ~2–10% on rising volume with a fresh/upcoming catalyst (a LEADING tag)
+  over one already extended. Middle-ground rule on extended names:
+  • Up ~15–20%+ intraday → DEPRIORITIZE. Take it only if the setup is clearly
+    exceptional (still real room to a sensible target, basing rather than
+    blowing off). It must out-argue the earlier-stage names, not just tie them.
+  • Near-vertical blow-off (parabolic into resistance, no room) → HARD PASS.
+  Tie-breaker extension: when quality is otherwise equal, the earlier-stage /
+  catalyst-ahead name wins over the one that has already run.
 Keep the best 0–3. Quality of the FINALISTS matters; quantity of the FUNNEL
 matters. A wide funnel that yields 1 great pick is a great run.
 Account has ~$400 to deploy total, ≤ $65 per position (so up to ~6 positions at
 once). Don't pile everything into one run — leave powder for later setups.
 
-## STEP 3 — CHASE RULE (loosened, but real)
-Judge the entry RELATIVE TO THE SETUP, not by a blunt % cap:
+## STEP 3 — STAGE / CHASE RULE (be proactive, not reckless)
+Judge the entry RELATIVE TO THE SETUP and to WHERE IN THE MOVE you are:
 - A stock up 5–8% but consolidating/basing with clear room to its target = OK.
 - A stock that has gone near-vertical (e.g. already +30–80% intraday) into
   resistance with no room = NOT OK, that's chasing a blow-off — pass or wait for
   a pullback/base.
+- PRE-POSITIONING ahead of a known catalyst is GOOD: entering 1–3 days BEFORE a
+  scheduled earnings/FDA/conference date with a defined stop is exactly the
+  proactive behavior we want. Be honest about the risk — a catalyst can gap the
+  stock either way, so size to $65 and let the `stop_loss` cap the downside.
+- PRE-BREAKOUT COIL is preferred: a name near its 52-week high tightening on
+  low/declining volume is a better entry than the same name after it has already
+  popped. Buy the coil, not the blow-off candle. (If the trigger is a clean break
+  of a level you can name, consider the WATCHLIST below so the bot enters the
+  instant it breaks — even between your runs.)
 - Set `limit_price` near the CURRENT price. NOTE: the bot does NOT pay your
   limit_price — at execution it pulls Schwab's LIVE ASK and buys there (with a
   tiny buffer), and enforces a hard 5% backstop vs your limit. So limit_price is
@@ -135,7 +170,7 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 ```
 {
   "generated_utc": "<the REAL current UTC time to the second when you write this file — NOT rounded to the hour/half-hour. e.g. 2026-06-02T16:03:47Z>",
-  "funnel": {"scanned": 190, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
+  "funnel": {"scanned": 190, "leading": 35, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
      "quantity": 4, "limit_price": 15.50, "take_profit": 17.40, "stop_loss": 14.20}
@@ -143,7 +178,9 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 }
 ```
 - `funnel` is REQUIRED every run — fill in the real counts from your scan so we
-  can see how wide we looked (scanned → narrowed → finalists → picked).
+  can see how wide we looked (scanned → narrowed → finalists → picked). Include
+  `leading` = how many candidates carried a LEADING tag (upgrade/pt_raise/
+  earnings_soon), so we can track how proactive the funnel is each run.
 - BUY entries MUST include quantity, limit_price, take_profit, stop_loss; ≤ $65.
 - SELL entries (only for symbols in holdings.json) need only
   `{"symbol":"...","action":"SELL"}`.
@@ -171,7 +208,34 @@ On the final run near/after the close (~20:00 UTC), write the day's trades and
 hypothetical/realized P&L, plus a note on how many names were scanned across the
 day. Determine each exit honestly from the day's real price action + holdings.json.
 
+### E. `signals/watchlist.json` — OPTIONAL: trigger-based pre-positioning
+For a great setup that is NOT a buy *right now* but would be the moment a level
+is hit (a coil that breaks out, a name you'd buy on a pullback to support, or a
+date-based pre-position), put it here. The bot checks this EVERY run and enters
+automatically the instant the trigger fires — even between your runs — using the
+SAME guardrails as a normal pick ($2 floor, $65 cap, live-ask pricing, no-rebuy).
+A watchlist fill's `take_profit`/`stop_loss` are honored on exit just like an
+orders.json pick. Shape (overwrite each run; use `"watch": []` when you have none):
+```
+{
+  "generated_utc": "<REAL current UTC to the second, never rounded>",
+  "watch": [
+    {"symbol": "ABCD", "trigger": "breakout", "trigger_price": 12.50,
+     "quantity": 5, "limit_price": 12.60, "take_profit": 15.00, "stop_loss": 11.50,
+     "good_until": "2026-06-05", "note": "coil under 12.50, reports in 2 days"}
+  ]
+}
+```
+- `trigger`: `"breakout"` (enter when live ≥ trigger_price), `"pullback"` (enter
+  when live ≤ trigger_price), or `"date"` (enter on/after `trigger_date`).
+- Same required fields as a BUY pick (quantity, limit_price, take_profit,
+  stop_loss, all sized ≤ $65). `good_until` (a date) expires the item — keep it
+  to a few days out so the bot never acts on a stale idea.
+- Keep the list SHORT (≤ ~12 names) and only genuine, level-defined setups.
+- The bot reads this file; do NOT expect it to write it. You own it.
+
 ## Commit
-Commit and push ALL written files (orders.json, latest.md, positions.md, and
-reports/today.md when applicable) DIRECTLY to `main`. No new branch, no PR.
+Commit and push ALL written files (orders.json, latest.md, positions.md,
+watchlist.json, and reports/today.md when applicable) DIRECTLY to `main`. No new
+branch, no PR.
 (Do NOT edit holdings.json or candidates.json — the bot owns those files.)

@@ -13,8 +13,12 @@ So entries are now DEAD SIMPLE and priced off Schwab's LIVE quote:
 
 Ground truth: every run the bot writes the account's REAL positions to
 signals/holdings.json. The brain reads that file to know what it actually owns.
-The bot also pulls FMP market-mover lists into signals/candidates.json — the
-brain's structured top-of-funnel (~100-150 real movers with price + %change).
+The bot also builds signals/candidates.json — the brain's structured top-of-funnel.
+It combines LAGGING movers (gainers/most-active/losers) with LEADING signals
+(analyst upgrades, raised price targets, upcoming earnings) so the brain can
+position BEFORE a move, not just chase it. Each row is tagged with its reason(s).
+A brain-written signals/watchlist.json lets the bot auto-enter on a price/date
+trigger between brain runs (same guardrails); the bot only reads that file.
 
 Risk rules still enforced in code (your one rule is safe):
   * BUY-only; we only ever SELL shares we already own (never short).
@@ -51,7 +55,16 @@ MIN_STOP_UNDER_ENTRY  = 0.005
 MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump traps
 RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
 CANDIDATES_FILE       = "signals/candidates.json"
+WATCHLIST_FILE        = "signals/watchlist.json"
 FMP_BASE              = "https://financialmodelingprep.com/stable"
+# --- leading-signal funnel (proactive: find names BEFORE they run) ---
+EARNINGS_LOOKAHEAD_DAYS = 7     # enrich any candidate reporting within this window
+EARNINGS_ADD_DAYS       = 3     # also ADD covered names reporting within this window
+MAX_EARNINGS_ADD        = 50    # cap pre-earnings names added as fresh candidates
+ANALYST_LIMIT           = 100   # newest N analyst-action rows to scan per feed
+# --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
+MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
+MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)
 # ==============================
 
 APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
@@ -62,55 +75,189 @@ DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 
 
-def fetch_fmp_candidates() -> None:
-    """Pull FMP gainers/most-actives/losers into one deduped candidate list and
-    write signals/candidates.json. This is the brain's structured top-of-funnel —
-    ~100-150 real market movers with price + % change, far better than web search.
-    Free-tier safe (3 calls/run). Silently no-ops if no key."""
-    if not FMP_API_KEY:
-        print("(info) no FMP_API_KEY set — skipping candidate prefetch.")
-        return
+def _fmp_get(endpoint: str, params: str = "") -> list:
+    """GET one FMP /stable endpoint -> list of rows. Never raises (returns [])."""
     import urllib.request
-    lists = {
-        "gainers": "biggest-gainers",
-        "actives": "most-actives",
-        "losers": "biggest-losers",
-    }
-    seen: dict[str, dict] = {}
+    sep = "&" if params else ""
+    url = f"{FMP_BASE}/{endpoint}?{params}{sep}apikey={FMP_API_KEY}"
+    with urllib.request.urlopen(url, timeout=20) as r:
+        data = json.loads(r.read().decode("utf-8"))
+    return data if isinstance(data, list) else []
+
+
+def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
+                     exch=None, lst=None, signal=None, catalyst=None) -> bool:
+    """Add a candidate or merge into an existing one. The KEY behavior: when a
+    symbol shows up from more than one source, we ACCUMULATE its reasons in a
+    `signals` list instead of overwriting — so the brain can see that, e.g., a
+    +4% mover ALSO reports earnings tomorrow. Returns True if newly added."""
+    if not sym:
+        return False
+    row = seen.get(sym)
+    if row is None:
+        seen[sym] = {
+            "symbol": sym, "name": name, "price": price, "pct_change": pct,
+            "exchange": exch, "list": lst,
+            "signal": signal, "signals": [signal] if signal else [],
+        }
+        if catalyst:
+            seen[sym]["catalyst"] = catalyst
+        return True
+    # Merge: backfill any missing fields, accumulate the new reason.
+    if name and not row.get("name"):
+        row["name"] = name
+    if price is not None and not row.get("price"):
+        row["price"] = price
+    if pct is not None and row.get("pct_change") is None:
+        row["pct_change"] = pct
+    if exch and not row.get("exchange"):
+        row["exchange"] = exch
+    if signal and signal not in row.get("signals", []):
+        row.setdefault("signals", []).append(signal)
+    if catalyst:
+        row.setdefault("catalyst", {}).update(catalyst)
+    return False
+
+
+# Higher score = more bullish. Used to tell an UPGRADE from a downgrade so we
+# never inject a freshly-DOWNGRADED (bearish) name into a BUY funnel.
+_GRADE_SCORE = {
+    "strong sell": 0, "sell": 1, "underperform": 1, "underweight": 1, "reduce": 1,
+    "negative": 1, "hold": 2, "neutral": 2, "market perform": 2, "equal-weight": 2,
+    "equalweight": 2, "sector perform": 2, "in-line": 2, "peer perform": 2,
+    "accumulate": 3, "add": 3, "overweight": 3, "outperform": 4, "buy": 4,
+    "positive": 4, "market outperform": 4, "sector outperform": 4, "strong buy": 5,
+}
+
+
+def _grade_score(grade) -> int | None:
+    if not grade:
+        return None
+    return _GRADE_SCORE.get(str(grade).strip().lower())
+
+
+def _fetch_movers(seen: dict) -> None:
+    """LAGGING funnel (unchanged from day one): names that ALREADY moved today."""
+    lists = {"gainers": "biggest-gainers", "actives": "most-actives",
+             "losers": "biggest-losers"}
     for label, ep in lists.items():
         try:
-            url = f"{FMP_BASE}/{ep}?apikey={FMP_API_KEY}"
-            with urllib.request.urlopen(url, timeout=20) as r:
-                rows = json.loads(r.read().decode("utf-8"))
-            n = 0
-            for row in rows or []:
-                sym = row.get("symbol")
-                if not sym or sym in seen:
-                    continue
-                seen[sym] = {
-                    "symbol": sym,
-                    "name": row.get("name"),
-                    "price": row.get("price"),
-                    "pct_change": row.get("changesPercentage"),
-                    "exchange": row.get("exchange"),
-                    "list": label,
-                }
-                n += 1
+            rows = _fmp_get(ep)
+            n = sum(_merge_candidate(
+                seen, row.get("symbol"), name=row.get("name"), price=row.get("price"),
+                pct=row.get("changesPercentage"), exch=row.get("exchange"),
+                lst=label, signal="mover") for row in rows)
             print(f"(fmp) {label}: +{n} new")
         except Exception as exc:  # noqa: BLE001 - never let data fetch break the run
             print(f"(warn) FMP {label} fetch failed: {exc}")
+
+
+def _fetch_leading(seen: dict) -> None:
+    """LEADING funnel (the proactive upgrade): names with a FRESH or PENDING
+    catalyst — analyst UPGRADES, raised PRICE TARGETS, and UPCOMING EARNINGS —
+    so the brain can position BEFORE the move, not just chase it after.
+    Each source is isolated in try/except: a failed/paid endpoint just no-ops."""
+    # 1) Analyst UPGRADES (bullish grade changes only).
+    try:
+        n = 0
+        for row in _fmp_get("grade-latest-news", f"page=0&limit={ANALYST_LIMIT}"):
+            sym = row.get("symbol")
+            new_s = _grade_score(row.get("newGrade"))
+            prev_s = _grade_score(row.get("previousGrade"))
+            action = str(row.get("action", "")).strip().lower()
+            is_up = (action in {"upgrade", "initialise", "initialize", "initiate"}
+                     or (new_s is not None and prev_s is not None and new_s > prev_s)
+                     or (prev_s is None and new_s is not None and new_s >= 4))
+            if not is_up:
+                continue  # skip downgrades / holds / unknowns — buy funnel only
+            _merge_candidate(seen, sym, signal="upgrade", lst="analyst", catalyst={
+                "analyst_firm": row.get("gradingCompany"),
+                "from_grade": row.get("previousGrade"), "to_grade": row.get("newGrade")})
+            n += 1
+        print(f"(fmp) upgrades: +{n}")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) FMP grade-latest-news failed (skipped): {exc}")
+
+    # 2) Raised PRICE TARGETS (target meaningfully above price when posted).
+    try:
+        n = 0
+        for row in _fmp_get("price-target-latest-news", f"page=0&limit={ANALYST_LIMIT}"):
+            sym = row.get("symbol")
+            pt = row.get("priceTarget") or row.get("adjPriceTarget")
+            when = row.get("priceWhenPosted")
+            if not (pt and when and pt > when * 1.05):  # need real implied upside
+                continue
+            _merge_candidate(seen, sym, signal="pt_raise", lst="analyst", catalyst={
+                "analyst_firm": row.get("analystCompany") or row.get("newsPublisher"),
+                "price_target": pt})
+            n += 1
+        print(f"(fmp) price-target raises: +{n}")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) FMP price-target-latest-news failed (skipped): {exc}")
+
+    # 3) UPCOMING EARNINGS — the highest-value leading signal. Two uses:
+    #    (a) ENRICH any existing candidate that reports soon (a mover reporting
+    #        tomorrow is high-priority); (b) ADD a capped set of covered names
+    #        reporting in the next few days that aren't on any list yet.
+    try:
+        today = datetime.now(timezone.utc).date()
+        end = today + timedelta(days=EARNINGS_LOOKAHEAD_DAYS)
+        rows = _fmp_get("earnings-calendar", f"from={today}&to={end}")
+        added = enriched = 0
+        for row in rows:
+            sym = row.get("symbol")
+            raw = str(row.get("date", ""))[:10]
+            try:
+                edate = datetime.fromisoformat(raw).date()
+            except ValueError:
+                continue
+            if sym in seen:
+                _merge_candidate(seen, sym, signal="earnings_soon",
+                                 catalyst={"earnings_date": raw})
+                enriched += 1
+            elif (added < MAX_EARNINGS_ADD and edate <= today + timedelta(days=EARNINGS_ADD_DAYS)
+                  and row.get("epsEstimated") is not None):  # epsEstimated => covered/liquid
+                _merge_candidate(seen, sym, name=sym, lst="calendar",
+                                 signal="earnings_soon", catalyst={"earnings_date": raw})
+                added += 1
+        print(f"(fmp) earnings: enriched {enriched}, added {added} upcoming")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
+
+
+def _write_candidates(seen: dict) -> None:
+    counts: dict[str, int] = {}
+    for row in seen.values():
+        for s in (row.get("signals") or ([row["signal"]] if row.get("signal") else [])):
+            counts[s] = counts.get(s, 0) + 1
     data = {
         "updated_utc": datetime.now(timezone.utc).isoformat(),
         "count": len(seen),
+        "signal_counts": counts,
         "candidates": sorted(seen.values(), key=lambda x: x["symbol"]),
     }
     try:
         os.makedirs(os.path.dirname(CANDIDATES_FILE), exist_ok=True)
         with open(CANDIDATES_FILE, "w", encoding="utf-8") as fh:
             json.dump(data, fh, indent=2)
-        print(f"Wrote {CANDIDATES_FILE}: {len(seen)} candidates")
+        print(f"Wrote {CANDIDATES_FILE}: {len(seen)} candidates {counts}")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not write candidates file: {exc}")
+
+
+def fetch_fmp_candidates() -> None:
+    """Build the brain's structured top-of-funnel and write signals/candidates.json.
+    Combines a LAGGING list (today's movers) with LEADING signals (analyst upgrades,
+    raised price targets, upcoming earnings) so the brain can act BEFORE the move.
+    ~6 FMP calls/run (free-tier safe, ~216/day < 250). No-ops without a key; any one
+    source failing is non-fatal — worst case the file is just today's movers."""
+    if not FMP_API_KEY:
+        print("(info) no FMP_API_KEY set — skipping candidate prefetch.")
+        return
+    seen: dict[str, dict] = {}
+    _fetch_movers(seen)    # lagging (already moved)
+    _fetch_leading(seen)   # leading (about to / catalyst pending)
+    _write_candidates(seen)
 
 
 def get_client() -> SchwabClient:
@@ -331,6 +478,83 @@ def sell(client, acct, sym: str, qty: int, limit: float, why: str):
         print(f"[{sym}] sell error: {exc}")
 
 
+def load_watchlist() -> list[dict]:
+    """Brain-written names to auto-enter when a trigger fires between brain runs.
+    The bot only READS this file (the brain owns it). Returns [] on any problem
+    or if the file is stale (fail-safe — never act on an abandoned watchlist)."""
+    if not os.path.exists(WATCHLIST_FILE):
+        return []
+    try:
+        with open(WATCHLIST_FILE, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not read watchlist: {exc}")
+        return []
+    gen = _parse_dt(data.get("generated_utc"))
+    if gen is not None:
+        age_h = (datetime.now(timezone.utc) - gen).total_seconds() / 3600
+        if age_h > MAX_WATCHLIST_AGE_HOURS:
+            print(f"(info) watchlist is stale ({age_h:.0f}h > {MAX_WATCHLIST_AGE_HOURS}h) — ignoring.")
+            return []
+    return (data.get("watch") or [])[:MAX_WATCHLIST]
+
+
+def watch_triggered(w: dict, q: dict) -> tuple[bool, str]:
+    """Has this watch item's entry condition fired? breakout: live >= trigger_price;
+    pullback: live <= trigger_price; date: today >= trigger_date."""
+    trig = str(w.get("trigger", "")).lower()
+    tp = w.get("trigger_price")
+    last = live_last(q)
+    if trig == "breakout":
+        if last and tp and last >= tp:
+            return True, f"broke ${tp} (last ${last})"
+        return False, f"awaiting breakout > ${tp} (last ${last})"
+    if trig == "pullback":
+        if last and tp and last <= tp:
+            return True, f"pulled back to ${tp} (last ${last})"
+        return False, f"awaiting pullback <= ${tp} (last ${last})"
+    if trig == "date":
+        td = str(w.get("trigger_date") or w.get("good_until") or "")[:10]
+        try:
+            ok = datetime.now(timezone.utc).date() >= datetime.fromisoformat(td).date()
+        except ValueError:
+            return False, "bad trigger_date"
+        return (ok, f"on/after {td}") if ok else (False, f"waiting for {td}")
+    return False, f"unknown trigger '{trig}'"
+
+
+def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
+              positions: dict, blocked: set, bought: set) -> None:
+    """Shared entry path for BOTH orders.json picks and watchlist triggers: dedupe,
+    price off the LIVE ask, enforce the slippage backstop + $65 cap, then buy."""
+    if sym in positions:
+        print(f"[{sym}] SKIP — already holding")
+        return
+    if sym in blocked:
+        print(f"[{sym}] SKIP — open or recent buy order (no double-buy)")
+        return
+    if sym in bought:
+        print(f"[{sym}] SKIP — already bought this run")
+        return
+    q = quote(client, sym)
+    ask = live_ask(q)
+    if not ask:
+        print(f"[{sym}] SKIP — no live quote")
+        return
+    if ask > ref_limit * (1 + MAX_SLIPPAGE):
+        print(f"[{sym}] SKIP — ran away: live ask ${ask:.2f} > limit ${ref_limit:.2f} +{MAX_SLIPPAGE*100:.0f}%")
+        return
+    entry = round(ask * (1 + MARKETABLE_BUFFER), 2)  # marketable limit at the live ask
+    qty = int(want_qty)
+    while qty > 0 and qty * entry > MAX_DOLLARS_PER_TRADE:  # re-check cap on real price
+        qty -= 1
+    if qty <= 0:
+        print(f"[{sym}] SKIP — 1 share at ${entry:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap")
+        return
+    buy(client, acct, sym, qty, entry)
+    bought.add(sym)
+
+
 def main() -> int:
     mode = "DRY-RUN (no real orders)" if DRY_RUN else "LIVE (real orders!)"
     print(f"=== Executor | mode: {mode} ===")
@@ -358,6 +582,17 @@ def main() -> int:
     levels = {o["symbol"]: o for o in orders if o.get("action") == "BUY"} if orders else {}
     brain_sells = {o.get("symbol") for o in orders if o.get("action") == "SELL"} if fresh else set()
 
+    # Watchlist: brain-set names to auto-enter on a trigger between brain runs.
+    # Merge their tp/stop into `levels` (orders.json wins) so a watchlist-triggered
+    # fill still has exit protection before the brain next rewrites orders.json.
+    watch = load_watchlist()
+    for w in watch:
+        wsym = w.get("symbol")
+        if wsym and wsym not in levels:
+            levels[wsym] = {"symbol": wsym, "action": "BUY",
+                            "take_profit": w.get("take_profit"),
+                            "stop_loss": w.get("stop_loss")}
+
     # ---- EXITS: manage held positions (sell-to-close on target/stop/brain) ----
     for sym, pos in positions.items():
         q = quote(client, sym)
@@ -376,51 +611,54 @@ def main() -> int:
             sltxt = f"${sl}" if sl else "?"
             print(f"[{sym}] hold — last ${last} (target {tptxt} / stop {sltxt})")
 
-    # ---- ENTRIES: only fresh BUY picks, priced off the LIVE ask ----
+    # ---- ENTRIES: priced off the LIVE ask. Two sources: watchlist triggers
+    #      (independent of orders freshness) and fresh BUY picks from orders.json.
+    if not orders_ok:
+        print("SKIP all entries — could not read existing orders (fail-safe).")
+        print("=== done ===")
+        return 0
+    bought: set[str] = set()  # symbols entered THIS run (prevents double-buys across both paths)
+
+    # A) WATCHLIST triggers — enter when the brain-set condition fires.
+    for w in watch:
+        sym = w.get("symbol", "?")
+        gu = str(w.get("good_until") or "")[:10]
+        if gu:
+            try:
+                if datetime.now(timezone.utc).date() > datetime.fromisoformat(gu).date():
+                    print(f"[{sym}] watch SKIP — expired (good_until {gu})")
+                    continue
+            except ValueError:
+                pass
+        pick = {"action": "BUY", "instrument": "stock", "quantity": w.get("quantity"),
+                "limit_price": w.get("limit_price") or w.get("trigger_price"),
+                "take_profit": w.get("take_profit"), "stop_loss": w.get("stop_loss")}
+        ok, why = validate_pick(pick)
+        if not ok:
+            print(f"[{sym}] watch SKIP — {why}")
+            continue
+        fired, reason = watch_triggered(w, quote(client, sym))
+        if not fired:
+            print(f"[{sym}] watching — {reason}")
+            continue
+        print(f"[{sym}] watch TRIGGER — {reason}")
+        try_enter(client, acct, sym, pick["quantity"], float(pick["limit_price"]),
+                  positions, blocked, bought)
+
+    # B) FRESH BUY picks from orders.json.
     if not fresh:
         print("No fresh BUY picks.")
-        print("=== done ===")
-        return 0
-    if not orders_ok:
-        print("SKIP entries — could not read existing orders (fail-safe).")
-        print("=== done ===")
-        return 0
-
-    for order in orders:
-        if order.get("action") != "BUY":
-            continue
-        sym = order.get("symbol", "?")
-        ok, why = validate_pick(order)
-        if not ok:
-            print(f"[{sym}] SKIP — {why}")
-            continue
-        if sym in positions:
-            print(f"[{sym}] SKIP — already holding")
-            continue
-        if sym in blocked:
-            print(f"[{sym}] SKIP — open or recent buy order (no double-buy)")
-            continue
-
-        q = quote(client, sym)
-        ask = live_ask(q)
-        if not ask:
-            print(f"[{sym}] SKIP — no live quote")
-            continue
-        pick_limit = float(order["limit_price"])
-        if ask > pick_limit * (1 + MAX_SLIPPAGE):
-            print(f"[{sym}] SKIP — ran away: live ask ${ask:.2f} > limit ${pick_limit:.2f} +{MAX_SLIPPAGE*100:.0f}%")
-            continue
-
-        # Marketable limit at the live ask so it actually fills now.
-        entry = round(ask * (1 + MARKETABLE_BUFFER), 2)
-        qty = int(order["quantity"])
-        # Re-check the dollar cap against the REAL entry price, and trim qty if needed.
-        while qty > 0 and qty * entry > MAX_DOLLARS_PER_TRADE:
-            qty -= 1
-        if qty <= 0:
-            print(f"[{sym}] SKIP — 1 share at ${entry:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap")
-            continue
-        buy(client, acct, sym, qty, entry)
+    else:
+        for order in orders:
+            if order.get("action") != "BUY":
+                continue
+            sym = order.get("symbol", "?")
+            ok, why = validate_pick(order)
+            if not ok:
+                print(f"[{sym}] SKIP — {why}")
+                continue
+            try_enter(client, acct, sym, order["quantity"], float(order["limit_price"]),
+                      positions, blocked, bought)
 
     print("=== done ===")
     return 0
