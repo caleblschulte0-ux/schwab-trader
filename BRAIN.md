@@ -15,7 +15,11 @@ force exits (see Holding rules). Bias toward action when a real setup exists.
 
 ## Two-routine collision guard — CHECK BEFORE WRITING
 Two routines run this playbook ~30 min apart. To avoid one overwriting the
-other's fresh work, FIRST check `signals/orders.json`'s `generated_utc`:
+other's fresh work, FIRST check `signals/orders.json`'s `generated_utc`.
+IMPORTANT: that timestamp is only meaningful if every run stamps the REAL
+current time (to the second, never rounded). A rounded time (e.g. writing
+"16:00:00Z" at 15:44) makes a stale file look fresh and FALSE-TRIGGERS this
+guard, wasting a run. Always write the true current UTC time.
 - If it was written LESS THAN ~10 minutes ago, the other routine just ran. Do
   NOT overwrite orders.json this run. Instead, only manage exits if needed
   (a genuine thesis-break SELL on a held name) and otherwise leave the files
@@ -130,7 +134,7 @@ Holding an existing position is a FULLY VALID choice and often the right one.
 EXACTLY this shape (note the `funnel` field — your scan tally):
 ```
 {
-  "generated_utc": "<ISO-8601 UTC, e.g. 2026-06-02T14:00:00Z>",
+  "generated_utc": "<the REAL current UTC time to the second when you write this file — NOT rounded to the hour/half-hour. e.g. 2026-06-02T16:03:47Z>",
   "funnel": {"scanned": 190, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
