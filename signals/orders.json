@@ -1,16 +1,7 @@
 {
-  "generated_utc": "2026-06-02T19:30:00Z",
-  "funnel": {"scanned": 77, "in_price_band": 22, "had_catalyst": 12, "finalists": 3, "picked": 2},
+  "generated_utc": "2026-06-02T21:00:00Z",
+  "funnel": {"scanned": 80, "in_budget": 37, "had_catalyst": 10, "finalists": 4, "picked": 3},
   "orders": [
-    {
-      "symbol": "KVYO",
-      "action": "BUY",
-      "instrument": "stock",
-      "quantity": 3,
-      "limit_price": 18.50,
-      "take_profit": 20.80,
-      "stop_loss": 17.10
-    },
     {
       "symbol": "APPN",
       "action": "BUY",
@@ -19,6 +10,24 @@
       "limit_price": 27.90,
       "take_profit": 31.50,
       "stop_loss": 25.60
+    },
+    {
+      "symbol": "KVYO",
+      "action": "BUY",
+      "instrument": "stock",
+      "quantity": 3,
+      "limit_price": 18.20,
+      "take_profit": 20.80,
+      "stop_loss": 17.10
+    },
+    {
+      "symbol": "HPQ",
+      "action": "BUY",
+      "instrument": "stock",
+      "quantity": 2,
+      "limit_price": 29.50,
+      "take_profit": 33.00,
+      "stop_loss": 27.00
     }
   ]
 }
