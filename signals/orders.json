@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-06-02T18:44:31Z",
-  "funnel": {"scanned": 155, "in_budget": 65, "had_catalyst": 14, "finalists": 5, "picked": 3},
+  "generated_utc": "2026-06-02T19:05:09Z",
+  "funnel": {"scanned": 193, "in_budget": 138, "had_catalyst": 14, "finalists": 5, "picked": 3},
   "orders": [
-    {"symbol": "HPE", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 54.80, "take_profit": 64.00, "stop_loss": 49.50},
     {"symbol": "LEGN", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 35.70, "take_profit": 43.00, "stop_loss": 30.00},
-    {"symbol": "PUSA", "action": "BUY", "instrument": "stock",
-     "quantity": 10, "limit_price": 6.25, "take_profit": 9.00, "stop_loss": 5.00}
+     "quantity": 1, "limit_price": 35.80, "take_profit": 43.00, "stop_loss": 30.00},
+    {"symbol": "HPE", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 55.10, "take_profit": 64.00, "stop_loss": 49.50},
+    {"symbol": "QMCO", "action": "BUY", "instrument": "stock",
+     "quantity": 5, "limit_price": 12.65, "take_profit": 16.00, "stop_loss": 10.50}
   ]
 }
