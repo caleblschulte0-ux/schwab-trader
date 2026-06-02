@@ -23,16 +23,21 @@ the bot rewrites from the actual Schwab account on every run.
   that's still a good setup and not yet held.
 
 ## STEP 1 — WIDEN THE FUNNEL (the most important step)
-START from `signals/candidates.json` — the bot pre-fetches ~100-150 real market
-movers each run (top gainers, most-active/volume, biggest losers) with live
-price and % change. This is your structured base funnel; read it FIRST every run.
+Use TWO sources IN TANDEM every run and merge them into one big pool:
 
-Then EXPAND it with web search for anything the lists miss (fresh news catalysts,
-specific small-caps, sector themes). MERGE + DEDUPE everything into one pool.
-Target **100+ candidates** total. The candidates.json file alone should already
-give you ~100+, so a small funnel now means something is wrong — note it.
+SOURCE 1 — `signals/candidates.json` (FMP movers). The bot pre-fetches ~100-150
+real market movers (top gainers, most-active/volume, biggest losers) with live
+price and % change. Read this first.
 
-Web searches to ADD on top of candidates.json (run several):
+SOURCE 2 — WEB SEARCH, run side-by-side (not just afterward). A good search
+surfaces names, catalysts, and context the mover-lists miss. Run the searches
+below every run regardless of what's in candidates.json.
+
+MERGE + DEDUPE both sources into one pool. Target **150+ candidates** total
+(~136 from FMP + whatever web search adds ≈ ~190 is a good search). A small
+funnel now means something is wrong — note it in latest.md.
+
+Web searches to run every run (several, in tandem with FMP):
 1. Top % gainers today — market-wide, all US exchanges
 2. Most active / highest-volume stocks today
 3. Unusual volume (volume vs. average) names
@@ -80,8 +85,11 @@ Judge the entry RELATIVE TO THE SETUP, not by a blunt % cap:
 - A stock that has gone near-vertical (e.g. already +30–80% intraday) into
   resistance with no room = NOT OK, that's chasing a blow-off — pass or wait for
   a pullback/base.
-- Set `limit_price` near the CURRENT price (the bot re-prices at the live ask and
-  enforces a hard 5% backstop). Don't price it where it can't fill.
+- Set `limit_price` near the CURRENT price. NOTE: the bot does NOT pay your
+  limit_price — at execution it pulls Schwab's LIVE ASK and buys there (with a
+  tiny buffer), and enforces a hard 5% backstop vs your limit. So limit_price is
+  only a sanity reference; put it near the current market so the backstop doesn't
+  needlessly veto the entry.
 
 ## Holding rules (IMPORTANT — do not undermine)
 Holding an existing position is a FULLY VALID choice and often the right one.
@@ -106,7 +114,7 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 ```
 {
   "generated_utc": "<ISO-8601 UTC, e.g. 2026-06-02T14:00:00Z>",
-  "funnel": {"scanned": 80, "in_budget": 22, "had_catalyst": 9, "finalists": 3, "picked": 1},
+  "funnel": {"scanned": 190, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
      "quantity": 4, "limit_price": 15.50, "take_profit": 17.40, "stop_loss": 14.20}
@@ -122,7 +130,7 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 
 ### B. `signals/latest.md` — your reasoning (overwrite each run)
 Start with a one-line FUNNEL TALLY, e.g.:
-`Funnel: scanned 80 → 22 fit budget → 9 with catalyst → 3 finalists → picked 1`
+`Funnel: scanned 190 → 40 fit budget → 12 with catalyst → 3 finalists → picked 1`
 Then: one paragraph per pick (why), the notable names you passed and why, and
 the read on any current holdings. Include a UTC timestamp.
 
