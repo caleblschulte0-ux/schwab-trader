@@ -1,58 +1,41 @@
-# Trading Signals — 2026-06-02T15:30:00Z
+# Trading Signals — 2026-06-02T16:00:00Z
 
-Funnel: scanned 63 → 35 fit budget → 12 with catalyst → 5 finalists → picked 3
+Funnel: scanned 196 → 42 fit budget → 14 with catalyst → 4 finalists → picked 2
 
 ---
 
 ## Market Context
 
-Second run of the day (prior run: 13:46Z). US markets open; tech/AI/semiconductor names leading. US-Iran tensions adding a geopolitical bid to defense names. HPE gapped +37% at open (~$64) on a historic Q2 earnings beat, then pulled back intraday to ~$58.68 (+24.85%) — now in a cleaner consolidation zone vs. the earlier blow-off open. MRVL +21% after Jensen Huang called it "next trillion-dollar company" at Computex (out of budget at $273). VSXY (Victoria's Secret) +41% on raised guidance (too expensive at $76.70 for $65 budget). LEGN +26% on ASCO Phase 1 CAR-T data with 100% ORR. Defense names broadly bid with US-Iran tensions.
-
-**Note:** `signals/candidates.json` was absent this run. Funnel was built entirely from 8-category parallel web searches (top gainers, most-active/volume, unusual volume, pre-market movers, 52-week-high breakouts, news catalysts, small-cap gainers, sector sweeps: AI/defense/biotech/energy/nuclear/crypto). ~63 distinct tickers gathered and deduped. Lighter than the ~190 target; cause is the missing FMP feed, not a dead session.
+Third run of the day (~16:00 UTC). US markets mid-afternoon. Tech/AI/semiconductor names leading the tape: MRVL +28% on Jensen Huang's "next trillion-dollar company" comments at Computex plus a Q1 earnings beat (data center revenue 75% of total, +28% YoY). HPE +23% on a historic Q2 earnings blowout. Semiconductor index (PHLX SOX) up sharply. Hydrogen/clean energy seeing data-center tailwind with FCEL +20%. Biotech active with LEGN +36% on ASCO + EHA catalyst news. Funnel built from 131 FMP candidates (gainers/actives/losers) + ~65 names from 8-category parallel web searches = ~196 total, deduped.
 
 ---
 
 ## Picks
 
-### BUY HPE (Hewlett Packard Enterprise) — 1 share @ $58.50 | TP $66.00 | SL $54.00
+### BUY HPE (Hewlett Packard Enterprise) — 1 share @ $58.50 | TP $66.00 | SL $53.50
 
-HPE's Q2 2026 earnings (reported June 1 after close) are the clearest fundamental catalyst of the day: EPS $0.79 beat consensus $0.54 by 46%; revenue $10.68B beat estimates of $9.79B, marking +40% YoY growth; raised FY2026 EPS outlook from $2.30–$2.50 to $3.35–$3.45 (+45% guidance raise); raised revenue growth outlook from 17–22% to 29–33%; networking segment growth now guided 72–75%. The company cited agentic AI and inferencing adoption as the driver, calling this a "historic blowout quarter." Multiple analysts upgraded; Loop Capital set a $75 PT. Volume massive (53M shares), confirming institutional accumulation.
+HPE reported Q2 FY2026 results on June 1 after close: EPS $0.79 vs. $0.53 consensus (+49% beat), revenue $10.7B +40% YoY, orders more than doubled, record company backlog. Management raised FY2026 guidance sharply. Catalyst is AI infrastructure demand — networking segment growing 72–75%, agentic AI described as the primary driver. Analyst reactions: JPMorgan raised target to $68 (Buy), Raymond James to $74 (Buy), Morgan Stanley to $71, UBS to $65, Piper Sandler to $63. Average new target ~$68. Stock closed June 1 at ~$47, gapped to $64 at open, has now consolidated to $58.02 (+23.4%) — the intraday pullback from the blow-off open creates a cleaner entry. Entry at $58.50 near current ask; target $66.00 (below analyst consensus of ~$68 for conservatism); stop $53.50 below the gap-up base. 1 × $58.50 = $58.50 ≤ $65. Risk: $5.00 (8.6%); Reward: $7.50 (12.8%). R/R ≈ 1.5:1.
 
-The prior run (13:46Z) flagged HPE but passed because it was at ~$64.43 (+37%) — squarely in "near-vertical blow-off" territory per BRAIN.md. It has since pulled back to $58.68 (+24.85%), creating a cleaner consolidation entry ~9% off the open high. Stop at $54.00 is below the consolidation body; target $66.00 targets the upper gap zone toward analyst territory. 1 × $58.50 = $58.50 ≤ $65. Risk: $4.50 (7.7%), Reward: $7.50 (12.8%). R/R ≈ 1.7:1.
+### BUY LEGN (Legend Biotech) — 1 share @ $35.00 | TP $42.00 | SL $30.50
 
-### BUY LEGN (Legend Biotech) — 2 shares @ $32.00 | TP $37.50 | SL $29.00
+Multiple catalysts converging today. At ASCO 2026 (May 29–June 2): first-in-human LB2102 Phase 1 results in solid tumors (DLL3-targeted CAR-T, ORR 28.6%, DCR 78.6% in small-cell lung cancer) plus updated CARTITUDE-4 CARVYKTI data. On June 2 separately, Legend announced a late-breaking oral presentation at EHA 2026 (June 11–14) for LB2501, a potential first-in-class in vivo dual CD19/CD20 CAR-T: Phase 1 data shows 100% ORR (6/6 patients) and 83.3% complete response at dose level 2, with no lymphodepleting chemotherapy required — a clinically transformative result. Sector M&A tailwind: Eli Lilly acquired Kelonia Therapeutics for $7B, spotlighting LEGN as an obvious CAR-T takeover candidate. Commercial anchor: CARVYKTI Q1 net sales ~$597M (+62% YoY), nearing company-wide adjusted profitability in 2026. Prior close ~$25.51; stock now $34.73 (+36%). EHA conference June 11–14 extends the catalyst window. Entry limit $35.00; target $42.00 (prior resistance area, ~20% upside); stop $30.50 below today's base. 1 × $35.00 = $35.00 ≤ $65. Risk: $4.50 (12.9%); Reward: $7.00 (20.0%). R/R ≈ 1.55:1.
 
-Legend Biotech presented Phase 1 data for two programs at ASCO 2026 (June 1–5) and announced an EHA 2026 late-breaking oral presentation of LB2501 (in vivo CD19/CD20 dual-targeting CAR-T) for June 11–14 in Stockholm. LB2501 Phase 1 data in relapsed/refractory NHL: 100% ORR (6/6) in dose level 2, 83.3% complete response, no DLTs, no ICANS, CRS Grade ≤2 — and critically, no lymphodepleting chemotherapy required (major clinical differentiation vs. existing CAR-T). Additionally, first-in-human Phase 1 LB2102 results in solid tumors were presented. CARVYKTI (with J&J) anchors the commercial story.
-
-LEGN is up +26.11% to $32.17 on very strong clinical data. The EHA conference (June 11–14) is a 9-day sustained catalyst window. Entry near today's consolidation; stop at $29.00 below today's base; target $37.50 approaches prior resistance levels. 2 × $32.00 = $64.00 ≤ $65. Risk: $3.00/share ($6.00 total, 9.4%); Reward: $5.50/share ($11.00 total, 17.2%). R/R ≈ 1.8:1.
-
-### BUY LASE (Laser Photonics) — 51 shares @ $1.26 | TP $1.55 | SL $1.10
-
-Laser Photonics is a defense laser tech small-cap with multiple May 2026 catalysts: (1) Laser Shield Anti-Drone System (LSAD) advancing to prototyping and extended-range trials with Fonon Technologies; (2) U.S. Army pilot validation of DefenseTech cleaning products; (3) portable DTMM-5010 marking laser purpose-built for military logistics/field operations; (4) new CFO appointed May 12. Today's +35.85% move on 44M shares reflects continued momentum as US-Iran tensions (reported this session) add a geopolitical bid to the broader defense sector.
-
-Setup: up +35% on heavy volume, consolidating in the $1.20–$1.30 range — not a parabolic blow-off on a defense small-cap with real government-adjacent catalysts. Stop at $1.10 is below today's base; target $1.55 is +23% above entry. 51 × $1.26 = $64.26 ≤ $65. Risk: $0.16/share ($8.16 total, 12.7%); Reward: $0.29/share ($14.79 total, 23%). R/R ≈ 1.8:1.
-
-**Total deployed this run:** $58.50 (HPE) + $64.00 (LEGN) + $64.26 (LASE) = $186.76. Combined worst-case stop drawdown: HPE $4.50 + LEGN $6.00 + LASE $8.16 = ~$18.66 total risk.
+**Total deployed this run:** $58.50 (HPE) + $35.00 (LEGN) = $93.50. Powder remaining: ~$306.50 of ~$400.
 
 ---
 
 ## Notable Passes
 
-- **APPN (+18.7%, $27.77):** Prior run pick — Q1 EPS beat by 50%, raised guidance, AI license tiers. Still a valid setup; passed this run in favor of HPE/LEGN/LASE which offer stronger or fresher catalysts. Watch.
-- **KVYO (+15.9%, $18.16):** Prior run pick — Q1 +28% YoY, profitability restored, $500M buyback. Best R/R of the prior run (2.4:1). Still valid. Passed to avoid stacking 5 positions in one run.
-- **HPQ (+9%, $29.44):** Prior run pick — Nvidia RTX Spark OEM partner + raised EPS guidance. Still valid. HPE has the stronger AI infrastructure earnings catalyst.
-- **BJDX (+173% to $5.93):** Manufacturing partnership with Argonaut for Symphony platform US supply chain. Catalyst real but modest vs. 173% move; analyst target ($3.27) well below current price. Classic blow-off. Pass.
-- **DXST (+167% to $4.28):** Chairman bought 400K shares for 90.5% voting control. Entire move already occurred. Blow-off. Pass.
-- **GXAI (+52%, $1.81, 82M volume):** AWS additional funding for AI sales coaching platform. Decent catalyst but company has issued 6+ product/partnership press releases in ~10 months — serial PR pattern. +52% already. Pass.
-- **SPCE ($5.06, 60M volume):** Commercial launch Q4 target, debt restructuring June 2. Was at $8.90 intraday recently, now at $5.06 — unclear if support or continued slide. Thesis intact; entry unclear. Watch.
-- **VSXY (+41% to $76.70):** Outstanding catalyst (raised guidance, Q1 beat). Single share = $76.70 > $65 budget cap. Cannot size it.
-- **MRVL (+21% to $273):** Jensen Huang onstage endorsement at Computex. Extraordinary catalyst. Out of budget entirely.
-- **CING (+33% to $4.80):** FDA CRL for CTx-1301 ADHD NDA — only CMC issues, no safety/efficacy concerns; market rallied on "less bad than feared." Interesting but CRL timeline is unknown; avoid clinical binary. Pass.
-- **PMI (Picard Medical, $0.301, 662M volume):** Sub-penny-stock territory, extreme dilution risk. Hard pass.
-- **RCAT (~$14.50):** Q4 revenue +2,500% YoY for a military drone company. No specific June 2 catalyst; stock not showing today's momentum. 4 shares = ~$58 fits budget. Watchlist.
+- **MRVL (+28%, $281.79):** Best fundamental catalyst of the day (Jensen Huang + earnings), but at $281.79 per share the entire $65 budget buys < 0.25 shares. No direct entry available. MRVU (2x MRVL ETF, $237.33) and MVLL ($179.95) are similarly unaffordable.
+- **LASE (+49%, $1.385):** Prior run (15:30Z) picked LASE @ $1.26 on defense/anti-drone thesis. Stock has since moved up +10% from that entry point, and the Nasdaq compliance notice for a late 10-Q filing is a real structural flag. Dropping it here; entry now less clean.
+- **FCEL (+20%, $25.52):** Data center hydrogen power theme, SDCL 450MW partnership, 61% revenue growth in Q1. But analyst consensus is zero Buys with mostly Holds and Sells; target of ~$8.24 sits far below the ~$25 price (stock up 225% YTD). Extended without institutional support for continuation.
+- **LWLG (+21%, $13.34):** Lightwave Logic is a legitimate silicon photonics/electro-optic play with Tower Semiconductor and GlobalFoundries partnerships. No specific June 2 catalyst — riding MRVL halo. Interesting but lacks a today-specific entry trigger.
+- **DXST (+175%, $4.40):** Chairman bought 400K shares for 90.5% voting control per SEC filing. Blow-off, entire move already in. Pass.
+- **BJDX (+164%, $5.74):** Bluejay Diagnostics; extreme micro-cap gap on thin float. No durable thesis.
+- **HPE prior run entries / LEGN prior run entries:** Both re-picked here — per BRAIN.md, prior picks not in holdings.json are not "held" and can be re-picked if still valid. Both setups are valid and LEGN is actually stronger now.
 
 ---
 
 ## Holdings
 
-`holdings.json` is empty (timestamped 2026-06-01T23:15:04Z — not yet updated today). No open positions per source of truth. Prior run (13:46Z) orders (APPN/KVYO/HPQ) not in holdings; treated as unfilled per BRAIN.md. After this run's orders: ~$213 remaining powder.
+`holdings.json` is empty (updated 2026-06-02T15:30:28Z). No open positions. All prior run picks (APPN/KVYO/HPQ from 13:46Z; HPE/LEGN/LASE from 15:30Z) treated as unfilled — no pending-fill state per BRAIN.md.
