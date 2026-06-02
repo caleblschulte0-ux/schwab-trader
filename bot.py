@@ -21,7 +21,7 @@ Risk rules still enforced in code (your one rule is safe):
   * skip symbols already HELD, with an OPEN buy, OR bought in the last
     RECENT_BUY_COOLDOWN_MIN minutes (closes the settlement-lag double-buy gap);
     if orders can't be read, place NOTHING (fail safe).
-  * don't chase: skip a BUY if the live ask is already > limit_price * (1+MAX_SLIPPAGE).
+  * don't chase (hard backstop): skip a BUY if live ask > limit_price * (1+MAX_SLIPPAGE).
 
 DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
 
@@ -40,7 +40,7 @@ from schwab.models.generated.trading_models import Instruction, Duration
 # ===== GUARDRAILS / KNOBS =====
 MAX_DOLLARS_PER_TRADE = 65.00   # never spend more than this on one entry
 MAX_SIGNAL_AGE_HOURS  = 18      # ignore a stale orders.json
-MAX_SLIPPAGE          = 0.03    # skip a BUY if live ask is >3% above the pick's limit
+MAX_SLIPPAGE          = 0.05    # skip a BUY if live ask is >5% above the pick's limit
 MARKETABLE_BUFFER     = 0.002   # buy limit = live ask * (1 + this) so it fills now
 ORDERS_FILE           = "signals/orders.json"
 HOLDINGS_FILE         = "signals/holdings.json"
@@ -286,6 +286,14 @@ def main() -> int:
 
     generated_utc, orders = load_orders()
     fresh = bool(orders) and is_fresh(generated_utc)
+    # Show the brain's funnel tally if present (proof of how wide it scanned).
+    try:
+        with open(ORDERS_FILE, encoding="utf-8") as _fh:
+            _funnel = json.load(_fh).get("funnel")
+        if _funnel:
+            print(f"Funnel this run: {_funnel}")
+    except Exception:
+        pass
     # Map each symbol -> its tp/stop from the latest picks (for exit management).
     levels = {o["symbol"]: o for o in orders if o.get("action") == "BUY"} if orders else {}
     brain_sells = {o.get("symbol") for o in orders if o.get("action") == "SELL"} if fresh else set()
