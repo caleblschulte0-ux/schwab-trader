@@ -78,6 +78,8 @@ From the wide pool, narrow with judgment:
   level to stop out?
 Keep the best 0–3. Quality of the FINALISTS matters; quantity of the FUNNEL
 matters. A wide funnel that yields 1 great pick is a great run.
+Account has ~$400 to deploy total, ≤ $65 per position (so up to ~6 positions at
+once). Don't pile everything into one run — leave powder for later setups.
 
 ## STEP 3 — CHASE RULE (loosened, but real)
 Judge the entry RELATIVE TO THE SETUP, not by a blunt % cap:
@@ -141,7 +143,7 @@ the read on any current holdings. Include a UTC timestamp.
 | Symbol | Qty | Avg | Take-profit | Stop | Last seen | Unrealized $ |
 |--------|-----|-----|-------------|------|-----------|--------------|
 
-**Open positions:** N   **Est. cash deployed:** $X of ~$200   **Powder left:** $Y
+**Open positions:** N   **Est. cash deployed:** $X of ~$400   **Powder left:** $Y
 ```
 If holdings.json is empty, write "No open positions."
 
