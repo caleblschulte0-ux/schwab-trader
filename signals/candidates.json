@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-02T20:20:22.462001+00:00",
+  "updated_utc": "2026-06-02T20:30:25.673334+00:00",
   "count": 135,
   "candidates": [
     {
@@ -579,6 +579,14 @@
       "list": "gainers"
     },
     {
+      "symbol": "NCSM",
+      "name": "NCS Multistage Holdings, Inc.",
+      "price": 55.6,
+      "pct_change": 19.54418,
+      "exchange": "NASDAQ",
+      "list": "gainers"
+    },
+    {
       "symbol": "NOK",
       "name": "Nokia Oyj",
       "price": 16.83,
@@ -837,8 +845,8 @@
     {
       "symbol": "SNSE",
       "name": "Sensei Biotherapeutics, Inc.",
-      "price": 15.68,
-      "pct_change": -20.76806,
+      "price": 16.095,
+      "pct_change": -18.67105,
       "exchange": "NASDAQ",
       "list": "losers"
     },
@@ -1025,14 +1033,6 @@
       "pct_change": -4.58716,
       "exchange": "NASDAQ",
       "list": "actives"
-    },
-    {
-      "symbol": "WTF",
-      "name": "Waton Financial Limited Ordinary Shares",
-      "price": 3.44,
-      "pct_change": 21.55477,
-      "exchange": "NASDAQ",
-      "list": "gainers"
     },
     {
       "symbol": "WXM",
