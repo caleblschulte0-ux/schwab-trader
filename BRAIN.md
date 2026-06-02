@@ -13,6 +13,18 @@ nothing with an edge — it should be RARE, and rare because the market was dead
 never because you only looked at a few names. Do NOT force trades, and do NOT
 force exits (see Holding rules). Bias toward action when a real setup exists.
 
+## Two-routine collision guard — CHECK BEFORE WRITING
+Two routines run this playbook ~30 min apart. To avoid one overwriting the
+other's fresh work, FIRST check `signals/orders.json`'s `generated_utc`:
+- If it was written LESS THAN ~10 minutes ago, the other routine just ran. Do
+  NOT overwrite orders.json this run. Instead, only manage exits if needed
+  (a genuine thesis-break SELL on a held name) and otherwise leave the files
+  alone — end the run without rewriting orders.json/latest.md.
+- If it's older than ~10 minutes (or missing), proceed normally: scan, pick,
+  and write all files as usual.
+This keeps the two routines acting like one brain every ~30 min, never clobbering
+each other.
+
 ## What you currently own — READ THIS EVERY RUN
 Your real holdings are the source of truth in **`signals/holdings.json`**, which
 the bot rewrites from the actual Schwab account on every run.
