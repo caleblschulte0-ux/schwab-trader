@@ -54,11 +54,15 @@ Tips to maximize breadth:
 
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:
-- NO price band — any share price is fine as long as the trade fits the $65
-  budget (quantity × entry ≤ $65). That means even 1 share of a ~$60 stock is OK
-  if it's the best setup. Don't reject a great name just because it's pricey, and
-  don't favor cheap names just because you can buy more shares. Pick the best
-  SETUP; size it to the $65 cap (fewer shares for pricier stocks is expected).
+- LEAN SMALL-CAP, but don't fear large. No hard price band — any share price is
+  fine as long as the trade fits the $65 budget (quantity × entry ≤ $65), even 1
+  share of a ~$60 stock. Default preference: smaller-cap / lower-priced names,
+  because that's where the outsized % moves this strategy wants tend to happen.
+  BUT a clean larger-cap setup is fully fair game — take it when it's genuinely
+  better. Tie-breaker rule: when two setups are roughly equal quality, prefer the
+  smaller-cap one; only go larger-cap when its setup is clearly stronger. Never
+  reject a great name just for being pricey, and never force a weak small-cap just
+  to stay small. Size everything to the $65 cap.
 - Enough liquidity to enter/exit a tiny position cleanly.
 - A real, identifiable catalyst or momentum reason.
 - Setup quality + reward/risk: is there room to a sensible target, and a clear
