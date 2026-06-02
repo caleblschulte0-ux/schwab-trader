@@ -32,8 +32,8 @@ Risk rules still enforced in code (your one rule is safe):
 DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
-Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (movers/leading candidates),
-ALPHAVANTAGE_API_KEY (bullish stock-news candidates)
+Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (movers + earnings),
+ALPHA_API_KEY (bullish market-wide news), FINNHUB_API_KEY (small-cap company news)
 """
 from __future__ import annotations
 
@@ -69,6 +69,11 @@ NEWS_REFRESH_MIN      = 13      # min minutes between AV calls (dedupe rapid/man
 NEWS_LIMIT            = 200     # articles to pull per AV call (free allows up to 1000)
 NEWS_MIN_RELEVANCE    = 0.30    # ignore tickers only loosely mentioned in an article
 NEWS_MIN_SENTIMENT    = 0.15    # only BULLISH-leaning coverage (it's a buy funnel)
+# --- small-cap company news (Finnhub; free tier = 60 calls/min, per symbol) ---
+FINNHUB_BASE          = "https://finnhub.io/api/v1"
+FINNHUB_MAX_SYMBOLS   = 25      # affordable movers to look up per run (<< 60/min)
+FINNHUB_PRICE_MAX     = 65.00   # only look up "affordable" movers (where we can trade)
+FINNHUB_NEWS_LOOKBACK = 2       # days of company news to consider "fresh"
 MAX_NEWS_ADD          = 60      # cap names added purely from the news feed
 # --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
 MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
@@ -83,6 +88,7 @@ DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 # Alpha Vantage stock-news key. Accept either name (the GitHub secret is ALPHA_API_KEY).
 AV_API_KEY    = (os.environ.get("ALPHA_API_KEY") or os.environ.get("ALPHAVANTAGE_API_KEY", "")).strip()
+FINNHUB_API_KEY = os.environ.get("FINNHUB_API_KEY", "").strip()  # small-cap company news
 
 
 def _fmp_get(endpoint: str, params: str = "") -> list:
@@ -183,6 +189,45 @@ def _fetch_leading(seen: dict) -> None:
         print(f"(fmp) earnings (next {EARNINGS_LOOKAHEAD_DAYS}d): enriched {enriched}, added {added} upcoming")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
+
+
+def _fetch_smallcap_news(seen: dict) -> None:
+    """SMALL-CAP company news via Finnhub (per symbol, free 60/min). The market-wide
+    AV news feed skews mega-cap; this fills the gap by pulling fresh headlines for the
+    AFFORDABLE movers we could actually trade (price <= FINNHUB_PRICE_MAX), tagging
+    those with recent news so the brain sees the WHY behind a small-cap move — and can
+    catch one that has fresh news but only a modest move so far (an early entry).
+    No-ops without a key; stops on the first error so a bad key can't spam the log."""
+    if not FINNHUB_API_KEY:
+        return
+    import urllib.request
+    today = datetime.now(timezone.utc).date()
+    frm = (today - timedelta(days=FINNHUB_NEWS_LOOKBACK)).isoformat()
+    to = today.isoformat()
+    # Affordable movers (where we trade), most-active/biggest move first.
+    movers = [r for r in seen.values()
+              if (r.get("price") or 0) and r["price"] <= FINNHUB_PRICE_MAX
+              and r.get("pct_change") is not None]
+    movers.sort(key=lambda r: abs(r.get("pct_change") or 0), reverse=True)
+    checked = tagged = 0
+    for r in movers[:FINNHUB_MAX_SYMBOLS]:
+        sym = r["symbol"]
+        try:
+            url = f"{FINNHUB_BASE}/company-news?symbol={sym}&from={frm}&to={to}&token={FINNHUB_API_KEY}"
+            with urllib.request.urlopen(url, timeout=20) as resp:
+                rows = json.loads(resp.read().decode("utf-8"))
+        except Exception as exc:  # noqa: BLE001 - stop on first error (likely systemic)
+            print(f"(warn) Finnhub company-news failed (skipped after {checked}): {exc}")
+            return
+        checked += 1
+        if not isinstance(rows, list) or not rows:
+            continue
+        latest = max(rows, key=lambda x: x.get("datetime", 0))
+        _merge_candidate(seen, sym, signal="news", catalyst={
+            "headline": latest.get("headline"), "source": latest.get("source"),
+            "news_url": latest.get("url")})
+        tagged += 1
+    print(f"(finnhub) checked {checked} affordable movers, tagged {tagged} with fresh news")
 
 
 def _parse_av_feed(payload: dict) -> list[tuple[str, dict]]:
@@ -313,21 +358,22 @@ def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
 def fetch_fmp_candidates() -> None:
     """Build the brain's structured top-of-funnel and write signals/candidates.json.
     Combines a LAGGING list (today's movers) with LEADING signals — upcoming earnings
-    (FMP) and BULLISH stock news (Alpha Vantage) — so the brain can act BEFORE the
-    move. Each source is keyed and
-    isolated: missing keys / failed endpoints just no-op (worst case = today's
-    movers, or an empty file). Throttles the news call to stay under AV's 25/day."""
-    if not (FMP_API_KEY or AV_API_KEY):
-        print("(info) no FMP_API_KEY or ALPHAVANTAGE_API_KEY set — skipping candidate prefetch.")
+    (FMP), small-cap company news (Finnhub), and BULLISH stock news (Alpha Vantage) —
+    so the brain can act BEFORE the move. Each source is keyed and isolated: missing
+    keys / failed endpoints just no-op (worst case = today's movers, or an empty
+    file). Throttles the AV news call to stay under its 25/day free cap."""
+    if not (FMP_API_KEY or AV_API_KEY or FINNHUB_API_KEY):
+        print("(info) no data-source keys set — skipping candidate prefetch.")
         return
     prev = _read_candidates()
     seen: dict[str, dict] = {}
     if FMP_API_KEY:
         _fetch_movers(seen)    # lagging (already moved)
-        _fetch_leading(seen)   # leading (about to / catalyst pending)
+        _fetch_leading(seen)   # leading: upcoming earnings
     else:
-        print("(info) no FMP_API_KEY — skipping FMP movers/leading sources.")
-    news_meta = _fetch_news(seen, prev)  # leading: bullish news as it breaks
+        print("(info) no FMP_API_KEY — skipping FMP movers/earnings sources.")
+    _fetch_smallcap_news(seen)           # leading: fresh small-cap company news
+    news_meta = _fetch_news(seen, prev)  # leading: bullish market-wide news as it breaks
     _write_candidates(seen, news_meta=news_meta)
 
 

@@ -54,6 +54,11 @@ LEADING names with live price + % change. Read this first. Each row now carries 
   a name can hit the news before its chart fully moves. READ the headline: confirm
   it's a real, durable catalyst (deal, beat, approval, contract), not fluff, and
   that the move isn't already spent.
+- `news` — LEADING: fresh COMPANY news on an affordable (in-budget) mover, pulled
+  per-symbol so SMALL-CAPS surface (the `news_bullish` market feed skews mega-cap).
+  No sentiment attached — READ the headline yourself to judge bullish vs bearish and
+  whether it's a real catalyst. A small-cap with fresh `news` but only a modest move
+  so far is a prime EARLY entry.
 LEADING names are in the funnel because a catalyst is FRESH or PENDING — NOT
 because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this is
 how you get in BEFORE the move instead of chasing it after. A name carrying both a
@@ -81,6 +86,13 @@ Web searches to run every run (several, in tandem with FMP):
    broad gainer lists) — include them, but don't limit the funnel to cheap
    stocks; mid- and large-cap movers are fair game too (the $65 budget, not
    share price, is the only sizing constraint).
+7b. SMALL-CAP NEWS specifically — run dedicated searches for small/micro-cap
+   catalysts that move them early: new contracts/orders, partnerships, FDA/PDUFA
+   and clinical readouts, earnings beats & raised guidance, uplistings, buybacks,
+   insider buying. Vary sources (StockTitan, GlobeNewswire/PR/Business Wire,
+   Benzinga small-cap, biotech catalyst calendars). The bot's per-symbol `news`
+   tag covers small-caps already ON the movers list — your job here is to catch
+   the ones with FRESH news that haven't moved much YET (the earliest entries).
 8. Sector/theme sweeps — run one search each for the hot themes of the day
    (e.g. AI, defense, biotech, energy, quantum, nuclear, crypto-adjacent)
 9. PRE-CATALYST / anticipatory (the proactive edge — find names BEFORE they run):
