@@ -12,8 +12,9 @@ So entries are now DEAD SIMPLE and priced off Schwab's LIVE quote:
            Also honors a brain {"action":"SELL"} signal.
 
 Ground truth: every run the bot writes the account's REAL positions to
-signals/holdings.json. The brain reads that file to know what it actually owns —
-no hardcoding holdings anywhere.
+signals/holdings.json. The brain reads that file to know what it actually owns.
+The bot also pulls FMP market-mover lists into signals/candidates.json — the
+brain's structured top-of-funnel (~100-150 real movers with price + %change).
 
 Risk rules still enforced in code (your one rule is safe):
   * BUY-only; we only ever SELL shares we already own (never short).
@@ -26,7 +27,7 @@ Risk rules still enforced in code (your one rule is safe):
 DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
-Optional: SCHWAB_CALLBACK_URL, DRY_RUN
+Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (market-mover candidates)
 """
 from __future__ import annotations
 
@@ -47,6 +48,8 @@ HOLDINGS_FILE         = "signals/holdings.json"
 MIN_TP_OVER_ENTRY     = 0.005
 MIN_STOP_UNDER_ENTRY  = 0.005
 RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
+CANDIDATES_FILE       = "signals/candidates.json"
+FMP_BASE              = "https://financialmodelingprep.com/stable"
 # ==============================
 
 APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
@@ -54,6 +57,58 @@ APP_SECRET    = os.environ["SCHWAB_APP_SECRET"].strip()
 REFRESH_TOKEN = os.environ["SCHWAB_REFRESH_TOKEN"].strip()
 CALLBACK      = os.environ.get("SCHWAB_CALLBACK_URL", "https://127.0.0.1/").strip()
 DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
+FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
+
+
+def fetch_fmp_candidates() -> None:
+    """Pull FMP gainers/most-actives/losers into one deduped candidate list and
+    write signals/candidates.json. This is the brain's structured top-of-funnel —
+    ~100-150 real market movers with price + % change, far better than web search.
+    Free-tier safe (3 calls/run). Silently no-ops if no key."""
+    if not FMP_API_KEY:
+        print("(info) no FMP_API_KEY set — skipping candidate prefetch.")
+        return
+    import urllib.request
+    lists = {
+        "gainers": "biggest-gainers",
+        "actives": "most-actives",
+        "losers": "biggest-losers",
+    }
+    seen: dict[str, dict] = {}
+    for label, ep in lists.items():
+        try:
+            url = f"{FMP_BASE}/{ep}?apikey={FMP_API_KEY}"
+            with urllib.request.urlopen(url, timeout=20) as r:
+                rows = json.loads(r.read().decode("utf-8"))
+            n = 0
+            for row in rows or []:
+                sym = row.get("symbol")
+                if not sym or sym in seen:
+                    continue
+                seen[sym] = {
+                    "symbol": sym,
+                    "name": row.get("name"),
+                    "price": row.get("price"),
+                    "pct_change": row.get("changesPercentage"),
+                    "exchange": row.get("exchange"),
+                    "list": label,
+                }
+                n += 1
+            print(f"(fmp) {label}: +{n} new")
+        except Exception as exc:  # noqa: BLE001 - never let data fetch break the run
+            print(f"(warn) FMP {label} fetch failed: {exc}")
+    data = {
+        "updated_utc": datetime.now(timezone.utc).isoformat(),
+        "count": len(seen),
+        "candidates": sorted(seen.values(), key=lambda x: x["symbol"]),
+    }
+    try:
+        os.makedirs(os.path.dirname(CANDIDATES_FILE), exist_ok=True)
+        with open(CANDIDATES_FILE, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, indent=2)
+        print(f"Wrote {CANDIDATES_FILE}: {len(seen)} candidates")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not write candidates file: {exc}")
 
 
 def get_client() -> SchwabClient:
@@ -276,6 +331,7 @@ def main() -> int:
     mode = "DRY-RUN (no real orders)" if DRY_RUN else "LIVE (real orders!)"
     print(f"=== Executor | mode: {mode} ===")
 
+    fetch_fmp_candidates()  # refresh the brain's structured candidate universe
     client = get_client()
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
