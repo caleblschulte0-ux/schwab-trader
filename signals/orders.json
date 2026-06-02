@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-06-02T16:41:47Z",
-  "funnel": {"scanned": 191, "in_budget": 44, "had_catalyst": 12, "finalists": 4, "picked": 3},
+  "generated_utc": "2026-06-02T17:09:12Z",
+  "funnel": {"scanned": 194, "in_budget": 57, "had_catalyst": 12, "finalists": 5, "picked": 3},
   "orders": [
-    {"symbol": "HPE", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 54.50, "take_profit": 63.00, "stop_loss": 50.00},
     {"symbol": "LEGN", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 34.20, "take_profit": 42.00, "stop_loss": 30.00},
+     "quantity": 1, "limit_price": 34.60, "take_profit": 42.00, "stop_loss": 30.00},
+    {"symbol": "HPE", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 54.75, "take_profit": 63.00, "stop_loss": 50.00},
     {"symbol": "SMCI", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 49.80, "take_profit": 57.00, "stop_loss": 45.00}
+     "quantity": 1, "limit_price": 49.90, "take_profit": 57.00, "stop_loss": 45.00}
   ]
 }

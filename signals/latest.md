@@ -1,34 +1,37 @@
-# Trading Signals — 2026-06-02T16:41:47Z
+# Brain Run — 2026-06-02T17:09:12Z
 
-Funnel: scanned 191 → 44 fit budget → 12 with catalyst → 4 finalists → picked 3
+Funnel: scanned 194 → 57 fit budget → 12 with catalyst → 5 finalists → picked 3
 
 ---
 
 ## Collision Guard
-Previous orders.json stamped `2026-06-02T16:00:00Z` — exact round-hour, flagged as likely fabricated per BRAIN.md. holdings.json updated `16:36:03Z`, confirming >36 min elapsed. Proceeding normally.
-
-## Holdings
-`holdings.json` empty (updated 16:36:03Z). No open positions. Prior run picks (HPE/LEGN from 16:00Z) treated as unfilled — no pending-fill state per BRAIN.md. Re-evaluated fresh below.
+Prior orders.json stamped `2026-06-02T16:41:47Z` — 27 minutes ago, well past the 10-minute guard. Holdings.json empty (updated 17:00:33Z). Proceeding with full scan.
 
 ---
 
 ## Market Context
-Dominant theme: **AI infrastructure / semiconductor**. Marvell (MRVL +28%, $281) surged after Nvidia CEO Jensen Huang gave a stage endorsement at Computex 2026, calling Marvell essential silicon for AI data-center interconnects. HPE blew out Q2 earnings this morning with 40% revenue growth and 108% EPS increase, confirming the same AI-server demand wave. SMCI caught a direct sympathy bid. Biotech also active: LEGN +34% on ASCO data with an upcoming EHA 100% ORR readout; BJDX ran +212% premarket on a manufacturing partnership then pulled back sharply — blow-off structure. Markets broadly in risk-on mode (Nasdaq +0.17%, small caps +0.79%).
+
+Dominant theme: **AI/semiconductor infrastructure**. Marvell (MRVL +30%, $285) is the headline move after Nvidia CEO Jensen Huang called it the "next trillion-dollar company" at COMPUTEX Taipei, simultaneously backed by a record Q1 FY2027 earnings beat ($2.418B revenue, +28% YoY, Q2 guidance $2.7B, +35% YoY) and a sweeping round of analyst target raises. The Philadelphia Semiconductor Index rose 4% on the session. MRVL is too expensive for our $65 budget, but the narrative creates strong spillover into AI infrastructure peers (HPE, SMCI) and optics/photonics names. Biotech separately active: LEGN +35% on in vivo CAR-T Phase 1 showing 100% ORR — extraordinary data. Virgin Galactic (SPCE) hit 52-week highs on a 5.26% stake disclosure; BlackBerry (BB) climbed on QNX/AI demand, FedRAMP certification, and a share buyback. ServiceNow (NOW) guidance miss is a cautionary note for high-multiple software — we are not touching that space today.
+
+---
+
+## Holdings
+`holdings.json` empty. No open positions. Prior run picks (HPE/LEGN/SMCI from 16:41Z) did not fill — none in holdings. Re-evaluated fresh below; all three remain best-in-class setups for their respective catalysts and prices are nearly unchanged.
 
 ---
 
 ## Picks
 
-### 1. BUY HPE — 1 share @ $54.50 | TP $63.00 | SL $50.00
-**Catalyst:** Q2 FY2026 earnings absolutely blown out: revenue +40% to $10.7B, EPS +108% vs prior guidance, AI Systems Orders $1.8B new orders, backlog doubled to record levels, FY2026 EPS guidance raised to $3.35–$3.45. Multiple analyst upgrades with targets in the $63–$74 range (JPMorgan $68, Raymond James $74, Morgan Stanley $71). This is among the strongest fundamental catalysts seen all year. Stock gapped ~25% premarket, consolidated intraday to $54.33 — healthy pullback from the $64 open creates a better entry than the prior run's $58.50 limit. Entry at $54.50 near current ask. TP $63.00 aligns with lower end of new analyst targets; SL $50 holds the earnings gap-fill zone. 1 × $54.50 = $54.50 ≤ $65.
+### 1. BUY LEGN — 1 share @ $34.60 | TP $42.00 | SL $30.00
+**Catalyst:** Legend Biotech announced a late-breaking oral presentation at EHA 2026 (June 11–14) for LB2501, its in vivo CD19/CD20 dual-targeting CAR-T cell therapy. At dose level 2: **100% ORR (6/6), 83.3% CR rate** — all responses ongoing at cutoff, dose-dependent in vivo CAR-T expansion confirmed, zero DLTs/SAEs/deaths/ICANS. This is exceptional Phase 1 data for relapsed/refractory B-cell NHL using a true in vivo approach (no leukapheresis, no manufacturing). The EHA presentation on June 11–14 is a defined near-term re-rating event. Commercial anchor remains CARVYKTI with surging sales. M&A tailwind: Eli Lilly's $7B acquisition of Kelonia spotlights CAR-T as an acquirer target. Stock at $34.57 (+35.5%). Entry $34.60 near current market. TP $42.00 (~21% upside) captures likely analyst re-pricing window ahead of EHA; SL $30.00 (~13% below) sits below today's settled base. 1 × $34.60 = $34.60 ≤ $65. R/R ≈ 1.6:1.
 
-### 2. BUY LEGN — 1 share @ $34.20 | TP $42.00 | SL $30.00
-**Catalyst:** Dual-catalyst biotech window. At ASCO 2026 (May 29–June 2, ongoing today): Phase 1 LB2102 data for DLL3-targeted CAR-T in relapsed small-cell lung cancer. Upcoming EHA 2026 oral presentation June 14 for LB2501 — in vivo CAR-T showing **100% ORR (6/6)** with 83.3% complete response, and no lymphodepleting chemo required. That data is clinically transformational; the EHA presentation is a defined future catalyst keeping the setup live. Commercial anchor: CARVYKTI Q1 net sales ~$597M (+62% YoY). M&A tailwind: Eli Lilly's $7B acquisition of Kelonia spotlights CAR-T as an acquirer target. Stock at $34.12 after +33.8% run. Entry $34.20, TP $42, SL $30 below today's base. 1 × $34.20 = $34.20 ≤ $65. R/R ≈ 1.6:1.
+### 2. BUY HPE — 1 share @ $54.75 | TP $63.00 | SL $50.00
+**Catalyst:** Record Q2 FY2026 results: revenue +40% to $10.7B, EPS +108% vs prior guidance, AI Systems new orders $1.8B with backlog doubled to record levels, FY2026 EPS guidance raised. Multiple analyst price target increases (JPMorgan $68, Raymond James $74). Stock at $54.71 (+16.4%), hit a 52-week high. The MRVL/AI infrastructure narrative confirmed by HPE's own print: the hyperscaler capex cycle is accelerating. Entry $54.75 near current ask. TP $63.00 aligns with the lower analyst target band; SL $50.00 holds the earnings gap zone. 1 × $54.75 = $54.75 ≤ $65.
 
-### 3. BUY SMCI — 1 share @ $49.80 | TP $57.00 | SL $45.00
-**Catalyst:** Super Micro Computer is the most direct peer beneficiary of HPE's earnings. Today's headline from 24/7 Wall St: "Hewlett Packard Enterprise Rockets 25%, Super Micro Computer Climbs 5% as AI Server Demand Lights Up Q2 Earnings." SMCI only +5.96% so far ($49.68) — underreacting relative to HPE, suggesting it hasn't fully repriced to the same AI-server confirmation. As analysts digest HPE's print and upgrade the AI infrastructure theme through the afternoon, SMCI should follow. Entry $49.80, TP $57 (~14.5% upside), SL $45 below today's open range. 1 × $49.80 = $49.80 ≤ $65.
+### 3. BUY SMCI — 1 share @ $49.90 | TP $57.00 | SL $45.00
+**Catalyst:** Super Micro Computer is the most direct peer beneficiary of HPE's AI server confirmation. At only +6.3% today ($49.83), SMCI is notably less extended than HPE — underreacting to the same AI infrastructure demand story, suggesting further repricing likely as the afternoon session digests HPE's print and MRVL's Computex catalyst. Clean AI server infrastructure play without a vertical run. Entry $49.90, TP $57.00 (~14% upside), SL $45.00 (~9.8% below). 1 × $49.90 = $49.90 ≤ $65. R/R ≈ 1.4:1.
 
-**Total deployed this run:** $54.50 + $34.20 + $49.80 = $138.50. Powder remaining: ~$261.50 of ~$400.
+**Total deployed this run:** $34.60 + $54.75 + $49.90 = $139.25. Powder remaining: ~$260.75 of ~$400.
 
 ---
 
@@ -36,24 +39,22 @@ Dominant theme: **AI infrastructure / semiconductor**. Marvell (MRVL +28%, $281)
 
 | Name | Reason Passed |
 |------|---------------|
-| MRVL ($281, +28%) | Computex/Jensen Huang catalyst is the strongest of the day — but 1 share is $281, blows $65 budget entirely |
-| MRVU / MVLL (2× MRVL ETFs, $236/$179) | Same problem — 1 share each exceeds budget |
-| BJDX ($4.18, +92%) | Was +212% premarket; pulled back to +92% — that IS the blow-off top structure. No FDA clearance yet; partnership is manufacturing capacity, not a revenue event |
-| DXST ($3.74, +133%) | Chairman bought at $2.00, stock already ran overnight. Entering at +133% from catalyst price is fully chasing a spent move |
-| LWLG ($13.10, +19%) | AI photonics / optical interconnect narrative directly ties to MRVL's silicon photonics focus. Interesting. But last specific catalyst was May 13 (IP counsel hire); no fresh same-day trigger today |
-| ASTC ($45.41, +28%) | Astrotech Corp move — no clear same-day catalyst found in research |
-| SOXL ($257, +13%) | 3× semiconductor ETF, compelling theme but $257/share exceeds budget |
-| STAK ($1.74), LOBO ($1.12), SDA ($1.27) | Below $2 price floor — pump/trap territory |
-| ABVX (−44%) | Cancer cases in Phase 3 trial confirmed; thesis-break loser, not a bounce |
-| GNTA, FLNT, FOFO, ZJYL | Sub-$2 or Chinese micro-cap spikes with no durable edge |
+| MRVL ($285, +30%) | The day's best setup by far — Jensen Huang "trillion-dollar company" call + record earnings. Impossible: 1 share = $285, far exceeds $65 budget. Own it via HPE/SMCI instead |
+| BJDX ($4.08, +88%) | Bluejay Diagnostics sepsis diagnostic manufacturing partnership with Argonaut. Real operational catalyst. Was +212% premarket, pulled to +88% — bulk of the move is done; chasing residual momentum in a development-stage diagnostics company |
+| BB ($9.67, +8%) | BlackBerry: QNX/Physical AI demand, FedRAMP High cert, share buyback, CIBC upgrade. Solid multi-factor setup. Finalist but edged out by SMCI's cleaner AI infrastructure fit with less uncertainty |
+| REPL (~+40%) | Replimune: FDA agreement to resubmit RP1 for advanced melanoma. Strong biotech FDA catalyst. Not in FMP data → price uncertain; excluded to avoid bad limit_price reference |
+| ASTC ($48.87, +38%) | Astrotech: "lunar mining + quantum supply chain" board pivot. Stock already up 2,500%+ from its penny base in a week. Revenue ~$1M, net loss $3.8M/qtr. Pure speculative meme — no revenue path. Pass |
+| PENG ($70.89, +18.7%) | Penguin Solutions: AI demand + full-year outlook at high end. Excellent setup — but $70.89/share exceeds the $65 budget cap even for 1 share |
+| INOD ($115, 52-wk high) | Innodata: AI data annotation blowout earnings in May, 52-week high. Outstanding story but $115/share = too expensive |
+| OPTX ($12.78, +17.9%) | Syntec Optics: defense/AI data center optics, Q4 gross margins +80% YoY. Solid sector play but catalyst clarity below top 3 |
 
 ---
 
 ## Funnel Detail
-- **Source 1 (FMP):** 137 candidates (gainers, actives, losers lists)
-- **Source 2 (Web):** ~54 names added — SBFM, OUST, FLNC, MDB, TWLO, NUVL, ADBE, EWTX, ERAS, GRAL, NOW, QUBT, AVGO, NHIC, PRZO, IVF, BNY, TOPP, GFAI, GOOGL/GOOGL alphabet $80B raise, SMR, MTLS, LXFR, ARKO, and sector names (quantum, defense, nuclear)
-- **Merged pool:** ~191 total after dedup
-- **In budget (>$2/share, ≥1 share ≤ $65):** ~44
-- **Had real same-day catalyst:** 12 (HPE earnings, LEGN ASCO/EHA, SMCI AI servers, BJDX manufacturing pact, DXST insider buy, MRVL Computex, LWLG photonics narrative, OUST lidar/FieldAI, OPTX defense optics, QBTS quantum, ASTC, SOXL/semiconductor index)
-- **Finalists:** 4 (HPE, LEGN, SMCI, LWLG)
-- **Picked:** 3 (dropped LWLG — no fresh today-specific catalyst)
+- **Source 1 (FMP candidates.json):** 134 candidates (gainers, actives, losers)
+- **Source 2 (Web — 8 parallel searches):** ~60 unique additional names surfaced (REPL, BB, PRFX, INOD, NINE, MGRT, ANL, ROCKET LAB, AVGO, ARM, MDB, TWLO, AEHR, OPTX, NCSM, LWLG, BNR, SMR, URG, and sector names from AI/semiconductor/biotech/defense sweeps)
+- **Merged pool:** ~194 total after dedup
+- **In budget ($2+ floor, ≥1 share ≤ $65):** 57
+- **Had real same-day catalyst:** 12 (LEGN CAR-T EHA, HPE AI earnings, SMCI AI servers, MRVL Computex/earnings, BB QNX/AI/buyback, REPL FDA melanoma, BJDX diagnostic partnership, OPTX defense optics, PENG AI demand, ASTC lunar meme, SMR nuclear SMR, URG uranium)
+- **Finalists:** 5 (LEGN, HPE, SMCI, BB, OPTX)
+- **Picked:** 3 (LEGN, HPE, SMCI — strongest catalysts + clean entries)
