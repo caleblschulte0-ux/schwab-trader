@@ -1,11 +1,11 @@
-# Brain Run — 2026-06-02T21:06:15Z
+# Brain Run — 2026-06-02T21:43:12Z
 
-Funnel: scanned 160 → 52 fit budget → 18 with catalyst → 5 finalists → picked 3
+Funnel: scanned 200 → 85 fit budget → 22 with catalyst → 5 finalists → picked 3
 
 ---
 
 ## Collision Guard
-Prior `orders.json` stamped 2026-06-02T20:42:47Z (~23 min ago, >10 min). Guard cleared; full scan proceeds.
+Prior `orders.json` stamped 2026-06-02T21:06:15Z (~37 min ago, >10 min). Guard cleared; full scan proceeds.
 
 ## Holdings
 `holdings.json` is empty — no open positions. Hunting fresh entries.
@@ -13,33 +13,51 @@ Prior `orders.json` stamped 2026-06-02T20:42:47Z (~23 min ago, >10 min). Guard c
 ---
 
 ## Market Context
-Session defined by two dominant themes: **AI infrastructure surge** and **quantum breakout**. HPE +19% on historic Q2 earnings beat (biggest since 2018) — EPS $0.79 vs $0.53 est, revenue +40% YoY, Nvidia Vera CPU server unveiled at Computex. MRVL +32% on record Q1 revenue + Jensen Huang at Computex calling it "next trillion-dollar chip company" (too expensive at $291 to trade). IBM +12% on Barclays Overweight initiation ($350 PT) + $10B quantum computing investment announcement + viral Trump endorsement video. Nuclear energy quietly gained: SMR +8.3%, URG +23% on AI datacenter power demand. Several small-cap blow-offs (LASE +161%, BJDX +100%, DXST +209%) filtered as chasing traps. Biotech bifurcated: LEGN +42% on strong CAR-T data, ABVX -44% on cancer safety signal.
+S&P 500 closed at a record 7,609.78 (first close above 7,600), driven by an AI infrastructure surge and a quantum computing breakout. The session's two dominant narratives:
+
+1. **AI infrastructure hardware**: HPE beat Q2 by a historic margin (EPS +49% vs est, revenue +40% YoY, AI system orders $1.8B with record backlog) and closed up +19%. MRVL surged +32.5% after Jensen Huang at Computex called it "the next trillion-dollar company" and launched Teralynx T100 (industry's first 102.4 Tbps AI switch silicon). SMCI rose +7% as a secondary beneficiary — AI server demand confirmed broadly.
+
+2. **Quantum computing**: Sector up 69.3% YTD. IBM's $10B 5-year quantum investment + $100M Commerce Dept. CHIPS Act grant to Quantinuum + a pending QNT IPO all reinforce the theme. RGTI +4.9% today on broader sentiment, QBTS +2.5% — neither overextended.
+
+3. **Nuclear / energy**: SMR +8.3%, URG +22.8% on AI datacenter power demand → nuclear thesis continues.
+
+Biotech was bifurcated: LEGN +42% on Phase 1 CAR-T data; ABVX -44%, FULC -53% on safety signals.
 
 ---
 
 ## Funnel Notes
-**Source 1 — FMP candidates.json:** 135 candidates (top gainers, actives, losers across NASDAQ/NYSE/AMEX).  
-**Source 2 — Web search (8 parallel queries + 6 deep dives):** Top % gainers, most-active/volume, unusual volume, pre-market/afternoon movers, 52-week high breakouts, earnings/FDA/contract catalysts, small-cap/micro-cap gainers, sector sweeps (AI, defense, biotech, energy, quantum, nuclear). Added ~25 unique tickers (IBM, TMHC, IONQ, APLD, OKLO, NOW, AVGO, LAC, FLNC, SBFM, ALLT, SHIP, SG, AXT, and others).  
-**Total funnel: ~160.** Eliminated: ~30 sub-$2 names (AREB, AZON, GPUS, GRNQ, GLXG, ICCM, LAFAR, MEHA, NTCL, PMI, STAK, SDA, SOAR, TOPS, VRAX, WXM, YYGH, ZCMD, LOBO, MVIS, DEVS, DBGI, HRTX, and others); ~18 leveraged ETFs (MRVU, MVLL, GLWG, UECG, UUUG, FIGG, BEG, OSCG, OSCX, MST, MSTP, MSTX, TSLL, TZA, NVD, SOXS, TQQQ); over-budget (MRVL $291, VSXY $80, SWMR $79, IBM ~$320, AEHR $113, INTC $108, PRAX $258, MU $1064, GOOGL $362). ~52 in budget; ~18 with clear verifiable catalyst; 5 finalists.
+
+**Source 1 — FMP candidates.json:** 135 names (top gainers, most-active, losers across NASDAQ/NYSE/AMEX).
+
+**Source 2 — Web search (9 parallel + 4 targeted deep-dives):** Top % gainers, most-active/volume, unusual volume, 52-week-high breakouts, earnings/FDA/catalyst news, small-cap/micro-cap, sector sweeps (AI, semiconductors, defense, biotech, energy, quantum, nuclear, uranium), earnings calendar, and targeted dives on MRVL, HPE, AOSL, PENG/OUST/SMCI.
+
+Added from web (~65 unique names): PENG, OUST, QBTS (deeper look), MCHP, CCJ, UEC, UUUU, NXE, DNN, OUST, ARKO, MTLS, LXFR, and others.
+
+**Total funnel: ~200 candidates.** Eliminated:
+- Sub-$2 names (AREB, GPUS, GRNQ, GLXG, ICCM, MEHA, NTCL, PMI, SDA, SOAR, TOPS, VRAX, WXM, YYGH, ZCMD, LOBO, MVIS, DEVS, DBGI, HRTX, AMC, HKIT, BPACR, LAFAR, and others)
+- Leveraged ETFs (MRVU, MVLL, GLWG, UECG, UUUG, FIGG, BEG, OSCG, OSCX, MST, MSTP, MSTX, TSLL, TZA, NVD, SOXS, TQQQ)
+- Over budget (MRVL $291, VSXY $80, SWMR $79, AEHR $113, INTC $108, PRAX $258, MU $1064, GOOGL $362, PENG $71, CELC $91)
+
+~85 in budget; ~22 with clear catalyst; 5 finalists.
 
 ---
 
 ## Picks
 
-### 1. HPE — Hewlett Packard Enterprise
-**BUY 1 share @ $56.50 | TP $68.00 | SL $49.00 | Cost $56.50**
+### 1. SMCI — Super Micro Computer
+**BUY 1 share @ $50.50 | TP $62.00 | SL $45.00 | Cost $50.50**
 
-HPE reported Q2 FY26 results the evening of June 1 — the biggest EPS beat since 2018. EPS: $0.79 vs $0.53 expected (+49% beat). Revenue: $10.68B vs $9.79B expected, up 40% YoY. Server revenue blew away estimates ($5.45B vs $4.66B expected), driven by AI infrastructure demand. Full-year EPS guidance raised by $1 ($3.35–$3.45 vs prior $2.30–$2.50). New Nvidia Vera CPU server unveiled at Computex on the same day — a product + financial catalyst combination. Despite the magnitude of this beat, the stock is up only ~19% today — a relatively mild reaction suggesting meaningful follow-through potential as analysts upgrade and raise targets over the next several sessions. Stop $49 is below the pre-announcement close (~$47), protecting against a gap-fill. Target $68 captures ~21% additional upside consistent with an AI infrastructure re-rating. Strongest fundamental setup on the board today.
+SMCI is the AI server integrator that builds the GPU-dense racks that run AI workloads. Today's +7% move is a direct read-through from HPE's 40% revenue-growth quarter and Jensen Huang's MRVL endorsement — both confirm AI hardware demand is insatiable. SMCI's own 52-week high is $62.36; at $50.17 there is a clean ~23% path to that level with a genuine fundamental tailwind. Unlike HPE (already up ~28% today, extended), SMCI is only moderately higher — better entry timing in the same trade. Stop $45 is below today's opening range and acts as a gap-fill backstop. Target $62 near the 52-week high is a ~23% gain. R/R = 2.09:1. Theme diversification within AI infrastructure.
 
-### 2. SMR — NuScale Power
+### 2. SMR — NuScale Power (re-pick)
 **BUY 4 shares @ $14.00 | TP $17.50 | SL $12.50 | Cost $56.00**
 
-Nuclear power for AI datacenters is a durable multi-year structural theme. NuScale is the only small modular reactor pure-play with U.S. NRC design approval. The stock is up only +8.3% today — not overextended, clean entry. With HPE's AI server explosion and IBM's $10B quantum computing bet both confirming the insatiable AI energy demand narrative, nuclear infrastructure is squarely in focus. 4 shares × $14 = $56 within budget. Stop $12.50 below recent support; target $17.50 reflects the next resistance band (~25% upside). Swing setup — the theme has legs across weeks, not just days.
+AI data center power demand is not a one-day story. NuScale is the only NRC-approved small modular reactor pure-play. Up only +8.3% today — not extended; clean continuation setup. The HPE/MRVL earnings confirm demand for AI compute at massive scale; that compute needs power; that power increasingly comes from nuclear. 4 shares × $14 = $56 within budget. Stop $12.50 below recent support; target $17.50 captures the next resistance band (~25% upside). Swing position — this theme has weeks of momentum ahead. R/R = 2.33:1.
 
-### 3. RGTI — Rigetti Computing
+### 3. RGTI — Rigetti Computing (re-pick)
 **BUY 2 shares @ $27.00 | TP $34.00 | SL $23.50 | Cost $54.00**
 
-Quantum computing is today's emerging theme off IBM's $10B, five-year quantum investment announcement plus the viral Trump/IBM quantum video. Rigetti is one of the leading quantum hardware companies — it has a formal NVIDIA NVQLink support partnership and received a $100M CHIPS Act grant. RGTI's remaining performance obligations grew substantially YoY. The stock is up only +4.9% today despite the sector tailwind, meaning it hasn't overextended. Tomorrow's open could accelerate on quantum sentiment spilling over from IBM. 2 shares × $27 = $54 within budget. Stop $23.50 below the recent support zone; target $34 is ~26% upside at prior resistance. Complements HPE/SMR with sector diversification into the quantum theme.
+Quantum computing is the second dominant theme today: the benchmark S&P Kensho Quantum Index is up 69.3% YTD. Rigetti is a leading gate-based quantum hardware company with an NVIDIA NVQLink partnership and a $100M CHIPS Act grant. Up only +4.87% today despite the sector's macro tailwinds — among the least-extended names in the quantum bucket. IBM's $10B five-year quantum commitment (announced today) validates institutional conviction in the sector. Government is moving fast: Commerce Dept. announced $100M to Quantinuum, a QNT IPO is reportedly imminent. RGTI benefits from all of these catalysts. Stop $23.50 below recent support; target $34 is ~26% upside. R/R = 2.0:1. Provides sector diversification (quantum) alongside AI infrastructure (SMCI) and energy (SMR).
 
 ---
 
@@ -47,16 +65,21 @@ Quantum computing is today's emerging theme off IBM's $10B, five-year quantum in
 
 | Name | Price | Change | Reason passed |
 |------|-------|--------|---------------|
-| MRVL | $290.79 | +32.5% | Jensen Huang + record Q1 revenue — best setup of the day. Disqualified by budget: $291 >> $65. |
-| VSXY | $80.06 | +47.4% | Q1 EPS $0.60 vs $0.32 est, revenue +15%, guidance raised, ticker rebrand. Disqualified by budget: $80 > $65. |
-| LASE | $2.42 | +161% | DoD anti-drone selection + J&J $250K order + Army depot success. Real catalysts, but near-parabolic intraday blow-off; no clean entry. |
-| BJDX | $4.34 | +100% | Argonaut manufacturing pact + $23.6M placement + 510(k) pathway. Dilutive private placement is near-term overhang; already doubled. |
-| LEGN | $36.28 | +42% | Strong CAR-T Phase 1 data (100% ORR). Previously picked. Re-entering after +42% gap not clean enough without confirmed follow-through catalyst. |
-| SMCI | $50.17 | +7% | AI server play, previously picked. Valid but superseded by HPE which has the stronger direct catalyst today. |
-| DXST | $4.95 | +209% | Chairman buy for 90.5% voting stake. Pure blow-off post-pump. |
-| URG | $2.10 | +22.8% | Uranium/nuclear theme real. Same theme as SMR but weaker pure-play; SMR preferred. |
-| IBM | ~$320 | +12% | Barclays Overweight + $10B quantum bet. Great catalyst; $320/share >> $65 budget. |
-| TMHC | ~$60 | +22% | Berkshire Hathaway acquisition at $8.5B. Merger arbitrage scenario not suited for this strategy. |
+| HPE | $56.14 | +19.4% | Historic earnings beat — best fundamental catalyst of the day. Extended (+19.4% on top of +9.3% Monday); prior run already picked it. Watchlisted for pullback to $53. |
+| MRVL | $290.79 | +32.5% | Jensen Huang + Teralynx T100 launch. Best single catalyst of the day. Disqualified by budget: $291 >> $65. |
+| AOSL | $53.32 | +21.5% | Semiconductor + AI tailwind. Already +21.5% — past the deprioritize threshold; no specific AOSL catalyst (derivative of sector move). |
+| PENG | ~$71 | +19.2% | AI-infrastructure contract + Stifel PT raise. Strong setup, but $71 > $65 budget cap and CFO exit is an overhang. |
+| OUST | ~$47.47 | 52wk hi | Lidar tech at new 52-week high, +245% YTD. No fresh catalyst today — momentum breakout only. Watchlist candidate on a pullback. |
+| QBTS | $29.91 | +2.5% | D-Wave Quantum, valid quantum pick. Less extended than RGTI. Watchlisted at $32 breakout. RGTI preferred as primary quantum pick (NVIDIA partnership, more momentum). |
+| URG | $2.10 | +22.8% | Uranium/nuclear theme real. Already +22.8% — same theme as SMR; SMR preferred as the cleaner pure-play. |
+| LEGN | $36.28 | +42.2% | Phase 1 100% ORR CAR-T data. Great catalyst; already +42%, too extended to enter. |
+| LASE | $2.42 | +161% | DoD anti-drone + J&J order. Parabolic blow-off; hard pass. |
+| BJDX | $4.34 | +100% | Sepsis triage partnership. Doubled in one day with dilutive private placement overhang. |
+| DXST | $4.95 | +209% | Chairman buyout speculation. Pure blow-off. |
+
+---
 
 ## Holdings Read
-No positions open. All ~$400 available. Today's three picks deploy ~$166.50 total; ~$233 reserved for future setups.
+No positions held. All ~$400 available. Today's three picks deploy ~$160.50 (SMCI $50.50 + SMR $56 + RGTI $54); ~$240 powder reserved.
+
+Note: all three picks were proposed in the prior run (21:06Z) as well — SMR and RGTI are exact re-picks; SMCI replaces HPE (which ran past the extended threshold). Since none filled (market closed at 20:00 UTC), these remain fresh entries for the next market session open.

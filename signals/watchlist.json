@@ -1,0 +1,27 @@
+{
+  "generated_utc": "2026-06-02T21:43:12Z",
+  "watch": [
+    {
+      "symbol": "QBTS",
+      "trigger": "breakout",
+      "trigger_price": 32.00,
+      "quantity": 2,
+      "limit_price": 32.50,
+      "take_profit": 42.00,
+      "stop_loss": 27.00,
+      "good_until": "2026-06-05",
+      "note": "D-Wave Quantum; quantum sector up 69% YTD; only +2.5% today vs sector tailwind — breakout above 32 confirms continuation. Complementary to RGTI."
+    },
+    {
+      "symbol": "HPE",
+      "trigger": "pullback",
+      "trigger_price": 53.00,
+      "quantity": 1,
+      "limit_price": 53.50,
+      "take_profit": 68.00,
+      "stop_loss": 49.00,
+      "good_until": "2026-06-05",
+      "note": "Historic Q2 beat (+49% EPS, +40% rev). Too extended at $56 today (+19%). A pullback to $53 gives much better R/R (2.8:1) — enter if it dips there on consolidation."
+    }
+  ]
+}

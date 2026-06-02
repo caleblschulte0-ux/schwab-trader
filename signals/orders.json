@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-06-02T21:06:15Z",
-  "funnel": {"scanned": 160, "in_budget": 52, "had_catalyst": 18, "finalists": 5, "picked": 3},
+  "generated_utc": "2026-06-02T21:43:12Z",
+  "funnel": {"scanned": 200, "leading": 12, "in_budget": 85, "had_catalyst": 22, "finalists": 5, "picked": 3},
   "orders": [
-    {"symbol": "HPE", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 56.50, "take_profit": 68.00, "stop_loss": 49.00},
+    {"symbol": "SMCI", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 50.50, "take_profit": 62.00, "stop_loss": 45.00},
     {"symbol": "SMR", "action": "BUY", "instrument": "stock",
      "quantity": 4, "limit_price": 14.00, "take_profit": 17.50, "stop_loss": 12.50},
     {"symbol": "RGTI", "action": "BUY", "instrument": "stock",
