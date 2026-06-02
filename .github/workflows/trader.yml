@@ -36,7 +36,6 @@ jobs:
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           ALPHA_API_KEY: ${{ secrets.ALPHA_API_KEY }}
-          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python bot.py
 
       - name: Commit data snapshots

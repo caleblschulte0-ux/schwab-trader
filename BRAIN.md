@@ -49,16 +49,16 @@ LEADING names with live price + % change. Read this first. Each row now carries 
 - `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date, and
   eps_estimate when known). The "who's reporting soon" pre-position pool. Earnings
   gaps cut both ways → a defined `stop_loss` is mandatory on these.
-- `news_bullish` — LEADING: getting BULLISH news coverage right now, caught as the
-  story breaks (catalyst: headline, sentiment, source). Often the EARLIEST signal —
-  a name can hit the news before its chart fully moves. READ the headline: confirm
-  it's a real, durable catalyst (deal, beat, approval, contract), not fluff, and
-  that the move isn't already spent.
-- `news` — LEADING: fresh COMPANY news on an affordable (in-budget) mover, pulled
-  per-symbol so SMALL-CAPS surface (the `news_bullish` market feed skews mega-cap).
-  No sentiment attached — READ the headline yourself to judge bullish vs bearish and
-  whether it's a real catalyst. A small-cap with fresh `news` but only a modest move
-  so far is a prime EARLY entry.
+- `news_smallcap` — LEADING + DISCOVERY: a SMALL-CAP (market cap < ~$2B) that is in
+  the news right now, surfaced by cross-referencing the news feed against a small-cap
+  universe — names BROUGHT to us, even if they aren't movers yet (catalyst: headline,
+  sentiment, source). This is the earliest, highest-priority bucket for this strategy.
+  Sentiment is only filtered to exclude clearly-bearish coverage — READ the headline
+  to judge the catalyst. A `news_smallcap` name that's barely moved yet is a prime
+  EARLY entry; one already up big is likely the same story late — apply the stage rule.
+- `news_bullish` — LEADING: bullish market-wide news coverage (skews mega-cap, so
+  often over the $65 budget — useful context, occasionally tradeable). READ the
+  headline; confirm a real, durable catalyst and that the move isn't already spent.
 LEADING names are in the funnel because a catalyst is FRESH or PENDING — NOT
 because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this is
 how you get in BEFORE the move instead of chasing it after. A name carrying both a
@@ -196,8 +196,8 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 ```
 - `funnel` is REQUIRED every run — fill in the real counts from your scan so we
   can see how wide we looked (scanned → narrowed → finalists → picked). Include
-  `leading` = how many candidates carried a LEADING tag (earnings_soon/news_bullish),
-  so we can track how proactive the funnel is each run.
+  `leading` = how many candidates carried a LEADING tag (earnings_soon/news_smallcap/
+  news_bullish), so we can track how proactive the funnel is each run.
 - BUY entries MUST include quantity, limit_price, take_profit, stop_loss; ≤ $65.
 - SELL entries (only for symbols in holdings.json) need only
   `{"symbol":"...","action":"SELL"}`.

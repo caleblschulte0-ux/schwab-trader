@@ -14,9 +14,11 @@ So entries are now DEAD SIMPLE and priced off Schwab's LIVE quote:
 Ground truth: every run the bot writes the account's REAL positions to
 signals/holdings.json. The brain reads that file to know what it actually owns.
 The bot also builds signals/candidates.json — the brain's structured top-of-funnel.
-It combines LAGGING movers (gainers/most-active/losers) with LEADING signals
-(upcoming earnings via FMP, and bullish stock news via Alpha Vantage) so the brain
-can position BEFORE a move, not just chase it. Each row is tagged with its reason(s).
+It combines LAGGING movers (gainers/most-active/losers) with LEADING signals:
+upcoming earnings (FMP) and stock news (Alpha Vantage). News tickers are cross-
+referenced against an FMP small-cap screener to DISCOVER small-caps that are in the
+news (not just annotate names we already had), so the brain can position BEFORE a
+move. Each row is tagged with its reason(s).
 A brain-written signals/watchlist.json lets the bot auto-enter on a price/date
 trigger between brain runs (same guardrails); the bot only reads that file.
 
@@ -32,8 +34,8 @@ Risk rules still enforced in code (your one rule is safe):
 DRY_RUN defaults to "true". Set a DRY_RUN repo variable to "false" to go live.
 
 Secrets (GitHub Actions): SCHWAB_APP_KEY, SCHWAB_APP_SECRET, SCHWAB_REFRESH_TOKEN
-Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (movers + earnings),
-ALPHA_API_KEY (bullish market-wide news), FINNHUB_API_KEY (small-cap company news)
+Optional: SCHWAB_CALLBACK_URL, DRY_RUN, FMP_API_KEY (movers + earnings + small-cap
+universe), ALPHA_API_KEY (stock news + small-cap-in-news discovery)
 """
 from __future__ import annotations
 
@@ -66,15 +68,17 @@ MAX_EARNINGS_ADD        = 80    # cap pre-earnings names added as fresh candidat
 NEWS_BASE             = "https://www.alphavantage.co/query"
 NEWS_DAILY_BUDGET     = 22      # max AV calls per UTC day (under the 25/day free cap)
 NEWS_REFRESH_MIN      = 13      # min minutes between AV calls (dedupe rapid/manual runs)
-NEWS_LIMIT            = 200     # articles to pull per AV call (free allows up to 1000)
+NEWS_LIMIT            = 1000    # pull DEEP so small-caps in the long tail surface
 NEWS_MIN_RELEVANCE    = 0.30    # ignore tickers only loosely mentioned in an article
-NEWS_MIN_SENTIMENT    = 0.15    # only BULLISH-leaning coverage (it's a buy funnel)
-# --- small-cap company news (Finnhub; free tier = 60 calls/min, per symbol) ---
-FINNHUB_BASE          = "https://finnhub.io/api/v1"
-FINNHUB_MAX_SYMBOLS   = 25      # affordable movers to look up per run (<< 60/min)
-FINNHUB_PRICE_MAX     = 65.00   # only look up "affordable" movers (where we can trade)
-FINNHUB_NEWS_LOOKBACK = 2       # days of company news to consider "fresh"
-MAX_NEWS_ADD          = 60      # cap names added purely from the news feed
+NEWS_MIN_SENTIMENT    = 0.15    # bullish threshold for the (mega-cap) market-wide feed
+NEWS_SMALLCAP_FLOOR   = -0.15   # small-caps: surface unless the coverage is clearly bearish
+MAX_NEWS_SMALLCAP     = 60      # cap discovered small-cap-in-the-news names
+MAX_NEWS_BULLISH      = 25      # cap the (mostly large-cap) bullish market-wide names
+# --- small-cap universe (FMP screener; used to DISCOVER small-caps that are in the news) ---
+SMALLCAP_MAX_CAP      = 2_000_000_000   # "small cap" ceiling (~$2B)
+SMALLCAP_MIN_CAP      = 50_000_000      # floor: skip nano-cap shells (~$50M)
+SMALLCAP_MIN_VOLUME   = 100_000         # require some liquidity
+SMALLCAP_SCREEN_LIMIT = 5000            # max symbols to pull for the universe
 # --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
 MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
 MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)
@@ -88,7 +92,6 @@ DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 # Alpha Vantage stock-news key. Accept either name (the GitHub secret is ALPHA_API_KEY).
 AV_API_KEY    = (os.environ.get("ALPHA_API_KEY") or os.environ.get("ALPHAVANTAGE_API_KEY", "")).strip()
-FINNHUB_API_KEY = os.environ.get("FINNHUB_API_KEY", "").strip()  # small-cap company news
 
 
 def _fmp_get(endpoint: str, params: str = "") -> list:
@@ -191,49 +194,32 @@ def _fetch_leading(seen: dict) -> None:
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
 
 
-def _fetch_smallcap_news(seen: dict) -> None:
-    """SMALL-CAP company news via Finnhub (per symbol, free 60/min). The market-wide
-    AV news feed skews mega-cap; this fills the gap by pulling fresh headlines for the
-    AFFORDABLE movers we could actually trade (price <= FINNHUB_PRICE_MAX), tagging
-    those with recent news so the brain sees the WHY behind a small-cap move — and can
-    catch one that has fresh news but only a modest move so far (an early entry).
-    No-ops without a key; stops on the first error so a bad key can't spam the log."""
-    if not FINNHUB_API_KEY:
-        return
-    import urllib.request
-    today = datetime.now(timezone.utc).date()
-    frm = (today - timedelta(days=FINNHUB_NEWS_LOOKBACK)).isoformat()
-    to = today.isoformat()
-    # Affordable movers (where we trade), most-active/biggest move first.
-    movers = [r for r in seen.values()
-              if (r.get("price") or 0) and r["price"] <= FINNHUB_PRICE_MAX
-              and r.get("pct_change") is not None]
-    movers.sort(key=lambda r: abs(r.get("pct_change") or 0), reverse=True)
-    checked = tagged = 0
-    for r in movers[:FINNHUB_MAX_SYMBOLS]:
-        sym = r["symbol"]
-        try:
-            url = f"{FINNHUB_BASE}/company-news?symbol={sym}&from={frm}&to={to}&token={FINNHUB_API_KEY}"
-            with urllib.request.urlopen(url, timeout=20) as resp:
-                rows = json.loads(resp.read().decode("utf-8"))
-        except Exception as exc:  # noqa: BLE001 - stop on first error (likely systemic)
-            print(f"(warn) Finnhub company-news failed (skipped after {checked}): {exc}")
-            return
-        checked += 1
-        if not isinstance(rows, list) or not rows:
-            continue
-        latest = max(rows, key=lambda x: x.get("datetime", 0))
-        _merge_candidate(seen, sym, signal="news", catalyst={
-            "headline": latest.get("headline"), "source": latest.get("source"),
-            "news_url": latest.get("url")})
-        tagged += 1
-    print(f"(finnhub) checked {checked} affordable movers, tagged {tagged} with fresh news")
+def _fetch_smallcap_universe() -> set[str]:
+    """The set of real SMALL-CAP symbols (FMP screener). Used to DISCOVER which names
+    in the news feed are small-caps and pull them into the funnel. Filters to a sane
+    cap band, our $2 price floor, some liquidity, and actively-trading US listings.
+    Returns an empty set on any failure (graceful — just disables small-cap tagging)."""
+    if not FMP_API_KEY:
+        return set()
+    try:
+        params = (f"marketCapMoreThan={SMALLCAP_MIN_CAP}&marketCapLowerThan={SMALLCAP_MAX_CAP}"
+                  f"&priceMoreThan={MIN_SHARE_PRICE}&volumeMoreThan={SMALLCAP_MIN_VOLUME}"
+                  f"&isActivelyTrading=true&exchange=nasdaq,nyse,amex&limit={SMALLCAP_SCREEN_LIMIT}")
+        rows = _fmp_get("company-screener", params)
+        universe = {str(r.get("symbol", "")).strip().upper() for r in rows if r.get("symbol")}
+        universe.discard("")
+        print(f"(fmp) small-cap universe: {len(universe)} symbols")
+        return universe
+    except Exception as exc:  # noqa: BLE001 - never let the screener break the run
+        print(f"(warn) FMP company-screener failed (skipped): {exc}")
+        return set()
 
 
-def _parse_av_feed(payload: dict) -> list[tuple[str, dict]]:
-    """Turn an Alpha Vantage NEWS_SENTIMENT response into (symbol, catalyst) pairs
-    for BULLISH, on-topic coverage only. Dedupes to each symbol's first (most
-    recent) qualifying mention. Skips CRYPTO:/FOREX: pseudo-tickers."""
+def _parse_av_feed(payload: dict) -> list[dict]:
+    """Turn an Alpha Vantage NEWS_SENTIMENT response into one row per on-topic ticker
+    (relevance-filtered, deduped to each ticker's most-recent mention; CRYPTO:/FOREX:
+    pseudo-tickers skipped). Sentiment is NOT filtered here — the caller decides
+    (small-caps surface on any non-bearish coverage; mega-caps need bullish)."""
     feed = payload.get("feed")
     if not isinstance(feed, list):
         # AV signals rate-limit / bad key via an Information/Note/Error message.
@@ -241,7 +227,7 @@ def _parse_av_feed(payload: dict) -> list[tuple[str, dict]]:
         if note:
             print(f"(news) AV said: {str(note)[:140]}")
         return []
-    out: list[tuple[str, dict]] = []
+    out: list[dict] = []
     picked: set[str] = set()
     for item in feed:
         title = item.get("title")
@@ -255,38 +241,41 @@ def _parse_av_feed(payload: dict) -> list[tuple[str, dict]]:
                 sent = float(ts.get("ticker_sentiment_score", 0))
             except (TypeError, ValueError):
                 continue
-            label = str(ts.get("ticker_sentiment_label", ""))
             if rel < NEWS_MIN_RELEVANCE:
                 continue
-            if not (sent >= NEWS_MIN_SENTIMENT or "Bull" in label):
-                continue  # neutral/bearish — not for a buy funnel
+            label = str(ts.get("ticker_sentiment_label", ""))
             picked.add(sym)
-            out.append((sym, {"headline": title, "sentiment": label,
-                              "sentiment_score": round(sent, 3), "source": src}))
+            out.append({"sym": sym, "sent": sent, "label": label,
+                        "catalyst": {"headline": title, "sentiment": label,
+                                     "sentiment_score": round(sent, 3), "source": src}})
     return out
 
 
 def _carry_forward_news(seen: dict, prev: dict) -> int:
-    """Re-add the previous run's bullish-news names (used on throttled runs so the
-    news signal persists between actual Alpha Vantage calls)."""
+    """Re-add the previous run's news names (both small-cap and bullish) so the signal
+    persists on throttled runs between actual Alpha Vantage calls."""
     carried = 0
     for row in prev.get("candidates", []):
-        if "news_bullish" in (row.get("signals") or []):
+        sigs = row.get("signals") or []
+        tag = "news_smallcap" if "news_smallcap" in sigs else ("news_bullish" if "news_bullish" in sigs else None)
+        if tag:
             _merge_candidate(seen, row.get("symbol"), name=row.get("name"),
                              price=row.get("price"), pct=row.get("pct_change"),
                              exch=row.get("exchange"), lst=row.get("list"),
-                             signal="news_bullish", catalyst=row.get("catalyst"))
+                             signal=tag, catalyst=row.get("catalyst"))
             carried += 1
     return carried
 
 
-def _fetch_news(seen: dict, prev: dict) -> dict:
-    """LEADING stock-news signal: names getting BULLISH coverage right now — catching
-    a story as it breaks, before the chart fully moves. Throttled by a per-UTC-day
-    call counter (persisted in candidates.json) so we stay under Alpha Vantage's free
-    25/day cap while getting close to it: we call on every run until NEWS_DAILY_BUDGET
-    is spent (front-loading the news-heavy morning/midday), then carry forward prior
-    names for the rest of the day. Returns the news meta to persist. No-ops w/o a key."""
+def _fetch_news(seen: dict, prev: dict, smallcap: set[str]) -> dict:
+    """LEADING stock-news signal with small-cap DISCOVERY. One deep AV pull gives every
+    ticker in the news; we then split it:
+      * ticker in the small-cap universe + not clearly bearish -> `news_smallcap`
+        (the names we want BROUGHT to us — small-caps in the news, even if not yet a
+        mover), and
+      * otherwise, bullish-leaning -> `news_bullish` (mostly mega-cap context).
+    Throttled by a per-UTC-day counter (persisted in candidates.json) to stay under
+    AV's free 25/day cap. Returns the news meta to persist. No-ops without a key."""
     today = datetime.now(timezone.utc).date().isoformat()
     meta = {"news_updated_utc": prev.get("news_updated_utc"),
             "news_calls_date": prev.get("news_calls_date"),
@@ -308,15 +297,18 @@ def _fetch_news(seen: dict, prev: dict) -> dict:
         url = f"{NEWS_BASE}?function=NEWS_SENTIMENT&sort=LATEST&limit={NEWS_LIMIT}&apikey={AV_API_KEY}"
         with urllib.request.urlopen(url, timeout=25) as r:
             payload = json.loads(r.read().decode("utf-8"))
-        added = 0
-        for sym, catalyst in _parse_av_feed(payload):
-            if added >= MAX_NEWS_ADD:
-                break
-            _merge_candidate(seen, sym, signal="news_bullish", lst="news", catalyst=catalyst)
-            added += 1
+        sc = bull = 0
+        for row in _parse_av_feed(payload):
+            sym, sent = row["sym"], row["sent"]
+            if sym in smallcap and sent > NEWS_SMALLCAP_FLOOR and sc < MAX_NEWS_SMALLCAP:
+                _merge_candidate(seen, sym, signal="news_smallcap", lst="news", catalyst=row["catalyst"])
+                sc += 1
+            elif (sent >= NEWS_MIN_SENTIMENT or "Bull" in row["label"]) and bull < MAX_NEWS_BULLISH:
+                _merge_candidate(seen, sym, signal="news_bullish", lst="news", catalyst=row["catalyst"])
+                bull += 1
         meta["news_updated_utc"] = datetime.now(timezone.utc).isoformat()
         meta["news_calls_today"] = calls + 1
-        print(f"(news) +{added} bullish-news names ({meta['news_calls_today']}/{NEWS_DAILY_BUDGET} today)")
+        print(f"(news) +{sc} small-cap-in-news, +{bull} bullish names ({meta['news_calls_today']}/{NEWS_DAILY_BUDGET} today)")
     except Exception as exc:  # noqa: BLE001 - never let news break the run
         print(f"(warn) news fetch failed: {exc}")
         _carry_forward_news(seen, prev)
@@ -358,11 +350,12 @@ def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
 def fetch_fmp_candidates() -> None:
     """Build the brain's structured top-of-funnel and write signals/candidates.json.
     Combines a LAGGING list (today's movers) with LEADING signals — upcoming earnings
-    (FMP), small-cap company news (Finnhub), and BULLISH stock news (Alpha Vantage) —
-    so the brain can act BEFORE the move. Each source is keyed and isolated: missing
-    keys / failed endpoints just no-op (worst case = today's movers, or an empty
-    file). Throttles the AV news call to stay under its 25/day free cap."""
-    if not (FMP_API_KEY or AV_API_KEY or FINNHUB_API_KEY):
+    (FMP) and stock news (Alpha Vantage), the latter cross-referenced against an FMP
+    small-cap universe to DISCOVER small-caps that are in the news — so the brain can
+    act BEFORE the move. Each source is keyed and isolated: missing keys / failed
+    endpoints just no-op (worst case = today's movers, or an empty file). Throttles
+    the AV news call to stay under its 25/day free cap."""
+    if not (FMP_API_KEY or AV_API_KEY):
         print("(info) no data-source keys set — skipping candidate prefetch.")
         return
     prev = _read_candidates()
@@ -372,8 +365,8 @@ def fetch_fmp_candidates() -> None:
         _fetch_leading(seen)   # leading: upcoming earnings
     else:
         print("(info) no FMP_API_KEY — skipping FMP movers/earnings sources.")
-    _fetch_smallcap_news(seen)           # leading: fresh small-cap company news
-    news_meta = _fetch_news(seen, prev)  # leading: bullish market-wide news as it breaks
+    smallcap = _fetch_smallcap_universe()      # the small-cap symbol set (for discovery)
+    news_meta = _fetch_news(seen, prev, smallcap)  # news + small-cap-in-news discovery
     _write_candidates(seen, news_meta=news_meta)
 
 
