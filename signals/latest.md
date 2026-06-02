@@ -1,11 +1,11 @@
-# Brain Run — 2026-06-02T20:07:05Z
+# Brain Run — 2026-06-02T20:42:47Z
 
-Funnel: scanned 155 → 50 fit budget → 15 with catalyst → 5 finalists → picked 3
+Funnel: scanned 155 → 45 fit budget → 15 with catalyst → 5 finalists → picked 3
 
 ---
 
 ## Collision Guard
-Prior `orders.json` stamped 2026-06-02T19:42:17Z (~25 min ago). Guard cleared; full scan proceeds.
+Prior `orders.json` stamped 2026-06-02T20:07:05Z (~35 min ago). Guard cleared; full scan proceeds.
 
 ## Holdings
 `holdings.json` is empty — no open positions. Hunting fresh entries.
@@ -13,31 +13,33 @@ Prior `orders.json` stamped 2026-06-02T19:42:17Z (~25 min ago). Guard cleared; f
 ---
 
 ## Market Context
-Computex 2026 is the dominant session theme. NVIDIA CEO Jensen Huang at Computex named Marvell as the "next trillion-dollar chip company," NVIDIA made a $2B strategic investment in Marvell, and MRVL surged +32% to ~$291 — a clear confirmation that AI infrastructure demand is white-hot. HPE posted its biggest earnings beat since 2018: revenue +40% YoY, AI server segment blew away estimates, EPS guidance raised by $1. Biotech bifurcated: LEGN surged on exceptional CAR-T data while ABVX/FULC cratered on safety failures. The uranium theme also activated on Urenco's multi-billion U.S. enrichment expansion plan.
+Session defined by two dominant themes: **AI semiconductor surge** and **biotech bifurcation**. MRVL +32.5% to $291 on record Q1 revenue ($2.42B, +28% YoY) — Jensen Huang at Computex named Marvell the "next trillion-dollar chip company" with NVIDIA making a $2B strategic investment. HPE +19.5% on a massive earnings beat (EPS $0.79 vs $0.53 est, AI server revenue $5.45B vs $4.66B est). Biotech: LEGN +42% on extraordinary Phase 1 CAR-T data, ABVX -44% on cancer-safety signal in Phase 3, FULC -53% scrapping sickle-cell program. Nuclear energy quietly gained: SMR +8.3%, URG +23% on AI datacenter power demand and Urenco's multi-billion U.S. enrichment expansion. Several small-cap blow-offs (LASE +161%, BJDX +100%, DXST +209%) filtered as chasing traps.
 
 ---
 
 ## Funnel Notes
-FMP provided 135 candidates. Web searches (8 parallel queries: top gainers, most active, unusual volume, pre-market movers, 52-week highs, catalysts, small-caps, sector sweeps) added ~20 confirmed additional names (OUST, PENG, confirmed DVLT/ASST/VERI from small-cap lists, AMAT/PLAB from Computex movers). Total funnel ~155. Eliminated: sub-$2 names (~25), leveraged ETFs (MRVU, MVLL, GLWG, UECG, UUUG, SOXS, BEG, FIGG, OSCG, MST, MSTP, MSTX, TSLL, TQQQ, TZA), over-$65 names (MRVL $291, SWMR $78, VSXY $80, PENG $71, AEHR $113, INTC $108, PRAX $258, MU $1064), Chinese micro-caps without US catalyst (FOFO, DXST, JLHL, ZJYL, TDTH, WTF, NTCL, SDA, LOBO), broad losers. ~50 names in budget; ~15 with a clear, verifiable catalyst.
+**Source 1 — FMP candidates.json:** 135 candidates (top gainers, actives, losers across NASDAQ/NYSE/AMEX).
+**Source 2 — Web search (8 parallel queries):** Top % gainers, most-active/volume, unusual volume, pre-market/afternoon movers, 52-week high breakouts, earnings/FDA/contract catalysts, small-cap/micro-cap gainers, sector sweeps (AI, defense, biotech, energy, quantum, nuclear, crypto). Added ~20 unique tickers (SBFM, OUST, CVNA, QUBT, IONQ, RIOT, IBM, MNKD, TEM, PENG, and others).
+**Total funnel: ~155.** Eliminated: ~25 sub-$2 names (price floor), ~18 leveraged ETFs (MRVU, MVLL, SOXS, TQQQ, GLWG, UECG, UUUG, FIGG, BEG, OSCG, OSCX, MST, MSTP, MSTX, TSLL, TZA, NVD), over-budget names (MRVL $291, VSXY $80, SWMR $79, PENG $71, AEHR $113, INTC $108, PRAX $258, MU $1064, GOOGL $362). ~45 in budget; ~15 with clear verifiable catalyst.
 
 ---
 
 ## Picks
 
-### 1. HPE — Hewlett Packard Enterprise
-**BUY 1 share @ $56.20 | TP $67.00 | SL $50.00 | Cost $56.20**
+### 1. LEGN — Legend Biotech
+**BUY 1 share @ $36.50 | TP $45.00 | SL $30.00 | Cost $36.50**
 
-Q2 FY2026 earnings blowout — adj. EPS $0.79 vs $0.53 consensus (+49%); revenue $10.68B vs $9.79B expected (+9% beat); AI server revenue $5.45B vs $4.66B expected. Cloud & AI revenue now $7.71B, 72% of total. Gross margins expanded +8 percentage points to 36.5%. Full-year EPS guidance raised by a full dollar ($3.35–$3.45 from $2.30–$2.50). New Vera CPU-powered server rack unveiled at Computex. This is a fundamental re-rating event — the business genuinely stepped into a new earnings tier, not a blow-off sentiment pop. Consolidating near $56 after gap-up; prior resistance (~$47) now strong support. TP $67 (next resistance level), SL $50 (prior range top; thesis broken if it fails). R:R ≈ 1.9:1.
+Phase 1 LB2501 (in vivo CD19/CD20 dual-targeting CAR-T for relapsed/refractory B-cell NHL) showed 100% ORR (6/6 patients) with 83% complete response at dose level 2 — no dose-limiting toxicities, no serious adverse events, no deaths, no ICANS. This is exceptional clinical data. The in vivo approach requires no ex vivo manufacturing, which could democratize CAR-T access. Catalyst is durable: late-breaking oral presentation at EHA 2026 Congress in Stockholm, June 11–14 — 9 days out, meaning institutional coverage will build into the conference. Today's +42% move is large but fully justified by data quality. Entry at $36.50 is within 0.6% of close. TP $45.00 (resistance, plausible EHA run-up target); SL $30.00 (below pre-catalyst support).
 
 ### 2. SMCI — Super Micro Computer
-**BUY 1 share @ $50.20 | TP $59.00 | SL $46.00 | Cost $50.20**
+**BUY 1 share @ $50.50 | TP $59.00 | SL $45.50 | Cost $50.50**
 
-Direct AI-server infrastructure co-beneficiary of HPE's blowout quarter. SMCI serves the same hyperscaler/enterprise AI data-center buyers with high-density rack-scale solutions. Only +7% today vs HPE's +19% — significantly less extended, suggesting the AI-server re-rating hasn't fully propagated to SMCI yet. When a sector leader beats this decisively, peers typically follow over subsequent sessions. Tight entry: 1 share $50.17, SL below $46 (prior support), TP $59 (prior resistance cluster). R:R ≈ 2.1:1.
+Direct AI-server infrastructure beneficiary of the HPE earnings blowout and MRVL's AI ASIC dominance narrative. SMCI builds the same high-density rack-scale AI servers for hyperscalers and enterprise. At only +7% today vs HPE's +19.5%, SMCI is significantly less extended — the AI server re-rating has not fully propagated. Pairs cleanly with LEGN for sector diversity (biotech + AI infra). SL $45.50 (prior support cluster), TP $59.00 (prior resistance). R:R ~2.0:1.
 
-### 3. LEGN — Legend Biotech
-**BUY 1 share @ $36.50 | TP $44.00 | SL $30.50 | Cost $36.50**
+### 3. SMR — NuScale Power
+**BUY 4 shares @ $14.10 | TP $16.50 | SL $12.50 | Cost $56.40**
 
-LB2501 (in vivo CD19/CD20 dual-targeting CAR-T) achieved 100% ORR (6/6) with 83.3% complete response rate in relapsed/refractory B-cell NHL — no dose-limiting toxicities, no serious adverse events, no deaths, no ICANS. Late-breaking oral presentation at EHA 2026 Congress (June 11–14, Stockholm) — 9 more days of catalyst runway remain. Also posted first-in-human LB2102 solid tumor data June 1. Best-in-class CAR-T results in a high-visibility indication; institutional attention will stay elevated into EHA. Already +42% today on first-time data; but entry justified: clean readout, no safety signals, conference momentum still ahead. SL below $30.50 (pre-catalyst support), TP $44.00. R:R ≈ 2.0:1.
+NuScale's VOYGR™ SMR is the only small modular reactor with U.S. NRC design approval. Today's +8.3% move is moderate — the least extended of the three picks — reflecting a macro rotation into nuclear energy as AI data centers require unprecedented baseload power. Urenco announced a multi-billion U.S. enrichment expansion; the Commerce Dept. issued $2B in tech energy grants. AI energy demand is not a news cycle story — it's a multi-year structural shift driving sustained nuclear interest. Clean swing setup: SL $12.50 (strong support), TP $16.50 (prior resistance). Adds energy sector exposure to offset tech-heavy SMCI pick.
 
 ---
 
@@ -45,11 +47,16 @@ LB2501 (in vivo CD19/CD20 dual-targeting CAR-T) achieved 100% ORR (6/6) with 83.
 
 | Name | Price | Change | Reason passed |
 |------|-------|--------|---------------|
-| MRVL | $290.79 | +32.5% | Best catalyst of day (Jensen Huang endorsement, NVIDIA $2B investment). Impossible to size: 1 share = $291 >> $65 budget. |
-| VSXY | $79.91 | +47.2% | Real catalyst (Q1 beat, SSS +13%, raised guidance, new ticker symbol). $80/share > $65 budget. |
-| OUST | $49.14 | +9.4% | New 52-week high, FieldAI robotics collaboration (LiDAR for autonomous robots). Clean breakout. Kept as backup watchlist pick; displaced by LEGN's stronger fundamental catalyst. |
-| LASE | $2.42 | +161% | Real catalysts (J&J order, Army depot pilot, MEIA anti-drone selection) but near-vertical blow-off intraday. Chase rule: pass. Revisit if it bases. |
-| BJDX | $4.34 | +100% | Argonaut manufacturing partnership + $23.6M placement. Dilutive financing pop — these frequently fade sharply. |
-| URG | $2.105 | +23% | Uranium thesis real (Urenco multi-billion U.S. expansion, Russian import ban 2028). But $2.10/share = tiny position, highly speculative, macro story is longer-dated. |
-| PENG | $70.71 | +18% | Agentic AI workloads driving strong guidance reaffirmation. $70.71 marginally exceeds $65 budget. |
-| SMR | $13.96 | +8% | NuScale Power nuclear SMR. AI energy demand theme. Valid but less specific catalyst than top picks. Watchlist. |
+| VSXY | $80.06 | +47.4% | Strongest fundamental catalyst (Q1 EPS $0.60 vs $0.32 est, SSS +13%, guidance raised, ticker rebrand). Disqualified only by budget: $80 > $65. Top watchlist if price corrects. |
+| MRVL | $290.79 | +32.5% | Jensen Huang + NVIDIA $2B investment + record revenue. Impossible to size: $291 >> $65 budget. |
+| HPE | $56.14 | +19.5% | Prior run's pick. Thesis still valid — but already made its big move (+19.5%). SMR preferred as less extended with clean energy macro tailwind. |
+| AEHR | $113.00 | +20.7% | Earnings + William Blair conference. Over $65 budget. |
+| LASE | $2.42 | +160.9% | Army, J&J, MEIA contracts cited. But near-parabolic intraday blow-off; no room. |
+| BJDX | $4.34 | +100.0% | Argonaut manufacturing partnership (no FDA clearance for Symphony). Investigational device + dilutive financing = fade risk. |
+| DXST | $4.95 | +209.4% | Chairman bought shares for 90.5% voting stake. Insider-only pump structure. |
+| AOSL | $53.32 | +21.5% | AI power/data center semis, PCIM event. Sector sympathy with MRVL. Solid but SMCI preferred: less extended, clearer direct AI-server catalyst. |
+| URG | $2.10 | +22.8% | Uranium/nuclear theme real. Barely above $2 price floor; macro story is longer-dated. |
+| ASTC | $45.50 | +28.5% | Multi-catalyst (lunar economy + European aviation cert + environmental detection). Catalyst details unverifiable; deferred. |
+
+## Holdings Read
+No positions open. All ~$400 available. Today's three picks deploy $143.40 total if all execute; ~$257 reserved for future setups.
