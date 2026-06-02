@@ -7,49 +7,47 @@ only SELL to *close* something we already own. Never short stock; never sell/wri
 options to open. Those are the only things that can lose more than you put in — banned.
 
 ## Day trading: buy AND sell
-This is a day-trading strategy — we both enter and exit, often the same day.
-- **BUY to open** a stock (or occasionally a put).
+This is a day/swing strategy — we both enter and exit.
+- **BUY to open** a stock at Schwab's live ask.
 - **SELL to close** the position for a profit or a small loss. Selling a stock you
-  already own is just closing your own long — it does NOT break the prime directive
-  (you can't lose more than you put in by selling something you hold).
-- Every entry rides with a **bracket**: an auto take-profit and an auto stop-loss,
-  so each position exits itself. Optionally flatten any still-open day-trade
-  positions before the close so nothing carries overnight.
+  already own is just closing your own long — it does NOT break the prime directive.
+- Each position has a take-profit and stop-loss; the bot watches live price every
+  run and sells to close when either is hit (or on a genuine thesis-break SELL).
+  Positions may be held overnight — no forced end-of-day flatten.
 
-## Pace / cadence (moderate, not hyper-aggressive)
-- The AI brain gets fresh eyes on the market **once an hour** (the routine), and the
-  executor acts **every 30 min**. So this is **moderate-speed** day trading — quick
-  in/out, but not second-by-second scalping. That's intentional while the account is
-  small; we can tighten later.
+## Pace / cadence
+- The AI brain scans hourly (the routine); the executor acts every 15 min. Moderate
+  day/swing trading — quick in/out, not second-by-second scalping.
 
-## Account & sizing (start small)
-- Starting capital: **~$200 total**.
-- **Max ~$65 per trade.** Fixed dollars, NOT a percentage of account value.
+## Account & sizing
+- Starting capital: **~$400 total**.
+- **Max ~$65 per trade.** Fixed dollars, NOT a percentage of account value. With
+  ~$400 that's roughly up to ~6 concurrent positions.
 - Scale per-trade size up later as comfort/balance grows.
 
 ## What to trade
-- Mostly **lower-priced / smaller-cap stocks** (roughly $5–$20 while money's tight)
-  — but **the bot picks**; no hard price band imposed by the owner.
-- **Occasionally a put** (defined-risk downside bet).
-- Tech-leaning but open. Picks are driven by **the market, not the owner's opinions**.
+- Lean **smaller-cap / lower-priced** names (where the big % moves are), but a clean
+  larger-cap setup is fair game — no hard price band; size everything to the $65 cap.
+- Tech-leaning but open. Picks are driven by **the market**, via a wide funnel
+  (FMP movers + web search), not the owner's opinions.
 
 ## Performance tracking (while in DRY-RUN / paper)
-- Every hourly pick is committed to the repo (`signals/orders.json` history) — a
-  timestamped record of every entry the brain proposed.
-- **End of day:** the owner asks in chat ("how'd today's picks do?"). The assistant
-  reads the day's picks from the repo history, looks up how each stock actually moved
-  that day, and computes the hypothetical P&L — i.e. "what you would have made/lost
-  if it were live." This is the whole point of DRY-RUN: prove it on paper first.
+- Every pick is committed to the repo (`signals/orders.json` history) — a timestamped
+  record of every entry the brain proposed.
+- **End of day:** ask in chat ("how'd today's picks do?"). Pull the day's picks, look
+  up how each stock actually moved, and compute the hypothetical P&L — what you'd have
+  made/lost if live. The whole point of DRY-RUN: prove it on paper first.
 
-## Hard guardrails (enforced in code)
+## Hard guardrails (enforced in code, bot.py)
 - Buy-to-open only; sell only to close a held position. No shorting, no selling
   options to open.
-- Max ~$65 per trade.
-- Freshness check (don't act on stale picks) + skip symbols already held.
-- (Before going live) add open-order de-dup so a pick isn't ordered twice.
+- Max ~$65 per trade; bot re-checks against the live entry price and trims qty.
+- Always buys at Schwab's live ask (the brain's limit_price is only a reference).
+- Freshness check; skip symbols already held, with an open buy, or bought in the
+  last 60 min (no double-buys); place nothing if orders can't be read (fail-safe).
 
 ## Account notes
-- Cash account: avoids the $25k Pattern Day Trader rule, BUT sale proceeds settle
-  T+1 — you can't instantly reuse the same dollars, and buying with unsettled cash
-  can cause good-faith violations. Keep day-trade volume modest on a cash account.
+- Cash account: avoids the $25k Pattern Day Trader rule, BUT proceeds settle T+1 —
+  can't instantly reuse the same dollars; buying with unsettled cash can cause
+  good-faith violations. Keep day-trade volume modest on a cash account.
 - Buying puts needs options approval — owner believes the account is approved.
