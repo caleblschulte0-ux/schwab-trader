@@ -19,6 +19,7 @@ brain's structured top-of-funnel (~100-150 real movers with price + %change).
 Risk rules still enforced in code (your one rule is safe):
   * BUY-only; we only ever SELL shares we already own (never short).
   * quantity * entry <= MAX_DOLLARS_PER_TRADE.
+  * reject sub-$MIN_SHARE_PRICE penny stocks (pump/dump guard).
   * skip symbols already HELD, with an OPEN buy, OR bought in the last
     RECENT_BUY_COOLDOWN_MIN minutes (closes the settlement-lag double-buy gap);
     if orders can't be read, place NOTHING (fail safe).
@@ -47,6 +48,7 @@ ORDERS_FILE           = "signals/orders.json"
 HOLDINGS_FILE         = "signals/holdings.json"
 MIN_TP_OVER_ENTRY     = 0.005
 MIN_STOP_UNDER_ENTRY  = 0.005
+MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump traps
 RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
 CANDIDATES_FILE       = "signals/candidates.json"
 FMP_BASE              = "https://financialmodelingprep.com/stable"
@@ -290,6 +292,8 @@ def validate_pick(order: dict) -> tuple[bool, str]:
     sl = order.get("stop_loss") or 0
     if qty <= 0 or limit <= 0:
         return False, "bad quantity/limit_price"
+    if limit < MIN_SHARE_PRICE:
+        return False, f"under ${MIN_SHARE_PRICE:.0f} price floor (penny-stock guard)"
     if tp <= 0 or sl <= 0:
         return False, "missing take_profit/stop_loss"
     if tp < limit * (1 + MIN_TP_OVER_ENTRY) or sl > limit * (1 - MIN_STOP_UNDER_ENTRY):
