@@ -23,17 +23,32 @@ the bot rewrites from the actual Schwab account on every run.
   that's still a good setup and not yet held.
 
 ## STEP 1 — WIDEN THE FUNNEL (the most important step)
-Each run, cast a WIDE net via web search. Pull MULTIPLE broad lists, not a few
-favorite tickers. Aim to surface **50–100+ raw candidates** before filtering.
-Sources to sweep (use several every run):
-- Top % gainers of the day (market-wide, all US exchanges)
-- Unusual / highest-volume names vs. their average
-- Pre-market and intraday movers
-- Fresh news / catalyst lists (earnings, FDA, contracts, partnerships, guidance)
-- 52-week-high breakouts and stocks breaking key technical levels
-- Sector/theme momentum (AI, defense, biotech, energy, etc.)
-Combine them into one big candidate pool. The whole point: look at the WHOLE
-market's movers, not a handful, so that when you pass, it's an informed pass.
+Each run, cast the WIDEST net you reasonably can via web search. Run MANY
+separate searches and MERGE + DEDUPE the results into one big pool. Target
+**100+ raw candidates** (more is better) before any filtering. Do NOT stop at the
+first list you find — keep pulling more until the pool is large.
+
+Run a SEPARATE search for each of these (at minimum), then combine:
+1. Top % gainers today — market-wide, all US exchanges
+2. Most active / highest-volume stocks today
+3. Unusual volume (volume vs. average) names
+4. Pre-market movers AND intraday/afternoon movers
+5. 52-week-high breakouts / stocks breaking key levels
+6. Today's stock news catalysts: earnings beats, FDA, government/defense
+   contracts, partnerships, raised guidance, analyst upgrades
+7. Small-cap / micro-cap gainers specifically (these are often missed by the
+   broad gainer lists)
+8. Sector/theme sweeps — run one search each for the hot themes of the day
+   (e.g. AI, defense, biotech, energy, quantum, nuclear, crypto-adjacent)
+
+Tips to maximize breadth:
+- Vary the wording across searches ("biggest gainers today", "top volume stocks",
+  "stocks up big today small cap", etc.) — different queries surface different names.
+- Pull from whatever lists the results expose; aim to collect every distinct
+  ticker you see, then dedupe.
+- It is FINE (good, even) if many are junk — STEP 2 filters them. The job here is
+  raw breadth. A small funnel is a failure of effort, not of the market; only an
+  unusually dead session should land below ~60 candidates.
 
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:
