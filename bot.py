@@ -486,7 +486,17 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
     market: dict = {}
     for sym in REGIME_INDEXES:  # broad-market trend via ETF proxies
         row = _fmp_quote_one(sym)
-        pct = row.get("changesPercentage") if row else None
+        if not row:
+            continue
+        pct = row.get("changesPercentage")
+        if pct is None:
+            pct = row.get("changePercentage")
+        if pct is None:  # some feeds drop % after hours — derive it from price vs prior close
+            price, prev = row.get("price"), row.get("previousClose")
+            try:
+                pct = (float(price) / float(prev) - 1.0) * 100.0 if price and prev else None
+            except (TypeError, ValueError, ZeroDivisionError):
+                pct = None
         if pct is not None:
             try:
                 market[f"{sym.lower()}_pct"] = round(float(pct), 2)
@@ -503,11 +513,11 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
     if sectors:
         market["sectors"] = sectors
 
-    spy, vix = market.get("spy_pct"), market.get("vix")  # conservative hint; brain still judges
-    if spy is not None:
-        if spy <= -1.0 or (vix is not None and vix >= 25):
+    spy, vix = market.get("spy_pct"), market.get("vix")  # conservative hint; the brain still judges
+    if spy is not None or vix is not None:  # set a tone whenever we have ANY macro read
+        if (spy is not None and spy <= -1.0) or (vix is not None and vix >= 25):
             market["tone"] = "risk_off"
-        elif spy >= 0.3:
+        elif spy is not None and spy >= 0.3:
             market["tone"] = "risk_on"
         else:
             market["tone"] = "neutral"
