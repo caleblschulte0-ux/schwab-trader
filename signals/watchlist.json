@@ -1,20 +1,20 @@
 {
-  "generated_utc": "2026-06-03T19:20:35Z",
+  "generated_utc": "2026-06-03T19:52:05Z",
   "watch": [
-    {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
-     "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
-     "good_until": "2026-06-07", "note": "MannKind: FDA approved Afrezza supplemental BLA (pediatric indication). Healthcare sector #1 today. Breakout above $3.65 confirms follow-through buying."},
+    {"symbol": "NVTS", "trigger": "pullback", "trigger_price": 28.00,
+     "quantity": 2, "limit_price": 28.20, "take_profit": 36.00, "stop_loss": 25.00,
+     "good_until": "2026-06-06", "note": "NVIDIA MGX Computex endorsement for AI datacenter GaN power ICs; +19.6% today, 346% YTD — wait for pullback to $28 breakout support"},
+    {"symbol": "TATT", "trigger": "pullback", "trigger_price": 40.00,
+     "quantity": 1, "limit_price": 40.20, "take_profit": 48.00, "stop_loss": 37.50,
+     "good_until": "2026-06-06", "note": "$45M long-term MRO contracts + ~$4M Q2 one-time gain; gapped to $43 on news then reversed to ~$40; enter at $40 support if it holds"},
     {"symbol": "RIVN", "trigger": "pullback", "trigger_price": 17.25,
      "quantity": 3, "limit_price": 17.35, "take_profit": 22.00, "stop_loss": 15.50,
-     "good_until": "2026-06-09", "note": "Rivian R2 SUV customer deliveries begin June 9. Pre-position on pullback to $17.25 support ahead of delivery launch catalyst."},
-    {"symbol": "RCKT", "trigger": "breakout", "trigger_price": 3.20,
-     "quantity": 20, "limit_price": 3.25, "take_profit": 4.20, "stop_loss": 2.65,
-     "good_until": "2026-06-06", "note": "Rocket Pharma gene therapy; analyst raised 12m PT to $9.39 (225% upside implied); stock at $2.905 with 1.86M volume; breakout above $3.20 confirms momentum — enter on trigger, not now."},
-    {"symbol": "BB", "trigger": "breakout", "trigger_price": 11.20,
-     "quantity": 5, "limit_price": 11.25, "take_profit": 12.80, "stop_loss": 9.80,
-     "good_until": "2026-06-06", "note": "BlackBerry: FedRAMP Class D recertification + QNX profitable growth phase. Near 52-week high. Clearing 11.20 with volume confirms breakout. Tech sector weak today — enter only on clean break."},
+     "good_until": "2026-06-09", "note": "Rivian R2 SUV customer deliveries begin June 9 — pre-position on pullback to $17.25 support ahead of delivery launch catalyst"},
     {"symbol": "NXE", "trigger": "pullback", "trigger_price": 12.50,
      "quantity": 4, "limit_price": 12.55, "take_profit": 15.50, "stop_loss": 11.50,
-     "good_until": "2026-06-06", "note": "NexGen Energy: uranium sector rally on Urenco USA capacity expansion + TMI restart approval. Energy sector #3 hot today. Add on any dip to $12.50 support."}
+     "good_until": "2026-06-06", "note": "NexGen Energy uranium play; energy sector leading today; TMI restart + Urenco USA capacity expansion driving uranium sentiment"},
+    {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
+     "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
+     "good_until": "2026-06-07", "note": "MannKind: FDA approved Afrezza supplemental BLA pediatric indication; healthcare sector leading today; breakout above $3.65 confirms follow-through"}
   ]
 }

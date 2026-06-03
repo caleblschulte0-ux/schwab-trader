@@ -1,12 +1,10 @@
 {
-  "generated_utc": "2026-06-03T19:20:35Z",
-  "funnel": {"scanned": 290, "leading": 111, "in_budget": 130, "had_catalyst": 45, "finalists": 5, "picked": 3},
+  "generated_utc": "2026-06-03T19:52:05Z",
+  "funnel": {"scanned": 290, "leading": 112, "in_budget": 220, "had_catalyst": 60, "finalists": 7, "picked": 2},
   "orders": [
-    {"symbol": "KYTX", "action": "BUY", "instrument": "stock",
-     "quantity": 8, "limit_price": 7.85, "take_profit": 10.50, "stop_loss": 6.80},
     {"symbol": "SLDB", "action": "BUY", "instrument": "stock",
      "quantity": 9, "limit_price": 6.90, "take_profit": 8.80, "stop_loss": 5.90},
-    {"symbol": "DOCU", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 49.80, "take_profit": 58.00, "stop_loss": 46.00}
+    {"symbol": "KYTX", "action": "BUY", "instrument": "stock",
+     "quantity": 8, "limit_price": 7.90, "take_profit": 10.50, "stop_loss": 6.80}
   ]
 }
