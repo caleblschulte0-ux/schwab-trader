@@ -1,88 +1,88 @@
-# Brain Run — 2026-06-03T15:53:26Z
+# Brain Run — 2026-06-03T17:04:48Z
 
-Funnel: scanned 218 → 128 fit budget → 18 with catalyst → 3 finalists → picked 3
+Funnel: scanned 265 → 130 fit budget → 15 with catalyst → 4 finalists → picked 3
 
 ---
 
 ## Collision Guard
-Prior `orders.json` stamped 2026-06-03T15:09:38Z — 43 min 48 sec ago. Guard cleared; full scan proceeds.
+Prior `orders.json` stamped 2026-06-03T15:53:26Z — 71 min 22 sec ago. Guard cleared; full scan proceeds.
 
 ---
 
-## Market Context (June 3, 2026 — ~11:53 AM ET)
+## Market Context (June 3, 2026 — ~1:04 PM ET)
 
-**Tape:** SPY -0.45%, VIX 16.07, tone = **neutral**
+**Tape:** SPY -0.68%, VIX 16.35, tone = **neutral**
 
 **Sector rotation today:**
 | Sector | % |
 |--------|---|
-| Basic Materials | +2.25% ← hottest |
-| Energy | +1.74% |
-| Real Estate | +1.65% |
-| Industrials | +1.23% |
-| Consumer Defensive | +1.16% |
-| Healthcare | +0.81% |
-| Consumer Cyclical | +0.73% |
-| Communication Services | +0.42% |
-| Technology | -0.52% |
-| Utilities | -0.75% |
-| Financial Services | -1.27% ← weakest |
+| Basic Materials | +2.58% ← hottest |
+| Energy | +2.02% |
+| Healthcare | +1.32% |
+| Consumer Defensive | +1.26% |
+| Real Estate | +0.98% |
+| Industrials | +0.93% |
+| Communication Services | +0.28% |
+| Consumer Cyclical | -0.21% |
+| Utilities | -0.94% |
+| Technology | -1.01% |
+| Financial Services | -1.14% ← weakest |
 
-Broad market slightly red. Rotation out of tech/financials and into materials, energy, real estate, and healthcare. This run tilts toward healthcare and industrials; skeptical of tech chases; no financials.
+Broad market slightly red but rotation story is clear: Materials, Energy, Healthcare all strongly positive. Tech and Financials the weakest. This run tilts toward healthcare, energy; skeptical of tech momentum. A rate-hike warning from Ed Yardeni (July FOMC possibility) circulating mid-afternoon — accounts for Financial Services weakness and adds some caution to rate-sensitive longs.
 
 ---
 
 ## Funnel Detail
 
-**Source 1 — FMP candidates.json (updated 15:40 UTC):** 206 candidates — 137 movers, 47 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU). Leading count: 73.
+**Source 1 — FMP candidates.json (updated 16:50 UTC):** 225 candidates — 137 movers, 64 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU). Leading count: 90.
 
-**Source 2 — Web searches (8 runs):** top % gainers, unusual volume, small-cap catalysts, defense/biotech/AI sweeps, individual checks on KYTX/FJET/DOCU/NVTS/LASE. Additional names from web: VIDA, LEGN, ARKO, MTLS, LXFR, MYGN, BB (52wk high). ~12 additional tickers.
+**Source 2 — Web searches (8 runs, parallel):** top % gainers/actives, LASE army catalyst, DOCU earnings preview, NVTS NVIDIA MGX partnership, small-cap breakouts, energy sector movers, KYTX EULAR data, analyst upgrades. Additional names from web: VIDA, LEGN, MRVL (June 2 runner), Spero Therapeutics, Viridian Therapeutics, KBR, AECOM, Perennial Autonomy (private), Materialise, Luxfer, ARKO. ~40 additional tickers reviewed.
 
-**Total funnel: ~218 candidates.**
+**Total funnel: ~265 candidates.**
 
-Eliminated: sub-$2 floor (NOTV, AIM, HKIT, FSHPR, SELX, DEVS, HUBC, etc.), leveraged ETFs (dozens), over-budget (MRVL $307, GOOGL $359, ABVX $82, LEGN), parabolic blow-offs (LASE +70%, XOS +174%, SDOT +121%, WCT +199%), and extended names above ~20% threshold without exceptional setups (NVTS +19%, DRTS +20%).
+Eliminated immediately: sub-$2 floor (DEVS, HUBC, KNRX, FSHPR, CHPGR, SOAR, SBEV, PMI, WOK, ZCMD, LIMN, NOTV, NEXR, etc.), leveraged/inverse ETFs (SOXL, SOXS, TQQQ, SQQQ, MRVU, MVLL, DNNG, RCAX, etc.), warrants/rights (AMPGR, AMPGZ, KFIIR, MKLYR, ODVWZ), over-budget at 1 share (GOOGL $361, MRVL $310, ABVX $83, KARO $47 viable but thin upside), and parabolic blow-offs (WCT +161%, XOS +174%, SDOT +99%, SBEV +120%, FOFO +62%, JLHL +64%, SELX +55%, LASE +55%, STAK +36%, ATPC +38%, ANY +37%).
 
-~128 in budget; ~18 with genuine fresh catalyst; 3 finalists (KYTX, FJET, DOCU).
+~130 in budget; ~15 with genuine fresh/upcoming catalysts; 4 finalists (KYTX, DOCU, NVGS, FJET).
 
 ---
 
 ## Picks
 
 ### 1. KYTX — Kyverna Therapeutics (NASDAQ)
-**BUY 8 shares @ $8.05 limit | TP $11.00 | SL $7.00 | Max cost ~$64.40**
+**BUY 8 shares @ $7.90 limit | TP $10.50 | SL $6.80 | Max cost ~$63.20**
 
-Catalyst (published 12:39 UTC today at EULAR 2026 in London): Kyverna presented updated Phase 1 COMPARE trial data for miv-cel (KYV-101) in ACPA-positive, treatment-refractory RA. Key result: **66.6% ACR70 at Week 36** in patients who had failed a median of 6.5 prior biologic/targeted DMARDs. Deep CD19+ B-cell depletion, sustained autoantibody declines, predominantly naïve repopulation pattern, and a clean safety profile (no high-grade CRS or ICANS). Phase 2 is initiated and fully enrolled — the next readout is already queued.
+Catalyst (published 12:39 UTC today): Kyverna presented updated Phase 1 COMPARE trial data for miv-cel (KYV-101) in ACPA-positive, treatment-refractory rheumatoid arthritis at EULAR 2026 in London. Key result: **66.6% ACR70 response at Week 36** in patients who had failed a median of 6.5 prior biologic/targeted DMARDs. Data confirmed deep CD19+ B-cell depletion, sustained autoantibody declines, a predominantly naïve B-cell repopulation pattern post-depletion, and a clean safety profile — no high-grade CRS or ICANS. Single infusion, 52-week follow-up. Phase 2 fully enrolled; next readout queued.
 
-This is strong Phase 1 CAR-T data in a large refractory indication. The stock has moved only +1.0% to $7.98 as of the candidates update — genuinely early. Healthcare is one of today's stronger sectors (+0.81%). Volume (166K shares) is real. Entry here is as early as it gets: catalyst delivered, barely moved, next Phase 2 catalyst ahead. Previous run (15:09Z) also picked KYTX at $8.05; since holdings is empty, that order has not filled or is still pending — the thesis is unchanged and the setup remains valid at the same price.
+This is genuinely strong Phase 1 CAR-T data in a massive, refractory indication (RA patients who've failed 6+ prior treatments). Healthcare is today's third hottest sector (+1.32%). The stock is trading down slightly at $7.84 despite the data release — textbook early/delayed reaction. Prior run (15:53Z) also picked KYTX at $8.05; since holdings.json is empty, it was never filled, and the thesis remains valid at a slightly lower price ($7.84 vs $8.05 prior limit). Volume today ~240K — real participation.
 
-Setup: Limit $8.05 (near current ask), TP $11.00 (37% upside — re-rating toward a small CAR-T with positive multi-indication data and Phase 2 enrolled), SL $7.00 (below today's range support, 13% risk). R/R ≈ 3:1.
-
----
-
-### 2. FJET — Starfighters Space (NYSE)
-**BUY 7 shares @ $8.70 limit | TP $11.00 | SL $7.80 | Max cost ~$60.90**
-
-Catalyst (published 10:09 UTC today): FJET added to **Russell 3000 Index** as part of 2026 reconstitution. ~$12 trillion in assets benchmarked to Russell U.S. indexes must include this stock; passive funds are structurally forced to buy before the effective date (typically late June). Volume today is 1,238,829 — elevated, consistent with early institutional front-running. Stock is flat (-0.12%) at $8.64, meaning the price has barely responded while volume confirms real positioning activity.
-
-Previous run (15:09Z) picked FJET at limit $8.95; the stock has since drifted to $8.64, giving a better entry this run. Revised limit to $8.70 (near current ask). The mechanical demand thesis is intact: passive index buying is not discretionary, it simply happens.
-
-Setup: Limit $8.70, TP $11.00 (26% upside before the reconstitution buy pressure peaks), SL $7.80 (below today's range and the pre-announcement base, ~10% risk). R/R ≈ 2.7:1.
+Setup: Limit $7.90, TP $10.50 (33% upside — modest re-rating for a small-cap CAR-T with strong Phase 1 data and Phase 2 enrolled), SL $6.80 (below today's range and recent support, ~14% risk). R/R ≈ 2.4:1.
 
 ---
 
-### 3. DOCU — DocuSign (NASDAQ)
-**BUY 1 share @ $55.50 limit | TP $62.00 | SL $50.50 | Max cost ~$55.50** [PRE-EARNINGS]
+### 2. DOCU — DocuSign (NASDAQ)
+**BUY 1 share @ $55.00 limit | TP $61.00 | SL $50.00 | Max cost ~$55.00** [PRE-EARNINGS]
 
-Catalyst: DocuSign reports Q1 FY27 earnings **tomorrow, June 4 after close** (5pm PDT). FY26 operational backdrop is strong: FCF exceeded $1 billion for the first time (33% FCF margin), non-GAAP operating margin exceeded 30% for the first time, dollar net retention improved to 102%, and key AI integrations deepened with Anthropic, OpenAI, Google Gemini, GitHub Copilot Studio, and Salesforce. Analyst consensus PT is $59.88 vs the ~$55.18 current price — 8.5% upside to consensus before any beat premium. This run obtained DOCU's current price via web search ($55.18 vs null in candidates.json) and confirmed the earnings date.
+Catalyst: DocuSign reports Q1 FY27 earnings **tomorrow June 4** after market close. Prior quarter: revenue $836.9M (+7.8% YoY, beat consensus); billings exceeded $1B for first time; FCF margin 33%; non-GAAP operating margin 30%+; dollar net retention improved to 102%. Current quarter expectations: 8.1% revenue growth YoY. Analyst consensus PT $59.88 vs current price ~$55 — ~9% upside to consensus before any beat premium. Web search confirmed the date and previewed strong operating momentum (AI integrations with Anthropic, Salesforce, GitHub Copilot, Google Gemini).
 
-Pre-positioning one day before a known catalyst with strong operational momentum is exactly the proactive behavior BRAIN.md calls for. Position is intentionally small (1 share = $55 due to $65 cap) — size limits risk on the binary event.
+Tech sector is the second weakest today (-1.01%) — that's a headwind but DOCU's own catalyst overrides sector rotation. Pre-positioning the day before an earnings release with a strong beat history is the proactive edge BRAIN.md calls for. Intentionally small (1 share, $55 budget cap). Stop is mandatory on earnings picks.
 
-**Stop_loss is mandatory on earnings picks per BRAIN.md.** Stop $50.50 (~8.5% risk, below recent support), TP $62.00 (~11.5% upside, above consensus PT — reflects a beat/raise scenario).
+Setup: Limit $55.00, TP $61.00 (~11% upside in beat scenario, above analyst consensus $59.88), SL $50.00 (~9% risk, below recent support). R/R ≈ 1.2:1 — acceptable given the binary event certainty (earnings is tomorrow, not speculative).
+
+---
+
+### 3. NVGS — Navigator Gas (NYSE)
+**BUY 2 shares @ $22.30 limit | TP $25.50 | SL $20.50 | Max cost ~$44.60**
+
+Catalyst (Benzinga, 14:10 UTC today): "Navigator Gas Bets On Supply Chain Shifts As US Exports Gain From Middle East Disruption." The Middle East conflict is structurally redirecting global LNG shipping routes and accelerating US LNG export volumes — a real fundamental tailwind for Navigator Gas's fleet utilization and freight rates. Energy sector is the second hottest sector today (+2.02%); oil & gas equipment/services up +2.94%.
+
+Stock is essentially flat (-0.2%) at $22.18 despite a fresh bullish Benzinga article and strong sector tailwind — this is early. Market cap $1.45B (small-cap), volume 43K (adequate for a 2-share position). No excessive move to chase.
+
+Setup: Limit $22.30, TP $25.50 (~14% upside as LNG shipping thesis plays out), SL $20.50 (~8% risk, below recent support). R/R ≈ 1.7:1. Smaller size ($44.60) reflects the sector-momentum nature of this trade vs. the higher-conviction clinical/earnings picks.
 
 ---
 
 ## Holdings
-`holdings.json` is empty — no open positions. Today's picks deploy: KYTX $64.40 + FJET $60.90 + DOCU $55.50 = **$180.80 total (~45% of $400)**. ~$219 powder reserved.
+`holdings.json` is empty — no open positions. This run's orders deploy: KYTX $63.20 + DOCU $55.00 + NVGS $44.60 = **$162.80 (~41% of $400)**. ~$237 powder reserved for future runs.
 
 ---
 
@@ -90,15 +90,14 @@ Pre-positioning one day before a known catalyst with strong operational momentum
 
 | Name | Price | Move | Reason |
 |------|-------|------|--------|
-| LASE | $3.69 | +52–70% | Real US Army/Dept of War anti-drone selection catalyst. But near-vertical blow-off. Hard pass. |
-| XOS | $6.11 | +174% | Parabolic. Watchlist pullback to $4.50 still live. |
-| SDOT | $7.26 | +121% | Reverse-split driven. Hard pass. |
-| WCT | $2.75 | +199% | Parabolic. Hard pass. |
-| NVTS | $30.80 | +19% | Real AI power infra story (GaN, Q1 beat, analyst upgrades). Already +19% today on top of +110% over 4 months. Extended; tech sector weak. Watchlist for pullback to $26.50. |
-| GRRR | $17.38 | –20% | $107M dilutive convertible offering = explicit bearish catalyst. Skip. |
-| DRTS | $10.69 | +20% | Alpha Tau Medical, no specific fresh catalyst found. Deprioritize at 20%. |
-| SNSE | $18.30 | +14% | Sensei Bio, no specific catalyst. Mover only. |
-| INTC | $112.84 | +4.5% | Mega-cap; tech sector is weakest today. No compelling edge. |
-| BB | $10.33 | +0.2% | 52wk high on FedRAMP recert for AtHoc. Cramer mention = mixed signal. Legacy brand, no strong momentum. |
-| LEGN/VIDA | large-cap | +42%/+53% June | Strong CAR-T / biotech catalysts but priced far above $65/share budget. |
-| Sub-$2 names | various | various | Hard floor violation — all skipped. |
+| LASE | $3.74 | +55% | US Army/Dept of War "Laser Shield" anti-drone selection confirmed — BUT it is a technical exchange/assessment, NOT a contract award. Stock already ran +107% on June 2 then another +55% today. Near-vertical multi-day blow-off on speculative news. Hard pass. |
+| NVTS | $31.92 | +23% | Real catalyst: NVIDIA MGX partnership, Computex showcase, AI power infra thesis solid. But already +110% in 4 months and +23% today. Tech sector is weakest today. Extended; watchlist pullback to $26.50. |
+| WCT / XOS / SDOT / FOFO | various | +99–174% | Extreme parabolic. All hard pass. |
+| DRTS | $10.03 | +12% | Alpha Tau Medical, no specific fresh catalyst found. At 12% move without a clear catalyst, deprioritize. |
+| QMCO | $14.12 | +13% | Quantum Corp, quantum computing adjacent. No fresh catalyst; tech sector weak. Skip. |
+| MMED | $14.21 | +16% | MiniMed Group, healthcare sector. No news catalyst in candidates. Without knowing the driver, skip. |
+| FJET | $8.55 | -1.2% | Russell 3000 addition catalyst (published 10:09 UTC) — 7+ hours old now. Passive front-running may already be priced in. Stock below our prior limit of $8.70 and trend is slightly negative. Moved to watchlist. |
+| GRRR | $16.99 | -22% | $107M dilutive convertible offering = explicit bearish catalyst. Skip. |
+| LVO | $6.39 | -4.6% | AT&T collaboration catalyst (14:00 UTC) but stock is DOWN -4.6% on the news — negative price action vs positive catalyst is a red flag. Skip. |
+| Sub-$2 names | various | various | Hard price floor. All skipped. |
+| Leveraged ETFs | various | various | Not tradeable under strategy rules. |
