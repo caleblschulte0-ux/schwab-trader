@@ -1,13 +1,13 @@
-# Brain Run — 2026-06-03T19:20:35Z
+# Trading Log — 2026-06-03T19:52:05Z
 
-**Funnel:** scanned 290 → 130 fit budget → 45 with catalyst → 5 finalists → picked 3
+**Funnel:** scanned 290 → 220 fit budget → 60 with catalyst → 7 finalists → picked 2
 
-**Collision guard:** prior orders.json stamped 2026-06-03T19:05:07Z (15 min 28 sec ago — older than 10 min). Proceeding normally.
+**Collision guard:** prior orders.json stamped 2026-06-03T19:20:35Z (~31 min ago — older than 10 min). Proceeding normally.
 
 ---
 
 ## STEP 0 — Market Tape
-SPY −0.59%, VIX 16.11, tone = **neutral**. Sector rankings today:
+SPY −0.59%, VIX 16.11, tone = **neutral**. Broad market pulling back from yesterday's SPY record close above 7,600. Sector rankings:
 
 | Rank | Sector | Pct |
 |------|--------|-----|
@@ -23,44 +23,53 @@ SPY −0.59%, VIX 16.11, tone = **neutral**. Sector rankings today:
 | 10 | Consumer Cyclical | −0.81% |
 | 11 | Utilities | −1.38% |
 
-**Aggressiveness:** normal discipline (neutral tape). Strong sector tilt toward Healthcare and Basic Materials. Skeptical of longs in tech/consumer cyclical. Three picks all in healthcare or carry defined near-term catalysts that override sector headwinds.
+Leaning into Healthcare (both picks) per sector leadership. Skeptical of pure tech momentum on a down-tape day.
 
 ---
 
-## STEP 1 — Funnel (Source 1: candidates.json + Source 2: web search)
+## STEP 1 — Funnel (FMP candidates.json + web search)
 - **candidates.json**: 248 names — 139 movers, 85 news_smallcap, 1 earnings_soon (DOCU), 25 news_bullish
-- **Web search added**: ~42 additional names from gainer lists, sector sweeps, small-cap catalysts, pre-earnings calendar
-- **Merged pool**: ~290 unique candidates (exceeds 150+ target; healthy scan)
-- **Applied $2 floor + $65 budget filter**: ~130 names remain
-- **Had identifiable catalyst**: ~45 names with real, fresh catalysts
-- **Finalists evaluated**: KYTX, SLDB, DOCU, SMWB, RCKT
+- **Web search added**: ~42 unique tickers (SWMR, CRWV, SNDK, PANW, AVBO, CRWD, LEGN, VIDA, CBOE, CME, VRID, MAIA, FLNC, EWTX, ERAS, GRAL, SPRO, etc.)
+- **Merged pool**: ~290 candidates (healthy scan)
+- **Applied $2 floor + $65 budget filter**: ~220 viable names
+- **Had identifiable fresh catalyst**: ~60
+- **Finalists reviewed in depth**: SLDB, KYTX, TATT, NVTS, DOCU, QTI, SMWB
 
 ---
 
 ## STEP 3 — Picks
 
-### 1. KYTX — Kyverna Therapeutics | BUY 8 @ $7.85 | TP $10.50 | SL $6.80
-**Highest conviction.** Kyverna presented **updated Phase 1 COMPARE trial data at EULAR 2026** (London) for miv-cel (KYV-101) in ACPA-positive, treatment-refractory RA. Results: 66.6% ACR70 response by Week 36, deep CD19+ B-cell depletion, sustained autoantibody declines, naïve B-cell repopulation, and **zero high-grade CRS or ICANS** — exceptionally clean safety for a cell therapy. Phase 2 is initiated and fully enrolled. The stock is at $7.83, **down only 0.9%** — the data has not moved the stock yet. Healthcare is the #1 sector today. This is the earliest, most proactive entry the strategy targets: major data event, barely moved, room to $10.50 (next resistance). Stop at $6.80 below the session low. 8 shares × $7.85 = $62.80. R/R ~2.5:1.
+### 1. SLDB — Solid Biosciences | BUY 9 @ $6.90 | TP $8.80 | SL $5.90
+**Catalyst:** FDA cleared the IND for SGT-212 in Friedreich's Ataxia, opening the first-in-human FALCON trial with Phase 1b readouts expected H2 2026. Second major gene therapy program alongside the lead Duchenne asset (SGT-003), where the Phase 3 IMPACT DUCHENNE trial dosed its first patient April 2026 and an interim Phase 1/2 INSPIRE DUCHENNE update is expected mid-2026. Citizens maintained Market Outperform with a $15 PT. FA IND clearance + Duchenne Phase 3 enrollment = two stacked near-term catalysts. Stock at $6.88 with only +4.6% today — measured initial response to meaningful pipeline news. Healthcare is the day's #1 sector. 9 × $6.90 = $62.10. R/R ~1.96:1 ($17.28 upside / $8.82 risk at stops).
 
-### 2. SLDB — Solid Biosciences | BUY 9 @ $6.90 | TP $8.80 | SL $5.90
-**Re-pick (thesis intact, prior order did not fill — holdings empty).** CEO Bo Cumbo is presenting today at the **Jefferies Global Healthcare Conference** fireside chat. Phase 3 trial of SGT-003 (Duchenne muscular dystrophy) is now enrolling across US/UK/EU/Canada/Australia. Pivotal FDA meetings ahead for both Duchenne and Friedreich's Ataxia programs (SGT-212 holds FDA Orphan Drug + Rare Pediatric + Fast Track designations). Stock at $6.88, +4.6% today with 551K volume — early in the move. Healthcare #1 sector. Gene therapy is the hottest sub-theme. 9 shares × $6.90 = $62.10. R/R ~2.1:1.
-
-### 3. DOCU — DocuSign | BUY 1 @ $49.80 | TP $58.00 | SL $46.00
-**Pre-earnings positioning** — DOCU reports Q1 FY2027 after the close on **June 4 (tomorrow)**. Analyst consensus: EPS $0.99, revenue $824.75M (+8% YoY). Company has a multi-quarter track record of beating both. Management guided Q1 at $822–$826M. Stock closed at $49.73 today (+0.63%), intraday range $47.63–$49.89. BRAIN.md explicitly endorses pre-positioning 1–3 days before a scheduled catalyst. Earnings can gap either way — stop at $46.00 (below today's low) caps risk to ~$4 on 1 share. Tech sector is −0.31% today but the specific catalyst overrides for this one-night hold. 1 share × $49.80 = $49.80. R/R ~2:1.
+### 2. KYTX — Kyverna Therapeutics | BUY 8 @ $7.90 | TP $10.50 | SL $6.80
+**Catalyst:** Oral presentation at EULAR 2026 Congress (London) of updated Phase 1 COMPARE trial data for miv-cel (KYV-101) CAR-T in treatment-refractory ACPA-positive RA: 66.6% ACR70 by Week 36 in patients who had failed a median of 6.5 prior biologics — deep B-cell depletion, no high-grade CRS or ICANS. Phase 2 fully enrolled; next catalyst is Phase 2 data, likely H2 2026. The stock is DOWN -0.9% on this data — the market has not reacted to the EULAR oral presentation. Healthcare #1 sector. This is the proactive entry the strategy targets: strong data, Phase 2 already enrolled, barely moved. Stop below session low at $6.80. 8 × $7.90 = $63.20. R/R ~2.59:1 ($21.36 upside / $8.24 risk).
 
 ---
 
 ## Notable Passes
 
-- **XOS** +216% — Power Hub launch (AI data center energy storage) + US Air Force Charger Hub finalist are real catalysts but the multi-day surge from $1.21 to $7.05 is a near-vertical blow-off. Hard pass.
-- **LASE** +35.7% today (+200%+ over two days) — US Army anti-drone system selection is real defense catalyst, but move is spent. Pass.
-- **NVTS** +21.3%, $31.36 — AI/EV power semi theme solid but above the 15–20% intraday deprioritize zone with no fresh-today catalyst. On watchlist at pullback $28.50.
-- **SMWB** −4.9%, Perplexity "Native AI Workflows" collaboration very fresh (18:20 UTC) but stock down all day despite the news, tech sector weak; not compelling R/R. Pass.
-- **RCKT** +0.5%, analyst raised 12m PT to $9.39 (225% upside). Only a 0.5% reaction signals unconfirmed catalyst source. Added to watchlist as breakout trigger at $3.20.
-- **FOFO, WCT, SDOT, STAK, SBEV** — All massive intraday blow-offs (+60–154%+). Hard pass.
-- **ABVX** +24% at $89.92 — Over budget.
+**TATT (TAT Technologies):** $45M in long-term MRO contracts + ~$4M Q2 one-time gain is a clean catalyst. FMP showed +6.6% mid-session, but web research confirmed the stock reversed to ~$39.80 (-4%) by later in the day — profit-takers active. On watchlist at $40.00 pullback support instead.
+
+**NVTS (Navitas Semiconductor):** NVIDIA MGX Computex collaboration for AI datacenter GaN power delivery; +19.6% today, 346% YTD. Strong genuine re-rating catalyst but too extended intraday. On watchlist at $28.00 pullback.
+
+**DOCU:** Reports earnings tomorrow (June 4, EPS est. $1.00). Pre-catalyst setup is sound, but entering into a binary event at 3:52 PM with the market nearly closed creates overnight gap risk in both directions. The previous run already picked it; skipping this run.
+
+**LASE (Laser Photonics):** Real dual catalyst — U.S. Dept. of War MEIA Vulcan anti-drone selection + Anniston Army Depot MLRI validation. But stock is up 240%+ from its $1.21 base in 48 hours (~$4.11 close). Classic low-float blow-off. Hard pass.
+
+**SWMR (Swarmer):** Drone-swarm AI defense, Jim Cramer endorsement, real U.S. contracts. Up ~38% MTD and near 3x in 4 weeks. Extended; skip.
+
+**ANY (Sphere 3D):** Cathedra Bitcoin merger closed, BTC mining + AI/HPC data center platform. Up 111% on June 1. Extended blow-off; hard pass.
+
+**XOS:** 2.5MWh Power Hub launch + Air Force finalist. +246% today from thin base. Parabolic; hard pass.
+
+**SMWB (Similarweb):** Perplexity AI native integration (fresh, 18:20 UTC), CEO open-market purchases. Compelling AI data layer thesis. But stock DOWN -5% on the catalyst — persistent sell-the-news dynamic. Waiting for stabilization.
+
+**QTI (QT Imaging):** Saudi Arabia SFDA clearance today; $24M committed GCC order. Muted price reaction. Good long-term story, no near-term momentum ignition.
+
+**MRVL (Marvell Technology):** Jensen Huang "next trillion-dollar" endorsement + record Q1 earnings. Up 21%+ yesterday. Stock at $300 — 1 share exceeds $65 budget in meaningful size, and already extended.
 
 ---
 
-## Holdings Read
-`holdings.json` updated 2026-06-03T19:10:33Z — **0 open positions**. Full ~$400 in powder. This run deploys ~$174 across 3 picks, leaving ~$226 for future setups.
+## Holdings
+`holdings.json` updated 2026-06-03T19:30:35Z — **0 open positions**. Full ~$400 in powder. This run deploys ~$125 across 2 picks (SLDB $62 + KYTX $63), leaving ~$275 for future setups.
