@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-03T20:30:24.425807+00:00",
+  "updated_utc": "2026-06-03T20:40:29.547280+00:00",
   "count": 249,
   "signal_counts": {
     "mover": 140,
@@ -9,7 +9,7 @@
   },
   "market": {
     "spy_pct": -0.72,
-    "vix": 16.05,
+    "vix": 16.06,
     "sectors": [
       {
         "sector": "Energy",
@@ -58,7 +58,7 @@
     ],
     "tone": "neutral"
   },
-  "market_updated_utc": "2026-06-03T20:10:26.166725+00:00",
+  "market_updated_utc": "2026-06-03T20:40:27.334288+00:00",
   "news_updated_utc": "2026-06-03T19:00:33.383866+00:00",
   "news_calls_date": "2026-06-03",
   "news_calls_today": 22,
