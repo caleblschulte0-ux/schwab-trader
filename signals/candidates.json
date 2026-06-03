@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-06-03T18:50:22.958126+00:00",
-  "count": 105,
+  "updated_utc": "2026-06-03T19:00:33.384644+00:00",
+  "count": 110,
   "signal_counts": {
-    "news_bullish": 25,
-    "news_smallcap": 80
+    "news_smallcap": 85,
+    "news_bullish": 25
   },
   "market": {
     "spy_pct": -0.47,
@@ -57,12 +57,12 @@
     "tone": "neutral"
   },
   "market_updated_utc": "2026-06-03T18:30:25.099377+00:00",
-  "news_updated_utc": "2026-06-03T18:40:30.470482+00:00",
+  "news_updated_utc": "2026-06-03T19:00:33.383866+00:00",
   "news_calls_date": "2026-06-03",
-  "news_calls_today": 21,
+  "news_calls_today": 22,
   "candidates": [
     {
-      "symbol": "APO",
+      "symbol": "A",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -75,15 +75,15 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "McKesson Corporation stock (US58155Q1031): Apollo investment reshapes medical-surgical unit as shares hover above USD 730",
+        "headline": "Agilent partners with OpenAI and BCG to embed AI across scientific instruments and operations",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.301,
-        "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T17:31:08+00:00"
+        "sentiment_score": 0.329,
+        "source": "The Business Journals",
+        "published_utc": "2026-06-03T18:26:58+00:00"
       }
     },
     {
-      "symbol": "CHRW",
+      "symbol": "ADI",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -96,11 +96,74 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "C.H. Robinson says it made a breakthrough with its AI global supply chain tech (CHRW:NASDAQ)",
+        "headline": "Analog Devices Inc Stock (ADI) Moved Up by 3.27% on Jun 3: Facts Behind the Movement",
         "sentiment": "Bullish",
-        "sentiment_score": 0.512,
-        "source": "Seeking Alpha",
-        "published_utc": "2026-06-03T17:15:19+00:00"
+        "sentiment_score": 0.464,
+        "source": "TradingKey",
+        "published_utc": "2026-06-03T18:14:59+00:00"
+      }
+    },
+    {
+      "symbol": "AMCR",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Colgate-Palmolive M\u00e9xico Launches Recyclable Toothpaste Tube",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.238,
+        "source": "Mexico Business News",
+        "published_utc": "2026-06-03T18:21:14+00:00"
+      }
+    },
+    {
+      "symbol": "BRO",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "The Bull Case For Brown & Brown (BRO) Could Change Following Early Accession Synergies And Tech-Focused Efficiency Gains",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.468,
+        "source": "Simply Wall Street",
+        "published_utc": "2026-06-03T18:27:10+00:00"
+      }
+    },
+    {
+      "symbol": "CL",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Colgate-Palmolive M\u00e9xico Launches Recyclable Toothpaste Tube",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.496,
+        "source": "Mexico Business News",
+        "published_utc": "2026-06-03T18:21:14+00:00"
       }
     },
     {
@@ -117,15 +180,15 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Chipotle giving away 53,000 free burritos for NBA Finals 2026",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.334,
-        "source": "qz.com",
-        "published_utc": "2026-06-03T17:34:20+00:00"
+        "headline": "Chipotle giving away 53K free burritos for NBA Finals. How to score",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.407,
+        "source": "Cincinnati Enquirer",
+        "published_utc": "2026-06-03T18:32:16+00:00"
       }
     },
     {
-      "symbol": "COP",
+      "symbol": "CMS",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -138,15 +201,15 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Did Analysts\u2019 LNG Focus at Bernstein Just Reframe ConocoPhillips\u2019 (COP) Geopolitical Playbook?",
+        "headline": "CMS Energy Appoints Sri Maddipati as CFO and Chris Fultz as President of Electric Supply",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.247,
-        "source": "Simply Wall Street",
-        "published_utc": "2026-06-03T17:28:22+00:00"
+        "sentiment_score": 0.292,
+        "source": "GeneOnline",
+        "published_utc": "2026-06-03T18:20:17+00:00"
       }
     },
     {
-      "symbol": "DG",
+      "symbol": "COST",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -159,64 +222,22 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Dollar General Corporation Stock 12\u2011Month Price Target Cut to $132.07, Implies 24% Upside",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.278,
-        "source": "TradingView",
-        "published_utc": "2026-06-03T17:20:27+00:00"
-      }
-    },
-    {
-      "symbol": "DOV",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "IDEX Corporation stock (US45167R1041): Oppenheimer lifts price target after latest move in New York",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.182,
-        "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T17:07:52+00:00"
-      }
-    },
-    {
-      "symbol": "EMN",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Chemically recycled plastics now used in Gatorade bottles",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.337,
-        "source": "Plastics News",
-        "published_utc": "2026-06-03T17:34:00+00:00"
+        "headline": "Smart summer shoppers are getting a Costco Gold Star Membership for $65 + $20 for later",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.403,
+        "source": "9to5Toys",
+        "published_utc": "2026-06-03T17:52:17+00:00"
       }
     },
     {
       "symbol": "EYE",
       "name": null,
-      "price": 16.545,
-      "pct_change": 1.317,
+      "price": 16.57,
+      "pct_change": 1.47,
       "exchange": null,
       "list": "news",
-      "volume": 1082371,
-      "market_cap": 1325530222.0,
+      "volume": 1304035,
+      "market_cap": 1327533139.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -224,7 +245,7 @@
       "catalyst": {
         "headline": "National Vision (NASDAQ: EYE) confirms 2026 outlook, $50M buyback",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.283,
+        "sentiment_score": 0.297,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:00:48+00:00"
       }
@@ -232,12 +253,12 @@
     {
       "symbol": "FBRX",
       "name": null,
-      "price": 17.26,
-      "pct_change": -5.034,
+      "price": 16.92,
+      "pct_change": -6.905,
       "exchange": null,
       "list": "news",
-      "volume": 119844,
-      "market_cap": 353464381.0,
+      "volume": 225998,
+      "market_cap": 346501584.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -245,7 +266,7 @@
       "catalyst": {
         "headline": "Forte Biosciences (FBRX) director awarded 18,353 RSUs vesting after 2026 meeting",
         "sentiment": "Neutral",
-        "sentiment_score": 0.021,
+        "sentiment_score": 0.042,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:40:32+00:00"
       }
@@ -253,12 +274,12 @@
     {
       "symbol": "FIVN",
       "name": null,
-      "price": 23.96,
-      "pct_change": -4.275,
+      "price": 23.9499,
+      "pct_change": -4.315,
       "exchange": null,
       "list": "news",
-      "volume": 2099687,
-      "market_cap": 1834473152.0,
+      "volume": 2177262,
+      "market_cap": 1833699856.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -266,7 +287,7 @@
       "catalyst": {
         "headline": "The Zacks Analyst Blog Highlights SoundHound, NICE and Five9",
         "sentiment": "Neutral",
-        "sentiment_score": 0.135,
+        "sentiment_score": 0.1,
         "source": "Zacks Investment Research",
         "published_utc": "2026-06-03T12:00:13+00:00"
       }
@@ -274,12 +295,12 @@
     {
       "symbol": "FWRG",
       "name": null,
-      "price": 10.4,
-      "pct_change": -0.383,
+      "price": 10.36,
+      "pct_change": -0.766,
       "exchange": null,
       "list": "news",
-      "volume": 740486,
-      "market_cap": 641106804.0,
+      "volume": 796272,
+      "market_cap": 638641009.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -287,7 +308,7 @@
       "catalyst": {
         "headline": "First Watch Restaurant Group (NASDAQ:FWRG) Receives Buy Rating from TD Cowen",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.343,
+        "sentiment_score": 0.325,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T12:10:57+00:00"
       }
@@ -308,41 +329,20 @@
       "catalyst": {
         "headline": "General Dynamics to pay $1.59 a share dividend on Aug. 7",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.316,
+        "sentiment_score": 0.343,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T17:59:38+00:00"
       }
     },
     {
-      "symbol": "GPN",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "GPN Maintained by Susquehanna -- Price Target Lowered to $111",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.302,
-        "source": "GuruFocus",
-        "published_utc": "2026-06-03T17:22:44+00:00"
-      }
-    },
-    {
       "symbol": "GRRR",
       "name": null,
-      "price": 17.92,
-      "pct_change": -17.723,
+      "price": 17.905,
+      "pct_change": -17.792,
       "exchange": null,
       "list": "news",
-      "volume": 5050387,
-      "market_cap": 495557153.0,
+      "volume": 5147882,
+      "market_cap": 495142345.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -350,7 +350,7 @@
       "catalyst": {
         "headline": "Gorilla Technology Group Inc. Announces Pricing of $107 Million Senior Unsecured Convertible Bond Offering",
         "sentiment": "Bullish",
-        "sentiment_score": 0.433,
+        "sentiment_score": 0.434,
         "source": "TMX Newsfile",
         "published_utc": "2026-06-03T11:09:38+00:00"
       }
@@ -371,41 +371,20 @@
       "catalyst": {
         "headline": "Anthropic Picks Morgan Stanley, Goldman Sachs to Lead IPO",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.311,
-        "source": "Bloomberg.com",
-        "published_utc": "2026-06-03T17:03:44+00:00"
-      }
-    },
-    {
-      "symbol": "GYRE",
-      "name": null,
-      "price": 5.6344,
-      "pct_change": 1.338,
-      "exchange": null,
-      "list": "news",
-      "volume": 43985,
-      "market_cap": 546696377.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Gyre Therapeutics Updates Post-Cullgen Acquisition Growth Strategy",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.431,
-        "source": "The Globe and Mail",
-        "published_utc": "2026-06-03T10:40:25+00:00"
+        "sentiment_score": 0.228,
+        "source": "AdvisorHub",
+        "published_utc": "2026-06-03T18:18:02+00:00"
       }
     },
     {
       "symbol": "HBB",
       "name": null,
-      "price": 18.56,
-      "pct_change": -4.918,
+      "price": 18.785,
+      "pct_change": -3.765,
       "exchange": null,
       "list": "news",
-      "volume": 9557,
-      "market_cap": 251408749.0,
+      "volume": 11623,
+      "market_cap": 254456538.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -413,7 +392,7 @@
       "catalyst": {
         "headline": "Hamilton Beach (NYSE: HBB) insider-linked trust gifts 1,975 Class B shares",
         "sentiment": "Neutral",
-        "sentiment_score": 0.008,
+        "sentiment_score": 0.023,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:09:00+00:00"
       }
@@ -434,7 +413,7 @@
       "catalyst": {
         "headline": "From classroom to shipyard: 50 Virginia teens land jobs at HII",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.295,
+        "sentiment_score": 0.264,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T18:00:47+00:00"
       }
@@ -442,12 +421,12 @@
     {
       "symbol": "HITI",
       "name": null,
-      "price": 2.35,
-      "pct_change": -1.674,
+      "price": 2.345,
+      "pct_change": -1.883,
       "exchange": null,
       "list": "news",
-      "volume": 182985,
-      "market_cap": 206560011.0,
+      "volume": 257190,
+      "market_cap": 206120522.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -455,7 +434,7 @@
       "catalyst": {
         "headline": "High Tide (NASDAQ: HITI) schedules Q2 2026 results webcast and grants employee stock options",
         "sentiment": "Neutral",
-        "sentiment_score": 0.11,
+        "sentiment_score": 0.126,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:13:21+00:00"
       }
@@ -463,12 +442,12 @@
     {
       "symbol": "HROW",
       "name": null,
-      "price": 33.17,
-      "pct_change": 0.943,
+      "price": 32.82,
+      "pct_change": -0.122,
       "exchange": null,
       "list": "news",
-      "volume": 353241,
-      "market_cap": 1236415299.0,
+      "volume": 414257,
+      "market_cap": 1223369012.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -476,62 +455,20 @@
       "catalyst": {
         "headline": "Harrow (NASDAQ: HROW) posts June 2026 corporate investor presentation",
         "sentiment": "Neutral",
-        "sentiment_score": 0.004,
+        "sentiment_score": 0.023,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:15:09+00:00"
       }
     },
     {
-      "symbol": "IBM",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "What IBM's $10-Billion Quantum Project Means For Smaller Players",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.408,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T17:05:18+00:00"
-      }
-    },
-    {
-      "symbol": "IEX",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "IDEX Corporation stock (US45167R1041): Oppenheimer lifts price target after latest move in New York",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.421,
-        "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T17:07:52+00:00"
-      }
-    },
-    {
       "symbol": "III",
       "name": null,
-      "price": 4.3301,
-      "pct_change": -4.413,
+      "price": 4.335,
+      "pct_change": -4.305,
       "exchange": null,
       "list": "news",
-      "volume": 202741,
-      "market_cap": 207148840.0,
+      "volume": 226463,
+      "market_cap": 207383253.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -539,7 +476,7 @@
       "catalyst": {
         "headline": "How Databricks is powering fraud checks and crop forecasts in Brazil",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.35,
+        "sentiment_score": 0.325,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:40:34+00:00"
       }
@@ -547,12 +484,12 @@
     {
       "symbol": "IVA",
       "name": null,
-      "price": 4.03,
-      "pct_change": -1.467,
+      "price": 4.02,
+      "pct_change": -1.711,
       "exchange": null,
       "list": "news",
-      "volume": 930953,
-      "market_cap": 837061124.0,
+      "volume": 938671,
+      "market_cap": 834984050.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -560,13 +497,34 @@
       "catalyst": {
         "headline": "Inventiva (IVA) outlines ADS holder voting steps for June 30, 2026 General Meeting",
         "sentiment": "Neutral",
-        "sentiment_score": 0.016,
+        "sentiment_score": 0.015,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:20:22+00:00"
       }
     },
     {
-      "symbol": "IVZ",
+      "symbol": "JBI",
+      "name": null,
+      "price": 5.05,
+      "pct_change": -1.367,
+      "exchange": null,
+      "list": "news",
+      "volume": 833410,
+      "market_cap": 688781918.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Self-Storage Components Supplier Janus International Acquires Kiwi II Construction",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.509,
+        "source": "Inside Self-Storage",
+        "published_utc": "2026-06-03T14:09:27+00:00"
+      }
+    },
+    {
+      "symbol": "JCI",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -579,32 +537,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "CI Global Asset Management Completes Acquisition Of C$27 Billion Invesco Canada Fund Business",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.271,
-        "source": "Pulse 2.0",
-        "published_utc": "2026-06-03T17:28:00+00:00"
-      }
-    },
-    {
-      "symbol": "JBI",
-      "name": null,
-      "price": 5.065,
-      "pct_change": -1.074,
-      "exchange": null,
-      "list": "news",
-      "volume": 790744,
-      "market_cap": 690827805.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Self-Storage Components Supplier Janus International Acquires Kiwi II Construction",
+        "headline": "Johnson Controls declares $0.40 quarterly dividend payable July 10, 2026.",
         "sentiment": "Bullish",
-        "sentiment_score": 0.502,
-        "source": "Inside Self-Storage",
-        "published_utc": "2026-06-03T14:09:27+00:00"
+        "sentiment_score": 0.513,
+        "source": "Pluang",
+        "published_utc": "2026-06-03T17:45:47+00:00"
       }
     },
     {
@@ -623,20 +560,20 @@
       "catalyst": {
         "headline": "Anthropic Picks Morgan Stanley, Goldman Sachs to Lead IPO",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.305,
-        "source": "Bloomberg.com",
-        "published_utc": "2026-06-03T17:03:44+00:00"
+        "sentiment_score": 0.225,
+        "source": "AdvisorHub",
+        "published_utc": "2026-06-03T18:18:02+00:00"
       }
     },
     {
       "symbol": "KARO",
       "name": null,
-      "price": 47.45,
-      "pct_change": -4.373,
+      "price": 47.48,
+      "pct_change": -4.313,
       "exchange": null,
       "list": "news",
-      "volume": 58520,
-      "market_cap": 1465887085.0,
+      "volume": 62413,
+      "market_cap": 1466813884.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -644,20 +581,62 @@
       "catalyst": {
         "headline": "Needham reiterates Karooooo stock Buy rating, cites stable demand",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.27,
+        "sentiment_score": 0.256,
         "source": "Investing.com",
         "published_utc": "2026-06-03T11:10:27+00:00"
       }
     },
     {
-      "symbol": "KOS",
+      "symbol": "KEYS",
       "name": null,
-      "price": 2.99,
-      "pct_change": 0.673,
+      "price": null,
+      "pct_change": null,
       "exchange": null,
       "list": "news",
-      "volume": 5531987,
-      "market_cap": 1773635929.0,
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Keysight Expands Photonics Design Ecosystem with GlobalFoundries PDK",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.446,
+        "source": "01net",
+        "published_utc": "2026-06-03T17:59:49+00:00"
+      }
+    },
+    {
+      "symbol": "KLAC",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "KLA Corp Stock (KLAC) Moved Up by 3.90% on Jun 3: Drivers Behind the Movement",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.528,
+        "source": "TradingKey",
+        "published_utc": "2026-06-03T18:15:50+00:00"
+      }
+    },
+    {
+      "symbol": "KOS",
+      "name": null,
+      "price": 2.985,
+      "pct_change": 0.505,
+      "exchange": null,
+      "list": "news",
+      "volume": 5934424,
+      "market_cap": 1770669983.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -665,7 +644,7 @@
       "catalyst": {
         "headline": "A Look At Kosmos Energy (KOS) Valuation After A Volatile Year Of Mixed Share Price Returns",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.335,
+        "sentiment_score": 0.348,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T11:39:03+00:00"
       }
@@ -673,12 +652,12 @@
     {
       "symbol": "KURA",
       "name": null,
-      "price": 8.675,
-      "pct_change": -3.289,
+      "price": 8.73,
+      "pct_change": -2.676,
       "exchange": null,
       "list": "news",
-      "volume": 843242,
-      "market_cap": 770117616.0,
+      "volume": 899658,
+      "market_cap": 775000206.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -686,7 +665,7 @@
       "catalyst": {
         "headline": "Kura Oncology reports phase 1a data for cancer drug combination",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.214,
+        "sentiment_score": 0.209,
         "source": "Investing.com",
         "published_utc": "2026-06-03T11:39:19+00:00"
       }
@@ -694,12 +673,12 @@
     {
       "symbol": "KYTX",
       "name": null,
-      "price": 7.755,
-      "pct_change": -1.835,
+      "price": 7.83,
+      "pct_change": -0.886,
       "exchange": null,
       "list": "news",
-      "volume": 469248,
-      "market_cap": 471466869.0,
+      "volume": 516269,
+      "market_cap": 476026510.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -707,20 +686,20 @@
       "catalyst": {
         "headline": "Kyverna reports rheumatoid arthritis trial data at EULAR congress",
         "sentiment": "Bullish",
-        "sentiment_score": 0.463,
+        "sentiment_score": 0.464,
         "source": "Investing.com",
         "published_utc": "2026-06-03T12:39:50+00:00"
       }
     },
     {
       "symbol": "LASE",
-      "name": "Laser Photonics Corporation",
+      "name": null,
       "price": 3.285,
-      "pct_change": 35.7438,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": 202904067,
-      "market_cap": 121297187.0,
+      "pct_change": 35.744,
+      "exchange": null,
+      "list": "news",
+      "volume": 206539424,
+      "market_cap": 126696744.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -728,7 +707,7 @@
       "catalyst": {
         "headline": "LASE Stock Surges As DefenseTech Wins Key U.S. Army Traction",
         "sentiment": "Bullish",
-        "sentiment_score": 0.498,
+        "sentiment_score": 0.469,
         "source": "StocksToTrade",
         "published_utc": "2026-06-03T14:04:12+00:00"
       }
@@ -736,12 +715,12 @@
     {
       "symbol": "LEE",
       "name": null,
-      "price": 10.54,
-      "pct_change": -2.407,
+      "price": 10.52,
+      "pct_change": -2.593,
       "exchange": null,
       "list": "news",
-      "volume": 43449,
-      "market_cap": 234303525.0,
+      "volume": 49822,
+      "market_cap": 233858927.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -749,7 +728,7 @@
       "catalyst": {
         "headline": "New deal brings free Indiana high school sports highlights to families",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.289,
+        "sentiment_score": 0.252,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:40:34+00:00"
       }
@@ -757,12 +736,12 @@
     {
       "symbol": "LFS",
       "name": null,
-      "price": 2.2103,
-      "pct_change": -3.9,
+      "price": 2.22,
+      "pct_change": -3.478,
       "exchange": null,
       "list": "news",
-      "volume": 55506,
-      "market_cap": 57822816.0,
+      "volume": 59721,
+      "market_cap": 58076574.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -770,30 +749,9 @@
       "catalyst": {
         "headline": "LEIFRAS Co., Ltd. Announces Collaboration with Anime \"BLUELOCK\" for New Shoot-Specific Sport Tournament \"SIX SHOOT PREMIER 0\"",
         "sentiment": "Bullish",
-        "sentiment_score": 0.384,
+        "sentiment_score": 0.428,
         "source": "Yahoo Finance",
         "published_utc": "2026-06-03T12:39:46+00:00"
-      }
-    },
-    {
-      "symbol": "LILA",
-      "name": null,
-      "price": 7.725,
-      "pct_change": -2.585,
-      "exchange": null,
-      "list": "news",
-      "volume": 281873,
-      "market_cap": 1711396330.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "LILKV Price Today: Liberty Latin America Ltd Class C Stock Price, Quote & Chart | MEXC",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.041,
-        "source": "MEXC",
-        "published_utc": "2026-06-03T10:40:20+00:00"
       }
     },
     {
@@ -812,7 +770,7 @@
       "catalyst": {
         "headline": "LightInTheBox names Jian He as chairman of the board",
         "sentiment": "Neutral",
-        "sentiment_score": 0.118,
+        "sentiment_score": 0.102,
         "source": "Investing.com",
         "published_utc": "2026-06-03T13:08:53+00:00"
       }
@@ -820,12 +778,12 @@
     {
       "symbol": "LTC",
       "name": null,
-      "price": 35.3,
-      "pct_change": -1.781,
+      "price": 35.19,
+      "pct_change": -2.087,
       "exchange": null,
       "list": "news",
-      "volume": 222275,
-      "market_cap": 1806705397.0,
+      "volume": 238112,
+      "market_cap": 1801075437.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -833,7 +791,7 @@
       "catalyst": {
         "headline": "LTC Properties adds MorningStar Senior Living as 11th SHOP operator after $54M acquisition",
         "sentiment": "Bullish",
-        "sentiment_score": 0.412,
+        "sentiment_score": 0.434,
         "source": "McKnight's Senior Living",
         "published_utc": "2026-06-03T12:09:04+00:00"
       }
@@ -841,12 +799,12 @@
     {
       "symbol": "LVO",
       "name": null,
-      "price": 6.4678,
-      "pct_change": -3.466,
+      "price": 6.49,
+      "pct_change": -3.134,
       "exchange": null,
       "list": "news",
-      "volume": 117102,
-      "market_cap": 87129305.0,
+      "volume": 118639,
+      "market_cap": 87428367.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -854,7 +812,7 @@
       "catalyst": {
         "headline": "LiveOne (Nasdaq: LVO) Collaborates with AT&T (NYSE: T) to",
         "sentiment": "Bullish",
-        "sentiment_score": 0.445,
+        "sentiment_score": 0.417,
         "source": "GlobeNewswire",
         "published_utc": "2026-06-03T14:00:18+00:00"
       }
@@ -862,12 +820,12 @@
     {
       "symbol": "MBC",
       "name": null,
-      "price": 8.475,
-      "pct_change": -0.059,
+      "price": 8.455,
+      "pct_change": -0.295,
       "exchange": null,
       "list": "news",
-      "volume": 3141577,
-      "market_cap": 1084669400.0,
+      "volume": 3201034,
+      "market_cap": 1082109708.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -875,7 +833,7 @@
       "catalyst": {
         "headline": "Tuesday\u2019s insider activity: Big buys at Radian and MasterBrand",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.281,
+        "sentiment_score": 0.264,
         "source": "Investing.com",
         "published_utc": "2026-06-03T13:09:28+00:00"
       }
@@ -883,12 +841,12 @@
     {
       "symbol": "MCBS",
       "name": null,
-      "price": 32.635,
-      "pct_change": -1.345,
+      "price": 32.62,
+      "pct_change": -1.391,
       "exchange": null,
       "list": "news",
-      "volume": 47088,
-      "market_cap": 935320471.0,
+      "volume": 48869,
+      "market_cap": 934890570.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -896,41 +854,20 @@
       "catalyst": {
         "headline": "MCBS SEC Filings - Metrocity Bankshares Inc 10-K, 10-Q, 8-K Forms",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.306,
+        "sentiment_score": 0.348,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:09:11+00:00"
       }
     },
     {
-      "symbol": "MCK",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "McKesson Corporation stock (US58155Q1031): Apollo investment reshapes medical-surgical unit as shares hover above USD 730",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.457,
-        "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T17:31:08+00:00"
-      }
-    },
-    {
       "symbol": "MGRE",
       "name": null,
-      "price": 23.9,
-      "pct_change": -0.209,
+      "price": 23.93,
+      "pct_change": -0.084,
       "exchange": null,
       "list": "news",
-      "volume": 26731,
-      "market_cap": 679048306.0,
+      "volume": 29038,
+      "market_cap": 679900668.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -938,7 +875,7 @@
       "catalyst": {
         "headline": "Affiliated Managers Gains 7.7% YTD: Should You Buy the Stock Now?",
         "sentiment": "Neutral",
-        "sentiment_score": 0.033,
+        "sentiment_score": 0.017,
         "source": "TradingView",
         "published_utc": "2026-06-03T13:09:25+00:00"
       }
@@ -946,12 +883,12 @@
     {
       "symbol": "MLKN",
       "name": null,
-      "price": 14.75,
-      "pct_change": -2.026,
+      "price": 14.73,
+      "pct_change": -2.159,
       "exchange": null,
       "list": "news",
-      "volume": 305239,
-      "market_cap": 1008527297.0,
+      "volume": 335285,
+      "market_cap": 1007159802.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -959,7 +896,7 @@
       "catalyst": {
         "headline": "Herman Miller Bets Its Future on Two of Design\u2019s Quietest Visionaries",
         "sentiment": "Bullish",
-        "sentiment_score": 0.432,
+        "sentiment_score": 0.43,
         "source": "Architect Magazine",
         "published_utc": "2026-06-03T14:26:22+00:00"
       }
@@ -967,12 +904,12 @@
     {
       "symbol": "MMI",
       "name": null,
-      "price": 29.06,
-      "pct_change": -3.295,
+      "price": 28.8996,
+      "pct_change": -3.828,
       "exchange": null,
       "list": "news",
-      "volume": 121851,
-      "market_cap": 1099101740.0,
+      "volume": 132743,
+      "market_cap": 1093035122.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -980,7 +917,7 @@
       "catalyst": {
         "headline": "Marcus & Millichap Brokers $4.85M Sale of Miami Apartment Building",
         "sentiment": "Bullish",
-        "sentiment_score": 0.421,
+        "sentiment_score": 0.425,
         "source": "Yield PRO",
         "published_utc": "2026-06-03T15:10:29+00:00"
       }
@@ -1001,20 +938,41 @@
       "catalyst": {
         "headline": "Anthropic Picks Morgan Stanley, Goldman Sachs to Lead IPO",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.302,
-        "source": "Bloomberg.com",
-        "published_utc": "2026-06-03T17:03:44+00:00"
+        "sentiment_score": 0.241,
+        "source": "AdvisorHub",
+        "published_utc": "2026-06-03T18:18:02+00:00"
+      }
+    },
+    {
+      "symbol": "MU",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "TD (NYSE: TD) offers MU\u2011linked autocallable notes with up to 28% contingent rate",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.221,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T18:17:35+00:00"
       }
     },
     {
       "symbol": "MUX",
       "name": null,
-      "price": 21.04,
-      "pct_change": -5.693,
+      "price": 21.1454,
+      "pct_change": -5.22,
       "exchange": null,
       "list": "news",
-      "volume": 373190,
-      "market_cap": 1261029454.0,
+      "volume": 391538,
+      "market_cap": 1267346589.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1022,7 +980,7 @@
       "catalyst": {
         "headline": "McEwen Inc. Announces 2026 Annual Meeting and Live Bullpen Q&A Featuring Leadership and Los Azules Copper Project Update",
         "sentiment": "Bullish",
-        "sentiment_score": 0.448,
+        "sentiment_score": 0.402,
         "source": "Minichart",
         "published_utc": "2026-06-03T12:40:24+00:00"
       }
@@ -1030,12 +988,12 @@
     {
       "symbol": "MYFW",
       "name": null,
-      "price": 28.54,
-      "pct_change": -1.789,
+      "price": 28.52,
+      "pct_change": -1.858,
       "exchange": null,
       "list": "news",
-      "volume": 7265,
-      "market_cap": 277664747.0,
+      "volume": 8412,
+      "market_cap": 277470167.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1043,7 +1001,7 @@
       "catalyst": {
         "headline": "First Western Financial 2026 Shareholder Meeting Highlights Strong Growth, Strategic Expansion, and Robust Financial Performance",
         "sentiment": "Bullish",
-        "sentiment_score": 0.878,
+        "sentiment_score": 0.884,
         "source": "Minichart",
         "published_utc": "2026-06-03T13:39:28+00:00"
       }
@@ -1051,12 +1009,12 @@
     {
       "symbol": "NABL",
       "name": null,
-      "price": 3.85,
-      "pct_change": -7.674,
+      "price": 3.7711,
+      "pct_change": -9.566,
       "exchange": null,
       "list": "news",
-      "volume": 660174,
-      "market_cap": 725256417.0,
+      "volume": 708536,
+      "market_cap": 710393369.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1064,7 +1022,7 @@
       "catalyst": {
         "headline": "N-able, Inc. 8-K SEC Filing Details for May 28, 2026 \u2013 Company Information, Stock, and Compliance 17",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.274,
+        "sentiment_score": 0.273,
         "source": "Minichart",
         "published_utc": "2026-06-03T12:40:14+00:00"
       }
@@ -1072,12 +1030,12 @@
     {
       "symbol": "NAGE",
       "name": null,
-      "price": 3.44,
-      "pct_change": -2.825,
+      "price": 3.445,
+      "pct_change": -2.684,
       "exchange": null,
       "list": "news",
-      "volume": 341566,
-      "market_cap": 273976485.0,
+      "volume": 369267,
+      "market_cap": 274374707.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1085,7 +1043,7 @@
       "catalyst": {
         "headline": "Niagen Bioscience to Present at the 16th Annual East Coast IDEAS Investor Conference",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.28,
+        "sentiment_score": 0.298,
         "source": "standard-journal.com",
         "published_utc": "2026-06-03T12:40:15+00:00"
       }
@@ -1097,7 +1055,7 @@
       "pct_change": -4.524,
       "exchange": null,
       "list": "news",
-      "volume": 1402264,
+      "volume": 1423480,
       "market_cap": 85636159.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1106,7 +1064,7 @@
       "catalyst": {
         "headline": "NeoVolta CEO on FEOC-Compliant BESS Joint Venture with PotisEdge and Longi - News and Statistics",
         "sentiment": "Bullish",
-        "sentiment_score": 0.442,
+        "sentiment_score": 0.438,
         "source": "IndexBox",
         "published_utc": "2026-06-03T13:39:29+00:00"
       }
@@ -1114,12 +1072,12 @@
     {
       "symbol": "NEXN",
       "name": null,
-      "price": 8.21,
-      "pct_change": -3.977,
+      "price": 8.205,
+      "pct_change": -4.035,
       "exchange": null,
       "list": "news",
-      "volume": 130820,
-      "market_cap": 538269521.0,
+      "volume": 146771,
+      "market_cap": 537941707.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1127,41 +1085,20 @@
       "catalyst": {
         "headline": "World Cup 2026 ads move to your TV home screen in Nexxen\u2013V deal",
         "sentiment": "Bullish",
-        "sentiment_score": 0.425,
+        "sentiment_score": 0.392,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:40:45+00:00"
       }
     },
     {
-      "symbol": "NGVC",
-      "name": null,
-      "price": 28.875,
-      "pct_change": -0.773,
-      "exchange": null,
-      "list": "news",
-      "volume": 88730,
-      "market_cap": 665302696.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Natural Grocers\u00ae Celebrates Oklahoma Day with a Special Gift and Savings June 7-9, 2026",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.435,
-        "source": "Morningstar",
-        "published_utc": "2026-06-03T10:40:40+00:00"
-      }
-    },
-    {
       "symbol": "NOMD",
       "name": null,
-      "price": 9.915,
-      "pct_change": -1.637,
+      "price": 9.88,
+      "pct_change": -1.984,
       "exchange": null,
       "list": "news",
-      "volume": 438116,
-      "market_cap": 1408783602.0,
+      "volume": 478672,
+      "market_cap": 1403810589.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1169,7 +1106,7 @@
       "catalyst": {
         "headline": "What Nomad Foods (NOMD)'s Analyst Upgrade and UK Investment Push Means For Shareholders",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.345,
+        "sentiment_score": 0.305,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T13:40:42+00:00"
       }
@@ -1177,12 +1114,12 @@
     {
       "symbol": "NRIM",
       "name": null,
-      "price": 23.81,
-      "pct_change": -2.057,
+      "price": 23.82,
+      "pct_change": -2.016,
       "exchange": null,
       "list": "news",
-      "volume": 60482,
-      "market_cap": 529647878.0,
+      "volume": 63626,
+      "market_cap": 529870326.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1190,7 +1127,7 @@
       "catalyst": {
         "headline": "Northrim Bancorp (NRIM) grants director Joseph Marushack 1,456 RSUs",
         "sentiment": "Neutral",
-        "sentiment_score": 0.03,
+        "sentiment_score": 0.034,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T16:09:24+00:00"
       }
@@ -1198,12 +1135,12 @@
     {
       "symbol": "NRXP",
       "name": null,
-      "price": 4.135,
-      "pct_change": -10.498,
+      "price": 4.195,
+      "pct_change": -9.199,
       "exchange": null,
       "list": "news",
-      "volume": 3778620,
-      "market_cap": 149806882.0,
+      "volume": 3854824,
+      "market_cap": 151980621.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1211,7 +1148,7 @@
       "catalyst": {
         "headline": "NRx Pharmaceuticals Prices $20 Million Public Stock Offering",
         "sentiment": "Bullish",
-        "sentiment_score": 0.533,
+        "sentiment_score": 0.53,
         "source": "citybiz",
         "published_utc": "2026-06-03T15:07:02+00:00"
       }
@@ -1219,12 +1156,12 @@
     {
       "symbol": "NTST",
       "name": null,
-      "price": 19.635,
-      "pct_change": -1.628,
+      "price": 19.595,
+      "pct_change": -1.829,
       "exchange": null,
       "list": "news",
-      "volume": 403792,
-      "market_cap": 1909712018.0,
+      "volume": 430059,
+      "market_cap": 1905821594.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1232,7 +1169,7 @@
       "catalyst": {
         "headline": "NETSTREIT Highlights Strong Portfolio and Balance Sheet Position",
         "sentiment": "Bullish",
-        "sentiment_score": 0.412,
+        "sentiment_score": 0.43,
         "source": "The Globe and Mail",
         "published_utc": "2026-06-03T13:09:17+00:00"
       }
@@ -1253,7 +1190,7 @@
       "catalyst": {
         "headline": "Nova Minerals (ASX: NVA) shifts to U.S. holding company as ASX trading halts",
         "sentiment": "Neutral",
-        "sentiment_score": 0.114,
+        "sentiment_score": 0.134,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:09:47+00:00"
       }
@@ -1261,12 +1198,12 @@
     {
       "symbol": "NVGS",
       "name": null,
-      "price": 21.98,
-      "pct_change": -1.08,
+      "price": 21.87,
+      "pct_change": -1.575,
       "exchange": null,
       "list": "news",
-      "volume": 99833,
-      "market_cap": 1434204759.0,
+      "volume": 106720,
+      "market_cap": 1427027210.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1274,7 +1211,7 @@
       "catalyst": {
         "headline": "Navigator Gas Bets On Supply Chain Shifts As US Exports Gain From Middle East Disruption",
         "sentiment": "Bullish",
-        "sentiment_score": 0.48,
+        "sentiment_score": 0.499,
         "source": "Benzinga",
         "published_utc": "2026-06-03T14:10:34+00:00"
       }
@@ -1282,12 +1219,12 @@
     {
       "symbol": "NVRI",
       "name": null,
-      "price": 18.005,
-      "pct_change": -6.224,
+      "price": 17.7414,
+      "pct_change": -7.597,
       "exchange": null,
       "list": "news",
-      "volume": 987825,
-      "market_cap": 1489114364.0,
+      "volume": 1195868,
+      "market_cap": 1467313167.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1295,7 +1232,7 @@
       "catalyst": {
         "headline": "ENVIRI Corp (NVRI) director disposes 101,925 shares in $15-per-share merger and spin",
         "sentiment": "Neutral",
-        "sentiment_score": 0.032,
+        "sentiment_score": 0.03,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T15:22:43+00:00"
       }
@@ -1303,12 +1240,12 @@
     {
       "symbol": "NXDT",
       "name": null,
-      "price": 5.16,
-      "pct_change": -0.578,
+      "price": 5.145,
+      "pct_change": -0.867,
       "exchange": null,
       "list": "news",
-      "volume": 74693,
-      "market_cap": 266894694.0,
+      "volume": 79025,
+      "market_cap": 266118838.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1316,7 +1253,7 @@
       "catalyst": {
         "headline": "NexPoint Diversified Real Estate Trust Adopts 2026 Long Term Incentive Plan \u2013 SEC 8-K Filing Details",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.322,
+        "sentiment_score": 0.308,
         "source": "Minichart",
         "published_utc": "2026-06-03T14:09:46+00:00"
       }
@@ -1324,12 +1261,12 @@
     {
       "symbol": "OBE",
       "name": null,
-      "price": 12.255,
-      "pct_change": -0.608,
+      "price": 12.225,
+      "pct_change": -0.852,
       "exchange": null,
       "list": "news",
-      "volume": 308670,
-      "market_cap": 828091637.0,
+      "volume": 328341,
+      "market_cap": 826064485.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1337,7 +1274,7 @@
       "catalyst": {
         "headline": "Obsidian Energy (TSX: OBE) to acquire Belly River assets in $96M cash deal",
         "sentiment": "Bullish",
-        "sentiment_score": 0.4,
+        "sentiment_score": 0.438,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T15:10:45+00:00"
       }
@@ -1345,12 +1282,12 @@
     {
       "symbol": "OBIO",
       "name": null,
-      "price": 3.84,
-      "pct_change": -1.79,
+      "price": 3.835,
+      "pct_change": -1.918,
       "exchange": null,
       "list": "news",
-      "volume": 173218,
-      "market_cap": 229941946.0,
+      "volume": 177671,
+      "market_cap": 229642542.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1358,7 +1295,7 @@
       "catalyst": {
         "headline": "New hires at Orchestra BioMed receive options on 85,500 shares",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.254,
+        "sentiment_score": 0.294,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T16:09:59+00:00"
       }
@@ -1366,12 +1303,12 @@
     {
       "symbol": "OCFC",
       "name": null,
-      "price": 17.465,
-      "pct_change": -3.241,
+      "price": 17.4,
+      "pct_change": -3.601,
       "exchange": null,
       "list": "news",
-      "volume": 961213,
-      "market_cap": 1005985205.0,
+      "volume": 1049654,
+      "market_cap": 1002241201.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1379,7 +1316,7 @@
       "catalyst": {
         "headline": "OceanFirst (NASDAQ: OCFC) director reports no common stock owned on Form 3",
         "sentiment": "Neutral",
-        "sentiment_score": 0.025,
+        "sentiment_score": 0.017,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T15:56:09+00:00"
       }
@@ -1387,12 +1324,12 @@
     {
       "symbol": "OLMA",
       "name": null,
-      "price": 10.35,
-      "pct_change": -3.181,
+      "price": 10.41,
+      "pct_change": -2.619,
       "exchange": null,
       "list": "news",
-      "volume": 623061,
-      "market_cap": 904046325.0,
+      "volume": 662123,
+      "market_cap": 909287173.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1400,7 +1337,7 @@
       "catalyst": {
         "headline": "A Look At Olema Pharmaceuticals (OLMA) Valuation After New Bayer Collaboration And OP-3136 Phase 1 Data",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.302,
+        "sentiment_score": 0.345,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T14:10:19+00:00"
       }
@@ -1408,12 +1345,12 @@
     {
       "symbol": "OTLY",
       "name": null,
-      "price": 8.54,
-      "pct_change": 1.425,
+      "price": 8.55,
+      "pct_change": 1.544,
       "exchange": null,
       "list": "news",
-      "volume": 143232,
-      "market_cap": 266661500.0,
+      "volume": 149286,
+      "market_cap": 266973750.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1421,7 +1358,7 @@
       "catalyst": {
         "headline": "Oatly (NASDAQ: OTLY) grants RSUs and stock options to Global President & COO",
         "sentiment": "Neutral",
-        "sentiment_score": 0.01,
+        "sentiment_score": 0.033,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T16:10:35+00:00"
       }
@@ -1429,12 +1366,12 @@
     {
       "symbol": "OVID",
       "name": null,
-      "price": 2.45,
-      "pct_change": 2.083,
+      "price": 2.46,
+      "pct_change": 2.5,
       "exchange": null,
       "list": "news",
-      "volume": 1199356,
-      "market_cap": 457268250.0,
+      "volume": 1227686,
+      "market_cap": 459134651.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1442,7 +1379,7 @@
       "catalyst": {
         "headline": "Ovid Therapeutics appoints Anna Greka to board of directors",
         "sentiment": "Bullish",
-        "sentiment_score": 0.478,
+        "sentiment_score": 0.472,
         "source": "Investing.com",
         "published_utc": "2026-06-03T11:39:07+00:00"
       }
@@ -1450,12 +1387,12 @@
     {
       "symbol": "PAR",
       "name": null,
-      "price": 14.5,
-      "pct_change": -5.167,
+      "price": 14.41,
+      "pct_change": -5.755,
       "exchange": null,
       "list": "news",
-      "volume": 747833,
-      "market_cap": 598069886.0,
+      "volume": 777351,
+      "market_cap": 594357728.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1463,7 +1400,7 @@
       "catalyst": {
         "headline": "Reinhart Partners LLC. Has $47.52 Million Position in PAR Technology Corporation $PAR",
         "sentiment": "Neutral",
-        "sentiment_score": 0.123,
+        "sentiment_score": 0.106,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T11:10:41+00:00"
       }
@@ -1471,12 +1408,12 @@
     {
       "symbol": "PDYN",
       "name": null,
-      "price": 7.895,
-      "pct_change": -8.198,
+      "price": 7.91,
+      "pct_change": -8.023,
       "exchange": null,
       "list": "news",
-      "volume": 1511095,
-      "market_cap": 372993156.0,
+      "volume": 1553210,
+      "market_cap": 373701820.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1484,41 +1421,20 @@
       "catalyst": {
         "headline": "Palladyne AI to Participate in Jefferies 2026 Defense Tech Summit",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.301,
+        "sentiment_score": 0.303,
         "source": "Business Wire",
         "published_utc": "2026-06-03T11:39:09+00:00"
       }
     },
     {
-      "symbol": "PEP",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Chemically recycled plastics now used in Gatorade bottles",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.338,
-        "source": "Plastics News",
-        "published_utc": "2026-06-03T17:34:00+00:00"
-      }
-    },
-    {
       "symbol": "PERI",
       "name": null,
-      "price": 8.01,
-      "pct_change": -1.958,
+      "price": 8.0,
+      "pct_change": -2.081,
       "exchange": null,
       "list": "news",
-      "volume": 530316,
-      "market_cap": 315035855.0,
+      "volume": 542548,
+      "market_cap": 314642552.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1526,7 +1442,7 @@
       "catalyst": {
         "headline": "Chat your way to a billboard buy: Perion's AI DOOH planner",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.316,
+        "sentiment_score": 0.343,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:11:05+00:00"
       }
@@ -1534,12 +1450,12 @@
     {
       "symbol": "PGNY",
       "name": null,
-      "price": 24.84,
-      "pct_change": -1.115,
+      "price": 24.9,
+      "pct_change": -0.876,
       "exchange": null,
       "list": "news",
-      "volume": 736708,
-      "market_cap": 1945776071.0,
+      "volume": 777147,
+      "market_cap": 1950476013.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1547,7 +1463,7 @@
       "catalyst": {
         "headline": "Allison Swartz (PGNY) files Form 144 to sell 1,199 vested shares (06/03/2026)",
         "sentiment": "Neutral",
-        "sentiment_score": 0.041,
+        "sentiment_score": 0.015,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T14:10:54+00:00"
       }
@@ -1555,12 +1471,12 @@
     {
       "symbol": "PNNT",
       "name": null,
-      "price": 3.865,
-      "pct_change": -2.645,
+      "price": 3.87,
+      "pct_change": -2.519,
       "exchange": null,
       "list": "news",
-      "volume": 422600,
-      "market_cap": 252369403.0,
+      "volume": 432642,
+      "market_cap": 252695884.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1568,7 +1484,7 @@
       "catalyst": {
         "headline": "PennantPark Investment Corporation declares $0.08 monthly distribution for June 2026",
         "sentiment": "Bullish",
-        "sentiment_score": 0.407,
+        "sentiment_score": 0.426,
         "source": "TradingView",
         "published_utc": "2026-06-03T16:39:51+00:00"
       }
@@ -1587,22 +1503,22 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "IDEX Corporation stock (US45167R1041): Oppenheimer lifts price target after latest move in New York",
+        "headline": "Pentair plc stock (IE00BLS0VV05): credit facility refinancing in focus after recent loan update",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.174,
+        "sentiment_score": 0.344,
         "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T17:07:52+00:00"
+        "published_utc": "2026-06-03T18:26:17+00:00"
       }
     },
     {
       "symbol": "PNTG",
       "name": null,
-      "price": 30.5899,
-      "pct_change": -0.875,
+      "price": 30.255,
+      "pct_change": -1.96,
       "exchange": null,
       "list": "news",
-      "volume": 175679,
-      "market_cap": 1063536092.0,
+      "volume": 212480,
+      "market_cap": 1051892437.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1610,20 +1526,41 @@
       "catalyst": {
         "headline": "Pennant Expands Senior Living Presence with Pleasant Hill, California Community",
         "sentiment": "Bullish",
-        "sentiment_score": 0.45,
+        "sentiment_score": 0.47,
         "source": "The Manila Times",
         "published_utc": "2026-06-03T17:07:00+00:00"
       }
     },
     {
-      "symbol": "PRLB",
+      "symbol": "PODD",
       "name": null,
-      "price": 75.02,
-      "pct_change": -4.128,
+      "price": null,
+      "pct_change": null,
       "exchange": null,
       "list": "news",
-      "volume": 105855,
-      "market_cap": 1785029256.0,
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Mike Panos Joins Insulet as Chief Commercial Officer",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.461,
+        "source": "Medical Product Outsourcing",
+        "published_utc": "2026-06-03T18:08:21+00:00"
+      }
+    },
+    {
+      "symbol": "PRLB",
+      "name": null,
+      "price": 75.235,
+      "pct_change": -3.853,
+      "exchange": null,
+      "list": "news",
+      "volume": 111128,
+      "market_cap": 1790144976.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1631,7 +1568,7 @@
       "catalyst": {
         "headline": "Proto Labs stock hits 52-week high at $78.44",
         "sentiment": "Neutral",
-        "sentiment_score": 0.044,
+        "sentiment_score": 0.015,
         "source": "Investing.com",
         "published_utc": "2026-06-03T14:09:45+00:00"
       }
@@ -1639,12 +1576,12 @@
     {
       "symbol": "PRME",
       "name": null,
-      "price": 3.125,
-      "pct_change": -2.648,
+      "price": 3.11,
+      "pct_change": -3.115,
       "exchange": null,
       "list": "news",
-      "volume": 1813299,
-      "market_cap": 564429534.0,
+      "volume": 1949540,
+      "market_cap": 561720273.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1652,30 +1589,9 @@
       "catalyst": {
         "headline": "Prime Medicine to Present at Goldman Sachs 47th Annual Global Healthcare Conference",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.329,
+        "sentiment_score": 0.33,
         "source": "Caledonian Record",
         "published_utc": "2026-06-03T11:40:52+00:00"
-      }
-    },
-    {
-      "symbol": "PSEC",
-      "name": null,
-      "price": 2.265,
-      "pct_change": -6.405,
-      "exchange": null,
-      "list": "news",
-      "volume": 5530128,
-      "market_cap": 1134782334.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "PSEC6411731 Bond Analysis \u2014 Key Metrics",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.127,
-        "source": "TradingView",
-        "published_utc": "2026-06-03T10:40:51+00:00"
       }
     },
     {
@@ -1685,7 +1601,7 @@
       "pct_change": -1.636,
       "exchange": null,
       "list": "news",
-      "volume": 2618,
+      "volume": 2679,
       "market_cap": 437084994.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1694,7 +1610,7 @@
       "catalyst": {
         "headline": "Polestar: Unfavorable Risk Matrix (NASDAQ:PSNY)",
         "sentiment": "Neutral",
-        "sentiment_score": 0.002,
+        "sentiment_score": 0.047,
         "source": "Seeking Alpha",
         "published_utc": "2026-06-03T15:09:07+00:00"
       }
@@ -1702,12 +1618,12 @@
     {
       "symbol": "PVLA",
       "name": null,
-      "price": 113.65,
-      "pct_change": 8.579,
+      "price": 113.625,
+      "pct_change": 8.555,
       "exchange": null,
       "list": "news",
-      "volume": 463709,
-      "market_cap": 1630064221.0,
+      "volume": 469957,
+      "market_cap": 1629705650.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1715,7 +1631,7 @@
       "catalyst": {
         "headline": "Palvella Therapeutics Announces Completion of FDA Pre-NDA Meeting for QTORIN\u2122 Rapamycin in Microcystic Lymphatic Malformations",
         "sentiment": "Bullish",
-        "sentiment_score": 0.49,
+        "sentiment_score": 0.461,
         "source": "GlobeNewswire",
         "published_utc": "2026-06-03T11:10:06+00:00"
       }
@@ -1736,7 +1652,7 @@
       "catalyst": {
         "headline": "Qualcomm to Partner with Trackhouse Racing for PROJECT91 Entry in Inaugural NASCAR San Diego Cup Series Race",
         "sentiment": "Bullish",
-        "sentiment_score": 0.498,
+        "sentiment_score": 0.468,
         "source": "Speedway Digest",
         "published_utc": "2026-06-03T18:01:17+00:00"
       }
@@ -1748,7 +1664,7 @@
       "pct_change": -2.477,
       "exchange": null,
       "list": "news",
-      "volume": 76864,
+      "volume": 76975,
       "market_cap": 52144025.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1757,7 +1673,7 @@
       "catalyst": {
         "headline": "QT Imaging Receives Saudi Arabia FDA Regulatory Clearance",
         "sentiment": "Bullish",
-        "sentiment_score": 0.815,
+        "sentiment_score": 0.84,
         "source": "Business Wire",
         "published_utc": "2026-06-03T12:10:25+00:00"
       }
@@ -1765,12 +1681,12 @@
     {
       "symbol": "QTRX",
       "name": null,
-      "price": 3.57,
-      "pct_change": 2.0,
+      "price": 3.54,
+      "pct_change": 1.143,
       "exchange": null,
       "list": "news",
-      "volume": 451682,
-      "market_cap": 168168352.0,
+      "volume": 477024,
+      "market_cap": 166755173.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1778,7 +1694,7 @@
       "catalyst": {
         "headline": "Quanterix CEO to host June 9 fireside chat at Goldman Sachs healthcare event",
         "sentiment": "Neutral",
-        "sentiment_score": 0.035,
+        "sentiment_score": 0.022,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:09:08+00:00"
       }
@@ -1790,7 +1706,7 @@
       "pct_change": 0.519,
       "exchange": null,
       "list": "news",
-      "volume": 1773562,
+      "volume": 1861574,
       "market_cap": 317207260.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1799,7 +1715,7 @@
       "catalyst": {
         "headline": "Rocket Pharmaceuticals, Inc. Stock 12\u2011Month Price Target Raised to $9.39, Implies 225% Upside",
         "sentiment": "Bullish",
-        "sentiment_score": 0.512,
+        "sentiment_score": 0.516,
         "source": "TradingView",
         "published_utc": "2026-06-03T14:39:08+00:00"
       }
@@ -1807,12 +1723,12 @@
     {
       "symbol": "RENT",
       "name": null,
-      "price": 3.8,
-      "pct_change": 2.151,
+      "price": 3.815,
+      "pct_change": 2.554,
       "exchange": null,
       "list": "news",
-      "volume": 213970,
-      "market_cap": 127236852.0,
+      "volume": 218169,
+      "market_cap": 127739102.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1820,7 +1736,7 @@
       "catalyst": {
         "headline": "Rent the Runway, Inc. Announces First Quarter 2026 Results",
         "sentiment": "Bullish",
-        "sentiment_score": 0.451,
+        "sentiment_score": 0.471,
         "source": "GlobeNewswire",
         "published_utc": "2026-06-03T12:10:18+00:00"
       }
@@ -1828,12 +1744,12 @@
     {
       "symbol": "RGCO",
       "name": null,
-      "price": 22.27,
-      "pct_change": -2.836,
+      "price": 22.4199,
+      "pct_change": -2.182,
       "exchange": null,
       "list": "news",
-      "volume": 4998,
-      "market_cap": 231767364.0,
+      "volume": 6030,
+      "market_cap": 233327397.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1841,7 +1757,7 @@
       "catalyst": {
         "headline": "RGC Resources VP Miles Christen Brooke purchases $100 in stock",
         "sentiment": "Bullish",
-        "sentiment_score": 0.483,
+        "sentiment_score": 0.473,
         "source": "Investing.com",
         "published_utc": "2026-06-03T16:39:40+00:00"
       }
@@ -1849,12 +1765,12 @@
     {
       "symbol": "RGNX",
       "name": null,
-      "price": 6.695,
-      "pct_change": 2.684,
+      "price": 6.685,
+      "pct_change": 2.531,
       "exchange": null,
       "list": "news",
-      "volume": 688647,
-      "market_cap": 346115573.0,
+      "volume": 737663,
+      "market_cap": 345598596.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1862,7 +1778,7 @@
       "catalyst": {
         "headline": "REGENXBIO (RGNX) offers exchange of 2.9M eligible options for replacements",
         "sentiment": "Neutral",
-        "sentiment_score": 0.05,
+        "sentiment_score": 0.023,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:39:37+00:00"
       }
@@ -1874,7 +1790,7 @@
       "pct_change": -1.615,
       "exchange": null,
       "list": "news",
-      "volume": 17715,
+      "volume": 18161,
       "market_cap": 188551593.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1883,7 +1799,7 @@
       "catalyst": {
         "headline": "RCI Hospitality declares $0.08 dividend",
         "sentiment": "Bullish",
-        "sentiment_score": 0.366,
+        "sentiment_score": 0.359,
         "source": "MSN",
         "published_utc": "2026-06-03T13:10:48+00:00"
       }
@@ -1895,7 +1811,7 @@
       "pct_change": -0.645,
       "exchange": null,
       "list": "news",
-      "volume": 33511,
+      "volume": 33631,
       "market_cap": 611161203.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1904,7 +1820,7 @@
       "catalyst": {
         "headline": "B.Riley raises Hive Digital stock price target on HPC growth outlook",
         "sentiment": "Neutral",
-        "sentiment_score": 0.026,
+        "sentiment_score": 0.033,
         "source": "Investing.com",
         "published_utc": "2026-06-03T13:10:44+00:00"
       }
@@ -1912,12 +1828,12 @@
     {
       "symbol": "RLMD",
       "name": null,
-      "price": 6.31,
-      "pct_change": -1.713,
+      "price": 6.335,
+      "pct_change": -1.324,
       "exchange": null,
       "list": "news",
-      "volume": 415321,
-      "market_cap": 661857307.0,
+      "volume": 454796,
+      "market_cap": 664479563.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1933,12 +1849,12 @@
     {
       "symbol": "ROCK",
       "name": null,
-      "price": 37.19,
-      "pct_change": -2.209,
+      "price": 37.25,
+      "pct_change": -2.051,
       "exchange": null,
       "list": "news",
-      "volume": 108942,
-      "market_cap": 1103126768.0,
+      "volume": 120831,
+      "market_cap": 1104906483.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1946,7 +1862,7 @@
       "catalyst": {
         "headline": "Gibraltar CEO, CFO heading to Wells Fargo conference for investor meetings",
         "sentiment": "Neutral",
-        "sentiment_score": 0.107,
+        "sentiment_score": 0.12,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:11:06+00:00"
       }
@@ -1954,12 +1870,12 @@
     {
       "symbol": "RPD",
       "name": null,
-      "price": 7.68,
-      "pct_change": -8.897,
+      "price": 7.665,
+      "pct_change": -9.075,
       "exchange": null,
       "list": "news",
-      "volume": 1322439,
-      "market_cap": 513259146.0,
+      "volume": 1365831,
+      "market_cap": 512256687.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1967,7 +1883,7 @@
       "catalyst": {
         "headline": "Rapid7 CEO who championed Tampa exits, board member takes helm",
         "sentiment": "Neutral",
-        "sentiment_score": 0.1,
+        "sentiment_score": 0.124,
         "source": "The Business Journals",
         "published_utc": "2026-06-03T15:40:13+00:00"
       }
@@ -1975,12 +1891,12 @@
     {
       "symbol": "RPT",
       "name": null,
-      "price": 14.13,
-      "pct_change": -1.67,
+      "price": 14.0531,
+      "pct_change": -2.205,
       "exchange": null,
       "list": "news",
-      "volume": 24813,
-      "market_cap": 109826329.0,
+      "volume": 25747,
+      "market_cap": 109228619.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1988,7 +1904,7 @@
       "catalyst": {
         "headline": "Rithm Property Trust Inc. Announces 2026 Omnibus Incentive Plan in SEC Form 8-K Filing",
         "sentiment": "Neutral",
-        "sentiment_score": 0.017,
+        "sentiment_score": 0.013,
         "source": "Minichart",
         "published_utc": "2026-06-03T13:40:01+00:00"
       }
@@ -1996,12 +1912,12 @@
     {
       "symbol": "RXT",
       "name": null,
-      "price": 5.2121,
-      "pct_change": -4.365,
+      "price": 5.22,
+      "pct_change": -4.22,
       "exchange": null,
       "list": "news",
-      "volume": 8109800,
-      "market_cap": 1298972587.0,
+      "volume": 8482814,
+      "market_cap": 1300941445.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2009,41 +1925,20 @@
       "catalyst": {
         "headline": "Is Rackspace (RXT) Using AMD-Powered AI Cloud Deals To Redefine Its Core Business Model?",
         "sentiment": "Neutral",
-        "sentiment_score": 0.11,
+        "sentiment_score": 0.135,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T15:39:55+00:00"
       }
     },
     {
-      "symbol": "RZLT",
-      "name": null,
-      "price": 4.145,
-      "pct_change": 3.625,
-      "exchange": null,
-      "list": "news",
-      "volume": 3321959,
-      "market_cap": 399131712.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Wedbush Adjusts Price Target on Rezolute to $6 From $5, Maintains Outperform Rating",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.462,
-        "source": "marketscreener.com",
-        "published_utc": "2026-06-03T10:40:14+00:00"
-      }
-    },
-    {
       "symbol": "SATL",
       "name": null,
-      "price": 7.755,
-      "pct_change": -10.657,
+      "price": 7.795,
+      "pct_change": -10.196,
       "exchange": null,
       "list": "news",
-      "volume": 6507620,
-      "market_cap": 1149632972.0,
+      "volume": 6809774,
+      "market_cap": 1155562736.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2051,7 +1946,7 @@
       "catalyst": {
         "headline": "Satellogic Inc. Class A Trade Ideas \u2014 LS:A415FE",
         "sentiment": "Bullish",
-        "sentiment_score": 0.528,
+        "sentiment_score": 0.524,
         "source": "TradingView",
         "published_utc": "2026-06-03T14:39:53+00:00"
       }
@@ -2059,12 +1954,12 @@
     {
       "symbol": "SCL",
       "name": null,
-      "price": 51.515,
-      "pct_change": -1.444,
+      "price": 51.455,
+      "pct_change": -1.559,
       "exchange": null,
       "list": "news",
-      "volume": 30745,
-      "market_cap": 1170076834.0,
+      "volume": 33824,
+      "market_cap": 1168714035.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2072,7 +1967,7 @@
       "catalyst": {
         "headline": "US Detergent Acid Market in Crisis \u2014 LABSA Rises 4.78% as Small Buyers Locked Out of Collapsed Supply Chain",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.325,
+        "sentiment_score": 0.334,
         "source": "ChemAnalyst",
         "published_utc": "2026-06-03T14:09:31+00:00"
       }
@@ -2080,12 +1975,12 @@
     {
       "symbol": "SFST",
       "name": null,
-      "price": 56.525,
-      "pct_change": -2.911,
+      "price": 56.4725,
+      "pct_change": -3.002,
       "exchange": null,
       "list": "news",
-      "volume": 44897,
-      "market_cap": 534453202.0,
+      "volume": 49348,
+      "market_cap": 533956805.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2093,7 +1988,7 @@
       "catalyst": {
         "headline": "Southern First Bancshares appoints Bryan Kennedy to board",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.339,
+        "sentiment_score": 0.337,
         "source": "Investing.com",
         "published_utc": "2026-06-03T13:09:08+00:00"
       }
@@ -2114,7 +2009,7 @@
       "catalyst": {
         "headline": "Sintx Technologies, Inc. announced that it has received $4.5 million in funding",
         "sentiment": "Bullish",
-        "sentiment_score": 0.549,
+        "sentiment_score": 0.529,
         "source": "www.marketscreener.com",
         "published_utc": "2026-06-03T18:06:25+00:00"
       }
@@ -2122,12 +2017,12 @@
     {
       "symbol": "SLDB",
       "name": null,
-      "price": 6.83,
-      "pct_change": 3.799,
+      "price": 6.88,
+      "pct_change": 4.559,
       "exchange": null,
       "list": "news",
-      "volume": 495878,
-      "market_cap": 672410809.0,
+      "volume": 551937,
+      "market_cap": 677333289.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2135,7 +2030,7 @@
       "catalyst": {
         "headline": "SLDB: Duchenne and FA gene therapy programs show strong progress, with pivotal FDA meetings ahead",
         "sentiment": "Bullish",
-        "sentiment_score": 0.416,
+        "sentiment_score": 0.402,
         "source": "TradingView",
         "published_utc": "2026-06-03T14:09:43+00:00"
       }
@@ -2143,12 +2038,12 @@
     {
       "symbol": "SMA",
       "name": null,
-      "price": 30.52,
-      "pct_change": -0.619,
+      "price": 30.43,
+      "pct_change": -0.912,
       "exchange": null,
       "list": "news",
-      "volume": 361884,
-      "market_cap": 1689748803.0,
+      "volume": 375603,
+      "market_cap": 1684765927.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2156,9 +2051,30 @@
       "catalyst": {
         "headline": "SmartStop Self Storage REIT Reports Mixed May 2026 Metrics",
         "sentiment": "Neutral",
-        "sentiment_score": 0.011,
+        "sentiment_score": 0.027,
         "source": "The Globe and Mail",
         "published_utc": "2026-06-03T11:09:25+00:00"
+      }
+    },
+    {
+      "symbol": "SMWB",
+      "name": null,
+      "price": 4.165,
+      "pct_change": -4.909,
+      "exchange": null,
+      "list": "news",
+      "volume": 749073,
+      "market_cap": 362215273.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Similarweb Expands AI Ecosystem with Perplexity Collaboration Through Native AI Workflows",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.436,
+        "source": "www.marketscreener.com",
+        "published_utc": "2026-06-03T18:20:59+00:00"
       }
     },
     {
@@ -2177,7 +2093,7 @@
       "catalyst": {
         "headline": "Sanofi taps Snowflake for AI drug development push",
         "sentiment": "Bullish",
-        "sentiment_score": 0.443,
+        "sentiment_score": 0.442,
         "source": "IT Brief New Zealand",
         "published_utc": "2026-06-03T17:41:45+00:00"
       }
@@ -2185,12 +2101,12 @@
     {
       "symbol": "SPCB",
       "name": null,
-      "price": 11.3247,
-      "pct_change": -5.233,
+      "price": 11.4699,
+      "pct_change": -4.018,
       "exchange": null,
       "list": "news",
-      "volume": 76028,
-      "market_cap": 62609940.0,
+      "volume": 78103,
+      "market_cap": 63412696.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2198,72 +2114,261 @@
       "catalyst": {
         "headline": "SuperCom wins $1.8M Norway electronic monitoring contract; expands European presence",
         "sentiment": "Bullish",
-        "sentiment_score": 0.717,
+        "sentiment_score": 0.738,
         "source": "MSN",
         "published_utc": "2026-06-03T11:10:29+00:00"
       }
     },
     {
-      "symbol": "TJX",
+      "symbol": "SSII",
       "name": null,
-      "price": null,
-      "pct_change": null,
+      "price": 4.045,
+      "pct_change": 0.873,
       "exchange": null,
       "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
+      "volume": 30766,
+      "market_cap": 809532059.0,
+      "signal": "news_smallcap",
       "signals": [
-        "news_bullish"
+        "news_smallcap"
       ],
       "catalyst": {
-        "headline": "My entire wardrobe is from TJ Maxx \u2014 these are 10 shopping hacks I swear by",
+        "headline": "Lucid Capital Markets initiates SS Innovations stock with buy rating By Investing.com",
         "sentiment": "Bullish",
-        "sentiment_score": 0.422,
-        "source": "Yahoo",
-        "published_utc": "2026-06-03T17:31:00+00:00"
+        "sentiment_score": 0.522,
+        "source": "Investing.com Canada",
+        "published_utc": "2026-06-03T11:39:30+00:00"
       }
     },
     {
-      "symbol": "TSLA",
+      "symbol": "STRS",
       "name": null,
-      "price": null,
-      "pct_change": null,
+      "price": 27.83,
+      "pct_change": -2.896,
       "exchange": null,
       "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
+      "volume": 143575,
+      "market_cap": 222159181.0,
+      "signal": "news_smallcap",
       "signals": [
-        "news_bullish"
+        "news_smallcap"
       ],
       "catalyst": {
-        "headline": "Tesla rolls out unsupervised robotaxis in Austin",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.38,
-        "source": "Reuters",
-        "published_utc": "2026-06-03T16:56:45+00:00"
+        "headline": "STRS (NASDAQ: STRS) affiliate files Form 144; 3,380 RSUs noted",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.038,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T17:39:59+00:00"
       }
     },
     {
-      "symbol": "ULTA",
+      "symbol": "TATT",
       "name": null,
-      "price": null,
-      "pct_change": null,
+      "price": 43.02,
+      "pct_change": 6.591,
       "exchange": null,
       "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
+      "volume": 258517,
+      "market_cap": 558534554.0,
+      "signal": "news_smallcap",
       "signals": [
-        "news_bullish"
+        "news_smallcap"
       ],
       "catalyst": {
-        "headline": "Ulta Beauty, Inc. Stock 12\u2011Month Price Target Cut to $642.52, Implies 30% Upside",
+        "headline": "TAT Technologies Secures $45 Million in Multi-Year MRO Contracts",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.004,
+        "source": "GeneOnline",
+        "published_utc": "2026-06-03T14:40:25+00:00"
+      }
+    },
+    {
+      "symbol": "TBLA",
+      "name": null,
+      "price": 4.62,
+      "pct_change": -4.938,
+      "exchange": null,
+      "list": "news",
+      "volume": 1805794,
+      "market_cap": 1262758506.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Will Rising Profit Estimates Shift Taboola.com's (TBLA) AI and Buyback-Focused Investment Narrative?",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.266,
-        "source": "TradingView",
-        "published_utc": "2026-06-03T17:20:34+00:00"
+        "sentiment_score": 0.311,
+        "source": "Simply Wall Street",
+        "published_utc": "2026-06-03T18:33:21+00:00"
+      }
+    },
+    {
+      "symbol": "TCBIO",
+      "name": null,
+      "price": 20.7834,
+      "pct_change": 0.646,
+      "exchange": null,
+      "list": "news",
+      "volume": 6655,
+      "market_cap": 907630594.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Texas Capital Bank Data Breach Affects 86,067 Texans",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.007,
+        "source": "Claim Depot",
+        "published_utc": "2026-06-03T15:40:12+00:00"
+      }
+    },
+    {
+      "symbol": "TD",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "TD (NYSE: TD) offers MU\u2011linked autocallable notes with up to 28% contingent rate",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.216,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T18:17:35+00:00"
+      }
+    },
+    {
+      "symbol": "TDOC",
+      "name": null,
+      "price": 7.14,
+      "pct_change": -5.305,
+      "exchange": null,
+      "list": "news",
+      "volume": 3073739,
+      "market_cap": 1288863441.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "9,572-share sale notice for Teladoc (NYSE: TDOC) following RSU vesting",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.003,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T14:40:12+00:00"
+      }
+    },
+    {
+      "symbol": "TITN",
+      "name": null,
+      "price": 23.79,
+      "pct_change": 2.147,
+      "exchange": null,
+      "list": "news",
+      "volume": 154825,
+      "market_cap": 554525083.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Titan Machinery (TITN) CFO granted 21,779 shares, lifting holdings to 77,277",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.11,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T15:40:27+00:00"
+      }
+    },
+    {
+      "symbol": "TJGC",
+      "name": null,
+      "price": 6.24,
+      "pct_change": 184.932,
+      "exchange": null,
+      "list": "news",
+      "volume": 895197,
+      "market_cap": 63024000.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "TJGC Group shares start trading again on Nasdaq after May halt",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.137,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T15:39:25+00:00"
+      }
+    },
+    {
+      "symbol": "TK",
+      "name": null,
+      "price": 11.5,
+      "pct_change": -0.947,
+      "exchange": null,
+      "list": "news",
+      "volume": 337500,
+      "market_cap": 997953118.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Teekay (NYSE: TK) director receives 2,379.5652 dividend equivalent rights award",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.032,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T18:30:26+00:00"
+      }
+    },
+    {
+      "symbol": "TSCO",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Tractor Supply announces store reset",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.348,
+        "source": "Hardlines",
+        "published_utc": "2026-06-03T18:26:36+00:00"
+      }
+    },
+    {
+      "symbol": "XYL",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Pentair plc stock (IE00BLS0VV05): credit facility refinancing in focus after recent loan update",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.329,
+        "source": "AD HOC NEWS",
+        "published_utc": "2026-06-03T18:26:17+00:00"
       }
     }
   ]
