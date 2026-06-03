@@ -1,16 +1,16 @@
 {
-  "generated_utc": "2026-06-03T00:09:32Z",
+  "generated_utc": "2026-06-03T14:51:56Z",
   "watch": [
     {
-      "symbol": "DOCU",
-      "trigger": "date",
-      "trigger_date": "2026-06-03",
-      "quantity": 1,
-      "limit_price": 57.00,
-      "take_profit": 65.00,
-      "stop_loss": 51.00,
-      "good_until": "2026-06-04",
-      "note": "Pre-earnings play — reports June 4 after close. Q4 FY26 was a big beat (EPS $1.01 vs $0.71, billings >$1B first time, IAM platform $350M ARR). Entering 1 day early to capture pre-earnings momentum if Q1 FY27 continues the streak."
+      "symbol": "XOS",
+      "trigger": "pullback",
+      "trigger_price": 4.50,
+      "quantity": 9,
+      "limit_price": 4.65,
+      "take_profit": 6.50,
+      "stop_loss": 3.60,
+      "good_until": "2026-06-06",
+      "note": "AI data center Power Hub (2.5MWh, grid-independent) + U.S. Air Force EV charger demo catalyst. Too extended today (+204%, $6.78). Wait for first meaningful pullback to $4.50; that's still 2x+ from pre-news levels and gives ~40% upside to near today's close with ~20% risk. Short expiry — thesis is hot but volatile."
     },
     {
       "symbol": "HPE",
@@ -21,7 +21,7 @@
       "take_profit": 65.00,
       "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "Historic Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 growth guide raised to 29-33%. Too extended at $56 today (+19.4%). Pullback to $54 gives better R:R of ~2.75:1 with strong fundamental support."
+      "note": "Historic Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 growth guide raised to 29-33%. Currently $54.48 (near trigger). Pullback to $54 gives R:R ~2.75:1 with strong AI infrastructure fundamental support."
     },
     {
       "symbol": "QBTS",
@@ -32,18 +32,18 @@
       "take_profit": 42.00,
       "stop_loss": 27.00,
       "good_until": "2026-06-08",
-      "note": "D-Wave Quantum; quantum sector strong in 2026. NVDA NVLink spillover to quantum names. Breakout above $32 confirms continuation from current $29.91 base."
+      "note": "D-Wave Quantum; quantum sector strong in 2026. MRVL/AI halo driving compute-adjacent plays. Breakout above $32 confirms continuation from current $28.44 base. Currently -4.9% today — not chasing, watching the level."
     },
     {
-      "symbol": "PENG",
-      "trigger": "pullback",
-      "trigger_price": 62.00,
-      "quantity": 1,
-      "limit_price": 62.50,
-      "take_profit": 75.00,
-      "stop_loss": 55.00,
-      "good_until": "2026-06-08",
-      "note": "Penguin Solutions: AI workloads 60% of H1 revenue, Q2 beat, raised FY26 guide. Currently $70.71 (+18.4%) — over $65 budget. Pullback to $62 brings into budget with solid R:R of ~1.9:1."
+      "symbol": "TISI",
+      "trigger": "breakout",
+      "trigger_price": 18.00,
+      "quantity": 3,
+      "limit_price": 18.15,
+      "take_profit": 21.50,
+      "stop_loss": 16.00,
+      "good_until": "2026-06-07",
+      "note": "Team Inc. Q1 2026: revenue +8.3% YoY, Adj EBITDA +45.2%, FY guide raised, new CEO, insider buying. Currently $17.37 (+12.79% today) with no fresh-today catalyst — waiting for a clean break above $18 to confirm momentum continuation before committing."
     }
   ]
 }

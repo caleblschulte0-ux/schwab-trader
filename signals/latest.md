@@ -1,69 +1,75 @@
-# Trading Analysis — 2026-06-03T00:09:32Z
+# Trading Analysis — 2026-06-03T14:51:56Z
 
-Funnel: scanned 168 → 85 fit budget → 25 with catalyst → 6 finalists → picked 3
+Funnel: scanned 260 → 130 fit budget → 18 with catalyst → 3 finalists → picked 2
 
 ---
 
 ## Collision Guard
-Prior `orders.json` stamped 2026-06-02T22:05:35Z — ~2 hours 4 minutes ago (well over 10 min). Guard cleared; full scan proceeds.
+Prior `orders.json` stamped 2026-06-03T00:09:32Z — ~14h 42m ago. Guard cleared; full scan proceeds.
 
 ## Holdings
-`holdings.json` is empty — no open positions. Note: previous run also picked SMR/OUST/SMCI at essentially the same prices, but that run was generated at 22:05 UTC (6 PM ET), after market close. Those orders could not fill. Re-evaluated each from scratch below.
+`holdings.json` is empty — no open positions. Prior run (midnight) picked SMR/OUST/SMCI; all three are selling off this morning (SMR -9.9%, SMCI -6.0%), consistent with the tech/nuclear sector rotation underway today. No holds to manage.
 
 ---
 
-## Market Context (June 2, 2026)
+## Market Context (June 3, 2026 — 10:52 AM ET)
 
-Dominant themes:
+**Tape:** SPY -0.36%, VIX 15.99, tone = **neutral**
 
-1. **AI chip/infrastructure surge**: Jensen Huang appeared at COMPUTEX 2026 and called Marvell Technology the "next trillion-dollar company," sending MRVL +32.5% — its largest single-day gain ever, adding $40B in market cap. HPE surged +19.4% on a monster Q2 earnings beat (revenue +40% YoY, EPS $0.79 vs $0.53 est, full-year revenue growth guidance raised to 29-33% from prior 17-22%). SMCI up ~7% as AI server ecosystem beneficiary. Market-wide: S&P to fresh record close, chip/infrastructure sector dominated.
+**Sector rotation today:**
+| Sector | % |
+|--------|---|
+| Basic Materials | +1.95% ← **hottest** |
+| Consumer Defensive | +1.45% |
+| Communication Services | +1.30% |
+| Consumer Cyclical | +0.88% |
+| Real Estate | +0.86% |
+| Healthcare | +0.72% |
+| Industrials | +0.66% |
+| Energy | +0.44% |
+| Utilities | -0.46% |
+| Financial Services | -0.55% |
+| Technology | -1.17% ← **weakest** |
 
-2. **Nuclear / SMR energy**: Nuclear sector broadly lifted. NuScale (SMR) +8-9%, Oklo (OKLO) +9%, URG +23%, UEC +14%. AI datacenter power demand → reliable baseload power → nuclear thesis continues to build momentum. NuScale pursuing 6 GW TVA partnership.
+Key theme: Yesterday's AI/chip melt-up (MRVL +32%, HPE +19%) is now digesting. Tech is the day's worst sector. Yesterday's nuclear picks (SMR -9.9%) and AI server picks (SMCI -6.0%) are reversing. Fresh movers today are in Basic Materials, Energy, Industrials, and Space — not tech.
 
-3. **AI robotics / lidar**: Ouster (OUST) announced a collaboration with FieldAI on June 2 to deploy Rev8 native color lidar on autonomous robots for unstructured industrial environments (construction, mining, energy, manufacturing, security, government). Stock hit new 52-week high ($49.39 intraday, from $44.93 close June 1). Rosenblatt raised PT $40→$53; Roth/MKM initiated Buy/$75.
-
-4. **Earnings standouts**: Victoria's Secret (VSXY, new ticker) +47.4% — Q1 EPS 2x consensus ($0.60 vs $0.32), sales +15%, guidance raised; DocuSign (DOCU) reports June 4 after close — pre-catalyst opportunity; Broadcom (AVGO) and CrowdStrike (CRWD) also report June 3 after close (both over $65/share, out of budget).
-
-Biotech was bifurcated: LEGN +42% (Phase 1 100% ORR CAR-T data), ABVX -44% (Phase 3 cancer safety signal), FULC -51%, SPCE -39%.
+Broadcom (AVGO) reports after close tonight; will dominate tomorrow's tape, but it's over budget at ~$200+/share.
 
 ---
 
 ## Funnel Detail
 
-**Source 1 — FMP candidates.json:** 148 names (135 movers, 1 earnings_soon [DOCU], 12 news_bullish). Leading count: 13.
+**Source 1 — FMP candidates.json (updated 14:40 UTC):** 212 candidates — 140 movers, 49 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU). Leading count: 75.
 
-**Source 2 — Web search (9 parallel + 6 targeted deep-dives):** Ran: top % gainers, most active, unusual volume, premarket, 52-week highs, sector sweeps (AI/defense/biotech/energy/quantum/nuclear/crypto), pre-catalyst calendar, and targeted dives on MRVL, HPE, VSXY, OUST, DOCU, SMR, MCHP, AVGO/CRWD earnings.
+**Source 2 — Web search (8 parallel searches):** top % gainers, most active, unusual volume, AI/semiconductor/defense sectors, small-cap catalysts, individual deep-dives on XOS, MRVL, NVTS, TISI, FJET, EP, AVGO/DOCU earnings.
 
-Added from web (~20 new distinct tickers not in FMP): OUST (not on FMP movers despite the catalyst), MCHP (+14% data center reveal), AVGO/CRWD (reporting June 3, both over $65/share budget), IONQ, OKLO, MDB, TWLO, FLNC, LAC, CRDO, SEALSQ, PSIX, BLBD, PBYI, and others. Total leading (LEADING tags + web pre-catalyst): ~16.
+Additional names from web not in FMP: XOS (+204% with AI data center + defense), BJDX (already 100%+ blow-off), VIDA, LEGN. ~50 additional distinct tickers.
 
-**Total funnel: ~168 candidates.**
+**Total funnel: ~260 candidates.**
 
-Eliminated:
-- Sub-$2 names (AREB, GPUS, GRNQ, GLXG, ICCM, MEHA, PMI, SOAR, VRAX, WXM, YYGH, ZCMD, many others)
-- Leveraged ETFs (MRVU, MVLL, BEG, GLWG, UECG, UUUG, FIGG, OSCG, OSCX, MST, MSTP, MSTX, TSLL, TZA, NVD, SOXS, TQQQ)
-- Over budget (MRVL $290, VSXY $80, SWMR $79, AEHR $113, INTC $108, PRAX $258, MU $1064, GOOGL $362, AVGO/CRWD/MCHP all >$65)
-- Sub-$2 floor (VRAX $0.22, HKIT $0.62, ICCM $0.14, AMZE $0.16, etc.)
+Eliminated: sub-$2 floor (NOTV $0.14, AIM $0.70, HKIT $0.48, FSHPR $0.17, DEVS $0.74, HUBC $0.62, dozens more), leveraged ETFs (MRVU, MVLL, SOXL, TQQQ, SMCZ, OKLL, PANG, PALU, etc.), over-budget (MRVL $312, GOOGL $363, INTC $113, IREN $68, SWMR $66.72), names blowing off (XOS +204%), extended names above 20% threshold (NVTS +21.8%, DRTS +21.5%).
 
-~85 in budget; ~25 with clear catalyst; 6 finalists (SMR, OUST, SMCI, HPE, DOCU, MRVL — MRVL over budget, HPE borderline extended, DOCU watchlisted as pre-catalyst).
+~130 in budget; ~18 with genuine fresh catalyst from today; 3 finalists (FJET, EP, NVTS — NVTS deprioritized at +21.8%).
 
 ---
 
 ## Picks
 
-### 1. SMR — NuScale Power
-**BUY 4 shares @ $14.10 | TP $17.50 | SL $12.50 | Cost $56.40**
+### 1. FJET — Starfighters Space (NYSE)
+**BUY 7 shares @ $8.95 | TP $10.50 | SL $8.00 | Cost $62.65**
 
-NuScale is the only NRC-certified SMR design in the US, actively pursuing a 6 GW capacity partnership with the Tennessee Valley Authority. The nuclear/AI power demand narrative is building as hyperscalers seek reliable 24/7 baseload power for AI datacenters — this theme has driven SMR from $10 in mid-May to $14 today. Up ~9% on June 2, not extended (well below the 15% caution threshold). Consensus analyst PT is $15.36, but this is a momentum story that can overshoot. Entry $14.10 (4 shares = $56.40 ≤ $65), take profit $17.50 (next resistance band, above all analyst targets), stop $12.50 (below recent uptrend support). R:R ≈ 2.3:1. Previously picked in prior run at same price — thesis unchanged and strengthened by sector cohort (OKLO +9% same day).
+Fresh catalyst published today at 10:09 UTC: "Starfighters Space (NYSE: FJET) Added to Membership of Russell 3000® Index." This is a mechanical buying catalyst — the annual Russell reconstitution effective date is typically the last Friday of June, meaning roughly 3–4 weeks of index-fund buying pressure lies ahead as passive funds are forced to add the stock to their holdings. The stock is only up +3.35% so far (764K shares traded), making this a very early-stage pre-positioning opportunity, which is exactly the proactive edge BRAIN.md targets.
 
-### 2. OUST — Ouster Inc.
-**BUY 1 share @ $48.00 | TP $55.00 | SL $43.00 | Cost $48.00**
+Setup: Entry $8.95 (near current ask), TP $10.50 (17.3% upside, conservative pre-rebalancing target with room to 52-week highs), SL $8.00 (below today's announcement-day support, 10.6% risk). R/R ≈ 1.6:1. Industrials sector (up +0.66%) is one of today's stronger sectors. Market cap $395M (small-cap). Good liquidity (764K volume confirms real participation).
 
-Fresh catalyst June 2: Ouster and FieldAI announced collaboration deploying Ouster's Rev8 digital lidar on autonomous robots for unstructured industrial environments. Two analyst upgrades same day: Rosenblatt raised PT $40→$53 and Roth/MKM initiated Buy with $75 PT. Stock broke to new 52-week high ($49.39 intraday). Prior run picked OUST at $49.50 — previous limit was $0.11 above the intraday high, so it didn't fill. Re-entering at $48.00 is a better price entry with all the same (and now additionally confirmed) catalysts. Stop $43.00 (below today's intraday low of $43.77). Target $55.00 (between Rosenblatt's $53 and next visible resistance). R:R ≈ 1.4:1 to conservative target; significantly higher toward Roth's $75.
+### 2. EP — Empire Petroleum (AMEX)
+**BUY 22 shares @ $2.75 | TP $3.50 | SL $2.35 | Cost $60.50**
 
-### 3. SMCI — Super Micro Computer
-**BUY 1 share @ $50.20 | TP $58.00 | SL $45.00 | Cost $50.20**
+Fresh catalyst published today at 07:40 UTC (Stock Titan): Empire Petroleum director added 7,777 shares in an open-market buy. Director insiders buying at market prices is one of the strongest signals available — they paid ~$21K of personal money at current prices, indicating strong conviction that the stock is undervalued. Stock is only up +3.2%, making this a very early stage entry. Energy sector is up +0.44% today; Basic Materials (same broad commodity/resources theme) is the day's hottest sector at +1.95%.
 
-SMCI is the AI server rack/infrastructure integrator directly upstream from the GPU-dense compute MRVL and NVDA are supplying. It was up only ~7% on a day when the AI infrastructure narrative was thunderous (MRVL +32%, HPE +19%). That relative underperformance vs the ecosystem catalyst suggests catch-up potential. The thesis is the same AI buildout narrative — SMCI builds the servers. Entry $50.20 (1 share ≤ $65), take profit $58.00 (prior resistance), stop $45.00 (below today's support range). R:R ≈ 1.6:1.
+**Risk note:** Daily volume is thin (~18,500 shares so far) — execution of 22 shares is fine mechanically, but the stock may not move quickly without broader volume follow-through. The insider buy is the edge here, not momentum.
+
+Setup: Entry $2.75, TP $3.50 (+27.3% upside), SL $2.35 (-14.5% risk). R/R ≈ 1.9:1. Market cap $108M (micro-cap). Budget: 22 × $2.75 = $60.50 ✓.
 
 ---
 
@@ -71,17 +77,25 @@ SMCI is the AI server rack/infrastructure integrator directly upstream from the 
 
 | Name | Price | Move | Reason passed |
 |------|-------|------|---------------|
-| MRVL | $290.79 | +32.5% | Strongest single catalyst of the day (Jensen Huang trillion-dollar call). Disqualified: $290/share far exceeds $65 budget. |
-| HPE | $56.14 | +19.4% | Historic Q2 beat (revenue +40%, massive guidance raise). At 19.4%, borderline extended; SMCI (same thesis, +7%) preferred as earlier-stage. HPE on watchlist for $54 pullback. |
-| VSXY | $80.06 | +47.4% | Excellent Q1 beat + guidance raise, but 47% intraday is a blow-off. Over budget too. Hard pass. |
-| LEGN | $36.28 | +42.2% | Phase 1 100% ORR CAR-T data — real biotech catalyst. Already +42%, far too extended. |
-| BJDX | $4.34 | +100% | Sepsis platform partnership + $23.6M dilutive placement. Doubled intraday — no edge entering here. |
-| DOCU | ~$57 | +8.6% prior day | Pre-earnings play (reports June 4 after close). Appealing, but already ran ~14% in 2 days pre-print; edge reduced. Added to watchlist with date trigger for June 3. |
-| AOSL | $53.32 | +21.5% | Semiconductor/AI halo effect. Over 20% threshold; SMCI preferred (same theme, earlier stage). |
-| RKTO | $2.22 | +65.7% | Way extended. |
-| DXST | $4.95 | +209% | Parabolic; not tradeable. |
+| XOS | $6.78 | +204% | Real catalyst: AI data center Power Hub (2.5MWh) + U.S. Air Force EV charger demo. But +204% is the textbook near-vertical blow-off. Hard pass on entry; added to watchlist for pullback at $4.50. |
+| NVTS | $31.50 | +21.8% | GaN/SiC power chips for AI data centers — real thesis (PCIM Europe conference showcase). Extended above 20% intraday threshold; deprioritized per rules. |
+| DRTS (Alpha Tau Medical) | $10.85 | +21.5% | No identifiable fresh catalyst found for today's move. No edge without a catalyst. |
+| MRVL | $312.96 | +7.6% | Continuing yesterday's Jensen Huang trillion-dollar surge. Compelling but $312/share far exceeds $65 budget. |
+| SMR | $12.56 | -9.9% | Yesterday's nuclear pick is selling off with tech/energy rotation. No thesis break (AI data center power narrative intact), but red tape today and the prior run's pick didn't fill due to midnight submission. Not re-buying a name that's actively selling off. |
+| SMCI | $47.14 | -6.0% | Yesterday's AI server pick is down with the tech sector. Same as SMR — not chasing into weakness. |
+| TISI | $17.37 | +12.79% | Strong Q1 fundamentals (revenue +8.3%, EBITDA +45.2%, guidance raised). No identifiable fresh-today catalyst — Q1 earnings were May 14 (~3 weeks ago). Could be delayed re-rating or sector momentum. Watchlisted for breakout at $18. |
+| ABVX | $84.46 | +16.5% | Phase 3 ABTECT study hit primary endpoint — real biotech catalyst. But 1 share = $84.46, over $65 budget. Skip. |
+| DOCU | no price | earnings 6/4 | Prior watchlist had date trigger for today at $57. Holdings empty suggests it didn't execute. DOCU reports June 4 after close; removed from watchlist — price unknown and pre-earnings drift may already be spent. |
 
 ---
 
 ## Holdings Read
-No positions held. ~$400 full powder available. Today's three picks deploy ~$154.60 (SMR $56.40 + OUST $48.00 + SMCI $50.20); ~$245 powder reserved. Watchlist adds DOCU as potential 4th position on date trigger tomorrow.
+No positions. Full ~$400 powder available. This run deploys $62.65 (FJET) + $60.50 (EP) = $123.15 (~31% of capital). ~$277 powder reserved.
+
+---
+
+## Watchlist Updated
+- **XOS** pullback @$4.50 — too extended today (+204%), but AI data center + defense catalyst is real
+- **HPE** pullback @$54.00 — Q2 monster beat, currently at $54.48 (near trigger)
+- **QBTS** breakout @$32.00 — quantum sector, currently $28.44, needs level break to confirm
+- **TISI** breakout @$18.00 — strong Q1 fundamentals, waiting for fresh breakout confirmation
