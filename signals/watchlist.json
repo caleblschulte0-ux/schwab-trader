@@ -1,16 +1,38 @@
 {
-  "generated_utc": "2026-06-02T22:05:35Z",
+  "generated_utc": "2026-06-03T00:09:32Z",
   "watch": [
+    {
+      "symbol": "DOCU",
+      "trigger": "date",
+      "trigger_date": "2026-06-03",
+      "quantity": 1,
+      "limit_price": 57.00,
+      "take_profit": 65.00,
+      "stop_loss": 51.00,
+      "good_until": "2026-06-04",
+      "note": "Pre-earnings play — reports June 4 after close. Q4 FY26 was a big beat (EPS $1.01 vs $0.71, billings >$1B first time, IAM platform $350M ARR). Entering 1 day early to capture pre-earnings momentum if Q1 FY27 continues the streak."
+    },
     {
       "symbol": "HPE",
       "trigger": "pullback",
-      "trigger_price": 53.00,
+      "trigger_price": 54.00,
       "quantity": 1,
-      "limit_price": 53.50,
-      "take_profit": 68.00,
-      "stop_loss": 49.00,
+      "limit_price": 54.50,
+      "take_profit": 65.00,
+      "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "Historic Q2 beat (EPS $0.79 vs $0.54, rev +$789M vs est). Already up 19.4% to $56.14 — too extended. Pullback to $53 gives 2.8:1 R/R with clear thesis. Enter on dip."
+      "note": "Historic Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 growth guide raised to 29-33%. Too extended at $56 today (+19.4%). Pullback to $54 gives better R:R of ~2.75:1 with strong fundamental support."
+    },
+    {
+      "symbol": "QBTS",
+      "trigger": "breakout",
+      "trigger_price": 32.00,
+      "quantity": 2,
+      "limit_price": 32.50,
+      "take_profit": 42.00,
+      "stop_loss": 27.00,
+      "good_until": "2026-06-08",
+      "note": "D-Wave Quantum; quantum sector strong in 2026. NVDA NVLink spillover to quantum names. Breakout above $32 confirms continuation from current $29.91 base."
     },
     {
       "symbol": "PENG",
@@ -21,18 +43,7 @@
       "take_profit": 75.00,
       "stop_loss": 55.00,
       "good_until": "2026-06-08",
-      "note": "Penguin Solutions: AI workloads 60% of H1 revenue, Q2 beat, raised FY26 guide. Stock at $70.71 (+18.4%) — over $65 budget. Pullback to $62 brings it into budget with solid R/R."
-    },
-    {
-      "symbol": "QBTS",
-      "trigger": "breakout",
-      "trigger_price": 32.00,
-      "quantity": 2,
-      "limit_price": 32.50,
-      "take_profit": 42.00,
-      "stop_loss": 27.00,
-      "good_until": "2026-06-07",
-      "note": "D-Wave Quantum; quantum sector strong in 2026; RGTI NVDA tailwind spillover. Breakout above 32 confirms continuation from current $29.91."
+      "note": "Penguin Solutions: AI workloads 60% of H1 revenue, Q2 beat, raised FY26 guide. Currently $70.71 (+18.4%) — over $65 budget. Pullback to $62 brings into budget with solid R:R of ~1.9:1."
     }
   ]
 }

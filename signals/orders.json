@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-06-02T22:05:35Z",
-  "funnel": {"scanned": 190, "leading": 18, "in_budget": 80, "had_catalyst": 28, "finalists": 6, "picked": 3},
+  "generated_utc": "2026-06-03T00:09:32Z",
+  "funnel": {"scanned": 168, "leading": 16, "in_budget": 85, "had_catalyst": 25, "finalists": 6, "picked": 3},
   "orders": [
-    {"symbol": "SMCI", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 50.50, "take_profit": 62.00, "stop_loss": 45.00},
-    {"symbol": "OUST", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 49.50, "take_profit": 57.00, "stop_loss": 44.00},
     {"symbol": "SMR", "action": "BUY", "instrument": "stock",
-     "quantity": 4, "limit_price": 14.10, "take_profit": 17.50, "stop_loss": 12.50}
+     "quantity": 4, "limit_price": 14.10, "take_profit": 17.50, "stop_loss": 12.50},
+    {"symbol": "OUST", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 48.00, "take_profit": 55.00, "stop_loss": 43.00},
+    {"symbol": "SMCI", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 50.20, "take_profit": 58.00, "stop_loss": 45.00}
   ]
 }
