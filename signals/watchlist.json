@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-03T17:44:56Z",
+  "generated_utc": "2026-06-03T18:00:34Z",
   "watch": [
     {
       "symbol": "NVTS",
@@ -10,7 +10,7 @@
       "take_profit": 34.00,
       "stop_loss": 25.00,
       "good_until": "2026-06-06",
-      "note": "Navitas Semi NVIDIA MGX/800V AI datacenter partner + GaN licensing + Q1 beat. Currently extended at $31.40 (+21%). Updating trigger up to $28 (prior entry too deep at $26.50). Enter pullback to $28 support."
+      "note": "Navitas Semi NVIDIA MGX/800V AI datacenter partner + GaN licensing + Q1 beat. Extended at $31.64 (+22%). Enter only on pullback to $28 support."
     },
     {
       "symbol": "FJET",
@@ -32,7 +32,7 @@
       "take_profit": 15.50,
       "stop_loss": 12.00,
       "good_until": "2026-06-07",
-      "note": "Obsidian Energy acquiring Belly River assets for $96M cash. Energy sector top today. Stock barely moved (+0.8%). Breakout above $13.00 confirms follow-through."
+      "note": "Obsidian Energy acquiring Belly River assets for $96M cash. Energy sector leading today. Stock barely moved. Breakout above $13.00 confirms follow-through."
     },
     {
       "symbol": "HPE",
@@ -43,7 +43,7 @@
       "take_profit": 65.00,
       "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guidance raised. Currently $54.62, near trigger. Pullback to $54 gives R:R ~2.75:1."
+      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guidance raised. Pullback to $54 gives R:R ~2.75:1."
     },
     {
       "symbol": "MNKD",
@@ -54,7 +54,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-07",
-      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. Coiling below $3.65. Enter breakout above trigger only."
+      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. Coiling below $3.65 with healthcare sector leading. Enter breakout only."
     },
     {
       "symbol": "DOCU",
@@ -65,7 +65,7 @@
       "take_profit": 64.00,
       "stop_loss": 52.00,
       "good_until": "2026-06-05",
-      "note": "DocuSign Q1 earnings tonight after close (EPS est $0.99, +10% YoY). Enter only if stock gaps bullishly above $57.50 on June 4 open — confirms beat. Skip if it gaps down; binary risk."
+      "note": "DocuSign Q1 FY2027 earnings June 4 after close (EPS est $0.99). Enter only if stock gaps bullishly above $57.50 on June 4 open confirming a beat. Skip if gaps down — binary risk avoided."
     }
   ]
 }

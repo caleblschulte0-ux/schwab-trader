@@ -1,57 +1,84 @@
-# Brain Run — 2026-06-03T17:44:56Z
+# Brain Run — 2026-06-03T18:00:34Z
 
-**Funnel:** scanned 258 → 95 in budget → 20 with catalyst → 5 finalists → picked 3
+Funnel: scanned 255 → 165 in budget → 50 with catalyst → 5 finalists → picked 2
 
 ---
 
-## Market Regime (STEP 0)
-SPY -0.68%, VIX 16.27 → **neutral** tone. Broad tape slightly red but not risk-off. Sector tilts: **Basic Materials +2.08%, Healthcare +1.71%, Consumer Defensive +1.58%, Energy +1.42%** are the hot sectors. Technology (-1.1%) and Utilities (-1.15%) the weakest. All picks lean into healthcare and energy.
+## Market Read
+
+**Tape: NEUTRAL.** SPY -0.68%, VIX 16.27. Mixed rotation day — not risk-off, just selective. Sector bifurcation is sharp: Basic Materials +2.08%, Healthcare +1.71%, Consumer Defensive +1.58%, Energy +1.42% green; Technology -1.10%, Financial Services -0.90%, Utilities -1.15% red. Holdings empty entering this run.
+
+**Sector tilt: favor Healthcare and Energy. Skeptical of pure tech longs.**
 
 ---
 
 ## Funnel Notes
-FMP delivered 228 candidates (139 movers, 65 news_smallcap, 1 earnings_soon, 25 news_bullish). Web searches (10 queries: gainers, most-actives, unusual volume, small-cap breakouts, defense sector, biotech/FDA, earnings previews for June 4–5, KYTX EULAR data, TGTX rally catalyst, NVTS AI power thesis) surfaced ~30 additional names (BJDX, VIDA, LEGN, DRTS catalyst detail, QMCO detail). Total funnel ~258, leading pool ~101. Eliminated: ~60 sub-$2, ~20 leveraged ETFs, ~15 blow-offs >30%, several over-budget large-caps.
+
+FMP delivered 234 candidates (139 movers, 72 news_smallcap, 25 news_bullish, 1 earnings_soon). 8 web searches (gainers, unusual volume, small-cap movers, 52-week highs, sector catalysts, LASE/army contract detail, DOCU earnings preview, KYTX EULAR data) surfaced ~21 additional names (BJDX, PENG, OUST, BB 52-week-high context, VIDA, LEGN, SWMR, HPE earnings-beat detail). Total funnel ~255, leading pool ~103. Eliminated: ~30 sub-$2 names, ~15 leveraged ETFs, ~10 blow-offs >40% extended, ~8 over-budget names (ABVX $87, MRVL $306, INTC $111, IREN $65.6, PENG $70, OUST $47), and numerous low-volume or thesis-thin candidates.
 
 ---
 
-## Pick 1 — KYTX (Kyverna Therapeutics) — BUY 8 @ $7.85
-**Why:** EULAR 2026 Phase 1 data for miv-cel in ACPA-positive treatment-refractory RA: **66.6% ACR70 at Week 36**, deep B-cell depletion, no high-grade CRS or ICANS. Phase 2 fully enrolled = upcoming catalyst layer. Textbook early entry: impressive data released today, stock flat (-0.8% to $7.84). Healthcare sector #2 hot today (+1.71%). 8 × $7.85 = $62.80 within $65. TP $10.50 (phase 2 re-rating); SL $6.80 (below recent support). R/R ~2.4:1.
+## Pick 1 — KYTX (Kyverna Therapeutics) — BUY 8 @ $7.83 | TP $10.50 | SL $6.60
+
+**$7.815 / -1.1% / vol 371K / mkt cap ~$475M**
+
+Phase 1 COMPARE trial data for miv-cel (KYV-101) presented at EULAR 2026 today: **66.6% ACR70 at Week 36** in ACPA-positive, treatment-refractory RA (median 6.5 prior biologics failed). Deep and sustained CD19+ B-cell depletion. Zero high-grade CRS or ICANS — exceptionally clean safety for a CAR-T. Phase 2 is initiated and **fully enrolled**, meaning another data readout is ahead.
+
+This is hard clinical evidence, not a hype headline. Stock is only -1.1% on the news, with decent volume — the full market hasn't recognized it yet. Healthcare sector is the 2nd-hottest sector today (+1.71%). Textbook early-stage entry: fresh data catalyst, stock barely moved, more readouts pending.
+
+8 × $7.83 = **$62.64**. TP $10.50 (~34% upside). SL $6.60 (~16% downside). **R/R ~2:1.**
+
+Re-confirmation of the previous run's top pick — same thesis, stock unmoved.
 
 ---
 
-## Pick 2 — TGTX (TG Therapeutics) — BUY 1 @ $41.50
-**Why:** Multiple simultaneous EULAR 2026 catalysts: (1) Positive Phase 1 subcutaneous BRIUMVI data (favorable PK, B-cell depletion, consistent safety). (2) ENHANCE Phase 3 — single 600 mg infusion bioequivalent to two-dose start; sBLA planned 2H 2026. (3) BRIUMVI superiority over teriflunomide in pooled ULTIMATE I & II. (4) Q1 record revenue $204.9M; 2026 guidance raised to ~$925M. (5) H.C. Wainwright PT raised to $70 (Buy). Stock +12.4% to $41.17 on substantial fundamental news — not blown off. HC analyst target $70 = 70% upside from here. 1 × $41.50 = $41.50. TP $54.00; SL $36.00. R/R ~2.7:1.
+## Pick 2 — NVGS (Navigator Gas) — BUY 2 @ $22.15 | TP $25.50 | SL $19.75
 
----
+**$22.11 / -0.5% / vol 63K / mkt cap ~$1.44B**
 
-## Pick 3 — NVGS (Navigator Gas) — BUY 2 @ $22.20
-**Why:** Benzinga (14:10 UTC today): "Navigator Gas Bets On Supply Chain Shifts As US Exports Gain From Middle East Disruption." Structural tailwind: Middle East disruption → US LNG exports rising → fleet utilization improving. Energy sector #4 hot today (+1.42%). Stock barely moved (-0.2%) on a bullish article published today — early entry. 2 × $22.20 = $44.40. TP $25.50; SL $20.00. R/R ~3:1.
+Benzinga, 14:10 UTC: "Navigator Gas Bets On Supply Chain Shifts As US Exports Gain From Middle East Disruption." US LPG and chemical gas exports are structurally rising as Middle East shipping disruption reroutes cargo through American terminals. Navigator is a pure-play chemical gas tanker operator directly in the path of this trend. Energy sector is the 4th-hottest sector today (+1.42%).
+
+Stock is -0.5% on the day — the Benzinga story published 4 hours ago hasn't moved the needle yet. Early entry into a structural catalyst with sector support.
+
+2 × $22.15 = **$44.30**. TP $25.50 (~15% upside). SL $19.75 (~11% downside). **R/R ~1.5:1.**
+
+Re-confirmation of the previous run's thesis. No fill yet (not in holdings).
 
 ---
 
 ## Notable Passes
 
-| Name | Move | Reason |
-|------|------|--------|
-| LASE | +41% | "Department of War MEIA Vulcan selection" is a technical assessment invitation, NOT a contract. Already extended +40%+. Hard pass. |
-| BJDX | +91–212% | Sepsis partnership + dilutive placement. Massive blow-off, no FDA clearance. Hard pass. |
-| NVTS | +21.4% | Real NVIDIA MGX catalyst. But 21%+ on 5-day-old COMPUTEX news while tech sector weak. Extended → watchlist at $28 pullback. |
-| DOCU | — | Reports Q1 earnings tonight after close. Binary risk; Citi downgraded to $50. Better as post-earnings watchlist breakout above $57.50. |
-| ANY / WCT / XOS / STAK / SDOT | +46–167% | Parabolic blow-offs. All hard pass. |
-| QMCO | +14.9% | AI data storage, Q4 beat. But private placement at $9.42 (35% discount to current $14.41) = dilution pressure. Skip. |
-| GRRR | -19.6% | $107M dilutive convertible offering. Bearish catalyst. Skip. |
-| MLYS | -16.8% | $200M cash payment for royalty rights + $500M debt = bearish short-term. Skip. |
-| Sub-$2 names | various | Hard price floor. All skipped. |
+**LASE (+36%, $3.30, vol 191M):** The "U.S. Army contract" headline is materially wrong. The actual announcement is that LASE's Laser Shield anti-drone system was selected for a *technical exchange meeting* under MEIA Vulcan Call for Solutions — the company's own press release explicitly states this is NOT a contract award, NOT a purchase order. Stock surged 170% in premarket on the misread headline before pulling back to +36%. Even at current levels this is a hype/narrative pump on overstated news. 191M volume is retail chasing a headline, not institutional conviction. Hard pass.
+
+**BJDX (+91%):** Bluejay Diagnostics manufacturing partnership announced June 2. Day-old news, extreme premarket extension (+212%). Blow-off.
+
+**PENG (+18.4%, $70.71):** Penguin Solutions guidance beat (EPS $2.30 vs $2.08, rev $1.6B vs $1.5B) — genuinely good catalyst. Budget constraint: $70.71/share means even 1 share exceeds $65. Skipped on budget only.
+
+**ABVX (+20%, $87.21), MRVL (+5.2%, $306):** Over budget. Pass.
+
+**WCT (+188%), XOS (+177%), SDOT (+97%), STAK (+85%), JLHL (+72%), SBEV (+71%):** Parabolic blow-offs. All hard pass.
+
+**BB ($10.08, -2.26%):** FedRAMP Class D High recertification + QNX backlog story is real (government cybersecurity, CIBC raised target to $8.50). But this has been running since late May — multi-week move, stock now consolidating at 52-week highs. Not a fresh entry; placed on watchlist for a pullback to $9.50 support.
+
+**DOCU (earnings June 4 AH):** DocuSign at $55.18 reports tomorrow after close. Pre-buying carries blind binary risk tonight. The prior run's watchlist item — enter ONLY if the stock gaps above $57.50 on June 4's open (confirming a beat) — is the smarter approach. Maintaining that trigger.
+
+**Sub-$2 names (GGRP $0.82, FNGR $0.87, HUBC $0.63, SELX $0.46, DEVS $0.67, BURU $0.19, etc.):** Price floor is firm. All skipped.
 
 ---
 
-## Current Holdings
-`holdings.json` empty — no positions held. This run deploys ~$149 across 3 picks, leaving ~$251 powder.
+## Watchlist (all 6 prior items retained)
+
+| Symbol | Trigger | Level | Note |
+|--------|---------|-------|------|
+| NVTS | pullback | $28.00 | Navitas Semi AI/GaN; currently extended at $31.64 |
+| FJET | pullback | $8.30 | Russell 3000 inclusion structural buying before late-June |
+| OBE | breakout | $13.00 | Belly River $96M oil acquisition; stock barely moved |
+| HPE | pullback | $54.00 | Q2 earnings beat, rev +40% YoY; dip to support |
+| MNKD | breakout | $3.65 | IPF inhaled drug global trial; healthcare sector tailwind |
+| DOCU | breakout | $57.50 | June 4 AH earnings; enter only on bullish gap-open |
 
 ---
 
-## Watchlist Changes
-- NVTS trigger updated $26.50 → $28.00 (stock moved; recalibrated pullback level).
-- DOCU added as post-earnings breakout above $57.50 (only enters on bullish reaction).
-- XOS removed (parabolic +167%; pullback trigger would catch a crash).
-- FJET, OBE, HPE, MNKD retained from prior run.
+## Holdings
+
+`holdings.json` empty — no open positions. This run deploys ~$107 (KYTX $62.64 + NVGS $44.30), leaving ~$293 powder for future setups.
