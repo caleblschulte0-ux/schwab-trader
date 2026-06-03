@@ -72,7 +72,7 @@ NEWS_LIMIT            = 1000    # pull DEEP so small-caps in the long tail surfa
 NEWS_MIN_RELEVANCE    = 0.30    # ignore tickers only loosely mentioned in an article
 NEWS_MIN_SENTIMENT    = 0.15    # bullish threshold for the (mega-cap) market-wide feed
 NEWS_SMALLCAP_FLOOR   = -0.15   # small-caps: surface unless the coverage is clearly bearish
-MAX_NEWS_SMALLCAP     = 60      # cap discovered small-cap-in-the-news names
+MAX_NEWS_SMALLCAP     = 150     # cap discovered small-cap-in-the-news names (wide funnel)
 MAX_NEWS_BULLISH      = 25      # cap the (mostly large-cap) bullish market-wide names
 # --- small-cap universe (Nasdaq's free public screener; DISCOVERs small-caps in the news) ---
 NASDAQ_SCREENER_URL   = "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&download=true"
