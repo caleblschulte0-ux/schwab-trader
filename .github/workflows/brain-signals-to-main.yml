@@ -1,0 +1,94 @@
+name: brain-signals-to-main
+
+# BRIDGE: Claude Code "web routine" sessions are sandboxed to their own random
+# claude/* branch and cannot push straight to main. The executor (trader.yml) only
+# reads signals/ from main. This workflow copies ONLY the brain's signal files from
+# a routine's branch onto main so the executor can act on them.
+#
+# Scope is deliberately tight: it only ever touches the four signal files below, so a
+# session branch can never sneak code changes onto main. Commits are tagged [skip ci];
+# trader.yml runs on its own 15-min schedule and picks the orders up on its next run.
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+    paths:
+      - 'signals/orders.json'
+      - 'signals/watchlist.json'
+      - 'signals/latest.md'
+      - 'signals/positions.md'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'claude/* branch to sync (leave blank to use the newest one)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: signals-to-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Resolve source branch
+        id: src
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            SRC="${{ github.ref_name }}"
+          elif [ -n "${{ github.event.inputs.branch }}" ]; then
+            SRC="${{ github.event.inputs.branch }}"
+          else
+            # newest claude/* branch by commit date (excluding the dev/integration branch)
+            git fetch origin '+refs/heads/claude/*:refs/remotes/origin/claude/*' --prune
+            SRC=$(git for-each-ref --sort=-committerdate \
+                    --format='%(refname:lstrip=3)' 'refs/remotes/origin/claude/*' \
+                  | grep -v 'schwab-trading-integration' | head -1)
+          fi
+          echo "Source branch: $SRC"
+          echo "src=$SRC" >> "$GITHUB_OUTPUT"
+
+      - name: Copy signal files onto main
+        env:
+          SRC: ${{ steps.src.outputs.src }}
+        run: |
+          set -e
+          if [ -z "$SRC" ]; then echo "No source branch resolved — nothing to do."; exit 0; fi
+          git config user.name "schwab-brain"
+          git config user.email "brain@users.noreply.github.com"
+
+          git fetch origin "$SRC"
+          SRC_SHA=$(git rev-parse FETCH_HEAD)
+          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md"
+
+          for f in $FILES; do git checkout "$SRC_SHA" -- "$f" 2>/dev/null || true; done
+          git add $FILES 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Signals already in sync with $SRC — nothing to do."
+            exit 0
+          fi
+
+          git commit -m "brain: sync signals from $SRC -> main [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin HEAD:main; then echo "pushed."; exit 0; fi
+            echo "push rejected (main moved); syncing and retrying ($i)..."
+            git fetch origin main
+            git reset --soft origin/main
+            for f in $FILES; do git checkout "$SRC_SHA" -- "$f" 2>/dev/null || true; done
+            git add $FILES 2>/dev/null || true
+            git diff --cached --quiet && { echo "already current."; exit 0; }
+            git commit -m "brain: sync signals from $SRC -> main [skip ci]"
+            sleep $((i * 3))
+          done
+          echo "Could not push after retries — non-fatal (next run/sync refreshes)."
+          exit 0
