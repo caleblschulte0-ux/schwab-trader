@@ -1,13 +1,13 @@
 {
-  "updated_utc": "2026-06-02T22:12:57.170491+00:00",
-  "count": 148,
+  "updated_utc": "2026-06-03T00:24:33.389881+00:00",
+  "count": 161,
   "signal_counts": {
     "mover": 135,
     "earnings_soon": 1,
-    "news_bullish": 12
+    "news_bullish": 25
   },
-  "news_updated_utc": "2026-06-02T22:12:57.170424+00:00",
-  "news_calls_date": "2026-06-02",
+  "news_updated_utc": "2026-06-03T00:24:33.389329+00:00",
+  "news_calls_date": "2026-06-03",
   "news_calls_today": 1,
   "candidates": [
     {
@@ -45,24 +45,6 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "ACGL",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Arch Capital Group Ltd. Announces $2,000,000,000 Public Offering of Senior Notes",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.256,
-        "source": "Business Wire"
-      }
     },
     {
       "symbol": "ACHR",
@@ -125,19 +107,7 @@
       ]
     },
     {
-      "symbol": "AMZE",
-      "name": "Amaze Holdings, Inc.",
-      "price": 0.1551,
-      "pct_change": -17.32409,
-      "exchange": "AMEX",
-      "list": "actives",
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "ANET",
+      "symbol": "AME",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -148,11 +118,23 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Arista Networks (NYSE:ANET) Trading Up 2.6% - Here's Why",
+        "headline": "AMETEK Inc stock (US0311001004): Shares rise as NYSE volume stays solid after recent institutional buying",
         "sentiment": "Bullish",
-        "sentiment_score": 0.479,
-        "source": "MarketBeat"
+        "sentiment_score": 0.432,
+        "source": "Ad Hoc News"
       }
+    },
+    {
+      "symbol": "AMZE",
+      "name": "Amaze Holdings, Inc.",
+      "price": 0.1551,
+      "pct_change": -17.32409,
+      "exchange": "AMEX",
+      "list": "actives",
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
     },
     {
       "symbol": "AOSL",
@@ -348,7 +330,7 @@
       "catalyst": {
         "headline": "BW LPG posts strong Q1 2026 results despite market volatility",
         "sentiment": "Bullish",
-        "sentiment_score": 0.83,
+        "sentiment_score": 0.808,
         "source": "Baird Maritime"
       }
     },
@@ -366,8 +348,26 @@
       "catalyst": {
         "headline": "Betterware de M\u00e9xico Completes Acquisition of Tupperware\u2019s Operations in Latin America",
         "sentiment": "Bullish",
-        "sentiment_score": 0.648,
+        "sentiment_score": 0.603,
         "source": "Business Wire"
+      }
+    },
+    {
+      "symbol": "CARR",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Carrier Global Corp. stock (US1442851009): shares steady as investors look ahead to next earnings up",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.29,
+        "source": "Ad Hoc News"
       }
     },
     {
@@ -381,6 +381,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "CRM",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Salesforce shareholders back board, governance and equity plans",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.402,
+        "source": "The Globe and Mail"
+      }
     },
     {
       "symbol": "CRMT",
@@ -431,24 +449,6 @@
       ]
     },
     {
-      "symbol": "DE",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Why Deere (DE) Is Up 9.5% After Tightening 2026 Guidance And Boosting Capital Returns \u2013 And What's Next",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.301,
-        "source": "Simply Wall Street"
-      }
-    },
-    {
       "symbol": "DEVS",
       "name": "DevvStream Corp. Common Stock",
       "price": 0.6017,
@@ -472,7 +472,62 @@
         "earnings_soon"
       ],
       "catalyst": {
-        "earnings_date": "2026-06-04"
+        "earnings_date": "2026-06-04",
+        "eps_estimate": 1
+      }
+    },
+    {
+      "symbol": "DORM",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Dorman Products prices $450m senior notes offering at 6.25%",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.299,
+        "source": "Investing.com"
+      }
+    },
+    {
+      "symbol": "DUK",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Duke Energy Weighs Tech Partnerships For Nuclear And Data Center Growth",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.274,
+        "source": "Simply Wall Street"
+      }
+    },
+    {
+      "symbol": "DUOT",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Duos Technologies Receives $50.4 Million from APR Energy Asset Sale",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.429,
+        "source": "Investing News Network"
       }
     },
     {
@@ -488,19 +543,7 @@
       ]
     },
     {
-      "symbol": "F",
-      "name": "Ford Motor Company",
-      "price": 16.165,
-      "pct_change": -2.79615,
-      "exchange": "NYSE",
-      "list": "actives",
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "FANG",
+      "symbol": "EAT",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -511,11 +554,41 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Matt Zmigrosky Sells 5,000 Shares of Diamondback Energy (NASDAQ:FANG) Stock",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.153,
-        "source": "MarketBeat"
+        "headline": "Brinker International: Chili's Momentum Is Intact, Yet The Stock Isn't Hot (NYSE:EAT)",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.427,
+        "source": "Seeking Alpha"
       }
+    },
+    {
+      "symbol": "EQ",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "B. Riley Securities Maintains Equillium(EQ.US) With Buy Rating, Maintains Target Price $6",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.514,
+        "source": "Moomoo"
+      }
+    },
+    {
+      "symbol": "F",
+      "name": "Ford Motor Company",
+      "price": 16.165,
+      "pct_change": -2.79615,
+      "exchange": "NYSE",
+      "list": "actives",
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
     },
     {
       "symbol": "FIGG",
@@ -564,6 +637,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "GE",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Honeywell Aerospace rebrands ahead of planned spin off",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.262,
+        "source": "FlightGlobal"
+      }
     },
     {
       "symbol": "GLWG",
@@ -638,24 +729,6 @@
       ]
     },
     {
-      "symbol": "GS",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Goldman\u2019s Solomon wants to keep filling asset management gaps following Innovator, Industry Ventures deals",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.258,
-        "source": "Pensions & Investments"
-      }
-    },
-    {
       "symbol": "GV",
       "name": "Visionary Holdings Inc.",
       "price": 0.2484,
@@ -704,6 +777,24 @@
       ]
     },
     {
+      "symbol": "HON",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Honeywell Aerospace rebrands ahead of planned spin off",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.404,
+        "source": "FlightGlobal"
+      }
+    },
+    {
       "symbol": "HPE",
       "name": "Hewlett Packard Enterprise Company",
       "price": 56.1401,
@@ -726,6 +817,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "HST",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Host Hotels & Resorts stock hits 52-week high at 23.54 USD",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.517,
+        "source": "Investing.com Australia"
+      }
     },
     {
       "symbol": "HUBC",
@@ -764,6 +873,24 @@
       ]
     },
     {
+      "symbol": "IFF",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Insider Buying: International Flavors & Fragrances (NYSE:IFF) Director Buys 260,000 Shares of Stock",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.42,
+        "source": "MarketBeat"
+      }
+    },
+    {
       "symbol": "INTC",
       "name": "Intel Corporation",
       "price": 107.93,
@@ -774,6 +901,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "IQV",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Is IQVIA Holdings Inc (IQV) a Bargain After 3.3% Drop? GF Value Says Undervalued",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.487,
+        "source": "GuruFocus"
+      }
     },
     {
       "symbol": "IREN",
@@ -822,6 +967,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "KHC",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "I want to take the risk of owning Kraft Heinz, says Jim Cramer",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.363,
+        "source": "CNBC"
+      }
     },
     {
       "symbol": "LAFAR",
@@ -894,6 +1057,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "LUV",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Southwest ditched free bags and MGM added all-inclusive perks: how the travel industry is reinventing itself to survive",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.245,
+        "source": "Fortune"
+      }
     },
     {
       "symbol": "MEHA",
@@ -1172,6 +1353,24 @@
       ]
     },
     {
+      "symbol": "ORCL",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Oracle Reshapes AI Data Centers With Clean Power And Arm Shift",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.403,
+        "source": "Yahoo Finance"
+      }
+    },
+    {
       "symbol": "OSCG",
       "name": "Leverage Shares 2x Long OSCR Daily ETF",
       "price": 15.4613,
@@ -1244,24 +1443,6 @@
       ]
     },
     {
-      "symbol": "PM",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Morgan Stanley raises Philip Morris stock price target on new product launches",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.404,
-        "source": "Investing.com"
-      }
-    },
-    {
       "symbol": "PMI",
       "name": "Picard Medical, Inc.",
       "price": 0.27,
@@ -1296,6 +1477,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "PSX",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Should You Buy Phillips 66 (PSX) Amid Escalating Middle East Tensions?",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.4,
+        "source": "Insider Monkey"
+      }
     },
     {
       "symbol": "PTIX",
@@ -1430,19 +1629,7 @@
       ]
     },
     {
-      "symbol": "SNSE",
-      "name": "Sensei Biotherapeutics, Inc.",
-      "price": 16.095,
-      "pct_change": -18.67105,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "SO",
+      "symbol": "SNPS",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -1453,11 +1640,23 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Southern Company stock (US8425871071): shares steady as investors digest Q1 2026 earnings and divide",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.287,
-        "source": "Ad Hoc News"
+        "headline": "Synopsys and Samsung Foundry Expand AI-Driven Design, Test, and 3DIC Enablement for Advanced Nodes",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.432,
+        "source": "EE Times Asia"
       }
+    },
+    {
+      "symbol": "SNSE",
+      "name": "Sensei Biotherapeutics, Inc.",
+      "price": 16.095,
+      "pct_change": -18.67105,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
     },
     {
       "symbol": "SOAR",
@@ -1556,24 +1755,6 @@
       ]
     },
     {
-      "symbol": "SYY",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Sysco (SYY) projects 20% revenue lift, targets 3.5x leverage after Jetro deal",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.534,
-        "source": "Stock Titan"
-      }
-    },
-    {
       "symbol": "TDTH",
       "name": "Trident Digital Tech Holdings Ltd",
       "price": 3.77,
@@ -1634,6 +1815,24 @@
       ]
     },
     {
+      "symbol": "TXT",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Textron Inc. stock outperforms competitors on strong trading day",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.483,
+        "source": "MarketWatch"
+      }
+    },
+    {
       "symbol": "TZA",
       "name": "Direxion Daily Small Cap Bear 3X ETF",
       "price": 4.27,
@@ -1644,6 +1843,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "UDR",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "UDR Inc. stock (US9029011082): Wells Fargo price target hike and buyback plan put NYSE REIT in focus",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.438,
+        "source": "Ad Hoc News"
+      }
     },
     {
       "symbol": "UECG",
@@ -1669,10 +1886,10 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Ulta Beauty\u2019s Heading to Times Square",
+        "headline": "Ulta Beauty tops Wall Street's expectations for first quarter",
         "sentiment": "Bullish",
-        "sentiment_score": 0.888,
-        "source": "WWD"
+        "sentiment_score": 0.894,
+        "source": "Mass Market Retailers"
       }
     },
     {
@@ -1737,7 +1954,7 @@
       "catalyst": {
         "headline": "A Look At Vulcan Materials (VMC) Valuation After Berenberg Hold Rating And Strong Q1 Results",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.31,
+        "sentiment_score": 0.316,
         "source": "Simply Wall Street"
       }
     },
@@ -1776,6 +1993,24 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "WFC",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "UDR Inc. stock (US9029011082): Wells Fargo price target hike and buyback plan put NYSE REIT in focus",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.243,
+        "source": "Ad Hoc News"
+      }
     },
     {
       "symbol": "WOK",
