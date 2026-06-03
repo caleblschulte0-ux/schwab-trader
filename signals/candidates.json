@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-03T20:40:29.547280+00:00",
+  "updated_utc": "2026-06-03T20:50:28.797865+00:00",
   "count": 249,
   "signal_counts": {
     "mover": 140,
@@ -297,8 +297,8 @@
     {
       "symbol": "ATPC",
       "name": "Agape ATP Corporation",
-      "price": 4.35,
-      "pct_change": 46.46465,
+      "price": 4.25,
+      "pct_change": 43.09764,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -626,8 +626,8 @@
     {
       "symbol": "DBGI",
       "name": "Digital Brands Group, Inc.",
-      "price": 1.07,
-      "pct_change": 52.83531,
+      "price": 0.9314,
+      "pct_change": 33.03814,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -640,8 +640,8 @@
     {
       "symbol": "DEVS",
       "name": "DevvStream Corp. Common Stock",
-      "price": 0.6441,
-      "pct_change": 7.0467,
+      "price": 0.6651,
+      "pct_change": 10.53681,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1142,8 +1142,8 @@
     {
       "symbol": "HUBC",
       "name": "HUB Cyber Security Ltd.",
-      "price": 0.6302,
-      "pct_change": 31.29167,
+      "price": 0.6496,
+      "pct_change": 35.33333,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2242,8 +2242,8 @@
     {
       "symbol": "NVD",
       "name": "GraniteShares 2x Short NVDA Daily ETF",
-      "price": 4.67,
-      "pct_change": 7.35632,
+      "price": 4.66,
+      "pct_change": 7.12644,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3271,8 +3271,8 @@
     {
       "symbol": "RPGL",
       "name": "Republic Power Group Limited Class A Ordinary Shares",
-      "price": 6.5,
-      "pct_change": -42.27353,
+      "price": 3.03,
+      "pct_change": -73.09059,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3411,8 +3411,8 @@
     {
       "symbol": "SDOT",
       "name": "Sadot Group Inc.",
-      "price": 6.765,
-      "pct_change": 106.25,
+      "price": 6.75,
+      "pct_change": 105.79268,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3425,8 +3425,8 @@
     {
       "symbol": "SELX",
       "name": "Semilux International Ltd. Ordinary Shares",
-      "price": 0.4671,
-      "pct_change": 64.47183,
+      "price": 0.455,
+      "pct_change": 60.21127,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
