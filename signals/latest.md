@@ -1,84 +1,51 @@
-# Brain Run — 2026-06-03T18:00:34Z
+# Brain Run — 2026-06-03T18:26:10Z
 
-Funnel: scanned 255 → 165 in budget → 50 with catalyst → 5 finalists → picked 2
-
----
-
-## Market Read
-
-**Tape: NEUTRAL.** SPY -0.68%, VIX 16.27. Mixed rotation day — not risk-off, just selective. Sector bifurcation is sharp: Basic Materials +2.08%, Healthcare +1.71%, Consumer Defensive +1.58%, Energy +1.42% green; Technology -1.10%, Financial Services -0.90%, Utilities -1.15% red. Holdings empty entering this run.
-
-**Sector tilt: favor Healthcare and Energy. Skeptical of pure tech longs.**
+**Funnel:** Scanned 244 (236 FMP + ~8 web) → 162 fit budget → 47 with catalyst → 7 finalists → **picked 3**  
+Leading tags: 102 (75 news_smallcap + 1 earnings_soon + 25 news_bullish + ~1 web-only)
 
 ---
 
-## Funnel Notes
+## Market Regime (STEP 0)
 
-FMP delivered 234 candidates (139 movers, 72 news_smallcap, 25 news_bullish, 1 earnings_soon). 8 web searches (gainers, unusual volume, small-cap movers, 52-week highs, sector catalysts, LASE/army contract detail, DOCU earnings preview, KYTX EULAR data) surfaced ~21 additional names (BJDX, PENG, OUST, BB 52-week-high context, VIDA, LEGN, SWMR, HPE earnings-beat detail). Total funnel ~255, leading pool ~103. Eliminated: ~30 sub-$2 names, ~15 leveraged ETFs, ~10 blow-offs >40% extended, ~8 over-budget names (ABVX $87, MRVL $306, INTC $111, IREN $65.6, PENG $70, OUST $47), and numerous low-volume or thesis-thin candidates.
-
----
-
-## Pick 1 — KYTX (Kyverna Therapeutics) — BUY 8 @ $7.83 | TP $10.50 | SL $6.60
-
-**$7.815 / -1.1% / vol 371K / mkt cap ~$475M**
-
-Phase 1 COMPARE trial data for miv-cel (KYV-101) presented at EULAR 2026 today: **66.6% ACR70 at Week 36** in ACPA-positive, treatment-refractory RA (median 6.5 prior biologics failed). Deep and sustained CD19+ B-cell depletion. Zero high-grade CRS or ICANS — exceptionally clean safety for a CAR-T. Phase 2 is initiated and **fully enrolled**, meaning another data readout is ahead.
-
-This is hard clinical evidence, not a hype headline. Stock is only -1.1% on the news, with decent volume — the full market hasn't recognized it yet. Healthcare sector is the 2nd-hottest sector today (+1.71%). Textbook early-stage entry: fresh data catalyst, stock barely moved, more readouts pending.
-
-8 × $7.83 = **$62.64**. TP $10.50 (~34% upside). SL $6.60 (~16% downside). **R/R ~2:1.**
-
-Re-confirmation of the previous run's top pick — same thesis, stock unmoved.
+**Tape: NEUTRAL.** SPY -0.54%, VIX 16.09 — not elevated/spiking.  
+Strong defensive rotation within a neutral tape: Basic Materials +2.08%, Healthcare +1.71%, Consumer Defensive +1.58%, Energy +1.42% all green. Technology -1.10%, Utilities -1.15%, Financial Services -0.90% lagging. **Tilt:** favor Healthcare and Energy setups; skeptical of pure tech longs. Normal aggressiveness but lean toward the hot sectors.
 
 ---
 
-## Pick 2 — NVGS (Navigator Gas) — BUY 2 @ $22.15 | TP $25.50 | SL $19.75
+## Picks
 
-**$22.11 / -0.5% / vol 63K / mkt cap ~$1.44B**
+### KYTX — $7.825, -0.95% | BUY 8 @ $7.83 | TP $10.50 | SL $6.50
+**Kyverna Therapeutics**: Presented updated Phase 1 COMPARE trial data at EULAR 2026 today. Key results: 66.6% ACR70 response at Week 36 in ACPA-positive, treatment-refractory RA (median 6.5 prior biologics failed); deep sustained CD19+ B-cell depletion; clean safety profile (zero high-grade CRS/ICANS). Phase 2 is initiated and fully enrolled — another data readout is already queued. Healthcare is the #2 sector today (+1.71%). Stock is down only -0.95% on the data = the full market hasn't reacted yet. Volume (410K) confirms real participation. 8 × $7.83 = $62.64. Stop $6.50 clears recent support; TP $10.50 on Phase 2 re-rating. Thesis break: Phase 2 halted or data reversed. (Was also picked at prior run 18:00Z; never filled — re-picked per BRAIN.md rules, setup intact.)
 
-Benzinga, 14:10 UTC: "Navigator Gas Bets On Supply Chain Shifts As US Exports Gain From Middle East Disruption." US LPG and chemical gas exports are structurally rising as Middle East shipping disruption reroutes cargo through American terminals. Navigator is a pure-play chemical gas tanker operator directly in the path of this trend. Energy sector is the 4th-hottest sector today (+1.42%).
+### OBE — $12.295, -0.28% | BUY 5 @ $12.30 | TP $14.20 | SL $11.00
+**Obsidian Energy**: Announced June 2 a $96M cash acquisition of Belly River light oil assets — 2,500 boe/d, 76% oil weighting, immediately accretive to funds flow, cements Obsidian as the largest Belly River producer. Energy is the #4 sector today (+1.42%), benefiting from Middle East disruption / US export tailwinds. Stock barely moved on the news (-0.28%) despite a confirmed strategic deal = early entry window still open. 5 × $12.30 = $61.50. Stop $11.00 is below pre-announcement support; TP $14.20 (~15% move) on market recognition of accretion value. Thesis break: deal collapses or oil sharp-sells.
 
-Stock is -0.5% on the day — the Benzinga story published 4 hours ago hasn't moved the needle yet. Early entry into a structural catalyst with sector support.
-
-2 × $22.15 = **$44.30**. TP $25.50 (~15% upside). SL $19.75 (~11% downside). **R/R ~1.5:1.**
-
-Re-confirmation of the previous run's thesis. No fill yet (not in holdings).
-
----
-
-## Notable Passes
-
-**LASE (+36%, $3.30, vol 191M):** The "U.S. Army contract" headline is materially wrong. The actual announcement is that LASE's Laser Shield anti-drone system was selected for a *technical exchange meeting* under MEIA Vulcan Call for Solutions — the company's own press release explicitly states this is NOT a contract award, NOT a purchase order. Stock surged 170% in premarket on the misread headline before pulling back to +36%. Even at current levels this is a hype/narrative pump on overstated news. 191M volume is retail chasing a headline, not institutional conviction. Hard pass.
-
-**BJDX (+91%):** Bluejay Diagnostics manufacturing partnership announced June 2. Day-old news, extreme premarket extension (+212%). Blow-off.
-
-**PENG (+18.4%, $70.71):** Penguin Solutions guidance beat (EPS $2.30 vs $2.08, rev $1.6B vs $1.5B) — genuinely good catalyst. Budget constraint: $70.71/share means even 1 share exceeds $65. Skipped on budget only.
-
-**ABVX (+20%, $87.21), MRVL (+5.2%, $306):** Over budget. Pass.
-
-**WCT (+188%), XOS (+177%), SDOT (+97%), STAK (+85%), JLHL (+72%), SBEV (+71%):** Parabolic blow-offs. All hard pass.
-
-**BB ($10.08, -2.26%):** FedRAMP Class D High recertification + QNX backlog story is real (government cybersecurity, CIBC raised target to $8.50). But this has been running since late May — multi-week move, stock now consolidating at 52-week highs. Not a fresh entry; placed on watchlist for a pullback to $9.50 support.
-
-**DOCU (earnings June 4 AH):** DocuSign at $55.18 reports tomorrow after close. Pre-buying carries blind binary risk tonight. The prior run's watchlist item — enter ONLY if the stock gaps above $57.50 on June 4's open (confirming a beat) — is the smarter approach. Maintaining that trigger.
-
-**Sub-$2 names (GGRP $0.82, FNGR $0.87, HUBC $0.63, SELX $0.46, DEVS $0.67, BURU $0.19, etc.):** Price floor is firm. All skipped.
+### MBC — $8.425, -0.65% | BUY 7 @ $8.43 | TP $10.50 | SL $7.20
+**MasterBrand Cabinets**: CEO R. Banyard purchased 60,000 shares ($505,800) on June 1, 2026, at ~$8.43 VWAP — executed the day after Q1 earnings badly missed (EPS $0.06 vs $0.27 expected). CEO insider buying directly into a miss at this magnitude signals strong management conviction that the market overreacted. Consumer Defensive sector is up today (+1.58%). Volume at 2.87M is very high for this market cap — institutional interest. Today's price is at/below the CEO's buy price = no chasing. 7 × $8.43 = $59.01. Stop $7.20 below CEO's basis; TP $10.50 = pre-miss levels (~24% upside). Thesis break: another guidance cut or CEO unwinds.
 
 ---
 
-## Watchlist (all 6 prior items retained)
+## Notable Names Passed
 
-| Symbol | Trigger | Level | Note |
-|--------|---------|-------|------|
-| NVTS | pullback | $28.00 | Navitas Semi AI/GaN; currently extended at $31.64 |
-| FJET | pullback | $8.30 | Russell 3000 inclusion structural buying before late-June |
-| OBE | breakout | $13.00 | Belly River $96M oil acquisition; stock barely moved |
-| HPE | pullback | $54.00 | Q2 earnings beat, rev +40% YoY; dip to support |
-| MNKD | breakout | $3.65 | IPF inhaled drug global trial; healthcare sector tailwind |
-| DOCU | breakout | $57.50 | June 4 AH earnings; enter only on bullish gap-open |
+**LASE (+27.7%, $3.09, vol 193M)** — The "U.S. Army contract" headline is materially misleading. The actual event is selection for a *technical exchange meeting* under MEIA Vulcan Call for Solutions — explicitly NOT a contract, NOT a purchase order. Stock ran ~170% pre-market on the misread. Already extended on overstated news. Hard pass.
+
+**NVTS (+25.2%, $32.38)** — Navitas Semi / Nvidia MGX 800 VDC AI infrastructure partnership confirmed at COMPUTEX June 3. This IS a real, credible catalyst. But +25% intraday is extended per stage rules. Added to watchlist at $28.50 pullback trigger.
+
+**RIVN (+5.52%, $18.245)** — R2 SUV deliveries begin June 9 (confirmed catalyst). On 8-day winning streak. Solid pre-catalyst setup but Consumer Cyclical sector weak today (-0.70%) and already up 5.5%. Added to watchlist for pullback entry to $17.25.
+
+**QTI ($4.23, -4.73%)** — Saudi Arabia FDA clearance confirmed today. Very high sentiment (0.812). BUT stock is DOWN on the good news = bearish divergence; market does not believe the commercial story. Very illiquid (76K volume). Skip.
+
+**NEXN ($8.22, -3.86%)** — World Cup 2026 / VIDAA smart TV deal confirmed. Solid catalyst but stock is selling off -3.86% on the announcement = selling-the-news dynamic. Skip.
+
+**DOCU ($55.18, earnings June 4 AH)** — Only 1 share fits budget ($55). Binary earnings risk on 1 share is not compelling. Maintained as watchlist breakout trigger above $57.50 post-earnings.
+
+**PVLA (+7.5%, $112.47)** — FDA pre-NDA meeting completion — genuinely positive milestone. But $112/share means zero shares fit the $65 budget. Ineligible.
+
+**WCT (+156%), XOS (+184%), SDOT (+88%), STAK (+78%)** — Parabolic blow-offs. All hard pass.
+
+**Sub-$2 floor eliminations (~35 names):** SBEV, SELX, BNRG, BURU, CETX, CHPGR, DEVS, EDBL, FBGL, FNGR, FSHPR, GPUS, HKIT, HUBC, IVF, JZ, KWM, KNRX, LIMN, MRNO, MYND, NEON, NOTV, ODVWZ, PMI, SNGX, SOAR, SPWR, VMAR, WOK, ZCMD, GLXG, etc.
 
 ---
 
-## Holdings
-
-`holdings.json` empty — no open positions. This run deploys ~$107 (KYTX $62.64 + NVGS $44.30), leaving ~$293 powder for future setups.
+## Holdings Read
+`holdings.json` empty — no open positions. This run deploys ~$183 (KYTX $62.64 + OBE $61.50 + MBC $59.01), leaving ~$217 powder for future setups.
