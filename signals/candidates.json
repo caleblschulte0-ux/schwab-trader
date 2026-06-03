@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-03T20:20:29.998487+00:00",
+  "updated_utc": "2026-06-03T20:30:24.425807+00:00",
   "count": 249,
   "signal_counts": {
     "mover": 140,
@@ -861,8 +861,8 @@
     {
       "symbol": "FOXX",
       "name": "Foxx Development Holdings Inc.",
-      "price": 3.0083,
-      "pct_change": 27.0236,
+      "price": 2.86,
+      "pct_change": 20.76173,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
