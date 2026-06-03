@@ -1,8 +1,8 @@
 {
-  "updated_utc": "2026-06-03T15:30:30.247216+00:00",
-  "count": 208,
+  "updated_utc": "2026-06-03T15:40:32.029817+00:00",
+  "count": 206,
   "signal_counts": {
-    "mover": 139,
+    "mover": 137,
     "news_smallcap": 47,
     "news_bullish": 25,
     "earnings_soon": 1
@@ -59,15 +59,15 @@
     "tone": "neutral"
   },
   "market_updated_utc": "2026-06-03T15:30:27.583925+00:00",
-  "news_updated_utc": "2026-06-03T15:20:32.100135+00:00",
+  "news_updated_utc": "2026-06-03T15:40:32.029036+00:00",
   "news_calls_date": "2026-06-03",
-  "news_calls_today": 11,
+  "news_calls_today": 12,
   "candidates": [
     {
       "symbol": "ABVX",
       "name": "Abivax S.A.",
-      "price": 83.015,
-      "pct_change": 14.50345,
+      "price": 82.1,
+      "pct_change": 13.24138,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -80,8 +80,8 @@
     {
       "symbol": "ACHR",
       "name": "Archer Aviation Inc.",
-      "price": 6.445,
-      "pct_change": -4.37685,
+      "price": 6.435,
+      "pct_change": -4.52522,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -90,48 +90,6 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "ADI",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Steel Dynamics Inc stock hits all-time high at 274.13 USD",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.319,
-        "source": "Investing.com",
-        "published_utc": "2026-06-03T14:06:27+00:00"
-      }
-    },
-    {
-      "symbol": "ADP",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Robust Job Growth in May: ADP Reports 122,000 New Positions",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.428,
-        "source": "GuruFocus",
-        "published_utc": "2026-06-03T14:04:57+00:00"
-      }
     },
     {
       "symbol": "AFL",
@@ -149,7 +107,7 @@
       "catalyst": {
         "headline": "Check for Cancer Champion Dr. Heather Bittner Fagan brings cancer prevention to the frontlines of care",
         "sentiment": "Bullish",
-        "sentiment_score": 0.491,
+        "sentiment_score": 0.454,
         "source": "Aflac Newsroom",
         "published_utc": "2026-06-03T14:23:01+00:00"
       }
@@ -157,12 +115,12 @@
     {
       "symbol": "AGRO",
       "name": null,
-      "price": 12.63,
-      "pct_change": 1.04,
+      "price": 12.665,
+      "pct_change": 1.32,
       "exchange": null,
       "list": "news",
-      "volume": 42211,
-      "market_cap": 1822615926.0,
+      "volume": 54695,
+      "market_cap": 1827666722.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -170,7 +128,7 @@
       "catalyst": {
         "headline": "Tether-Backed Adecoagro Plans Sugarcane-Powered Bitcoin Mining in Brazil",
         "sentiment": "Bullish",
-        "sentiment_score": 0.431,
+        "sentiment_score": 0.449,
         "source": "BanklessTimes",
         "published_utc": "2026-06-03T08:20:58+00:00"
       }
@@ -178,8 +136,8 @@
     {
       "symbol": "AIM",
       "name": "AIM ImmunoTech Inc.",
-      "price": 0.676,
-      "pct_change": -18.2291,
+      "price": 0.6942,
+      "pct_change": -16.02758,
       "exchange": "AMEX",
       "list": "losers",
       "volume": null,
@@ -192,12 +150,12 @@
     {
       "symbol": "ALG",
       "name": null,
-      "price": 148.835,
-      "pct_change": -2.569,
+      "price": 149.335,
+      "pct_change": -2.242,
       "exchange": null,
       "list": "news",
-      "volume": 36683,
-      "market_cap": 1811075330.0,
+      "volume": 41192,
+      "market_cap": 1817159502.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -205,7 +163,7 @@
       "catalyst": {
         "headline": "Alamo Group, Inc. (NYSE:ALG) Given Consensus Recommendation of \"Moderate Buy\" by Brokerages",
         "sentiment": "Bullish",
-        "sentiment_score": 0.41,
+        "sentiment_score": 0.392,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T08:41:36+00:00"
       }
@@ -213,8 +171,8 @@
     {
       "symbol": "AMPGR",
       "name": "Amplitech Group, Inc. Series A Right",
-      "price": 0.701,
-      "pct_change": -17.53911,
+      "price": 0.7,
+      "pct_change": -17.65675,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -241,8 +199,8 @@
     {
       "symbol": "AMZE",
       "name": "Amaze Holdings, Inc.",
-      "price": 0.1488,
-      "pct_change": -4.0619,
+      "price": 0.15,
+      "pct_change": -3.2882,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -255,8 +213,8 @@
     {
       "symbol": "ANY",
       "name": "Sphere 3D Corp.",
-      "price": 4.7001,
-      "pct_change": 20.20716,
+      "price": 4.9292,
+      "pct_change": 26.0665,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -269,8 +227,8 @@
     {
       "symbol": "ARDT",
       "name": "Ardent Health Partners, LLC",
-      "price": 7.8,
-      "pct_change": -15.85761,
+      "price": 7.815,
+      "pct_change": -15.69579,
       "exchange": "NYSE",
       "list": "losers",
       "volume": null,
@@ -281,34 +239,13 @@
       ]
     },
     {
-      "symbol": "ASTC",
-      "name": null,
-      "price": 42.65,
-      "pct_change": -6.264,
-      "exchange": null,
-      "list": "news",
-      "volume": 3028622,
-      "market_cap": 75019345.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "ASTC Stock Eyes Best Year Since 1997 \u2014 Retail Traders Shrug Off Short Report Warning Of 99% Downside",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.047,
-        "source": "Stocktwits",
-        "published_utc": "2026-06-03T06:31:35+00:00"
-      }
-    },
-    {
       "symbol": "ATHE",
       "name": null,
       "price": 4.08,
       "pct_change": 1.493,
       "exchange": null,
       "list": "news",
-      "volume": 3498,
+      "volume": 3543,
       "market_cap": 62619497.0,
       "signal": "news_smallcap",
       "signals": [
@@ -317,7 +254,7 @@
       "catalyst": {
         "headline": "Alterity Therapeutics Ltd TEMP Earnings and Revenue \u2013 ASX:ATHDA",
         "sentiment": "Neutral",
-        "sentiment_score": 0.003,
+        "sentiment_score": 0.019,
         "source": "TradingView",
         "published_utc": "2026-06-03T07:20:53+00:00"
       }
@@ -325,8 +262,8 @@
     {
       "symbol": "ATPC",
       "name": "Agape ATP Corporation",
-      "price": 4.1,
-      "pct_change": 38.04714,
+      "price": 4.17,
+      "pct_change": 40.40404,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -335,6 +272,27 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "AWK",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "American Water Continues Commitment to Advancing Utility Resilience; Achieves Utility Resilience Goal Five Years Early",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.347,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T15:04:06+00:00"
+      }
     },
     {
       "symbol": "BAC",
@@ -352,7 +310,7 @@
       "catalyst": {
         "headline": "Bank of America to Hire Nearly 4,000 Interns This Summer",
         "sentiment": "Bullish",
-        "sentiment_score": 0.387,
+        "sentiment_score": 0.353,
         "source": "Intellectia AI",
         "published_utc": "2026-06-03T14:17:10+00:00"
       }
@@ -360,8 +318,8 @@
     {
       "symbol": "BB",
       "name": "BlackBerry Limited",
-      "price": 10.58,
-      "pct_change": 2.56907,
+      "price": 10.3317,
+      "pct_change": 0.1619,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -388,8 +346,8 @@
     {
       "symbol": "BITO",
       "name": "ProShares - Bitcoin ETF",
-      "price": 9.0665,
-      "pct_change": -1.12869,
+      "price": 9.015,
+      "pct_change": -1.6903,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -400,10 +358,31 @@
       ]
     },
     {
+      "symbol": "BKR",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Citigroup Lowers Baker Hughes (NASDAQ:BKR) Price Target to $74.00",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.202,
+        "source": "MarketBeat",
+        "published_utc": "2026-06-03T14:54:10+00:00"
+      }
+    },
+    {
       "symbol": "BMGL",
       "name": "Basel Medical Group Ltd Ordinary Shares",
-      "price": 0.4513,
-      "pct_change": -17.69105,
+      "price": 0.46,
+      "pct_change": -16.10432,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -416,8 +395,8 @@
     {
       "symbol": "BNRG",
       "name": "Brenmiller Energy Ltd",
-      "price": 1.5219,
-      "pct_change": 12.73333,
+      "price": 1.5499,
+      "pct_change": 14.80741,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -430,12 +409,12 @@
     {
       "symbol": "BZH",
       "name": null,
-      "price": 25.855,
-      "pct_change": -2.397,
+      "price": 25.81,
+      "pct_change": -2.567,
       "exchange": null,
       "list": "news",
-      "volume": 34738,
-      "market_cap": 706716045.0,
+      "volume": 49762,
+      "market_cap": 705486023.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -443,62 +422,20 @@
       "catalyst": {
         "headline": "Beazer Homes USA Inc stock (US0758961009): Dream Finders bid saga keeps focus on valuation and strat",
         "sentiment": "Neutral",
-        "sentiment_score": 0.135,
+        "sentiment_score": 0.113,
         "source": "Ad Hoc News",
         "published_utc": "2026-06-03T10:09:33+00:00"
       }
     },
     {
-      "symbol": "CASS",
-      "name": null,
-      "price": 45.99,
-      "pct_change": -1.033,
-      "exchange": null,
-      "list": "news",
-      "volume": 17991,
-      "market_cap": 591944143.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Understanding Momentum Shifts in (CASS)",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.148,
-        "source": "Stock Traders Daily",
-        "published_utc": "2026-06-03T05:52:00+00:00"
-      }
-    },
-    {
-      "symbol": "CAT",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Caterpillar, Deere rally as Trump eases tariffs on farm and industrial equipment",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.716,
-        "source": "MSN",
-        "published_utc": "2026-06-03T14:04:26+00:00"
-      }
-    },
-    {
       "symbol": "CBZ",
       "name": null,
-      "price": 31.79,
-      "pct_change": -5.835,
+      "price": 31.975,
+      "pct_change": -5.287,
       "exchange": null,
       "list": "news",
-      "volume": 78476,
-      "market_cap": 1705493190.0,
+      "volume": 94768,
+      "market_cap": 1715418206.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -506,37 +443,30 @@
       "catalyst": {
         "headline": "CBIZ Completes Acquisition of BINDZ Consulting to Strengthen Global Service Capabilities",
         "sentiment": "Bullish",
-        "sentiment_score": 0.409,
+        "sentiment_score": 0.433,
         "source": "Indian Startup Times",
         "published_utc": "2026-06-03T08:09:07+00:00"
       }
     },
     {
-      "symbol": "CEG",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
+      "symbol": "CDTG",
+      "name": "CDT Environmental Technology Investment Holdings Limited ordinary shares",
+      "price": 7.14,
+      "pct_change": 12.46499,
+      "exchange": "NASDAQ",
+      "list": "gainers",
       "volume": null,
       "market_cap": null,
-      "signal": "news_bullish",
+      "signal": "mover",
       "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Texas Instruments Is a Major Winner of the AI Power Bottleneck, Investors Just Aren\u2019t Seeing It Yet",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.302,
-        "source": "Barchart.com",
-        "published_utc": "2026-06-03T14:14:37+00:00"
-      }
+        "mover"
+      ]
     },
     {
       "symbol": "CETX",
       "name": "Cemtrex, Inc.",
-      "price": 0.6216,
-      "pct_change": -33.23308,
+      "price": 0.6249,
+      "pct_change": -32.87863,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -545,33 +475,12 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "CEVA",
-      "name": null,
-      "price": 50.11,
-      "pct_change": 1.008,
-      "exchange": null,
-      "list": "news",
-      "volume": 502114,
-      "market_cap": 1396032981.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "CEVA Technical Analysis & Stock Price Forecast",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.446,
-        "source": "Intellectia AI",
-        "published_utc": "2026-06-03T06:09:30+00:00"
-      }
     },
     {
       "symbol": "CGNT",
       "name": "Cognyte Software Ltd.",
-      "price": 9.345,
-      "pct_change": -19.57831,
+      "price": 9.285,
+      "pct_change": -20.09466,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -582,12 +491,12 @@
       ]
     },
     {
-      "symbol": "CGTL",
-      "name": "Creative Global Technology Holdings Limited Ordinary Shares",
-      "price": 0.3454,
-      "pct_change": -13.65,
+      "symbol": "CING",
+      "name": "Cingulate Inc.",
+      "price": 4.51,
+      "pct_change": 11.91067,
       "exchange": "NASDAQ",
-      "list": "losers",
+      "list": "gainers",
       "volume": null,
       "market_cap": null,
       "signal": "mover",
@@ -598,8 +507,8 @@
     {
       "symbol": "CODX",
       "name": "Co-Diagnostics, Inc.",
-      "price": 5.3,
-      "pct_change": -14.791,
+      "price": 5.28,
+      "pct_change": -15.11254,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -612,12 +521,12 @@
     {
       "symbol": "COFS",
       "name": null,
-      "price": 30.77,
-      "pct_change": -2.627,
+      "price": 30.71,
+      "pct_change": -2.816,
       "exchange": null,
       "list": "news",
-      "volume": 9175,
-      "market_cap": 460781827.0,
+      "volume": 9645,
+      "market_cap": 459883325.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -625,7 +534,7 @@
       "catalyst": {
         "headline": "COFS Technical Analysis & Stock Price Forecast",
         "sentiment": "Bullish",
-        "sentiment_score": 0.538,
+        "sentiment_score": 0.532,
         "source": "Intellectia AI",
         "published_utc": "2026-06-03T07:10:31+00:00"
       }
@@ -633,8 +542,8 @@
     {
       "symbol": "CRCG",
       "name": "Leverage Shares 2x Long CRCL Daily ETF",
-      "price": 21.54,
-      "pct_change": -14.38792,
+      "price": 21.39,
+      "pct_change": -14.9841,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -647,8 +556,8 @@
     {
       "symbol": "CRMU",
       "name": "Leverage Shares 2x Long CRML Daily ETF",
-      "price": 7.5001,
-      "pct_change": -15.73584,
+      "price": 7.505,
+      "pct_change": -15.68079,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -659,42 +568,7 @@
       ]
     },
     {
-      "symbol": "DBGI",
-      "name": "Digital Brands Group, Inc.",
-      "price": 1.1402,
-      "pct_change": 62.86245,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "DBVT",
-      "name": null,
-      "price": 17.84,
-      "pct_change": -2.139,
-      "exchange": null,
-      "list": "news",
-      "volume": 34351,
-      "market_cap": 1056279444.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "BV Technologies screens first infant in Viaskin peanut patch study",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.431,
-        "source": "grafa.com",
-        "published_utc": "2026-06-03T10:09:04+00:00"
-      }
-    },
-    {
-      "symbol": "DE",
+      "symbol": "CTAS",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -707,18 +581,18 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Caterpillar, Deere rally as Trump eases tariffs on farm and industrial equipment",
+        "headline": "Cintas Moves Up 15 Spots on the Fortune 500 List",
         "sentiment": "Bullish",
-        "sentiment_score": 0.631,
-        "source": "MSN",
-        "published_utc": "2026-06-03T14:04:26+00:00"
+        "sentiment_score": 0.467,
+        "source": "Business Wire",
+        "published_utc": "2026-06-03T14:38:22+00:00"
       }
     },
     {
-      "symbol": "DEVS",
-      "name": "DevvStream Corp. Common Stock",
-      "price": 0.758,
-      "pct_change": 25.9764,
+      "symbol": "DBGI",
+      "name": "Digital Brands Group, Inc.",
+      "price": 1.28,
+      "pct_change": 82.83102,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -729,25 +603,74 @@
       ]
     },
     {
-      "symbol": "DIN",
+      "symbol": "DBVT",
       "name": null,
-      "price": 28.96,
-      "pct_change": -2.063,
+      "price": 17.53,
+      "pct_change": -3.84,
       "exchange": null,
       "list": "news",
-      "volume": 47331,
-      "market_cap": 367362668.0,
+      "volume": 43716,
+      "market_cap": 1037924812.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
       ],
       "catalyst": {
-        "headline": "Dine Brands Global, Inc. (NYSE:DIN) Given Consensus Rating of \"Hold\" by Brokerages",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.007,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T06:10:25+00:00"
+        "headline": "BV Technologies screens first infant in Viaskin peanut patch study",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.449,
+        "source": "grafa.com",
+        "published_utc": "2026-06-03T10:09:04+00:00"
       }
+    },
+    {
+      "symbol": "DEVS",
+      "name": "DevvStream Corp. Common Stock",
+      "price": 0.7963,
+      "pct_change": 32.3417,
+      "exchange": "NASDAQ",
+      "list": "gainers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "DG",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Dollar General Corporation Stock 12\u2011Month Price Target Cut to $132.43, Implies 25% Upside",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.268,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T14:20:23+00:00"
+      }
+    },
+    {
+      "symbol": "DNNG",
+      "name": "Leverage Shares 2x Long DNN Daily ETF",
+      "price": 9.25,
+      "pct_change": -14.07339,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
     },
     {
       "symbol": "DOCU",
@@ -770,8 +693,8 @@
     {
       "symbol": "DRTS",
       "name": "Alpha Tau Medical Ltd.",
-      "price": 10.76,
-      "pct_change": 20.49272,
+      "price": 10.69,
+      "pct_change": 19.70885,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -784,8 +707,8 @@
     {
       "symbol": "DXF",
       "name": "Eason Technology Limited",
-      "price": 0.572,
-      "pct_change": 15.09055,
+      "price": 0.587,
+      "pct_change": 18.10865,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -796,63 +719,35 @@
       ]
     },
     {
-      "symbol": "EDBL",
-      "name": "Edible Garden AG Incorporated",
-      "price": 0.2055,
-      "pct_change": -13.29114,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "EEIQ",
-      "name": "Elite Education Group International Limited",
-      "price": 3.56,
-      "pct_change": 12.65823,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "ENR",
+      "symbol": "EA",
       "name": null,
-      "price": 18.18,
-      "pct_change": -0.71,
+      "price": null,
+      "pct_change": null,
       "exchange": null,
       "list": "news",
-      "volume": 85427,
-      "market_cap": 1244847957.0,
-      "signal": "news_smallcap",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
       "signals": [
-        "news_smallcap"
+        "news_bullish"
       ],
       "catalyst": {
-        "headline": "Energizer Holdings, Inc. (NYSE:ENR) Receives Average Recommendation of \"Hold\" from Analysts",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.027,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T06:39:41+00:00"
+        "headline": "Experience the Definitive New Era of Formula 1: EA Sports\u2122 F1\u00ae 25 2026 Season Pack Available Now",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.459,
+        "source": "Business Wire",
+        "published_utc": "2026-06-03T15:05:27+00:00"
       }
     },
     {
       "symbol": "EP",
       "name": null,
-      "price": 2.69,
-      "pct_change": 2.281,
+      "price": 2.7,
+      "pct_change": 2.662,
       "exchange": null,
       "list": "news",
-      "volume": 21199,
-      "market_cap": 107041029.0,
+      "volume": 25705,
+      "market_cap": 107438951.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -860,7 +755,7 @@
       "catalyst": {
         "headline": "Empire Petroleum (EP) director adds 7,777 shares in open\u2011market buy",
         "sentiment": "Bullish",
-        "sentiment_score": 0.414,
+        "sentiment_score": 0.415,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T07:40:18+00:00"
       }
@@ -868,8 +763,8 @@
     {
       "symbol": "EQ",
       "name": "Equillium, Inc.",
-      "price": 3.395,
-      "pct_change": 21.68459,
+      "price": 3.31,
+      "pct_change": 18.63799,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -894,35 +789,14 @@
       ]
     },
     {
-      "symbol": "EVTC",
-      "name": null,
-      "price": 22.48,
-      "pct_change": -7.793,
-      "exchange": null,
-      "list": "news",
-      "volume": 88662,
-      "market_cap": 1385225333.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Evertec Inc stock (PR30040P1032): shares hover around mid-20 USD as payments group tracks peers",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.036,
-        "source": "Ad Hoc News",
-        "published_utc": "2026-06-03T05:40:28+00:00"
-      }
-    },
-    {
       "symbol": "EYE",
       "name": null,
-      "price": 16.045,
-      "pct_change": -1.745,
+      "price": 15.965,
+      "pct_change": -2.235,
       "exchange": null,
       "list": "news",
-      "volume": 547088,
-      "market_cap": 1285471890.0,
+      "volume": 587369,
+      "market_cap": 1279062557.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -930,7 +804,7 @@
       "catalyst": {
         "headline": "National Vision (NASDAQ: EYE) confirms 2026 outlook, $50M buyback",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.273,
+        "sentiment_score": 0.274,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:00:48+00:00"
       }
@@ -938,8 +812,8 @@
     {
       "symbol": "FABC",
       "name": "StableX Technologies, Inc.",
-      "price": 5.765,
-      "pct_change": 16.46465,
+      "price": 5.61,
+      "pct_change": 13.33333,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -952,8 +826,8 @@
     {
       "symbol": "FATN",
       "name": "FatPipe, Inc. Common Stock",
-      "price": 7.725,
-      "pct_change": 18.84615,
+      "price": 7.8,
+      "pct_change": 20,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -964,14 +838,28 @@
       ]
     },
     {
+      "symbol": "FBGL",
+      "name": "FBS Global Limited Ordinary Shares",
+      "price": 0.5066,
+      "pct_change": -15.56667,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "FBRX",
       "name": null,
-      "price": 18.13,
-      "pct_change": -0.248,
+      "price": 17.605,
+      "pct_change": -3.136,
       "exchange": null,
       "list": "news",
-      "volume": 53011,
-      "market_cap": 371280952.0,
+      "volume": 57007,
+      "market_cap": 360529573.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -979,7 +867,7 @@
       "catalyst": {
         "headline": "Forte Biosciences (FBRX) director awarded 18,353 RSUs vesting after 2026 meeting",
         "sentiment": "Neutral",
-        "sentiment_score": 0.016,
+        "sentiment_score": 0.046,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:40:32+00:00"
       }
@@ -987,12 +875,12 @@
     {
       "symbol": "FIVN",
       "name": null,
-      "price": 23.77,
-      "pct_change": -5.034,
+      "price": 23.7408,
+      "pct_change": -5.151,
       "exchange": null,
       "list": "news",
-      "volume": 1091295,
-      "market_cap": 1819925995.0,
+      "volume": 1165767,
+      "market_cap": 1817690326.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1000,7 +888,7 @@
       "catalyst": {
         "headline": "The Zacks Analyst Blog Highlights SoundHound, NICE and Five9",
         "sentiment": "Neutral",
-        "sentiment_score": 0.11,
+        "sentiment_score": 0.142,
         "source": "Zacks Investment Research",
         "published_utc": "2026-06-03T12:00:13+00:00"
       }
@@ -1008,12 +896,12 @@
     {
       "symbol": "FJET",
       "name": null,
-      "price": 8.635,
-      "pct_change": -0.173,
+      "price": 8.64,
+      "pct_change": -0.116,
       "exchange": null,
       "list": "news",
-      "volume": 1158537,
-      "market_cap": 381442248.0,
+      "volume": 1238829,
+      "market_cap": 381663118.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1021,7 +909,7 @@
       "catalyst": {
         "headline": "Starfighters Space (NYSE: FJET) Added to Membership of Russell 3000\u00ae Index",
         "sentiment": "Bullish",
-        "sentiment_score": 0.445,
+        "sentiment_score": 0.443,
         "source": "The Joplin Globe",
         "published_utc": "2026-06-03T10:09:40+00:00"
       }
@@ -1029,8 +917,8 @@
     {
       "symbol": "FNGR",
       "name": "FingerMotion, Inc.",
-      "price": 0.8719,
-      "pct_change": 25.99711,
+      "price": 0.915,
+      "pct_change": 32.22543,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1043,8 +931,8 @@
     {
       "symbol": "FOFO",
       "name": "Hang Feng Technology Innovation Co., Ltd. Ordinary Shares",
-      "price": 5.43,
-      "pct_change": 35.41147,
+      "price": 5.5057,
+      "pct_change": 37.29925,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1070,7 +958,7 @@
       "catalyst": {
         "headline": "Federal Realty Upgrades Highlight Affluent Market Focus And Growth Targets",
         "sentiment": "Bullish",
-        "sentiment_score": 0.414,
+        "sentiment_score": 0.406,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T14:32:36+00:00"
       }
@@ -1092,12 +980,12 @@
     {
       "symbol": "FWRG",
       "name": null,
-      "price": 10.335,
-      "pct_change": -1.006,
+      "price": 10.33,
+      "pct_change": -1.054,
       "exchange": null,
       "list": "news",
-      "volume": 230936,
-      "market_cap": 637099886.0,
+      "volume": 279718,
+      "market_cap": 636791662.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1105,7 +993,7 @@
       "catalyst": {
         "headline": "First Watch Restaurant Group (NASDAQ:FWRG) Receives Buy Rating from TD Cowen",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.324,
+        "sentiment_score": 0.321,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T12:10:57+00:00"
       }
@@ -1113,8 +1001,8 @@
     {
       "symbol": "GEMG",
       "name": "Leverage Shares 2x Long GEMI Daily ETF",
-      "price": 10.705,
-      "pct_change": -15.44234,
+      "price": 10.75,
+      "pct_change": -15.08689,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1123,27 +1011,6 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "GHI",
-      "name": null,
-      "price": 5.37,
-      "pct_change": -1.287,
-      "exchange": null,
-      "list": "news",
-      "volume": 5822,
-      "market_cap": 126530679.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "GHI PE Ratio & Valuation, Is GHI Overvalued",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.302,
-        "source": "Intellectia AI",
-        "published_utc": "2026-06-03T06:09:16+00:00"
-      }
     },
     {
       "symbol": "GILD",
@@ -1161,37 +1028,16 @@
       "catalyst": {
         "headline": "IDEAL Data Expands Gilead\u2019s Livdelzi Evidence Into Lower-ALP PBC Population",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.309,
+        "sentiment_score": 0.329,
         "source": "Citeline News & Insights",
         "published_utc": "2026-06-03T14:15:38+00:00"
       }
     },
     {
-      "symbol": "GLAD",
-      "name": null,
-      "price": 19.08,
-      "pct_change": -2.003,
-      "exchange": null,
-      "list": "news",
-      "volume": 35197,
-      "market_cap": 431075757.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Gladstone Capital Corp stock (US3765351047): new independent director joins board as shares hover around 52-week highs",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.344,
-        "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T06:39:06+00:00"
-      }
-    },
-    {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
-      "price": 359.1229,
-      "pct_change": -0.75365,
+      "price": 359.04,
+      "pct_change": -0.77656,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1204,8 +1050,8 @@
     {
       "symbol": "GPUS",
       "name": "Hyperscale Data, Inc.",
-      "price": 0.2109,
-      "pct_change": -8.66176,
+      "price": 0.2078,
+      "pct_change": -10.00433,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -1218,12 +1064,12 @@
     {
       "symbol": "GRRR",
       "name": "Gorilla Technology Group Inc.",
-      "price": 17.48,
-      "pct_change": -19.74288,
+      "price": 17.38,
+      "pct_change": -20.20202,
       "exchange": "NASDAQ",
       "list": "losers",
-      "volume": 3139039,
-      "market_cap": 490994267.0,
+      "volume": 3335912,
+      "market_cap": 487808542.0,
       "signal": "mover",
       "signals": [
         "mover",
@@ -1232,7 +1078,7 @@
       "catalyst": {
         "headline": "Gorilla Technology Group Inc. Announces Pricing of $107 Million Senior Unsecured Convertible Bond Offering",
         "sentiment": "Bullish",
-        "sentiment_score": 0.396,
+        "sentiment_score": 0.426,
         "source": "TMX Newsfile",
         "published_utc": "2026-06-03T11:09:38+00:00"
       }
@@ -1240,12 +1086,12 @@
     {
       "symbol": "GRVY",
       "name": null,
-      "price": 62.9,
-      "pct_change": -2.465,
+      "price": 62.95,
+      "pct_change": -2.388,
       "exchange": null,
       "list": "news",
-      "volume": 28197,
-      "market_cap": 437085810.0,
+      "volume": 29182,
+      "market_cap": 437433255.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1253,7 +1099,7 @@
       "catalyst": {
         "headline": "Gravity Game Unite (GGU) Successfully Concludes OBT for PC MMORPG Ragnarok Zero: Global",
         "sentiment": "Bullish",
-        "sentiment_score": 0.534,
+        "sentiment_score": 0.536,
         "source": "ANTARA News",
         "published_utc": "2026-06-03T07:10:28+00:00"
       }
@@ -1261,8 +1107,8 @@
     {
       "symbol": "GTM",
       "name": "ZoomInfo Technologies Inc.",
-      "price": 2.965,
-      "pct_change": -13.43066,
+      "price": 2.97,
+      "pct_change": -13.28467,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1275,12 +1121,12 @@
     {
       "symbol": "GYRE",
       "name": null,
-      "price": 5.525,
-      "pct_change": -0.629,
+      "price": 5.53,
+      "pct_change": -0.54,
       "exchange": null,
       "list": "news",
-      "volume": 21553,
-      "market_cap": 536081479.0,
+      "volume": 22817,
+      "market_cap": 536566621.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1288,7 +1134,7 @@
       "catalyst": {
         "headline": "Gyre Therapeutics Updates Post-Cullgen Acquisition Growth Strategy",
         "sentiment": "Bullish",
-        "sentiment_score": 0.443,
+        "sentiment_score": 0.404,
         "source": "The Globe and Mail",
         "published_utc": "2026-06-03T10:40:25+00:00"
       }
@@ -1300,7 +1146,7 @@
       "pct_change": -0.615,
       "exchange": null,
       "list": "news",
-      "volume": 2215,
+      "volume": 2683,
       "market_cap": 262787162.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1309,7 +1155,7 @@
       "catalyst": {
         "headline": "Hamilton Beach (NYSE: HBB) insider-linked trust gifts 1,975 Class B shares",
         "sentiment": "Neutral",
-        "sentiment_score": 0.046,
+        "sentiment_score": 0.015,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:09:00+00:00"
       }
@@ -1321,7 +1167,7 @@
       "pct_change": -1.046,
       "exchange": null,
       "list": "news",
-      "volume": 60462,
+      "volume": 78480,
       "market_cap": 207878479.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1330,7 +1176,7 @@
       "catalyst": {
         "headline": "High Tide (NASDAQ: HITI) schedules Q2 2026 results webcast and grants employee stock options",
         "sentiment": "Neutral",
-        "sentiment_score": 0.143,
+        "sentiment_score": 0.13,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:13:21+00:00"
       }
@@ -1338,8 +1184,8 @@
     {
       "symbol": "HIVE",
       "name": "HIVE Digital Technologies Ltd.",
-      "price": 4.49,
-      "pct_change": -1.10132,
+      "price": 4.505,
+      "pct_change": -0.77093,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1352,8 +1198,8 @@
     {
       "symbol": "HKIT",
       "name": "Hitek Global Inc.",
-      "price": 0.4235,
-      "pct_change": -31.69355,
+      "price": 0.4151,
+      "pct_change": -33.04839,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1366,8 +1212,8 @@
     {
       "symbol": "HPE",
       "name": "Hewlett Packard Enterprise Company",
-      "price": 55.435,
-      "pct_change": -1.27337,
+      "price": 55.3,
+      "pct_change": -1.5138,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -1380,12 +1226,12 @@
     {
       "symbol": "HROW",
       "name": null,
-      "price": 33.1233,
-      "pct_change": 0.801,
+      "price": 33.1432,
+      "pct_change": 0.862,
       "exchange": null,
       "list": "news",
-      "volume": 129856,
-      "market_cap": 1234674552.0,
+      "volume": 139372,
+      "market_cap": 1235416326.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1393,7 +1239,7 @@
       "catalyst": {
         "headline": "Harrow (NASDAQ: HROW) posts June 2026 corporate investor presentation",
         "sentiment": "Neutral",
-        "sentiment_score": 0.012,
+        "sentiment_score": 0.042,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:15:09+00:00"
       }
@@ -1401,8 +1247,8 @@
     {
       "symbol": "HUBC",
       "name": "HUB Cyber Security Ltd.",
-      "price": 0.6109,
-      "pct_change": 27.27083,
+      "price": 0.6306,
+      "pct_change": 31.37499,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1415,8 +1261,8 @@
     {
       "symbol": "IBIT",
       "name": "iShares Bitcoin Trust ETF",
-      "price": 37.7,
-      "pct_change": -0.91984,
+      "price": 37.495,
+      "pct_change": -1.45861,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1429,12 +1275,12 @@
     {
       "symbol": "III",
       "name": null,
-      "price": 4.375,
-      "pct_change": -3.422,
+      "price": 4.355,
+      "pct_change": -3.863,
       "exchange": null,
       "list": "news",
-      "volume": 89584,
-      "market_cap": 209296824.0,
+      "volume": 111366,
+      "market_cap": 208340038.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1442,7 +1288,7 @@
       "catalyst": {
         "headline": "How Databricks is powering fraud checks and crop forecasts in Brazil",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.312,
+        "sentiment_score": 0.346,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:40:34+00:00"
       }
@@ -1450,8 +1296,8 @@
     {
       "symbol": "INTC",
       "name": "Intel Corporation",
-      "price": 112.815,
-      "pct_change": 4.52608,
+      "price": 112.835,
+      "pct_change": 4.54461,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1464,12 +1310,12 @@
     {
       "symbol": "INTT",
       "name": null,
-      "price": 16.935,
-      "pct_change": -1.426,
+      "price": 16.89,
+      "pct_change": -1.688,
       "exchange": null,
       "list": "news",
-      "volume": 48188,
-      "market_cap": 212782466.0,
+      "volume": 57396,
+      "market_cap": 212217057.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1477,37 +1323,16 @@
       "catalyst": {
         "headline": "Ambrell to Host Free Induction Heating Webinars",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.308,
+        "sentiment_score": 0.34,
         "source": "AZoM",
         "published_utc": "2026-06-03T09:40:11+00:00"
       }
     },
     {
-      "symbol": "IONQ",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Why IonQ Stock Skyrocketed 59.7% in May",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.719,
-        "source": "The Motley Fool",
-        "published_utc": "2026-06-03T14:03:55+00:00"
-      }
-    },
-    {
       "symbol": "IOTR",
       "name": "iOThree Limited Ordinary Shares",
-      "price": 4.4929,
-      "pct_change": 23.09315,
+      "price": 4.49,
+      "pct_change": 23.01369,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1520,8 +1345,8 @@
     {
       "symbol": "IREN",
       "name": "IREN Limited",
-      "price": 66.665,
-      "pct_change": 0.0975976,
+      "price": 67.23,
+      "pct_change": 0.94595,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1534,12 +1359,12 @@
     {
       "symbol": "ITRG",
       "name": null,
-      "price": 2.585,
-      "pct_change": -0.193,
+      "price": 2.565,
+      "pct_change": -0.965,
       "exchange": null,
       "list": "news",
-      "volume": 869354,
-      "market_cap": 522820544.0,
+      "volume": 932977,
+      "market_cap": 518775510.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1547,7 +1372,7 @@
       "catalyst": {
         "headline": "Gold Miner Advances High-Grade Projects in Idaho & Nevada",
         "sentiment": "Bullish",
-        "sentiment_score": 0.456,
+        "sentiment_score": 0.489,
         "source": "Streetwise Reports",
         "published_utc": "2026-06-03T08:40:22+00:00"
       }
@@ -1555,12 +1380,12 @@
     {
       "symbol": "IVA",
       "name": null,
-      "price": 4.065,
-      "pct_change": -0.611,
+      "price": 4.02,
+      "pct_change": -1.711,
       "exchange": null,
       "list": "news",
-      "volume": 579495,
-      "market_cap": 844330886.0,
+      "volume": 652520,
+      "market_cap": 834984050.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1568,20 +1393,34 @@
       "catalyst": {
         "headline": "Inventiva (IVA) outlines ADS holder voting steps for June 30, 2026 General Meeting",
         "sentiment": "Neutral",
-        "sentiment_score": 0.005,
+        "sentiment_score": 0.037,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:20:22+00:00"
       }
     },
     {
+      "symbol": "IVF",
+      "name": "INVO Fertility, Inc.",
+      "price": 1.71,
+      "pct_change": 12.5,
+      "exchange": "NASDAQ",
+      "list": "gainers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "JBI",
       "name": null,
-      "price": 5.005,
-      "pct_change": -2.246,
+      "price": 5.02,
+      "pct_change": -1.953,
       "exchange": null,
       "list": "news",
-      "volume": 208208,
-      "market_cap": 682644257.0,
+      "volume": 277811,
+      "market_cap": 684690144.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1589,7 +1428,7 @@
       "catalyst": {
         "headline": "Self-Storage Components Supplier Janus International Acquires Kiwi II Construction",
         "sentiment": "Bullish",
-        "sentiment_score": 0.549,
+        "sentiment_score": 0.532,
         "source": "Inside Self-Storage",
         "published_utc": "2026-06-03T14:09:27+00:00"
       }
@@ -1597,8 +1436,8 @@
     {
       "symbol": "JLHL",
       "name": "Julong Holding Limited Class A Ordinary Shares",
-      "price": 40.14,
-      "pct_change": 79.35657,
+      "price": 33.34,
+      "pct_change": 48.9723,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1624,7 +1463,7 @@
       "catalyst": {
         "headline": "Bank of America to Hire Nearly 4,000 Interns This Summer",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.159,
+        "sentiment_score": 0.162,
         "source": "Intellectia AI",
         "published_utc": "2026-06-03T14:17:10+00:00"
       }
@@ -1632,8 +1471,8 @@
     {
       "symbol": "JZ",
       "name": "Jianzhi Education Technology Group Company Limited",
-      "price": 0.3822,
-      "pct_change": -45.4,
+      "price": 0.382,
+      "pct_change": -45.42857,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1646,12 +1485,12 @@
     {
       "symbol": "KARO",
       "name": null,
-      "price": 48.35,
-      "pct_change": -2.559,
+      "price": 47.6,
+      "pct_change": -4.071,
       "exchange": null,
       "list": "news",
-      "volume": 21519,
-      "market_cap": 1493691055.0,
+      "volume": 24033,
+      "market_cap": 1470521080.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1659,7 +1498,7 @@
       "catalyst": {
         "headline": "Needham reiterates Karooooo stock Buy rating, cites stable demand",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.284,
+        "sentiment_score": 0.259,
         "source": "Investing.com",
         "published_utc": "2026-06-03T11:10:27+00:00"
       }
@@ -1667,8 +1506,8 @@
     {
       "symbol": "KEEL",
       "name": "Bitfarms Ltd.",
-      "price": 6.28,
-      "pct_change": 2.28013,
+      "price": 6.275,
+      "pct_change": 2.1987,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1677,6 +1516,27 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "KEYS",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "New Keysight\u2013GlobalFoundries tool links chip design to AI data center optics",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.327,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T15:00:00+00:00"
+      }
     },
     {
       "symbol": "KIM",
@@ -1694,7 +1554,7 @@
       "catalyst": {
         "headline": "Federal Realty Upgrades Highlight Affluent Market Focus And Growth Targets",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.22,
+        "sentiment_score": 0.211,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T14:32:36+00:00"
       }
@@ -1716,12 +1576,12 @@
     {
       "symbol": "KOS",
       "name": null,
-      "price": 3.0201,
-      "pct_change": 1.687,
+      "price": 3.0327,
+      "pct_change": 2.111,
       "exchange": null,
       "list": "news",
-      "volume": 1846337,
-      "market_cap": 1791490926.0,
+      "volume": 2141680,
+      "market_cap": 1798965111.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1729,7 +1589,7 @@
       "catalyst": {
         "headline": "A Look At Kosmos Energy (KOS) Valuation After A Volatile Year Of Mixed Share Price Returns",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.325,
+        "sentiment_score": 0.348,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T11:39:03+00:00"
       }
@@ -1737,12 +1597,12 @@
     {
       "symbol": "KURA",
       "name": null,
-      "price": 8.7597,
-      "pct_change": -2.344,
+      "price": 8.75,
+      "pct_change": -2.453,
       "exchange": null,
       "list": "news",
-      "volume": 331437,
-      "market_cap": 777636805.0,
+      "volume": 404555,
+      "market_cap": 776775694.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1750,7 +1610,7 @@
       "catalyst": {
         "headline": "Kura Oncology reports phase 1a data for cancer drug combination",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.183,
+        "sentiment_score": 0.211,
         "source": "Investing.com",
         "published_utc": "2026-06-03T11:39:19+00:00"
       }
@@ -1758,8 +1618,8 @@
     {
       "symbol": "KUST",
       "name": "Kustom Entertainment, Inc.",
-      "price": 1.9892,
-      "pct_change": -16.42017,
+      "price": 1.9601,
+      "pct_change": -17.64286,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1785,7 +1645,7 @@
       "catalyst": {
         "headline": "Quaker Houghton\u2019s 2025 Sustainability Report Sharpens ESG And Growth Story",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.286,
+        "sentiment_score": 0.288,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T14:36:38+00:00"
       }
@@ -1793,12 +1653,12 @@
     {
       "symbol": "KYTX",
       "name": null,
-      "price": 8.0288,
-      "pct_change": 1.63,
+      "price": 7.98,
+      "pct_change": 1.013,
       "exchange": null,
       "list": "news",
-      "volume": 147720,
-      "market_cap": 488112598.0,
+      "volume": 166585,
+      "market_cap": 485145792.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1806,7 +1666,7 @@
       "catalyst": {
         "headline": "Kyverna reports rheumatoid arthritis trial data at EULAR congress",
         "sentiment": "Bullish",
-        "sentiment_score": 0.478,
+        "sentiment_score": 0.498,
         "source": "Investing.com",
         "published_utc": "2026-06-03T12:39:50+00:00"
       }
@@ -1814,8 +1674,8 @@
     {
       "symbol": "LACG",
       "name": "LEVERAGE SHARES 2X LONG LAC DAILY ETF",
-      "price": 11.28,
-      "pct_change": -15.75803,
+      "price": 11.27,
+      "pct_change": -15.83271,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1828,12 +1688,12 @@
     {
       "symbol": "LASE",
       "name": "Laser Photonics Corporation",
-      "price": 3.74,
-      "pct_change": 54.54545,
+      "price": 3.685,
+      "pct_change": 52.27273,
       "exchange": "NASDAQ",
       "list": "gainers",
-      "volume": 151140307,
-      "market_cap": 146752241.0,
+      "volume": 160713478,
+      "market_cap": 149452019.0,
       "signal": "mover",
       "signals": [
         "mover",
@@ -1842,7 +1702,7 @@
       "catalyst": {
         "headline": "LASE Stock Surges As DefenseTech Wins Key U.S. Army Traction",
         "sentiment": "Bullish",
-        "sentiment_score": 0.489,
+        "sentiment_score": 0.482,
         "source": "StocksToTrade",
         "published_utc": "2026-06-03T14:04:12+00:00"
       }
@@ -1850,12 +1710,12 @@
     {
       "symbol": "LEE",
       "name": null,
-      "price": 10.625,
-      "pct_change": -1.62,
+      "price": 10.595,
+      "pct_change": -1.898,
       "exchange": null,
       "list": "news",
-      "volume": 16529,
-      "market_cap": 236193070.0,
+      "volume": 17862,
+      "market_cap": 235526172.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1863,34 +1723,20 @@
       "catalyst": {
         "headline": "New deal brings free Indiana high school sports highlights to families",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.256,
+        "sentiment_score": 0.285,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T13:40:34+00:00"
       }
     },
     {
-      "symbol": "LEGT",
-      "name": "Legato Merger Corp. III",
-      "price": 10.7563,
-      "pct_change": 12.74948,
-      "exchange": "AMEX",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "LFS",
       "name": null,
-      "price": 2.2,
-      "pct_change": -4.348,
+      "price": 2.25,
+      "pct_change": -2.174,
       "exchange": null,
       "list": "news",
-      "volume": 47179,
-      "market_cap": 57553362.0,
+      "volume": 48581,
+      "market_cap": 58861393.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1898,7 +1744,7 @@
       "catalyst": {
         "headline": "LEIFRAS Co., Ltd. Announces Collaboration with Anime \"BLUELOCK\" for New Shoot-Specific Sport Tournament \"SIX SHOOT PREMIER 0\"",
         "sentiment": "Bullish",
-        "sentiment_score": 0.403,
+        "sentiment_score": 0.406,
         "source": "Yahoo Finance",
         "published_utc": "2026-06-03T12:39:46+00:00"
       }
@@ -1906,12 +1752,12 @@
     {
       "symbol": "LILA",
       "name": null,
-      "price": 7.72,
-      "pct_change": -2.648,
+      "price": 7.73,
+      "pct_change": -2.522,
       "exchange": null,
       "list": "news",
-      "volume": 118824,
-      "market_cap": 1710288630.0,
+      "volume": 136384,
+      "market_cap": 1712504030.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -1919,7 +1765,7 @@
       "catalyst": {
         "headline": "LILKV Price Today: Liberty Latin America Ltd Class C Stock Price, Quote & Chart | MEXC",
         "sentiment": "Neutral",
-        "sentiment_score": 0.039,
+        "sentiment_score": 0.005,
         "source": "MEXC",
         "published_utc": "2026-06-03T10:40:20+00:00"
       }
@@ -1927,8 +1773,8 @@
     {
       "symbol": "LIMN",
       "name": "Liminatus Pharma, Inc. Class A Common Stock",
-      "price": 0.1489,
-      "pct_change": -23.64103,
+      "price": 0.1494,
+      "pct_change": -23.38462,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1945,7 +1791,7 @@
       "pct_change": -0.573,
       "exchange": null,
       "list": "news",
-      "volume": 162673,
+      "volume": 193126,
       "market_cap": 1479944647.0,
       "signal": "news_smallcap",
       "signals": [
@@ -1954,16 +1800,37 @@
       "catalyst": {
         "headline": "Lindblad Expeditions (NASDAQ: LIND) director logs restricted stock transaction",
         "sentiment": "Neutral",
-        "sentiment_score": 0.049,
+        "sentiment_score": 0.045,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T07:40:02+00:00"
       }
     },
     {
+      "symbol": "LITB",
+      "name": null,
+      "price": 3.76,
+      "pct_change": 2.732,
+      "exchange": null,
+      "list": "news",
+      "volume": 6431,
+      "market_cap": 67467428.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "LightInTheBox names Jian He as chairman of the board",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.146,
+        "source": "Investing.com",
+        "published_utc": "2026-06-03T13:08:53+00:00"
+      }
+    },
+    {
       "symbol": "LMNX",
       "name": "Daily Target 2X Long LMND ETF",
-      "price": 11.7999,
-      "pct_change": -14.2499,
+      "price": 11.2667,
+      "pct_change": -18.12467,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1974,28 +1841,56 @@
       ]
     },
     {
-      "symbol": "LUNR",
-      "name": "Intuitive Machines, Inc.",
-      "price": 33.95,
-      "pct_change": -14.20268,
-      "exchange": "NASDAQ",
-      "list": "losers",
+      "symbol": "LMT",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
       "volume": null,
       "market_cap": null,
-      "signal": "mover",
+      "signal": "news_bullish",
       "signals": [
-        "mover"
-      ]
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Lockheed Martin Awarded $1 Billion in New Contracts",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.411,
+        "source": "The National Interest",
+        "published_utc": "2026-06-03T15:02:55+00:00"
+      }
+    },
+    {
+      "symbol": "LTC",
+      "name": null,
+      "price": 35.69,
+      "pct_change": -0.696,
+      "exchange": null,
+      "list": "news",
+      "volume": 73683,
+      "market_cap": 1826666165.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "LTC Properties adds MorningStar Senior Living as 11th SHOP operator after $54M acquisition",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.401,
+        "source": "McKnight's Senior Living",
+        "published_utc": "2026-06-03T12:09:04+00:00"
+      }
     },
     {
       "symbol": "LVO",
       "name": null,
-      "price": 6.65,
-      "pct_change": -0.746,
+      "price": 6.575,
+      "pct_change": -1.866,
       "exchange": null,
       "list": "news",
-      "volume": 22557,
-      "market_cap": 89583766.0,
+      "volume": 34046,
+      "market_cap": 88573423.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -2003,30 +1898,9 @@
       "catalyst": {
         "headline": "LiveOne (Nasdaq: LVO) Collaborates with AT&T (NYSE: T) to",
         "sentiment": "Bullish",
-        "sentiment_score": 0.442,
+        "sentiment_score": 0.418,
         "source": "GlobeNewswire",
         "published_utc": "2026-06-03T14:00:18+00:00"
-      }
-    },
-    {
-      "symbol": "LWLG",
-      "name": null,
-      "price": 12.82,
-      "pct_change": 0.786,
-      "exchange": null,
-      "list": "news",
-      "volume": 3383884,
-      "market_cap": 1975300882.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Why Lightwave Logic (LWLG) Is Up 6.3% After Nvidia\u2019s Silicon Photonics Endorsement And Insider Updates",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.247,
-        "source": "Simply Wall Street",
-        "published_utc": "2026-06-03T06:40:33+00:00"
       }
     },
     {
@@ -2045,7 +1919,7 @@
       "catalyst": {
         "headline": "LXP Industrial Trust Boosts 2026 FFO Guidance on Leasing",
         "sentiment": "Bullish",
-        "sentiment_score": 0.411,
+        "sentiment_score": 0.429,
         "source": "The Globe and Mail",
         "published_utc": "2026-06-03T14:39:52+00:00"
       }
@@ -2053,8 +1927,8 @@
     {
       "symbol": "LYEL",
       "name": "Lyell Immunopharma, Inc.",
-      "price": 12.885,
-      "pct_change": -13.46541,
+      "price": 12.831,
+      "pct_change": -13.82807,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2063,6 +1937,48 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "LZB",
+      "name": null,
+      "price": 36.11,
+      "pct_change": -0.878,
+      "exchange": null,
+      "list": "news",
+      "volume": 45920,
+      "market_cap": 1477755168.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "La-Z-Boy completes sale of American Drew and Kincaid casegoods businesses",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.3,
+        "source": "InteriorDaily",
+        "published_utc": "2026-06-03T09:09:31+00:00"
+      }
+    },
+    {
+      "symbol": "MAA",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "MAA: Strong rent growth and tech-driven margin expansion position for outperformance in 2026",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.45,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T14:32:56+00:00"
+      }
     },
     {
       "symbol": "MAC",
@@ -2080,16 +1996,37 @@
       "catalyst": {
         "headline": "Macerich Upsizes and Prices $403.2 Million Public Offering of Common Stock",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.214,
+        "sentiment_score": 0.225,
         "source": "Global Legal Chronicle",
         "published_utc": "2026-06-03T14:40:32+00:00"
       }
     },
     {
+      "symbol": "MAGN",
+      "name": null,
+      "price": 11.5,
+      "pct_change": -0.605,
+      "exchange": null,
+      "list": "news",
+      "volume": 59713,
+      "market_cap": 411700000.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Number of shareholders of Magnera Corporation \u2013 TRADEGATE:W2B",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.048,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T09:08:52+00:00"
+      }
+    },
+    {
       "symbol": "MASK",
       "name": "3 E Network Technology Group Ltd Class A Ordinary Shares",
-      "price": 4.335,
-      "pct_change": -16.31274,
+      "price": 4.26,
+      "pct_change": -17.76062,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2100,18 +2037,109 @@
       ]
     },
     {
-      "symbol": "MDCX",
-      "name": "Medicus Pharma Ltd. Common Stock",
-      "price": 0.3832,
-      "pct_change": 14.62758,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
+      "symbol": "MBC",
+      "name": null,
+      "price": 8.455,
+      "pct_change": -0.295,
+      "exchange": null,
+      "list": "news",
+      "volume": 1125742,
+      "market_cap": 1082109708.0,
+      "signal": "news_smallcap",
       "signals": [
-        "mover"
-      ]
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Tuesday\u2019s insider activity: Big buys at Radian and MasterBrand",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.293,
+        "source": "Investing.com",
+        "published_utc": "2026-06-03T13:09:28+00:00"
+      }
+    },
+    {
+      "symbol": "MCBS",
+      "name": null,
+      "price": 32.74,
+      "pct_change": -1.028,
+      "exchange": null,
+      "list": "news",
+      "volume": 23241,
+      "market_cap": 938329775.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "MCBS SEC Filings - Metrocity Bankshares Inc 10-K, 10-Q, 8-K Forms",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.33,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T12:09:11+00:00"
+      }
+    },
+    {
+      "symbol": "MEC",
+      "name": null,
+      "price": 33.1,
+      "pct_change": 2.382,
+      "exchange": null,
+      "list": "news",
+      "volume": 421634,
+      "market_cap": 678351599.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Mayville Engineering Company, Inc. (NYSE:MEC) Receives Consensus Rating of \"Moderate Buy\" from Analysts",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.314,
+        "source": "MarketBeat",
+        "published_utc": "2026-06-03T09:09:35+00:00"
+      }
+    },
+    {
+      "symbol": "MGF",
+      "name": null,
+      "price": 2.85,
+      "pct_change": 0.352,
+      "exchange": null,
+      "list": "news",
+      "volume": 11656,
+      "market_cap": 92902570.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "MFS Government Markets Income Trust declares $0.0185 dividend",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.391,
+        "source": "MSN",
+        "published_utc": "2026-06-03T08:10:02+00:00"
+      }
+    },
+    {
+      "symbol": "MGRE",
+      "name": null,
+      "price": 23.92,
+      "pct_change": -0.125,
+      "exchange": null,
+      "list": "news",
+      "volume": 9830,
+      "market_cap": 679616547.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Affiliated Managers Gains 7.7% YTD: Should You Buy the Stock Now?",
+        "sentiment": "Neutral",
+        "sentiment_score": 0.024,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T13:09:25+00:00"
+      }
     },
     {
       "symbol": "MKLYR",
@@ -2130,8 +2158,8 @@
     {
       "symbol": "MLEC",
       "name": "Moolec Science S.A.",
-      "price": 8.05,
-      "pct_change": 17.86237,
+      "price": 7.9684,
+      "pct_change": 16.66764,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2142,10 +2170,31 @@
       ]
     },
     {
+      "symbol": "MLKN",
+      "name": null,
+      "price": 14.62,
+      "pct_change": -2.889,
+      "exchange": null,
+      "list": "news",
+      "volume": 131467,
+      "market_cap": 999638582.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Herman Miller Bets Its Future on Two of Design\u2019s Quietest Visionaries",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.404,
+        "source": "Architect Magazine",
+        "published_utc": "2026-06-03T14:26:22+00:00"
+      }
+    },
+    {
       "symbol": "MLYS",
       "name": "Mineralys Therapeutics, Inc.",
-      "price": 24.585,
-      "pct_change": -14.78336,
+      "price": 24.56,
+      "pct_change": -14.87002,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2158,8 +2207,8 @@
     {
       "symbol": "MMED",
       "name": "MiniMed Group, Inc. Common Stock",
-      "price": 13.82,
-      "pct_change": 12.35772,
+      "price": 13.98,
+      "pct_change": 13.65853,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2170,10 +2219,52 @@
       ]
     },
     {
+      "symbol": "MNKD",
+      "name": null,
+      "price": 3.415,
+      "pct_change": -0.437,
+      "exchange": null,
+      "list": "news",
+      "volume": 730570,
+      "market_cap": 1055064817.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "MannKind tests inhaled IPF drug in global trial, first data Q3 2026",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.303,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T10:10:05+00:00"
+      }
+    },
+    {
+      "symbol": "MREO",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Mereo BioPharma : to Participate in Fireside Chat at the Jefferies Global Healthcare Conference 2026",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.198,
+        "source": "www.marketscreener.com",
+        "published_utc": "2026-06-03T14:47:00+00:00"
+      }
+    },
+    {
       "symbol": "MRLN",
       "name": "Merlin, Inc.",
-      "price": 6.5299,
-      "pct_change": -14.19317,
+      "price": 6.53,
+      "pct_change": -14.19185,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2186,8 +2277,8 @@
     {
       "symbol": "MRVL",
       "name": "Marvell Technology, Inc.",
-      "price": 308.28,
-      "pct_change": 6.01465,
+      "price": 306.73,
+      "pct_change": 5.48162,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2198,21 +2289,7 @@
       ]
     },
     {
-      "symbol": "MRVU",
-      "name": "Direxion Daily MRVL Bull 2X ETF",
-      "price": 280,
-      "pct_change": 12.44077,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "MS",
+      "symbol": "MSAI",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -2225,39 +2302,18 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Why IonQ Stock Skyrocketed 59.7% in May",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.241,
-        "source": "The Motley Fool",
-        "published_utc": "2026-06-03T14:03:55+00:00"
-      }
-    },
-    {
-      "symbol": "MU",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Texas Instruments Is a Major Winner of the AI Power Bottleneck, Investors Just Aren\u2019t Seeing It Yet",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.347,
-        "source": "Barchart.com",
-        "published_utc": "2026-06-03T14:14:37+00:00"
+        "headline": "MultiSensor AI Deepens Vibration Coverage in Condition Intelligence Solution through Collaboration with Broadsens",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.449,
+        "source": "TMX Newsfile",
+        "published_utc": "2026-06-03T15:10:20+00:00"
       }
     },
     {
       "symbol": "MYND",
       "name": "Mynd.ai, Inc.",
-      "price": 0.4264,
-      "pct_change": -26.41933,
+      "price": 0.4742,
+      "pct_change": -18.17084,
       "exchange": "AMEX",
       "list": "losers",
       "volume": null,
@@ -2270,8 +2326,8 @@
     {
       "symbol": "NCPL",
       "name": "Netcapital Inc.",
-      "price": 1.03,
-      "pct_change": 14.25402,
+      "price": 1.01,
+      "pct_change": 12.0355,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2284,8 +2340,8 @@
     {
       "symbol": "NCT",
       "name": "Intercont (Cayman) Limited Ordinary shares",
-      "price": 3.515,
-      "pct_change": 17.55853,
+      "price": 3.4802,
+      "pct_change": 16.39465,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2298,8 +2354,8 @@
     {
       "symbol": "NEON",
       "name": "Neonode Inc.",
-      "price": 1.92,
-      "pct_change": 17.07317,
+      "price": 1.905,
+      "pct_change": 16.15854,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2312,8 +2368,8 @@
     {
       "symbol": "NNE",
       "name": "Nano Nuclear Energy Inc",
-      "price": 26.375,
-      "pct_change": -13.7226,
+      "price": 26.415,
+      "pct_change": -13.59176,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2326,8 +2382,8 @@
     {
       "symbol": "NOK",
       "name": "Nokia Oyj",
-      "price": 17.235,
-      "pct_change": 2.28487,
+      "price": 17.205,
+      "pct_change": 2.10682,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -2340,8 +2396,8 @@
     {
       "symbol": "NOTV",
       "name": "Inotiv, Inc.",
-      "price": 0.1144,
-      "pct_change": -56,
+      "price": 0.1145,
+      "pct_change": -55.96154,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2354,8 +2410,8 @@
     {
       "symbol": "NOWL",
       "name": "GraniteShares 2x Long NOW Daily ETF",
-      "price": 6.7792,
-      "pct_change": -10.4465,
+      "price": 6.6913,
+      "pct_change": -11.60766,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2368,8 +2424,8 @@
     {
       "symbol": "NU",
       "name": "Nu Holdings Ltd.",
-      "price": 11.315,
-      "pct_change": -5.15507,
+      "price": 11.3199,
+      "pct_change": -5.114,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -2382,8 +2438,8 @@
     {
       "symbol": "NVD",
       "name": "GraniteShares 2x Short NVDA Daily ETF",
-      "price": 4.61,
-      "pct_change": 5.97701,
+      "price": 4.605,
+      "pct_change": 5.86207,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2396,8 +2452,8 @@
     {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 216.448,
-      "pct_change": -2.85971,
+      "price": 216.4657,
+      "pct_change": -2.85176,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2410,7 +2466,7 @@
       "catalyst": {
         "headline": "Texas Instruments Is a Major Winner of the AI Power Bottleneck, Investors Just Aren\u2019t Seeing It Yet",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.337,
+        "sentiment_score": 0.305,
         "source": "Barchart.com",
         "published_utc": "2026-06-03T14:14:37+00:00"
       }
@@ -2418,8 +2474,22 @@
     {
       "symbol": "NVTS",
       "name": "Navitas Semiconductor Corporation",
-      "price": 30.94,
-      "pct_change": 19.64424,
+      "price": 30.8,
+      "pct_change": 19.10286,
+      "exchange": "NASDAQ",
+      "list": "gainers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "NWGL",
+      "name": "CL Workshop Group Limited",
+      "price": 0.87,
+      "pct_change": 12.97221,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2446,8 +2516,8 @@
     {
       "symbol": "OKLL",
       "name": "Daily Target 2X Long OKLO ETF",
-      "price": 8.279,
-      "pct_change": -21.30228,
+      "price": 8.215,
+      "pct_change": -21.91065,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2460,8 +2530,8 @@
     {
       "symbol": "OKTG",
       "name": "Leverage Shares 2x Long OKTA Daily ETF",
-      "price": 25,
-      "pct_change": -14.47143,
+      "price": 25.0161,
+      "pct_change": -14.41635,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2474,8 +2544,8 @@
     {
       "symbol": "ONDS",
       "name": "Ondas Holdings Inc.",
-      "price": 11.7996,
-      "pct_change": -13.11046,
+      "price": 11.76,
+      "pct_change": -13.40206,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2488,8 +2558,8 @@
     {
       "symbol": "OPEG",
       "name": "LEVERAGE SHARES 2X LONG OPEN DAILY ETF",
-      "price": 5.21,
-      "pct_change": -18.46635,
+      "price": 5.18,
+      "pct_change": -18.93584,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2502,8 +2572,8 @@
     {
       "symbol": "OPEN",
       "name": "Opendoor Technologies Inc.",
-      "price": 4.925,
-      "pct_change": -8.96488,
+      "price": 4.905,
+      "pct_change": -9.33457,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2516,44 +2586,9 @@
     {
       "symbol": "PBK",
       "name": "PowerBank Corporation Common Stock",
-      "price": 1.215,
-      "pct_change": -13.21429,
+      "price": 1.17,
+      "pct_change": -16.42857,
       "exchange": "NASDAQ Global Market",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "PFE",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Pfizer vs Merck: Chasing High Yield vs Higher Returns",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.338,
-        "source": "24/7 Wall St.",
-        "published_utc": "2026-06-03T14:06:17+00:00"
-      }
-    },
-    {
-      "symbol": "PICS",
-      "name": "PicS N.V.",
-      "price": 9.56,
-      "pct_change": -14.41361,
-      "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
       "market_cap": null,
@@ -2565,8 +2600,8 @@
     {
       "symbol": "PIII",
       "name": "P3 Health Partners Inc.",
-      "price": 10.9999,
-      "pct_change": -13.99609,
+      "price": 10.71,
+      "pct_change": -16.26271,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2579,8 +2614,8 @@
     {
       "symbol": "PLUG",
       "name": "Plug Power Inc.",
-      "price": 3.84,
-      "pct_change": -6.11247,
+      "price": 3.8084,
+      "pct_change": -6.88509,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2593,8 +2628,8 @@
     {
       "symbol": "PMI",
       "name": "Picard Medical, Inc.",
-      "price": 0.3052,
-      "pct_change": 13.03704,
+      "price": 0.3167,
+      "pct_change": 17.2963,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -2605,24 +2640,10 @@
       ]
     },
     {
-      "symbol": "QBTS",
-      "name": "D-Wave Quantum Inc.",
-      "price": 27.67,
-      "pct_change": -7.48913,
-      "exchange": "NYSE",
-      "list": "actives",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "QBTZ",
       "name": "Defiance Daily Target 2X Short QBTS ETF",
-      "price": 3.78,
-      "pct_change": 14.89362,
+      "price": 3.835,
+      "pct_change": 16.56535,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2635,8 +2656,8 @@
     {
       "symbol": "RCAX",
       "name": "Daily Target 2X Long RCAT ETF",
-      "price": 11.4,
-      "pct_change": -17.27141,
+      "price": 11.39,
+      "pct_change": -17.34398,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2662,16 +2683,37 @@
       "catalyst": {
         "headline": "Federal Realty Upgrades Highlight Affluent Market Focus And Growth Targets",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.249,
+        "sentiment_score": 0.216,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T14:32:36+00:00"
       }
     },
     {
+      "symbol": "REGN",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "CytomX Therapeutics (CTMX) Expands Collaboration with Regeneron Pharmaceuticals",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.299,
+        "source": "GuruFocus",
+        "published_utc": "2026-06-03T15:05:18+00:00"
+      }
+    },
+    {
       "symbol": "REPL",
       "name": "Replimune Group, Inc.",
-      "price": 10.0552,
-      "pct_change": 13.36189,
+      "price": 10.11,
+      "pct_change": 13.97971,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2698,8 +2740,8 @@
     {
       "symbol": "RGTI",
       "name": "Rigetti Computing, Inc.",
-      "price": 24.535,
-      "pct_change": -8.72396,
+      "price": 24.215,
+      "pct_change": -9.91443,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2712,8 +2754,8 @@
     {
       "symbol": "RGTX",
       "name": "Daily Target 2X Long RGTI ETF",
-      "price": 33.8031,
-      "pct_change": -17.16957,
+      "price": 32.7668,
+      "pct_change": -19.70889,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2726,8 +2768,8 @@
     {
       "symbol": "RGTZ",
       "name": "Daily Target 2X Short RGTZ ETF",
-      "price": 2.985,
-      "pct_change": 16.60156,
+      "price": 3.0502,
+      "pct_change": 19.14844,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2740,8 +2782,8 @@
     {
       "symbol": "RIVN",
       "name": "Rivian Automotive, Inc.",
-      "price": 17.8651,
-      "pct_change": 3.3262,
+      "price": 17.8451,
+      "pct_change": 3.21053,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2752,24 +2794,10 @@
       ]
     },
     {
-      "symbol": "RKLX",
-      "name": "Daily Target 2X Long RKLB ETF",
-      "price": 63.7,
-      "pct_change": -13.72071,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "RKLZ",
       "name": "DEFIANCE DAILY TARGET 2X SHORT RKLB ETF",
-      "price": 2.67,
-      "pct_change": 14.10256,
+      "price": 2.635,
+      "pct_change": 12.60684,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2782,8 +2810,8 @@
     {
       "symbol": "RNAZ",
       "name": "TransCode Therapeutics, Inc.",
-      "price": 4.45,
-      "pct_change": -15.79943,
+      "price": 4.51,
+      "pct_change": -14.66414,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2796,8 +2824,8 @@
     {
       "symbol": "RUBI",
       "name": "Rubico Inc.",
-      "price": 0.5631,
-      "pct_change": 2.38182,
+      "price": 0.5844,
+      "pct_change": 6.25455,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2810,8 +2838,8 @@
     {
       "symbol": "SBEV",
       "name": "Splash Beverage Group, Inc.",
-      "price": 0.1609,
-      "pct_change": 13.71025,
+      "price": 0.1692,
+      "pct_change": 19.57597,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -2824,8 +2852,8 @@
     {
       "symbol": "SDOT",
       "name": "Sadot Group Inc.",
-      "price": 7.2306,
-      "pct_change": 120.44512,
+      "price": 7.26,
+      "pct_change": 121.34146,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2838,8 +2866,8 @@
     {
       "symbol": "SELX",
       "name": "Semilux International Ltd. Ordinary Shares",
-      "price": 0.4691,
-      "pct_change": 65.17606,
+      "price": 0.4661,
+      "pct_change": 64.11972,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2852,8 +2880,8 @@
     {
       "symbol": "SMCI",
       "name": "Super Micro Computer, Inc.",
-      "price": 47.1241,
-      "pct_change": -6.07116,
+      "price": 46.63,
+      "pct_change": -7.05601,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2864,10 +2892,24 @@
       ]
     },
     {
+      "symbol": "SMCX",
+      "name": "Daily Target 2X Long SMCI ETF",
+      "price": 29.6015,
+      "pct_change": -14.07402,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "SMCZ",
       "name": "Daily Target 2X Short SMCI ETF",
-      "price": 5.795,
-      "pct_change": 12.08897,
+      "price": 5.91,
+      "pct_change": 14.31335,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2878,31 +2920,10 @@
       ]
     },
     {
-      "symbol": "SMID",
-      "name": null,
-      "price": 31.3,
-      "pct_change": 0.288,
-      "exchange": null,
-      "list": "news",
-      "volume": 4950,
-      "market_cap": 166095140.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Smith-Midland (NASDAQ: SMID) sets 2026 proxy votes and new 400,000-share equity plan",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.103,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T05:50:26+00:00"
-      }
-    },
-    {
       "symbol": "SMR",
       "name": "NuScale Power Corporation",
-      "price": 12.29,
-      "pct_change": -11.86805,
+      "price": 12.25,
+      "pct_change": -12.15489,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -2915,8 +2936,8 @@
     {
       "symbol": "SNGX",
       "name": "Soligenix, Inc.",
-      "price": 0.5535,
-      "pct_change": -26.08173,
+      "price": 0.53,
+      "pct_change": -29.22009,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2929,8 +2950,8 @@
     {
       "symbol": "SNSE",
       "name": "Sensei Biotherapeutics, Inc.",
-      "price": 18.19,
-      "pct_change": 13.01646,
+      "price": 18.3,
+      "pct_change": 13.69991,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2943,8 +2964,8 @@
     {
       "symbol": "SOAR",
       "name": "Volato Group, Inc.",
-      "price": 0.3662,
-      "pct_change": 14.4375,
+      "price": 0.3692,
+      "pct_change": 15.375,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -2957,8 +2978,8 @@
     {
       "symbol": "SOFI",
       "name": "SoFi Technologies, Inc.",
-      "price": 16.7,
-      "pct_change": -5.86245,
+      "price": 16.675,
+      "pct_change": -6.00339,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2971,8 +2992,8 @@
     {
       "symbol": "SOUX",
       "name": "Daily Target 2X Long SOUN ETF",
-      "price": 19.365,
-      "pct_change": -16.09619,
+      "price": 19.4632,
+      "pct_change": -15.67071,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2985,8 +3006,8 @@
     {
       "symbol": "SOXL",
       "name": "Direxion Daily Semiconductor Bull 3X ETF",
-      "price": 278.4646,
-      "pct_change": 4.56015,
+      "price": 277.4301,
+      "pct_change": 4.17171,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -2999,8 +3020,8 @@
     {
       "symbol": "SOXS",
       "name": "Direxion Daily Semiconductor Bear 3X ETF",
-      "price": 4.935,
-      "pct_change": -4.54545,
+      "price": 4.9599,
+      "pct_change": -4.06383,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -3013,8 +3034,8 @@
     {
       "symbol": "SPCE",
       "name": "Virgin Galactic Holdings, Inc.",
-      "price": 4.585,
-      "pct_change": -0.10893,
+      "price": 4.665,
+      "pct_change": 1.63399,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -3040,7 +3061,7 @@
       "catalyst": {
         "headline": "Federal Realty Upgrades Highlight Affluent Market Focus And Growth Targets",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.21,
+        "sentiment_score": 0.235,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T14:32:36+00:00"
       }
@@ -3048,8 +3069,8 @@
     {
       "symbol": "SPWH",
       "name": "Sportsman's Warehouse Holdings, Inc.",
-      "price": 1.615,
-      "pct_change": 13.73239,
+      "price": 1.61,
+      "pct_change": 13.38028,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3062,8 +3083,8 @@
     {
       "symbol": "SQQQ",
       "name": "ProShares - UltraPro Short QQQ",
-      "price": 37.07,
-      "pct_change": 0.43349,
+      "price": 37.235,
+      "pct_change": 0.88052,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3076,8 +3097,8 @@
     {
       "symbol": "STAK",
       "name": "STAK Inc. Ordinary Shares",
-      "price": 2.64,
-      "pct_change": 38.94737,
+      "price": 2.71,
+      "pct_change": 42.63158,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3088,31 +3109,24 @@
       ]
     },
     {
-      "symbol": "STLD",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
+      "symbol": "STIM",
+      "name": "Neuronetics, Inc.",
+      "price": 1.35,
+      "pct_change": -13.46154,
+      "exchange": "NASDAQ",
+      "list": "losers",
       "volume": null,
       "market_cap": null,
-      "signal": "news_bullish",
+      "signal": "mover",
       "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Steel Dynamics Inc stock hits all-time high at 274.13 USD",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.501,
-        "source": "Investing.com",
-        "published_utc": "2026-06-03T14:06:27+00:00"
-      }
+        "mover"
+      ]
     },
     {
       "symbol": "SUGP",
       "name": "SU Group Holdings Limited Ordinary Shares",
-      "price": 1.21,
-      "pct_change": 12.03704,
+      "price": 1.22,
+      "pct_change": 12.96296,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3125,8 +3139,8 @@
     {
       "symbol": "SWMR",
       "name": "Swarmer, Inc Common Stock",
-      "price": 67.81,
-      "pct_change": -13.63984,
+      "price": 67.06,
+      "pct_change": -14.59501,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3137,31 +3151,10 @@
       ]
     },
     {
-      "symbol": "TATT",
-      "name": null,
-      "price": 43.9194,
-      "pct_change": 8.819,
-      "exchange": null,
-      "list": "news",
-      "volume": 176650,
-      "market_cap": 570211587.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "COO of TAT Technologies (NASDAQ: TATT) exercises options and sells shares",
-        "sentiment": "Neutral",
-        "sentiment_score": -0.077,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T06:50:49+00:00"
-      }
-    },
-    {
       "symbol": "TE",
       "name": "T1 Energy Inc",
-      "price": 11.595,
-      "pct_change": -3.69601,
+      "price": 11.545,
+      "pct_change": -4.1113,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -3172,10 +3165,24 @@
       ]
     },
     {
+      "symbol": "TLS",
+      "name": "Telos Corporation",
+      "price": 4.475,
+      "pct_change": -13.94231,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "TQQQ",
       "name": "ProShares - UltraPro QQQ",
-      "price": 86.8788,
-      "pct_change": -0.39119,
+      "price": 86.465,
+      "pct_change": -0.86563,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3188,8 +3195,8 @@
     {
       "symbol": "TSLL",
       "name": "Direxion Daily TSLA Bull 2X ETF",
-      "price": 15.44,
-      "pct_change": 2.86476,
+      "price": 15.185,
+      "pct_change": 1.16589,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3202,8 +3209,8 @@
     {
       "symbol": "TURB",
       "name": "Turbo Energy, S.A. American Depositary Shares",
-      "price": 1.7,
-      "pct_change": 14.09396,
+      "price": 1.815,
+      "pct_change": 21.81208,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3229,7 +3236,7 @@
       "catalyst": {
         "headline": "Texas Instruments Is a Major Winner of the AI Power Bottleneck, Investors Just Aren\u2019t Seeing It Yet",
         "sentiment": "Bullish",
-        "sentiment_score": 0.425,
+        "sentiment_score": 0.45,
         "source": "Barchart.com",
         "published_utc": "2026-06-03T14:14:37+00:00"
       }
@@ -3237,8 +3244,8 @@
     {
       "symbol": "TZA",
       "name": "Direxion Daily Small Cap Bear 3X ETF",
-      "price": 4.405,
-      "pct_change": 3.1616,
+      "price": 4.4299,
+      "pct_change": 3.74473,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -3251,8 +3258,8 @@
     {
       "symbol": "UECG",
       "name": "Leverage Shares 2x Long UEC Daily ETF",
-      "price": 7.89,
-      "pct_change": -18.82716,
+      "price": 7.97,
+      "pct_change": -18.00412,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3265,8 +3272,8 @@
     {
       "symbol": "UUUG",
       "name": "Leverage Shares 2x Long UUUU Daily ETF",
-      "price": 8.66,
-      "pct_change": -15.5122,
+      "price": 8.7,
+      "pct_change": -15.12195,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3279,8 +3286,8 @@
     {
       "symbol": "VCX",
       "name": "Fundrise Growth Tech Fund, LLC",
-      "price": 159.5,
-      "pct_change": -17.18158,
+      "price": 158.8,
+      "pct_change": -17.54504,
       "exchange": "NYSE",
       "list": "losers",
       "volume": null,
@@ -3293,12 +3300,12 @@
     {
       "symbol": "VTEX",
       "name": null,
-      "price": 3.83,
-      "pct_change": -1.034,
+      "price": 3.86,
+      "pct_change": -0.258,
       "exchange": null,
       "list": "news",
-      "volume": 648647,
-      "market_cap": 729092802.0,
+      "volume": 727018,
+      "market_cap": 734803712.0,
       "signal": "news_smallcap",
       "signals": [
         "news_smallcap"
@@ -3306,7 +3313,7 @@
       "catalyst": {
         "headline": "MIRA LIMITED to Sell 82,075 Class A Shares | VTEX SEC Filing - Form 144",
         "sentiment": "Neutral",
-        "sentiment_score": 0.042,
+        "sentiment_score": 0.034,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T08:19:48+00:00"
       }
@@ -3314,8 +3321,8 @@
     {
       "symbol": "WCT",
       "name": "Wellchange Holdings Company Limited",
-      "price": 3.0301,
-      "pct_change": 229.3587,
+      "price": 2.75,
+      "pct_change": 198.91304,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3341,7 +3348,7 @@
       "catalyst": {
         "headline": "Are You Ready to Buy a Home? Wells Fargo Finds Most Prospective First-Time Buyers Aren\u2019t and Don\u2019t Know It",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.208,
+        "sentiment_score": 0.231,
         "source": "Morningstar",
         "published_utc": "2026-06-03T14:38:04+00:00"
       }
@@ -3349,8 +3356,8 @@
     {
       "symbol": "WOK",
       "name": "WORK Medical Technology Group Ltd.",
-      "price": 0.112,
-      "pct_change": 7.69231,
+      "price": 0.1103,
+      "pct_change": 6.05769,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3363,8 +3370,8 @@
     {
       "symbol": "WYHG",
       "name": "Wing Yip Food Holdings Group Limited American Depositary Shares",
-      "price": 3.128,
-      "pct_change": -19.38144,
+      "price": 3.1,
+      "pct_change": -20.10309,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3377,12 +3384,12 @@
     {
       "symbol": "XOS",
       "name": "Xos, Inc.",
-      "price": 6.2499,
-      "pct_change": 180.26457,
+      "price": 6.113,
+      "pct_change": 174.12556,
       "exchange": "NASDAQ",
       "list": "gainers",
-      "volume": 57912262,
-      "market_cap": 75645873.0,
+      "volume": 60826988,
+      "market_cap": 78555329.0,
       "signal": "mover",
       "signals": [
         "mover",
@@ -3391,7 +3398,7 @@
       "catalyst": {
         "headline": "Trending Stocks Today | Xos Inc Surges 192.04% Pre-Market",
         "sentiment": "Bullish",
-        "sentiment_score": 0.835,
+        "sentiment_score": 0.822,
         "source": "Moomoo",
         "published_utc": "2026-06-03T08:20:35+00:00"
       }
@@ -3399,8 +3406,8 @@
     {
       "symbol": "YDES",
       "name": "YD Bio Limited Ordinary Shares",
-      "price": 3.725,
-      "pct_change": 16.77116,
+      "price": 3.71,
+      "pct_change": 16.30094,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3413,8 +3420,8 @@
     {
       "symbol": "YMAT",
       "name": "J-Star Holding Co., Ltd. Ordinary Shares",
-      "price": 1.05,
-      "pct_change": 15.38462,
+      "price": 1.2297,
+      "pct_change": 35.13186,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3425,31 +3432,10 @@
       ]
     },
     {
-      "symbol": "YUM",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Morgan Stanley Upgrades Yum! Brands (YUM) Amid Growth Potential",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.573,
-        "source": "GuruFocus",
-        "published_utc": "2026-06-03T14:06:51+00:00"
-      }
-    },
-    {
       "symbol": "ZCMD",
       "name": "Zhongchao Inc.",
-      "price": 0.0503,
-      "pct_change": -8.21168,
+      "price": 0.0509,
+      "pct_change": -7.11679,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3462,23 +3448,9 @@
     {
       "symbol": "ZETX",
       "name": "Daily Target 2X Long ZETA ETF",
-      "price": 26.5,
-      "pct_change": -16.95393,
+      "price": 26.47,
+      "pct_change": -17.04795,
       "exchange": "AMEX",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "ZNB",
-      "name": "Zeta Network Group",
-      "price": 1.48,
-      "pct_change": -14.94253,
-      "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
       "market_cap": null,
