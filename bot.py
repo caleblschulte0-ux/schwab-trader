@@ -16,9 +16,9 @@ signals/holdings.json. The brain reads that file to know what it actually owns.
 The bot also builds signals/candidates.json — the brain's structured top-of-funnel.
 It combines LAGGING movers (gainers/most-active/losers) with LEADING signals:
 upcoming earnings (FMP) and stock news (Alpha Vantage). News tickers are cross-
-referenced against an FMP small-cap screener to DISCOVER small-caps that are in the
-news (not just annotate names we already had), so the brain can position BEFORE a
-move. Each row is tagged with its reason(s).
+referenced against a small-cap universe (Nasdaq's free public screener) to DISCOVER
+small-caps that are in the news (not just annotate names we already had), so the
+brain can position BEFORE a move. Each row is tagged with its reason(s).
 A brain-written signals/watchlist.json lets the bot auto-enter on a price/date
 trigger between brain runs (same guardrails); the bot only reads that file.
 
@@ -74,11 +74,10 @@ NEWS_MIN_SENTIMENT    = 0.15    # bullish threshold for the (mega-cap) market-wi
 NEWS_SMALLCAP_FLOOR   = -0.15   # small-caps: surface unless the coverage is clearly bearish
 MAX_NEWS_SMALLCAP     = 60      # cap discovered small-cap-in-the-news names
 MAX_NEWS_BULLISH      = 25      # cap the (mostly large-cap) bullish market-wide names
-# --- small-cap universe (FMP screener; used to DISCOVER small-caps that are in the news) ---
+# --- small-cap universe (Nasdaq's free public screener; DISCOVERs small-caps in the news) ---
+NASDAQ_SCREENER_URL   = "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&download=true"
 SMALLCAP_MAX_CAP      = 2_000_000_000   # "small cap" ceiling (~$2B)
 SMALLCAP_MIN_CAP      = 50_000_000      # floor: skip nano-cap shells (~$50M)
-SMALLCAP_MIN_VOLUME   = 100_000         # require some liquidity
-SMALLCAP_SCREEN_LIMIT = 5000            # max symbols to pull for the universe
 # --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
 MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
 MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)
@@ -195,23 +194,33 @@ def _fetch_leading(seen: dict) -> None:
 
 
 def _fetch_smallcap_universe() -> set[str]:
-    """The set of real SMALL-CAP symbols (FMP screener). Used to DISCOVER which names
-    in the news feed are small-caps and pull them into the funnel. Filters to a sane
-    cap band, our $2 price floor, some liquidity, and actively-trading US listings.
-    Returns an empty set on any failure (graceful — just disables small-cap tagging)."""
-    if not FMP_API_KEY:
-        return set()
+    """Set of SMALL-CAP symbols (market cap ~$50M-$2B, above our $2 floor) from Nasdaq's
+    FREE public screener — one no-auth call covering the whole US market with real
+    market caps. Used to DISCOVER which names in the news feed are small-caps. Returns
+    an empty set on any failure (graceful — just disables small-cap tagging that run).
+    (FMP's screener is 402 Payment Required on the free tier, so we don't use it.)"""
     try:
-        params = (f"marketCapMoreThan={SMALLCAP_MIN_CAP}&marketCapLowerThan={SMALLCAP_MAX_CAP}"
-                  f"&priceMoreThan={MIN_SHARE_PRICE}&volumeMoreThan={SMALLCAP_MIN_VOLUME}"
-                  f"&isActivelyTrading=true&exchange=nasdaq,nyse,amex&limit={SMALLCAP_SCREEN_LIMIT}")
-        rows = _fmp_get("company-screener", params)
-        universe = {str(r.get("symbol", "")).strip().upper() for r in rows if r.get("symbol")}
-        universe.discard("")
-        print(f"(fmp) small-cap universe: {len(universe)} symbols")
+        import urllib.request
+        req = urllib.request.Request(NASDAQ_SCREENER_URL,
+                                     headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            payload = json.loads(r.read().decode("utf-8"))
+        data = payload.get("data") or {}
+        rows = data.get("rows") or (data.get("table") or {}).get("rows") or []
+        universe: set[str] = set()
+        for row in rows:
+            sym = str(row.get("symbol", "")).strip().upper()
+            try:
+                cap = float(str(row.get("marketCap", "")).replace("$", "").replace(",", "") or 0)
+                px = float(str(row.get("lastsale", "")).replace("$", "").replace(",", "") or 0)
+            except (TypeError, ValueError):
+                continue
+            if sym and SMALLCAP_MIN_CAP <= cap <= SMALLCAP_MAX_CAP and px >= MIN_SHARE_PRICE:
+                universe.add(sym)
+        print(f"(universe) small-cap symbols: {len(universe)}")
         return universe
-    except Exception as exc:  # noqa: BLE001 - never let the screener break the run
-        print(f"(warn) FMP company-screener failed (skipped): {exc}")
+    except Exception as exc:  # noqa: BLE001 - never let the universe fetch break the run
+        print(f"(warn) small-cap universe fetch failed (skipped): {exc}")
         return set()
 
 
@@ -350,9 +359,9 @@ def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
 def fetch_fmp_candidates() -> None:
     """Build the brain's structured top-of-funnel and write signals/candidates.json.
     Combines a LAGGING list (today's movers) with LEADING signals — upcoming earnings
-    (FMP) and stock news (Alpha Vantage), the latter cross-referenced against an FMP
-    small-cap universe to DISCOVER small-caps that are in the news — so the brain can
-    act BEFORE the move. Each source is keyed and isolated: missing keys / failed
+    (FMP) and stock news (Alpha Vantage), the latter cross-referenced against a
+    small-cap universe (Nasdaq's free screener) to DISCOVER small-caps in the news —
+    so the brain can act BEFORE the move. Each source is keyed and isolated: missing keys / failed
     endpoints just no-op (worst case = today's movers, or an empty file). Throttles
     the AV news call to stay under its 25/day free cap."""
     if not (FMP_API_KEY or AV_API_KEY):
@@ -365,7 +374,7 @@ def fetch_fmp_candidates() -> None:
         _fetch_leading(seen)   # leading: upcoming earnings
     else:
         print("(info) no FMP_API_KEY — skipping FMP movers/earnings sources.")
-    smallcap = _fetch_smallcap_universe()      # the small-cap symbol set (for discovery)
+    smallcap = _fetch_smallcap_universe() if AV_API_KEY else set()  # small-cap set (for discovery)
     news_meta = _fetch_news(seen, prev, smallcap)  # news + small-cap-in-news discovery
     _write_candidates(seen, news_meta=news_meta)
 
