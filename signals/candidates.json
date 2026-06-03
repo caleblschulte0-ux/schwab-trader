@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-03T17:40:31.705775+00:00",
+  "updated_utc": "2026-06-03T17:50:29.322556+00:00",
   "count": 234,
   "signal_counts": {
     "mover": 139,
@@ -66,8 +66,8 @@
     {
       "symbol": "AAL",
       "name": "American Airlines Group Inc.",
-      "price": 13.5899,
-      "pct_change": -2.44149,
+      "price": 13.622,
+      "pct_change": -2.21106,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -80,8 +80,8 @@
     {
       "symbol": "ABTS",
       "name": "Abits Group Inc.",
-      "price": 2.1512,
-      "pct_change": -16.62016,
+      "price": 2.165,
+      "pct_change": -16.08527,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -94,8 +94,8 @@
     {
       "symbol": "ABVX",
       "name": "Abivax S.A.",
-      "price": 86.85,
-      "pct_change": 19.7931,
+      "price": 87.21,
+      "pct_change": 20.28966,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -108,8 +108,8 @@
     {
       "symbol": "ACHR",
       "name": "Archer Aviation Inc.",
-      "price": 6.525,
-      "pct_change": -3.18991,
+      "price": 6.505,
+      "pct_change": -3.48665,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -122,8 +122,8 @@
     {
       "symbol": "AIB",
       "name": "BlockchAIn Digital Infrastructure, Inc.",
-      "price": 2.13,
-      "pct_change": -14.8,
+      "price": 2.12,
+      "pct_change": -15.2,
       "exchange": "AMEX",
       "list": "losers",
       "volume": null,
@@ -206,8 +206,8 @@
     {
       "symbol": "AMZE",
       "name": "Amaze Holdings, Inc.",
-      "price": 0.1435,
-      "pct_change": -7.47905,
+      "price": 0.1467,
+      "pct_change": -5.41586,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -220,8 +220,8 @@
     {
       "symbol": "ANY",
       "name": "Sphere 3D Corp.",
-      "price": 5.9375,
-      "pct_change": 51.85422,
+      "price": 5.8027,
+      "pct_change": 48.40665,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -234,8 +234,8 @@
     {
       "symbol": "ASTI",
       "name": "Ascent Solar Technologies, Inc. Common Stock",
-      "price": 7.195,
-      "pct_change": -18.79232,
+      "price": 7.26,
+      "pct_change": -18.05869,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -248,8 +248,8 @@
     {
       "symbol": "ATPC",
       "name": "Agape ATP Corporation",
-      "price": 4.2378,
-      "pct_change": 42.68687,
+      "price": 4.22,
+      "pct_change": 42.08754,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -262,8 +262,8 @@
     {
       "symbol": "BB",
       "name": "BlackBerry Limited",
-      "price": 10.005,
-      "pct_change": -3.00533,
+      "price": 10.081,
+      "pct_change": -2.26854,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -276,8 +276,8 @@
     {
       "symbol": "BBAI",
       "name": "BigBear.ai Holdings, Inc.",
-      "price": 4.85,
-      "pct_change": -5.08806,
+      "price": 4.885,
+      "pct_change": -4.40313,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -290,8 +290,8 @@
     {
       "symbol": "BCHT",
       "name": "Birchtech Corp.",
-      "price": 2.175,
-      "pct_change": 16.93548,
+      "price": 2.23,
+      "pct_change": 19.89247,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -304,8 +304,8 @@
     {
       "symbol": "BITO",
       "name": "ProShares - Bitcoin ETF",
-      "price": 9,
-      "pct_change": -1.85387,
+      "price": 8.97,
+      "pct_change": -2.18103,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -318,8 +318,8 @@
     {
       "symbol": "BNRG",
       "name": "Brenmiller Energy Ltd",
-      "price": 1.57,
-      "pct_change": 16.2963,
+      "price": 1.63,
+      "pct_change": 20.74074,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -330,12 +330,12 @@
       ]
     },
     {
-      "symbol": "BOT",
-      "name": "RoboStrategy, Inc. Common Stock",
-      "price": 28.87,
-      "pct_change": 13.99803,
-      "exchange": "NASDAQ",
-      "list": "gainers",
+      "symbol": "BURU",
+      "name": "Nuburu, Inc.",
+      "price": 0.1883,
+      "pct_change": 9.15942,
+      "exchange": "AMEX",
+      "list": "actives",
       "volume": null,
       "market_cap": null,
       "signal": "mover",
@@ -367,8 +367,8 @@
     {
       "symbol": "CETX",
       "name": "Cemtrex, Inc.",
-      "price": 0.6223,
-      "pct_change": -33.15789,
+      "price": 0.6262,
+      "pct_change": -32.73899,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -381,8 +381,8 @@
     {
       "symbol": "CGNT",
       "name": "Cognyte Software Ltd.",
-      "price": 9.025,
-      "pct_change": -22.33219,
+      "price": 9.09,
+      "pct_change": -21.77281,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -397,20 +397,6 @@
       "name": "ChampionsGate Acquisition Corporation Rights",
       "price": 0.16,
       "pct_change": 14.28571,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "CING",
-      "name": "Cingulate Inc.",
-      "price": 4.55,
-      "pct_change": 12.90323,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -442,6 +428,20 @@
       }
     },
     {
+      "symbol": "CODX",
+      "name": "Co-Diagnostics, Inc.",
+      "price": 5.29,
+      "pct_change": -14.95177,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "COST",
       "name": null,
       "price": null,
@@ -465,8 +465,8 @@
     {
       "symbol": "CRCG",
       "name": "Leverage Shares 2x Long CRCL Daily ETF",
-      "price": 21.375,
-      "pct_change": -15.04372,
+      "price": 21.25,
+      "pct_change": -15.54054,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -498,20 +498,6 @@
       }
     },
     {
-      "symbol": "CRMU",
-      "name": "Leverage Shares 2x Long CRML Daily ETF",
-      "price": 7.51,
-      "pct_change": -15.62461,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "CVX",
       "name": null,
       "price": null,
@@ -535,8 +521,8 @@
     {
       "symbol": "DAIC",
       "name": "CID HoldCo, Inc. Common Stock",
-      "price": 3.13,
-      "pct_change": -17.84777,
+      "price": 3.1,
+      "pct_change": -18.63517,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -549,8 +535,8 @@
     {
       "symbol": "DBGI",
       "name": "Digital Brands Group, Inc.",
-      "price": 0.9672,
-      "pct_change": 38.15169,
+      "price": 0.9658,
+      "pct_change": 37.95172,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -584,8 +570,8 @@
     {
       "symbol": "DEVS",
       "name": "DevvStream Corp. Common Stock",
-      "price": 0.6453,
-      "pct_change": 7.24614,
+      "price": 0.6729,
+      "pct_change": 11.83314,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -614,24 +600,10 @@
       }
     },
     {
-      "symbol": "DRTS",
-      "name": "Alpha Tau Medical Ltd.",
-      "price": 10.1,
-      "pct_change": 13.1019,
-      "exchange": "NASDAQ",
-      "list": "gainers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "EEIQ",
       "name": "Elite Education Group International Limited",
-      "price": 3.66,
-      "pct_change": 15.82278,
+      "price": 4.25,
+      "pct_change": 34.49367,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -693,8 +665,8 @@
     {
       "symbol": "F",
       "name": "Ford Motor Company",
-      "price": 15.675,
-      "pct_change": -2.94118,
+      "price": 15.665,
+      "pct_change": -3.0031,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -705,12 +677,40 @@
       ]
     },
     {
-      "symbol": "FATN",
-      "name": "FatPipe, Inc. Common Stock",
-      "price": 7.91,
-      "pct_change": 21.69231,
+      "symbol": "FABC",
+      "name": "StableX Technologies, Inc.",
+      "price": 5.61,
+      "pct_change": 13.33333,
       "exchange": "NASDAQ",
       "list": "gainers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "FATN",
+      "name": "FatPipe, Inc. Common Stock",
+      "price": 7.9,
+      "pct_change": 21.53846,
+      "exchange": "NASDAQ",
+      "list": "gainers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "FBGL",
+      "name": "FBS Global Limited Ordinary Shares",
+      "price": 0.5041,
+      "pct_change": -15.98333,
+      "exchange": "NASDAQ",
+      "list": "losers",
       "volume": null,
       "market_cap": null,
       "signal": "mover",
@@ -784,8 +784,8 @@
     {
       "symbol": "FNGR",
       "name": "FingerMotion, Inc.",
-      "price": 0.8663,
-      "pct_change": 25.18786,
+      "price": 0.8693,
+      "pct_change": 25.62139,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -798,8 +798,8 @@
     {
       "symbol": "FOFO",
       "name": "Hang Feng Technology Innovation Co., Ltd. Ordinary Shares",
-      "price": 5.69,
-      "pct_change": 41.89526,
+      "price": 5.79,
+      "pct_change": 44.38903,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -812,8 +812,8 @@
     {
       "symbol": "FSHPR",
       "name": "Flag Ship Acquisition Corporation",
-      "price": 0.0901,
-      "pct_change": -31.74242,
+      "price": 0.0802,
+      "pct_change": -39.24242,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -847,8 +847,8 @@
     {
       "symbol": "GGRP",
       "name": "The Glimpse Group, Inc.",
-      "price": 0.8242,
-      "pct_change": 15.0314,
+      "price": 0.8197,
+      "pct_change": 14.40335,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -915,24 +915,10 @@
       }
     },
     {
-      "symbol": "GOOGL",
-      "name": "Alphabet Inc.",
-      "price": 361.1158,
-      "pct_change": -0.2029,
-      "exchange": "NASDAQ",
-      "list": "actives",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "GPUS",
       "name": "Hyperscale Data, Inc.",
-      "price": 0.214,
-      "pct_change": -7.31919,
+      "price": 0.2132,
+      "pct_change": -7.66566,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -945,8 +931,8 @@
     {
       "symbol": "GRAB",
       "name": "Grab Holdings Limited",
-      "price": 3.4001,
-      "pct_change": -5.55278,
+      "price": 3.405,
+      "pct_change": -5.41667,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -959,8 +945,8 @@
     {
       "symbol": "GRRR",
       "name": "Gorilla Technology Group Inc.",
-      "price": 17.48,
-      "pct_change": -19.74288,
+      "price": 17.425,
+      "pct_change": -19.99541,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": 4484384,
@@ -1065,8 +1051,8 @@
     {
       "symbol": "HKIT",
       "name": "Hitek Global Inc.",
-      "price": 0.4342,
-      "pct_change": -29.96774,
+      "price": 0.4296,
+      "pct_change": -30.70968,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1079,8 +1065,8 @@
     {
       "symbol": "HPE",
       "name": "Hewlett Packard Enterprise Company",
-      "price": 54.94,
-      "pct_change": -2.15494,
+      "price": 54.92,
+      "pct_change": -2.19056,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -1114,8 +1100,8 @@
     {
       "symbol": "HUBC",
       "name": "HUB Cyber Security Ltd.",
-      "price": 0.6386,
-      "pct_change": 33.04167,
+      "price": 0.6346,
+      "pct_change": 32.20833,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1128,8 +1114,8 @@
     {
       "symbol": "IBIT",
       "name": "iShares Bitcoin Trust ETF",
-      "price": 37.425,
-      "pct_change": -1.64258,
+      "price": 37.31,
+      "pct_change": -1.94481,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1163,8 +1149,8 @@
     {
       "symbol": "INTC",
       "name": "Intel Corporation",
-      "price": 111.89,
-      "pct_change": 3.66904,
+      "price": 111.7896,
+      "pct_change": 3.57602,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1191,8 +1177,8 @@
     {
       "symbol": "IREN",
       "name": "IREN Limited",
-      "price": 66.09,
-      "pct_change": -0.76577,
+      "price": 65.635,
+      "pct_change": -1.44895,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1226,8 +1212,8 @@
     {
       "symbol": "IVF",
       "name": "INVO Fertility, Inc.",
-      "price": 1.84,
-      "pct_change": 21.05263,
+      "price": 1.79,
+      "pct_change": 17.76316,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1303,8 +1289,8 @@
     {
       "symbol": "JLHL",
       "name": "Julong Holding Limited Class A Ordinary Shares",
-      "price": 36.8001,
-      "pct_change": 64.43298,
+      "price": 38.5,
+      "pct_change": 72.0286,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1338,8 +1324,8 @@
     {
       "symbol": "JZ",
       "name": "Jianzhi Education Technology Group Company Limited",
-      "price": 0.3874,
-      "pct_change": -44.65714,
+      "price": 0.3886,
+      "pct_change": -44.48571,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1373,8 +1359,8 @@
     {
       "symbol": "KEEL",
       "name": "Bitfarms Ltd.",
-      "price": 6.115,
-      "pct_change": -0.40717,
+      "price": 6.215,
+      "pct_change": 1.2215,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -1464,8 +1450,8 @@
     {
       "symbol": "KUST",
       "name": "Kustom Entertainment, Inc.",
-      "price": 1.9499,
-      "pct_change": -18.07143,
+      "price": 1.95,
+      "pct_change": -18.06723,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1478,8 +1464,8 @@
     {
       "symbol": "KWM",
       "name": "K Wave Media Ltd.",
-      "price": 0.2119,
-      "pct_change": -16.5748,
+      "price": 0.2118,
+      "pct_change": -16.61418,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1513,8 +1499,8 @@
     {
       "symbol": "LACG",
       "name": "LEVERAGE SHARES 2X LONG LAC DAILY ETF",
-      "price": 11.0001,
-      "pct_change": -17.84839,
+      "price": 11.0301,
+      "pct_change": -17.62435,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1527,8 +1513,8 @@
     {
       "symbol": "LASE",
       "name": "Laser Photonics Corporation",
-      "price": 3.3446,
-      "pct_change": 38.20661,
+      "price": 3.3,
+      "pct_change": 36.36364,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": 191188977,
@@ -1668,8 +1654,8 @@
     {
       "symbol": "LMNX",
       "name": "Daily Target 2X Long LMND ETF",
-      "price": 11.3894,
-      "pct_change": -17.23301,
+      "price": 11.409,
+      "pct_change": -17.09058,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1701,6 +1687,20 @@
       }
     },
     {
+      "symbol": "LUNR",
+      "name": "Intuitive Machines, Inc.",
+      "price": 33.8225,
+      "pct_change": -14.5249,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "LVO",
       "name": null,
       "price": 6.29,
@@ -1724,8 +1724,8 @@
     {
       "symbol": "LYEL",
       "name": "Lyell Immunopharma, Inc.",
-      "price": 12.7265,
-      "pct_change": -14.52989,
+      "price": 12.73,
+      "pct_change": -14.50638,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1738,8 +1738,8 @@
     {
       "symbol": "MASK",
       "name": "3 E Network Technology Group Ltd Class A Ordinary Shares",
-      "price": 4.3457,
-      "pct_change": -16.10618,
+      "price": 4.34,
+      "pct_change": -16.21622,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -1829,8 +1829,8 @@
     {
       "symbol": "MLEC",
       "name": "Moolec Science S.A.",
-      "price": 8.59,
-      "pct_change": 25.76867,
+      "price": 8.55,
+      "pct_change": 25.18302,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1864,8 +1864,8 @@
     {
       "symbol": "MMED",
       "name": "MiniMed Group, Inc. Common Stock",
-      "price": 14.3695,
-      "pct_change": 16.8252,
+      "price": 14.3302,
+      "pct_change": 16.50569,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -1918,10 +1918,24 @@
       }
     },
     {
+      "symbol": "MRNO",
+      "name": "Murano Global Investments PLC Ordinary Shares",
+      "price": 0.3816,
+      "pct_change": -15.01114,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
       "symbol": "MRVL",
       "name": "Marvell Technology, Inc.",
-      "price": 307.0741,
-      "pct_change": 5.59995,
+      "price": 305.8652,
+      "pct_change": 5.18422,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2018,8 +2032,8 @@
     {
       "symbol": "MYND",
       "name": "Mynd.ai, Inc.",
-      "price": 0.485,
-      "pct_change": -16.30716,
+      "price": 0.4786,
+      "pct_change": -17.41156,
       "exchange": "AMEX",
       "list": "losers",
       "volume": null,
@@ -2074,8 +2088,8 @@
     {
       "symbol": "NCPL",
       "name": "Netcapital Inc.",
-      "price": 1.02,
-      "pct_change": 13.14476,
+      "price": 1.05,
+      "pct_change": 16.47255,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2088,8 +2102,8 @@
     {
       "symbol": "NCT",
       "name": "Intercont (Cayman) Limited Ordinary shares",
-      "price": 3.79,
-      "pct_change": 26.75585,
+      "price": 3.73,
+      "pct_change": 24.74916,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2102,8 +2116,8 @@
     {
       "symbol": "NEON",
       "name": "Neonode Inc.",
-      "price": 1.885,
-      "pct_change": 14.93902,
+      "price": 1.875,
+      "pct_change": 14.32927,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2137,8 +2151,8 @@
     {
       "symbol": "NEXR",
       "name": "Nexera Technologies Ltd",
-      "price": 1.0021,
-      "pct_change": -16.49167,
+      "price": 1.01,
+      "pct_change": -15.83333,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2172,8 +2186,8 @@
     {
       "symbol": "NNNN",
       "name": "Anbio Biotechnology Class A Ordinary Shares",
-      "price": 26.95,
-      "pct_change": -16.09589,
+      "price": 26.8,
+      "pct_change": -16.56289,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2207,8 +2221,8 @@
     {
       "symbol": "NOK",
       "name": "Nokia Oyj",
-      "price": 16.885,
-      "pct_change": 0.20772,
+      "price": 16.91,
+      "pct_change": 0.35608,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -2242,8 +2256,8 @@
     {
       "symbol": "NOTV",
       "name": "Inotiv, Inc.",
-      "price": 0.1137,
-      "pct_change": -56.26923,
+      "price": 0.1129,
+      "pct_change": -56.57692,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2319,8 +2333,8 @@
     {
       "symbol": "NU",
       "name": "Nu Holdings Ltd.",
-      "price": 11.415,
-      "pct_change": -4.31685,
+      "price": 11.445,
+      "pct_change": -4.06538,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -2354,8 +2368,8 @@
     {
       "symbol": "NVD",
       "name": "GraniteShares 2x Short NVDA Daily ETF",
-      "price": 4.635,
-      "pct_change": 6.55172,
+      "price": 4.6301,
+      "pct_change": 6.43908,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2368,8 +2382,8 @@
     {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 215.6999,
-      "pct_change": -3.19545,
+      "price": 215.8,
+      "pct_change": -3.15053,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2445,8 +2459,8 @@
     {
       "symbol": "NVTS",
       "name": "Navitas Semiconductor Corporation",
-      "price": 31.405,
-      "pct_change": 21.44238,
+      "price": 31.6431,
+      "pct_change": 22.36311,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -2557,22 +2571,8 @@
     {
       "symbol": "OKLL",
       "name": "Daily Target 2X Long OKLO ETF",
-      "price": 8.2698,
-      "pct_change": -21.38973,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "OKTG",
-      "name": "Leverage Shares 2x Long OKTA Daily ETF",
-      "price": 24.6134,
-      "pct_change": -15.79405,
+      "price": 8.225,
+      "pct_change": -21.81559,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2606,8 +2606,8 @@
     {
       "symbol": "ONDS",
       "name": "Ondas Holdings Inc.",
-      "price": 11.9,
-      "pct_change": -12.37114,
+      "price": 11.835,
+      "pct_change": -12.84978,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2620,8 +2620,8 @@
     {
       "symbol": "OPEG",
       "name": "LEVERAGE SHARES 2X LONG OPEN DAILY ETF",
-      "price": 5.2,
-      "pct_change": -18.62285,
+      "price": 5.19,
+      "pct_change": -18.77934,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2718,8 +2718,8 @@
     {
       "symbol": "PBK",
       "name": "PowerBank Corporation Common Stock",
-      "price": 1.05,
-      "pct_change": -25,
+      "price": 1.04,
+      "pct_change": -25.71429,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2793,24 +2793,10 @@
       }
     },
     {
-      "symbol": "PICS",
-      "name": "PicS N.V.",
-      "price": 9.5,
-      "pct_change": -14.95076,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "PIII",
       "name": "P3 Health Partners Inc.",
-      "price": 10.165,
-      "pct_change": -20.52385,
+      "price": 10.26,
+      "pct_change": -19.78108,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -2823,8 +2809,8 @@
     {
       "symbol": "PLUG",
       "name": "Plug Power Inc.",
-      "price": 3.72,
-      "pct_change": -9.04645,
+      "price": 3.725,
+      "pct_change": -8.92421,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -2837,8 +2823,8 @@
     {
       "symbol": "PMI",
       "name": "Picard Medical, Inc.",
-      "price": 0.34,
-      "pct_change": 25.92593,
+      "price": 0.3383,
+      "pct_change": 25.2963,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -2998,8 +2984,8 @@
     {
       "symbol": "QBTZ",
       "name": "Defiance Daily Target 2X Short QBTS ETF",
-      "price": 3.75,
-      "pct_change": 13.98176,
+      "price": 3.8,
+      "pct_change": 15.50152,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3012,8 +2998,8 @@
     {
       "symbol": "QMCO",
       "name": "Quantum Corporation",
-      "price": 14.97,
-      "pct_change": 19.37799,
+      "price": 14.965,
+      "pct_change": 19.33812,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3110,8 +3096,8 @@
     {
       "symbol": "RGTI",
       "name": "Rigetti Computing, Inc.",
-      "price": 24.2931,
-      "pct_change": -9.62388,
+      "price": 24.115,
+      "pct_change": -10.28646,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3124,8 +3110,8 @@
     {
       "symbol": "RGTX",
       "name": "Daily Target 2X Long RGTI ETF",
-      "price": 32.99,
-      "pct_change": -19.16197,
+      "price": 32.4473,
+      "pct_change": -20.49179,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3138,8 +3124,8 @@
     {
       "symbol": "RGTZ",
       "name": "Daily Target 2X Short RGTZ ETF",
-      "price": 3.0302,
-      "pct_change": 18.36719,
+      "price": 3.0613,
+      "pct_change": 19.58203,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3194,8 +3180,8 @@
     {
       "symbol": "RIVN",
       "name": "Rivian Automotive, Inc.",
-      "price": 17.935,
-      "pct_change": 3.73048,
+      "price": 18.05,
+      "pct_change": 4.3956,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3208,8 +3194,8 @@
     {
       "symbol": "RKLZ",
       "name": "DEFIANCE DAILY TARGET 2X SHORT RKLB ETF",
-      "price": 2.63,
-      "pct_change": 12.39316,
+      "price": 2.655,
+      "pct_change": 13.46154,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3306,8 +3292,8 @@
     {
       "symbol": "RUBI",
       "name": "Rubico Inc.",
-      "price": 0.5921,
-      "pct_change": 7.65455,
+      "price": 0.5871,
+      "pct_change": 6.74545,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3320,8 +3306,8 @@
     {
       "symbol": "SAFX",
       "name": "XCF Global, Inc. Class A Common Stock",
-      "price": 0.4596,
-      "pct_change": -16.08545,
+      "price": 0.4659,
+      "pct_change": -14.93518,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3334,8 +3320,8 @@
     {
       "symbol": "SBEV",
       "name": "Splash Beverage Group, Inc.",
-      "price": 0.2731,
-      "pct_change": 93.00353,
+      "price": 0.2425,
+      "pct_change": 71.3781,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -3348,8 +3334,8 @@
     {
       "symbol": "SDOT",
       "name": "Sadot Group Inc.",
-      "price": 6.14,
-      "pct_change": 87.19512,
+      "price": 6.478,
+      "pct_change": 97.5,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3362,8 +3348,8 @@
     {
       "symbol": "SELX",
       "name": "Semilux International Ltd. Ordinary Shares",
-      "price": 0.4544,
-      "pct_change": 60,
+      "price": 0.4561,
+      "pct_change": 60.59859,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3397,8 +3383,8 @@
     {
       "symbol": "SIMAU",
       "name": "SIM Acquisition Corp. I Unit",
-      "price": 13,
-      "pct_change": -23.52941,
+      "price": 13.25,
+      "pct_change": -22.05882,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3411,8 +3397,8 @@
     {
       "symbol": "SMCI",
       "name": "Super Micro Computer, Inc.",
-      "price": 46.1339,
-      "pct_change": -8.04485,
+      "price": 46.53,
+      "pct_change": -7.25533,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3425,8 +3411,8 @@
     {
       "symbol": "SMCX",
       "name": "Daily Target 2X Long SMCI ETF",
-      "price": 28.94,
-      "pct_change": -15.99419,
+      "price": 29.45,
+      "pct_change": -14.51379,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3439,8 +3425,8 @@
     {
       "symbol": "SMCZ",
       "name": "Daily Target 2X Short SMCI ETF",
-      "price": 5.995,
-      "pct_change": 15.95745,
+      "price": 5.945,
+      "pct_change": 14.99033,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3453,8 +3439,8 @@
     {
       "symbol": "SMR",
       "name": "NuScale Power Corporation",
-      "price": 12.2399,
-      "pct_change": -12.22732,
+      "price": 12.2603,
+      "pct_change": -12.08103,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -3467,8 +3453,8 @@
     {
       "symbol": "SMX",
       "name": "SMX (Security Matters) Public Limited Company",
-      "price": 16.1238,
-      "pct_change": -14.86906,
+      "price": 15.7564,
+      "pct_change": -16.80887,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3481,8 +3467,8 @@
     {
       "symbol": "SNGX",
       "name": "Soligenix, Inc.",
-      "price": 0.4576,
-      "pct_change": -38.88889,
+      "price": 0.4688,
+      "pct_change": -37.39316,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3516,8 +3502,8 @@
     {
       "symbol": "SOAR",
       "name": "Volato Group, Inc.",
-      "price": 0.4248,
-      "pct_change": 32.75,
+      "price": 0.4251,
+      "pct_change": 32.84375,
       "exchange": "AMEX",
       "list": "gainers",
       "volume": null,
@@ -3530,8 +3516,8 @@
     {
       "symbol": "SOFI",
       "name": "SoFi Technologies, Inc.",
-      "price": 16.7901,
-      "pct_change": -5.35457,
+      "price": 16.815,
+      "pct_change": -5.21421,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3544,8 +3530,8 @@
     {
       "symbol": "SOXL",
       "name": "Direxion Daily Semiconductor Bull 3X ETF",
-      "price": 277.92,
-      "pct_change": 4.35566,
+      "price": 279.77,
+      "pct_change": 5.05032,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -3558,8 +3544,8 @@
     {
       "symbol": "SOXS",
       "name": "Direxion Daily Semiconductor Bear 3X ETF",
-      "price": 4.945,
-      "pct_change": -4.35203,
+      "price": 4.91,
+      "pct_change": -5.02901,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -3572,8 +3558,8 @@
     {
       "symbol": "SPCE",
       "name": "Virgin Galactic Holdings, Inc.",
-      "price": 4.38,
-      "pct_change": -4.57516,
+      "price": 4.35,
+      "pct_change": -5.22876,
       "exchange": "NYSE",
       "list": "actives",
       "volume": null,
@@ -3586,8 +3572,8 @@
     {
       "symbol": "SPRC",
       "name": "SciSparc Ltd.",
-      "price": 10.425,
-      "pct_change": 19.4158,
+      "price": 10.714,
+      "pct_change": 22.72623,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3600,8 +3586,8 @@
     {
       "symbol": "SPWR",
       "name": "SunPower Inc.",
-      "price": 1.1635,
-      "pct_change": 18.72449,
+      "price": 1.1499,
+      "pct_change": 17.33673,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3614,8 +3600,8 @@
     {
       "symbol": "SQQQ",
       "name": "ProShares - UltraPro Short QQQ",
-      "price": 37.335,
-      "pct_change": 1.15145,
+      "price": 37.225,
+      "pct_change": 0.85343,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3628,8 +3614,8 @@
     {
       "symbol": "STAK",
       "name": "STAK Inc. Ordinary Shares",
-      "price": 3.2108,
-      "pct_change": 68.98947,
+      "price": 3.51,
+      "pct_change": 84.73684,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3642,8 +3628,8 @@
     {
       "symbol": "SUGP",
       "name": "SU Group Holdings Limited Ordinary Shares",
-      "price": 1.28,
-      "pct_change": 18.51852,
+      "price": 1.2766,
+      "pct_change": 18.2037,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3656,10 +3642,24 @@
     {
       "symbol": "TDTH",
       "name": "Trident Digital Tech Holdings Ltd",
-      "price": 3.135,
-      "pct_change": -16.8435,
+      "price": 3.182,
+      "pct_change": -15.59682,
       "exchange": "NASDAQ",
       "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "TISI",
+      "name": "Team, Inc.",
+      "price": 17.46,
+      "pct_change": 13.37662,
+      "exchange": "NYSE",
+      "list": "gainers",
       "volume": null,
       "market_cap": null,
       "signal": "mover",
@@ -3684,22 +3684,8 @@
     {
       "symbol": "TLS",
       "name": "Telos Corporation",
-      "price": 4.415,
-      "pct_change": -15.09615,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
-      "symbol": "TLSA",
-      "name": "Tiziana Life Sciences Ltd",
-      "price": 1.16,
-      "pct_change": -14.70588,
+      "price": 4.4101,
+      "pct_change": -15.19038,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3712,8 +3698,8 @@
     {
       "symbol": "TQQQ",
       "name": "ProShares - UltraPro QQQ",
-      "price": 86.2312,
-      "pct_change": -1.13368,
+      "price": 86.4824,
+      "pct_change": -0.84568,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3726,8 +3712,8 @@
     {
       "symbol": "TSLA",
       "name": "Tesla, Inc.",
-      "price": 421.3529,
-      "pct_change": -0.56334,
+      "price": 421.2802,
+      "pct_change": -0.5805,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3748,8 +3734,8 @@
     {
       "symbol": "TSLL",
       "name": "Direxion Daily TSLA Bull 2X ETF",
-      "price": 14.845,
-      "pct_change": -1.09927,
+      "price": 14.859,
+      "pct_change": -1.006,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3762,8 +3748,8 @@
     {
       "symbol": "TURB",
       "name": "Turbo Energy, S.A. American Depositary Shares",
-      "price": 1.7198,
-      "pct_change": 15.42282,
+      "price": 1.73,
+      "pct_change": 16.10738,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3776,8 +3762,8 @@
     {
       "symbol": "TZA",
       "name": "Direxion Daily Small Cap Bear 3X ETF",
-      "price": 4.44,
-      "pct_change": 3.98126,
+      "price": 4.43,
+      "pct_change": 3.74707,
       "exchange": "AMEX",
       "list": "actives",
       "volume": null,
@@ -3788,24 +3774,10 @@
       ]
     },
     {
-      "symbol": "UECG",
-      "name": "Leverage Shares 2x Long UEC Daily ETF",
-      "price": 8.18,
-      "pct_change": -15.84362,
-      "exchange": "NASDAQ",
-      "list": "losers",
-      "volume": null,
-      "market_cap": null,
-      "signal": "mover",
-      "signals": [
-        "mover"
-      ]
-    },
-    {
       "symbol": "UUUG",
       "name": "Leverage Shares 2x Long UUUU Daily ETF",
-      "price": 8.76,
-      "pct_change": -14.53659,
+      "price": 8.7568,
+      "pct_change": -14.5678,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3818,8 +3790,22 @@
     {
       "symbol": "VACHU",
       "name": "Voyager Acquisition Corp Unit",
-      "price": 18.15,
-      "pct_change": 35.44776,
+      "price": 17.95,
+      "pct_change": 33.95522,
+      "exchange": "NASDAQ",
+      "list": "gainers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "VBNK",
+      "name": "VersaBank",
+      "price": 20.65,
+      "pct_change": 13.89961,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3832,8 +3818,8 @@
     {
       "symbol": "VCX",
       "name": "Fundrise Growth Tech Fund, LLC",
-      "price": 156.125,
-      "pct_change": -18.934,
+      "price": 156.00011,
+      "pct_change": -18.99885,
       "exchange": "NYSE",
       "list": "losers",
       "volume": null,
@@ -3844,10 +3830,10 @@
       ]
     },
     {
-      "symbol": "VRM",
-      "name": "Vroom, Inc.",
-      "price": 9.36,
-      "pct_change": -15.06352,
+      "symbol": "VMAR",
+      "name": "Vision Marine Technologies Inc.",
+      "price": 0.4113,
+      "pct_change": -14.68575,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
@@ -3860,8 +3846,8 @@
     {
       "symbol": "VSA",
       "name": "VisionSys AI Inc.",
-      "price": 5.98,
-      "pct_change": 29.15767,
+      "price": 6.1,
+      "pct_change": 31.74946,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3874,8 +3860,8 @@
     {
       "symbol": "WCT",
       "name": "Wellchange Holdings Company Limited",
-      "price": 2.295,
-      "pct_change": 149.45652,
+      "price": 2.655,
+      "pct_change": 188.58696,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3888,8 +3874,8 @@
     {
       "symbol": "WOK",
       "name": "WORK Medical Technology Group Ltd.",
-      "price": 0.1115,
-      "pct_change": 7.21154,
+      "price": 0.1125,
+      "pct_change": 8.17308,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -3923,8 +3909,8 @@
     {
       "symbol": "XOS",
       "name": "Xos, Inc.",
-      "price": 6.1999,
-      "pct_change": 178.02242,
+      "price": 6.1744,
+      "pct_change": 176.87892,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3937,8 +3923,8 @@
     {
       "symbol": "YDES",
       "name": "YD Bio Limited Ordinary Shares",
-      "price": 3.84,
-      "pct_change": 20.37618,
+      "price": 3.85,
+      "pct_change": 20.68966,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3951,8 +3937,8 @@
     {
       "symbol": "YMAT",
       "name": "J-Star Holding Co., Ltd. Ordinary Shares",
-      "price": 1.18,
-      "pct_change": 29.67033,
+      "price": 1.2009,
+      "pct_change": 31.96703,
       "exchange": "NASDAQ",
       "list": "gainers",
       "volume": null,
@@ -3986,8 +3972,8 @@
     {
       "symbol": "ZCMD",
       "name": "Zhongchao Inc.",
-      "price": 0.0507,
-      "pct_change": -7.48175,
+      "price": 0.0509,
+      "pct_change": -7.11679,
       "exchange": "NASDAQ",
       "list": "actives",
       "volume": null,
@@ -4000,8 +3986,8 @@
     {
       "symbol": "ZETX",
       "name": "Daily Target 2X Long ZETA ETF",
-      "price": 26.61,
-      "pct_change": -16.60921,
+      "price": 26.8,
+      "pct_change": -16.01379,
       "exchange": "AMEX",
       "list": "losers",
       "volume": null,
@@ -4016,6 +4002,20 @@
       "name": "Zeta Network Group",
       "price": 1.47,
       "pct_change": -15.51724,
+      "exchange": "NASDAQ",
+      "list": "losers",
+      "volume": null,
+      "market_cap": null,
+      "signal": "mover",
+      "signals": [
+        "mover"
+      ]
+    },
+    {
+      "symbol": "ZSPC",
+      "name": "zSpace, Inc.",
+      "price": 0.175,
+      "pct_change": -16.66667,
       "exchange": "NASDAQ",
       "list": "losers",
       "volume": null,
