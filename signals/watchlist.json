@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-03T15:09:38Z",
+  "generated_utc": "2026-06-03T16:20:29Z",
   "watch": [
     {
       "symbol": "XOS",
@@ -10,7 +10,7 @@
       "take_profit": 6.50,
       "stop_loss": 3.60,
       "good_until": "2026-06-06",
-      "note": "AI data center Power Hub (2.5MWh, grid-independent) + U.S. Air Force EV charger demo catalyst. Too extended today (+178%, $6.20). Wait for pullback to $4.50; still 2x+ from pre-news levels with ~40% upside to target and ~22% risk. Short expiry — thesis hot but volatile."
+      "note": "AI data center Power Hub (2.5MWh, grid-independent) + U.S. Air Force EV charger demo catalyst. Too extended today (+146%, $5.49). Wait for pullback to $4.50; still 2x+ from pre-news levels with ~40% upside to target. Short expiry — thesis hot but volatile."
     },
     {
       "symbol": "HPE",
@@ -21,29 +21,7 @@
       "take_profit": 65.00,
       "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "Historic Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 growth guide raised to 29-33%. Currently $55.39. Pullback to $54 gives R:R ~2.75:1 with strong AI infrastructure fundamental support."
-    },
-    {
-      "symbol": "QBTS",
-      "trigger": "breakout",
-      "trigger_price": 32.00,
-      "quantity": 2,
-      "limit_price": 32.50,
-      "take_profit": 42.00,
-      "stop_loss": 27.00,
-      "good_until": "2026-06-08",
-      "note": "D-Wave Quantum; quantum sector strong in 2026. MRVL/AI halo driving compute-adjacent plays. Breakout above $32 confirms continuation. Currently not in today's movers list — watching the level."
-    },
-    {
-      "symbol": "TISI",
-      "trigger": "breakout",
-      "trigger_price": 18.00,
-      "quantity": 3,
-      "limit_price": 18.15,
-      "take_profit": 21.50,
-      "stop_loss": 16.00,
-      "good_until": "2026-06-07",
-      "note": "Team Inc. Q1 2026: revenue +8.3% YoY, Adj EBITDA +45.2%, FY guide raised, insider buying. Currently $17.39. Waiting for clean break above $18 to confirm momentum continuation before committing."
+      "note": "Historic Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 growth guide raised to 29-33%. Currently $55.81. Pullback to $54 gives R:R ~2.75:1 with strong AI infrastructure fundamental support."
     },
     {
       "symbol": "NVTS",
@@ -53,19 +31,30 @@
       "limit_price": 28.50,
       "take_profit": 36.00,
       "stop_loss": 25.50,
-      "good_until": "2026-06-07",
-      "note": "Navitas Semiconductor: NVIDIA MGX ecosystem collaboration announced June 3 — 800 VDC AI infrastructure play. Too extended today (+19.9%, $31.01). Pullback to $28 gives better entry with R:R ~3.2:1. GaNFast tech being showcased at COMPUTEX 2026."
+      "good_until": "2026-06-10",
+      "note": "Navitas Semiconductor: NVIDIA MGX ecosystem collaboration announced June 3 — 800 VDC AI infrastructure play. Surged +29.6% today to $33.51. Pullback to $28 gives cleaner entry with R:R ~2.9:1. GaNFast tech being showcased at COMPUTEX 2026."
     },
     {
-      "symbol": "SVCO",
+      "symbol": "DRTS",
       "trigger": "pullback",
-      "trigger_price": 12.50,
-      "quantity": 5,
-      "limit_price": 12.65,
-      "take_profit": 16.00,
-      "stop_loss": 11.50,
-      "good_until": "2026-06-07",
-      "note": "Silvaco Group Q1 2026 earnings beat (rev $17.76M vs $16.76M est, +26% YoY bookings growth, record gross margins). Jefferies upgrade to $14 from $8, Strong Buy average. ITRI strategic partnership. Currently $13.61 after volatile post-earnings session. Pullback to $12.50 near earnings gap support gives better entry."
+      "trigger_price": 9.50,
+      "quantity": 6,
+      "limit_price": 9.65,
+      "take_profit": 13.50,
+      "stop_loss": 8.50,
+      "good_until": "2026-06-10",
+      "note": "Alpha Tau Medical: ASCO 2026 pancreatic cancer data (Phase I/II Alpha DaRT) showed strong OS vs historical chemo. Analyst Buy/$15 target. Multiple 2026 clinical catalysts (cSCC, GBM, prostate). Up +16.7% today ($10.42) after ASCO June 1. Wait for consolidation to $9.50 for cleaner R:R ~4:1."
+    },
+    {
+      "symbol": "FJET",
+      "trigger": "date",
+      "trigger_date": "2026-06-22",
+      "quantity": 7,
+      "limit_price": 8.50,
+      "take_profit": 12.00,
+      "stop_loss": 7.20,
+      "good_until": "2026-06-28",
+      "note": "Starfighters Space: added to Russell 3000 effective June 29, 2026 (first 2026 reconstitution). Index funds front-run and buy in the final week. Currently $8.32. Enter June 22 to capture the index-driven buying wave into the June 29 effective date."
     }
   ]
 }

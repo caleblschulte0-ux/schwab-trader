@@ -1,91 +1,58 @@
-# Brain Run — 2026-06-03T15:09:38Z
-
-Funnel: scanned 234 → 120 fit budget → 22 with catalyst → 3 finalists → picked 2
-
----
-
-## Collision Guard
-Prior `orders.json` stamped 2026-06-03T14:51:56Z — ~17.7 minutes ago. Guard cleared; full scan proceeds.
+# Trading Brain — Run Log
+**UTC:** 2026-06-03T16:20:29Z
 
 ---
 
-## Market Context (June 3, 2026 — ~11:10 AM ET)
+## Funnel
+`Scanned 236 → 138 fit budget → 83 leading-tag candidates → 25 with real catalyst → 5 finalists → picked 2`
 
-**Tape:** SPY -0.42%, VIX 16.03, tone = **neutral**
-
-**Sector rotation today:**
-| Sector | % |
-|--------|---|
-| Basic Materials | +1.95% ← **hottest** |
-| Consumer Defensive | +1.45% |
-| Communication Services | +1.30% |
-| Consumer Cyclical | +0.88% |
-| Real Estate | +0.86% |
-| Healthcare | +0.72% |
-| Industrials | +0.66% |
-| Energy | +0.44% |
-| Utilities | -0.46% |
-| Financial Services | -0.55% |
-| Technology | -1.17% ← **weakest** |
-
-Broad market slightly red — digesting yesterday's AI/chip melt-up (MRVL +22%, SOXL big day June 2). Tech is coldest sector; semiconductors bifurcated (MRVL +6.4% continuing, SOXL +4.65% on Navitas/AI infra theme) but tech overall drags. Favor healthcare, materials, and consumer longs; skeptical of broad tech chases.
+FMP provided 206 candidates (137 movers, 47 news_smallcap, 25 news_bullish, 1 earnings_soon). Web searches added ~30 unique names across gainers, unusual-volume, defense, biotech, mining, and energy themes. Total pool ~236; leverage ETFs, sub-$2 names, and no-catalyst movers filtered immediately.
 
 ---
 
-## Funnel Detail
-
-**Source 1 — FMP candidates.json (updated 15:00 UTC):** 209 candidates — 140 movers, 47 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU). Leading count: 73.
-
-**Source 2 — Web searches (8 parallel runs):** top % gainers, unusual volume, small-cap news, defense/AI/biotech sweeps, individual catalyst checks on KYTX/FJET/NVTS/SVCO/BJDX/TISI.
-
-Additional from web: BJDX (+91% surge — was Tuesday June 2, not today), SVCO catalyst confirmed (Q1 beat + Jefferies upgrade), NVTS catalyst confirmed (NVIDIA MGX collaboration), KYTX EULAR data confirmed. ~25 additional tickers.
-
-**Total funnel: 234 candidates.**
-
-Eliminated: sub-$2 floor (NOTV, AIM, HKIT, FSHPR, DEVS, HUBC, dozens more), leveraged ETFs (MRVU, MVLL, SOXL, TQQQ, SMCZ, OKLL, etc.), over-budget (MRVL $309, GOOGL $361, SWMR $68), parabolic blow-offs (LASE +64–107%, XOS +178%, SDOT +167%, WCT +219%), and extended names ≥20% threshold (NVTS +19.9% deprioritized per rule).
-
-~120 in budget; ~22 with genuine fresh catalyst from today; 3 finalists (KYTX, FJET, NVTS — NVTS deprioritized, SVCO considered but tech sector cold and Jefferies PT only $0.39 above current).
+## Market Tape (STEP 0)
+SPY –0.56%, VIX 16.23, tone **neutral**. Sectors ranked today: Basic Materials (+2.25%) → Energy (+1.74%) → Real Estate (+1.65%) → Industrials (+1.23%) → Healthcare (+0.81%). Laggards: Technology (–0.52%), Utilities (–0.75%), Financial Services (–1.27%). Lean long into materials, energy, healthcare; skeptical of pure tech momentum today. Nuclear/uranium sub-sector is actually DOWN sharply today (NNE –14%, SMR –12%, leveraged uranium ETFs –15%), contradicting a misleading web snippet — candidates.json data is the source of truth.
 
 ---
 
 ## Picks
 
-### 1. KYTX — Kyverna Therapeutics (NASDAQ)
-**BUY 8 shares @ $8.05 | TP $10.00 | SL $7.35 | Cost $64.40**
+### BUY: KYTX — Kyverna Therapeutics ($7.99, +1.1%) — 8 shares @ $8.00 limit
+**Catalyst:** At EULAR 2026 Congress in London today, Kyverna presented updated Phase 1 COMPARE trial data for miv-cel (KYV-101) in ACPA-positive, treatment-refractory rheumatoid arthritis — a single infusion delivered **66.6% ACR70 response at Week 36**, deep B-cell depletion, sustained autoantibody decline, and a favorable safety profile (no high-grade CRS/ICANS). This is an oral presentation (highest-prestige abstract category at EULAR) in a disease with enormous unmet need. Separately, the KYSA-8 registrational trial in Stiff Person Syndrome hit positive topline endpoints and the company is on the BLA track; Phase 2 RA is fully enrolled. The stock is barely up +1.1% on what is genuinely landmark clinical data — a clear under-reaction. Published today, volume 192K — participation is light, meaning the bulk of the move is still ahead. 8 shares × $8.00 = $64.00. Target $10.50 (+31%), stop $7.10 (–11%), R:R ≈ 2.8:1.
 
-Catalyst (published 12:39 UTC today): Kyverna Therapeutics presented updated Phase 1 COMPARE trial data for miv-cel (KYV-101) in ACPA-positive, treatment-refractory RA at EULAR 2026 in London. Headline: 66.6% ACR70 response at Week 36 — a very high efficacy bar in one of the hardest-to-treat patient populations. Deep CD19+ B-cell depletion, sustained autoantibody declines, predominantly naïve B-cell repopulation, and a clean safety profile (no high-grade CRS or ICANS).
-
-This is genuinely impressive Phase 1 data. The stock has reacted only +1% ($7.98) despite the quality of the readout. Kyverna is already in rolling BLA review (initiated Q1 2026 on positive SPS registrational data) — this EULAR RA data broadens the commercial thesis to a second, much larger indication. Healthcare sector is one of today's strongest (+0.72%). Entry here is as early as it gets — fresh catalyst, barely moved, no extension. Volume (129K shares) confirms real participation.
-
-Setup: Entry $8.05 (near current ask), TP $10.00 (24.8% upside, conservative re-rating target for a BLA-stage CAR-T company with positive multi-indication data), SL $7.35 (below today's open/support, 8.7% risk). R/R ≈ 2.9:1. Market cap $485M small-cap.
-
-### 2. FJET — Starfighters Space (NYSE)
-**BUY 7 shares @ $8.95 | TP $11.00 | SL $8.00 | Cost $62.65**
-
-Catalyst (published 10:09 UTC today): Starfighters Space officially added to the Russell 3000 Index, effective when U.S. markets open June 29, 2026 — part of the first 2026 Russell reconstitution. ~$12.2 trillion in assets benchmarked to Russell U.S. indexes must include this stock; passive funds are forced to buy before the June 29 effective date, creating 26 days of mechanical demand. Stock is only +2% today with 1M+ shares traded — institutional positioning building early.
-
-Pre-revenue company with widening losses ($4.27M net loss Q1 2026, up 61% YoY) — that's the bear case. The bull case is purely mechanical: index inclusion overrides fundamentals for the short term as passive funds have no discretion. The "Institutional Investors Build Multi-Million Dollar Stake" Stocktwits headline today confirms early institutional front-running of the June 29 deadline.
-
-Setup: Entry $8.95 (near current ask), TP $11.00 (22.9% upside, before reconstitution date), SL $8.00 (below round-number support and pre-announcement base, 10.6% risk). R/R ≈ 2.2:1. Market cap $390M small-cap.
+### BUY: TGB — Taseko Mines ($8.17, +unusual options alert) — 7 shares @ $8.20 limit
+**Catalyst:** Three-layer setup in the day's hottest sector. (1) **Fundamental:** Q1 2026 revenue $237.1M vs $139.2M a year ago — near-doubling driven by Florence Copper project ramp, adding 85M lbs of annual production at C1 costs of $1.11/lb. (2) **Options flow:** Schwab's options market update today flagged 300:1 calls-over-puts unusual activity in TGB, with institutional traders targeting the January 2027 $15 call. (3) **Sector tilt:** Basic Materials is the day's strongest sector (+2.25%); copper has underlying demand from AI data center buildout. Analyst consensus "Strong Buy," 12-month target $8.88 (likely stale vs. Q1 blowout). 7 shares × $8.20 = $57.40. Target $10.50 (+28%), stop $7.30 (–11%), R:R ≈ 2.6:1.
 
 ---
 
-## Holdings
-`holdings.json` is empty — no open positions. Both picks are fresh entries. This run deploys $64.40 (KYTX) + $62.65 (FJET) = $127.05 (~32% of ~$400 capital). ~$273 powder reserved.
+## Notable Names Passed
+
+**LASE (Laser Photonics, +42.6%, $3.45)** — Real catalysts: Dept of War MEIA Vulcan selection for Laser Shield Anti-Drone System + U.S. Army depot validation for DefenseTech missile maintenance. BUT stock already up 42% on 166M shares (blow-off volume into a $140M cap name). Hard pass per >15–20% rule. Watchlist if it consolidates to ~$2.80.
+
+**DRTS (Alpha Tau Medical, +16.7%, $10.42)** — Strong ASCO 2026 pancreatic cancer data (Phase I/II Alpha DaRT, June 1), analyst Buy/$15 target, multiple 2026 clinical catalysts. Up +16.7% intraday → deprioritize per rules. ASCO data 2 days old. Added to watchlist for pullback entry at $9.50.
+
+**FJET (Starfighters Space, –3.8%, $8.32)** — Added to Russell 3000 effective June 29, 2026. Real systematic buying catalyst, but 26 days until effective date — index-fund front-running builds in the week before June 29. Better as a date-trigger watchlist entry. Moved to watchlist.
+
+**NVTS (Navitas Semiconductor, +29.6%, $33.51)** — NVIDIA MGX 800 VDC collaboration announced today. Real institutional-quality catalyst, already up 29.6% on a 350% YTD run. Too extended; remains on watchlist at $28 pullback.
+
+**SDOT (Sadot Group, +114.8%)** — Reverse split + volatility spike, not a real catalyst. Pass.
+
+**ABVX ($82.76, +14.2%)** — 1 share = $82.76, over $65 cap. Pass.
+
+**DOCU** — Reports earnings tomorrow June 4, EPS estimate $1.00. Binary event, no clear directional edge; no action.
 
 ---
 
-## Notable Passes
+## Holdings Read
+`holdings.json` is **empty** — no open positions. Full ~$400 powder available. Previous picks (KYTX, FJET) from the 15:09Z run did not result in fills per holdings.json. Re-picking KYTX (same thesis, still early); replacing FJET with TGB (stronger fundamental setup today).
 
-| Name | Price | Move | Reason passed |
-|------|-------|------|---------------|
-| LASE | $3.98 | +64–107% | Defense tech U.S. Army traction — real catalyst, 141M volume. Near-vertical blow-off. Hard pass. |
-| NVTS | $31.01 | +19.9% | NVIDIA MGX ecosystem collaboration today — strong catalyst. But +20% is in deprioritize zone. Watchlisted for pullback to $28. |
-| SVCO | $13.61 | +11.9% | Q1 earnings beat (revenue +26% YoY, Jefferies upgrade to $14), AI-FTCO momentum. Solid but tech sector cold today and Jefferies PT only $0.39 above current. Watchlisted for pullback to $12.50. |
-| XOS | $6.20 | +178% | Parabolic blow-off. Prior watchlist (pullback $4.50) still live. |
-| BJDX | ~$6–8 | +91% | Surge was Tuesday June 2, not today. Chasing yesterday's news at elevated price. Pass. |
-| ABVX | $82.88 | +14.3% | Over $65 budget for even 1 share. |
-| TISI | $17.39 | +12.9% | Q1 earnings were in May — no fresh today catalyst found. Prior watchlist breakout trigger at $18 still live. |
-| MRVL | $309.38 | +6.4% | Way over budget. |
-| EP | $2.69 | +2.1% | Director insider buy — valid signal, picked in prior run. Deprioritized this run; KYTX/FJET are cleaner earlier-stage setups. |
-| DOCU | no price | earnings 6/4 | Pre-position candidate but no live price to size. Skip. |
+---
+
+## Watchlist Status
+- **XOS $4.50 pullback:** Stock at $5.49, trigger not hit. Keep.
+- **HPE $54 pullback:** Stock at $55.81, approaching trigger. Keep.
+- **NVTS $28 pullback:** Stock at $33.51 today, further from trigger after today's run. Keep.
+- **QBTS $32 breakout:** Stock at $28.07, no momentum toward $32. Removing.
+- **TISI $18 breakout / SVCO $12.50 pullback:** Both absent from today's candidates; can't track. Removing.
+- **NEW DRTS $9.50 pullback:** ASCO data strong, wait for consolidation after +16.7% day.
+- **NEW FJET date trigger June 22:** Russell 3000 recon buying sets up in the final week before June 29 effective date.
