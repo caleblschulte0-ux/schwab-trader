@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-06-03T17:04:48Z",
-  "funnel": {"scanned": 265, "leading": 90, "in_budget": 130, "had_catalyst": 15, "finalists": 4, "picked": 3},
+  "generated_utc": "2026-06-03T17:44:56Z",
+  "funnel": {"scanned": 258, "leading": 101, "in_budget": 95, "had_catalyst": 20, "finalists": 5, "picked": 3},
   "orders": [
     {"symbol": "KYTX", "action": "BUY", "instrument": "stock",
-     "quantity": 8, "limit_price": 7.90, "take_profit": 10.50, "stop_loss": 6.80},
-    {"symbol": "DOCU", "action": "BUY", "instrument": "stock",
-     "quantity": 1, "limit_price": 55.00, "take_profit": 61.00, "stop_loss": 50.00},
+     "quantity": 8, "limit_price": 7.85, "take_profit": 10.50, "stop_loss": 6.80},
+    {"symbol": "TGTX", "action": "BUY", "instrument": "stock",
+     "quantity": 1, "limit_price": 41.50, "take_profit": 54.00, "stop_loss": 36.00},
     {"symbol": "NVGS", "action": "BUY", "instrument": "stock",
-     "quantity": 2, "limit_price": 22.30, "take_profit": 25.50, "stop_loss": 20.50}
+     "quantity": 2, "limit_price": 22.20, "take_profit": 25.50, "stop_loss": 20.00}
   ]
 }
