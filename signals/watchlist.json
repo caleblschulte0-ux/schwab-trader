@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-03T16:48:05Z",
+  "generated_utc": "2026-06-03T15:53:26Z",
   "watch": [
     {
       "symbol": "NVTS",
@@ -10,7 +10,7 @@
       "take_profit": 36.00,
       "stop_loss": 23.50,
       "good_until": "2026-06-07",
-      "note": "Navitas GaNFast: NVIDIA MGX collaboration confirmed (800V-to-6V AI rack power delivery). Q1 2026 beat + analyst upgrades. Up +19.6% today to $31.95. Wait for pullback to $26.50 for R:R ~3.4:1. AI data center power is structural long-term theme."
+      "note": "Navitas GaN/AI power infra — NVIDIA MGX ecosystem, Q1 2026 beat, analyst upgrades. Up 19% today to $30.80. Wait for pullback to $26.50 for better R:R ~3.7:1 before size. Updated entry level from $28."
     },
     {
       "symbol": "XOS",
@@ -21,7 +21,7 @@
       "take_profit": 6.50,
       "stop_loss": 3.60,
       "good_until": "2026-06-06",
-      "note": "Xos 2.5MWh Power Hub: grid-independent energy storage for AI data centers, deploys in days vs. 3-7 year grid wait. Record 38.6% gross margins. Up +115% session / +202% premarket — fully parabolic. Only enter on deep pullback to $4.50 after base forms."
+      "note": "Xos EV trucks: Power Hub + Air Force EV demo catalyst. Up +174% today to $6.11, parabolic. Only enter on deep pullback to $4.50 after base forms. Still above trigger — wait."
     },
     {
       "symbol": "HPE",
@@ -32,7 +32,7 @@
       "take_profit": 65.00,
       "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised. Currently $55.42, approaching trigger. Pullback to $54 gives R:R ~2.75:1."
+      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised to 29-33%. Currently $55.30 and approaching trigger. Pullback to $54 gives R:R ~2.75:1."
     },
     {
       "symbol": "TISI",
@@ -65,18 +65,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-07",
-      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data confirmed today in news. Pre-catalyst coil at $3.40. Only enter on breakout above $3.65 confirming accumulation."
-    },
-    {
-      "symbol": "AADX",
-      "trigger": "breakout",
-      "trigger_price": 21.00,
-      "quantity": 3,
-      "limit_price": 21.50,
-      "take_profit": 27.50,
-      "stop_loss": 18.50,
-      "good_until": "2026-06-07",
-      "note": "Applied Aerospace & Defense: $650M IPO at $20, first trading day June 3. Vertically integrated subsystems for space/launch, defense aviation, C5ISR/precision strike. Defense sector is hot (Golden Dome / drone warfare budget). Breakout above IPO price confirms demand. R:R ~2:1. 3 shares = $64.50."
+      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil at $3.42. Only enter on breakout above $3.65 confirming accumulation."
     }
   ]
 }
