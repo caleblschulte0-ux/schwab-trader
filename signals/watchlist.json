@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-03T15:53:26Z",
+  "generated_utc": "2026-06-03T17:04:48Z",
   "watch": [
     {
       "symbol": "NVTS",
@@ -10,7 +10,29 @@
       "take_profit": 36.00,
       "stop_loss": 23.50,
       "good_until": "2026-06-07",
-      "note": "Navitas GaN/AI power infra — NVIDIA MGX ecosystem, Q1 2026 beat, analyst upgrades. Up 19% today to $30.80. Wait for pullback to $26.50 for better R:R ~3.7:1 before size. Updated entry level from $28."
+      "note": "Navitas GaN/AI power infra: NVIDIA MGX ecosystem, Computex showcase of 800V AI rack power, up 110% in 4 months then +23% today to $31.92. Strong thesis but overextended. Wait for pullback to $26.50 for better R:R ~3.7:1."
+    },
+    {
+      "symbol": "FJET",
+      "trigger": "pullback",
+      "trigger_price": 8.30,
+      "quantity": 7,
+      "limit_price": 8.40,
+      "take_profit": 10.50,
+      "stop_loss": 7.50,
+      "good_until": "2026-06-08",
+      "note": "Starfighters Space Russell 3000 addition: passive index inclusion drives structural buying before late-June effective date. Catalyst slightly aging (10:09 UTC) and stock down -1.2% to $8.55. Lower trigger to $8.30 to re-enter on pullback rather than current drift."
+    },
+    {
+      "symbol": "OBE",
+      "trigger": "breakout",
+      "trigger_price": 13.00,
+      "quantity": 4,
+      "limit_price": 13.10,
+      "take_profit": 15.50,
+      "stop_loss": 12.00,
+      "good_until": "2026-06-07",
+      "note": "Obsidian Energy acquiring Belly River assets for $96M cash (catalyst 15:10 UTC today). Energy sector #2 hottest. Stock barely moved (+0.8%). Breakout above $13.00 on volume confirms follow-through on acquisition deal."
     },
     {
       "symbol": "XOS",
@@ -21,7 +43,7 @@
       "take_profit": 6.50,
       "stop_loss": 3.60,
       "good_until": "2026-06-06",
-      "note": "Xos EV trucks: Power Hub + Air Force EV demo catalyst. Up +174% today to $6.11, parabolic. Only enter on deep pullback to $4.50 after base forms. Still above trigger — wait."
+      "note": "Xos EV trucks: Power Hub + Air Force EV demo catalyst. Up +174% to $6.12, parabolic. Only enter on deep pullback to $4.50 after base forms."
     },
     {
       "symbol": "HPE",
@@ -32,29 +54,7 @@
       "take_profit": 65.00,
       "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised to 29-33%. Currently $55.30 and approaching trigger. Pullback to $54 gives R:R ~2.75:1."
-    },
-    {
-      "symbol": "TISI",
-      "trigger": "breakout",
-      "trigger_price": 18.00,
-      "quantity": 3,
-      "limit_price": 18.15,
-      "take_profit": 21.50,
-      "stop_loss": 16.00,
-      "good_until": "2026-06-07",
-      "note": "Team Inc. Q1 2026: +8.3% rev YoY, Adj EBITDA +45.2%, FY guide raised, insider buying. Break above $18 confirms momentum."
-    },
-    {
-      "symbol": "SVCO",
-      "trigger": "pullback",
-      "trigger_price": 12.50,
-      "quantity": 5,
-      "limit_price": 12.65,
-      "take_profit": 16.00,
-      "stop_loss": 11.50,
-      "good_until": "2026-06-07",
-      "note": "Silvaco Q1 beat, Jefferies upgrade to $14, ITRI partnership. Pullback to $12.50 near earnings gap support gives better entry than chasing."
+      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised to 29-33%. Currently $55.05 and approaching trigger. Pullback to $54 gives R:R ~2.75:1."
     },
     {
       "symbol": "MNKD",
@@ -65,7 +65,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-07",
-      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil at $3.42. Only enter on breakout above $3.65 confirming accumulation."
+      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. At $3.415 today, below trigger. Pre-catalyst coil — only enter on breakout above $3.65 confirming accumulation."
     }
   ]
 }
