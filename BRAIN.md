@@ -38,6 +38,24 @@ the bot rewrites from the actual Schwab account on every run.
   NO "pending fill" state — decide fresh each run. It's fine to re-pick a name
   that's still a good setup and not yet held.
 
+## STEP 0 — READ THE TAPE FIRST (market regime)
+Before hunting names, read the top-level **`market`** block in `candidates.json`
+(it may be absent if the macro feed was unavailable — then just proceed normally).
+It carries the day's broad-market read: `spy_pct` / `qqq_pct` (index trend %),
+`vix` (volatility), `sectors` (hot→cold list), and a derived `tone`
+(`risk_on` / `neutral` / `risk_off`). Let it set your aggressiveness for the run —
+it does NOT change any guardrail, only how picky you are:
+- **risk_off** (index red ~>1% or VIX elevated/spiking): be materially pickier.
+  Take FEWER and/or smaller positions, demand cleaner setups and the strongest
+  relative strength (names GREEN while the tape is red), and lean toward
+  defined-catalyst entries over momentum chasing. Sitting out a run is acceptable
+  and often correct on an ugly tape — do NOT force trades into a falling market.
+- **neutral**: normal discipline.
+- **risk_on** (broad green): normal aggressiveness; you can give clean momentum a
+  bit more benefit of the doubt, still within all the usual rules.
+- Use `sectors` as a TILT: prefer names in the day's strongest sectors/themes,
+  be skeptical of longs in the weakest. Note the tape you saw in `latest.md`.
+
 ## STEP 1 — WIDEN THE FUNNEL (the most important step)
 Use TWO sources IN TANDEM every run and merge them into one big pool:
 
@@ -51,14 +69,23 @@ LEADING names with live price + % change. Read this first. Each row now carries 
   gaps cut both ways → a defined `stop_loss` is mandatory on these.
 - `news_smallcap` — LEADING + DISCOVERY: a SMALL-CAP (market cap < ~$2B) that is in
   the news right now, surfaced by cross-referencing the news feed against a small-cap
-  universe — names BROUGHT to us, even if they aren't movers yet (catalyst: headline,
-  sentiment, source). This is the earliest, highest-priority bucket for this strategy.
-  Sentiment is only filtered to exclude clearly-bearish coverage — READ the headline
-  to judge the catalyst. A `news_smallcap` name that's barely moved yet is a prime
-  EARLY entry; one already up big is likely the same story late — apply the stage rule.
+  universe — names BROUGHT to us, even if they aren't movers yet. These rows now also
+  carry real `price`, `pct_change`, `volume`, and `market_cap` (from the screener), plus
+  a `catalyst` with `headline`, `sentiment`, `source`, and `published_utc`. This is the
+  earliest, highest-priority bucket for this strategy. Sentiment is only filtered to
+  exclude clearly-bearish coverage — READ the headline to judge the catalyst. A
+  `news_smallcap` name that's barely moved yet is a prime EARLY entry; one already up
+  big is likely the same story late — apply the stage rule.
 - `news_bullish` — LEADING: bullish market-wide news coverage (skews mega-cap, so
   often over the $65 budget — useful context, occasionally tradeable). READ the
   headline; confirm a real, durable catalyst and that the move isn't already spent.
+NEWS FRESHNESS — a catalyst's `catalyst.published_utc` tells you HOW OLD the news is.
+Strongly PREFER names whose news broke in the last few hours (the move may still be
+ahead of you) and DISCOUNT multi-day-old coverage (likely already priced in — re-buying
+yesterday's news at a higher price is exactly the chase we avoid). Compare it to the
+candidates `updated_utc`. VOLUME (now on movers and small-cap rows) confirms
+participation: prefer a catalyst move backed by real/rising volume over a thin pop.
+
 LEADING names are in the funnel because a catalyst is FRESH or PENDING — NOT
 because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this is
 how you get in BEFORE the move instead of chasing it after. A name carrying both a

@@ -78,6 +78,9 @@ MAX_NEWS_BULLISH      = 25      # cap the (mostly large-cap) bullish market-wide
 NASDAQ_SCREENER_URL   = "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&download=true"
 SMALLCAP_MAX_CAP      = 2_000_000_000   # "small cap" ceiling (~$2B)
 SMALLCAP_MIN_CAP      = 50_000_000      # floor: skip nano-cap shells (~$50M)
+# --- market regime (the macro tape the brain reads FIRST; FMP-sourced, throttled) ---
+REGIME_REFRESH_MIN    = 25      # min minutes between regime refetches (the tape moves slowly)
+REGIME_INDEXES        = ("SPY", "QQQ")  # ETF proxies for the broad-market trend
 # --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
 MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
 MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)
@@ -93,18 +96,45 @@ FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 AV_API_KEY    = (os.environ.get("ALPHA_API_KEY") or os.environ.get("ALPHAVANTAGE_API_KEY", "")).strip()
 
 
-def _fmp_get(endpoint: str, params: str = "") -> list:
-    """GET one FMP /stable endpoint -> list of rows. Never raises (returns [])."""
+def _http_json(url: str, timeout: int = 20, retries: int = 2, headers: dict | None = None):
+    """GET JSON with a light retry on TRANSIENT failures only (connection blip /
+    timeout / 5xx). A 4xx (FMP 402 Payment Required, 404, ...) is PERMANENT — re-raise
+    immediately without retrying so we never waste the call budget hammering a dead
+    endpoint. Raises the last error if every attempt fails (callers degrade gracefully).
+    A malformed body (json) also propagates without retry (retrying won't fix it)."""
+    import time
+    import urllib.error
     import urllib.request
+    req = urllib.request.Request(url, headers=headers or {})
+    last_exc: Exception | None = None
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            if 400 <= exc.code < 500:
+                raise  # permanent (402/404/...) — don't retry, don't burn budget
+            last_exc = exc  # 5xx: transient
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            last_exc = exc  # network blip: transient
+        if attempt < retries:
+            time.sleep(0.5 * (2 ** attempt))  # 0.5s, then 1s backoff
+    raise last_exc  # type: ignore[misc]
+
+
+def _fmp_get(endpoint: str, params: str = "") -> list:
+    """GET one FMP /stable endpoint -> list of rows (light retry on transient errors;
+    no retry on 402/404). Returns [] if the body isn't a list. Raises on hard failure
+    (callers wrap it so a dead endpoint just no-ops)."""
     sep = "&" if params else ""
     url = f"{FMP_BASE}/{endpoint}?{params}{sep}apikey={FMP_API_KEY}"
-    with urllib.request.urlopen(url, timeout=20) as r:
-        data = json.loads(r.read().decode("utf-8"))
+    data = _http_json(url, timeout=20)
     return data if isinstance(data, list) else []
 
 
 def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
-                     exch=None, lst=None, signal=None, catalyst=None) -> bool:
+                     exch=None, lst=None, signal=None, catalyst=None,
+                     vol=None, mktcap=None) -> bool:
     """Add a candidate or merge into an existing one. The KEY behavior: when a
     symbol shows up from more than one source, we ACCUMULATE its reasons in a
     `signals` list instead of overwriting — so the brain can see that, e.g., a
@@ -116,6 +146,7 @@ def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
         seen[sym] = {
             "symbol": sym, "name": name, "price": price, "pct_change": pct,
             "exchange": exch, "list": lst,
+            "volume": vol, "market_cap": mktcap,
             "signal": signal, "signals": [signal] if signal else [],
         }
         if catalyst:
@@ -130,6 +161,10 @@ def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
         row["pct_change"] = pct
     if exch and not row.get("exchange"):
         row["exchange"] = exch
+    if vol is not None and row.get("volume") is None:
+        row["volume"] = vol
+    if mktcap is not None and row.get("market_cap") is None:
+        row["market_cap"] = mktcap
     if signal and signal not in row.get("signals", []):
         row.setdefault("signals", []).append(signal)
     if catalyst:
@@ -147,7 +182,7 @@ def _fetch_movers(seen: dict) -> None:
             n = sum(_merge_candidate(
                 seen, row.get("symbol"), name=row.get("name"), price=row.get("price"),
                 pct=row.get("changesPercentage"), exch=row.get("exchange"),
-                lst=label, signal="mover") for row in rows)
+                vol=row.get("volume"), lst=label, signal="mover") for row in rows)
             print(f"(fmp) {label}: +{n} new")
         except Exception as exc:  # noqa: BLE001 - never let data fetch break the run
             print(f"(warn) FMP {label} fetch failed: {exc}")
@@ -193,35 +228,52 @@ def _fetch_leading(seen: dict) -> None:
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
 
 
-def _fetch_smallcap_universe() -> set[str]:
-    """Set of SMALL-CAP symbols (market cap ~$50M-$2B, above our $2 floor) from Nasdaq's
-    FREE public screener — one no-auth call covering the whole US market with real
-    market caps. Used to DISCOVER which names in the news feed are small-caps. Returns
-    an empty set on any failure (graceful — just disables small-cap tagging that run).
+def _fetch_smallcap_universe() -> dict[str, dict]:
+    """Map of SMALL-CAP symbol -> {market_cap, volume, price, pct} (market cap ~$50M-$2B,
+    above our $2 floor) from Nasdaq's FREE public screener — one no-auth call covering
+    the whole US market with real market caps AND volume. Two jobs: (a) DISCOVER which
+    names in the news feed are small-caps, and (b) ENRICH them with cap/volume/price the
+    news feed itself lacks (news rows otherwise arrive with only a headline). Returns
+    {} on any failure (graceful — just disables small-cap tagging that run).
     (FMP's screener is 402 Payment Required on the free tier, so we don't use it.)"""
+    def _num(v):
+        try:
+            return float(str(v).replace("$", "").replace(",", "").replace("%", "").strip() or 0)
+        except (TypeError, ValueError):
+            return None
     try:
-        import urllib.request
-        req = urllib.request.Request(NASDAQ_SCREENER_URL,
-                                     headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            payload = json.loads(r.read().decode("utf-8"))
+        payload = _http_json(NASDAQ_SCREENER_URL, timeout=30,
+                             headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
         data = payload.get("data") or {}
         rows = data.get("rows") or (data.get("table") or {}).get("rows") or []
-        universe: set[str] = set()
+        universe: dict[str, dict] = {}
         for row in rows:
             sym = str(row.get("symbol", "")).strip().upper()
-            try:
-                cap = float(str(row.get("marketCap", "")).replace("$", "").replace(",", "") or 0)
-                px = float(str(row.get("lastsale", "")).replace("$", "").replace(",", "") or 0)
-            except (TypeError, ValueError):
+            cap, px = _num(row.get("marketCap")), _num(row.get("lastsale"))
+            if cap is None or px is None:
                 continue
             if sym and SMALLCAP_MIN_CAP <= cap <= SMALLCAP_MAX_CAP and px >= MIN_SHARE_PRICE:
-                universe.add(sym)
+                vol = _num(row.get("volume"))
+                universe[sym] = {"market_cap": cap, "price": px,
+                                 "volume": int(vol) if vol else None,
+                                 "pct": _num(row.get("pctchange"))}
         print(f"(universe) small-cap symbols: {len(universe)}")
         return universe
     except Exception as exc:  # noqa: BLE001 - never let the universe fetch break the run
         print(f"(warn) small-cap universe fetch failed (skipped): {exc}")
-        return set()
+        return {}
+
+
+def _av_time_to_iso(t) -> str | None:
+    """Alpha Vantage's time_published is 'YYYYMMDDTHHMMSS' (UTC). Return ISO 8601 so the
+    brain can judge how FRESH a catalyst is (hot news = move may still be ahead; days-old
+    news = likely already priced in). None if missing/unparseable."""
+    if not t:
+        return None
+    try:
+        return datetime.strptime(str(t), "%Y%m%dT%H%M%S").replace(tzinfo=timezone.utc).isoformat()
+    except (ValueError, TypeError):
+        return None
 
 
 def _parse_av_feed(payload: dict) -> list[dict]:
@@ -241,6 +293,7 @@ def _parse_av_feed(payload: dict) -> list[dict]:
     for item in feed:
         title = item.get("title")
         src = item.get("source")
+        published = _av_time_to_iso(item.get("time_published"))
         for ts in (item.get("ticker_sentiment") or []):
             sym = str(ts.get("ticker", "")).strip().upper()
             if not sym or ":" in sym or sym in picked:
@@ -256,7 +309,8 @@ def _parse_av_feed(payload: dict) -> list[dict]:
             picked.add(sym)
             out.append({"sym": sym, "sent": sent, "label": label,
                         "catalyst": {"headline": title, "sentiment": label,
-                                     "sentiment_score": round(sent, 3), "source": src}})
+                                     "sentiment_score": round(sent, 3), "source": src,
+                                     "published_utc": published}})
     return out
 
 
@@ -271,12 +325,13 @@ def _carry_forward_news(seen: dict, prev: dict) -> int:
             _merge_candidate(seen, row.get("symbol"), name=row.get("name"),
                              price=row.get("price"), pct=row.get("pct_change"),
                              exch=row.get("exchange"), lst=row.get("list"),
+                             vol=row.get("volume"), mktcap=row.get("market_cap"),
                              signal=tag, catalyst=row.get("catalyst"))
             carried += 1
     return carried
 
 
-def _fetch_news(seen: dict, prev: dict, smallcap: set[str]) -> dict:
+def _fetch_news(seen: dict, prev: dict, smallcap: dict[str, dict]) -> dict:
     """LEADING stock-news signal with small-cap DISCOVERY. One deep AV pull gives every
     ticker in the news; we then split it:
       * ticker in the small-cap universe + not clearly bearish -> `news_smallcap`
@@ -310,7 +365,11 @@ def _fetch_news(seen: dict, prev: dict, smallcap: set[str]) -> dict:
         for row in _parse_av_feed(payload):
             sym, sent = row["sym"], row["sent"]
             if sym in smallcap and sent > NEWS_SMALLCAP_FLOOR and sc < MAX_NEWS_SMALLCAP:
-                _merge_candidate(seen, sym, signal="news_smallcap", lst="news", catalyst=row["catalyst"])
+                info = smallcap.get(sym) or {}
+                _merge_candidate(seen, sym, signal="news_smallcap", lst="news",
+                                 price=info.get("price"), pct=info.get("pct"),
+                                 vol=info.get("volume"), mktcap=info.get("market_cap"),
+                                 catalyst=row["catalyst"])
                 sc += 1
             elif (sent >= NEWS_MIN_SENTIMENT or "Bull" in row["label"]) and bull < MAX_NEWS_BULLISH:
                 _merge_candidate(seen, sym, signal="news_bullish", lst="news", catalyst=row["catalyst"])
@@ -334,7 +393,8 @@ def _read_candidates() -> dict:
         return {}
 
 
-def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
+def _write_candidates(seen: dict, news_meta: dict | None = None,
+                      market: dict | None = None, market_utc: str | None = None) -> None:
     counts: dict[str, int] = {}
     for row in seen.values():
         for s in (row.get("signals") or ([row["signal"]] if row.get("signal") else [])):
@@ -343,6 +403,9 @@ def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
         "updated_utc": datetime.now(timezone.utc).isoformat(),
         "count": len(seen),
         "signal_counts": counts,
+        # Macro tape the brain reads first (omitted entirely if unavailable):
+        **({"market": market} if market else {}),
+        **({"market_updated_utc": market_utc} if market_utc else {}),
         # AV news throttle state (persisted across runs):
         **(news_meta or {}),
         "candidates": sorted(seen.values(), key=lambda x: x["symbol"]),
@@ -354,6 +417,108 @@ def _write_candidates(seen: dict, news_meta: dict | None = None) -> None:
         print(f"Wrote {CANDIDATES_FILE}: {len(seen)} candidates {counts}")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not write candidates file: {exc}")
+
+
+def _fmp_quote_one(symbol: str) -> dict | None:
+    """One FMP quote row for a symbol (index ETF / ^VIX), or None on any failure. The
+    `stable` quote body may be a list or a single dict; tolerate both. A 402/404 (paid/
+    missing on the free tier) just returns None — the caller degrades to partial data."""
+    try:
+        data = _http_json(f"{FMP_BASE}/quote?symbol={symbol}&apikey={FMP_API_KEY}", timeout=15)
+    except Exception:  # noqa: BLE001 - permanent or transient: caller degrades gracefully
+        return None
+    if isinstance(data, list) and data and isinstance(data[0], dict):
+        return data[0]
+    if isinstance(data, dict) and data:
+        return data
+    return None
+
+
+def _fetch_sector_perf() -> list[dict]:
+    """Best-effort sector-performance snapshot [{sector, pct}, ...] sorted hot->cold. The
+    FMP path/shape varies and may be paid; every shape is tried in turn and on total
+    failure we return [] (the brain simply won't see a sector tilt — no regression)."""
+    today = datetime.now(timezone.utc).date().isoformat()
+    for ep in (f"sector-performance-snapshot?date={today}", "sector-performance", "sectors-performance"):
+        try:
+            url = f"{FMP_BASE}/{ep}{'&' if '?' in ep else '?'}apikey={FMP_API_KEY}"
+            data = _http_json(url, timeout=15)
+        except Exception:  # noqa: BLE001
+            continue
+        rows = data if isinstance(data, list) else (
+            data.get("sectorPerformance") if isinstance(data, dict) else None)
+        if not isinstance(rows, list) or not rows:
+            continue
+        out: list[dict] = []
+        for r in rows:
+            if not isinstance(r, dict):
+                continue
+            name = r.get("sector")
+            chg = r.get("changesPercentage", r.get("averageChange"))
+            if name is None or chg is None:
+                continue
+            try:
+                out.append({"sector": name, "pct": round(float(str(chg).replace("%", "").strip()), 2)})
+            except (TypeError, ValueError):
+                continue
+        if out:
+            out.sort(key=lambda x: x["pct"], reverse=True)
+            return out
+    return []
+
+
+def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
+    """Top-level MACRO snapshot so the brain can read the tape BEFORE picking: index
+    trend (SPY/QQQ %), a volatility read (VIX), the day's hot/cold sectors, and a
+    conservative derived `tone`. All FMP-sourced (Alpha Vantage's daily budget is
+    reserved for news) and THROTTLED to ~REGIME_REFRESH_MIN (the tape moves slowly) to
+    protect the FMP call budget. Every sub-call is isolated — whatever is available is
+    included; if everything fails the block is simply absent (zero regression). Returns
+    (market_dict, market_updated_utc)."""
+    if not FMP_API_KEY:
+        return prev.get("market") or {}, prev.get("market_updated_utc")
+    last = _parse_dt(prev.get("market_updated_utc"))
+    age_min = (datetime.now(timezone.utc) - last).total_seconds() / 60 if last else 1e9
+    if age_min < REGIME_REFRESH_MIN and prev.get("market"):
+        print(f"(regime) throttled ({age_min:.0f}m < {REGIME_REFRESH_MIN}m) — reusing prior tape")
+        return prev["market"], prev.get("market_updated_utc")
+
+    market: dict = {}
+    for sym in REGIME_INDEXES:  # broad-market trend via ETF proxies
+        row = _fmp_quote_one(sym)
+        pct = row.get("changesPercentage") if row else None
+        if pct is not None:
+            try:
+                market[f"{sym.lower()}_pct"] = round(float(pct), 2)
+            except (TypeError, ValueError):
+                pass
+    vix_row = _fmp_quote_one("%5EVIX") or _fmp_quote_one("VIXY")  # ^VIX (URL-encoded), ETF fallback
+    vix_val = vix_row.get("price") if vix_row else None
+    if vix_val is not None:
+        try:
+            market["vix"] = round(float(vix_val), 2)
+        except (TypeError, ValueError):
+            pass
+    sectors = _fetch_sector_perf()
+    if sectors:
+        market["sectors"] = sectors
+
+    spy, vix = market.get("spy_pct"), market.get("vix")  # conservative hint; brain still judges
+    if spy is not None:
+        if spy <= -1.0 or (vix is not None and vix >= 25):
+            market["tone"] = "risk_off"
+        elif spy >= 0.3:
+            market["tone"] = "risk_on"
+        else:
+            market["tone"] = "neutral"
+
+    if not market:
+        print("(regime) no macro data available this run (endpoints unavailable) — omitting tape")
+        return prev.get("market") or {}, prev.get("market_updated_utc")
+    print(f"(regime) tape: {market.get('tone','?')} | SPY {market.get('spy_pct','?')}% "
+          f"QQQ {market.get('qqq_pct','?')}% VIX {market.get('vix','?')} | "
+          f"{len(market.get('sectors', []))} sectors")
+    return market, datetime.now(timezone.utc).isoformat()
 
 
 def fetch_fmp_candidates() -> None:
@@ -374,9 +539,10 @@ def fetch_fmp_candidates() -> None:
         _fetch_leading(seen)   # leading: upcoming earnings
     else:
         print("(info) no FMP_API_KEY — skipping FMP movers/earnings sources.")
-    smallcap = _fetch_smallcap_universe() if AV_API_KEY else set()  # small-cap set (for discovery)
+    market, market_utc = _fetch_market_regime(prev)  # macro tape (throttled, FMP)
+    smallcap = _fetch_smallcap_universe() if AV_API_KEY else {}  # small-cap map (discovery + enrichment)
     news_meta = _fetch_news(seen, prev, smallcap)  # news + small-cap-in-news discovery
-    _write_candidates(seen, news_meta=news_meta)
+    _write_candidates(seen, news_meta=news_meta, market=market, market_utc=market_utc)
 
 
 def get_client() -> SchwabClient:
@@ -402,13 +568,13 @@ def _as_dict(o):
     return dict(o)
 
 
-def load_orders() -> tuple[str | None, list[dict]]:
+def load_orders() -> tuple[str | None, list[dict], dict]:
     if not os.path.exists(ORDERS_FILE):
         print(f"No {ORDERS_FILE} found.")
-        return None, []
+        return None, [], {}
     with open(ORDERS_FILE, encoding="utf-8") as fh:
         data = json.load(fh)
-    return data.get("generated_utc"), data.get("orders", []) or []
+    return data.get("generated_utc"), data.get("orders", []) or [], data.get("funnel") or {}
 
 
 def is_fresh(generated_utc: str | None) -> bool:
@@ -643,9 +809,10 @@ def watch_triggered(w: dict, q: dict) -> tuple[bool, str]:
 
 
 def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
-              positions: dict, blocked: set, bought: set) -> None:
+              positions: dict, blocked: set, bought: set, q: dict | None = None) -> None:
     """Shared entry path for BOTH orders.json picks and watchlist triggers: dedupe,
-    price off the LIVE ask, enforce the slippage backstop + $65 cap, then buy."""
+    price off the LIVE ask, enforce the slippage backstop + $65 cap, then buy. The
+    watchlist path passes the quote it already pulled (q) to avoid re-quoting."""
     if sym in positions:
         print(f"[{sym}] SKIP — already holding")
         return
@@ -655,7 +822,8 @@ def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
     if sym in bought:
         print(f"[{sym}] SKIP — already bought this run")
         return
-    q = quote(client, sym)
+    if q is None:
+        q = quote(client, sym)
     ask = live_ask(q)
     if not ask:
         print(f"[{sym}] SKIP — no live quote")
@@ -687,16 +855,10 @@ def main() -> int:
     print(f"Held: {', '.join(positions) or '(none)'} | No-rebuy: "
           f"{', '.join(blocked) or '(none)'} | read_ok={orders_ok}")
 
-    generated_utc, orders = load_orders()
+    generated_utc, orders, funnel = load_orders()
     fresh = bool(orders) and is_fresh(generated_utc)
-    # Show the brain's funnel tally if present (proof of how wide it scanned).
-    try:
-        with open(ORDERS_FILE, encoding="utf-8") as _fh:
-            _funnel = json.load(_fh).get("funnel")
-        if _funnel:
-            print(f"Funnel this run: {_funnel}")
-    except Exception:
-        pass
+    if funnel:  # the brain's funnel tally (proof of how wide it scanned)
+        print(f"Funnel this run: {funnel}")
     # Map each symbol -> its tp/stop from the latest picks (for exit management).
     levels = {o["symbol"]: o for o in orders if o.get("action") == "BUY"} if orders else {}
     brain_sells = {o.get("symbol") for o in orders if o.get("action") == "SELL"} if fresh else set()
@@ -756,13 +918,14 @@ def main() -> int:
         if not ok:
             print(f"[{sym}] watch SKIP — {why}")
             continue
-        fired, reason = watch_triggered(w, quote(client, sym))
+        q = quote(client, sym)
+        fired, reason = watch_triggered(w, q)
         if not fired:
             print(f"[{sym}] watching — {reason}")
             continue
         print(f"[{sym}] watch TRIGGER — {reason}")
         try_enter(client, acct, sym, pick["quantity"], float(pick["limit_price"]),
-                  positions, blocked, bought)
+                  positions, blocked, bought, q=q)
 
     # B) FRESH BUY picks from orders.json.
     if not fresh:
