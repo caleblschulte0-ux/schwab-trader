@@ -1,23 +1,20 @@
 {
-  "generated_utc": "2026-06-03T19:05:07Z",
+  "generated_utc": "2026-06-03T19:20:35Z",
   "watch": [
     {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
      "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
-     "good_until": "2026-06-07", "note": "MannKind: FDA approved Afrezza supplemental BLA (pediatric indication) June 2. Healthcare sector leading today. Breakout above $3.65 confirms follow-through buying."},
-    {"symbol": "DOCU", "trigger": "breakout", "trigger_price": 57.50,
-     "quantity": 1, "limit_price": 57.60, "take_profit": 64.00, "stop_loss": 52.00,
-     "good_until": "2026-06-05", "note": "DocuSign Q1 FY2027 earnings tonight (June 3 AH). Enter only if stock gaps bullishly above $57.50 on June 4 open confirming a beat. Skip if down."},
+     "good_until": "2026-06-07", "note": "MannKind: FDA approved Afrezza supplemental BLA (pediatric indication). Healthcare sector #1 today. Breakout above $3.65 confirms follow-through buying."},
     {"symbol": "RIVN", "trigger": "pullback", "trigger_price": 17.25,
      "quantity": 3, "limit_price": 17.35, "take_profit": 22.00, "stop_loss": 15.50,
      "good_until": "2026-06-09", "note": "Rivian R2 SUV customer deliveries begin June 9. Pre-position on pullback to $17.25 support ahead of delivery launch catalyst."},
-    {"symbol": "NVTS", "trigger": "pullback", "trigger_price": 28.50,
-     "quantity": 2, "limit_price": 28.60, "take_profit": 35.00, "stop_loss": 24.50,
-     "good_until": "2026-06-06", "note": "Navitas Semi / Nvidia MGX 800 VDC AI infrastructure partnership confirmed at COMPUTEX. Real catalyst but extended; enter only on pullback to $28.50 support."},
+    {"symbol": "RCKT", "trigger": "breakout", "trigger_price": 3.20,
+     "quantity": 20, "limit_price": 3.25, "take_profit": 4.20, "stop_loss": 2.65,
+     "good_until": "2026-06-06", "note": "Rocket Pharma gene therapy; analyst raised 12m PT to $9.39 (225% upside implied); stock at $2.905 with 1.86M volume; breakout above $3.20 confirms momentum — enter on trigger, not now."},
     {"symbol": "BB", "trigger": "breakout", "trigger_price": 11.20,
      "quantity": 5, "limit_price": 11.25, "take_profit": 12.80, "stop_loss": 9.80,
-     "good_until": "2026-06-06", "note": "BlackBerry: FedRAMP Class D recertification + QNX profitable growth phase. Stock at/near 52-week high $11.15. Clearing 11.20 confirms breakout with volume. Tech sector weak today so not a direct pick — buy only on clean break."},
+     "good_until": "2026-06-06", "note": "BlackBerry: FedRAMP Class D recertification + QNX profitable growth phase. Near 52-week high. Clearing 11.20 with volume confirms breakout. Tech sector weak today — enter only on clean break."},
     {"symbol": "NXE", "trigger": "pullback", "trigger_price": 12.50,
      "quantity": 4, "limit_price": 12.55, "take_profit": 15.50, "stop_loss": 11.50,
-     "good_until": "2026-06-06", "note": "NexGen Energy: uranium sector rally on Urenco USA 50% capacity expansion + Three Mile Island restart approval. NXE up only +3.9% vs peers; less extended than URG/UEC. Add on any dip to $12.50 support."}
+     "good_until": "2026-06-06", "note": "NexGen Energy: uranium sector rally on Urenco USA capacity expansion + TMI restart approval. Energy sector #3 hot today. Add on any dip to $12.50 support."}
   ]
 }
