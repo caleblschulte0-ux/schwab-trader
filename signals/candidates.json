@@ -1,11 +1,11 @@
 {
-  "updated_utc": "2026-06-03T13:10:26.788152+00:00",
-  "count": 216,
+  "updated_utc": "2026-06-03T13:20:28.229941+00:00",
+  "count": 217,
   "signal_counts": {
     "mover": 135,
     "news_smallcap": 57,
-    "news_bullish": 25,
-    "earnings_soon": 1
+    "earnings_soon": 1,
+    "news_bullish": 25
   },
   "market": {
     "spy_pct": 0.14,
@@ -59,9 +59,9 @@
     "tone": "neutral"
   },
   "market_updated_utc": "2026-06-03T13:00:29.004284+00:00",
-  "news_updated_utc": "2026-06-03T13:00:33.058016+00:00",
+  "news_updated_utc": "2026-06-03T13:20:28.228612+00:00",
   "news_calls_date": "2026-06-03",
-  "news_calls_today": 4,
+  "news_calls_today": 5,
   "candidates": [
     {
       "symbol": "AAL",
@@ -120,6 +120,27 @@
       ]
     },
     {
+      "symbol": "ADP",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "ADP National Employment Report: Private Sector Employment Increased by 122,000 Jobs in May; Annual Pay was Up 4.4%",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.324,
+        "source": "ADP Media Center",
+        "published_utc": "2026-06-03T12:16:58+00:00"
+      }
+    },
+    {
       "symbol": "AEHR",
       "name": "Aehr Test Systems",
       "price": 113,
@@ -163,7 +184,7 @@
       "catalyst": {
         "headline": "Tether-Backed Adecoagro Plans Sugarcane-Powered Bitcoin Mining in Brazil",
         "sentiment": "Bullish",
-        "sentiment_score": 0.443,
+        "sentiment_score": 0.441,
         "source": "BanklessTimes",
         "published_utc": "2026-06-03T08:20:58+00:00"
       }
@@ -212,9 +233,30 @@
       "catalyst": {
         "headline": "Alamo Group, Inc. (NYSE:ALG) Given Consensus Recommendation of \"Moderate Buy\" by Brokerages",
         "sentiment": "Bullish",
-        "sentiment_score": 0.419,
+        "sentiment_score": 0.389,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T08:41:36+00:00"
+      }
+    },
+    {
+      "symbol": "AMD",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "How Corning Turned Glass Into Gold",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.321,
+        "source": "Trefis",
+        "published_utc": "2026-06-03T12:24:37+00:00"
       }
     },
     {
@@ -232,6 +274,27 @@
       ]
     },
     {
+      "symbol": "AMZN",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "5 Reasons Why Customers Avoid Shopping At The Apple Store",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.175,
+        "source": "BGR",
+        "published_utc": "2026-06-03T12:16:58+00:00"
+      }
+    },
+    {
       "symbol": "AOSL",
       "name": "Alpha and Omega Semiconductor Limited",
       "price": 53.32,
@@ -246,27 +309,6 @@
       ]
     },
     {
-      "symbol": "ARDT",
-      "name": null,
-      "price": 9.27,
-      "pct_change": 0.542,
-      "exchange": null,
-      "list": "news",
-      "volume": 369973,
-      "market_cap": 1328854787.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Ardent Health names insider Dave Caspers CEO",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.028,
-        "source": "MSN",
-        "published_utc": "2026-06-02T23:31:15+00:00"
-      }
-    },
-    {
       "symbol": "AREB",
       "name": "American Rebel Holdings, Inc.",
       "price": 0.145,
@@ -279,27 +321,6 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "ARI",
-      "name": null,
-      "price": 11.0,
-      "pct_change": 0.733,
-      "exchange": null,
-      "list": "news",
-      "volume": 1801752,
-      "market_cap": 1461346722.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "ARI Financials: Revenue Breakdown, Margins & Competitor Comparison",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.273,
-        "source": "Intellectia AI",
-        "published_utc": "2026-06-02T23:32:30+00:00"
-      }
     },
     {
       "symbol": "ASM",
@@ -317,7 +338,7 @@
       "catalyst": {
         "headline": "Avino Silver & Gold Mines (TSX:ASM) Is Up 8.0% After Record Quarter And Expanded Drilling Program - What's Changed",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.321,
+        "sentiment_score": 0.349,
         "source": "Simply Wall Street",
         "published_utc": "2026-06-03T03:30:42+00:00"
       }
@@ -339,30 +360,9 @@
       "catalyst": {
         "headline": "ASTC Stock Eyes Best Year Since 1997 \u2014 Retail Traders Shrug Off Short Report Warning Of 99% Downside",
         "sentiment": "Neutral",
-        "sentiment_score": 0.046,
+        "sentiment_score": 0.025,
         "source": "Stocktwits",
         "published_utc": "2026-06-03T06:31:35+00:00"
-      }
-    },
-    {
-      "symbol": "ASYS",
-      "name": null,
-      "price": 21.95,
-      "pct_change": 6.295,
-      "exchange": null,
-      "list": "news",
-      "volume": 828214,
-      "market_cap": 319532120.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Major Amtech Systems (ASYS) holder details 20.6% stake and lock-up",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.115,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-02T23:30:56+00:00"
       }
     },
     {
@@ -381,7 +381,7 @@
       "catalyst": {
         "headline": "Alterity Therapeutics Ltd TEMP Earnings and Revenue \u2013 ASX:ATHDA",
         "sentiment": "Neutral",
-        "sentiment_score": 0.015,
+        "sentiment_score": 0.046,
         "source": "TradingView",
         "published_utc": "2026-06-03T07:20:53+00:00"
       }
@@ -402,7 +402,7 @@
       "catalyst": {
         "headline": "ATN International Completes First Phase of Tower Asset Sale and Revises 2026 Financial Outlook",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.257,
+        "sentiment_score": 0.29,
         "source": "geneonline.com",
         "published_utc": "2026-06-03T05:32:19+00:00"
       }
@@ -451,7 +451,7 @@
       "catalyst": {
         "headline": "Funds tied to Aurinia Pharmaceuticals (AUPH) add shares, sell put options",
         "sentiment": "Bullish",
-        "sentiment_score": 0.401,
+        "sentiment_score": 0.436,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T01:33:35+00:00"
       }
@@ -471,7 +471,7 @@
       ]
     },
     {
-      "symbol": "AVY",
+      "symbol": "BA",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -484,11 +484,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Avery Dennison Corp. stock (US0536111091): shares edge higher after 1% NYSE gain",
+        "headline": "20 D.C.-area companies land on Fortune 500, including 2 newcomers",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.307,
-        "source": "AD HOC NEWS",
-        "published_utc": "2026-06-03T11:46:38+00:00"
+        "sentiment_score": 0.306,
+        "source": "The Business Journals",
+        "published_utc": "2026-06-03T12:14:06+00:00"
       }
     },
     {
@@ -534,7 +534,7 @@
       ]
     },
     {
-      "symbol": "BDX",
+      "symbol": "BBY",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -547,11 +547,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "FDA-cleared blood culture system flags sepsis infections 3 hours faster",
+        "headline": "5 Reasons Why Customers Avoid Shopping At The Apple Store",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.333,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T11:59:36+00:00"
+        "sentiment_score": 0.195,
+        "source": "BGR",
+        "published_utc": "2026-06-03T12:16:58+00:00"
       }
     },
     {
@@ -569,27 +569,6 @@
       ]
     },
     {
-      "symbol": "BHRB",
-      "name": null,
-      "price": 64.03,
-      "pct_change": 1.683,
-      "exchange": null,
-      "list": "news",
-      "volume": 179119,
-      "market_cap": 1290192078.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Why (BHRB) Price Action Is Critical for Tactical Trading",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.047,
-        "source": "Stock Traders Daily",
-        "published_utc": "2026-06-02T23:36:00+00:00"
-      }
-    },
-    {
       "symbol": "BIPI",
       "name": null,
       "price": 16.6,
@@ -605,7 +584,7 @@
       "catalyst": {
         "headline": "Technical Reactions to BIPI Trends in Macro Strategies",
         "sentiment": "Neutral",
-        "sentiment_score": 0.05,
+        "sentiment_score": 0.093,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-02T23:56:00+00:00"
       }
@@ -696,7 +675,7 @@
       "catalyst": {
         "headline": "Precision Trading with Brt Apartments Corp. (md) (BRT) Risk Zones",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.238,
+        "sentiment_score": 0.226,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T02:52:00+00:00"
       }
@@ -717,7 +696,7 @@
       "catalyst": {
         "headline": "(BSRR) Risk Channels and Responsive Allocation",
         "sentiment": "Neutral",
-        "sentiment_score": 0.144,
+        "sentiment_score": 0.125,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T03:48:00+00:00"
       }
@@ -738,7 +717,7 @@
       "catalyst": {
         "headline": "(BVFL) and the Role of Price-Sensitive Allocations",
         "sentiment": "Neutral",
-        "sentiment_score": 0.128,
+        "sentiment_score": 0.129,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T04:38:00+00:00"
       }
@@ -759,9 +738,30 @@
       "catalyst": {
         "headline": "(BWB) Movement as an Input in Quant Signal Sets",
         "sentiment": "Neutral",
-        "sentiment_score": 0.041,
+        "sentiment_score": 0.04,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T04:42:00+00:00"
+      }
+    },
+    {
+      "symbol": "BX",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "What's Going On With Blackstone Stock Today?",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.312,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T12:38:38+00:00"
       }
     },
     {
@@ -780,7 +780,7 @@
       "catalyst": {
         "headline": "Beazer Homes USA Inc stock (US0758961009): Dream Finders bid saga keeps focus on valuation and strat",
         "sentiment": "Neutral",
-        "sentiment_score": 0.105,
+        "sentiment_score": 0.146,
         "source": "Ad Hoc News",
         "published_utc": "2026-06-03T10:09:33+00:00"
       }
@@ -801,7 +801,7 @@
       "catalyst": {
         "headline": "Responsive Playbooks and the CAL Inflection",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.322,
+        "sentiment_score": 0.341,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T05:08:55+00:00"
       }
@@ -822,7 +822,7 @@
       "catalyst": {
         "headline": "(CAPL) Movement Within Algorithmic Entry Frameworks",
         "sentiment": "Neutral",
-        "sentiment_score": 0.143,
+        "sentiment_score": 0.106,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T05:38:00+00:00"
       }
@@ -843,7 +843,7 @@
       "catalyst": {
         "headline": "Understanding Momentum Shifts in (CASS)",
         "sentiment": "Neutral",
-        "sentiment_score": 0.111,
+        "sentiment_score": 0.127,
         "source": "Stock Traders Daily",
         "published_utc": "2026-06-03T05:52:00+00:00"
       }
@@ -864,7 +864,7 @@
       "catalyst": {
         "headline": "Perspective Therapeutics Inc at RBC Capital Markets Global Healthcare Conference Transcript",
         "sentiment": "Neutral",
-        "sentiment_score": 0.003,
+        "sentiment_score": 0.005,
         "source": "GuruFocus",
         "published_utc": "2026-06-03T00:09:35+00:00"
       }
@@ -885,7 +885,7 @@
       "catalyst": {
         "headline": "CBIZ Completes Acquisition of BINDZ Consulting to Strengthen Global Service Capabilities",
         "sentiment": "Bullish",
-        "sentiment_score": 0.446,
+        "sentiment_score": 0.403,
         "source": "Indian Startup Times",
         "published_utc": "2026-06-03T08:09:07+00:00"
       }
@@ -906,7 +906,7 @@
       "catalyst": {
         "headline": "Lloyd\u2019s Register, Samsung Heavy Industries and Capital Clean Energy Carriers Corp to move forward on floating data centre designs",
         "sentiment": "Neutral",
-        "sentiment_score": 0.01,
+        "sentiment_score": 0.044,
         "source": "India Shipping News",
         "published_utc": "2026-06-03T03:09:22+00:00"
       }
@@ -941,7 +941,7 @@
       "catalyst": {
         "headline": "60,000 RSU award lifts Cerus (CERS) director holdings to 192,386",
         "sentiment": "Neutral",
-        "sentiment_score": 0.016,
+        "sentiment_score": 0.048,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T00:09:24+00:00"
       }
@@ -962,51 +962,9 @@
       "catalyst": {
         "headline": "CEVA Technical Analysis & Stock Price Forecast",
         "sentiment": "Bullish",
-        "sentiment_score": 0.406,
+        "sentiment_score": 0.448,
         "source": "Intellectia AI",
         "published_utc": "2026-06-03T06:09:30+00:00"
-      }
-    },
-    {
-      "symbol": "CL",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Colgate-Palmolive Launches Serving Smiles, a New Podcast Delivering Health Conversations Gen Z Actually Want to Have",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.343,
-        "source": "Business Wire",
-        "published_utc": "2026-06-03T12:00:13+00:00"
-      }
-    },
-    {
-      "symbol": "CLX",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Arxada Announces Strategic Agreement with Clorox Healthcare to Launch Quanticare(TM) Technology in Clorox Healthcare HyperOxi Disinfecting Wipes, a Breakthrough Sporicidal Disinfectant for Healthcare Facilities",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.419,
-        "source": "www.newswire.com",
-        "published_utc": "2026-06-03T12:00:14+00:00"
       }
     },
     {
@@ -1023,11 +981,32 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "53 YEARS. 53 REAL INGREDIENTS: CHIPOTLE TO GIVE AWAY 53,000 FREE BURRITOS FOR THE MEN'S PROFESSIONAL BASKETBALL CHAMPIONSHIP SERIES",
+        "headline": "Chipotle coming to Arnold; car wash pulls plans",
         "sentiment": "Bullish",
-        "sentiment_score": 0.403,
-        "source": "PR Newswire",
-        "published_utc": "2026-06-03T11:53:15+00:00"
+        "sentiment_score": 0.428,
+        "source": "Leader Publications",
+        "published_utc": "2026-06-03T12:30:16+00:00"
+      }
+    },
+    {
+      "symbol": "CNP",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "CenterPoint Energy (CNP) Valuation Check As New AI Grid Platform Targets Long Term Reliability And Efficiency",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.47,
+        "source": "Simply Wall Street",
+        "published_utc": "2026-06-03T12:29:16+00:00"
       }
     },
     {
@@ -1046,7 +1025,7 @@
       "catalyst": {
         "headline": "COFS Technical Analysis & Stock Price Forecast",
         "sentiment": "Bullish",
-        "sentiment_score": 0.521,
+        "sentiment_score": 0.523,
         "source": "Intellectia AI",
         "published_utc": "2026-06-03T07:10:31+00:00"
       }
@@ -1067,7 +1046,7 @@
       "catalyst": {
         "headline": "Critical Metals Advances Tanbreez Project with Infrastructure and Drilling Progress",
         "sentiment": "Bullish",
-        "sentiment_score": 0.436,
+        "sentiment_score": 0.416,
         "source": "The Assay",
         "published_utc": "2026-06-03T03:40:24+00:00"
       }
@@ -1100,11 +1079,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "New Cisco-NetApp FlexPod aims to simplify secure AI for enterprises",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.443,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T12:00:02+00:00"
+        "headline": "How Corning Turned Glass Into Gold",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.244,
+        "source": "Trefis",
+        "published_utc": "2026-06-03T12:24:37+00:00"
       }
     },
     {
@@ -1137,7 +1116,7 @@
       "catalyst": {
         "headline": "Cue Biopharma (CUE) director Meehan Viola Mong files initial Form 3",
         "sentiment": "Neutral",
-        "sentiment_score": 0.008,
+        "sentiment_score": 0.039,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T01:40:27+00:00"
       }
@@ -1186,7 +1165,7 @@
       "catalyst": {
         "headline": "BV Technologies screens first infant in Viaskin peanut patch study",
         "sentiment": "Bullish",
-        "sentiment_score": 0.442,
+        "sentiment_score": 0.433,
         "source": "grafa.com",
         "published_utc": "2026-06-03T10:09:04+00:00"
       }
@@ -1206,27 +1185,6 @@
       ]
     },
     {
-      "symbol": "DHR",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Leica Biosystems Announces Expansion of Collaboration to Scale Precision Medicine and Develop AI-Powered Diagnostics",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.431,
-        "source": "PR Newswire",
-        "published_utc": "2026-06-03T12:00:23+00:00"
-      }
-    },
-    {
       "symbol": "DIN",
       "name": null,
       "price": 29.57,
@@ -1242,7 +1200,7 @@
       "catalyst": {
         "headline": "Dine Brands Global, Inc. (NYSE:DIN) Given Consensus Rating of \"Hold\" by Brokerages",
         "sentiment": "Neutral",
-        "sentiment_score": 0.013,
+        "sentiment_score": 0.016,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T06:10:25+00:00"
       }
@@ -1281,7 +1239,7 @@
       "catalyst": {
         "headline": "Number of shareholders of Dominari Holdings Inc. \u2013 NASDAQ:DOMH",
         "sentiment": "Neutral",
-        "sentiment_score": 0.017,
+        "sentiment_score": 0.037,
         "source": "TradingView",
         "published_utc": "2026-06-03T01:09:51+00:00"
       }
@@ -1302,7 +1260,7 @@
       "catalyst": {
         "headline": "Number of shareholders of Alpha Tau Medical Ltd. \u2013 NASDAQ:DRTSW",
         "sentiment": "Neutral",
-        "sentiment_score": 0.023,
+        "sentiment_score": 0.029,
         "source": "TradingView",
         "published_utc": "2026-06-03T04:09:46+00:00"
       }
@@ -1323,7 +1281,7 @@
       "catalyst": {
         "headline": "Diana Rips Genco Board After Third Rejection, Urges Shareholders to Vote for Change",
         "sentiment": "Neutral",
-        "sentiment_score": 0.041,
+        "sentiment_score": 0.042,
         "source": "gCaptain",
         "published_utc": "2026-06-03T00:10:19+00:00"
       }
@@ -1342,11 +1300,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "World Investment Advisors Buys 16,450 Shares of Duke Energy Corporation $DUK",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.291,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:40:22+00:00"
+        "headline": "Duke Energy site readiness efforts help land $1.2 billion advanced manufacturing project in Cherokee County",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.403,
+        "source": "Financial Times",
+        "published_utc": "2026-06-03T12:15:24+00:00"
       }
     },
     {
@@ -1379,30 +1337,9 @@
       "catalyst": {
         "headline": "Electronic Arts Inc. - Caleb Williams Named EA SPORTS\u2122 Madden NFL 27 Cover Athlete",
         "sentiment": "Bullish",
-        "sentiment_score": 0.403,
+        "sentiment_score": 0.408,
         "source": "EA IR",
         "published_utc": "2026-06-03T12:05:23+00:00"
-      }
-    },
-    {
-      "symbol": "ECL",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Ecolab invests EUR100 million in HoloSolis PV gigafactory and GravitHy green iron project",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.413,
-        "source": "IndexBox",
-        "published_utc": "2026-06-03T11:41:25+00:00"
       }
     },
     {
@@ -1421,30 +1358,9 @@
       "catalyst": {
         "headline": "Encore Capital (ECPG) awards director Ashwini Gupta 340 deferred stock units",
         "sentiment": "Neutral",
-        "sentiment_score": 0.029,
+        "sentiment_score": 0.021,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T00:39:17+00:00"
-      }
-    },
-    {
-      "symbol": "EMR",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Emerson Electric Co. $EMR Shares Acquired by Westpac Banking Corp",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.255,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:38:26+00:00"
       }
     },
     {
@@ -1463,7 +1379,7 @@
       "catalyst": {
         "headline": "Energizer Holdings, Inc. (NYSE:ENR) Receives Average Recommendation of \"Hold\" from Analysts",
         "sentiment": "Neutral",
-        "sentiment_score": 0.022,
+        "sentiment_score": 0.03,
         "source": "MarketBeat",
         "published_utc": "2026-06-03T06:39:41+00:00"
       }
@@ -1484,7 +1400,7 @@
       "catalyst": {
         "headline": "Enovix (ENVX) Chief Legal Officer receives RSU bonus and reports tax withholding",
         "sentiment": "Neutral",
-        "sentiment_score": 0.038,
+        "sentiment_score": 0.029,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T01:08:43+00:00"
       }
@@ -1505,7 +1421,7 @@
       "catalyst": {
         "headline": "Empire Petroleum (EP) director adds 7,777 shares in open\u2011market buy",
         "sentiment": "Bullish",
-        "sentiment_score": 0.388,
+        "sentiment_score": 0.383,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T07:40:18+00:00"
       }
@@ -1526,7 +1442,7 @@
       "catalyst": {
         "headline": "Evertec Inc stock (PR30040P1032): shares hover around mid-20 USD as payments group tracks peers",
         "sentiment": "Neutral",
-        "sentiment_score": 0.047,
+        "sentiment_score": 0.038,
         "source": "Ad Hoc News",
         "published_utc": "2026-06-03T05:40:28+00:00"
       }
@@ -1547,7 +1463,7 @@
       "catalyst": {
         "headline": "National Vision (NASDAQ: EYE) confirms 2026 outlook, $50M buyback",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.263,
+        "sentiment_score": 0.297,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T12:00:48+00:00"
       }
@@ -1582,30 +1498,9 @@
       "catalyst": {
         "headline": "Forte Biosciences (FBRX) director awarded 18,353 RSUs vesting after 2026 meeting",
         "sentiment": "Neutral",
-        "sentiment_score": 0.041,
+        "sentiment_score": 0.008,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T11:40:32+00:00"
-      }
-    },
-    {
-      "symbol": "FICO",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Golf and credit scores collide as FICO joins First Tee",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.422,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T12:00:30+00:00"
       }
     },
     {
@@ -1638,7 +1533,7 @@
       "catalyst": {
         "headline": "The Zacks Analyst Blog Highlights SoundHound, NICE and Five9",
         "sentiment": "Neutral",
-        "sentiment_score": 0.145,
+        "sentiment_score": 0.102,
         "source": "Zacks Investment Research",
         "published_utc": "2026-06-03T12:00:13+00:00"
       }
@@ -1659,7 +1554,7 @@
       "catalyst": {
         "headline": "Starfighters Space (NYSE: FJET) Added to Membership of Russell 3000\u00ae Index",
         "sentiment": "Bullish",
-        "sentiment_score": 0.436,
+        "sentiment_score": 0.443,
         "source": "The Joplin Globe",
         "published_utc": "2026-06-03T10:09:40+00:00"
       }
@@ -1680,30 +1575,9 @@
       "catalyst": {
         "headline": "Flexsteel Industries, Inc. (FLXS) hits fresh high: Is there still room to run?",
         "sentiment": "Bullish",
-        "sentiment_score": 0.417,
+        "sentiment_score": 0.415,
         "source": "MSN",
         "published_utc": "2026-06-03T03:09:32+00:00"
-      }
-    },
-    {
-      "symbol": "FN",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Fabrinet (NYSE:FN) Scores High Growth Momentum Rating and Strong Technical Setup",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.848,
-        "source": "ChartMill",
-        "published_utc": "2026-06-03T11:59:56+00:00"
       }
     },
     {
@@ -1721,6 +1595,27 @@
       ]
     },
     {
+      "symbol": "FSEA",
+      "name": null,
+      "price": 16.76,
+      "pct_change": 0.119,
+      "exchange": null,
+      "list": "news",
+      "volume": 14203,
+      "market_cap": 78632456.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Net income from continuing operations of First Seacoast Bancorp, Inc. \u2013 NASDAQ:FSEA",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.412,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T03:38:47+00:00"
+      }
+    },
+    {
       "symbol": "FSHPR",
       "name": "Flag Ship Acquisition Corporation",
       "price": 0.132,
@@ -1735,7 +1630,7 @@
       ]
     },
     {
-      "symbol": "FTV",
+      "symbol": "FTGS",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -1748,11 +1643,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Morgan Stanley Adjusts Price Target on Fortive to $59 From $58, Maintains Equalweight Rating",
+        "headline": "What's Going On With Blackstone Stock Today?",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.217,
-        "source": "marketscreener.com",
-        "published_utc": "2026-06-03T11:58:33+00:00"
+        "sentiment_score": 0.21,
+        "source": "TradingView",
+        "published_utc": "2026-06-03T12:38:38+00:00"
       }
     },
     {
@@ -1768,6 +1663,216 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "FUND",
+      "name": null,
+      "price": 10.405,
+      "pct_change": 1.661,
+      "exchange": null,
+      "list": "news",
+      "volume": 17486,
+      "market_cap": 308337161.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Sprott Focus Trust Announces Second-Quarter Dividend of $0.1424 Per Share",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.386,
+        "source": "www.geneonline.com",
+        "published_utc": "2026-06-03T02:38:56+00:00"
+      }
+    },
+    {
+      "symbol": "FUTU",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Assessing Futu Holdings (NasdaqGM:FUTU) Valuation After Recent Share Price Weakness",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.317,
+        "source": "Simply Wall Street",
+        "published_utc": "2026-06-03T12:38:51+00:00"
+      }
+    },
+    {
+      "symbol": "FWRG",
+      "name": null,
+      "price": 10.44,
+      "pct_change": -6.199,
+      "exchange": null,
+      "list": "news",
+      "volume": 1568714,
+      "market_cap": 643572599.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "First Watch Restaurant Group (NASDAQ:FWRG) Receives Buy Rating from TD Cowen",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.348,
+        "source": "MarketBeat",
+        "published_utc": "2026-06-03T12:10:57+00:00"
+      }
+    },
+    {
+      "symbol": "GCTS",
+      "name": null,
+      "price": 3.46,
+      "pct_change": 1.765,
+      "exchange": null,
+      "list": "news",
+      "volume": 6627591,
+      "market_cap": 287461385.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "MaxLinear and GCT Semiconductor partner to develop Next-Generation 5G FWA and Converged Gateways",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.451,
+        "source": "Cyprus Shipping News",
+        "published_utc": "2026-06-03T03:38:58+00:00"
+      }
+    },
+    {
+      "symbol": "GENI",
+      "name": null,
+      "price": 6.09,
+      "pct_change": 0.661,
+      "exchange": null,
+      "list": "news",
+      "volume": 6222483,
+      "market_cap": 1566653572.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Genius Sports (GENI) Valuation Check As New Biometric Ad Research Redefines Sports Media Timing",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.497,
+        "source": "Simply Wall Street",
+        "published_utc": "2026-06-03T04:39:59+00:00"
+      }
+    },
+    {
+      "symbol": "GENK",
+      "name": null,
+      "price": 2.09,
+      "pct_change": 12.064,
+      "exchange": null,
+      "list": "news",
+      "volume": 52348,
+      "market_cap": 68896052.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "GEN Restaurant Group (NASDAQ: GENK) taps Luke Hewko as CFO in planned succession",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.324,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T09:40:26+00:00"
+      }
+    },
+    {
+      "symbol": "GFS",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "U.S. labs get direct path to AI chips in GlobalFoundries-DOE pact",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.497,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T12:30:04+00:00"
+      }
+    },
+    {
+      "symbol": "GGRP",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Navy co-developed SpatialCore aims to cut AI system integration to weeks",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.3,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T12:30:18+00:00"
+      }
+    },
+    {
+      "symbol": "GLAD",
+      "name": null,
+      "price": 19.47,
+      "pct_change": -0.409,
+      "exchange": null,
+      "list": "news",
+      "volume": 110669,
+      "market_cap": 439887053.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Gladstone Capital Corp stock (US3765351047): new independent director joins board as shares hover around 52-week highs",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.312,
+        "source": "AD HOC NEWS",
+        "published_utc": "2026-06-03T06:39:06+00:00"
+      }
+    },
+    {
+      "symbol": "GLW",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "How Corning Turned Glass Into Gold",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.412,
+        "source": "Trefis",
+        "published_utc": "2026-06-03T12:24:37+00:00"
+      }
     },
     {
       "symbol": "GLWG",
@@ -1827,7 +1932,7 @@
       "catalyst": {
         "headline": "Grocery Outlet (NASDAQ: GO) director receives 18,868 RSUs as equity retainer",
         "sentiment": "Neutral",
-        "sentiment_score": 0.035,
+        "sentiment_score": 0.034,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T00:22:58+00:00"
       }
@@ -1845,27 +1950,6 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "GPN",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Westpac Banking Corp Raises Stock Holdings in Global Payments Inc. $GPN",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.39,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:37:36+00:00"
-      }
     },
     {
       "symbol": "GPUS",
@@ -1922,6 +2006,48 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "GYRE",
+      "name": null,
+      "price": 5.56,
+      "pct_change": -4.303,
+      "exchange": null,
+      "list": "news",
+      "volume": 120729,
+      "market_cap": 539477470.0,
+      "signal": "news_smallcap",
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst": {
+        "headline": "Gyre Therapeutics Updates Post-Cullgen Acquisition Growth Strategy",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.43,
+        "source": "The Globe and Mail",
+        "published_utc": "2026-06-03T10:40:25+00:00"
+      }
+    },
+    {
+      "symbol": "HD",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Home Depot (HD) Has a Pro-and-Project Flywheel the Housing-Transaction Narrative Misses",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.41,
+        "source": "AlphaStreet",
+        "published_utc": "2026-06-03T12:22:41+00:00"
+      }
     },
     {
       "symbol": "HIVE",
@@ -1994,27 +2120,6 @@
       ]
     },
     {
-      "symbol": "HWM",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Westpac Banking Corp Sells 12,692 Shares of Howmet Aerospace Inc. $HWM",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.348,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:40:39+00:00"
-      }
-    },
-    {
       "symbol": "IBIT",
       "name": "iShares Bitcoin Trust ETF",
       "price": 38.05,
@@ -2056,11 +2161,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Intercontinental Exchange Joins Anthropic\u2019s Project Glasswing",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.475,
-        "source": "Business Wire",
-        "published_utc": "2026-06-03T11:59:39+00:00"
+        "headline": "ICE May trading: cotton volume up 151%, record interest-rate OI",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.346,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T12:33:44+00:00"
       }
     },
     {
@@ -2076,6 +2181,48 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "INTU",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "MSCI appoints Kashi Kakarla as chief technology officer By Investing.com",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.185,
+        "source": "Investing.com Canada",
+        "published_utc": "2026-06-03T12:17:58+00:00"
+      }
+    },
+    {
+      "symbol": "IR",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Zacks Research Expects Higher Earnings for Ingersoll Rand",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.262,
+        "source": "MarketBeat",
+        "published_utc": "2026-06-03T12:11:45+00:00"
+      }
     },
     {
       "symbol": "IREN",
@@ -2134,7 +2281,7 @@
       ]
     },
     {
-      "symbol": "KMB",
+      "symbol": "KEY",
       "name": null,
       "price": null,
       "pct_change": null,
@@ -2147,32 +2294,11 @@
         "news_bullish"
       ],
       "catalyst": {
-        "headline": "Westpac Banking Corp Has $5.46 Million Stock Position in Kimberly-Clark Corporation $KMB",
+        "headline": "KeyCorp CFO to outline bank strategy at Morgan Stanley event",
         "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.166,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:37:47+00:00"
-      }
-    },
-    {
-      "symbol": "KR",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Kroger and Hy-Vee Unite on Nourishing Change Conference",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.314,
-        "source": "Progressive Grocer",
-        "published_utc": "2026-06-03T11:38:48+00:00"
+        "sentiment_score": 0.207,
+        "source": "Stock Titan",
+        "published_utc": "2026-06-03T12:29:48+00:00"
       }
     },
     {
@@ -2260,27 +2386,6 @@
       ]
     },
     {
-      "symbol": "MA",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Westpac Banking Corp Raises Stock Holdings in Global Payments Inc. $GPN",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.303,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:37:36+00:00"
-      }
-    },
-    {
       "symbol": "MEHA",
       "name": "Functional Brands, Inc. Common Stock",
       "price": 0.069,
@@ -2335,6 +2440,27 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "MSCI",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "MSCI appoints Kashi Kakarla as chief technology officer By Investing.com",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.416,
+        "source": "Investing.com Canada",
+        "published_utc": "2026-06-03T12:17:58+00:00"
+      }
     },
     {
       "symbol": "MST",
@@ -2463,27 +2589,6 @@
       ]
     },
     {
-      "symbol": "NTAP",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "New Cisco-NetApp FlexPod aims to simplify secure AI for enterprises",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.444,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T12:00:02+00:00"
-      }
-    },
-    {
       "symbol": "NTCL",
       "name": "NetClass Technology Inc",
       "price": 1.6,
@@ -2536,16 +2641,8 @@
       "market_cap": null,
       "signal": "mover",
       "signals": [
-        "mover",
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "New Cisco-NetApp FlexPod aims to simplify secure AI for enterprises",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.339,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T12:00:02+00:00"
-      }
+        "mover"
+      ]
     },
     {
       "symbol": "OCG",
@@ -2884,27 +2981,6 @@
       ]
     },
     {
-      "symbol": "SIBN",
-      "name": null,
-      "price": 14.01,
-      "pct_change": 1.009,
-      "exchange": null,
-      "list": "news",
-      "volume": 480463,
-      "market_cap": 621333455.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Si-Bone director Davis Jr sells $104k in common stock",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.013,
-        "source": "Investing.com Nigeria",
-        "published_utc": "2026-06-02T22:54:00+00:00"
-      }
-    },
-    {
       "symbol": "SLDE",
       "name": null,
       "price": 17.38,
@@ -2920,7 +2996,7 @@
       "catalyst": {
         "headline": "Slide Insurance (NYSE: SLDE) risk chief exercises options and sells 2,500 shares",
         "sentiment": "Neutral",
-        "sentiment_score": 0.042,
+        "sentiment_score": 0.044,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T01:13:27+00:00"
       }
@@ -2955,7 +3031,7 @@
       "catalyst": {
         "headline": "Smith-Midland (NASDAQ: SMID) sets 2026 proxy votes and new 400,000-share equity plan",
         "sentiment": "Neutral",
-        "sentiment_score": 0.132,
+        "sentiment_score": 0.129,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T05:50:26+00:00"
       }
@@ -3060,7 +3136,7 @@
       "catalyst": {
         "headline": "UPDATE: Safe Pro Awarded U.S. Army Order For AI-Powered Threat Analysis Kit Together with Red Cat Black Widow Drones",
         "sentiment": "Bullish",
-        "sentiment_score": 0.452,
+        "sentiment_score": 0.461,
         "source": "AI Magazine",
         "published_utc": "2026-06-03T02:15:36+00:00"
       }
@@ -3137,7 +3213,7 @@
       "catalyst": {
         "headline": "COO of TAT Technologies (NASDAQ: TATT) exercises options and sells shares",
         "sentiment": "Neutral",
-        "sentiment_score": -0.086,
+        "sentiment_score": -0.059,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T06:50:49+00:00"
       }
@@ -3157,27 +3233,6 @@
       ]
     },
     {
-      "symbol": "TDY",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Teledyne HiRel Semiconductors Unveils Space-Screened, Ultra-Low Power 4 GHz Wideband Low Noise Amplifier",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.415,
-        "source": "Business Wire",
-        "published_utc": "2026-06-03T12:00:23+00:00"
-      }
-    },
-    {
       "symbol": "TGHL",
       "name": "The GrowHub Limited Class A Ordinary Shares",
       "price": 0.8994,
@@ -3190,6 +3245,27 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "TGT",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "5 Reasons Why Customers Avoid Shopping At The Apple Store",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.176,
+        "source": "BGR",
+        "published_utc": "2026-06-03T12:16:58+00:00"
+      }
     },
     {
       "symbol": "TOPS",
@@ -3218,6 +3294,27 @@
       "signals": [
         "mover"
       ]
+    },
+    {
+      "symbol": "TRGP",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "Q3 EPS Estimates for Targa Resources Boosted by Analyst",
+        "sentiment": "Bullish",
+        "sentiment_score": 0.493,
+        "source": "MarketBeat",
+        "published_utc": "2026-06-03T12:11:24+00:00"
+      }
     },
     {
       "symbol": "TSLL",
@@ -3249,7 +3346,7 @@
       "catalyst": {
         "headline": "TETRA Technologies, Inc. Announces Pricing of Public Offering of Common Stock",
         "sentiment": "Neutral",
-        "sentiment_score": -0.09,
+        "sentiment_score": -0.057,
         "source": "PR Newswire",
         "published_utc": "2026-06-03T03:22:46+00:00"
       }
@@ -3283,6 +3380,27 @@
       ]
     },
     {
+      "symbol": "UNH",
+      "name": null,
+      "price": null,
+      "pct_change": null,
+      "exchange": null,
+      "list": "news",
+      "volume": null,
+      "market_cap": null,
+      "signal": "news_bullish",
+      "signals": [
+        "news_bullish"
+      ],
+      "catalyst": {
+        "headline": "UnitedHealth (UNH) Updates Shareholder Meeting and Board Decisio",
+        "sentiment": "Somewhat-Bullish",
+        "sentiment_score": 0.198,
+        "source": "GuruFocus",
+        "published_utc": "2026-06-03T12:14:27+00:00"
+      }
+    },
+    {
       "symbol": "URG",
       "name": "Ur-Energy Inc.",
       "price": 2.1,
@@ -3311,27 +3429,6 @@
       ]
     },
     {
-      "symbol": "V",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "Westpac Banking Corp Raises Stock Holdings in Global Payments Inc. $GPN",
-        "sentiment": "Somewhat-Bullish",
-        "sentiment_score": 0.348,
-        "source": "MarketBeat",
-        "published_utc": "2026-06-03T11:37:36+00:00"
-      }
-    },
-    {
       "symbol": "VIDA",
       "name": "VIDA Global Inc.",
       "price": 5.54,
@@ -3358,27 +3455,6 @@
       "signals": [
         "mover"
       ]
-    },
-    {
-      "symbol": "VMD",
-      "name": null,
-      "price": 9.48,
-      "pct_change": -2.469,
-      "exchange": null,
-      "list": "news",
-      "volume": 166138,
-      "market_cap": 363432883.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "VMD Financials: Revenue Breakdown, Margins & Competitor Comparison",
-        "sentiment": "Neutral",
-        "sentiment_score": 0.116,
-        "source": "Intellectia AI",
-        "published_utc": "2026-06-02T23:03:22+00:00"
-      }
     },
     {
       "symbol": "VRAX",
@@ -3410,7 +3486,7 @@
       "catalyst": {
         "headline": "Verra Mobility (VRRM) CFO awarded 388,026 RSUs in equity compensation grant",
         "sentiment": "Neutral",
-        "sentiment_score": 0.027,
+        "sentiment_score": 0.05,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T01:06:32+00:00"
       }
@@ -3445,51 +3521,9 @@
       "catalyst": {
         "headline": "MIRA LIMITED to Sell 82,075 Class A Shares | VTEX SEC Filing - Form 144",
         "sentiment": "Neutral",
-        "sentiment_score": 0.019,
+        "sentiment_score": 0.024,
         "source": "Stock Titan",
         "published_utc": "2026-06-03T08:19:48+00:00"
-      }
-    },
-    {
-      "symbol": "VTS",
-      "name": null,
-      "price": 18.24,
-      "pct_change": 2.876,
-      "exchange": null,
-      "list": "news",
-      "volume": 894125,
-      "market_cap": 760834614.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Registrant (NYSE: VTS) Form 144 shows Michael Chernoff selling large blocks",
-        "sentiment": "Neutral",
-        "sentiment_score": -0.118,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-02T23:21:22+00:00"
-      }
-    },
-    {
-      "symbol": "WAT",
-      "name": null,
-      "price": null,
-      "pct_change": null,
-      "exchange": null,
-      "list": "news",
-      "volume": null,
-      "market_cap": null,
-      "signal": "news_bullish",
-      "signals": [
-        "news_bullish"
-      ],
-      "catalyst": {
-        "headline": "FDA-cleared blood culture system flags sepsis infections 3 hours faster",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.405,
-        "source": "Stock Titan",
-        "published_utc": "2026-06-03T11:59:36+00:00"
       }
     },
     {
@@ -3522,7 +3556,7 @@
       "catalyst": {
         "headline": "WHFCL News & Events",
         "sentiment": "Bullish",
-        "sentiment_score": 0.386,
+        "sentiment_score": 0.385,
         "source": "Intellectia AI",
         "published_utc": "2026-06-03T05:19:09+00:00"
       }
@@ -3598,27 +3632,6 @@
       ]
     },
     {
-      "symbol": "ZBIO",
-      "name": null,
-      "price": 17.13,
-      "pct_change": -5.724,
-      "exchange": null,
-      "list": "news",
-      "volume": 633984,
-      "market_cap": 1081474748.0,
-      "signal": "news_smallcap",
-      "signals": [
-        "news_smallcap"
-      ],
-      "catalyst": {
-        "headline": "Zenas Biopharma Says Phase 3 Indigo Trial Of Obexelimab Meets Primary And All Key Secondary Endpoints",
-        "sentiment": "Bullish",
-        "sentiment_score": 0.532,
-        "source": "TradingView",
-        "published_utc": "2026-06-02T22:45:38+00:00"
-      }
-    },
-    {
       "symbol": "ZCMD",
       "name": "Zhongchao Inc.",
       "price": 0.0548,
@@ -3662,7 +3675,7 @@
       "catalyst": {
         "headline": "Zumiez (ZUMZ) Reports Q1: Everything You Need To Know Ahead Of Earnings",
         "sentiment": "Neutral",
-        "sentiment_score": -0.096,
+        "sentiment_score": -0.075,
         "source": "Yahoo Finance UK",
         "published_utc": "2026-06-03T03:47:14+00:00"
       }
