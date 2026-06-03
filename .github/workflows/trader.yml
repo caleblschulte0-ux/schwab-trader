@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "schwab-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add signals/holdings.json signals/candidates.json 2>/dev/null || true
+          git add signals/holdings.json signals/candidates.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
@@ -61,7 +61,7 @@ jobs:
             echo "push rejected (main moved); syncing to latest and retrying ($i)..."
             git fetch origin main
             git reset --soft origin/main
-            git add signals/holdings.json signals/candidates.json 2>/dev/null || true
+            git add signals/holdings.json signals/candidates.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
             git diff --cached --quiet && { echo "snapshot already current."; exit 0; }
             git commit -m "bot: update holdings + candidates snapshot [skip ci]"
             sleep $((i * 3))

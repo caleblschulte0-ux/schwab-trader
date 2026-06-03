@@ -6,6 +6,12 @@ name: schwab-trader-brain
 # (CLAUDE_CODE_OAUTH_TOKEN) — it does NOT use the capped "scheduled routines" feature,
 # so it is not limited to 15/day. The executor (trader.yml) still runs every 15 min to
 # place/exit trades from what the brain writes here.
+#
+# CLEAN ROUTING: this job commits the brain's signal files DIRECTLY to main (see the
+# "Commit brain output" step). That makes the hosted "web routine" + the
+# brain-signals-to-main.yml bridge REDUNDANT. Once CLAUDE_CODE_OAUTH_TOKEN is set and
+# this cron is running, TURN OFF the hosted Claude routine in the web UI so there is
+# exactly ONE brain writing to main — no more random claude/* branches, no relay race.
 
 on:
   schedule:
@@ -70,7 +76,7 @@ jobs:
         run: |
           git config user.name "schwab-brain"
           git config user.email "brain@users.noreply.github.com"
-          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md"
+          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md reports/today.md"
           git add $FILES 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Brain produced no changes."

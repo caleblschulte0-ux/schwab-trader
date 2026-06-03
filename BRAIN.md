@@ -30,13 +30,27 @@ This keeps the two routines acting like one brain every ~30 min, never clobberin
 each other.
 
 ## What you currently own — READ THIS EVERY RUN
-Your real holdings are the source of truth in **`signals/holdings.json`**, which
-the bot rewrites from the actual Schwab account on every run.
+Your holdings are the source of truth in **`signals/holdings.json`**, which the bot
+rewrites every run from the account — REAL positions when live, and the SIMULATED
+paper book when in dry-run. Either way it is your MEMORY: treat it as real.
 - Empty `holdings` → you own NOTHING; hunt for fresh entries.
-- Listed symbols → your ACTUAL positions (with avg price); manage them.
-- A pick you wrote earlier is NOT a holding until it's in holdings.json. There is
-  NO "pending fill" state — decide fresh each run. It's fine to re-pick a name
-  that's still a good setup and not yet held.
+- Listed symbols → positions you ALREADY OWN (with avg price). Do NOT re-buy them;
+  manage them (let winners run; exit only on a genuine thesis break).
+
+### ANTI-CHASE / ANTI-FIXATION — the #1 past failure, do not repeat it
+On 2026-06-03 the brain re-picked the SAME name (KYTX) in 11 of 15 runs and kept
+LOWERING its entry to chase the falling price — averaging down into a loser. That is
+the single worst habit a catalyst trader can have. HARD RULES, no exceptions:
+- If a symbol is in `holdings.json`, it is OWNED — never issue another BUY for it.
+- Do NOT re-pick a name you chose in a recent run UNLESS it is now a genuinely
+  BETTER setup than when you first picked it (clean breakout, brand-new catalyst) —
+  NEVER just because it's still "cheap," still in the news, or has fallen.
+- NEVER lower a `limit_price` on a name run-over-run to keep chasing it. A price
+  falling AFTER you flagged it means your read was wrong, not that it's on sale.
+- A name that is RED since you first liked it is disqualified from re-entry this
+  session (the bot also blocks re-buying a name you just stopped out of).
+- "I already looked at this and it's still down" is a REASON TO MOVE ON, not to
+  buy again. Find a fresh name instead.
 
 ## STEP 0 — READ THE TAPE FIRST (market regime)
 Before hunting names, read the top-level **`market`** block in `candidates.json`
@@ -80,11 +94,18 @@ LEADING names with live price + % change. Read this first. Each row now carries 
   often over the $65 budget — useful context, occasionally tradeable). READ the
   headline; confirm a real, durable catalyst and that the move isn't already spent.
 NEWS FRESHNESS — a catalyst's `catalyst.published_utc` tells you HOW OLD the news is.
-Strongly PREFER names whose news broke in the last few hours (the move may still be
-ahead of you) and DISCOUNT multi-day-old coverage (likely already priced in — re-buying
-yesterday's news at a higher price is exactly the chase we avoid). Compare it to the
-candidates `updated_utc`. VOLUME (now on movers and small-cap rows) confirms
-participation: prefer a catalyst move backed by real/rising volume over a thin pop.
+This is now a PRIMARY selection filter, not a tiebreaker:
+- BEST: catalyst broke in the last few HOURS and the stock has barely moved — the
+  move is likely still ahead of you. This is the ideal entry.
+- OK: catalyst is today, intraday, with volume confirming and room left to target.
+- STALE → do NOT make it a finalist: a catalyst older than ~24–48h with the stock
+  already up on it. The move is priced in; buying it now is chasing yesterday's news.
+  (A genuinely NEW development on an old story — a fresh upgrade, next data point —
+  resets the clock; the original headline alone does not.)
+Among your finalists, prefer the one with the FRESHEST catalyst. Note each pick's
+catalyst age in `latest.md`. Compare `published_utc` to the candidates `updated_utc`.
+VOLUME (on movers and small-cap rows) confirms participation: prefer a catalyst move
+backed by real/rising volume over a thin pop.
 
 LEADING names are in the funnel because a catalyst is FRESH or PENDING — NOT
 because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this is
@@ -97,9 +118,14 @@ SOURCE 2 — WEB SEARCH, run side-by-side (not just afterward). A good search
 surfaces names, catalysts, and context the mover-lists miss. Run the searches
 below every run regardless of what's in candidates.json.
 
-MERGE + DEDUPE both sources into one pool. Target **150+ candidates** total
-(~136 from FMP + whatever web search adds ≈ ~190 is a good search). A small
-funnel now means something is wrong — note it in latest.md.
+MERGE + DEDUPE both sources into one pool. Target **200+ candidates** total
+(~136 from FMP + whatever web search adds). Breadth is a PRIORITY every run: the more
+names at the top, the better the odds of finding the one early, fresh, asymmetric
+setup. Treat each run as a competition to surface names the last run missed — run the
+extra searches, widen the wording, pull every list. Record your scanned count in the
+funnel tally; a funnel under ~150 means you did not search hard enough — say so in
+latest.md and explain why. A wide funnel + few/zero finalists is a GREAT run; a narrow
+funnel is a failure of effort regardless of how many you pick.
 
 Web searches to run every run (several, in tandem with FMP):
 1. Top % gainers today — market-wide, all US exchanges
@@ -127,6 +153,15 @@ Web searches to run every run (several, in tandem with FMP):
    dates, scheduled investor days / product launches / conference presentations,
    and fresh analyst upgrades or initiations. These pair with the LEADING tags in
    candidates.json — the goal is to be positioned ahead of the move, not after it.
+10. Trading HALTS & resumptions today, and stocks gapping on news (LULD halts often
+   precede the biggest small-cap moves — catch the resume).
+11. Fresh SEC 8-K filings / material news today (new contracts, M&A, offerings —
+   read the sign: a dilutive raise is bearish, a contract win is bullish).
+12. Socially TRENDING / unusual-options-activity tickers (StockTwits trending,
+   Reddit r/wallstreetbets & r/smallstreetbets, unusual call volume) — sentiment
+   discovery, then verify a REAL catalyst before it qualifies.
+13. SYMPATHY / read-through plays — when a leader moves on a theme (a peer's FDA
+   win, a sector contract), search its smaller peers that haven't moved yet.
 
 Tips to maximize breadth:
 - Vary the wording across searches ("biggest gainers today", "top volume stocks",
@@ -135,7 +170,10 @@ Tips to maximize breadth:
   ticker you see, then dedupe.
 - It is FINE (good, even) if many are junk — STEP 2 filters them. The job here is
   raw breadth. A small funnel is a failure of effort, not of the market; only an
-  unusually dead session should land below ~60 candidates.
+  unusually dead session should land below ~150 candidates, and never below ~100.
+- Each run, deliberately try at least one NEW search angle you didn't use last run —
+  keep pushing the top of the funnel wider over time, don't settle into the same
+  handful of queries.
 
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:

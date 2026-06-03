@@ -59,6 +59,11 @@ MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump 
 RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
 CANDIDATES_FILE       = "signals/candidates.json"
 WATCHLIST_FILE        = "signals/watchlist.json"
+# --- paper trading (DRY_RUN): a simulated book so the brain has MEMORY of what it
+#     "owns" (kills the re-pick/averaging-down churn) AND we get a real P/L scorecard. ---
+PAPER_ACCOUNT_FILE    = "signals/paper_account.json"   # simulated cash + positions + closed trades
+PAPER_LEDGER_FILE     = "reports/paper_ledger.md"      # human-readable running P/L log
+PAPER_START_EQUITY    = 400.00                          # starting paper cash (~the real account)
 FMP_BASE              = "https://financialmodelingprep.com/stable"
 # --- leading-signal funnel (proactive: find names BEFORE they run) ---
 EARNINGS_LOOKAHEAD_DAYS = 7     # enrich any candidate reporting within this window
@@ -602,6 +607,8 @@ def is_fresh(generated_utc: str | None) -> bool:
 
 
 def get_positions(client: SchwabClient) -> dict[str, dict]:
+    if DRY_RUN:  # paper book is the source of truth in dry-run (real account untouched)
+        return paper_positions_as_holdings(_PAPER or {})
     out: dict[str, dict] = {}
     try:
         for acct in client.get_accounts(include_positions=True):
@@ -636,6 +643,162 @@ def write_holdings(positions: dict) -> None:
         print(f"(warn) could not write holdings file: {exc}")
 
 
+# ============================ PAPER-TRADING ENGINE ============================
+# Active ONLY in DRY_RUN. Persists a simulated book to PAPER_ACCOUNT_FILE so that
+# holdings.json reflects what the brain "owns" on paper — giving the brain the
+# MEMORY it was missing (it stops re-buying / chasing a name it already holds) —
+# and so we accumulate a real running P/L scorecard in PAPER_LEDGER_FILE.
+_PAPER: dict | None = None   # loaded in main() when DRY_RUN; mutated by buy()/sell()
+
+
+def load_paper_account() -> dict:
+    """Load the simulated book, or initialize a fresh one at PAPER_START_EQUITY."""
+    if os.path.exists(PAPER_ACCOUNT_FILE):
+        try:
+            with open(PAPER_ACCOUNT_FILE, encoding="utf-8") as fh:
+                st = json.load(fh)
+            st.setdefault("cash", PAPER_START_EQUITY)
+            st.setdefault("start_equity", PAPER_START_EQUITY)
+            st.setdefault("positions", {})
+            st.setdefault("realized_pnl", 0.0)
+            st.setdefault("closed_trades", [])
+            return st
+        except Exception as exc:  # noqa: BLE001
+            print(f"(warn) could not read paper account ({exc}) — starting fresh.")
+    return {"cash": PAPER_START_EQUITY, "start_equity": PAPER_START_EQUITY,
+            "positions": {}, "realized_pnl": 0.0, "closed_trades": []}
+
+
+def save_paper_account(state: dict) -> None:
+    state["updated_utc"] = datetime.now(timezone.utc).isoformat()
+    try:
+        os.makedirs(os.path.dirname(PAPER_ACCOUNT_FILE), exist_ok=True)
+        with open(PAPER_ACCOUNT_FILE, "w", encoding="utf-8") as fh:
+            json.dump(state, fh, indent=2)
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not write paper account: {exc}")
+
+
+def paper_positions_as_holdings(state: dict) -> dict:
+    """Shape the paper book like get_positions() output so the rest of main() and
+    write_holdings() treat paper positions exactly like real ones."""
+    return {s: {"qty": p["qty"], "avg": p["entry"]}
+            for s, p in (state.get("positions") or {}).items()}
+
+
+def paper_blocked(state: dict) -> set:
+    """No-rebuy set for paper: a symbol CLOSED within the cooldown window — stops the
+    brain from instantly re-buying a name it just stopped out of (held names are
+    already blocked by the 'already holding' check)."""
+    blocked: set[str] = set()
+    cutoff = datetime.now(timezone.utc) - timedelta(minutes=RECENT_BUY_COOLDOWN_MIN)
+    for t in state.get("closed_trades", []):
+        closed = _parse_dt(t.get("closed_utc"))
+        if closed is not None and closed >= cutoff:
+            blocked.add(t.get("symbol"))
+    return blocked
+
+
+def paper_record_buy(sym: str, qty: int, price: float, tp, sl) -> None:
+    """Simulate a fill: deduct cash, open a position carrying its OWN tp/sl so the
+    bot can manage the exit even after the brain drops the name from orders.json."""
+    if _PAPER is None:
+        return
+    cost = qty * price
+    while qty > 0 and qty * price > _PAPER["cash"]:   # respect available paper cash
+        qty -= 1
+    if qty <= 0:
+        print(f"[{sym}] PAPER: insufficient cash (${_PAPER['cash']:.2f}) — no fill")
+        return
+    cost = qty * price
+    _PAPER["cash"] -= cost
+    _PAPER["positions"][sym] = {
+        "qty": qty, "entry": round(price, 4),
+        "tp": tp, "sl": sl,
+        "opened_utc": datetime.now(timezone.utc).isoformat(),
+    }
+    print(f"[{sym}] PAPER FILL: BUY {qty} @ ${price:.2f} = ${cost:.2f} "
+          f"(cash left ${_PAPER['cash']:.2f})")
+
+
+def paper_record_sell(sym: str, price: float, why: str) -> None:
+    """Simulate a close: credit proceeds, book realized P/L, log the closed trade."""
+    if _PAPER is None:
+        return
+    pos = _PAPER["positions"].pop(sym, None)
+    if not pos:
+        return
+    qty = pos["qty"]
+    proceeds = qty * price
+    pnl = (price - pos["entry"]) * qty
+    pnl_pct = (price / pos["entry"] - 1) * 100 if pos["entry"] else 0.0
+    _PAPER["cash"] += proceeds
+    _PAPER["realized_pnl"] += pnl
+    _PAPER["closed_trades"].append({
+        "symbol": sym, "qty": qty, "entry": round(pos["entry"], 4),
+        "exit": round(price, 4), "pnl": round(pnl, 2), "pnl_pct": round(pnl_pct, 2),
+        "opened_utc": pos.get("opened_utc"),
+        "closed_utc": datetime.now(timezone.utc).isoformat(), "reason": why,
+    })
+    print(f"[{sym}] PAPER CLOSE: SELL {qty} @ ${price:.2f} → P/L ${pnl:+.2f} "
+          f"({pnl_pct:+.1f}%) [{why}]")
+
+
+def write_paper_ledger(state: dict, marks: dict) -> None:
+    """Human-readable running scorecard: open book (mark-to-market), realized P/L,
+    equity vs. start, and the most recent closed trades."""
+    pos = state.get("positions") or {}
+    unreal = 0.0
+    rows = []
+    for s, p in sorted(pos.items()):
+        last = marks.get(s) or p["entry"]
+        u = (last - p["entry"]) * p["qty"]
+        unreal += u
+        rows.append(f"| {s} | {p['qty']} | ${p['entry']:.2f} | ${last:.2f} | "
+                    f"${p.get('tp') or 0:.2f} | ${p.get('sl') or 0:.2f} | ${u:+.2f} |")
+    invested = sum(p["entry"] * p["qty"] for p in pos.values())
+    equity = state["cash"] + sum((marks.get(s) or p["entry"]) * p["qty"]
+                                 for s, p in pos.items())
+    realized = state.get("realized_pnl", 0.0)
+    total_ret = equity - state["start_equity"]
+    closed = state.get("closed_trades", [])
+    wins = [t for t in closed if t.get("pnl", 0) > 0]
+    winrate = (100 * len(wins) / len(closed)) if closed else 0.0
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    lines = [
+        "# Paper-Trading Ledger (DRY_RUN)", "",
+        f"_Updated {now}_", "",
+        f"**Equity:** ${equity:.2f}  (start ${state['start_equity']:.2f}, "
+        f"**{total_ret:+.2f} / {100*total_ret/state['start_equity']:+.1f}%**)  ",
+        f"**Cash:** ${state['cash']:.2f}   **Invested:** ${invested:.2f}   "
+        f"**Open positions:** {len(pos)}  ",
+        f"**Realized P/L:** ${realized:+.2f}   **Unrealized:** ${unreal:+.2f}   "
+        f"**Closed trades:** {len(closed)}   **Win rate:** {winrate:.0f}%", "",
+        "## Open positions", "",
+        "| Symbol | Qty | Entry | Last | TP | SL | Unrealized |",
+        "|--------|-----|-------|------|----|----|------------|",
+    ]
+    lines += rows or ["| _none_ | | | | | | |"]
+    lines += ["", "## Last 15 closed trades", "",
+              "| Symbol | Qty | Entry | Exit | P/L | % | Reason | Closed |",
+              "|--------|-----|-------|------|-----|---|--------|--------|"]
+    for t in closed[-15:][::-1]:
+        lines.append(f"| {t['symbol']} | {t['qty']} | ${t['entry']:.2f} | "
+                     f"${t['exit']:.2f} | ${t['pnl']:+.2f} | {t['pnl_pct']:+.1f}% | "
+                     f"{t.get('reason','')} | {str(t.get('closed_utc',''))[:16]} |")
+    if not closed:
+        lines.append("| _none yet_ | | | | | | | |")
+    try:
+        os.makedirs(os.path.dirname(PAPER_LEDGER_FILE), exist_ok=True)
+        with open(PAPER_LEDGER_FILE, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(lines) + "\n")
+        print(f"Wrote {PAPER_LEDGER_FILE}: equity ${equity:.2f} "
+              f"({total_ret:+.2f}), {len(pos)} open, {len(closed)} closed")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not write paper ledger: {exc}")
+# ========================== END PAPER-TRADING ENGINE =========================
+
+
 def _parse_dt(val):
     if not val:
         return None
@@ -651,6 +814,8 @@ def get_blocked_buy_symbols(client: SchwabClient, account_hash: str) -> tuple[se
     minutes. The cooldown closes the settlement-lag gap where a just-filled buy
     isn't in positions yet, which previously caused double-buys.
     Returns (symbols, ok); ok=False means we couldn't read orders (fail safe)."""
+    if DRY_RUN:  # paper cooldown: don't instantly re-buy a name just closed/stopped
+        return paper_blocked(_PAPER or {}), True
     blocked: set[str] = set()
     open_states = {"WORKING", "PENDING_ACTIVATION", "QUEUED", "ACCEPTED",
                    "AWAITING_PARENT_ORDER", "AWAITING_CONDITION", "NEW",
@@ -743,9 +908,9 @@ def validate_pick(order: dict) -> tuple[bool, str]:
     return True, "ok"
 
 
-def buy(client, acct, sym: str, qty: int, limit: float):
+def buy(client, acct, sym: str, qty: int, limit: float, tp=None, sl=None):
     if DRY_RUN:
-        print(f"[{sym}] DRY-RUN: would BUY {qty} @ ${limit:.2f} = ${qty*limit:.2f}")
+        paper_record_buy(sym, qty, limit, tp, sl)  # simulate the fill into the paper book
         return
     try:
         order = client.create_limit_order(
@@ -760,7 +925,7 @@ def buy(client, acct, sym: str, qty: int, limit: float):
 
 def sell(client, acct, sym: str, qty: int, limit: float, why: str):
     if DRY_RUN:
-        print(f"[{sym}] DRY-RUN: would SELL {qty} @ ${limit:.2f} to close ({why})")
+        paper_record_sell(sym, limit, why)  # simulate the close + book P/L
         return
     try:
         order = client.create_limit_order(
@@ -819,7 +984,8 @@ def watch_triggered(w: dict, q: dict) -> tuple[bool, str]:
 
 
 def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
-              positions: dict, blocked: set, bought: set, q: dict | None = None) -> None:
+              positions: dict, blocked: set, bought: set, q: dict | None = None,
+              tp=None, sl=None) -> None:
     """Shared entry path for BOTH orders.json picks and watchlist triggers: dedupe,
     price off the LIVE ask, enforce the slippage backstop + $65 cap, then buy. The
     watchlist path passes the quote it already pulled (q) to avoid re-quoting."""
@@ -848,13 +1014,18 @@ def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
     if qty <= 0:
         print(f"[{sym}] SKIP — 1 share at ${entry:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap")
         return
-    buy(client, acct, sym, qty, entry)
+    buy(client, acct, sym, qty, entry, tp=tp, sl=sl)
     bought.add(sym)
 
 
 def main() -> int:
-    mode = "DRY-RUN (no real orders)" if DRY_RUN else "LIVE (real orders!)"
+    global _PAPER
+    mode = "DRY-RUN (paper book)" if DRY_RUN else "LIVE (real orders!)"
     print(f"=== Executor | mode: {mode} ===")
+    if DRY_RUN:  # load the simulated book BEFORE get_positions() reads from it
+        _PAPER = load_paper_account()
+        print(f"Paper book: cash ${_PAPER['cash']:.2f}, "
+              f"{len(_PAPER['positions'])} open, realized ${_PAPER['realized_pnl']:+.2f}")
 
     fetch_fmp_candidates()  # refresh the brain's structured candidate universe
     client = get_client()
@@ -883,6 +1054,15 @@ def main() -> int:
             levels[wsym] = {"symbol": wsym, "action": "BUY",
                             "take_profit": w.get("take_profit"),
                             "stop_loss": w.get("stop_loss")}
+
+    # Paper positions carry their OWN entry tp/sl — fall back to them so a held
+    # paper name still exits on target/stop even once the brain stops re-listing it
+    # (the whole point of giving the brain memory: it no longer re-picks held names).
+    if DRY_RUN and _PAPER is not None:
+        for psym, p in _PAPER["positions"].items():
+            if psym not in levels:
+                levels[psym] = {"symbol": psym, "action": "BUY",
+                                "take_profit": p.get("tp"), "stop_loss": p.get("sl")}
 
     # ---- EXITS: manage held positions (sell-to-close on target/stop/brain) ----
     for sym, pos in positions.items():
@@ -935,7 +1115,8 @@ def main() -> int:
             continue
         print(f"[{sym}] watch TRIGGER — {reason}")
         try_enter(client, acct, sym, pick["quantity"], float(pick["limit_price"]),
-                  positions, blocked, bought, q=q)
+                  positions, blocked, bought, q=q,
+                  tp=pick.get("take_profit"), sl=pick.get("stop_loss"))
 
     # B) FRESH BUY picks from orders.json.
     if not fresh:
@@ -950,7 +1131,18 @@ def main() -> int:
                 print(f"[{sym}] SKIP — {why}")
                 continue
             try_enter(client, acct, sym, order["quantity"], float(order["limit_price"]),
-                      positions, blocked, bought)
+                      positions, blocked, bought,
+                      tp=order.get("take_profit"), sl=order.get("stop_loss"))
+
+    # ---- PAPER bookkeeping: mark-to-market, persist the book + running ledger ----
+    if DRY_RUN and _PAPER is not None:
+        marks: dict[str, float] = {}
+        for sym in list(_PAPER["positions"]):
+            last = live_last(quote(client, sym))
+            if last:
+                marks[sym] = last
+        save_paper_account(_PAPER)
+        write_paper_ledger(_PAPER, marks)
 
     print("=== done ===")
     return 0
