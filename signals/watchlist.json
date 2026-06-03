@@ -1,6 +1,17 @@
 {
-  "generated_utc": "2026-06-03T15:09:38Z",
+  "generated_utc": "2026-06-03T15:53:26Z",
   "watch": [
+    {
+      "symbol": "NVTS",
+      "trigger": "pullback",
+      "trigger_price": 26.50,
+      "quantity": 2,
+      "limit_price": 26.75,
+      "take_profit": 36.00,
+      "stop_loss": 23.50,
+      "good_until": "2026-06-07",
+      "note": "Navitas GaN/AI power infra — NVIDIA MGX ecosystem, Q1 2026 beat, analyst upgrades. Up 19% today to $30.80. Wait for pullback to $26.50 for better R:R ~3.7:1 before size. Updated entry level from $28."
+    },
     {
       "symbol": "XOS",
       "trigger": "pullback",
@@ -10,7 +21,7 @@
       "take_profit": 6.50,
       "stop_loss": 3.60,
       "good_until": "2026-06-06",
-      "note": "AI data center Power Hub (2.5MWh, grid-independent) + U.S. Air Force EV charger demo catalyst. Too extended today (+178%, $6.20). Wait for pullback to $4.50; still 2x+ from pre-news levels with ~40% upside to target and ~22% risk. Short expiry — thesis hot but volatile."
+      "note": "Xos EV trucks: Power Hub + Air Force EV demo catalyst. Up +174% today to $6.11, parabolic. Only enter on deep pullback to $4.50 after base forms. Still above trigger — wait."
     },
     {
       "symbol": "HPE",
@@ -21,18 +32,7 @@
       "take_profit": 65.00,
       "stop_loss": 50.00,
       "good_until": "2026-06-08",
-      "note": "Historic Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 growth guide raised to 29-33%. Currently $55.39. Pullback to $54 gives R:R ~2.75:1 with strong AI infrastructure fundamental support."
-    },
-    {
-      "symbol": "QBTS",
-      "trigger": "breakout",
-      "trigger_price": 32.00,
-      "quantity": 2,
-      "limit_price": 32.50,
-      "take_profit": 42.00,
-      "stop_loss": 27.00,
-      "good_until": "2026-06-08",
-      "note": "D-Wave Quantum; quantum sector strong in 2026. MRVL/AI halo driving compute-adjacent plays. Breakout above $32 confirms continuation. Currently not in today's movers list — watching the level."
+      "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised to 29-33%. Currently $55.30 and approaching trigger. Pullback to $54 gives R:R ~2.75:1."
     },
     {
       "symbol": "TISI",
@@ -43,18 +43,7 @@
       "take_profit": 21.50,
       "stop_loss": 16.00,
       "good_until": "2026-06-07",
-      "note": "Team Inc. Q1 2026: revenue +8.3% YoY, Adj EBITDA +45.2%, FY guide raised, insider buying. Currently $17.39. Waiting for clean break above $18 to confirm momentum continuation before committing."
-    },
-    {
-      "symbol": "NVTS",
-      "trigger": "pullback",
-      "trigger_price": 28.00,
-      "quantity": 2,
-      "limit_price": 28.50,
-      "take_profit": 36.00,
-      "stop_loss": 25.50,
-      "good_until": "2026-06-07",
-      "note": "Navitas Semiconductor: NVIDIA MGX ecosystem collaboration announced June 3 — 800 VDC AI infrastructure play. Too extended today (+19.9%, $31.01). Pullback to $28 gives better entry with R:R ~3.2:1. GaNFast tech being showcased at COMPUTEX 2026."
+      "note": "Team Inc. Q1 2026: +8.3% rev YoY, Adj EBITDA +45.2%, FY guide raised, insider buying. Break above $18 confirms momentum."
     },
     {
       "symbol": "SVCO",
@@ -65,7 +54,18 @@
       "take_profit": 16.00,
       "stop_loss": 11.50,
       "good_until": "2026-06-07",
-      "note": "Silvaco Group Q1 2026 earnings beat (rev $17.76M vs $16.76M est, +26% YoY bookings growth, record gross margins). Jefferies upgrade to $14 from $8, Strong Buy average. ITRI strategic partnership. Currently $13.61 after volatile post-earnings session. Pullback to $12.50 near earnings gap support gives better entry."
+      "note": "Silvaco Q1 beat, Jefferies upgrade to $14, ITRI partnership. Pullback to $12.50 near earnings gap support gives better entry than chasing."
+    },
+    {
+      "symbol": "MNKD",
+      "trigger": "breakout",
+      "trigger_price": 3.65,
+      "quantity": 17,
+      "limit_price": 3.70,
+      "take_profit": 5.50,
+      "stop_loss": 3.10,
+      "good_until": "2026-06-07",
+      "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil at $3.42. Only enter on breakout above $3.65 confirming accumulation."
     }
   ]
 }
