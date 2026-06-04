@@ -15,9 +15,11 @@ name: schwab-trader-brain
 
 on:
   schedule:
-    # Twice hourly during US market hours (UTC), offset +5 min from the executor's
-    # :00/:15/:30/:45 so the two routines don't collide (BRAIN.md has a timestamp guard).
-    - cron: '5,35 13-20 * * 1-5'
+    # 3x/hour (~every 20 min) during US market hours (UTC), at :07/:27/:47 so it never
+    # lands on the executor's :00/:15/:30/:45 (BRAIN.md also has a timestamp guard, and
+    # the commit step rebase-retries if both push to main at once). Max-5x has plenty of
+    # headroom for this; dial up/down by editing this one cron line.
+    - cron: '7,27,47 13-20 * * 1-5'
   workflow_dispatch: {}
 
 concurrency:
