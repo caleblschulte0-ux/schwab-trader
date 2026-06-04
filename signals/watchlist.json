@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-04T15:34:52Z",
+  "generated_utc": "2026-06-04T16:43:00Z",
   "watch": [
     {"symbol": "POET", "trigger": "breakout", "trigger_price": 16.50,
      "quantity": 4, "limit_price": 16.75, "take_profit": 20.50, "stop_loss": 14.25,
@@ -15,9 +15,12 @@
      "good_until": "2026-06-07", "note": "Inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil. Only enter on breakout above $3.65 with volume."},
     {"symbol": "GHRS", "trigger": "breakout", "trigger_price": 26.50,
      "quantity": 2, "limit_price": 26.75, "take_profit": 31.00, "stop_loss": 23.50,
-     "good_until": "2026-06-07", "note": "GH Research Phase 2 GH001 data (treatment-resistant + postpartum depression) June 4. Currently at $24.21. Waiting for volume breakout above $26.50 resistance to confirm momentum. Healthcare sector leads today."},
+     "good_until": "2026-06-07", "note": "Phase 2 GH001 data (treatment-resistant + postpartum depression) confirmed today. Stock at ~$24.19 (-1%) — market not yet moving it. Waiting for volume breakout above $26.50 to confirm momentum. Healthcare sector strong."},
     {"symbol": "NTLA", "trigger": "pullback", "trigger_price": 14.50,
      "quantity": 4, "limit_price": 14.60, "take_profit": 18.00, "stop_loss": 13.00,
-     "good_until": "2026-06-07", "note": "Phase 3 data for lonvoguran (in vivo gene editing, HAE) + rolling BLA submission. Healthcare sector hot (+1.12%). Up +17% today at $15.28 — extended now, but catalyst is real and durable. Buy the pullback, not the blow-off."}
+     "good_until": "2026-06-07", "note": "Phase 3 lonvoguran (in vivo gene editing, HAE) + rolling BLA submission. Was up +17% on catalyst day — buy pullback to $14.50 support, not the blow-off candle."},
+    {"symbol": "LASE", "trigger": "pullback", "trigger_price": 3.00,
+     "quantity": 20, "limit_price": 3.05, "take_profit": 4.25, "stop_loss": 2.60,
+     "good_until": "2026-06-07", "note": "Laser Photonics anti-drone laser: MEIA Vulcan DoD program selection + $13.2M Navy follow-on + US special ops evaluation (June 4). Defense drone theme ablaze today (UMPC +57%, KTOS +14%). Currently $3.31, +5.65% on 44M share volume (accumulation pattern). Account fully deployed — enter on pullback to $3.00 consolidation support when cash available. R/R ~2:1 from that level."}
   ]
 }

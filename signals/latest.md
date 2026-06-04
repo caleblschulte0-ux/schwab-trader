@@ -1,115 +1,73 @@
-# Brain Run — 2026-06-04T15:34:52Z
+# Brain Run — 2026-06-04T16:43:00Z
 
-**Funnel:** scanned 275 → 198 fit budget → 24 with catalyst → 4 finalists → picked 1
-
----
-
-## Market Tape (STEP 0)
-
-SPY +0.09%, VIX 15.68 — **tone: neutral**. Tape is essentially flat with no macro urgency in either direction. Normal discipline applies.
-
-Sector rankings today:
-- 🔥 Communication Services: +1.8% — hottest sector
-- 🔥 Financial Services: +1.26%
-- 🔥 Healthcare: +1.12%
-- ❄️ Technology: -0.99%
-- ❄️ Energy: -1.11%
-
-**The big story:** AVGO (Broadcom) down ~14.6% despite a strong Q2 beat (revenue $22.2B +48% YoY, AI revenue $10.8B +143% YoY). Market sold the Q3 AI guide: $16B actual vs $17.2B consensus. Management held full-year AI at $100B without raising it. Classic "sell the guide" reaction dragging semis broadly (SOXL -8.9%, MU -7.6%). No contagion to the broader market — health and comms are running just fine.
-
-Tilt: favor Communication Services and Healthcare; skeptical of tech/semi longs today.
+**Funnel:** scanned 260 → 190 fit budget → 30 with catalyst → 2 finalists → picked 0
 
 ---
 
-## Funnel Detail
+## Market Tape
+SPY +0.22%, VIX 15.55 → **neutral** tone. Tape improved slightly since prior run (was +0.09%). Hot sectors: Communication Services (+2.3%), Financials (+1.29%), Healthcare (+0.88%), Technology (+0.64%). Weak: Consumer Defensive (−0.55%), Utilities (−1.35%). Broad market near highs; AI semis dragging (AVGO −14.6% on sell-the-news despite earnings beat). Semis are the one clear headwind — no contagion to the rest of the market.
 
-**SOURCE 1 — candidates.json**: 241 candidates (139 movers, 78 news_smallcap, 25 news_bullish, 2 earnings_soon). Data as of 15:07 UTC.
-
-**SOURCE 2 — Web research** (13 searches, 4 parallel agents): ~34 additional distinct names from movers lists, social trending, defense contracts, earnings, and unusual options. Adds: AMC (+22% May attendance), NBIS (Nebius Group StockTwits trending), SR/TGB (unusual options), DVLT/ASST/LAES/VERI/NMRA (small-cap screeners).
-
-**Total scanned: ~275 names.**
-
-Sub-$2 floor auto-eliminated (no exceptions): BGM, ARCLR, CXAI, MEHA, BURU, GMM, NOTV, PRPH, RIBBR, SBEV, SCAG, SNBR, SOAR, SRXH, YYGH, ZCMD, ADTX, VRAX, KIDZ, NXXT, JZ, PMI + others.
+Tilt: still favor Communication Services and Healthcare; avoid semi/AVGO-linked plays.
 
 ---
 
-## Names Examined and Passed
+## Why No New Orders — Account Fully Deployed
 
-**Parabolic blow-offs (hard pass):**
-STI +448%, WXM +132%, EDHL/FOXX +105-107%, NEXR +87%, RIBBR +82%, CXAI +82%, TWAV +50%, HCAT +51%, SPRC +35% — all extreme intraday moves with no room left.
-
-**Extended (>15-17%, deprioritized):**
-- **NTLA (Intellia Therapeutics) +17.4%** — Real catalyst: Phase 3 lonvoguran data (first Phase 3 in vivo gene editing) + rolling BLA for HAE. Healthcare hot. Excellent catalyst, but extended today. → **Watchlist pullback at $14.50**
-- **ABSI (Absci) +18.2%** — AI drug discovery, no specific catalyst. Extended.
-- **DNA (Ginkgo Bioworks) +19%** — No fresh catalyst. Extended.
-- **OSCR (Oscar Health) +14.6%** — New board chair (Siddhartha Sankaran, June 4) + reaffirmed guidance. Healthcare sector. Was on watchlist as breakout at $23.50; it's hit and run. Removed from watchlist — governance catalyst is thin, move is done.
-
-**Real catalyst, passed for specific reasons:**
-
-**CTRN (Citi Trends) — FINALIST, narrow miss**
-$48.87, up ~6.6%. Catalyst: MASSIVE Q1 2026 earnings beat — EPS $0.91 vs $0.24 expected (279% beat!), comparable store sales +13.9%, revenue +14.4% to $230.9M, guidance reaffirmed. Strongest fundamental catalyst of the day. **Pass reason:** Earnings announced June 2 (2 days ago — borderline stale at the ~48h rule boundary). The initial earnings gap has been digested. Would be the #1 pick if reported today.
-
-**GRRR (Gorilla Technology) — FINALIST, passed**
-$18.42, up 0.72%. $2B AI infrastructure deal with Super Micro for India's Yotta project. **Pass reasons:** (1) Announced June 2 — 2 days old, stale. (2) $107M notes offering is dilutive. (3) Market has processed the news and is barely moved despite the large headline number. Market unmoved on 2-day-old news = priced in or skeptical.
-
-**JFB (JFB Construction Holdings) — FINALIST, uncertain connection**
-$5.727, up 1.5%, $87.8M cap. Reports XTEND selection for DoD $1B Drone Dominance Program Phase II (targeting 200,000+ drones by 2027). Intriguing asymmetric setup if JFB is XTEND's public vehicle. **Pass reason:** JFB's exact corporate relationship to XTEND is unverified — entering on potentially misattributed catalyst is too risky. Worth watching if relationship is confirmed.
-
-**DXC Technology +5.3%**
-$9.63. Multi-year Nordic insurance AI deal. Real enterprise contract but: (1) tech sector down -0.99% today, (2) IT services/mainframe migration is commodity, not high-multiple. Sector headwind too strong for a ho-hum IT services play.
-
-**GENI (Genius Sports) +7.9%**
-$6.355. Stifel reiterated Hold at $5 target — stock trading above analyst's target. Hard pass on a Hold at a lower price.
-
-**SNAP +7.7%**
-$6.17. Communications sector strength (+1.8%) but no identifiable specific catalyst. Momentum without a named reason is sector chasing. Pass.
-
-**HOVR (Horizon Aircraft) +6.5%**
-$2.555. Senior engineer hire (38-year Bombardier/Vertical Aerospace vet). Real talent signal but not an asymmetric catalyst for a no-revenue eVTOL company.
+Holdings total ~$396 cost-basis across 7 positions on a ~$400 account. No available powder for a new $65 position. **This is not a "nothing to buy" run — two genuinely good setups exist (LASE, SNAP) and have been tracked on the watchlist for when positions turn over.**
 
 ---
 
-## THE PICK
+## Finalists Considered (Not Picked — No Cash)
 
-### BUY: GOGO (Gogo Inc.) — 15 shares @ $4.13 limit
+### LASE (Laser Photonics) — Finalist #1 ⭐
+**Catalyst (FRESH today):** "Laser Photonics anti-drone laser pitched to US special ops and allies" — published 2026-06-04T13:08Z (~3 hours old at run time). This is day 2 of a multi-name defense story: MEIA Vulcan DoD program selection + $13.2M US Navy follow-on order (June 3), now extended to US special operations evaluation.
 
-**Catalyst:** Gogo's SD Government subsidiary secured a $7.5M multi-year NOAA contract to provide L-Band SATCOM, ground infrastructure, and cybersecurity for NOAA's Hurricane Hunter aircraft fleet. Confirmed via GlobeNewswire/Business Wire press release — published 2026-06-04T11:10:24Z (~4 hours fresh at run time). Real, recurring, government revenue. NOAA contracts also serve as references for further federal aviation connectivity work.
+- **Catalyst age:** 3 hours on today's new development (special-ops pitch). Original Navy/Vulcan news was June 3 (~28 hrs) but today's angle is a genuine NEW development — clock resets.
+- **Price/volume:** $3.307, +5.65% today. Volume: **44M shares** on a $128M market cap — extraordinary. Consolidating modestly on massive volume = accumulation pattern, NOT distribution.
+- **Defense drone theme:** UMPC +57% (named Pentagon $1.1B Drone Dominance funding recipient), KTOS +13.8%, JFB +20% spike on prior news. Theme is as hot as it gets today.
+- **Why not picked:** Account fully deployed. Ideal entry would be 19 shares × $3.35 = $63.65, TP $4.25, SL $2.90 (R/R ~2:1). Added to watchlist for pullback to $3.00 support.
+- **Stage note:** Day 2 of a multi-day run creates extension risk, but intraday the +5.65% consolidation on 44M shares is an accumulation signal. Not blown off yet.
 
-**Catalyst age:** 4 hours — ideal. Fresh enough to have room, old enough to confirm it's not noise.
+### SNAP (Snap Inc.) — Finalist #2
+Communication Services sector is today's leader (+2.3%). SNAP at $6.095, +6.37%. Active list. No stock-specific catalyst identified — pure sector rotation momentum. Lower priority without a named catalyst. Also no cash.
 
-**Sector alignment:** Communication Services — hottest sector today at +1.8%. The broad tailwind is real and confirms this isn't fighting the tape.
+---
 
-**Stage:** Up ~5% from prior close (~$3.93 → $4.125). Early in the move. Not chasing — buying the base of what could be a multi-day government contract story as it gets picked up by broader media and analyst coverage.
+## Names Passed and Why
 
-**Sizing:** 15 shares × $4.13 = $61.95 ✓ (under $65 cap)
-
-**Levels (from this setup's own structure):**
-- Entry: $4.13 (limit, near current market)
-- Take profit: $4.85 (+17.4%) — prior swing resistance level; reasonable target for a verified government contract catalyst in a hot sector
-- Stop loss: $3.75 (−9.2%) — below prior day close (~$3.93), below the NOAA announcement support; clear invalidation if the move fails
-
-**R/R:** ~1.9:1 (72c gain vs 38c risk). Acceptable for defined-catalyst setup.
-
-**Cash note:** Account appears near full deployment (~$396/$400 from prior run). Bot will execute only if paper cash is available (e.g., if prior positions were partially closed by their tp/sl between runs).
+- **GRRR (Gorilla Technology, $18.72, +2.3%):** $2B Super Micro India AI deal sounds huge, but came bundled with a dilutive $107M shelf registration — explains why the stock is barely up. Overhang = pass.
+- **JFB ($5.68, +0.71%):** DoD Drone Dominance Phase II — real defense catalyst. BUT original XTEND selection broke June 2 (2 days ago) per web research. Stock has barely responded. Stale price action on aging catalyst = pass.
+- **HOVR ($2.52, +5.0%):** Senior engineer hire (Bombardier/Vertical Aerospace vet). Talent catalyst, not a product/funding event. Too thin.
+- **GOGO ($4.195, +6.7%):** Picked in prior run (orders.json 15:34Z) — not re-picking per anti-fixation rules. BUY pending/filling.
+- **AGL (+16.7%, $96.47):** Healthcare gainer but $96/share = over $65 budget. Skip.
+- **AVGO (−14.6%, $409):** Beat + raised guide but selling on AI-slowdown fears. Puts would cost far over $100 premium cap. Can't trade either direction.
+- **EDHL/FOXX/STI:** Chinese micro-cap blow-offs (STI +410%) — no identifiable real catalysts, extreme extension. Hard pass.
+- **CLNE ($2.013):** Right at the $2/share price floor. Too risky.
+- **UMPC:** Up 57% on day — blown off. Watchlist for pullback only.
+- **HCAT ($1.895):** Below $2 price floor. Eliminated.
+- **BGM/ARCLR/CXAI/WOK/NXXT:** Sub-$2 or sub-$1 — eliminated.
 
 ---
 
 ## Holdings Review
 
-All 7 positions reviewed — no thesis breaks. No manual SELLs issued.
+All 7 positions intact. No thesis breaks identified. No manual SELLs issued.
 
-- **TLYS** ($5.16, avg $4.84): Down from last session's $5.30 but still +6.6% from avg and above stop $4.20. Q1 earnings-driven move intact. HOLD, let run to $6.20 TP.
-- **NVTS** ($30.35, avg $29.25): Hit $34.17 intraday high as Nvidia showcased Navitas power delivery boards. Back to $30.35 but far above avg and well above $27.00 stop. GaN power thesis is validating. HOLD.
-- **DRTS** ($10.64, avg $10.52): Form 144 filing is a routine insider sale notice, not a negative development. Flat from avg. HOLD.
-- **HPE** (avg $53.57): Trading up after Q2 earnings per web research (specific data unavailable in feed). HOLD.
-- **NVGS, SLDB, TISI**: No price data or news this run. HOLD by default — no thesis breaks identified.
+- **TLYS** (12 @ $4.84, TP $6.20, SL $4.20): Currently $5.195 (+7.3% unrealized, +$4.26). Running strong — Q1 momentum intact. Hold.
+- **HPE** (1 @ $53.57): Confirmed trading up post Q2 earnings beat + raised FY2026 guidance (web-sourced). Estimated ~$57+ today. Best fundamental hold in book. Hold.
+- **NVTS** (2 @ $29.25, TP $37.00, SL $27.00): Currently $30.60 (+4.6% unrealized, +$2.70). Tech sector soft today but NVTS holding well above stop. Hold.
+- **DRTS** (6 @ $10.52, TP $13.50, SL $9.00): Currently ~$10.75 (+2.2%, +$1.38). Form 144 filing (insider registering shares for potential sale) appeared today — routine, not a thesis break. Hold.
+- **NVGS, SLDB, TISI:** Not in today's active movers; prices unavailable. No adverse news found in web research. Hold by default.
+- **GOGO (pending):** Prior run BUY at $4.13 / TP $4.85 / SL $3.75. Currently ~$4.20. Not yet in holdings.json — order pending or filling.
 
 ---
 
-## Watchlist Changes
+## Sector / Theme Notes
+- **Defense/drone:** Hottest theme today. Multi-name confirmation: LASE, UMPC, KTOS, JFB all moving on Pentagon drone spending. Multi-day, potentially multi-week tailwind.
+- **Semis/AI:** AVGO dragging broadly. SOXL −8.8%. NVDA holding (+1.3%). Avoid new semi longs until AVGO selling exhausts.
+- **Communication Services:** SNAP +6.4%, BB +4.1%, sector ETF (XLC equivalent) leading. Mostly sector rotation; GOGO holds the specific government-contract edge within the theme.
+- **Healthcare:** GHRS Phase 2 GH001 data out today — stock down ~1%, NOT breaking out above $26.50 watchlist trigger. Watching for a delayed move. NTLA (lonvoguran/HAE BLA) remains watchlist pullback.
 
-- **GOGO** removed (entering directly via orders.json)
-- **OSCR** removed (move ran, governance catalyst is thin, extended)
-- **NTLA** added — pullback to $14.50 (Phase 3/BLA catalyst is durable; buy the dip)
-- **POET, DOCU, SVCO, MNKD, GHRS** carried forward unchanged
-- **DOCU** (good_until 2026-06-05): Reports earnings tonight AH. Breakout entry at $57 if it beats cleanly.
+---
+
+*Next run priority: Enter LASE on pullback to ~$3.00 if any position exits and frees cash. Watch DOCU post-earnings gap tonight.*
