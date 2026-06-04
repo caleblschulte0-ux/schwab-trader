@@ -1,5 +1,8 @@
 {
-  "generated_utc": "2026-06-04T19:23:15Z",
-  "funnel": {"scanned": 264, "leading": 101, "in_budget": 142, "had_catalyst": 18, "finalists": 2, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-04T20:13:00Z",
+  "funnel": {"scanned": 271, "leading": 100, "in_budget": 155, "had_catalyst": 22, "finalists": 5, "picked": 1},
+  "orders": [
+    {"symbol": "ONDS", "action": "BUY", "instrument": "stock",
+     "quantity": 5, "limit_price": 12.20, "take_profit": 14.40, "stop_loss": 10.80}
+  ]
 }

@@ -1,75 +1,105 @@
-# End-of-Day Report — 2026-06-03
+# End-of-Day Report — 2026-06-04
 
-**Generated:** 2026-06-03T22:39:47Z  
+**Generated:** 2026-06-04T20:13:00Z  
 **Account:** ~$400 capital | Cash account (T+1 settlement)  
-**Market close:** SPY -0.70% | VIX 16.06 | Energy (+2.43%) and Healthcare (+2.20%) led; Tech (-0.56%) and Financials (-1.16%) lagged
+**Market close:** SPY +0.47% | VIX 15.35 | Communication Services (+2.49%), Financials (+1.42%), Tech (+1.36%) led; Consumer Defensive (-0.9%), Utilities (-0.67%) lagged
 
 ---
 
 ## Realized P&L
-**$0.00** — `holdings.json` was empty at final account sync (22:17 UTC). No positions were held at day's end.
+**$0.00** — All 8 positions opened today are still held at close. No exits were triggered.
+
+## Unrealized P&L at Close (Est.)
+
+| Symbol | Qty | Avg Entry | Close (est.) | Unrealized $ |
+|--------|-----|-----------|--------------|--------------|
+| DRTS   | 6   | $10.52    | $10.40       | -$0.72       |
+| HPE    | 1   | $53.57    | ~$48.00      | ~-$5.57      |
+| JFB    | 11  | $5.79     | $5.74        | -$0.55       |
+| NVGS   | 2   | $23.55    | n/a          | —            |
+| NVTS   | 2   | $29.25    | $31.35       | +$4.20       |
+| SLDB   | 9   | $6.86     | n/a          | —            |
+| TISI   | 3   | $18.09    | ~$18.14      | +$0.15       |
+| TLYS   | 12  | $4.84     | ~$5.90       | ~+$12.72     |
+| **Total (visible)** | | | | **~+$10.23** |
+
+NVGS and SLDB not in today's FMP mover feeds; no adverse news; prices unknown.
 
 ---
 
 ## Session Summary
 
-June 3 was a sector-rotation session: energy at $95/barrel WTI and healthcare/biotech catalysts drove the outperformers while tech names gave back gains. Total names scanned across all runs today: ~264 in the final run (249 FMP candidates + ~15 from web searches); earlier runs covered ~218 (15:53Z run). Estimated 12–15 brain runs ran across the day at ~30-min intervals.
+June 4 was a **sector-rotation day** with a risk_on close. The biggest story: Pentagon $1.1B drone dominance funding announcement drove defense/drone names violently higher (UMAC +57%, KTOS +14%, RTX +3.3%). At the same time, AVGO -11% on a Q3 AI guidance miss ($16B vs $17.2B consensus) — a classic sell-the-news reaction despite record AI revenue growth of 143% YoY. Healthcare caught a bid on softer-than-expected medical cost trends (HUM/UNH/CI/CVS each +4-6%).
 
-The dominant story of the day — from a process perspective — was **anti-chase failure on KYTX**. Per BRAIN.md's explicit example, the brain re-picked KYTX in 11 of 15 runs today, repeatedly writing BUY orders at $8.05 even as the stock traded flat to slightly lower at $7.83. This is the exact pattern (lowering implied entry to chase a falling name) the guardrail was written to prevent. KYTX has been added as a **hard-banned symbol** in BRAIN.md and will not be re-picked this session.
-
----
-
-## Brain Picks — June 3 Track Record
-
-### Picks from 15:53Z run (last confirmed pre-close run)
-
-| Symbol | Limit | SL | TP | Close | Fill Status | Hypo P&L |
-|--------|-------|----|----|-------|-------------|----------|
-| KYTX | $8.05 | $7.00 | $11.00 | $7.83 | Likely unfilled (stock below limit) | $0 |
-| FJET | $8.70 | $7.80 | $11.00 | N/A (not in FMP data) | Unknown | N/A |
-| DOCU | $55.50 | $50.50 | $62.00 | ~$54.95 | Possibly filled near ask ~$55.00; holdings empty = not held overnight | ~$0 to -$0.05 |
-
-**KYTX:** The $8.05 limit order was likely never filled — KYTX closed at $7.83 (-0.9% today), meaning the live ask at time of order was probably $7.85–$7.90, well below the $8.05 brain limit. Because the bot uses the live ask (≤ limit × 1.05), it would have attempted to buy at ~$7.87. However holdings is empty, suggesting either (a) the 60-min re-buy guard blocked the fill because a prior KYTX order was still active, or (b) the paper account had a fill that immediately auto-exited. Either way, no damage.
-
-**FJET (Starfighters Space):** Price data unavailable in FMP candidates. The Russell 3000 index inclusion catalyst remains valid (passive flows ahead of reconstitution date). If filed at $8.70 and price was stable, minimal impact.
-
-**DOCU:** Closed ~$54.95. If bot filled at the live ask (~$55.00) at 16:08 ET and held to close, P&L ≈ -$0.05 (1 share). Holdings empty at 22:17 UTC = auto-exited or not filled. DOCU reports Q1 FY2027 earnings tonight/June 4 (consensus: EPS $0.99, rev $824M).
+Total names scanned today: ~271 in the final run (238 FMP + ~33 web). Earlier runs likely covered 200-250 similar names. Brain issued one order this run (ONDS BUY pending for tomorrow morning).
 
 ---
 
-## Notable Movers That the Brain Was Right to Pass (or Wrong to Pass)
+## Track Record — June 4 Picks
 
-| Symbol | % Move | Brain Call | Outcome |
-|--------|--------|------------|---------|
-| LASE | +29–70% | PASS (blow-off) | Correct — parabolic single-day move, defense hype only; likely to retrace |
-| KYTX | -0.9% | BANNED (anti-chase) | Correct — stock fell, 11× picks at $8.05+ while stock at $7.83 = clear chase trap |
-| XOS | +234% | PASS (blow-off) | Correct — near-vertical, no sustainable catalyst at that level |
-| NVTS | +19% | PASS / WATCHLIST | Reasonable — 262% YTD + 19% today is extended; COMPUTEX event still live |
-| TATT | +6.6% | PICKED for Jun 4 open | Execution pending — real $45M MRO contract win, early stage |
-| QMCO | +27% | PASS (dilutive PP) | TBD — $100M PP at $9.42 vs $16 market; dilution risk is real |
-| PVLA | +8.6% | PASS (over budget) | Correct on process; FDA pre-NDA completion is a genuine milestone |
+### Carryforward from June 3 watchlist
+
+| Symbol | Setup | Trigger/Entry | Outcome |
+|--------|-------|---------------|---------|
+| TATT   | $45M MRO contracts + $4M gain | BUY @ ~$43.20 | Not in holdings — did not fill or auto-exited early |
+| DOCU   | Q1 FY2027 earnings beat | Breakout > $57 | Not triggered yet — earnings after close tonight; watchlist still active |
+| NVTS   | NVIDIA MGX COMPUTEX | Pullback ≤ $27 (watchlist) | Overridden — brain issued direct BUY; filled at $29.25 |
+| HPE    | Q2 beat + AI server re-rating | Pullback ≤ $54 | Filled: $53.57. Close ~$48. Unrealized -$5.57. Q2 beat confirmed; stock below entry |
+| TISI   | Q1 beat, insider buying | Breakout > $18 | Filled: $18.09. Close ~$18.14. Unrealized +$0.15. Thesis intact |
+| MNKD   | Inhaled IPF trial coil | Breakout > $3.65 | Not triggered; watchlist active for June 4–9 |
+
+### June 4 new picks (across the day's runs)
+
+| Symbol | Entry | Catalyst | Close | Unrealized |
+|--------|-------|----------|-------|------------|
+| DRTS   | $10.52 | ASCO pancreatic data + Tolmar partnership | $10.40 | -$0.72 |
+| JFB    | $5.79  | DoD Drone Dominance Phase II selection | $5.74  | -$0.55 |
+| NVGS   | $23.55 | LPG shipping Q1 beat, dividend | n/a    | — |
+| NVTS   | $29.25 | NVIDIA MGX 800VDC partnership (COMPUTEX) | $31.35 | +$4.20 |
+| SLDB   | $6.86  | Goldman Sachs HC Conference June 8 catalyst | n/a  | — |
+| TLYS   | $4.84  | Q1 turnaround: comp +22.9%, margin +910bps | ~$5.90 | ~+$12.72 |
+| ONDS   | pending $12.20 | Mistral Army drones ($982M program), Pentagon $1.1B drone news | — | — |
+
+---
+
+## Notable Movers Brain Correctly Passed
+
+| Symbol | % Move | Reason Passed | Assessment |
+|--------|--------|---------------|------------|
+| VERU   | +112%  | Near-vertical blow-off; Novo Nordisk GLP-1 deal is real but move was parabolic | ✓ Correct — these often retrace 30-50% next session |
+| STI    | +291%  | Space battery announcement, pure blow-off | ✓ Correct |
+| FOXX   | +89%   | Blow-off, no actionable entry | ✓ Correct |
+| SDOT   | +86%   | Same | ✓ Correct |
+| AVGO   | -11%   | Guidance miss; puts would have been late-entry chasing | ✓ Correct to pass |
+| UMAC   | +57%   | In drone/defense sector; not in candidates; missed the early entry | ✗ Missed — UMAC was the biggest winner in the theme picked via ONDS |
+
+**UMAC note:** UMAC was the #1 drone move (+57%) but was not in the FMP candidates feed. ONDS was the closest proxy available. The real lesson: drone/defense theme was surfaced early in web search; if UMAC had been in the candidates list at <+10%, it would have been the pick over ONDS.
 
 ---
 
 ## Key Lessons / Notes
 
-1. **Anti-chase is the #1 rule.** KYTX being re-ordered 11 times at the same/higher price while the stock sat below the limit is the single worst habit in this strategy. BRAIN.md's new guardrail correctly calls this out. A name that hasn't moved toward your target in multiple runs is signaling it's not ready — move on.
+1. **Drone/defense sector was the day's clear winner.** The Pentagon $1.1B drone dominance news drove massive sector moves (UMAC +57%, KTOS +14%). JFB (already held) and ONDS (ordered today) are the best available proxies given budget constraints. JFB's Phase II selection from last week was actually the SAME program — the brain correctly identified this catalyst before today's rally; position already owned.
 
-2. **Wide funnel still matters.** The 22:39Z run scanned 264 candidates across 13 search categories and web searches. Even with all that coverage, only 1 setup (TATT) cleared the quality bar. A wide funnel that yields 1 great pick is correct — forcing 3 mediocre picks would be worse.
+2. **TLYS earnings beat is proving out the turnaround thesis.** +22.9% comp sales, +910bps gross margin — this is not noise. Close ~$5.90 vs $4.84 entry is +22% unrealized. Watch take-profit at $6.20.
 
-3. **Energy sector was the day's winner** (+2.43%), yet most individual energy small-caps in the candidates were flat or down (KOS +0.5%, OBE -0.85%, NVGS -1.6%). Hot sector doesn't guarantee every name in it runs — you still need a specific catalyst.
+3. **HPE below entry despite Q2 beat:** Possible explanation — the "beat" was already partially priced in after pre-earnings guidance. Stock at ~$48 vs $53.57 entry means the brain may have entered too late (post-pop rather than pre-catalyst). Lesson: the June 3 watchlist entry was at "pullback ≤ $54" which triggered at $53.57 — but the gap-up was already done by then, leaving the position above current market.
 
-4. **DOCU earnings tonight (June 4):** Consensus EPS $0.99 (+10% YoY), revenue $824M (+8% YoY). Watchlist breakout entry at $57 — bot will enter automatically if the gap confirms a beat. Hold consensus from 22 analysts means the stock needs to actually beat to gap up.
+4. **DRTS two-for-two catalyst week:** ASCO pancreatic data (17.1-month OS vs 4-7 historical) + Tolmar manufacturing partnership ($15M + $20M equity at premium). Stock barely reacted (+/-1%). Alpha-radiation therapy requires time for clinical community to digest; expect re-rating over days/weeks, not hours.
+
+5. **TATT miss:** Did not fill or auto-exited. $43.20 buy for aviation MRO catalyst. Outcome unclear; holdings empty suggests something went wrong. Not holding this position.
 
 ---
 
-## Carry-Forward Watchlist (for 2026-06-04 Pre-Market)
+## Carry-Forward Watchlist (for 2026-06-05 Pre-Market)
 
 | Symbol | Setup | Trigger | Good Until |
 |--------|-------|---------|------------|
-| TATT | $45M MRO contracts + $4M one-time gain; aviation aerospace | BUY @ market open ~$43.20 | Active |
-| DOCU | Q1 FY2027 earnings; enter ONLY on strong beat gap | Breakout > $57.00 | Jun 5 |
-| NVTS | NVIDIA MGX / COMPUTEX; buy pullback after event-driven run | Pullback ≤ $27.00 | Jun 7 |
-| HPE | Q2 beat; AI server re-rating | Pullback ≤ $54.00 | Jun 8 |
-| TISI | Q1 beat, insider buying | Breakout > $18.00 | Jun 7 |
-| MNKD | Inhaled IPF global trial; pre-catalyst coil | Breakout > $3.65 | Jun 7 |
+| DOCU   | Q1 FY2027 earnings tonight; enter on beat gap | Breakout > $57.00 | Jun 6 |
+| LASE   | DoD MEIA Vulcan LSAD anti-drone selection | Pullback ≤ $3.00 | Jun 7 |
+| GHRS   | Phase 2b TRD primary endpoint met; CINP conference Jun 26-29 | Breakout > $26.50 | Jun 9 |
+| MNKD   | FDA pediatric Afrezza approval + FUROSCIX PDUFA Jul 26 | Breakout > $3.65 | Jun 9 |
+| RXRX   | Q1 beat + AI drug discovery pipeline | Pullback ≤ $3.50 | Jun 9 |
+| PLSE   | Canaccord Genuity Buy/$32 PT initiation (today) | Pullback ≤ $25.50 | Jun 7 |
+| NTLA   | Phase 3 lonvoguran HAE + rolling BLA | Pullback ≤ $14.50 | Jun 9 |
+| SVCO   | Q1 beat + Jefferies upgrade | Pullback ≤ $12.50 | Jun 7 |

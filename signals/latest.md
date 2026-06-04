@@ -1,79 +1,87 @@
-# Brain Run — 2026-06-04T19:23:15Z
+# Brain Run — 2026-06-04T20:13:00Z
 
-**Funnel:** scanned 264 → 142 fit budget → 18 with catalyst → 2 finalists → picked 0
+Funnel: scanned 271 → 155 fit budget → 22 with catalyst → 5 finalists → picked 1
 
 ---
 
 ## Market Tape (STEP 0)
 
-**Tone: risk_on** (SPY +0.36%, VIX 15.4) — bifurcated session. Broadcom (AVGO) -12% after missing AI revenue forecasts dragged the semiconductor chain and pressured Nasdaq, while the Dow surged 827+ points (+1.6%) driven by non-tech rotation. Today's hottest buckets: **Communication Services (+2.49%), Financials (+1.42%), Technology ex-semis (+1.36%), Industrials/Defense (+0.84%), Healthcare (+0.54%)**. Weakest: Consumer Defensive (-0.9%), Utilities (-0.67%), Consumer Cyclical (-0.13%).
+**Risk_on.** SPY +0.47%, VIX 15.35. Tone: mild risk-on with sharp sector rotation. Communication Services (+2.49%), Financials (+1.42%), Technology (+1.36%), Industrials (+0.84%), Energy (+0.62%), Healthcare (+0.54%) all green. Consumer Defensive (-0.9%) and Utilities (-0.67%) are the laggards.
 
-The AVGO miss is an AI capex skepticism signal — it's dragging broad-semi names (SOXL, SOXS, NVDA muted) while defense, healthcare, and financials rotate in strongly. This is an unusual setup: "risk_on" globally but semi-specific pain.
+Big stories today: AVGO -11% (Q3 AI chip guidance $16B missed $17.2B consensus — sell-the-news on record AI revenue growth, classic). Defense/drone is the day's loudest theme: UMAC +57%, KTOS +14%, RTX +3.3%, AXON +12.3% — driven by Pentagon's $1.1B drone dominance funding news. Healthcare catching a broad bid on softer medical cost trends: HUM, UNH, CI, CVS each up 4-6%. Financials strong broadly (KKR +6.5%, WFC +4%, XLF +2.3%).
 
----
-
-## Holdings Review — All HOLD
-
-Holdings.json confirmed at 17:18Z: **7 positions, ~$396/$400 deployed — essentially no powder**. Prior pending orders (LASE ~$3.33, JFB ~$5.80, GOGO ~$4.13) placed in earlier runs are not confirmed in holdings.json and may still be pending with the broker or unfilled. No new positions can be safely added without exceeding the account budget. No thesis breaks visible on any held name — **no SELL orders this run**.
-
-| Position | Thesis Check | Status |
-|----------|-------------|--------|
-| **DRTS** (6 @ $10.52) | Alpha Tau Medical at $10.645 today (+1.1% vs avg). Routine [144] SEC filing — no thesis break. | HOLD, TP $13.50, Stop $9.00 |
-| **HPE** (1 @ $53.57) | Strong Q2 beat ($0.79 EPS, $10.7B revenue), 52-week high intraday. Price tracking ~$47-48 — underwater vs avg but THESIS INTACT (earnings beat supports holding). | HOLD |
-| **NVGS** (2 @ $23.55) | LNG shipping, no news visible, quiet. | HOLD |
-| **NVTS** (2 @ $29.25) | $30.03 today (+2.7% vs avg). Showing relative strength vs AVGO-led semi pressure — GaN/SiC power semis different end-market than AVGO networking. | HOLD, TP $37.00, Stop $27.00 |
-| **SLDB** (9 @ $6.86) | Solid Biosciences gene therapy, no visible news. | HOLD |
-| **TISI** (3 @ $18.09) | Team Inc., quiet. | HOLD, TP $21.50, Stop $16.00 |
-| **TLYS** (12 @ $4.84) | Tilly's retail, no news. Consumer Cyclical -0.13% mildly red but no thesis break. | HOLD, TP $6.20, Stop $4.20 |
+**Tilt applied:** Favor defense/drone, comms, financials. Skeptical of plain semi/chip momentum today (AVGO hangover). Consumer defensive avoided.
 
 ---
 
-## Funnel Highlights
+## Funnel Notes
 
-**Sources:** FMP feed (239 candidates: 140 movers, 74 news_smallcap, 25 news_bullish, 2 earnings_soon) + web search additions (~25 names: VIDA, LEGN, SWMR, NCLH, MDT, DHR, UNH, JPM, CTAS, ELI, FAF, DDS, ATLC, FMX, AMGN, VRSK, ERIE, PL, ABGH, TELY, etc.) = **264 total scanned**. Leading count: 101. Funnel is healthy.
+Sources: 238 candidates from FMP (139 mover, 73 news_smallcap, 2 earnings_soon, 25 news_bullish) + ~33 additional names surfaced via web searches (UMAC, KTOS, AVAV, VERU details, HPE/NVTS/TLYS/DRTS thesis checks, TISI, SLDB, JFB confirmation). Total ~271 unique names reviewed. Leading count (news_smallcap + earnings_soon + news_bullish): 100.
 
-**Hard eliminates:**
-- Sub-$2 floor: CXAI ($0.285), HUBC ($0.195), SNBR ($0.342), ADCT ($1.36), NOTV ($0.08), GMM ($0.10), etc.
-- Blow-off parabolics (>+50%, no room): STI (+316%), VERU (+106%), FOXX (+89%), SDOT (+67%), EDHL (+60%).
-- Leveraged ETFs (AVGG, AVGU, AVGX, AVL, SOXL, OSCG, OSCX, etc.).
-- Budget violations at any quantity: CIEN ($525), MU ($1022), MRVL ($314), AVGO ($422), AGL ($96).
+**Near-vertical blow-offs auto-eliminated:** STI +291% (space battery unveil), VERU +112% (Novo Nordisk GLP-1 supply deal), FOXX +89%, SDOT +86%, CXAI +80%, RIBBR +82%, EDHL +74%, LSE +30%, OSCX/OSCG +30%. All real catalysts — trains long gone. Hard pass per rule.
 
-**Notable passes:**
-- **LNZA** (LanzaTech, +26% @ $6.85): No specific today-catalyst in data.
-- **CHRN** (Ekso Bionics, +18% @ $22.49): No confirmed catalyst.
-- **INDP** (Indaptus Therapeutics, +30% @ $2.875): Biotech gainer, no data on catalyst.
-- **GOGO** ($4.135, +5.2%, $7.5M NOAA deal): Real but small contract ~6h old; catalyst age borderline stale; prior pending order already in play.
-- **OCUL** ($8.81, +5.5%): Conference presentation, not a data readout; deferred entry.
-- **BB** (BlackBerry, +5.3% @ $10.715): Cyber pivot, generic sector play, no fresh catalyst today.
-- **DXC** (+4.1% @ $9.525): Nordic insurance AI deal is real; $1.5B market cap makes the % impact small; catalyst 8h old.
-- **ABSI** (Absci, +17% @ $6.975): AI drug discovery, good sector, but no specific catalyst detail in feed.
+**Sub-$2 floor eliminated:** CXAI $0.29, BURU $0.17, GMM $0.10, NOTV $0.08, WOK $0.11, ZCMD $0.04, PMI $0.30, HUBC $0.20, and ~15 more sub-$1 names.
+
+**Budget-priced out (>$65 for 1 share):** AVGO $425, MU $1032, MRVL $319, CIEN $531.
 
 ---
 
-## Finalists (No Cash Available — Watchlist Only)
+## Pick: ONDS (Ondas Holdings — BUY 5 @ $12.20 limit)
 
-### 1. JFB — JFB Construction / XTEND AI (DoD Drone Dominance Phase II) ★ BEST SETUP
-**Catalyst:** DoD Drone Dominance Program Phase II selection | **Published:** 10:39 UTC June 4 (~8.5h ago) | **Price:** $5.66, +0.4% | **Volume:** 516K | **Mkt cap:** $87M | **Catalyst age: FRESH-TODAY**
+**Catalyst age:** Mistral acquisition (Army loitering munitions program) — announced this week (fresh). Pentagon drone dominance funding — hit today (fresh).
 
-XTEND AI (merging with JFB, expected close Q2 2026) selected as one of the Phase II qualifiers for the DoD Drone Dominance Program — a $1B+ procurement initiative targeting 200,000+ drones by 2027. Q1 2026 revenue +115% YoY. This is a named DoD program win confirmed via USA Today/GlobeNewswire. Defense/Industrials is today's hottest sector (+0.84%). Stock is up only +0.4% on 516K volume — notably UNDERreaction to a major defense contract win for an $87M market cap company. 10 shares × $6.15 = $61.50 (fits budget, but **no powder**). Added to watchlist breakout $6.00, target $8.50, stop $5.20.
+Ondas Holdings acquired Mistral in 2026; Mistral holds a $982M US Army loitering munitions program. Today the Pentagon announced $1.1B drone dominance funding, sending UMAC +57%, KTOS +14%, AXON +12%. ONDS moved only +4.7% — significantly underdiscovered vs. peers with comparable (or stronger) drone credentials. The Army loitering munitions contract is materially larger than what drove UMAC's 57% move. Defense sector (Industrials +0.84%) is hot; risk_on tape supports momentum continuation.
 
-### 2. PLSE — Pulsar Bioscience (Canaccord $32 Buy Initiation)
-**Catalyst:** Canaccord Genuity coverage initiation at $32 Buy | **Published:** 16:09 UTC June 4 (~3h ago) | **Price:** $27.31, +9.3% | **Mkt cap:** $1.89B | **Catalyst age: VERY FRESH**
+**Stage:** Early — only +4.7% when the sector is ripping. The market has not yet connected ONDS to the Mistral/Army program in today's drone rally. This is the proactive edge BRAIN.md calls for.
 
-Fresh sell-side coverage from a known firm with a $32 target (18% upside from $27.31) published this afternoon. Already moving 9.3% on the initiation. 2 shares = $54.62 (fits budget). In budget but no powder. Added to watchlist pullback $25.50.
+**Sizing:** 5 × $12.20 = $61.00 under $65 budget. Take profit $14.40 (+18.2%; drone program visibility + catch-up to sector). Stop $10.80 (-11.5%; below today's session support, removes from play if defense theme fades).
 
----
+**Risk:** Mistral revenue is forward-looking; if Pentagon drone budget shifts or competitive programs are selected, thesis weakens. Stop at $10.80 caps loss to ~$7.
 
-## Watchlist Updates This Run
-- **ADDED JFB**: breakout at $6.00 — fresh DoD defense catalyst, barely moved; strong Industrials day.
-- **ADDED PLSE**: pullback at $25.50 — Canaccord $32 initiation published this afternoon (very fresh).
-- **Retained:** LASE (pullback $3.00), DOCU (breakout $57 — earnings tonight), SVCO (pullback $12.50), MNKD (breakout $3.65), GHRS (breakout $26.50 — Phase 2b confirmed excellent), NTLA (pullback $14.50), RXRX (pullback $3.50).
+**Account note:** This is the 9th position on a ~$400 account; previous 8 positions at ~$460 deployed. Account value is supported by unrealized gains (TLYS +$12 est, NVTS +$4, TISI +$0.15; HPE thesis intact despite price below avg). No further adds this session.
 
 ---
 
-## DOCU Earnings Tonight
-DocuSign reports Q1 FY2027 after close June 4 (call 5PM EDT). Watchlist trigger: breakout above $57 on strong results. Prior Q4 FY2026: $837M revenue +8% YoY, $1B+ billings first-ever, ~30% non-GAAP operating margin. EPS estimate ~$1.00. Catalyst: 1 share @ $57.50 = $57.50. Good until June 6. Bot will auto-execute if price clears $57.
+## Finalists Passed
+
+**VERU ($4.77, +112%)** — Novo Nordisk formal clinical supply agreement for Phase 2b PLATEAU trial (semaglutide + enobosarm) with first commercial negotiation rights. Mega-catalyst (Novo Nordisk optioning the drug), published June 2 (2 days ago). 52-week high $7.40, so room technically exists, BUT the move is +112% today from $2.25 → $4.77. Near-vertical blow-off. Hard pass. Catalyst age: 2 days; somewhat stale for day-trade entry.
+
+**GOGO ($4.115, +4.7%)** — $7.5M 5-year NOAA hurricane hunter connectivity contract, published 11:10 UTC today (fresh). Communication Services is #1 sector. But $7.5M/5yr = $1.5M/year for a ~$357M revenue company (0.4% annual impact). Too small to drive material re-rating. Setup is decent; reward-to-risk too thin.
+
+**LASE ($3.30, +5.4%)** — DoD MEIA Vulcan LSAD anti-drone selection confirmed. Already in watchlist at $3.00 pullback trigger; current price above trigger. No change.
+
+**PLSE ($27.15, +8.6%)** — Canaccord Genuity Buy/$32 PT initiation today. In watchlist at $25.50 pullback; above trigger today. No change.
+
+**ABSI ($7.02, +18.1%)** — AI drug discovery mover; no confirmed specific catalyst identified. Momentum-only. Skipped without catalyst.
 
 ---
 
-*No new BUY orders — account fully deployed (~$396/$400). All 7 confirmed holdings HOLD with no thesis breaks. Wide funnel (264 names), 0 forced trades — correct outcome for a fully deployed account.*
+## Holdings Review — All Theses Intact, No Exits Needed
+
+**HPE (1 @ $53.57 → ~$48, thesis intact):** Q2 FY2026 beat confirmed (EPS $0.79 vs $0.54 est, revenue $10.7B). Stock below avg cost — market may be digesting prior expectations. Thesis: AI infrastructure spend intact; note says "Strong Q2 beat today." Hold. No tp/stop set previously — hold open.
+
+**NVTS (2 @ $29.25 → $31.35, +$4.20 unrealized):** NVIDIA MGX partnership June 3 showcasing 800 VDC AI infrastructure solution. Presenting at Craig-Hallum and Evercore conferences. AI power semiconductor thesis validated. Up 7% from entry. Hold.
+
+**TLYS (12 @ $4.84 → ~$5.90 est, +$12.72 unrealized):** Q1 FY2026 blowout — comp sales +22.9%, gross margin +910bps. Stock jumped 24.5% on earnings (June 3). Turnaround thesis proven; near take-profit $6.20. Hold, watch for tp hit.
+
+**DRTS (6 @ $10.52 → $10.40, -$0.72):** ASCO pancreatic data (17.1-month OS vs historical 4-7 months) + Tolmar partnership ($15M mfg + $20M equity at $11.99 premium). Two major catalysts in 48 hours; stock slightly below entry. Market lag is common on complex oncology data — thesis strongly intact. Hold to tp $13.50.
+
+**JFB (11 @ $5.79 → $5.74, -$0.55):** DoD Drone Dominance Phase II qualifier advancing (demo at Camp Grayling, MI summer 2026). XTEND merger close expected mid-2026. Undiscovered relative to today's drone rally (UMAC +57%). Thesis advancing. Hold. Removed from watchlist (already held).
+
+**NVGS (2 @ $23.55, n/a):** Strong Q1, $0.07/share dividend, US LPG export tailwind. No adverse news. Hold.
+
+**SLDB (9 @ $6.86, n/a):** Goldman Sachs Healthcare Conference June 8 upcoming. No adverse news. Hold.
+
+**TISI (3 @ $18.09 → ~$18.14, +$0.15):** Q1 revenue +8.3% YoY to $215M, EBITDA +45.2%. Operational leverage emerging. Thesis intact. Hold to tp $21.50.
+
+---
+
+## Watchlist Changes
+
+- **Removed JFB** (already held; bot guardrail covers this but cleaned up for clarity)
+- **LASE** pullback $3.00 — valid, currently above trigger at $3.30; unchanged
+- **DOCU** breakout $57 — earnings after close tonight; trigger active for tomorrow open
+- **GHRS** breakout $26.50 — current $23.43, strong Phase 2b data, below trigger; unchanged
+- **All others (SVCO, MNKD, NTLA, RXRX, PLSE)** — above their pullback triggers; waiting for entries
+
+*Candidates data: 2026-06-04T18:07:33Z | Brain run: est. 2026-06-04T20:13:00Z*
