@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-04T18:25:19.478899+00:00",
+  "updated_utc": "2026-06-04T18:30:25.854674+00:00",
   "holdings": [
     {
       "symbol": "DRTS",
@@ -25,6 +25,11 @@
       "symbol": "NVTS",
       "quantity": 2,
       "avg_price": 29.25
+    },
+    {
+      "symbol": "ONDS",
+      "quantity": 5,
+      "avg_price": 12.39
     },
     {
       "symbol": "SLDB",
