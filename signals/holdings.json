@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-04T14:10:25.166647+00:00",
+  "updated_utc": "2026-06-04T14:00:33.111828+00:00",
   "holdings": [
     {
       "symbol": "DRTS",
@@ -30,11 +30,6 @@
       "symbol": "TISI",
       "quantity": 3,
       "avg_price": 18.09
-    },
-    {
-      "symbol": "TLYS",
-      "quantity": 12,
-      "avg_price": 4.84
     }
   ]
 }
