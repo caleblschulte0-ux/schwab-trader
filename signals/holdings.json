@@ -1,11 +1,6 @@
 {
-  "updated_utc": "2026-06-04T13:30:28.434617+00:00",
+  "updated_utc": "2026-06-04T13:20:27.338920+00:00",
   "holdings": [
-    {
-      "symbol": "DRTS",
-      "quantity": 6,
-      "avg_price": 10.52
-    },
     {
       "symbol": "HPE",
       "quantity": 1,
@@ -15,11 +10,6 @@
       "symbol": "NVGS",
       "quantity": 2,
       "avg_price": 23.55
-    },
-    {
-      "symbol": "NVTS",
-      "quantity": 2,
-      "avg_price": 29.25
     },
     {
       "symbol": "SLDB",

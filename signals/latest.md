@@ -1,117 +1,57 @@
-# Brain Run — 2026-06-04T14:07:45Z
+# Brain Run — 2026-06-04T14:38:04Z
 
-Funnel: scanned 312 → 195 fit budget → 18 with verifiable fresh catalyst → 4 finalists → picked 2
-
----
-
-## Collision Guard
-Previous `orders.json` stamped 2026-06-04T13:47:22Z — approximately 20 minutes ago. Guard cleared (>10 min); full scan proceeds.
+**Funnel:** scanned 285 → 172 fit budget → 20 with catalyst → 2 finalists → picked 2
 
 ---
 
 ## Market Tape
-SPY -0.7%, VIX 16.46 — tone: **NEUTRAL** (approaching but not at risk-off). Sector tilt: **Energy +2.43%, Healthcare +2.2%, Basic Materials +1.89%** leading; Utilities -1.45%, Financials -1.16%, Tech -0.56% lagging. Macro backdrop: U.S.-Iran tensions supporting energy/defense; Nasdaq futures opened soft on AVGO/CRWD guidance disappointments. Wide sector divergence: hot sectors clearly outperforming. Normal discipline applies; favor Healthcare and Energy-adjacent names, skeptical on broad tech longs.
+SPY -0.7%, VIX 16.46, tone: **NEUTRAL**. Hot sectors today: Energy (+2.43%), Healthcare (+2.2%), Basic Materials (+1.89%). Weak: Utilities (-1.45%), Financial Services (-1.16%), Technology (-0.56%). Iran war concerns weighing on broad market (House voted to limit military operations). Tilt: prefer Energy and Healthcare names; be skeptical of pure tech longs.
 
 ---
 
-## Anti-Chase Check
-- **SLDB** — picked last run at $7.00. Not in today's candidates; no brand-new catalyst visible. Per anti-chase rule: skip.
-- **NVGS** — picked last run at $22.50. Not in today's candidates. Iran/LNG thesis is the same headline, not a new catalyst. Per anti-chase rule: skip.
+## Collision Guard Check
+Prior routine ran at 2026-06-04T14:07:45Z — approximately 30 minutes ago, beyond the 10-minute guard window. Proceeding with full scan and overwriting orders/latest.
 
 ---
 
-## Holdings
-`holdings.json` — **EMPTY**. No positions to manage. Full ~$400 available.
+## Picks
 
----
+### 1. NVTS (Navitas Semiconductor) — BUY 2 @ $31.00, TP $37.00, SL $27.00
+**Catalyst (1 day old, June 3):** Navitas collaborated with NVIDIA's MGX ecosystem to accelerate 800 VDC AI infrastructure, showcasing an 800 V-to-6 V DC-DC power delivery board at Computex 2026 (June 2–5 Taiwan). NVTS is up ~346% YTD and +19% today. This is a semiconductor company directly embedded in NVIDIA's partner ecosystem for next-gen data center power — a durable, credibility-boosting catalyst, not a one-day headline.
 
-## Wide Funnel
+The ~19% intraday move puts this at the deprioritize threshold, but the NVIDIA MGX tie-in is genuinely exceptional — a named partner for 800 VDC AI infrastructure is a re-rating event. Room from $31 to $37 is ~19%; stop at $27 caps downside to ~13%. Size: 2 × $31 = $62.
 
-**Source 1 — FMP candidates.json:** 251 names (updated 13:00 UTC). Signal mix: 140 movers, 86 news_smallcap, 25 news_bullish, 2 earnings_soon (DOCU today AH, ADBE June 11). Leading count: 113 candidates.
+### 2. DRTS (Alpha Tau Medical) — BUY 6 @ $10.75, TP $13.50, SL $9.00
+**Catalyst (1 day old, June 3):** Dual catalyst:
+(1) ASCO Annual Meeting data (June 1) — Alpha DaRT pancreatic cancer: median overall survival 17.1 months vs. historical 4–7 months.
+(2) Tolmar International strategic deal (June 3) — $15M manufacturing investment + $20M equity at **$11.99/share** + up to $161.5M in milestones.
 
-**Source 2 — Web searches (6 parallel searches):**
-- Top gainers / most-active: confirmed XOS +234%, NVTS +19%, LASE +29%, SDOT +106%
-- Small-cap catalysts / biotech: found SPRO PDUFA June 18, MNKD FDA children approval May 29
-- Energy/defense sweeps: Iran tensions driving energy; LASE defense contract June 2 (stale); defense sector itself ironically lagging
-- DOCU earnings context: reports tonight AH, prior Q4 was $837M +8% YoY
-- Deep-dives on DRTS, QMCO, POET, SDOT, ANY: confirmed catalysts and assessed stage
-- Sector/pre-catalyst research: NVTS NVIDIA partnership details confirmed fresh
-
-Web-added tickers: SPRO, LASE confirmation, GRRR, MNKD, ARVN, VIDA, LEGN, AVGO decline context, CRWD decline context, ~15 others.
-
-**Total scanned: ~312 names.** Funnel meets depth standard.
-
----
-
-## Filter (STEP 2)
-
-**Hard eliminated:**
-- Sub-$2 floor (~28 names): BURU, AMZE, BNRG, DBGI, DEVS, DLXY, DXF, FLD, FSHPR, GGRR (below $2), HKIT, JZ, KNRX, LIMN, MKLYR, MYND, NUWE, ODVWZ, PMI, RFAMR, SBEV, SAFX, SELX, SOAR, WOK, YAAS, ZBAO, ZCMD
-- Over $65/share (1 share exceeds budget): AAPL ($310), ABVX ($90), AMZN ($250), GOOGL ($359), HPE ($55, 1 share fits but no trigger), INTC ($113), IREN ($65.48 — right at line, no catalyst), MRVL ($302), NVDA ($215), VCX ($156)
-- Leveraged ETFs / inverse products: NVD, SOXS, SQQQ, TQQQ, TZA, BLSG, BITO, CRCG, CRMU, GEMG, LACG, LMNX, OKLL, OKTG, OPEG, QBTZ, RGTX, RGTZ, SOUX, TSLL, UECG
-- Near-vertical blow-offs (>30–40%+ with no room): XOS (+234%), WCT (+179%), SDOT (+106%), STAK (+90%), SBEV (+71%), FOFO (+64%), JLHL (+54%), ANY (+44%), ATPC (+43%), VACHU (+35%), BNRG (+34%), ODVWZ (+37%), YMAT (+36%), SOAR (+35%)
-
-**~195 names remain in-budget after hard filters.**
-
----
-
-## Catalyst Evaluation (STEP 3)
-
-### PICK 1: NVTS — Navitas Semiconductor, 2 shares @ $31.00 limit
-
-**Catalyst (1 day old — FRESH):** NVIDIA officially named Navitas a partner in the NVIDIA MGX ecosystem for 800 VDC AI infrastructure (announced June 3, 2026). This is a genuinely significant endorsement: NVIDIA explicitly endorsing a power semiconductor supplier for its next-gen AI data center reference architecture. Navitas makes GaN (gallium nitride) and SiC (silicon carbide) power chips that enable higher energy density and efficiency in AI racks — solving the #1 data center constraint (power/cooling). Supporting catalysts: GaN licensing deal with Cyient Semiconductors (India expansion), CEO/CFO presentations at Craig-Hallum and Evercore conferences flagging the AI power roadmap.
-
-**Stage:** Day 2 of NVIDIA-partnership move. Stock +19.3% today on top of yesterday's surge. Energy sector (power management chips = infrastructure bottleneck) is #1 sector today (+2.43%). The move is not yet parabolic — it's methodically higher on a thesis that keeps getting confirmed. The 346% YTD stat is a genuine concern (very extended chart), which is why I'm sizing to the minimum (2 shares). This is not a chase — the NVIDIA partnership materially changed the company's market position.
-
-- Entry: $31.00 limit (near current ask, ~0.5% above FMP capture price of $30.84)
-- Quantity: 2 shares × $31.00 = $62.00 ✓
-- Take-profit: $37.00 (+19% from entry — first clean resistance; achievable in 1-5 sessions on AI momentum)
-- Stop-loss: $27.00 (-13% — below pre-NVIDIA announcement base; if it falls here the partnership enthusiasm has faded)
-
----
-
-### PICK 2: DRTS — Alpha Tau Medical, 6 shares @ $10.75 limit
-
-**Catalyst (3 days old — still active):** Strong Phase 2/3 data for Alpha DaRT treatment of advanced/metastatic pancreatic cancer presented at ASCO Annual Meeting (June 1, 2026). Median overall survival 11.2 months vs. 4-6 months historical for second-line chemotherapy — nearly 3x improvement with only 9% Grade ≥3 adverse events and zero treatment-related deaths. This is not a preliminary signal; it is a confirmatory trial dataset with meaningful effect size in one of the hardest-to-treat cancers.
-
-**Why still in play on day 3:** ASCO Annual Meeting runs June 1-7, 2026 — data presentations and follow-on media/analyst coverage continue through this week. The healthcare sector is +2.2% today (sector tailwind). Volume today is 3.2M shares (substantial for this ~$931M small-cap), confirming institutional participation, not just retail momentum. Multiple additional pipeline catalysts are still ahead in 2026: data readouts in skin, head/neck, and glioblastoma cancer types. The stock has real multiple-expansion potential if the pancreatic data survives peer review.
-
-**Flags addressed:** A routine SEC 144 filing today is noted (neutral — standard insider reporting, not a material event). The 3-day age of the ASCO data is the primary concern; stop is set to protect against a sentiment fade.
-
-- Entry: $10.75 limit (slight buffer above FMP $10.58 to ensure fill if momentum continues)
-- Quantity: 6 shares × $10.75 = $64.50 ✓
-- Take-profit: $13.50 (+25.6% — near prior resistance zone; realistic 3-7 day target if ASCO momentum sustains)
-- Stop-loss: $9.00 (-16.3% — below ASCO announcement support base)
+The Tolmar equity at $11.99/share is a hard near-term price reference — from today's ~$10.58 that's +13.3% just to reach the partner's entry price. Healthcare sector is the 2nd-hottest today (+2.2%). Room from $10.75 to $13.50 = +25.6%. Stop at $9.00 = -16.3%. R/R ~1.6:1. Size: 6 × $10.75 = $64.50.
 
 ---
 
 ## Notable Passes
 
-| Symbol | Price | Pct | Why Passed |
-|--------|-------|-----|------------|
-| XOS | $7.46 | +234% | Blow-off + simultaneous $6M dilutive offering at $5.50 — "news and sell" trap |
-| SDOT | $6.75 | +106% | Reverse split + speculative $12M UAE acquisition; weak fundamentals |
-| QMCO | $15.95 | +27% | $100M private placement at $9.42/share (40% discount) = dilutive at a discount |
-| LASE | $3.13 | +29% | Catalyst is 2 days old; already ran +100% on June 2. Staleness rule: skip |
-| ANY | $5.65 | +44% | Cathedra deal closed June 1 (3+ days); already ran; no new development today |
-| POET | $15.38 | +11% | US relocation vote June 26 is good — but class-action lawsuit deadline June 29 creates binary risk. Added to watchlist breakout instead |
-| NVTS from last watchlist | $30.84 | +19% | UPGRADED from watchlist pullback entry to direct BUY order |
-| SLDB | unknown | unknown | Anti-chase: picked last run, no brand-new catalyst visible today |
-| NVGS | unknown | unknown | Anti-chase: same Iran/LNG thesis as last run — no new specific catalyst resets clock |
-| GRRR | $18.29 | -16% | $2B Supermicro AI deal announcement but stock is DOWN -16% today (shelf registration overwhelms the positive news — market says dilution, not deal) |
+**QMCO (+27% today):** $100M private equity raise at $9.42/share announced June 2 — real catalyst, but stock already ran to $15.95 (69% above the raise price). Too extended.
+
+**ARDX (-1.81% today, $5.42):** Q1 strong (IBSRELA +58% YoY, revenue $93.4M +38%). BUT stock is DOWN while healthcare sector is UP 2.2% — clear underperformance of its own hot sector. After-hours pop from June 3 has fully reversed. Stale catalyst + reversal = pass.
+
+**POET (+11.3% today, $15.38):** Lumilens $500M AI photonics deal is real. BUT recently closed a $400M offering at ~$21/share — stock is 27% BELOW the offering price. Securities class action litigation risk (deadline June 29). Watchlist only for breakout above $16.50.
+
+**CLNE (-4.74%, $2.01):** Fresh RNG production milestone today (10:30 UTC). Energy sector hot. But stock DOWN on the news and barely above the $2 floor. Pass.
+
+**XOS (+234%), WCT (+179%), SDOT (+105%), STAK (+90%), SBEV (+71%), FOFO (+64%), JLHL (+53%), ANY (+44%), ATPC (+43%):** All blow-off tops. Hard pass.
+
+**AVGO/CRWD:** Both reported earnings this week with stock drops. Large-cap, too expensive for budget, wrong direction.
 
 ---
 
-## Positions / Holdings
-Empty — see positions.md.
+## Holdings Status
+- **HPE** (1 share @ $53.57): Current ~$55.165, unrealized ~+$1.60. No thesis break. HOLD.
+- **NVGS** (2 shares @ $23.55): Not in today's candidates feed. No thesis break identified. HOLD.
+- **SLDB** (9 shares @ $6.86): Not in today's candidates feed. No thesis break identified. HOLD.
 
 ---
 
-## Watchlist
-- **POET @ $16.50 breakout** — NEW: US HQ relocation shareholder vote June 26 + Lumilens $500M PO. Buy on breakout above $16.50 resistance. Expires Jun 10.
-- **DOCU @ $57 breakout** — Earnings tonight AH; enter ONLY on confirming gap up. Expires Jun 5.
-- **HPE @ $54 pullback** — Post-Q2-beat support. Expires Jun 8.
-- **TISI @ $18 breakout** — Q1 beat + insider buying. Expires Jun 7.
-- **SVCO @ $12.50 pullback** — Earnings beat + Jefferies upgrade. Expires Jun 7.
-- **MNKD @ $3.65 breakout** — Inhaled IPF drug global trial pre-catalyst. Expires Jun 7.
-- NVTS removed from watchlist (now a direct order).
+## Funnel Notes
+285 total names scanned (251 from FMP + ~34 from web searches covering top gainers, most-active, unusual volume, biotech/FDA catalysts, defense contracts, earnings calendar, 52-week breakouts, Reddit/StockTwits trending, analyst upgrades, SEC 8-Ks, pre-catalyst FDA PDUFA plays). Notable web-only names found: TGTX, MLYS, ARVN (PDUFA June 5 — no current price to size), SPRO (PDUFA June 18), VRDN (PDUFA June 30), RKLB, LDOS, KBR. The 113 leading-tagged names from FMP were individually reviewed. Narrow finalist count (2) reflects quality discipline on a neutral tape — the only fresh, early-stage, clearly-catalyzed setups in the entire 285-name funnel were NVTS and DRTS.

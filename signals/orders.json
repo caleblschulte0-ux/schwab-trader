@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-06-04T14:07:45Z",
-  "funnel": {"scanned": 312, "leading": 113, "in_budget": 195, "had_catalyst": 18, "finalists": 4, "picked": 2},
+  "generated_utc": "2026-06-04T14:38:04Z",
+  "funnel": {"scanned": 285, "leading": 113, "in_budget": 172, "had_catalyst": 20, "finalists": 2, "picked": 2},
   "orders": [
     {"symbol": "NVTS", "action": "BUY", "instrument": "stock",
      "quantity": 2, "limit_price": 31.00, "take_profit": 37.00, "stop_loss": 27.00},
