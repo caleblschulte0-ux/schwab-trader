@@ -1,23 +1,26 @@
 {
-  "generated_utc": "2026-06-04T14:38:55Z",
+  "generated_utc": "2026-06-04T15:09:00Z",
   "watch": [
     {"symbol": "POET", "trigger": "breakout", "trigger_price": 16.50,
      "quantity": 4, "limit_price": 16.75, "take_profit": 20.50, "stop_loss": 14.25,
-     "good_until": "2026-06-10", "note": "Lumilens $500M AI photonics deal + US HQ redomicile vote June 26. Coiling below 16.50 resistance. Securities litigation risk (June 29 deadline) — only enter on clean breakout with volume."},
+     "good_until": "2026-06-10", "note": "Lumilens $500M AI photonics deal + US HQ redomicile vote June 26. Coiling below 16.50 resistance. Only enter on clean breakout with volume."},
     {"symbol": "DOCU", "trigger": "breakout", "trigger_price": 57.00,
      "quantity": 1, "limit_price": 57.25, "take_profit": 63.00, "stop_loss": 52.00,
-     "good_until": "2026-06-05", "note": "Earnings June 4 AH; enter ONLY on strong gap above 57 confirming a beat — skip entirely if stock gaps down or stays below 56."},
+     "good_until": "2026-06-05", "note": "Earnings June 4 AH (EPS est $1.00). Enter ONLY on strong gap above $57 confirming a beat — skip entirely if stock gaps down or stays below $56."},
     {"symbol": "SVCO", "trigger": "pullback", "trigger_price": 12.50,
      "quantity": 5, "limit_price": 12.65, "take_profit": 16.00, "stop_loss": 11.50,
      "good_until": "2026-06-07", "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Pullback to $12.50 near earnings gap support."},
     {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
      "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
-     "good_until": "2026-06-07", "note": "Inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil. Only enter on breakout above $3.65."},
+     "good_until": "2026-06-07", "note": "Inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil. Only enter on breakout above $3.65 with volume."},
     {"symbol": "OSCR", "trigger": "breakout", "trigger_price": 23.50,
      "quantity": 2, "limit_price": 23.70, "take_profit": 27.50, "stop_loss": 21.00,
-     "good_until": "2026-06-05", "note": "Oscar Health up ~12% intraday on new independent board chair (Siddhartha Sankaran, effective June 4) while healthcare sector leads market (+1.12%). Governance catalyst confirmed. At $23.03 now — enter ONLY on clean volume breakout above $23.50."},
+     "good_until": "2026-06-07", "note": "Oscar Health up ~12% intraday on new independent board chair (Siddhartha Sankaran, June 4). Healthcare sector leads today. Enter ONLY on clean volume breakout above $23.50."},
     {"symbol": "GHRS", "trigger": "breakout", "trigger_price": 26.50,
      "quantity": 2, "limit_price": 26.75, "take_profit": 31.00, "stop_loss": 23.50,
-     "good_until": "2026-06-07", "note": "GH Research Phase 2 GH001 data for treatment-resistant depression + postpartum depression presented June 4 (~12:35 UTC). Healthcare hottest sector today. Only +3.2% on the news — early stage. Psychedelic therapy (intravenous psilocin) large unmet-need market. Enter on volume breakout above $26.50 confirming accumulation."}
+     "good_until": "2026-06-07", "note": "GH Research Phase 2 GH001 data (treatment-resistant + postpartum depression) highlighted June 4 at 12:35 UTC. Only +3.2% on fresh clinical data — early stage. Healthcare hottest sector. Enter on volume breakout above $26.50."},
+    {"symbol": "GOGO", "trigger": "pullback", "trigger_price": 4.00,
+     "quantity": 15, "limit_price": 4.05, "take_profit": 5.10, "stop_loss": 3.60,
+     "good_until": "2026-06-07", "note": "Gogo $7.5M NOAA hurricane-hunter connectivity contract (Business Wire, June 4 ~11:10 UTC). Communications sector hottest today (+1.8%). Up 5.9% at ~$4.16 — let it pull back to $4.00 for better R/R (target 26% gain vs 10% stop). 15 shares = $60.75."}
   ]
 }
