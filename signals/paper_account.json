@@ -1,5 +1,5 @@
 {
-  "cash": 539.9300000000001,
+  "cash": 477.9800000000001,
   "start_equity": 1000.0,
   "positions": {
     "HPE": {
@@ -59,9 +59,18 @@
       "kind": "stock",
       "multiplier": 1,
       "opened_utc": "2026-06-04T17:18:48.487431+00:00"
+    },
+    "ONDS": {
+      "qty": 5,
+      "entry": 12.39,
+      "tp": 14.4,
+      "sl": 10.8,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-04T18:25:23.440445+00:00"
     }
   },
   "realized_pnl": 0.0,
   "closed_trades": [],
-  "updated_utc": "2026-06-04T18:20:25.274303+00:00"
+  "updated_utc": "2026-06-04T18:25:25.529117+00:00"
 }
