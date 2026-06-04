@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-04T13:50:28.219487+00:00",
+  "updated_utc": "2026-06-04T13:40:24.883547+00:00",
   "holdings": [
     {
       "symbol": "DRTS",
@@ -25,11 +25,6 @@
       "symbol": "SLDB",
       "quantity": 9,
       "avg_price": 6.86
-    },
-    {
-      "symbol": "TISI",
-      "quantity": 3,
-      "avg_price": 18.09
     }
   ]
 }
