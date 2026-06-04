@@ -1,4 +1,20 @@
 {
-  "updated_utc": "2026-06-04T13:00:40.779165+00:00",
-  "holdings": []
+  "updated_utc": "2026-06-04T13:20:27.338920+00:00",
+  "holdings": [
+    {
+      "symbol": "HPE",
+      "quantity": 1,
+      "avg_price": 53.57
+    },
+    {
+      "symbol": "NVGS",
+      "quantity": 2,
+      "avg_price": 23.55
+    },
+    {
+      "symbol": "SLDB",
+      "quantity": 9,
+      "avg_price": 6.86
+    }
+  ]
 }

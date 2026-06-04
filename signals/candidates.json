@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-04T13:00:39.889205+00:00",
+  "updated_utc": "2026-06-04T13:20:26.507991+00:00",
   "count": 251,
   "signal_counts": {
     "mover": 140,
@@ -59,9 +59,9 @@
     "tone": "neutral"
   },
   "market_updated_utc": "2026-06-04T13:00:36.025614+00:00",
-  "news_updated_utc": "2026-06-04T13:00:39.887952+00:00",
+  "news_updated_utc": "2026-06-04T13:20:26.506753+00:00",
   "news_calls_date": "2026-06-04",
-  "news_calls_today": 1,
+  "news_calls_today": 2,
   "candidates": [
     {
       "symbol": "AAL",
