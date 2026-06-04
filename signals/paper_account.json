@@ -1,6 +1,6 @@
 {
-  "cash": 3.6200000000000045,
-  "start_equity": 400.0,
+  "cash": 603.62,
+  "start_equity": 1000.0,
   "positions": {
     "HPE": {
       "qty": 1,
