@@ -1,80 +1,115 @@
-# Brain Run — 2026-06-04T15:09:00Z
+# Brain Run — 2026-06-04T15:34:52Z
 
-**Funnel:** scanned 305 → 182 fit budget → 27 with real catalyst → 3 finalists → picked 0 (cash exhausted — ~$396/$400 deployed)
-
----
-
-## Market Tape
-
-SPY: −0.13% | QQQ: −1.21% | VIX: 15.78 | Tone: **neutral**
-
-Hot sectors: Communication Services (+1.8%) → Financial Services (+1.26%) → Healthcare (+1.12%) → Basic Materials (+0.52%)  
-Cold sectors: Technology (−0.99%) → Energy (−1.11%)
-
-Key macro driver: **Broadcom (AVGO) down ~15%** on softer AI hyperscaler chip revenue outlook. Dragged entire semi complex (MU −8%, INTC −3%, NVTS −5%, IREN −7%). Tech is the day's laggard. Everything outside semis — especially Healthcare, Comms, and Financials — is resilient.
+**Funnel:** scanned 275 → 198 fit budget → 24 with catalyst → 4 finalists → picked 1
 
 ---
 
-## Funnel
+## Market Tape (STEP 0)
 
-**Source 1 — candidates.json**: 250 names (135 mover, 89 news_smallcap, 25 news_bullish, 2 earnings_soon).  
-**Source 2 — web search** (13 search angles): top gainers, most active, unusual options flow, 52-wk highs, pre-market movers, biotech/FDA calendar, defense contracts, AI theme, earnings next 5 days, LULD halts, SEC 8-K filings, Reddit/StockTwits trending, sympathy plays. Added ~55 net-new names.  
-**Merged pool**: ~305 total distinct candidates.
+SPY +0.09%, VIX 15.68 — **tone: neutral**. Tape is essentially flat with no macro urgency in either direction. Normal discipline applies.
 
-Eliminated: sub-$2 stocks (~30), leveraged ETFs (~25), already-owned (7), parabolic blow-offs (STI +513%, NEXR +79%, EDHL +89%, RIBBR +82%).
+Sector rankings today:
+- 🔥 Communication Services: +1.8% — hottest sector
+- 🔥 Financial Services: +1.26%
+- 🔥 Healthcare: +1.12%
+- ❄️ Technology: -0.99%
+- ❄️ Energy: -1.11%
 
----
+**The big story:** AVGO (Broadcom) down ~14.6% despite a strong Q2 beat (revenue $22.2B +48% YoY, AI revenue $10.8B +143% YoY). Market sold the Q3 AI guide: $16B actual vs $17.2B consensus. Management held full-year AI at $100B without raising it. Classic "sell the guide" reaction dragging semis broadly (SOXL -8.9%, MU -7.6%). No contagion to the broader market — health and comms are running just fine.
 
-## Holdings Review (no changes — no thesis breaks)
-
-**TLYS** ($5.30, +9.5% on position / +19.4% today): Winner running on Q1 earnings momentum. TP $6.20 intact. Hold — let it run.
-
-**DRTS** ($10.945, +4.0% on position): Alpha Tau Medical, SEC filing catalyst (neutral). Small unrealized gain. Hold.
-
-**HPE** (not in today's feed, avg $53.57): Earnings beat reported June 1, stock popped ~30% that session. No new negative catalyst today. TP/stop not set at entry. Hold.
-
-**NVTS** ($29.22, −0.1% on position / −5.25% today): Navitas Semiconductor dragged by AVGO semi selloff. GaN power chips serve EV/solar/mobile fast-charge — NOT hyperscaler networking. This is sector sympathy, not a thesis break. TP $37.00 / stop $27.00. Hold.
-
-**NVGS** (not in feed, avg $23.55): Navigator Holdings gas shipping. No catalyst either way. Hold.
-
-**SLDB** (not in feed, avg $6.86): Solid Biosciences biotech. No catalyst. Hold.
-
-**TISI** (not in feed, avg $18.09): Team Inc. industrial services. TP $21.50 / stop $16.00. No catalyst. Hold.
+Tilt: favor Communication Services and Healthcare; skeptical of tech/semi longs today.
 
 ---
 
-## Why No New Buys
+## Funnel Detail
 
-**Cash exhausted.** 7 open positions totaling ~$396 of ~$400 (~99% deployed). No buying power for even the minimum position. This is NOT "nothing found" — two strong setups exist and are on watchlist.
+**SOURCE 1 — candidates.json**: 241 candidates (139 movers, 78 news_smallcap, 25 news_bullish, 2 earnings_soon). Data as of 15:07 UTC.
 
----
+**SOURCE 2 — Web research** (13 searches, 4 parallel agents): ~34 additional distinct names from movers lists, social trending, defense contracts, earnings, and unusual options. Adds: AMC (+22% May attendance), NBIS (Nebius Group StockTwits trending), SR/TGB (unusual options), DVLT/ASST/LAES/VERI/NMRA (small-cap screeners).
 
-## Finalists (watchlisted, not traded)
+**Total scanned: ~275 names.**
 
-### Finalist 1: GOGO — Gogo Inc. ($4.16, +5.9%)
-Fresh NOAA hurricane-hunter connectivity contract via Business Wire at ~11:10 UTC today — ~4 hours old at scan time. Communications Services is today's hottest sector (+1.8%). Small-cap ($562M). Up only 5.9% on a real government contract, volume 145K and rising. Catalyst age: fresh. **Would buy 15 shares @ $4.15 ($62.25) if cash available.** Added to watchlist as pullback to $4.00 for better R/R (target $5.10, stop $3.60).
-
-### Finalist 2: GHRS — GH Research ($25.21, +3.19%)
-Phase 2 GH001 data (intravenous psilocin analog) for treatment-resistant depression and postpartum depression highlighted at conference, published 12:35 UTC today — just ~2.5 hours old. Only +3.2% on meaningful clinical data, suggesting the move may not have started. Healthcare is second-hottest sector. **Would buy 2 shares @ $25.30 ($50.60) if cash available.** Already on watchlist as breakout above $26.50.
-
-### Finalist 3 (rejected): BJDX — Bluejay Diagnostics ($5.24, +16%)
-Sepsis triage platform partnership. But already +16% intraday — per stage rule, deprioritized vs earlier-stage GOGO.
+Sub-$2 floor auto-eliminated (no exceptions): BGM, ARCLR, CXAI, MEHA, BURU, GMM, NOTV, PRPH, RIBBR, SBEV, SCAG, SNBR, SOAR, SRXH, YYGH, ZCMD, ADTX, VRAX, KIDZ, NXXT, JZ, PMI + others.
 
 ---
 
-## Notable Passes
+## Names Examined and Passed
 
-- **HCAT** (+33%, $1.77): Real catalyst — divesting Vitalware unit for $147M cash. Price $1.77 is BELOW the $2 floor. Hard pass on price rule regardless of catalyst quality.
-- **STI** (+513%, $30.92): Space/lunar battery press release. 58M volume on $239M market cap. Near-vertical PR blow-off. Hard pass.
-- **OSCR** (+12.3%, $23.03): Healthcare governance catalyst (new board chair). Up 12% — watchlist at $23.50 breakout trigger, not chasing here.
-- **GRRR** (−4.2%, $17.52): Gorilla Technology $2B Super Micro deal announced but stock is RED on it — bearish price action vs bullish news = pass.
-- **AVGO** (−15%): Not a BUY. Sector-damaging earnings miss. No short, no buy. Sympathy names to watch for dead-cat bounce only.
-- **DOCU** (earnings tonight): Watchlist breakout trigger at $57 — bot will handle automatically if it beats.
+**Parabolic blow-offs (hard pass):**
+STI +448%, WXM +132%, EDHL/FOXX +105-107%, NEXR +87%, RIBBR +82%, CXAI +82%, TWAV +50%, HCAT +51%, SPRC +35% — all extreme intraday moves with no room left.
+
+**Extended (>15-17%, deprioritized):**
+- **NTLA (Intellia Therapeutics) +17.4%** — Real catalyst: Phase 3 lonvoguran data (first Phase 3 in vivo gene editing) + rolling BLA for HAE. Healthcare hot. Excellent catalyst, but extended today. → **Watchlist pullback at $14.50**
+- **ABSI (Absci) +18.2%** — AI drug discovery, no specific catalyst. Extended.
+- **DNA (Ginkgo Bioworks) +19%** — No fresh catalyst. Extended.
+- **OSCR (Oscar Health) +14.6%** — New board chair (Siddhartha Sankaran, June 4) + reaffirmed guidance. Healthcare sector. Was on watchlist as breakout at $23.50; it's hit and run. Removed from watchlist — governance catalyst is thin, move is done.
+
+**Real catalyst, passed for specific reasons:**
+
+**CTRN (Citi Trends) — FINALIST, narrow miss**
+$48.87, up ~6.6%. Catalyst: MASSIVE Q1 2026 earnings beat — EPS $0.91 vs $0.24 expected (279% beat!), comparable store sales +13.9%, revenue +14.4% to $230.9M, guidance reaffirmed. Strongest fundamental catalyst of the day. **Pass reason:** Earnings announced June 2 (2 days ago — borderline stale at the ~48h rule boundary). The initial earnings gap has been digested. Would be the #1 pick if reported today.
+
+**GRRR (Gorilla Technology) — FINALIST, passed**
+$18.42, up 0.72%. $2B AI infrastructure deal with Super Micro for India's Yotta project. **Pass reasons:** (1) Announced June 2 — 2 days old, stale. (2) $107M notes offering is dilutive. (3) Market has processed the news and is barely moved despite the large headline number. Market unmoved on 2-day-old news = priced in or skeptical.
+
+**JFB (JFB Construction Holdings) — FINALIST, uncertain connection**
+$5.727, up 1.5%, $87.8M cap. Reports XTEND selection for DoD $1B Drone Dominance Program Phase II (targeting 200,000+ drones by 2027). Intriguing asymmetric setup if JFB is XTEND's public vehicle. **Pass reason:** JFB's exact corporate relationship to XTEND is unverified — entering on potentially misattributed catalyst is too risky. Worth watching if relationship is confirmed.
+
+**DXC Technology +5.3%**
+$9.63. Multi-year Nordic insurance AI deal. Real enterprise contract but: (1) tech sector down -0.99% today, (2) IT services/mainframe migration is commodity, not high-multiple. Sector headwind too strong for a ho-hum IT services play.
+
+**GENI (Genius Sports) +7.9%**
+$6.355. Stifel reiterated Hold at $5 target — stock trading above analyst's target. Hard pass on a Hold at a lower price.
+
+**SNAP +7.7%**
+$6.17. Communications sector strength (+1.8%) but no identifiable specific catalyst. Momentum without a named reason is sector chasing. Pass.
+
+**HOVR (Horizon Aircraft) +6.5%**
+$2.555. Senior engineer hire (38-year Bombardier/Vertical Aerospace vet). Real talent signal but not an asymmetric catalyst for a no-revenue eVTOL company.
 
 ---
 
-## Watchlist Status
+## THE PICK
 
-GOGO added as pullback $4.00. OSCR extended to June 7. All prior items carried forward. DOCU expires June 5 (earnings tonight).
+### BUY: GOGO (Gogo Inc.) — 15 shares @ $4.13 limit
 
-*When a position closes (take-profit or stop), top priority uses of freed cash: GOGO pullback $4.00, GHRS breakout $26.50, OSCR breakout $23.50.*
+**Catalyst:** Gogo's SD Government subsidiary secured a $7.5M multi-year NOAA contract to provide L-Band SATCOM, ground infrastructure, and cybersecurity for NOAA's Hurricane Hunter aircraft fleet. Confirmed via GlobeNewswire/Business Wire press release — published 2026-06-04T11:10:24Z (~4 hours fresh at run time). Real, recurring, government revenue. NOAA contracts also serve as references for further federal aviation connectivity work.
+
+**Catalyst age:** 4 hours — ideal. Fresh enough to have room, old enough to confirm it's not noise.
+
+**Sector alignment:** Communication Services — hottest sector today at +1.8%. The broad tailwind is real and confirms this isn't fighting the tape.
+
+**Stage:** Up ~5% from prior close (~$3.93 → $4.125). Early in the move. Not chasing — buying the base of what could be a multi-day government contract story as it gets picked up by broader media and analyst coverage.
+
+**Sizing:** 15 shares × $4.13 = $61.95 ✓ (under $65 cap)
+
+**Levels (from this setup's own structure):**
+- Entry: $4.13 (limit, near current market)
+- Take profit: $4.85 (+17.4%) — prior swing resistance level; reasonable target for a verified government contract catalyst in a hot sector
+- Stop loss: $3.75 (−9.2%) — below prior day close (~$3.93), below the NOAA announcement support; clear invalidation if the move fails
+
+**R/R:** ~1.9:1 (72c gain vs 38c risk). Acceptable for defined-catalyst setup.
+
+**Cash note:** Account appears near full deployment (~$396/$400 from prior run). Bot will execute only if paper cash is available (e.g., if prior positions were partially closed by their tp/sl between runs).
+
+---
+
+## Holdings Review
+
+All 7 positions reviewed — no thesis breaks. No manual SELLs issued.
+
+- **TLYS** ($5.16, avg $4.84): Down from last session's $5.30 but still +6.6% from avg and above stop $4.20. Q1 earnings-driven move intact. HOLD, let run to $6.20 TP.
+- **NVTS** ($30.35, avg $29.25): Hit $34.17 intraday high as Nvidia showcased Navitas power delivery boards. Back to $30.35 but far above avg and well above $27.00 stop. GaN power thesis is validating. HOLD.
+- **DRTS** ($10.64, avg $10.52): Form 144 filing is a routine insider sale notice, not a negative development. Flat from avg. HOLD.
+- **HPE** (avg $53.57): Trading up after Q2 earnings per web research (specific data unavailable in feed). HOLD.
+- **NVGS, SLDB, TISI**: No price data or news this run. HOLD by default — no thesis breaks identified.
+
+---
+
+## Watchlist Changes
+
+- **GOGO** removed (entering directly via orders.json)
+- **OSCR** removed (move ran, governance catalyst is thin, extended)
+- **NTLA** added — pullback to $14.50 (Phase 3/BLA catalyst is durable; buy the dip)
+- **POET, DOCU, SVCO, MNKD, GHRS** carried forward unchanged
+- **DOCU** (good_until 2026-06-05): Reports earnings tonight AH. Breakout entry at $57 if it beats cleanly.

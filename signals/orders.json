@@ -1,5 +1,8 @@
 {
-  "generated_utc": "2026-06-04T15:09:00Z",
-  "funnel": {"scanned": 305, "leading": 120, "in_budget": 182, "had_catalyst": 27, "finalists": 3, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-04T15:34:52Z",
+  "funnel": {"scanned": 275, "leading": 105, "in_budget": 198, "had_catalyst": 24, "finalists": 4, "picked": 1},
+  "orders": [
+    {"symbol": "GOGO", "action": "BUY", "instrument": "stock",
+     "quantity": 15, "limit_price": 4.13, "take_profit": 4.85, "stop_loss": 3.75}
+  ]
 }
