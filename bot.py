@@ -51,7 +51,7 @@ from schwab import SchwabAuth, SchwabClient
 from schwab.models.generated.trading_models import Instruction, Duration
 
 # ===== GUARDRAILS / KNOBS =====
-MAX_DOLLARS_PER_TRADE = 65.00   # never spend more than this on one STOCK entry
+MAX_DOLLARS_PER_TRADE = 150.00  # never spend more than this on one STOCK entry (was 65; bumped to deploy more of the $1k book ~6 full positions)
 MAX_DOLLARS_PER_OPTION = 100.00 # never RISK more than this on one long-put bet (premium*100*contracts)
 OPTION_MULTIPLIER     = 100      # shares per option contract (premium is per-share)
 MAX_SIGNAL_AGE_HOURS  = 18      # ignore a stale orders.json
@@ -643,7 +643,7 @@ def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
               positions: dict, blocked: set, bought: set, q: dict | None = None,
               tp=None, sl=None) -> None:
     """Shared entry path for BOTH orders.json picks and watchlist triggers: dedupe,
-    price off the LIVE ask, enforce the slippage backstop + $65 cap, then buy. The
+    price off the LIVE ask, enforce the slippage backstop + $150 cap, then buy. The
     watchlist path passes the quote it already pulled (q) to avoid re-quoting."""
     if sym in positions:
         print(f"[{sym}] SKIP — already holding")

@@ -91,7 +91,7 @@ LEADING names with live price + % change. Read this first. Each row now carries 
   `news_smallcap` name that's barely moved yet is a prime EARLY entry; one already up
   big is likely the same story late — apply the stage rule.
 - `news_bullish` — LEADING: bullish market-wide news coverage (skews mega-cap, so
-  often over the $65 budget — useful context, occasionally tradeable). READ the
+  often over the $150 budget — useful context, occasionally tradeable). READ the
   headline; confirm a real, durable catalyst and that the move isn't already spent.
 NEWS FRESHNESS — a catalyst's `catalyst.published_utc` tells you HOW OLD the news is.
 This is now a PRIMARY selection filter, not a tiebreaker:
@@ -137,7 +137,7 @@ Web searches to run every run (several, in tandem with FMP):
    contracts, partnerships, raised guidance, analyst upgrades
 7. Small-cap / micro-cap gainers specifically (these are often missed by the
    broad gainer lists) — include them, but don't limit the funnel to cheap
-   stocks; mid- and large-cap movers are fair game too (the $65 budget, not
+   stocks; mid- and large-cap movers are fair game too (the $150 budget, not
    share price, is the only sizing constraint).
 7b. SMALL-CAP NEWS specifically — run dedicated searches for small/micro-cap
    catalysts that move them early: new contracts/orders, partnerships, FDA/PDUFA
@@ -178,14 +178,14 @@ Tips to maximize breadth:
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:
 - LEAN SMALL-CAP, but don't fear large. No hard price band — any share price is
-  fine as long as the trade fits the $65 budget (quantity × entry ≤ $65), even 1
+  fine as long as the trade fits the $150 budget (quantity × entry ≤ $150), even 1
   share of a ~$60 stock. Default preference: smaller-cap / lower-priced names,
   because that's where the outsized % moves this strategy wants tend to happen.
   BUT a clean larger-cap setup is fully fair game — take it when it's genuinely
   better. Tie-breaker rule: when two setups are roughly equal quality, prefer the
   smaller-cap one; only go larger-cap when its setup is clearly stronger. Never
   reject a great name just for being pricey, and never force a weak small-cap just
-  to stay small. Size everything to the $65 cap.
+  to stay small. Size everything to the $150 cap.
 - PRICE FLOOR: avoid stocks under ~$2/share. Sub-$2 names (and especially
   sub-$1) are mostly pump-and-dump / reverse-split traps with manipulated
   volume — skip them even if they're up big. No hard ceiling, but the floor is firm.
@@ -205,7 +205,7 @@ From the wide pool, narrow with judgment:
   catalyst-ahead name wins over the one that has already run.
 Keep the best 0–3. Quality of the FINALISTS matters; quantity of the FUNNEL
 matters. A wide funnel that yields 1 great pick is a great run.
-Account has ~$400 to deploy total, ≤ $65 per position (so up to ~6 positions at
+Account has ~$1,000 to deploy total, ≤ $150 per position (so up to ~6 positions at
 once). Don't pile everything into one run — leave powder for later setups.
 
 ## STEP 3 — STAGE / CHASE RULE (be proactive, not reckless)
@@ -217,7 +217,7 @@ Judge the entry RELATIVE TO THE SETUP and to WHERE IN THE MOVE you are:
 - PRE-POSITIONING ahead of a known catalyst is GOOD: entering 1–3 days BEFORE a
   scheduled earnings/FDA/conference date with a defined stop is exactly the
   proactive behavior we want. Be honest about the risk — a catalyst can gap the
-  stock either way, so size to $65 and let the `stop_loss` cap the downside.
+  stock either way, so size to $150 and let the `stop_loss` cap the downside.
 - PRE-BREAKOUT COIL is preferred: a name near its 52-week high tightening on
   low/declining volume is a better entry than the same name after it has already
   popped. Buy the coil, not the blow-off candle. (If the trigger is a clean break
@@ -240,10 +240,18 @@ Holding an existing position is a FULLY VALID choice and often the right one.
   symbol that IS in holdings.json. When in doubt about an exit, HOLD.
 
 ## For each new BUY
-- BUY-only, stock, quantity × limit_price ≤ $65. Never anything that could lose
+- BUY-only, stock, quantity × limit_price ≤ $150. Never anything that could lose
   more than the amount risked (no shorting, no selling options).
-- Set a `take_profit` (above entry) and `stop_loss` (below entry) chosen for THAT
-  setup from its own levels — no fixed percentages.
+- Set a `take_profit` (above entry) and `stop_loss` (below entry) from THAT setup's
+  own chart levels (next resistance for the target, support / below-the-low for the
+  stop) — but keep them TIGHT enough to actually trigger in a session. This is a DAY
+  trade, not a multi-week swing: aim for roughly **+5–10% take-profit and −3–6%
+  stop-loss** (~1.5–2:1 reward/risk), then snug your level-based numbers into that
+  band. Do NOT set a +20–50% "let it ride" target — those never fill in a day, so the
+  trade just sits open booking nothing (this was the problem: a whole day, zero
+  closes). Tight, reachable targets = the bot actually takes profits and recycles the
+  capital into the next setup. (Holding rules still apply: never force a SELL on time;
+  this only changes WHERE you place tp/sl, not that you respect them.)
 
 ## Long PUTS — the ONLY way you express a bearish view (PAPER-ONLY for now)
 When a name looks like it's rolling over (breakdown below support, bad guidance,
@@ -277,7 +285,7 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   "funnel": {"scanned": 190, "leading": 35, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
-     "quantity": 4, "limit_price": 15.50, "take_profit": 17.40, "stop_loss": 14.20},
+     "quantity": 9, "limit_price": 15.50, "take_profit": 16.60, "stop_loss": 14.85},
     {"action": "BUY", "instrument": "option", "option_type": "put",
      "underlying": "XYZ", "strike": 12.5, "expiration": "2026-07-17",
      "contracts": 1, "limit_price": 0.55, "take_profit": 1.00, "stop_loss": 0.25}
@@ -289,7 +297,7 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   `leading` = how many candidates carried a LEADING tag (earnings_soon/news_smallcap/
   news_bullish), so we can track how proactive the funnel is each run.
 - STOCK BUY entries MUST include symbol, quantity, limit_price, take_profit,
-  stop_loss; quantity × limit_price ≤ $65.
+  stop_loss; quantity × limit_price ≤ $150.
 - PUT BUY entries (bearish, defined-risk, paper-only) use `instrument:"option"`,
   `option_type:"put"`, and MUST include `underlying`, `strike`, `expiration`
   (YYYY-MM-DD), `contracts`, `limit_price` (per-share premium), `take_profit`,
@@ -314,7 +322,7 @@ the read on any current holdings. Include a UTC timestamp.
 | Symbol | Qty | Avg | Take-profit | Stop | Last seen | Unrealized $ |
 |--------|-----|-----|-------------|------|-----------|--------------|
 
-**Open positions:** N   **Est. cash deployed:** $X of ~$400   **Powder left:** $Y
+**Open positions:** N   **Est. cash deployed:** $X of ~$1,000   **Powder left:** $Y
 ```
 If holdings.json is empty, write "No open positions."
 
@@ -328,7 +336,7 @@ For a great setup that is NOT a buy *right now* but would be the moment a level
 is hit (a coil that breaks out, a name you'd buy on a pullback to support, or a
 date-based pre-position), put it here. The bot checks this EVERY run and enters
 automatically the instant the trigger fires — even between your runs — using the
-SAME guardrails as a normal pick ($2 floor, $65 cap, live-ask pricing, no-rebuy).
+SAME guardrails as a normal pick ($2 floor, $150 cap, live-ask pricing, no-rebuy).
 A watchlist fill's `take_profit`/`stop_loss` are honored on exit just like an
 orders.json pick. Shape (overwrite each run; use `"watch": []` when you have none):
 ```
@@ -344,7 +352,7 @@ orders.json pick. Shape (overwrite each run; use `"watch": []` when you have non
 - `trigger`: `"breakout"` (enter when live ≥ trigger_price), `"pullback"` (enter
   when live ≤ trigger_price), or `"date"` (enter on/after `trigger_date`).
 - Same required fields as a BUY pick (quantity, limit_price, take_profit,
-  stop_loss, all sized ≤ $65). `good_until` (a date) expires the item — keep it
+  stop_loss, all sized ≤ $150). `good_until` (a date) expires the item — keep it
   to a few days out so the bot never acts on a stale idea.
 - Keep the list SHORT (≤ ~12 names) and only genuine, level-defined setups.
 - The bot reads this file; do NOT expect it to write it. You own it.
