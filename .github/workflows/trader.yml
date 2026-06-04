@@ -4,9 +4,11 @@ name: schwab-trader-bot
 # logs what it WOULD trade but places nothing real. Flip DRY_RUN to false (and
 # confirm funds cleared) to go live.
 on:
-  workflow_dispatch: {}          # manual run button (always available)
-  schedule:
-    - cron: "*/15 13-21 * * 1-5"   # every 15 min, ~8a-4p CDT, Mon-Fri
+  # Triggered EXTERNALLY via the GitHub API (workflow_dispatch) from a cloud cron
+  # service (e.g. cron-job.org) every 15 min, Mon-Fri, 13:00-21:00 UTC. GitHub's
+  # built-in `schedule:` cron is intentionally NOT used (unreliable timing for a
+  # trading loop). The Actions-tab "Run workflow" button also works.
+  workflow_dispatch: {}          # manual + external-cron trigger
 
 concurrency:
   group: schwab-trader-bot

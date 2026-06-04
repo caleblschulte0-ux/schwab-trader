@@ -14,12 +14,11 @@ name: schwab-trader-brain
 # exactly ONE brain writing to main — no more random claude/* branches, no relay race.
 
 on:
-  schedule:
-    # 3x/hour (~every 20 min) during US market hours (UTC), at :07/:27/:47 so it never
-    # lands on the executor's :00/:15/:30/:45 (BRAIN.md also has a timestamp guard, and
-    # the commit step rebase-retries if both push to main at once). Max-5x has plenty of
-    # headroom for this; dial up/down by editing this one cron line.
-    - cron: '7,27,47 13-20 * * 1-5'
+  # Triggered EXTERNALLY via the GitHub API (workflow_dispatch) from a cloud cron
+  # service (e.g. cron-job.org). GitHub's built-in `schedule:` cron is intentionally
+  # NOT used — its scheduler queues/delays runs unpredictably, which is unacceptable
+  # for time-sensitive trading. The external cron fires at :07/:27/:47 UTC, Mon-Fri,
+  # 13:00-20:59 (US market hours). The Actions-tab "Run workflow" button also works.
   workflow_dispatch: {}
 
 concurrency:
