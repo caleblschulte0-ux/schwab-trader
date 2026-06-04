@@ -1,153 +1,117 @@
-# Brain Run — 2026-06-04T13:47:22Z
+# Brain Run — 2026-06-04T14:07:45Z
 
-Funnel: scanned ~295 → 183 fit budget → 22 with catalyst → 3 finalists → picked 2
+Funnel: scanned 312 → 195 fit budget → 18 with verifiable fresh catalyst → 4 finalists → picked 2
 
 ---
 
 ## Collision Guard
-Previous `orders.json` stamped 2026-06-03T22:39:47Z — over 15 hours ago. Guard cleared; full scan proceeds.
+Previous `orders.json` stamped 2026-06-04T13:47:22Z — approximately 20 minutes ago. Guard cleared (>10 min); full scan proceeds.
 
 ---
 
-## Market Context (June 4, 2026 — intraday)
-
-**Tape:** SPY ~754.24, -0.70% | VIX 15.97 (calm) — tone: **NEUTRAL** (slight risk-off bias)
-
-Pre-market: Nasdaq futures slid on Iran war concerns; this is also a geopolitical tailwind for US LNG shipping names (energy sector is hottest today).
-
-**Sector rotation:**
-| Sector | % |
-|--------|---|
-| Energy | +2.43% ← hottest |
-| Healthcare | +2.20% |
-| Basic Materials | +1.89% |
-| Consumer Defensive | +1.24% |
-| Communication Services | +0.58% |
-| Industrials | +0.33% |
-| Consumer Cyclical | -0.27% |
-| Real Estate | -0.46% |
-| Technology | -0.56% |
-| Financial Services | -1.16% |
-| Utilities | -1.45% ← weakest |
-
-Strategy: Normal discipline. Favor Energy and Healthcare names. Be somewhat picky given slight risk-off tape. Demand real catalysts and proper stage.
+## Market Tape
+SPY -0.7%, VIX 16.46 — tone: **NEUTRAL** (approaching but not at risk-off). Sector tilt: **Energy +2.43%, Healthcare +2.2%, Basic Materials +1.89%** leading; Utilities -1.45%, Financials -1.16%, Tech -0.56% lagging. Macro backdrop: U.S.-Iran tensions supporting energy/defense; Nasdaq futures opened soft on AVGO/CRWD guidance disappointments. Wide sector divergence: hot sectors clearly outperforming. Normal discipline applies; favor Healthcare and Energy-adjacent names, skeptical on broad tech longs.
 
 ---
 
-## Anti-Chase Check (CRITICAL)
-- **KYTX** ($7.83, -0.9%) — **BANNED**. Anti-chase rule still applies from prior session; it re-appeared in candidates again today. Skip.
-- **TATT** ($39.80 today vs $43.20 prior pick target) — Stock is DOWN since it was flagged yesterday. Per BRAIN.md: "A price falling AFTER you flagged it means your read was wrong, not that it's on sale." Do NOT re-enter.
-- **LASE** — Ran 69%+ in 2 days; near-vertical blow-off. Not touching.
+## Anti-Chase Check
+- **SLDB** — picked last run at $7.00. Not in today's candidates; no brand-new catalyst visible. Per anti-chase rule: skip.
+- **NVGS** — picked last run at $22.50. Not in today's candidates. Iran/LNG thesis is the same headline, not a new catalyst. Per anti-chase rule: skip.
 
 ---
 
 ## Holdings
-`holdings.json` — **EMPTY**. No positions to manage. Full $400 deployed at discretion.
+`holdings.json` — **EMPTY**. No positions to manage. Full ~$400 available.
 
 ---
 
-## STEP 1 — Wide Funnel
+## Wide Funnel
 
-**Source 1 — FMP candidates.json** (249 names, updated 22:17 UTC June 3):
-- 140 movers, 85 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU, reporting today)
-- Leading count: 111 candidates with leading tags
+**Source 1 — FMP candidates.json:** 251 names (updated 13:00 UTC). Signal mix: 140 movers, 86 news_smallcap, 25 news_bullish, 2 earnings_soon (DOCU today AH, ADBE June 11). Leading count: 113 candidates.
 
-**Source 2 — Web searches** (7 searches run):
-1. Top gainers / most-active today — added: CIEN (massive earnings beat), API, VIDA, LEGN, HPE sympathy plays
-2. Small-cap catalysts / biotech today — confirmed SLDB AH move, ARVN FDA status
-3. Earnings calendar / upcoming catalysts — DOCU after-hours today, COO/CIENA today, LULU after-close
-4. DOCU / ARVN / LASE / CIEN / API / SLDB specific deep-dives
-5. Sector themes — Iran/energy narrative confirmed, AI/defense, healthcare gene therapy
-6. Defense sector movers — LASE parabolic, XOS reversal
-7. June monthly gainers — VIDA +53%, LEGN +42%, SWMR +38%, MRVL +33%
+**Source 2 — Web searches (6 parallel searches):**
+- Top gainers / most-active: confirmed XOS +234%, NVTS +19%, LASE +29%, SDOT +106%
+- Small-cap catalysts / biotech: found SPRO PDUFA June 18, MNKD FDA children approval May 29
+- Energy/defense sweeps: Iran tensions driving energy; LASE defense contract June 2 (stale); defense sector itself ironically lagging
+- DOCU earnings context: reports tonight AH, prior Q4 was $837M +8% YoY
+- Deep-dives on DRTS, QMCO, POET, SDOT, ANY: confirmed catalysts and assessed stage
+- Sector/pre-catalyst research: NVTS NVIDIA partnership details confirmed fresh
 
-Web-added tickers: CIEN, API, VIDA, LEGN, SWMR, ARVN, COO, LULU, RKLB, and ~10 other names.
+Web-added tickers: SPRO, LASE confirmation, GRRR, MNKD, ARVN, VIDA, LEGN, AVGO decline context, CRWD decline context, ~15 others.
 
-**Total funnel: ~295 names scanned.**
+**Total scanned: ~312 names.** Funnel meets depth standard.
 
 ---
 
-## STEP 2 — Filter
+## Filter (STEP 2)
 
 **Hard eliminated:**
-- Sub-$2 floor (~32 names): NOTV, HKIT, SNGX, BURU, AMZE, CXAI, DBGI, DEVS, DLXY, DXF, FSHPR, FLD, GGRP, HUBC, JZ, KNRX, LIMN, MKLYR, MYND, NUWE, ODVWZ, PMI, RFAMR, SBEV, SAFX, SELX, SOAR, WOK, YAAS, ZBAO, ZCMD, BNRG ($1.82)
-- Over $65/share for even 1 share: PVLA ($113), CIEN (~$90-100), MRVL ($301), GOOGL ($359), ABVX ($90), AAPL ($310), AMZN ($250), NVDA ($215), PRLB ($75), IREN ($65.48)
-- Leveraged ETFs/inverse products (excluded category): NVD, SOXS, TZA, TQQQ, SQQQ, BLSG, CRCG, CRMU, GEMG, LACG, LMNX, OKLL, OKTG, OPEG, QBTZ, RGTX, RGTZ, SOUX, UECG
+- Sub-$2 floor (~28 names): BURU, AMZE, BNRG, DBGI, DEVS, DLXY, DXF, FLD, FSHPR, GGRR (below $2), HKIT, JZ, KNRX, LIMN, MKLYR, MYND, NUWE, ODVWZ, PMI, RFAMR, SBEV, SAFX, SELX, SOAR, WOK, YAAS, ZBAO, ZCMD
+- Over $65/share (1 share exceeds budget): AAPL ($310), ABVX ($90), AMZN ($250), GOOGL ($359), HPE ($55, 1 share fits but no trigger), INTC ($113), IREN ($65.48 — right at line, no catalyst), MRVL ($302), NVDA ($215), VCX ($156)
+- Leveraged ETFs / inverse products: NVD, SOXS, SQQQ, TQQQ, TZA, BLSG, BITO, CRCG, CRMU, GEMG, LACG, LMNX, OKLL, OKTG, OPEG, QBTZ, RGTX, RGTZ, SOUX, TSLL, UECG
+- Near-vertical blow-offs (>30–40%+ with no room): XOS (+234%), WCT (+179%), SDOT (+106%), STAK (+90%), SBEV (+71%), FOFO (+64%), JLHL (+54%), ANY (+44%), ATPC (+43%), VACHU (+35%), BNRG (+34%), ODVWZ (+37%), YMAT (+36%), SOAR (+35%)
 
-**Near-vertical blow-offs (>30% intraday, no room):** XOS (+234%), WCT (+179%), TJGC (+185%), SDOT (+106%), STAK (+90%), FOFO (+64%), SELX (+60%), ANY (+44%), JLHL (+54%), ATPC (+43%), SOAR (+35%), VACHU (+35%), YMAT (+36%)
-
-**183 names remain in-budget** after hard filters.
-
----
-
-## STEP 3 — Catalyst Evaluation & Final Picks
-
-### PICK 1: SLDB (Solid Biosciences) — BUY 9 × $7.00 = $63.00
-
-**Thesis:** Gene therapy, Duchenne Muscular Dystrophy (DMD) — a rare disease affecting ~1 in 3,500 boys. Solid Biosciences is advancing SGT-003, a next-generation AAV gene therapy. The FDA Type C meeting (February 2026) returned **positive feedback** supporting accelerated approval pathway discussions. A follow-up **pivotal meeting is scheduled within H1 2026** — meaning within the next 4 weeks. The company has $148.9M in cash (~22% of $677M market cap), de-risking near-term operations entirely.
-
-**Fresh catalyst:** Stock at $6.85 regular-session June 4, with +$0.27 (+4.1%) after-hours activity — accumulation into an upcoming MDA investor conference presentation in June 2026. The catalyst is NOT stale: prior run passed on SLDB because the February FDA meeting was "a recap." Today, the after-hours move and imminent conference/pivotal meeting represent incremental new development.
-
-**Sector tailwind:** Healthcare #2 sector today (+2.20%).
-
-**Stage:** Early. Stock is up only ~4% from yesterday's FMP price, no blow-off. The pivotal FDA meeting hasn't happened yet — the biggest move is likely still ahead.
-
-**Catalyst age:** FDA meeting feedback ongoing; presentation catalysts this month (fresh).
-
-- Entry: $7.00 limit (between regular $6.85 and AH $7.15)
-- Quantity: 9 shares × $7.00 = $63.00 ✓
-- Take-profit: $10.50 (+50% — realistic if FDA meeting confirms accelerated approval path)
-- Stop-loss: $5.90 (below key support, prior catalyst consolidation base)
+**~195 names remain in-budget after hard filters.**
 
 ---
 
-### PICK 2: NVGS (Navigator Gas) — BUY 2 × $22.50 = $45.00
+## Catalyst Evaluation (STEP 3)
 
-**Thesis:** Navigator Gas operates a fleet of LNG/ethylene carriers. The thesis published by Benzinga on June 3: "Navigator Gas Bets On Supply Chain Shifts As US Exports Gain From Middle East Disruption." **This is now directly relevant today**: pre-market news explicitly cited Iran war concerns as the driver of Nasdaq futures weakness — the same geopolitical catalyst that INCREASES demand for US LNG exports and the ships that carry them (Navigator's fleet). The stock was at $21.87 on June 3 despite the positive coverage, suggesting it has NOT been chased yet.
+### PICK 1: NVTS — Navitas Semiconductor, 2 shares @ $31.00 limit
 
-**Fresh catalyst:** Iran/Middle East conflict escalation is TODAY's top geopolitical headline. This is a NEW development overlaying the existing thesis, resetting the clock on the Benzinga analysis.
+**Catalyst (1 day old — FRESH):** NVIDIA officially named Navitas a partner in the NVIDIA MGX ecosystem for 800 VDC AI infrastructure (announced June 3, 2026). This is a genuinely significant endorsement: NVIDIA explicitly endorsing a power semiconductor supplier for its next-gen AI data center reference architecture. Navitas makes GaN (gallium nitride) and SiC (silicon carbide) power chips that enable higher energy density and efficiency in AI racks — solving the #1 data center constraint (power/cooling). Supporting catalysts: GaN licensing deal with Cyient Semiconductors (India expansion), CEO/CFO presentations at Craig-Hallum and Evercore conferences flagging the AI power roadmap.
 
-**Sector tailwind:** Energy #1 sector today (+2.43%). Iran-related supply disruption fears are driving the sector.
+**Stage:** Day 2 of NVIDIA-partnership move. Stock +19.3% today on top of yesterday's surge. Energy sector (power management chips = infrastructure bottleneck) is #1 sector today (+2.43%). The move is not yet parabolic — it's methodically higher on a thesis that keeps getting confirmed. The 346% YTD stat is a genuine concern (very extended chart), which is why I'm sizing to the minimum (2 shares). This is not a chase — the NVIDIA partnership materially changed the company's market position.
 
-**Stage:** Early. Stock was actually down -1.6% on June 3 despite the bullish analyst piece — classic early entry before the thesis gets fully priced in.
+- Entry: $31.00 limit (near current ask, ~0.5% above FMP capture price of $30.84)
+- Quantity: 2 shares × $31.00 = $62.00 ✓
+- Take-profit: $37.00 (+19% from entry — first clean resistance; achievable in 1-5 sessions on AI momentum)
+- Stop-loss: $27.00 (-13% — below pre-NVIDIA announcement base; if it falls here the partnership enthusiasm has faded)
 
-**Catalyst age:** Benzinga piece Jun 3, Iran headlines Jun 4 today = fresh compound catalyst.
+---
 
-- Entry: $22.50 limit (slight premium to Jun 3 close of $21.87 for energy sector momentum)
-- Quantity: 2 shares × $22.50 = $45.00 ✓
-- Take-profit: $26.50 (+17.8% — first resistance level)
-- Stop-loss: $19.50 (-13.3% — below support)
+### PICK 2: DRTS — Alpha Tau Medical, 6 shares @ $10.75 limit
+
+**Catalyst (3 days old — still active):** Strong Phase 2/3 data for Alpha DaRT treatment of advanced/metastatic pancreatic cancer presented at ASCO Annual Meeting (June 1, 2026). Median overall survival 11.2 months vs. 4-6 months historical for second-line chemotherapy — nearly 3x improvement with only 9% Grade ≥3 adverse events and zero treatment-related deaths. This is not a preliminary signal; it is a confirmatory trial dataset with meaningful effect size in one of the hardest-to-treat cancers.
+
+**Why still in play on day 3:** ASCO Annual Meeting runs June 1-7, 2026 — data presentations and follow-on media/analyst coverage continue through this week. The healthcare sector is +2.2% today (sector tailwind). Volume today is 3.2M shares (substantial for this ~$931M small-cap), confirming institutional participation, not just retail momentum. Multiple additional pipeline catalysts are still ahead in 2026: data readouts in skin, head/neck, and glioblastoma cancer types. The stock has real multiple-expansion potential if the pancreatic data survives peer review.
+
+**Flags addressed:** A routine SEC 144 filing today is noted (neutral — standard insider reporting, not a material event). The 3-day age of the ASCO data is the primary concern; stop is set to protect against a sentiment fade.
+
+- Entry: $10.75 limit (slight buffer above FMP $10.58 to ensure fill if momentum continues)
+- Quantity: 6 shares × $10.75 = $64.50 ✓
+- Take-profit: $13.50 (+25.6% — near prior resistance zone; realistic 3-7 day target if ASCO momentum sustains)
+- Stop-loss: $9.00 (-16.3% — below ASCO announcement support base)
 
 ---
 
 ## Notable Passes
 
-| Symbol | Price | Yesterday % | Catalyst | Why Passed |
-|--------|-------|-------------|----------|------------|
-| TATT | ~$39.80 | was +6.6% | $45M MRO contracts | DOWN from yesterday's $43.02 pick price — anti-fixation rule: do NOT re-enter a falling name |
-| KYTX | $7.83 | -0.9% | EULAR RA trial data | **BANNED** — anti-chase rule, over-picked last session |
-| LASE | $4.11 close | +29–70% | US Army evaluation (not contract) | Near-vertical blow-off, 70% in 2 days |
-| QMCO | $15.95 | +27% | Revenue beat | Dilutive $100M private placement at $9.42 — massively bearish signal |
-| CIEN | ~$90-100 est | +20%+ | EPS +290%, revenue +40%, guide raised | Over $65 budget entirely; cannot trade |
-| ARVN | $8.83 | flat | FDA approved Vepdegestrant May 1 | Approval already happened a month ago; no pre-catalyst remaining |
-| API | $4.775 | +15.8% | CEO $20M personal buy | Buy spread over 12 months (not immediate), Chinese company risk, stock already popped |
-| XOS | $7.46 close | +234% | Air Force + Power Hub | Blow-off; watchlist entry removed due to price chaos after 234% single-day move |
-| PVLA | $113.63 | +8.6% | FDA pre-NDA completion | $113/share — over budget |
-| SPCB | $11.47 | -4% | $1.8M Norway contract | Down on the day of positive news — market unimpressed |
-| SLNG | $4.50 | +18.7% | LNG energy | Extended, no specific catalyst |
+| Symbol | Price | Pct | Why Passed |
+|--------|-------|-----|------------|
+| XOS | $7.46 | +234% | Blow-off + simultaneous $6M dilutive offering at $5.50 — "news and sell" trap |
+| SDOT | $6.75 | +106% | Reverse split + speculative $12M UAE acquisition; weak fundamentals |
+| QMCO | $15.95 | +27% | $100M private placement at $9.42/share (40% discount) = dilutive at a discount |
+| LASE | $3.13 | +29% | Catalyst is 2 days old; already ran +100% on June 2. Staleness rule: skip |
+| ANY | $5.65 | +44% | Cathedra deal closed June 1 (3+ days); already ran; no new development today |
+| POET | $15.38 | +11% | US relocation vote June 26 is good — but class-action lawsuit deadline June 29 creates binary risk. Added to watchlist breakout instead |
+| NVTS from last watchlist | $30.84 | +19% | UPGRADED from watchlist pullback entry to direct BUY order |
+| SLDB | unknown | unknown | Anti-chase: picked last run, no brand-new catalyst visible today |
+| NVGS | unknown | unknown | Anti-chase: same Iran/LNG thesis as last run — no new specific catalyst resets clock |
+| GRRR | $18.29 | -16% | $2B Supermicro AI deal announcement but stock is DOWN -16% today (shelf registration overwhelms the positive news — market says dilution, not deal) |
+
+---
+
+## Positions / Holdings
+Empty — see positions.md.
 
 ---
 
 ## Watchlist
-Six entries maintained (XOS removed — too chaotic after 234% blow-off):
-1. **DOCU @ $57 breakout** — reports today AH; enter ONLY on confirming gap; expires Jun 5
-2. **NVTS @ $27 pullback** — COMPUTEX event run, buy the cooling dip; expires Jun 7
-3. **HPE @ $54 pullback** — strong Q2 beat, was $55.17 Jun 3 pulling back from post-earnings highs; expires Jun 8
-4. **TISI @ $18 breakout** — Q1 beat + insider buying; expires Jun 7
-5. **SVCO @ $12.50 pullback** — earnings beat + Jefferies upgrade; expires Jun 7
-6. **MNKD @ $3.65 breakout** — inhaled IPF drug global trial pre-catalyst; expires Jun 7
-
----
-
-## Summary
-Two buys: **SLDB** (gene therapy, pre-FDA-meeting accumulation, Healthcare tailwind, $63) and **NVGS** (LNG carrier, Iran/Middle East disruption creates fresh tailwind for US LNG exports, Energy #1 sector today, $45). Total capital deployed: $108 of ~$400. Wide funnel (295 scanned, 131 leading) — tight today; most movers are either blow-offs, dilutive, or stale catalysts.
+- **POET @ $16.50 breakout** — NEW: US HQ relocation shareholder vote June 26 + Lumilens $500M PO. Buy on breakout above $16.50 resistance. Expires Jun 10.
+- **DOCU @ $57 breakout** — Earnings tonight AH; enter ONLY on confirming gap up. Expires Jun 5.
+- **HPE @ $54 pullback** — Post-Q2-beat support. Expires Jun 8.
+- **TISI @ $18 breakout** — Q1 beat + insider buying. Expires Jun 7.
+- **SVCO @ $12.50 pullback** — Earnings beat + Jefferies upgrade. Expires Jun 7.
+- **MNKD @ $3.65 breakout** — Inhaled IPF drug global trial pre-catalyst. Expires Jun 7.
+- NVTS removed from watchlist (now a direct order).

@@ -1,15 +1,15 @@
 {
-  "generated_utc": "2026-06-04T13:47:22Z",
+  "generated_utc": "2026-06-04T14:07:45Z",
   "watch": [
+    {"symbol": "POET", "trigger": "breakout", "trigger_price": 16.50,
+     "quantity": 4, "limit_price": 16.75, "take_profit": 20.50, "stop_loss": 14.25,
+     "good_until": "2026-06-10", "note": "US HQ relocation vote June 26 + Lumilens $500M PO partnership. Coiling under 16.50 resistance. Break on volume = pre-vote positioning entry."},
     {"symbol": "DOCU", "trigger": "breakout", "trigger_price": 57.00,
      "quantity": 1, "limit_price": 57.25, "take_profit": 63.00, "stop_loss": 52.00,
      "good_until": "2026-06-05", "note": "earnings June 4 AH; enter ONLY on strong gap above 57 confirming a beat — skip entirely if stock gaps down or stays below 56"},
-    {"symbol": "NVTS", "trigger": "pullback", "trigger_price": 27.00,
-     "quantity": 2, "limit_price": 27.15, "take_profit": 32.00, "stop_loss": 24.50,
-     "good_until": "2026-06-07", "note": "NVIDIA MGX ecosystem partner showcased at COMPUTEX 2026 (June 2-5, 262% YTD). Only enter dip to $27 support after event-driven run cools — do NOT chase above $31."},
     {"symbol": "HPE", "trigger": "pullback", "trigger_price": 54.00,
      "quantity": 1, "limit_price": 54.50, "take_profit": 65.00, "stop_loss": 50.00,
-     "good_until": "2026-06-08", "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised. Was $55.17 on Jun 3. Trigger at $54 is close — pullback to earnings-gap support."},
+     "good_until": "2026-06-08", "note": "HPE Q2 beat: revenue +40% YoY, EPS $0.79 vs $0.53 est, FY26 guide raised. Trigger at $54 is post-gap support."},
     {"symbol": "TISI", "trigger": "breakout", "trigger_price": 18.00,
      "quantity": 3, "limit_price": 18.15, "take_profit": 21.50, "stop_loss": 16.00,
      "good_until": "2026-06-07", "note": "Team Inc. Q1 2026: +8.3% rev YoY, Adj EBITDA +45.2%, FY guide raised, insider buying. Break above $18 confirms momentum."},
@@ -18,6 +18,6 @@
      "good_until": "2026-06-07", "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Pullback to $12.50 near earnings gap support."},
     {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
      "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
-     "good_until": "2026-06-07", "note": "MannKind inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil. Only enter on breakout above $3.65."}
+     "good_until": "2026-06-07", "note": "Inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil. Only enter on breakout above $3.65."}
   ]
 }
