@@ -60,6 +60,23 @@ jobs:
         if: steps.gate.outputs.ready == 'true'
         run: npm install -g @anthropic-ai/claude-code
 
+      # Gather the market-data funnel (movers + earnings + news + regime) into
+      # signals/candidates.json BEFORE the brain thinks, so the brain decides on the
+      # freshest data. Pure stdlib (no pip install), no Schwab creds. Degrades
+      # gracefully on any missing key / dead endpoint (worst case: a small/empty file).
+      - name: Set up Python
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Gather market data (candidates)
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          ALPHA_API_KEY: ${{ secrets.ALPHA_API_KEY }}
+        run: python candidates.py
+
       - name: Run the brain
         if: steps.gate.outputs.ready == 'true'
         env:
@@ -77,7 +94,7 @@ jobs:
         run: |
           git config user.name "schwab-brain"
           git config user.email "brain@users.noreply.github.com"
-          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md reports/today.md"
+          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md signals/candidates.json reports/today.md"
           git add $FILES 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Brain produced no changes."

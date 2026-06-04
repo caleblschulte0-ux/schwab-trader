@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write   # allow committing holdings/candidates files back to the repo
+  contents: write   # allow committing holdings + paper-book snapshots back to the repo
 
 jobs:
   trade:
@@ -36,8 +36,6 @@ jobs:
           SCHWAB_APP_SECRET: ${{ secrets.SCHWAB_APP_SECRET }}
           SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
-          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-          ALPHA_API_KEY: ${{ secrets.ALPHA_API_KEY }}
         run: python bot.py
 
       - name: Commit data snapshots
@@ -45,12 +43,12 @@ jobs:
         run: |
           git config user.name "schwab-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add signals/holdings.json signals/candidates.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
+          git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
           fi
-          git commit -m "bot: update holdings + candidates snapshot [skip ci]"
+          git commit -m "bot: update holdings + paper-book snapshot [skip ci]"
           # Other pushers (the offset brain routines + concurrent runs) move main
           # under us, so a plain push gets rejected. Rebase our snapshot onto the
           # latest main and retry. These are regenerated each run, so "last writer
@@ -63,9 +61,9 @@ jobs:
             echo "push rejected (main moved); syncing to latest and retrying ($i)..."
             git fetch origin main
             git reset --soft origin/main
-            git add signals/holdings.json signals/candidates.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
+            git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
             git diff --cached --quiet && { echo "snapshot already current."; exit 0; }
-            git commit -m "bot: update holdings + candidates snapshot [skip ci]"
+            git commit -m "bot: update holdings + paper-book snapshot [skip ci]"
             sleep $((i * 3))
           done
           echo "Could not push data snapshots after retries — non-fatal (next run will refresh)."

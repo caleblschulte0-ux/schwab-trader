@@ -245,6 +245,28 @@ Holding an existing position is a FULLY VALID choice and often the right one.
 - Set a `take_profit` (above entry) and `stop_loss` (below entry) chosen for THAT
   setup from its own levels — no fixed percentages.
 
+## Long PUTS — the ONLY way you express a bearish view (PAPER-ONLY for now)
+When a name looks like it's rolling over (breakdown below support, bad guidance,
+sector-wide weakness, a clearly bearish catalyst — the funnel already surfaces
+`biggest-losers`), you may BUY A LONG PUT. This is the ONLY bearish tool you have,
+and it is strictly DEFINED-RISK: the most a put can ever lose is the premium paid.
+HARD RULES (the bot rejects anything that breaks them, so don't waste a pick):
+- LONG PUTS ONLY — buy-to-open. NEVER sell/write options, NEVER calls, NEVER
+  spreads, NEVER shorting. (A put you BUY = bearish bet, capped loss. That's it.)
+- Max RISK per put = premium × 100 × contracts ≤ **$100** (one contract = 100
+  shares; `limit_price` is the per-share premium). So a $0.60 premium × 100 = $60
+  risked — fine; a $1.20 premium = $120 — REJECTED. Keep premium ≤ ~$1.00 for one
+  contract. This means CHEAP puts: near-dated and/or near-the-money on lower-priced
+  underlyings.
+- Underlying must be ≥ $2 (no penny-stock puts) and liquid enough to actually have
+  options. Pick a strike near the money and an expiration ~2–6 weeks out (enough
+  time for the thesis to play out; avoid same-week lottery tickets).
+- Set `take_profit` ABOVE the entry premium and `stop_loss` BELOW it — a long put
+  GAINS value (premium rises) as the stock falls, so it exits exactly like a long:
+  profit when the premium hits tp, stop when it drops to sl.
+- Puts are PAPER-ONLY right now — they show up in the paper ledger as `put` rows;
+  no real option order is placed. Treat them as real bets for learning P/L.
+
 ## Files you MUST write every run
 
 ### A. `signals/orders.json` — what the bot executes (overwrite each run)
@@ -255,7 +277,10 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   "funnel": {"scanned": 190, "leading": 35, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
-     "quantity": 4, "limit_price": 15.50, "take_profit": 17.40, "stop_loss": 14.20}
+     "quantity": 4, "limit_price": 15.50, "take_profit": 17.40, "stop_loss": 14.20},
+    {"action": "BUY", "instrument": "option", "option_type": "put",
+     "underlying": "XYZ", "strike": 12.5, "expiration": "2026-07-17",
+     "contracts": 1, "limit_price": 0.55, "take_profit": 1.00, "stop_loss": 0.25}
   ]
 }
 ```
@@ -263,9 +288,17 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   can see how wide we looked (scanned → narrowed → finalists → picked). Include
   `leading` = how many candidates carried a LEADING tag (earnings_soon/news_smallcap/
   news_bullish), so we can track how proactive the funnel is each run.
-- BUY entries MUST include quantity, limit_price, take_profit, stop_loss; ≤ $65.
+- STOCK BUY entries MUST include symbol, quantity, limit_price, take_profit,
+  stop_loss; quantity × limit_price ≤ $65.
+- PUT BUY entries (bearish, defined-risk, paper-only) use `instrument:"option"`,
+  `option_type:"put"`, and MUST include `underlying`, `strike`, `expiration`
+  (YYYY-MM-DD), `contracts`, `limit_price` (per-share premium), `take_profit`,
+  `stop_loss`. premium × 100 × contracts ≤ $100. `limit_price`/`take_profit`/
+  `stop_loss` are all per-share premium (e.g. tp 1.00 means the premium doubling
+  from 0.55 → 1.00). NO calls, NO writing options, NO spreads — those are rejected.
 - SELL entries (only for symbols in holdings.json) need only
-  `{"symbol":"...","action":"SELL"}`.
+  `{"symbol":"...","action":"SELL"}`. Puts auto-exit on their tp/stop — you don't
+  need to write a SELL for them.
 - Nothing qualifies → keep the `funnel` counts and use `"orders": []`.
 
 ### B. `signals/latest.md` — your reasoning (overwrite each run)
