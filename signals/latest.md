@@ -1,104 +1,136 @@
-# Brain Run — 2026-06-03T15:53:26Z
+# Brain Run — 2026-06-03T22:39:47Z
 
-Funnel: scanned 218 → 128 fit budget → 18 with catalyst → 3 finalists → picked 3
+Funnel: scanned 264 → 224 fit budget → 20 with catalyst → 3 finalists → picked 1
 
 ---
 
 ## Collision Guard
-Prior `orders.json` stamped 2026-06-03T15:09:38Z — 43 min 48 sec ago. Guard cleared; full scan proceeds.
+Previous `orders.json` stamped 2026-06-03T15:53:26Z — ~6 hours 46 minutes ago. Guard cleared; full scan proceeds.
 
 ---
 
-## Market Context (June 3, 2026 — ~11:53 AM ET)
+## Market Context (June 3, 2026 — ~5:39 PM ET, post-close)
 
-**Tape:** SPY -0.45%, VIX 16.07, tone = **neutral**
+**Tape:** SPY -0.70%, VIX 16.06 — tone: **NEUTRAL**
 
-**Sector rotation today:**
+**Sector rotation:**
 | Sector | % |
 |--------|---|
-| Basic Materials | +2.25% ← hottest |
-| Energy | +1.74% |
-| Real Estate | +1.65% |
-| Industrials | +1.23% |
-| Consumer Defensive | +1.16% |
-| Healthcare | +0.81% |
-| Consumer Cyclical | +0.73% |
-| Communication Services | +0.42% |
-| Technology | -0.52% |
-| Utilities | -0.75% |
-| Financial Services | -1.27% ← weakest |
+| Energy | +2.43% ← hottest |
+| Healthcare | +2.20% |
+| Basic Materials | +1.89% |
+| Consumer Defensive | +1.24% |
+| Communication Services | +0.58% |
+| Industrials | +0.33% |
+| Consumer Cyclical | -0.27% |
+| Real Estate | -0.46% |
+| Technology | -0.56% |
+| Financial Services | -1.16% |
+| Utilities | -1.45% ← weakest |
 
-Broad market slightly red. Rotation out of tech/financials and into materials, energy, real estate, and healthcare. This run tilts toward healthcare and industrials; skeptical of tech chases; no financials.
-
----
-
-## Funnel Detail
-
-**Source 1 — FMP candidates.json (updated 15:40 UTC):** 206 candidates — 137 movers, 47 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU). Leading count: 73.
-
-**Source 2 — Web searches (8 runs):** top % gainers, unusual volume, small-cap catalysts, defense/biotech/AI sweeps, individual checks on KYTX/FJET/DOCU/NVTS/LASE. Additional names from web: VIDA, LEGN, ARKO, MTLS, LXFR, MYGN, BB (52wk high). ~12 additional tickers.
-
-**Total funnel: ~218 candidates.**
-
-Eliminated: sub-$2 floor (NOTV, AIM, HKIT, FSHPR, SELX, DEVS, HUBC, etc.), leveraged ETFs (dozens), over-budget (MRVL $307, GOOGL $359, ABVX $82, LEGN), parabolic blow-offs (LASE +70%, XOS +174%, SDOT +121%, WCT +199%), and extended names above ~20% threshold without exceptional setups (NVTS +19%, DRTS +20%).
-
-~128 in budget; ~18 with genuine fresh catalyst; 3 finalists (KYTX, FJET, DOCU).
+Normal discipline applied. Broad market slightly red; tilt toward Energy / Healthcare names.
 
 ---
 
-## Picks
+## Anti-Chase Check (CRITICAL)
+KYTX is **BANNED** this session per the explicit guardrail in BRAIN.md: the brain re-picked it 11 of 15 runs today, kept lowering the entry to chase a falling price. KYTX is at $7.83 today (-0.9%) vs the repeated $8.05 limit in prior orders. This is the worst habit a catalyst trader can have. NOT picking KYTX under any circumstances.
 
-### 1. KYTX — Kyverna Therapeutics (NASDAQ)
-**BUY 8 shares @ $8.05 limit | TP $11.00 | SL $7.00 | Max cost ~$64.40**
-
-Catalyst (published 12:39 UTC today at EULAR 2026 in London): Kyverna presented updated Phase 1 COMPARE trial data for miv-cel (KYV-101) in ACPA-positive, treatment-refractory RA. Key result: **66.6% ACR70 at Week 36** in patients who had failed a median of 6.5 prior biologic/targeted DMARDs. Deep CD19+ B-cell depletion, sustained autoantibody declines, predominantly naïve repopulation pattern, and a clean safety profile (no high-grade CRS or ICANS). Phase 2 is initiated and fully enrolled — the next readout is already queued.
-
-This is strong Phase 1 CAR-T data in a large refractory indication. The stock has moved only +1.0% to $7.98 as of the candidates update — genuinely early. Healthcare is one of today's stronger sectors (+0.81%). Volume (166K shares) is real. Entry here is as early as it gets: catalyst delivered, barely moved, next Phase 2 catalyst ahead. Previous run (15:09Z) also picked KYTX at $8.05; since holdings is empty, that order has not filled or is still pending — the thesis is unchanged and the setup remains valid at the same price.
-
-Setup: Limit $8.05 (near current ask), TP $11.00 (37% upside — re-rating toward a small CAR-T with positive multi-indication data and Phase 2 enrolled), SL $7.00 (below today's range support, 13% risk). R/R ≈ 3:1.
-
----
-
-### 2. FJET — Starfighters Space (NYSE)
-**BUY 7 shares @ $8.70 limit | TP $11.00 | SL $7.80 | Max cost ~$60.90**
-
-Catalyst (published 10:09 UTC today): FJET added to **Russell 3000 Index** as part of 2026 reconstitution. ~$12 trillion in assets benchmarked to Russell U.S. indexes must include this stock; passive funds are structurally forced to buy before the effective date (typically late June). Volume today is 1,238,829 — elevated, consistent with early institutional front-running. Stock is flat (-0.12%) at $8.64, meaning the price has barely responded while volume confirms real positioning activity.
-
-Previous run (15:09Z) picked FJET at limit $8.95; the stock has since drifted to $8.64, giving a better entry this run. Revised limit to $8.70 (near current ask). The mechanical demand thesis is intact: passive index buying is not discretionary, it simply happens.
-
-Setup: Limit $8.70, TP $11.00 (26% upside before the reconstitution buy pressure peaks), SL $7.80 (below today's range and the pre-announcement base, ~10% risk). R/R ≈ 2.7:1.
-
----
-
-### 3. DOCU — DocuSign (NASDAQ)
-**BUY 1 share @ $55.50 limit | TP $62.00 | SL $50.50 | Max cost ~$55.50** [PRE-EARNINGS]
-
-Catalyst: DocuSign reports Q1 FY27 earnings **tomorrow, June 4 after close** (5pm PDT). FY26 operational backdrop is strong: FCF exceeded $1 billion for the first time (33% FCF margin), non-GAAP operating margin exceeded 30% for the first time, dollar net retention improved to 102%, and key AI integrations deepened with Anthropic, OpenAI, Google Gemini, GitHub Copilot Studio, and Salesforce. Analyst consensus PT is $59.88 vs the ~$55.18 current price — 8.5% upside to consensus before any beat premium. This run obtained DOCU's current price via web search ($55.18 vs null in candidates.json) and confirmed the earnings date.
-
-Pre-positioning one day before a known catalyst with strong operational momentum is exactly the proactive behavior BRAIN.md calls for. Position is intentionally small (1 share = $55 due to $65 cap) — size limits risk on the binary event.
-
-**Stop_loss is mandatory on earnings picks per BRAIN.md.** Stop $50.50 (~8.5% risk, below recent support), TP $62.00 (~11.5% upside, above consensus PT — reflects a beat/raise scenario).
+Prior run picks (FJET, DOCU) are evaluated fresh — will NOT re-pick at the same price for the same unchanged thesis.
 
 ---
 
 ## Holdings
-`holdings.json` is empty — no open positions. Today's picks deploy: KYTX $64.40 + FJET $60.90 + DOCU $55.50 = **$180.80 total (~45% of $400)**. ~$219 powder reserved.
+`holdings.json` — **EMPTY**. All prior orders either expired unfilled or auto-exited. No positions to manage.
 
 ---
 
-## Notable Passes
+## STEP 1 — Wide Funnel
 
-| Name | Price | Move | Reason |
-|------|-------|------|--------|
-| LASE | $3.69 | +52–70% | Real US Army/Dept of War anti-drone selection catalyst. But near-vertical blow-off. Hard pass. |
-| XOS | $6.11 | +174% | Parabolic. Watchlist pullback to $4.50 still live. |
-| SDOT | $7.26 | +121% | Reverse-split driven. Hard pass. |
-| WCT | $2.75 | +199% | Parabolic. Hard pass. |
-| NVTS | $30.80 | +19% | Real AI power infra story (GaN, Q1 beat, analyst upgrades). Already +19% today on top of +110% over 4 months. Extended; tech sector weak. Watchlist for pullback to $26.50. |
-| GRRR | $17.38 | –20% | $107M dilutive convertible offering = explicit bearish catalyst. Skip. |
-| DRTS | $10.69 | +20% | Alpha Tau Medical, no specific fresh catalyst found. Deprioritize at 20%. |
-| SNSE | $18.30 | +14% | Sensei Bio, no specific catalyst. Mover only. |
-| INTC | $112.84 | +4.5% | Mega-cap; tech sector is weakest today. No compelling edge. |
-| BB | $10.33 | +0.2% | 52wk high on FedRAMP recert for AtHoc. Cramer mention = mixed signal. Legacy brand, no strong momentum. |
-| LEGN/VIDA | large-cap | +42%/+53% June | Strong CAR-T / biotech catalysts but priced far above $65/share budget. |
-| Sub-$2 names | various | various | Hard floor violation — all skipped. |
+**Source 1 — FMP candidates.json** (updated 22:17 UTC): 249 candidates — 140 movers, 85 news_smallcap, 25 news_bullish, 1 earnings_soon (DOCU, June 4).
+
+**Source 2 — Web searches** (6 searches run this session): top gainers, QMCO catalyst, LASE army contract, NVTS/COMPUTEX, CIEN earnings, DOCU price/earnings, energy sector, RCKT price target, TATT MRO contracts, SLDB FDA news. Web-only names added: CIEN, SEZL, MLYS, TRO, SW, NOG, MGY (energy M&A). ~15 additional tickers.
+
+**Total scanned: ~264.**
+
+Leading count (news_smallcap + news_bullish + earnings_soon): **111**.
+
+---
+
+## STEP 2 — Filter
+
+**Hard eliminated:**
+- Sub-$2 floor (~30 names): NOTV, HKIT, SNGX, BURU, AMZE, CXAI, DBGI, DEVS, DLXY, DXF, FSHPR, FLD, GGRP, HUBC, JZ, KNRX, LIMN, MKLYR, MYND, NUWE, ODVWZ, PMI, RFAMR, SBEV, SAFX, SELX, SOAR, WOK, YAAS, ZBAO, ZCMD
+- Over $65/share for even 1 share (~10): PVLA ($114), CIEN ($627), MRVL ($302), GOOGL ($359), ABVX ($90), AAPL ($310), AMZN ($250), NVDA ($215), PRLB ($75), IREN ($65.48)
+- Leveraged ETFs/inverse products: NVD, SOXS, TZA, TQQQ, SQQQ, BLSG, CRCG, CRMU, GEMG, LACG, LMNX, OKLL, OKTG, OPEG, QBTZ, RGTX, RGTZ, SOUX, UECG
+
+**Blow-offs (>30% intraday, no room):** XOS (+234%), WCT (+179%), TJGC (+185%), SDOT (+106%), STAK (+90%), FOFO (+64%), SELX (+60%), ANY (+44%), JLHL (+54%), ATPC (+43%), SOAR (+35%), HUBC (+35%), BNRG (+35%), VACHU (+35%), YMAT (+36%)
+
+**Deprioritized (15–30%, extended):**
+- LASE (+29% per FMP close, +70% per intraday sources): Defense tech wins are REAL — LSAD anti-drone system advanced into prototyping by US officials at SOF Week, Army depot validation for missile laser rust inhibitor, $250K J&J medical device order. Massive volume (206M shares). But parabolic move makes entry reckless. Monitor for consolidation base — not touching the blow-off candle.
+- QMCO (+27%): Preliminary Q4 FY2026 revenue beat ($77.5M vs $68M guided). But offset by a $100M private placement at $9.42/share while stock trades ~$16 — hugely dilutive. Mixed signal.
+- ABVX (+24%), ALOY (+19%), SLNG (+19%), DRTS (+18%), LESL (+18%) — no fresh catalysts identified beyond pure momentum.
+
+**224 in budget** after all hard filters.
+
+---
+
+## STEP 3 — Catalyst Evaluation
+
+### Finalists evaluated
+
+**TATT (TAT Technologies) — PICKED ✓**
+Catalyst: announced June 3, 2026 (published 14:40 UTC today) — $45M in new long-term MRO agreements (5–10 year terms) covering APU and heat exchanger maintenance for international commercial and cargo airlines. ALSO: $4M one-time pre-tax gain from sale of a minority interest, expected to be recognized in Q2 2026. Both announcements from official 6-K SEC filing (confirmed via PR Newswire + StockTitan).
+
+Catalyst age: SAME DAY, ~8 hours from filing to this run. Fresh.
+Stock reaction: +6.59% to $43.02 — modest move given the news. Real revenue backlog addition to a ~$559M market-cap company is meaningful. Aviation MRO is healthy and Industrials sector is in the green today (+0.33%). Volume 258K adequate for a $1 share position. The stock is early stage: real business news, barely moved, no blow-off.
+
+Setup:
+- 1 share × $43.20 = $43.20 ≤ $65 budget ✓
+- Take-profit: $47.50 (+10.4%) — modest re-rating to reflect backlog upgrade and $4M gain
+- Stop-loss: $40.00 (-7.3%) — below today's range; a drop to $40 on contract-win news would signal thesis break (secondary offering, broader order cancellation, or market panic)
+- R:R ≈ 1.4:1
+
+---
+
+**NVTS (Navitas Semiconductor) — FINALIST, NOT BOUGHT; added to WATCHLIST (pullback)**
+Catalyst: NVIDIA MGX ecosystem partnership confirmed at COMPUTEX 2026 (Taipei, June 2–5). Navitas's 800V→6V DC-DC power delivery board placed inside NVIDIA's AI Factory MGX Ecosystem Showcase. Q1 2026 earnings beat and multiple analyst upgrades compound the story. COMPUTEX event still live through June 5 — additional showcases possible.
+
+Why not bought: Stock closed $30.84 (+19.26% today) on top of +262% YTD. The partnership is real and durable, but the stock has already priced in a lot of the good news. Buying the blow-off after a 262% YTD + 19% day is the textbook "buying the blow-off candle" BRAIN.md warns against. Placed on watchlist: if it pulls back to $27 after COMPUTEX ends, the AI power infrastructure thesis still holds at a much better R:R.
+
+---
+
+**DOCU (DocuSign) — FINALIST, NOT BOUGHT; added to WATCHLIST (breakout)**
+Catalyst: Reports Q1 FY2027 earnings June 4, 2026. Consensus: EPS $0.99 (+10% YoY), revenue $824.75M (+8% YoY). Analyst avg price target $59.88 (vs current $54.95 = 9% upside). HOLD consensus from 22 analysts.
+
+Why not bought: The prior run (15:53Z) placed DOCU at $55.50 limit with the same thesis. The setup is materially unchanged — same price, same pre-earnings argument, Hold consensus from analysts. Per anti-chase rules: NOT re-picking the same name at the same price for the same unchanged thesis. Instead, placed on watchlist: BUY breakout at $57 ONLY IF earnings trigger a strong gap — i.e., the bot enters the confirmed reaction, not the hope.
+
+---
+
+### Notable passes
+
+| Symbol | Price | Move | Catalyst | Why Passed |
+|--------|-------|------|----------|------------|
+| KYTX | $7.83 | -0.9% | EULAR RA trial data | **BANNED** — anti-chase rule, 11 of 15 runs today |
+| LASE | $3.13 (FMP) | +29–70% | US Army anti-drone, J&J order | Blow-off; wait for base |
+| QMCO | $15.95 | +27% | Revenue beat | Dilutive $100M PP at $9.42 vs $16 market |
+| SLDB | $6.88 | +4.6% | Gene therapy FDA meetings | Stale — FDA Type C meeting was February 2026; today's article is a recap |
+| RCKT | $2.91 | +0.5% | Analyst target raised $9.39 | Article is a data aggregation piece, not a new analyst initiation; no fresh clinical catalyst |
+| SMWB | $4.17 | -4.9% | Perplexity AI collaboration | News broke during market hours; stock fell anyway — no market enthusiasm |
+| CIEN | $627 | +10% | Q2 earnings June 4 | Over $65 budget by 10x. No way to trade. |
+| PVLA | $113.63 | +8.6% | FDA pre-NDA meeting completed | 1 share = $113 > $65 budget |
+| TATT energy plays (KOS, OBE, NVGS) | various | flat/neg | Energy sector hot | KOS and NVGS barely moved; OBE dilutive acquisition; none met setup quality bar |
+| SPCB | $11.47 | -4% | $1.8M Norway contract | Down 4% on positive news = market unimpressed |
+
+---
+
+## Watchlist Summary
+Two entries added:
+1. **DOCU @ $57.00 breakout** — earnings gap reaction play; expires June 5
+2. **NVTS @ $27.00 pullback** — COMPUTEX event-driven run cools; buy the dip; expires June 7
+
+Retained prior watchlist: HPE (pullback $54), TISI (breakout $18), SVCO (pullback $12.50), MNKD (breakout $3.65), XOS (deep pullback $4.50 — now $7.46 post-blow-off).
+
+---
+
+## Summary
+Single buy order: **TATT 1 share @ $43.20** — fresh $45M MRO contract + $4M one-time gain, stock only +6.6%, aviation aerospace, clean early-stage setup. Wide funnel (264 names scanned, 111 leading) yielded only 1 finalist that cleared all quality bars — consistent with a neutral tape where most movers are either extended or lacking defined catalysts. Portfolio powder: ~$400 (all cash, no positions).
