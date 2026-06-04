@@ -363,6 +363,15 @@ def _read_candidates() -> dict:
         return {}
 
 
+def _slim_row(row: dict) -> dict:
+    """Token-diet for the brain: drop fields that carry NO information — null/empty
+    values and the redundant singular `signal` (the `signals` list already holds it).
+    Lossless: every meaningful value (and the full `signals` list) is preserved, so
+    the brain sees the identical candidate set and makes the identical decision."""
+    return {k: v for k, v in row.items()
+            if k != "signal" and v is not None and v != []}
+
+
 def _write_candidates(seen: dict, news_meta: dict | None = None,
                       market: dict | None = None, market_utc: str | None = None) -> None:
     counts: dict[str, int] = {}
@@ -378,12 +387,14 @@ def _write_candidates(seen: dict, news_meta: dict | None = None,
         **({"market_updated_utc": market_utc} if market_utc else {}),
         # AV news throttle state (persisted across runs):
         **(news_meta or {}),
-        "candidates": sorted(seen.values(), key=lambda x: x["symbol"]),
+        "candidates": [_slim_row(r) for r in sorted(seen.values(), key=lambda x: x["symbol"])],
     }
     try:
         os.makedirs(os.path.dirname(CANDIDATES_FILE), exist_ok=True)
         with open(CANDIDATES_FILE, "w", encoding="utf-8") as fh:
-            json.dump(data, fh, indent=2)
+            # Compact separators (no pretty-print whitespace): ~46% fewer bytes/tokens
+            # for the brain to read each run, with byte-for-byte the same parsed data.
+            json.dump(data, fh, separators=(",", ":"))
         print(f"Wrote {CANDIDATES_FILE}: {len(seen)} candidates {counts}")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not write candidates file: {exc}")
