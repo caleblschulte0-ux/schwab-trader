@@ -1,23 +1,23 @@
 {
-  "generated_utc": "2026-06-04T17:18:42Z",
+  "generated_utc": "2026-06-04T17:57:22Z",
   "watch": [
-    {"symbol": "POET", "trigger": "breakout", "trigger_price": 16.50,
-     "quantity": 4, "limit_price": 16.75, "take_profit": 20.50, "stop_loss": 14.25,
-     "good_until": "2026-06-10", "note": "Lumilens $500M AI photonics deal + US HQ redomicile vote June 26. Coiling below 16.50 resistance. Only enter on clean breakout with volume."},
     {"symbol": "DOCU", "trigger": "breakout", "trigger_price": 57.00,
      "quantity": 1, "limit_price": 57.25, "take_profit": 63.00, "stop_loss": 52.00,
-     "good_until": "2026-06-05", "note": "Earnings June 4 AH (EPS est $1.00). Enter ONLY on strong gap above $57 confirming a beat — skip entirely if stock gaps down or stays below $56."},
+     "good_until": "2026-06-05", "note": "BEAT: Q2 FY2026 EPS $0.92 vs $0.86 est, revenue $800.6M vs $795.8M. Stock surging AH. Enter only on gap/trade above $57 at open — skip if it fades below $56."},
     {"symbol": "SVCO", "trigger": "pullback", "trigger_price": 12.50,
      "quantity": 5, "limit_price": 12.65, "take_profit": 16.00, "stop_loss": 11.50,
-     "good_until": "2026-06-07", "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Pullback to $12.50 near earnings gap support."},
+     "good_until": "2026-06-07", "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Stock ran to ~$15 — pullback to $12.50 near earnings gap support is the entry."},
     {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
      "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
-     "good_until": "2026-06-07", "note": "Inhaled IPF drug enters global trial; Q3 2026 first data. Pre-catalyst coil. Only enter on breakout above $3.65 with volume."},
+     "good_until": "2026-06-09", "note": "MULTIPLE CATALYSTS: FDA approved Afrezza for pediatric use (ages 6+) June 4 + IPF nintedanib DPI Phase 1b/2 milestones + Q1 revenue +15% YoY. Pre-catalyst coil. Enter on breakout above $3.65 with volume."},
     {"symbol": "GHRS", "trigger": "breakout", "trigger_price": 26.50,
      "quantity": 2, "limit_price": 26.75, "take_profit": 31.00, "stop_loss": 23.50,
-     "good_until": "2026-06-07", "note": "Phase 2 GH001 data (treatment-resistant + postpartum depression) confirmed June 4. Stock at ~$24.20 (-1%) — market not yet moving it. Waiting for volume breakout above $26.50 to confirm momentum."},
+     "good_until": "2026-06-09", "note": "STRONG DATA confirmed June 4: Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, P<0.0001); Phase 2a PPD 10/10 patients rapid remission. Stock at ~$24 not yet reflecting full data. Wait for breakout above $26.50 on volume — CINP conference June 26-29 next catalyst."},
     {"symbol": "NTLA", "trigger": "pullback", "trigger_price": 14.50,
      "quantity": 4, "limit_price": 14.60, "take_profit": 18.00, "stop_loss": 13.00,
-     "good_until": "2026-06-07", "note": "Phase 3 lonvoguran (in vivo gene editing, HAE) + rolling BLA submission. Was up +17% on catalyst day — buy pullback to $14.50 support, not the blow-off candle."}
+     "good_until": "2026-06-09", "note": "Phase 3 lonvoguran (HAE, in vivo gene editing) + rolling BLA submission. Jefferies conference June 3 presentation. Buy pullback to $14.50 support, not the blow-off candle."},
+    {"symbol": "RXRX", "trigger": "pullback", "trigger_price": 3.50,
+     "quantity": 18, "limit_price": 3.55, "take_profit": 4.50, "stop_loss": 3.10,
+     "good_until": "2026-06-09", "note": "Q1 2026 earnings beat + AI drug discovery pipeline progress (Phase 2 signals in FAP). Up 12.7% today — wait for pullback to $3.50 support before entry. Do not chase at current $3.91."}
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-06-04T17:18:42Z",
-  "funnel": {"scanned": 265, "leading": 96, "in_budget": 195, "had_catalyst": 18, "finalists": 4, "picked": 1},
+  "generated_utc": "2026-06-04T17:57:22Z",
+  "funnel": {"scanned": 283, "leading": 100, "in_budget": 192, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
-    {"symbol": "LASE", "action": "BUY", "instrument": "stock",
-     "quantity": 19, "limit_price": 3.33, "take_profit": 4.25, "stop_loss": 2.75}
+    {"symbol": "JFB", "action": "BUY", "instrument": "stock",
+     "quantity": 11, "limit_price": 5.80, "take_profit": 7.25, "stop_loss": 5.00}
   ]
 }
