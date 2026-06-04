@@ -1,23 +1,26 @@
 {
-  "generated_utc": "2026-06-04T17:57:22Z",
+  "generated_utc": "2026-06-04T18:28:45Z",
   "watch": [
+    {"symbol": "LASE", "trigger": "pullback", "trigger_price": 3.00,
+     "quantity": 21, "limit_price": 3.05, "take_profit": 3.90, "stop_loss": 2.55,
+     "good_until": "2026-06-07", "note": "DoD anti-drone LSAD system selected under MEIA Vulcan (SOCOM interest at SOF Week 2026) + $250K J&J laser drilling order. 50M+ share volume today — huge institutional/retail attention. Stock ran from $2.79 open to $3.80 peak, pulled back to $3.29. Buy pullback to $3.00 near open support; target re-test of intraday high."},
     {"symbol": "DOCU", "trigger": "breakout", "trigger_price": 57.00,
-     "quantity": 1, "limit_price": 57.25, "take_profit": 63.00, "stop_loss": 52.00,
-     "good_until": "2026-06-05", "note": "BEAT: Q2 FY2026 EPS $0.92 vs $0.86 est, revenue $800.6M vs $795.8M. Stock surging AH. Enter only on gap/trade above $57 at open — skip if it fades below $56."},
+     "quantity": 1, "limit_price": 57.50, "take_profit": 63.00, "stop_loss": 52.00,
+     "good_until": "2026-06-06", "note": "Earnings after close June 4. Previous preview: EPS $0.99 est, revenue $824M est. Enter only on gap/open above $57 post-earnings — skip if it fades or misses badly."},
     {"symbol": "SVCO", "trigger": "pullback", "trigger_price": 12.50,
      "quantity": 5, "limit_price": 12.65, "take_profit": 16.00, "stop_loss": 11.50,
      "good_until": "2026-06-07", "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Stock ran to ~$15 — pullback to $12.50 near earnings gap support is the entry."},
     {"symbol": "MNKD", "trigger": "breakout", "trigger_price": 3.65,
      "quantity": 17, "limit_price": 3.70, "take_profit": 5.50, "stop_loss": 3.10,
-     "good_until": "2026-06-09", "note": "MULTIPLE CATALYSTS: FDA approved Afrezza for pediatric use (ages 6+) June 4 + IPF nintedanib DPI Phase 1b/2 milestones + Q1 revenue +15% YoY. Pre-catalyst coil. Enter on breakout above $3.65 with volume."},
+     "good_until": "2026-06-09", "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 next catalyst + Q1 revenue +15% YoY. Stock not showing full reaction yet — enter on volume breakout above $3.65."},
     {"symbol": "GHRS", "trigger": "breakout", "trigger_price": 26.50,
      "quantity": 2, "limit_price": 26.75, "take_profit": 31.00, "stop_loss": 23.50,
-     "good_until": "2026-06-09", "note": "STRONG DATA confirmed June 4: Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, P<0.0001); Phase 2a PPD 10/10 patients rapid remission. Stock at ~$24 not yet reflecting full data. Wait for breakout above $26.50 on volume — CINP conference June 26-29 next catalyst."},
+     "good_until": "2026-06-09", "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, P<0.0001); Phase 2a PPD 10/10 rapid remission confirmed June 4. Stock at ~$23.69 not yet reflecting full data. CINP conference June 26-29 next catalyst. Wait for breakout above $26.50 on volume."},
     {"symbol": "NTLA", "trigger": "pullback", "trigger_price": 14.50,
      "quantity": 4, "limit_price": 14.60, "take_profit": 18.00, "stop_loss": 13.00,
      "good_until": "2026-06-09", "note": "Phase 3 lonvoguran (HAE, in vivo gene editing) + rolling BLA submission. Jefferies conference June 3 presentation. Buy pullback to $14.50 support, not the blow-off candle."},
     {"symbol": "RXRX", "trigger": "pullback", "trigger_price": 3.50,
      "quantity": 18, "limit_price": 3.55, "take_profit": 4.50, "stop_loss": 3.10,
-     "good_until": "2026-06-09", "note": "Q1 2026 earnings beat + AI drug discovery pipeline progress (Phase 2 signals in FAP). Up 12.7% today — wait for pullback to $3.50 support before entry. Do not chase at current $3.91."}
+     "good_until": "2026-06-09", "note": "Q1 2026 earnings beat + AI drug discovery pipeline progress (Phase 2 signals in FAP). Currently $3.86 — wait for pullback to $3.50 support before entry."}
   ]
 }
