@@ -1,25 +1,26 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-04T14:20:29Z_
+_Updated 2026-06-04T17:18:50Z_
 
-**Equity:** $406.39  (start $400.00, **+6.39 / +1.6%**)  
-**Cash:** $3.62   **Invested:** $396.38   **Open positions:** 7  
-**Realized P/L:** $+0.00   **Unrealized:** $+6.39   **Closed trades:** 0   **Win rate:** 0%
+**Equity:** $1004.41  (start $1000.00, **+4.41 / +0.4%**)  
+**Cash:** $539.93   **Invested:** $460.07   **Open positions:** 8  
+**Realized P/L:** $+0.00   **Unrealized:** $+4.41   **Closed trades:** 0   **Win rate:** 0%
 
-## Open positions
+## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
-| Symbol | Qty | Entry | Last | TP | SL | Unrealized |
-|--------|-----|-------|------|----|----|------------|
-| DRTS | 6 | $10.52 | $10.61 | $13.50 | $9.00 | $+0.54 |
-| HPE | 1 | $53.57 | $53.46 | $65.00 | $50.00 | $-0.11 |
-| NVGS | 2 | $23.55 | $22.05 | $26.50 | $19.50 | $-2.99 |
-| NVTS | 2 | $29.25 | $29.33 | $37.00 | $27.00 | $+0.16 |
-| SLDB | 9 | $6.86 | $7.32 | $10.50 | $5.90 | $+4.14 |
-| TISI | 3 | $18.09 | $17.80 | $21.50 | $16.00 | $-0.87 |
-| TLYS | 12 | $4.84 | $5.30 | $6.20 | $4.20 | $+5.52 |
+| Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
+|--------|------|-----|-------|------|----|----|------------|
+| DRTS | stock | 6 | $10.52 | $10.64 | $13.50 | $9.00 | $+0.72 |
+| HPE | stock | 1 | $53.57 | $53.46 | $65.00 | $50.00 | $-0.11 |
+| JFB | stock | 11 | $5.79 | $5.76 | $7.25 | $5.00 | $-0.35 |
+| NVGS | stock | 2 | $23.55 | $21.80 | $26.50 | $19.50 | $-3.50 |
+| NVTS | stock | 2 | $29.25 | $30.31 | $37.00 | $27.00 | $+2.12 |
+| SLDB | stock | 9 | $6.86 | $7.27 | $10.50 | $5.90 | $+3.69 |
+| TISI | stock | 3 | $18.09 | $18.14 | $21.50 | $16.00 | $+0.15 |
+| TLYS | stock | 12 | $4.84 | $4.98 | $6.20 | $4.20 | $+1.69 |
 
 ## Last 15 closed trades
 
-| Symbol | Qty | Entry | Exit | P/L | % | Reason | Closed |
-|--------|-----|-------|------|-----|---|--------|--------|
-| _none yet_ | | | | | | | |
+| Symbol | Kind | Qty | Entry | Exit | P/L | % | Reason | Closed |
+|--------|------|-----|-------|------|-----|---|--------|--------|
+| _none yet_ | | | | | | | | |
