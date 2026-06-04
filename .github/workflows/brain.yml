@@ -105,7 +105,11 @@ jobs:
             if git push; then echo "pushed."; exit 0; fi
             echo "push rejected (main moved); syncing and retrying ($i)..."
             git fetch origin main
-            git reset --soft origin/main
+            # --mixed (NOT --soft): reset the index to fresh main so we re-stage ONLY
+            # our own $FILES on top of it. With --soft the index kept our stale full
+            # tree, so committing silently REVERTED files others changed under us
+            # (e.g. the trader's paper_account.json). --mixed fixes that data-loss bug.
+            git reset --mixed origin/main
             git add $FILES 2>/dev/null || true
             git diff --cached --quiet && { echo "brain output already current."; exit 0; }
             git commit -m "brain: update picks [skip ci]"

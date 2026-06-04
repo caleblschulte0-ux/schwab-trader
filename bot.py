@@ -68,7 +68,7 @@ WATCHLIST_FILE        = "signals/watchlist.json"
 #     "owns" (kills the re-pick/averaging-down churn) AND we get a real P/L scorecard. ---
 PAPER_ACCOUNT_FILE    = "signals/paper_account.json"   # simulated cash + positions + closed trades
 PAPER_LEDGER_FILE     = "reports/paper_ledger.md"      # human-readable running P/L log
-PAPER_START_EQUITY    = 400.00                          # starting paper cash (~the real account)
+PAPER_START_EQUITY    = 1000.00                         # paper trading capital (bumped 400 -> 1000)
 # --- watchlist (bot auto-enters when a brain-set trigger fires between runs) ---
 MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls)
 MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)

@@ -60,7 +60,10 @@ jobs:
             fi
             echo "push rejected (main moved); syncing to latest and retrying ($i)..."
             git fetch origin main
-            git reset --soft origin/main
+            # --mixed (NOT --soft): reset index to fresh main, then re-stage ONLY our
+            # snapshot files — so we never commit a stale full tree that reverts the
+            # brain's orders/picks changed under us. (Mirror of the brain.yml fix.)
+            git reset --mixed origin/main
             git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
             git diff --cached --quiet && { echo "snapshot already current."; exit 0; }
             git commit -m "bot: update holdings + paper-book snapshot [skip ci]"
