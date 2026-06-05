@@ -1,68 +1,76 @@
-# Brain Run — 2026-06-05T15:30:00Z
+# Brain Run — 2026-06-05T15:52:44Z
 
-**Funnel:** scanned 282 → ~200 fit budget → 45 with catalyst → 5 finalists → picked 1
-
----
-
-## Market Tape (risk_off)
-SPY −1.06%, VIX 16.41. Broad tape red. Best sectors: Consumer Defensive +1.13%, Healthcare +0.54%, Real Estate +0.34%. Worst: Energy −2.61%, Consumer Cyclical −1.66%, Technology −0.99%. Running with elevated discipline — only defined-catalyst, relative-strength entries qualify on this tape.
+**Funnel:** scanned 281 → 195 fit budget → 38 with catalyst → 3 finalists → picked 0 new (1 SELL confirmed)
 
 ---
 
-## SELL: ONDS — all 4 dead-money laggard conditions met
-1. **Materially red:** avg $12.39 → last seen $10.92 = −11.9% (exceeds −8% threshold)
-2. **Relative weakness:** down −8.77% today while Consumer Defensive, Healthcare, Real Estate, and Basic Materials are all green; printing fresh intraday lows on risk_off tape
-3. **Thesis gone/stale:** appears only as an "actives mover" in today's funnel with no catalyst field — original reason to own is absent from the funnel
-4. **Prior session:** holdings.json updated 02:55 UTC (pre-market), confirming overnight carry from a previous session — not a same-day entry
+## Market Tape
 
-Capital recycled for a better-positioned setup.
-
----
-
-## BUY: COYA — 30 shares @ $4.97 ($149.10)
-
-**Catalyst age: ~9h, confirmed real.** Roth/MKM initiated Coya Therapeutics with a Buy rating today (published 06:39 UTC June 5, 2026 — verified via web search). Stock barely moved (+1.95%) — early stage of the move.
-
-**Catalyst stack (bullish layering):**
-- Today: Roth/MKM Buy initiation (new analyst coverage)
-- May 12: FDA Fast Track Designation for COYA-302 in ALS treatment
-- May 12: Q1 2026 results + corporate update
-- Jan 2026: $11M private placement, $10M commitment from Dr. Reddy's Laboratories
-- HC Wainwright also rates Buy (reiterated recently)
-
-**Setup:** Healthcare sector +0.54% — one of only three green sectors on a risk_off tape, showing defined relative strength. Tiny $116M market cap with significant upside potential. 52-week range $3.94–$7.75; current $4.965 in the lower-middle with room. Risk_off rule: demand relative strength + defined catalyst — COYA is both.
-
-**R/R:** tp $5.50 (+10.7%) / sl $4.68 (−5.8%) ≈ 1.84:1
-
-**Watchlist note:** Had COYA queued at $4.80 pullback trigger. Healthcare holding green on a red tape — pullback may not materialize. Entering now rather than risking a miss.
-
----
-
-## Finalists Considered (Passed)
-
-**GIII** ($34.93, +9.02%) — G-III Apparel Q1 beat boosted by tariff refund. Fresh catalyst (13:29 UTC), strong volume 443K, bullish 0.419. **Passed:** Consumer Cyclical is −1.66% (second-weakest sector) — wrong sector on a risk_off tape. Already up 9% narrows upside. Runner-up.
-
-**FF** ($4.45, +1.83%) — FutureFuel CEO bought 10,000 shares open-market (published 12:21 UTC, fresh). Basic Materials +0.23% green, early in move. **Passed:** CEO purchase was ~$44K — routine-sized for a CEO; COYA's analyst initiation is a stronger, more actionable catalyst with broader institutional signal.
-
-**GASS** ($9.46, +3.05%) — StealthGas Q1 results bullish (published 13:01 UTC, fresh). LPG tanker showing relative strength vs Energy (−2.61%). **Passed:** Energy is the worst sector today by a wide margin; also note a GASS order may have been placed earlier (~14:22Z per prior run's positions.md) — cannot re-buy a potential pending fill.
-
-**DNUT** ($3.545, +8.41%) — Krispy Kreme on National Doughnut Day, Consumer Defensive best sector, volume 1.97M. **Passed:** One-day consumer holiday catalyst is not durable. Already up 8.4% mid-session; most of the move is priced in.
+**risk_off.** SPY −1.06%, VIX 16.41. Green sectors: Consumer Defensive (+1.13%), Healthcare (+0.54%), Real Estate (+0.34%), Basic Materials (+0.23%). Red: Technology (−0.99%), Consumer Cyclical (−1.66%), Energy (−2.61%). With 9 existing positions and the broad tape red, the bar for new entries is materially elevated this run. No forced trades into a falling market.
 
 ---
 
 ## Holdings Review
 
-**ONDS** — SELL issued (dead-money laggard — see above)
+All 9 holdings evaluated against the dead-money laggard cut rule (all four conditions required):
 
-**HPE** — In funnel as news_bullish: "Hewlett Packard Enterprise Shares Surge on AI Demand" (published 13:54 UTC today, fresh). Technology sector −0.99% is headwind but HPE has a live, company-specific AI demand catalyst. **HOLD** — thesis intact.
+| Symbol | Avg | Last Seen | Chg vs Avg | Today | Verdict |
+|--------|-----|-----------|------------|-------|---------|
+| DRTS | $10.52 | $10.86 | +3.2% | +21.6% | **HOLD** — Tolmar $35M partnership + strong ASCO pancreatic data; thesis very alive |
+| HPE | $53.57 | $58.85 | +9.9% | +25.2% | **HOLD** — Q2 FY26 revenue +40% YoY, PT raised to $70–$79 by Goldman/Argus; major fundamental re-rating |
+| JFB | $5.79 | $5.87 | +1.4% | −2.5% | **HOLD** — XTEND AI Robotics merger catalyst intact; mild drift, not dead money |
+| NVGS | $23.55 | $21.07 | −10.5% | +1.4% | **HOLD** — down vs avg but beating market today (relative strength); fails condition 2 |
+| NVTS | $29.25 | $29.43 | +0.6% | flat | **HOLD** — NVIDIA MGX 800V partnership (June 3); consolidating after $34.17 ATH; thesis alive |
+| ONDS | $12.39 | $10.85 | −12.4% | −9.4% | **SELL — dead money** (all 4 conditions confirmed, see below) |
+| SLDB | $6.86 | $7.03 | +2.5% | flat | **HOLD** — above avg; Goldman Sachs Healthcare Conference June 8 upcoming catalyst |
+| TISI | $18.09 | ~$17.00 | −6.0% | −1.5% | **HOLD** — below −8% threshold; normal consolidation after +28% YTD run |
+| TLYS | $4.84 | $5.03 | +3.9% | +7.0% | **HOLD** — Q1 FY27 comp +22.9%, still carrying earnings momentum |
 
-**GASS** — Not in holdings.json (pre-market snapshot) but prior positions.md notes a possible order from ~14:22Z. Treat as potentially held; not re-buying.
+### ONDS dead-money cut — all four conditions confirmed:
+1. **Materially RED**: −12.4% vs avg entry ($10.85 / $12.39) ✓ (exceeds −8% threshold)
+2. **Relative weakness**: −9.35% today vs market −1.06%; sharply underperforming in an ugly tape ✓
+3. **Catalyst gone/stale**: appears only as a raw "actives mover" in today's funnel — no fresh catalyst field; the thesis is not present ✓
+4. **Prior session**: holdings.json dated 02:55 UTC, position is an overnight carry from a prior session ✓
 
-**DRTS, JFB, NVGS, NVTS, SLDB, TISI, TLYS** — Not in today's funnel; current prices unavailable in candidates.json. No adverse news surfaced. No action this run.
+SELL ONDS — re-confirming the previous run's SELL. Capital recycled.
+
+---
+
+## New Setup Scan — Finalists
+
+### FF (FutureFuel, $4.47, +2.17%) → WATCHLIST
+- **Catalyst**: CEO open-market purchase of 10,000 shares (published 12:21 UTC today — ~3.5 hrs ago, very fresh).
+- **Sector**: Basic Materials (+0.23% today) — one of four green sectors on a risk_off tape.
+- **Relative strength**: +2.17% while SPY −1.06% — beating the market.
+- **Stage**: early — barely moved, room to a clean +10% target.
+- **Why not buying outright**: 9 positions currently deployed, already above the ~6-position target. Risk_off mandate is "fewer positions, higher bar." This setup is genuinely good but not so exceptional it overrides the over-capacity discipline. Adding as pullback watchlist entry at $4.20.
+
+### GIII (G-III Apparel, $35.02, +9.28%) → WATCHLIST
+- **Catalyst**: Q1 FY27 earnings beat boosted by tariff refund (8-K published 13:29 UTC today — very fresh, ~2 hrs ago). Volume 539K confirms participation.
+- **Stage**: already +9.28% — approaching the 15% deprioritize threshold.
+- **Why not buying outright**: Consumer Cyclical sector under heavy pressure (−1.66%), the second-worst sector today. Earnings beat with tariff tailwind may not overcome sector headwind on risk_off. Adding as pullback watchlist at $33.50 — would reconsider outright tomorrow if sector stabilizes.
+
+### HCAT (Health Catalyst, $2.02, +4.13%) — PASS
+- Catalyst: $147M Vitalware divestiture (published 02:09 UTC — ~14 hrs ago; catalyst is stale).
+- Healthcare sector is green (+0.54%), but the move has been absorbed over 14 hours.
+- Price just barely clears the $2 floor — minimal margin.
+- **Pass**: stale catalyst + floor proximity risk.
+
+---
+
+## Other Notable Names Reviewed
+
+- **BNAI (+56.8%)**, **STI (+64.4%)**, **BBCP (+45%)**: blow-off moves; near-vertical, no room. Hard pass.
+- **HURC (+17.2%)**: earnings mover in deprioritize band.
+- **GASS (+2.4%)**: Q1 earnings bullish, but Energy sector −2.61% is strongest headwind of the day.
+- **CABA (−5.6%)**: strong clinical data (83% response rate) but stock declining on good news — red flag.
+- **DNUT (+6.2%)**: National Doughnut Day seasonal — not a durable catalyst.
+- **BZUN (−0.75%)**: CEO insider buy positive, Chinese company, barely any reaction. Not enough edge.
+- **ATOM (+4.3%)**: GaN-on-silicon advance, but Tech sector down; no strong edge.
+- Previous run's **COYA BUY** ($4.88, +0.2%): Healthcare sector green; Roth/MKM initiation from 06:39 UTC today. NOT re-issued per anti-re-pick rule (same thesis, no new catalyst, slightly lower price). If the bot did not execute from the prior orders.json, the trade is foregone this session.
 
 ---
 
 ## Watchlist Changes This Run
-- **Removed COYA** — buying directly at market this run
-- **Removed BNAI** — stock ran to $29.87 (+82.8% today); $17.50 pullback trigger is now 41% below current price; investor-anchor thesis at $17.82 is irrelevant at these levels. Stale/dead entry removed.
-- All other watchlist entries retained: LASE, SVCO, MNKD, GHRS, NTLA, RXRX, PLSE, GOGO
+- **Added**: FF (pullback $4.20, Basic Materials + CEO insider buy) and GIII (pullback $33.50, fresh earnings beat)
+- **Retained**: GOGO (trigger $3.85, within striking distance today at $4.00), LASE, SVCO, MNKD, GHRS, NTLA, RXRX, PLSE — all within good_until dates

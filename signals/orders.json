@@ -1,9 +1,7 @@
 {
-  "generated_utc": "2026-06-05T15:30:00Z",
-  "funnel": {"scanned": 282, "leading": 89, "in_budget": 200, "had_catalyst": 45, "finalists": 5, "picked": 1},
+  "generated_utc": "2026-06-05T15:52:44Z",
+  "funnel": {"scanned": 281, "leading": 89, "in_budget": 195, "had_catalyst": 38, "finalists": 3, "picked": 0},
   "orders": [
-    {"symbol": "ONDS", "action": "SELL"},
-    {"symbol": "COYA", "action": "BUY", "instrument": "stock",
-     "quantity": 30, "limit_price": 4.97, "take_profit": 5.50, "stop_loss": 4.68}
+    {"symbol": "ONDS", "action": "SELL"}
   ]
 }
