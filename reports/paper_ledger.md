@@ -1,10 +1,10 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-05T23:20:25Z_
+_Updated 2026-06-05T23:25:22Z_
 
-**Equity:** $974.77  (start $1000.00, **-25.23 / -2.5%**)  
+**Equity:** $974.59  (start $1000.00, **-25.41 / -2.5%**)  
 **Cash:** $181.12   **Invested:** $802.12   **Open positions:** 11  
-**Realized P/L:** $-16.76   **Unrealized:** $-8.48   **Closed trades:** 3   **Win rate:** 0%
+**Realized P/L:** $-16.76   **Unrealized:** $-8.66   **Closed trades:** 3   **Win rate:** 0%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
@@ -17,7 +17,7 @@ _Updated 2026-06-05T23:20:25Z_
 | NRXP | stock | 35 | $4.22 | $4.15 | $4.65 | $4.00 | $-2.45 |
 | NVGS | stock | 2 | $23.55 | $21.79 | $26.50 | $19.50 | $-3.52 |
 | PLSE | stock | 2 | $25.49 | $25.34 | $31.50 | $23.50 | $-0.30 |
-| RXRX | stock | 18 | $3.29 | $3.30 | $4.50 | $3.10 | $+0.18 |
+| RXRX | stock | 18 | $3.29 | $3.29 | $4.50 | $3.10 | $+0.00 |
 | SLDB | stock | 9 | $6.86 | $6.83 | $10.50 | $5.90 | $-0.27 |
 | TISI | stock | 3 | $18.09 | $17.72 | $21.50 | $16.00 | $-1.11 |
 | TLYS | stock | 12 | $4.84 | $5.26 | $6.20 | $4.20 | $+5.00 |
