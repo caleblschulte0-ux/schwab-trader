@@ -1,10 +1,10 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-05T20:30:27Z_
+_Updated 2026-06-05T20:35:23Z_
 
-**Equity:** $972.28  (start $1000.00, **-27.72 / -2.8%**)  
+**Equity:** $970.96  (start $1000.00, **-29.04 / -2.9%**)  
 **Cash:** $181.12   **Invested:** $802.12   **Open positions:** 11  
-**Realized P/L:** $-16.76   **Unrealized:** $-10.97   **Closed trades:** 3   **Win rate:** 0%
+**Realized P/L:** $-16.76   **Unrealized:** $-12.29   **Closed trades:** 3   **Win rate:** 0%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
@@ -20,7 +20,7 @@ _Updated 2026-06-05T20:30:27Z_
 | RXRX | stock | 18 | $3.29 | $3.30 | $4.50 | $3.10 | $+0.18 |
 | SLDB | stock | 9 | $6.86 | $6.71 | $10.50 | $5.90 | $-1.35 |
 | TISI | stock | 3 | $18.09 | $17.72 | $21.50 | $16.00 | $-1.11 |
-| TLYS | stock | 12 | $4.84 | $5.27 | $6.20 | $4.20 | $+5.16 |
+| TLYS | stock | 12 | $4.84 | $5.16 | $6.20 | $4.20 | $+3.84 |
 
 ## Last 15 closed trades
 
