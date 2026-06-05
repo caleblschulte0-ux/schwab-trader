@@ -21,9 +21,12 @@ the corresponding sources; worst case the file is small or absent.
 """
 from __future__ import annotations
 
+import email.utils
 import json
 import os
+import re
 from datetime import datetime, timedelta, timezone
+from xml.etree import ElementTree
 
 # ===== KNOBS (data sources only; no money guardrails live here) =====
 MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump traps
@@ -33,6 +36,18 @@ FMP_BASE              = "https://financialmodelingprep.com/stable"
 EARNINGS_LOOKAHEAD_DAYS = 7     # enrich any candidate reporting within this window
 EARNINGS_ADD_DAYS       = 7     # also ADD covered names reporting within this window
 MAX_EARNINGS_ADD        = 80    # cap pre-earnings names added as fresh candidates
+# --- trading halts / resumptions (Nasdaq Trader RSS; no key) ---
+HALTS_URL             = "http://www.nasdaqtrader.com/rss.aspx?feed=tradehalts"
+MAX_HALTS             = 60      # cap same-day halt/resume names added as candidates
+# --- fresh SEC 8-K filings (SEC EDGAR; no key, descriptive User-Agent required) ---
+SEC_8K_ATOM_URL       = ("https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent"
+                         "&type=8-K&company=&dateb=&owner=include&count=100&output=atom")
+SEC_TICKERS_URL       = "https://www.sec.gov/files/company_tickers.json"
+SEC_HEADERS           = {
+    "User-Agent": "schwab-trader/1.0 (caleblschulte0@gmail.com)",
+    "Accept": "application/atom+xml, application/xml, application/json, text/xml",
+}
+MAX_8K                = 80      # cap fresh same-day SEC 8-K names added as candidates
 # --- stock-news funnel (Alpha Vantage News & Sentiment; free tier = 25 calls/day) ---
 NEWS_BASE             = "https://www.alphavantage.co/query"
 NEWS_DAILY_BUDGET     = 22      # max AV calls per UTC day (under the 25/day free cap)
@@ -55,6 +70,9 @@ REGIME_INDEXES        = ("SPY", "QQQ")  # ETF proxies for the broad-market trend
 FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 # Alpha Vantage stock-news key. Accept either name (the GitHub secret is ALPHA_API_KEY).
 AV_API_KEY    = (os.environ.get("ALPHA_API_KEY") or os.environ.get("ALPHAVANTAGE_API_KEY", "")).strip()
+
+# Cached SEC CIK -> ticker map (one fetch per process; the file is ~large but static).
+_SEC_CIK_TICKERS: dict[int, str] | None = None
 
 
 def _parse_dt(val):
@@ -92,6 +110,29 @@ def _http_json(url: str, timeout: int = 20, retries: int = 2, headers: dict | No
     raise last_exc  # type: ignore[misc]
 
 
+def _http_text(url: str, timeout: int = 20, retries: int = 2, headers: dict | None = None) -> str:
+    """GET text/XML with the same transient-retry behavior as _http_json (used by the
+    no-key Nasdaq-halts RSS and SEC EDGAR feeds, which return XML, not JSON)."""
+    import time
+    import urllib.error
+    import urllib.request
+    req = urllib.request.Request(url, headers=headers or {})
+    last_exc: Exception | None = None
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode("utf-8", errors="replace")
+        except urllib.error.HTTPError as exc:
+            if 400 <= exc.code < 500:
+                raise  # permanent (404/403/...) — don't retry
+            last_exc = exc  # 5xx: transient
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            last_exc = exc  # network blip: transient
+        if attempt < retries:
+            time.sleep(0.5 * (2 ** attempt))
+    raise last_exc  # type: ignore[misc]
+
+
 def _fmp_get(endpoint: str, params: str = "") -> list:
     """GET one FMP /stable endpoint -> list of rows (light retry on transient errors;
     no retry on 402/404). Returns [] if the body isn't a list. Raises on hard failure
@@ -111,6 +152,7 @@ def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
     +4% mover ALSO reports earnings tomorrow. Returns True if newly added."""
     if not sym:
         return False
+    sym = str(sym).strip().upper()  # normalize so the same ticker never splits into two rows
     row = seen.get(sym)
     if row is None:
         seen[sym] = {
@@ -196,6 +238,236 @@ def _fetch_leading(seen: dict) -> None:
         print(f"(fmp) earnings (next {EARNINGS_LOOKAHEAD_DAYS}d): enriched {enriched}, added {added} upcoming")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
+
+
+# ===== no-key LEADING feeds: trading halts (Nasdaq Trader) + fresh SEC 8-Ks (EDGAR) =====
+# These need NO API key, so they run every time and are the reason the brain can drop its
+# live "halts" / "8-K" web searches. Both are wrapped so a dead endpoint just no-ops.
+
+def _xml_local(tag: str) -> str:
+    """Strip any '{namespace}' prefix from an XML tag and lowercase it (RSS/Atom feeds
+    namespace their elements, so we match on the local name only)."""
+    return str(tag).rsplit("}", 1)[-1].lower()
+
+
+def _xml_text(elem: ElementTree.Element, *names: str) -> str | None:
+    """First non-empty text of any descendant whose local tag matches one of `names`."""
+    wanted = {n.lower() for n in names}
+    for child in elem.iter():
+        if _xml_local(child.tag) in wanted and child.text:
+            val = child.text.strip()
+            if val:
+                return val
+    return None
+
+
+def _xml_attr(elem: ElementTree.Element, name: str, attr: str) -> str | None:
+    """Value of `attr` on the first descendant whose local tag matches `name`."""
+    lname = name.lower()
+    for child in elem.iter():
+        if _xml_local(child.tag) == lname:
+            val = child.attrib.get(attr)
+            if val:
+                return val.strip()
+    return None
+
+
+def _market_tz():
+    """US market timezone for interpreting Nasdaq halt timestamps (they're ET, no zone)."""
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo("America/New_York")
+    except Exception:  # noqa: BLE001 - Windows may lack zoneinfo data; fall back to UTC
+        return timezone.utc
+
+
+def _parse_halt_dt(date_val: str | None, time_val: str | None) -> datetime | None:
+    """Parse a Nasdaq halt date+time (ET, several possible formats) -> UTC datetime."""
+    if not date_val:
+        return None
+    raw_date = str(date_val).strip()
+    raw_time = str(time_val or "").strip()
+    if not raw_time or raw_time in {"-", "N/A"}:
+        raw_time = "00:00:00"
+    raw = f"{raw_date} {raw_time}"
+    for fmt in ("%m/%d/%Y %H:%M:%S", "%m/%d/%Y %H:%M",
+                "%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y %I:%M %p",
+                "%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M",
+                "%m/%d/%y %H:%M:%S", "%m/%d/%y %H:%M",
+                "%m/%d/%y %I:%M:%S %p", "%m/%d/%y %I:%M %p"):
+        try:
+            return datetime.strptime(raw, fmt).replace(tzinfo=_market_tz()).astimezone(timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+def _parse_feed_dt(val: str | None) -> datetime | None:
+    """Parse an RSS/Atom timestamp (RFC822 via email.utils, ISO fallback) -> UTC."""
+    if not val:
+        return None
+    try:
+        parsed = email.utils.parsedate_to_datetime(str(val))
+    except (TypeError, ValueError):
+        parsed = _parse_dt(val)
+    if not parsed:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def _is_today_or_recent(dt: datetime | None, *, hours: int = 24) -> bool:
+    """True if `dt` is today's UTC date OR within the last `hours` (freshness gate)."""
+    if not dt:
+        return False
+    now = datetime.now(timezone.utc)
+    return dt.date() == now.date() or dt >= now - timedelta(hours=hours)
+
+
+def _fetch_halts(seen: dict) -> None:
+    """LEADING halt/resume funnel from the free Nasdaq Trader RSS — LULD halts often
+    precede the biggest small-cap moves, so catching the RESUME is the edge. Keeps only
+    today's/recent events, caps at MAX_HALTS, tags them `halt_resume`. A dead endpoint
+    just no-ops (the brain simply won't see halts that run)."""
+    try:
+        xml = _http_text(HALTS_URL, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
+        root = ElementTree.fromstring(xml)
+        picked: list[dict] = []
+        for item in root.iter():
+            if _xml_local(item.tag) != "item":
+                continue
+            sym = (_xml_text(item, "IssueSymbol", "Symbol", "Ticker", "issue_symbol") or "").strip().upper()
+            if not sym:
+                continue
+            halt_dt = _parse_halt_dt(
+                _xml_text(item, "HaltDate", "TradeHaltDate", "halt_date"),
+                _xml_text(item, "HaltTime", "TradeHaltTime", "halt_time"),
+            )
+            resume_dt = _parse_halt_dt(
+                _xml_text(item, "ResumeDate", "ResumptionDate", "TradeResumeDate", "resume_date"),
+                _xml_text(item, "ResumeTime", "ResumptionTime", "TradeResumeTime", "resume_time"),
+            )
+            event_dt = resume_dt or halt_dt or _parse_feed_dt(_xml_text(item, "pubDate", "updated"))
+            if not _is_today_or_recent(event_dt, hours=24):
+                continue
+            picked.append({
+                "sym": sym,
+                "name": _xml_text(item, "IssueName", "CompanyName", "SecurityName", "Name"),
+                "event_dt": event_dt,
+                "resume_dt": resume_dt,
+                "halt_dt": halt_dt,
+                "reason": _xml_text(item, "ReasonCode", "HaltReason", "Reason", "ReasonCodeDescription"),
+            })
+        # Prefer names with a resumption set, then most recent event.
+        picked.sort(key=lambda x: (x["resume_dt"] is not None, x["event_dt"] or datetime.min.replace(tzinfo=timezone.utc)),
+                    reverse=True)
+        added = 0
+        for row in picked[:MAX_HALTS]:
+            cat = {
+                "halt_reason": row["reason"],
+                "halt_time": row["halt_dt"].isoformat() if row["halt_dt"] else None,
+                "resume_time": row["resume_dt"].isoformat() if row["resume_dt"] else None,
+                "source": "nasdaqtrader",
+                "published_utc": row["event_dt"].isoformat() if row["event_dt"] else None,
+            }
+            if _merge_candidate(seen, row["sym"], name=row["name"], lst="halts",
+                                signal="halt_resume", catalyst=cat):
+                added += 1
+        print(f"(halts) +{added} halt/resume names")
+    except Exception as exc:  # noqa: BLE001 - never let data fetch break the run
+        print(f"(warn) trading halts fetch failed (skipped): {exc}")
+
+
+def _sec_cik_tickers() -> dict[int, str]:
+    """Fetch + cache SEC's CIK -> ticker map (company_tickers.json). One call per process."""
+    global _SEC_CIK_TICKERS
+    if _SEC_CIK_TICKERS is not None:
+        return _SEC_CIK_TICKERS
+    payload = _http_json(SEC_TICKERS_URL, timeout=25, headers=SEC_HEADERS)
+    rows = payload.values() if isinstance(payload, dict) else payload
+    out: dict[int, str] = {}
+    for row in rows if isinstance(rows, list) or hasattr(rows, "__iter__") else []:
+        if not isinstance(row, dict):
+            continue
+        try:
+            cik = int(str(row.get("cik_str", "")).strip().lstrip("0") or "0")
+        except ValueError:
+            continue
+        ticker = str(row.get("ticker", "")).strip().upper()
+        if cik and ticker:
+            out[cik] = ticker
+    _SEC_CIK_TICKERS = out
+    return out
+
+
+def _entry_cik(entry: ElementTree.Element, title: str | None) -> int | None:
+    """CIK for an EDGAR atom <entry> — from a <cik> element, else the '(0001234567)' in
+    the title — normalized to an int (leading zeros stripped) to match the ticker map."""
+    raw = _xml_text(entry, "cik", "cikNumber", "companyCik")
+    if not raw and title:
+        match = re.search(r"\((0*\d{1,10})\)", title)
+        raw = match.group(1) if match else None
+    if not raw:
+        return None
+    try:
+        return int(str(raw).strip().lstrip("0") or "0")
+    except ValueError:
+        return None
+
+
+def _entry_link(entry: ElementTree.Element) -> str | None:
+    """Best filing URL for an EDGAR atom <entry> (link href, else id/link text)."""
+    href = _xml_attr(entry, "link", "href")
+    if href:
+        return href
+    return _xml_text(entry, "link", "id")
+
+
+def _fetch_sec_8k(seen: dict) -> None:
+    """LEADING funnel of FRESH SEC 8-K filings (material events: contracts, M&A, FDA,
+    offerings) — the earliest catalyst, often before the stock moves. Maps each filing's
+    CIK to a ticker, keeps only the last ~12h, dedupes by (ticker, url), caps at MAX_8K,
+    tags `sec_8k`. SEC requires a descriptive User-Agent; failures no-op."""
+    try:
+        cik_map = _sec_cik_tickers()
+        xml = _http_text(SEC_8K_ATOM_URL, timeout=25, headers=SEC_HEADERS)
+        root = ElementTree.fromstring(xml)
+        added = merged = 0
+        filings_seen: set[tuple[str, str]] = set()
+        for entry in root.iter():
+            if _xml_local(entry.tag) != "entry":
+                continue
+            title = _xml_text(entry, "title")
+            cik = _entry_cik(entry, title)
+            sym = cik_map.get(cik) if cik else None
+            if not sym:
+                continue
+            published = (_parse_dt(_xml_text(entry, "updated", "published")) or
+                         _parse_feed_dt(_xml_text(entry, "updated", "published")))
+            if not _is_today_or_recent(published, hours=12):
+                continue
+            url = _entry_link(entry) or _xml_text(entry, "id") or ""
+            key = (sym, url)
+            if key in filings_seen:
+                continue
+            filings_seen.add(key)
+            cat = {
+                "headline": title,
+                "form": "8-K",
+                "source": "sec_edgar",
+                "published_utc": published.isoformat() if published else None,
+                "url": url or None,
+            }
+            if _merge_candidate(seen, sym, name=sym, lst="sec", signal="sec_8k", catalyst=cat):
+                added += 1
+            else:
+                merged += 1
+            if added + merged >= MAX_8K:
+                break
+        print(f"(sec) 8-K: +{added} new, merged {merged}")
+    except Exception as exc:  # noqa: BLE001 - never let SEC fetch break the run
+        print(f"(warn) SEC 8-K fetch failed (skipped): {exc}")
 
 
 def _fetch_smallcap_universe() -> dict[str, dict]:
@@ -473,9 +745,9 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
         if pct is None:
             pct = row.get("changePercentage")
         if pct is None:  # some feeds drop % after hours — derive it from price vs prior close
-            price, prev = row.get("price"), row.get("previousClose")
+            price, prev_close = row.get("price"), row.get("previousClose")  # note: not the `prev` param
             try:
-                pct = (float(price) / float(prev) - 1.0) * 100.0 if price and prev else None
+                pct = (float(price) / float(prev_close) - 1.0) * 100.0 if price and prev_close else None
             except (TypeError, ValueError, ZeroDivisionError):
                 pct = None
         if pct is not None:
@@ -519,10 +791,8 @@ def fetch_fmp_candidates() -> None:
     small-cap universe (Nasdaq's free screener) to DISCOVER small-caps in the news —
     so the brain can act BEFORE the move. Each source is keyed and isolated: missing keys / failed
     endpoints just no-op (worst case = today's movers, or an empty file). Throttles
-    the AV news call to stay under its 25/day free cap."""
-    if not (FMP_API_KEY or AV_API_KEY):
-        print("(info) no data-source keys set — skipping candidate prefetch.")
-        return
+    the AV news call to stay under its 25/day free cap.
+    The halts + SEC-8K feeds need NO key, so the prefetch runs even with no API keys set."""
     prev = _read_candidates()
     seen: dict[str, dict] = {}
     if FMP_API_KEY:
@@ -530,6 +800,8 @@ def fetch_fmp_candidates() -> None:
         _fetch_leading(seen)   # leading: upcoming earnings
     else:
         print("(info) no FMP_API_KEY — skipping FMP movers/earnings sources.")
+    _fetch_halts(seen)         # leading: same-day halt/resume feed (no key)
+    _fetch_sec_8k(seen)        # leading: fresh material 8-K filings (no key)
     market, market_utc = _fetch_market_regime(prev)  # macro tape (throttled, FMP)
     smallcap = _fetch_smallcap_universe() if AV_API_KEY else {}  # small-cap map (discovery + enrichment)
     news_meta = _fetch_news(seen, prev, smallcap)  # news + small-cap-in-news discovery
