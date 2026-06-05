@@ -1,10 +1,15 @@
 {
-  "updated_utc": "2026-06-05T18:40:17.851622+00:00",
+  "updated_utc": "2026-06-05T18:45:16.827155+00:00",
   "holdings": [
     {
       "symbol": "DRTS",
       "quantity": 6,
       "avg_price": 10.52
+    },
+    {
+      "symbol": "GASS",
+      "quantity": 15,
+      "avg_price": 9.51
     },
     {
       "symbol": "HPE",
