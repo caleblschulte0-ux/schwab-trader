@@ -1,59 +1,63 @@
-# Brain Run — 2026-06-05T13:25:17Z
+# Brain Run — 2026-06-05T13:55:22Z
 
-**Funnel:** scanned 275 → ~230 in budget → 32 with real catalyst → 5 finalists → picked 2
+**Funnel:** scanned 281 → 248 fit budget → 67 with catalyst → 4 finalists → picked 0
 
 ---
 
 ## Macro Tape
 
-SPY +0.38%, VIX 15.77. Tone: **risk_on**. Sector leaders: Communication Services (+2.4%), Financial Services (+1.65%), Industrials (+1.56%), Technology (+1.26%). Laggards: Consumer Defensive (-1.43%), Utilities (-0.45%), Consumer Cyclical (-0.3%). Bias: normal aggressiveness, tilt toward Comm Services and Financials. Mild headwind for Basic Materials names.
+SPY -0.94%, VIX 16.38. Tone: **neutral** (SPY sitting just below the -1% risk-off threshold). Hot sectors: Communication Services (+2.4%), Financial Services (+1.65%), Industrials (+1.56%), Technology (+1.26%). Weak: Consumer Defensive (-1.43%), Utilities (-0.45%), Consumer Cyclical (-0.3%). Normal discipline; the borderline-red tape nudges pickiness slightly higher.
+
+---
+
+## Collision Guard
+
+Previous orders.json was written at 13:25:17Z — ~30 minutes ago. Threshold is >10 min → proceeding normally.
 
 ---
 
 ## Holdings Assessment
 
-Nine open positions (~$522 deployed at cost, ~$478 powder before today's picks):
+Nine open positions (~$522 deployed at cost). Two orders placed in the prior run (TBLA 31 × $4.74 = ~$147; FF 33 × $4.37 = ~$144) are pending — estimated remaining powder after fills ~$187. Account is ~95%+ deployed; adding another position would leave almost no reserve, which conflicts with the "leave powder for later" rule.
 
-- **TLYS** $5.24 vs $4.84 avg (+8.3%) — winner running; let the bot manage via TP/SL.
-- **ONDS** $11.97 vs $12.39 avg (-3.4%) — mild drawdown, within normal range, no thesis break visible. HOLD.
-- **DRTS, HPE, JFB, NVGS, NVTS, SLDB, TISI** — no current prices in today's funnel; no new thesis-break news seen. HOLD all.
+- **ONDS** $11.07 today (in funnel as active) vs $12.39 avg = **-10.7% unrealized (-$6.60)**. Notable further drop from prior run's $11.97. Stock is down while Industrials sector is +1.56% — relative weakness flag. However, no negative catalyst headline in today's funnel and thesis hasn't explicitly broken. Holding per "when in doubt, HOLD" rule; will escalate to SELL on any confirmed negative news.
+- **TLYS, DRTS, HPE, JFB, NVGS, NVTS, SLDB, TISI** — not in today's funnel, no adverse news; held.
 
-No SELL orders issued — no genuine thesis breaks detected.
-
----
-
-## Picks
-
-### 1. TBLA — Taboola (Russell Index Addition)
-**Entry:** 31 shares × $4.74 limit = $146.94  
-**Take-profit:** $5.12 (+8.0%) | **Stop-loss:** $4.48 (-5.5%)  
-**Catalyst:** "Taboola to join Russell 3000 and 2000 index" — published 00:39 UTC today (~12.5 hours old). Sentiment: Bullish 0.515. Volume: 2.5M shares.  
-**Why:** Russell reconstitution is *mechanical forced buying* — index funds are required to purchase shares before the rebalancing date (typically late June). This creates real, sustained demand that plays out over days/weeks. TBLA is only +3.72% despite that well-known dynamic, suggesting the market is underreacting. Communication Services sector is today's #1 performer (+2.4%), providing a strong tailwind. Market cap ~$1.3B — liquid and the catalyst is genuine. This is an early entry into forced buying pressure, not a chase. Catalyst age is today/intraday with stock barely responding = ideal setup per BRAIN.md.
-
-### 2. FF — FutureFuel Corp (CEO Open-Market Purchase)
-**Entry:** 33 shares × $4.37 limit = $144.21  
-**Take-profit:** $4.73 (+8.2%) | **Stop-loss:** $4.14 (-5.3%)  
-**Catalyst:** "FutureFuel (FF) CEO adds 10,000 shares in open-market purchase" — published 12:21 UTC today (< 1 hour ago). Source: Stock Titan. Sentiment: Bullish 0.474. Volume: 315K.  
-**Catalyst age:** Extremely fresh — less than 1 hour old at run time; freshest catalyst in the entire funnel.  
-**Why:** CEO open-market purchase is one of the highest-conviction bullish insider signals — executives only spend their own money buying when they believe the stock is genuinely undervalued. Stock has barely moved (+2.3%) meaning the market has not yet digested this signal. Small-cap ($192M market cap) — where this strategy finds the biggest % moves. Caveat: Basic Materials sector slightly negative today (-0.19%), a mild headwind, but insider conviction typically overrides sector drift on sub-$200M small-caps. This is the proactive, before-the-move entry BRAIN.md prioritizes.
+No SELL orders issued.
 
 ---
 
-## Notable Passes
+## Finalists — All Passed
 
-- **STI (Solidion Technology):** +350% intraday, 105M share volume. Parabolic blow-off — hard pass.
-- **IOVA (Iovance):** Australia approval for Amtagvi, very bullish catalyst (0.92 sentiment). Already +15.6% on the day — move largely priced in; in "deprioritize" territory.
-- **BNAI (Brand Engagement Network):** AI fleet deal, fresh catalyst (10:15 UTC). Already +18.8% — extended. Pass.
-- **COYA (Coya Therapeutics):** Roth/MKM buy initiation, +5%, bullish. Interesting but volume only 156K — too thin for comfortable exit on a small position. Skip.
-- **CRBP (Corbus Pharma):** Obesity/oncology pipeline news, +8.5%. Real catalyst but published ~12.5 hours ago; the intraday move already well underway.
-- **SUPX (SuperX):** AI modular factory announcement, +6.1%. Real catalyst but volume light (269K) and catalyst is 8 hours old.
-- **All sub-$2 names:** CXAI, NEXR, HCAT, SNBR, HUBC, BRTX, NXXT, DXF, etc. — disqualified by the hard $2 price floor.
-- **All leveraged ETFs:** SOXL, MULL, MUU, AVGG, AVGU, AVGX, AVL, TXXH, OSCG, OSCX, etc. — excluded.
-- **Put candidates (AVGO -12.6%, PVH -20.2%):** Near-dated ATM puts on $78–$419 stocks require $300–$500+ premium — well above the $100 per-put cap. Skip.
-- **LASE $3.62:** Still above the $3.00 pullback watchlist trigger. On watchlist — waiting.
+### GASS — StealthGas Inc (PASS)
+**Catalyst:** Q1 2026 results published 13:01 UTC today — the freshest catalyst in the entire funnel (< 1 hour old at run time). **But:** stock is -0.4% on the day with only 157K volume. Q1 guidance was $37.4M rev / $0.32 EPS; the flat/slightly-negative price reaction indicates in-line or modest disappointment, not a beat. A fresh catalyst with a flat or down stock reaction is not a momentum entry — the market has already digested the release and said "meh." Catalyst age: very fresh (good), but price action contradicts the bullish setup (bad). **Pass.**
+
+### COYA — Coya Therapeutics (PASS — near miss)
+**Catalyst:** Roth/MKM initiates with Buy rating, published 06:39 UTC (7+ hours ago). Stock +5% to $4.87 on $114M market cap biotech. Healthcare sector +0.76%. Setup quality: analyst initiation with real conviction, slow digestion curve. TP ~$5.25 (+7.8%), SL ~$4.60 (-5.5%), R/R ~1.4:1 — slightly below the 1.5:1 minimum. With near-max deployment this run, any borderline setup should be skipped. **Would have been the pick on a lighter book.** Catalyst age: 7h old (OK but not ideal).
+
+### SUPX — SuperX (PASS)
+**Catalyst:** "SuperX unveils modular AI factories for 80MW data campuses," 05:10 UTC (~8.5h old). +6.1% to $10.37. Tech sector hot (+1.26%). But catalyst is aging and the move is partially done. Not a standalone conviction buy. **Pass.**
+
+### AMCI — AMC Robotics / Etronium AI deal (PASS)
+**Catalyst:** Strategic investment in agentic edge AI, 02:10 UTC (11.5h old). +7.2% to $5.21, $117M market cap. Move already in on now-stale news. **Pass.**
 
 ---
 
-## Web Searches
+## Extended / Hard Pass (representative)
 
-Zero searches this run. Funnel was wide and self-sufficient; all finalist catalysts were clearly legible from the candidates.json headlines. A clean-funnel day with 0 searches is the efficient outcome BRAIN.md calls for.
+- **STI** +350%, **BCDA** +58%, **BESS** +47.7%, **BBCP** +43%, **CMND** +40%, **HURC** +26%, **FOXX** +20%, **MNTS** +20.4%, **BNAI** +18.8%: all far past stage discipline.
+- **IOVA** +15.6% (Australia nod for Amtagvi, Bullish 0.915): excellent catalyst but move is 12+ hours old and >15% extended — deprioritize per rules.
+- **CABA** -2%: 83% response rate data in dermatomyositis, Bullish 0.47, but stock is DOWN 2% on the news = sell-the-news signal. Pass.
+- **BBNX** +11.6%: Rule 144 proposed sale catalyst is a dilution signal, not bullish. Pass.
+
+---
+
+## Web Search
+
+One targeted search: verified GASS Q1 2026 results quality (management guided $37.4M rev / $0.32 EPS in Q4 call; flat stock reaction confirms in-line/soft print). Used the single search slot to qualify/disqualify the freshest catalyst in the funnel.
+
+---
+
+## Watchlist Notes
+
+Removed DOCU — post-earnings gap trigger (breakout above $57) was a one-day setup that has expired. Remaining 8 items intact. GOGO especially timely today with Comm Services as the day's hottest sector (+2.4%) — pullback to $3.85 is the entry.

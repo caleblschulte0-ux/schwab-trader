@@ -1,12 +1,9 @@
 {
-  "generated_utc": "2026-06-05T13:25:17Z",
+  "generated_utc": "2026-06-05T13:55:22Z",
   "watch": [
     {"symbol": "LASE", "trigger": "pullback", "trigger_price": 3.00,
      "quantity": 21, "limit_price": 3.05, "take_profit": 3.90, "stop_loss": 2.55,
-     "good_until": "2026-06-07", "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest at SOF Week 2026 + $250K J&J laser drilling order. 52M+ share volume June 4. Defense sector hot. NOTE: evaluation selection only, not a contract award. Current price $3.62 — wait for pullback to $3.00 near open support. Catalyst age: fresh (published 13:08 UTC June 4)."},
-    {"symbol": "DOCU", "trigger": "breakout", "trigger_price": 57.00,
-     "quantity": 1, "limit_price": 57.50, "take_profit": 63.00, "stop_loss": 52.00,
-     "good_until": "2026-06-06", "note": "Earnings reported after close June 4 (Q1 FY2027). Enter only on gap/open above $57 post-earnings — skip if it fades or misses badly. Trigger fires automatically if open clears $57."},
+     "good_until": "2026-06-07", "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest at SOF Week 2026 + $250K J&J laser drilling order. 52M+ share volume June 4. Defense sector hot. NOTE: evaluation selection only, not a contract award. Current price ~$3.62 — wait for pullback to $3.00 near open support. Catalyst freshness: published 13:08 UTC June 4."},
     {"symbol": "SVCO", "trigger": "pullback", "trigger_price": 12.50,
      "quantity": 5, "limit_price": 12.65, "take_profit": 16.00, "stop_loss": 11.50,
      "good_until": "2026-06-07", "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Stock ran to ~$15 — pullback to $12.50 near earnings gap support is the entry."},
@@ -24,9 +21,9 @@
      "good_until": "2026-06-11", "note": "Q1 2026 earnings beat + AI drug discovery pipeline progress (Phase 2 signals in FAP). Buy pullback to $3.50 support before entry."},
     {"symbol": "PLSE", "trigger": "pullback", "trigger_price": 25.50,
      "quantity": 2, "limit_price": 25.75, "take_profit": 31.50, "stop_loss": 23.50,
-     "good_until": "2026-06-09", "note": "Canaccord Genuity initiates coverage with Buy / $32 PT (published 16:09 UTC June 4 — fresh initiation). Stock at $27.18 up 8.6% — buy the pullback to $25.50 rather than chasing. $1.88B cardiac biotech with upcoming clinical milestones."},
+     "good_until": "2026-06-09", "note": "Canaccord Genuity initiates coverage with Buy / $32 PT (published 16:09 UTC June 4 — fresh initiation). Stock at ~$27 up 8.6% — buy the pullback to $25.50 rather than chasing. $1.88B cardiac biotech with upcoming clinical milestones."},
     {"symbol": "GOGO", "trigger": "pullback", "trigger_price": 3.85,
      "quantity": 16, "limit_price": 3.90, "take_profit": 4.80, "stop_loss": 3.55,
-     "good_until": "2026-06-07", "note": "SD Government (a Gogo company) won $7.5M multi-year NOAA framework contract for hurricane hunter aircraft comms ahead of 2026 hurricane season. Communication services sector is day's hottest. Current ~$4.12 — buy the morning pullback to $3.85 near gap support. Catalyst published 11:10 UTC June 4."}
+     "good_until": "2026-06-07", "note": "SD Government (a Gogo company) won $7.5M multi-year NOAA framework contract for hurricane hunter aircraft comms ahead of 2026 hurricane season. Communication Services sector is today's hottest (+2.4%). Current ~$4.12 — buy the pullback to $3.85 near gap support. Catalyst published 11:10 UTC June 4. NOTE: especially timely given Comm Services leading all sectors today."}
   ]
 }
