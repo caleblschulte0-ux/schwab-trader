@@ -70,10 +70,19 @@ it does NOT change any guardrail, only how picky you are:
 - Use `sectors` as a TILT: prefer names in the day's strongest sectors/themes,
   be skeptical of longs in the weakest. Note the tape you saw in `latest.md`.
 
-## STEP 1 — WIDEN THE FUNNEL (the most important step)
-Use TWO sources IN TANDEM every run and merge them into one big pool:
+## STEP 1 — START FROM THE PRE-BUILT FUNNEL (read candidates.json; don't re-gather it)
+`candidates.py` runs BEFORE you every single run and gathers the wide funnel FOR you —
+deterministically and at ZERO token cost: hundreds of names from FMP movers (gainers /
+most-active / losers), the FMP earnings calendar (who reports soon), Alpha Vantage news
+with sentiment, a Nasdaq small-cap universe cross-ref (small-caps in the news), plus the
+market regime and sector performance. **`signals/candidates.json` IS your top of funnel
+— read it FIRST and TRUST it for breadth.** Your job is JUDGMENT over a pre-gathered
+pool, NOT gathering. Do NOT hand-run broad "top gainers / most active / earnings soon /
+today's news" web searches — that only re-discovers what is already in the file and
+burns the subscription budget for nothing. Targeted web search keeps a small, specific
+role (see the end of this step), but the file does the heavy lifting.
 
-SOURCE 1 — `signals/candidates.json`. The bot pre-fetches both LAGGING and
+SOURCE — `signals/candidates.json` (this is your funnel). The bot pre-fetches both LAGGING and
 LEADING names with live price + % change. Read this first. Each row now carries a
 `signal` (primary reason) and a `signals` list (ALL reasons), plus an optional
 `catalyst`. Tags you'll see (top-level `signal_counts` tallies them):
@@ -114,66 +123,26 @@ leading tag AND a small `pct_change` (e.g. `["mover","earnings_soon"]`, up only
 ~3%) is an ideal early entry. Note: `earnings_soon` cuts both ways — an earnings
 gap can go either direction, so a defined `stop_loss` is mandatory on those.
 
-SOURCE 2 — WEB SEARCH, run side-by-side (not just afterward). A good search
-surfaces names, catalysts, and context the mover-lists miss. Run the searches
-below every run regardless of what's in candidates.json.
-
-MERGE + DEDUPE both sources into one pool. Target **200+ candidates** total
-(~136 from FMP + whatever web search adds). Breadth is a PRIORITY every run: the more
-names at the top, the better the odds of finding the one early, fresh, asymmetric
-setup. Treat each run as a competition to surface names the last run missed — run the
-extra searches, widen the wording, pull every list. Record your scanned count in the
-funnel tally; a funnel under ~150 means you did not search hard enough — say so in
-latest.md and explain why. A wide funnel + few/zero finalists is a GREAT run; a narrow
-funnel is a failure of effort regardless of how many you pick.
-
-Web searches to run every run (several, in tandem with FMP):
-1. Top % gainers today — market-wide, all US exchanges
-2. Most active / highest-volume stocks today
-3. Unusual volume (volume vs. average) names
-4. Pre-market movers AND intraday/afternoon movers
-5. 52-week-high breakouts / stocks breaking key levels
-6. Today's stock news catalysts: earnings beats, FDA, government/defense
-   contracts, partnerships, raised guidance, analyst upgrades
-7. Small-cap / micro-cap gainers specifically (these are often missed by the
-   broad gainer lists) — include them, but don't limit the funnel to cheap
-   stocks; mid- and large-cap movers are fair game too (the $150 budget, not
-   share price, is the only sizing constraint).
-7b. SMALL-CAP NEWS specifically — run dedicated searches for small/micro-cap
-   catalysts that move them early: new contracts/orders, partnerships, FDA/PDUFA
-   and clinical readouts, earnings beats & raised guidance, uplistings, buybacks,
-   insider buying. Vary sources (StockTitan, GlobeNewswire/PR/Business Wire,
-   Benzinga small-cap, biotech catalyst calendars). The bot's per-symbol `news`
-   tag covers small-caps already ON the movers list — your job here is to catch
-   the ones with FRESH news that haven't moved much YET (the earliest entries).
-8. Sector/theme sweeps — run one search each for the hot themes of the day
-   (e.g. AI, defense, biotech, energy, quantum, nuclear, crypto-adjacent)
-9. PRE-CATALYST / anticipatory (the proactive edge — find names BEFORE they run):
-   stocks reporting earnings in the next 1–5 days, upcoming FDA/PDUFA decision
-   dates, scheduled investor days / product launches / conference presentations,
-   and fresh analyst upgrades or initiations. These pair with the LEADING tags in
-   candidates.json — the goal is to be positioned ahead of the move, not after it.
-10. Trading HALTS & resumptions today, and stocks gapping on news (LULD halts often
-   precede the biggest small-cap moves — catch the resume).
-11. Fresh SEC 8-K filings / material news today (new contracts, M&A, offerings —
-   read the sign: a dilutive raise is bearish, a contract win is bullish).
-12. Socially TRENDING / unusual-options-activity tickers (StockTwits trending,
-   Reddit r/wallstreetbets & r/smallstreetbets, unusual call volume) — sentiment
-   discovery, then verify a REAL catalyst before it qualifies.
-13. SYMPATHY / read-through plays — when a leader moves on a theme (a peer's FDA
-   win, a sector contract), search its smaller peers that haven't moved yet.
-
-Tips to maximize breadth:
-- Vary the wording across searches ("biggest gainers today", "top volume stocks",
-  "stocks up big today small cap", etc.) — different queries surface different names.
-- Pull from whatever lists the results expose; aim to collect every distinct
-  ticker you see, then dedupe.
-- It is FINE (good, even) if many are junk — STEP 2 filters them. The job here is
-  raw breadth. A small funnel is a failure of effort, not of the market; only an
-  unusually dead session should land below ~150 candidates, and never below ~100.
-- Each run, deliberately try at least one NEW search angle you didn't use last run —
-  keep pushing the top of the funnel wider over time, don't settle into the same
-  handful of queries.
+### Targeted web search — ONLY to fill the gaps candidates.json can't see
+candidates.json already covers movers, earnings, and news — so do NOT re-search those.
+Use WebSearch SPARINGLY: AT MOST ~3 targeted searches per run, and SKIP any that aren't
+relevant this run (0 searches on a quiet, clean-funnel day is perfectly fine). The only
+things worth a search are what the file genuinely does NOT contain:
+1. TRADING HALTS & resumptions today (LULD halts often precede the biggest small-cap
+   moves — catch the resume). Not in candidates.json.
+2. BREAKING in the last 1–2 hours — fresh SEC 8-K filings / material news (new
+   contracts, M&A, FDA, offerings) on names not already flagged. The freshest edge.
+   (Read the sign: a dilutive raise is bearish, a contract win is bullish.)
+3. SYMPATHY / read-through — when a leader already in candidates.json is moving on a
+   theme, search its smaller peers that haven't moved yet.
+You may spend ONE of those three slots instead on VERIFYING a specific finalist (is the
+catalyst real, is the move already spent) when a pick hinges on it. That is the ENTIRE
+web-search budget. Never hand-scrape broad gainer / most-active / 52-week-high / general
+news / sector lists — candidates.json already IS those lists. A run that reads the funnel
+carefully and does 0–3 targeted searches is an EFFICIENT, GOOD run. Breadth is the file's
+job now; judgment is yours. (Note: trading halts and SEC 8-K feeds are being moved INTO
+candidates.py — once they appear as `halt_resume` / `sec_8k` tagged rows in the file,
+drop searches #1 and #2 too and lean further on the file.)
 
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:
@@ -203,8 +172,10 @@ From the wide pool, narrow with judgment:
   • Near-vertical blow-off (parabolic into resistance, no room) → HARD PASS.
   Tie-breaker extension: when quality is otherwise equal, the earlier-stage /
   catalyst-ahead name wins over the one that has already run.
-Keep the best 0–3. Quality of the FINALISTS matters; quantity of the FUNNEL
-matters. A wide funnel that yields 1 great pick is a great run.
+Keep the best 0–3. Quality of the FINALISTS is what matters; the funnel's breadth is
+already handled FOR you by candidates.py. A run that carefully reads a few hundred
+pre-built rows and yields 1 great pick (or 0) is a great run — you do NOT need to
+hand-search to feel "wide."
 Account has ~$1,000 to deploy total, ≤ $150 per position (so up to ~6 positions at
 once). Don't pile everything into one run — leave powder for later setups.
 
@@ -292,10 +263,12 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   ]
 }
 ```
-- `funnel` is REQUIRED every run — fill in the real counts from your scan so we
-  can see how wide we looked (scanned → narrowed → finalists → picked). Include
-  `leading` = how many candidates carried a LEADING tag (earnings_soon/news_smallcap/
-  news_bullish), so we can track how proactive the funnel is each run.
+- `funnel` is REQUIRED every run — fill in the real counts so we can see how wide we
+  looked (scanned → narrowed → finalists → picked). `scanned` now = the rows you
+  actually considered in candidates.json (plus any handful of web-search adds); the
+  file IS the funnel, so a high `scanned` count comes from reading it, not from hand-
+  searching. Include `leading` = how many candidates carried a LEADING tag
+  (earnings_soon/news_smallcap/news_bullish), so we can track how proactive we are.
 - STOCK BUY entries MUST include symbol, quantity, limit_price, take_profit,
   stop_loss; quantity × limit_price ≤ $150.
 - PUT BUY entries (bearish, defined-risk, paper-only) use `instrument:"option"`,

@@ -82,8 +82,15 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
+          # MODEL: routine runs use Sonnet on purpose. The brain authenticates with a
+          # SUBSCRIPTION token, so the scarce resource is the plan's Opus allowance — not
+          # dollars. With candidates.py pre-building the funnel, Sonnet has a clean,
+          # pre-digested pool to exercise judgment on, which is plenty for the every-20-min
+          # routine. Reserve Opus for on-demand deep reviews. Flip to `--model opus` here
+          # if you want every routine run on Opus (burns the allowance far faster).
           claude -p "You are the trading BRAIN for this repository. Follow BRAIN.md EXACTLY and obey every guardrail in BRAIN.md and STRATEGY.md. Steps: (1) read the macro tape and candidates from signals/candidates.json and your real positions from signals/holdings.json; (2) run the web research BRAIN.md calls for; (3) WRITE the output files BRAIN.md specifies — signals/orders.json, signals/watchlist.json, signals/latest.md, and signals/positions.md. IMPORTANT: do NOT place any trades and do NOT run git or shell commands — only read the input files, search the web, and write those output files. Respect the orders.json timestamp collision-guard in BRAIN.md." \
             --allowedTools "Read,Edit,Write,WebSearch" \
+            --model sonnet \
             --permission-mode acceptEdits \
             --output-format text
 
