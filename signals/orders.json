@@ -1,5 +1,24 @@
 {
-  "generated_utc": "2026-06-04T20:43:22Z",
-  "funnel": {"scanned": 305, "leading": 101, "in_budget": 125, "had_catalyst": 28, "finalists": 3, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-05T13:25:17Z",
+  "funnel": {"scanned": 275, "leading": 103, "in_budget": 230, "had_catalyst": 32, "finalists": 5, "picked": 2},
+  "orders": [
+    {
+      "symbol": "TBLA",
+      "action": "BUY",
+      "instrument": "stock",
+      "quantity": 31,
+      "limit_price": 4.74,
+      "take_profit": 5.12,
+      "stop_loss": 4.48
+    },
+    {
+      "symbol": "FF",
+      "action": "BUY",
+      "instrument": "stock",
+      "quantity": 33,
+      "limit_price": 4.37,
+      "take_profit": 4.73,
+      "stop_loss": 4.14
+    }
+  ]
 }

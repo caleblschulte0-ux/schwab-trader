@@ -1,66 +1,59 @@
-# Brain Run — 2026-06-04T20:43:22Z (after market close)
+# Brain Run — 2026-06-05T13:25:17Z
 
-**Funnel:** scanned 305 → 125 fit budget → 28 with catalyst → 3 finalists → picked 0
-
----
-
-## Market Tape
-
-**risk_on** — SPY +0.47%, VIX 15.35 (calm). Top sectors: Communication Services +2.49%, Financial Services +1.42%, Technology +1.36%, Industrials +0.84%. Consumer Defensive -0.90%, Utilities -0.67% lagging. Lean into comms/financials/tech longs; be skeptical of defensives and consumer staples today.
+**Funnel:** scanned 275 → ~230 in budget → 32 with real catalyst → 5 finalists → picked 2
 
 ---
 
-## Scan Summary
+## Macro Tape
 
-240 names from FMP (140 movers, 74 news_smallcap, 2 earnings_soon, 25 news_bullish) + ~65 from web searches across gainers, small-cap catalysts, defense/biotech sweeps, sector themes, and options/social activity = **305 total scanned**.
+SPY +0.38%, VIX 15.77. Tone: **risk_on**. Sector leaders: Communication Services (+2.4%), Financial Services (+1.65%), Industrials (+1.56%), Technology (+1.26%). Laggards: Consumer Defensive (-1.43%), Utilities (-0.45%), Consumer Cyclical (-0.3%). Bias: normal aggressiveness, tilt toward Comm Services and Financials. Mild headwind for Basic Materials names.
 
 ---
 
-## Top Finalists Evaluated
+## Holdings Assessment
 
-### 1. GOGO — $4.115 (+5%) — WATCHLIST, not a direct buy (book full)
+Nine open positions (~$522 deployed at cost, ~$478 powder before today's picks):
 
-SD Government (a Gogo company) won a **$7.5M multi-year NOAA framework contract** for hurricane hunter aircraft comms (L-Band SATCOM, ground infrastructure, cybersecurity, cockpit datalink) ahead of 2026 hurricane season. Catalyst published 11:10 UTC today — fresh. Only ~5% intraday on solid government contract = early stage. Communication services is the hottest sector today (+2.49%). At $65 cap → 16 shares × $3.85 = $61.60. Rejected as direct BUY because book has 8 active positions (~$460 deployed) with zero powder. Adding to watchlist as pullback to $3.85 for a morning-fade entry.
+- **TLYS** $5.24 vs $4.84 avg (+8.3%) — winner running; let the bot manage via TP/SL.
+- **ONDS** $11.97 vs $12.39 avg (-3.4%) — mild drawdown, within normal range, no thesis break visible. HOLD.
+- **DRTS, HPE, JFB, NVGS, NVTS, SLDB, TISI** — no current prices in today's funnel; no new thesis-break news seen. HOLD all.
 
-### 2. VERU — $4.76 (+112%) — HARD PASS (blow-off)
+No SELL orders issued — no genuine thesis breaks detected.
 
-Novo Nordisk supply agreement for Phase 2b PLATEAU study (enobosarm + Wegovy for obesity). Legitimate, high-quality catalyst — Novo Nordisk is the GLP-1 leader and obtained first negotiation rights on any future combo commercialization. BUT: stock surged from ~$2.25 to $4.76+ in a single day — a 112%+ parabolic move. BRAIN.md: "Near-vertical blow-off → HARD PASS." Thesis is real; entry timing is wrong after the blow-off candle. May revisit after consolidation.
+---
 
-### 3. LASE — $3.50 (+12%) — Already on WATCHLIST at pullback $3.00
+## Picks
 
-Anti-drone LSAD system selected in Department of War MEIA Vulcan evaluation AND SOCOM interest confirmed at SOF Week 2026. Important: evaluation selection ≠ contract award. Still a real defense catalyst. Up 12% with 52M+ volume. Watchlist pullback at $3.00 stands — waiting for a meaningful retrace before entry.
+### 1. TBLA — Taboola (Russell Index Addition)
+**Entry:** 31 shares × $4.74 limit = $146.94  
+**Take-profit:** $5.12 (+8.0%) | **Stop-loss:** $4.48 (-5.5%)  
+**Catalyst:** "Taboola to join Russell 3000 and 2000 index" — published 00:39 UTC today (~12.5 hours old). Sentiment: Bullish 0.515. Volume: 2.5M shares.  
+**Why:** Russell reconstitution is *mechanical forced buying* — index funds are required to purchase shares before the rebalancing date (typically late June). This creates real, sustained demand that plays out over days/weeks. TBLA is only +3.72% despite that well-known dynamic, suggesting the market is underreacting. Communication Services sector is today's #1 performer (+2.4%), providing a strong tailwind. Market cap ~$1.3B — liquid and the catalyst is genuine. This is an early entry into forced buying pressure, not a chase. Catalyst age is today/intraday with stock barely responding = ideal setup per BRAIN.md.
+
+### 2. FF — FutureFuel Corp (CEO Open-Market Purchase)
+**Entry:** 33 shares × $4.37 limit = $144.21  
+**Take-profit:** $4.73 (+8.2%) | **Stop-loss:** $4.14 (-5.3%)  
+**Catalyst:** "FutureFuel (FF) CEO adds 10,000 shares in open-market purchase" — published 12:21 UTC today (< 1 hour ago). Source: Stock Titan. Sentiment: Bullish 0.474. Volume: 315K.  
+**Catalyst age:** Extremely fresh — less than 1 hour old at run time; freshest catalyst in the entire funnel.  
+**Why:** CEO open-market purchase is one of the highest-conviction bullish insider signals — executives only spend their own money buying when they believe the stock is genuinely undervalued. Stock has barely moved (+2.3%) meaning the market has not yet digested this signal. Small-cap ($192M market cap) — where this strategy finds the biggest % moves. Caveat: Basic Materials sector slightly negative today (-0.19%), a mild headwind, but insider conviction typically overrides sector drift on sub-$200M small-caps. This is the proactive, before-the-move entry BRAIN.md prioritizes.
 
 ---
 
 ## Notable Passes
 
-- **STI (+310%)** — Solidion Technology space battery announcement. Extreme parabolic, gains reportedly moderated intraday. Hard pass.
-- **SDOT (+92%)** — Sadot acquired Anira Consulting (stock-paid commodity trading deal). Thin story, intraday range $5–$9 on a $13 close. Pass.
-- **AVGO (-12.5%), CIEN (-14%)** — Large semiconductor/optical networking selloff. Not in holdings; no short exposure warranted without a cleaner bear setup.
-- **HYLN (+17%)** — Navy/DARPA KARNO trial selection (May 27). Real defense catalyst but stock was already up 257% in the prior month. Way too extended.
-- **GHRS (-3.9%)** — Phase 2a PPD results outstanding (10/10 rapid remission), TRD Phase 2b primary endpoint met (MADRS -15.5 vs placebo, p<0.0001). Stock selling the news today. Watchlist breakout trigger at $26.50 maintained; buy the momentum, not a falling knife. Catalyst age: fresh (published today).
-- **DOCU (earnings tonight)** — Q1 FY2027 reported after close. Results not confirmed at run time. Watchlist trigger at $57 breakout still valid for pre-market/open tomorrow.
-- **ABSI (+18%)** — AI drug discovery up 18% with no identifiable catalyst (annual meeting is not a driver). Momentum without thesis = pass.
-- **Healthcare (HUM +6%, UNH +5%, CI +4%)** — Softer medical cost trends. Solid thesis but all large-cap, all above $65 budget. Untradeable for this account.
-- **LPTH (+19%)** — LightPath Technologies: record Q1 (109% revenue growth, $110M backlog) but also a $100M registered direct offering at $14/share (dilutive at $18.57 market price). Mixed signals. Skip.
+- **STI (Solidion Technology):** +350% intraday, 105M share volume. Parabolic blow-off — hard pass.
+- **IOVA (Iovance):** Australia approval for Amtagvi, very bullish catalyst (0.92 sentiment). Already +15.6% on the day — move largely priced in; in "deprioritize" territory.
+- **BNAI (Brand Engagement Network):** AI fleet deal, fresh catalyst (10:15 UTC). Already +18.8% — extended. Pass.
+- **COYA (Coya Therapeutics):** Roth/MKM buy initiation, +5%, bullish. Interesting but volume only 156K — too thin for comfortable exit on a small position. Skip.
+- **CRBP (Corbus Pharma):** Obesity/oncology pipeline news, +8.5%. Real catalyst but published ~12.5 hours ago; the intraday move already well underway.
+- **SUPX (SuperX):** AI modular factory announcement, +6.1%. Real catalyst but volume light (269K) and catalyst is 8 hours old.
+- **All sub-$2 names:** CXAI, NEXR, HCAT, SNBR, HUBC, BRTX, NXXT, DXF, etc. — disqualified by the hard $2 price floor.
+- **All leveraged ETFs:** SOXL, MULL, MUU, AVGG, AVGU, AVGX, AVL, TXXH, OSCG, OSCX, etc. — excluded.
+- **Put candidates (AVGO -12.6%, PVH -20.2%):** Near-dated ATM puts on $78–$419 stocks require $300–$500+ premium — well above the $100 per-put cap. Skip.
+- **LASE $3.62:** Still above the $3.00 pullback watchlist trigger. On watchlist — waiting.
 
 ---
 
-## Holdings Read
+## Web Searches
 
-All 8 positions reviewed. No thesis breaks:
-
-- **DRTS** (~-1.7% vs avg $10.52): Alpha Tau Medical near cost; catalyst was thin (SEC filing). No new negative news. Hold.
-- **JFB** (~-0.7% vs avg $5.79): DoD Phase II qualifier (XTEND selection) — qualifier for demonstration at Camp Grayling, not a contract award yet. Thesis intact. Hold.
-- **NVTS** (~+6% vs avg $29.25, current $31.00): Navitas Semiconductor acting well; tech sector tailwind. Let it run.
-- **HPE, NVGS, SLDB, TISI, TLYS**: No current candidates data, no specific negative news. Hold all pending TP/SL auto-exits.
-
-**Book status:** 8 positions, ~$460 deployed at cost basis. Zero dry powder until a position auto-exits at TP/SL.
-
----
-
-## Watchlist Update
-
-Added **GOGO** (pullback to $3.85 on NOAA contract catalyst). Extended GHRS and MNKD expiries. All 9 watchlist entries valid. See watchlist.json.
-
-*Next run watch: DOCU open (trigger fires if gap above $57), VERU consolidation for future entry, LASE/GOGO pullbacks to trigger levels.*
+Zero searches this run. Funnel was wide and self-sufficient; all finalist catalysts were clearly legible from the candidates.json headlines. A clean-funnel day with 0 searches is the efficient outcome BRAIN.md calls for.
