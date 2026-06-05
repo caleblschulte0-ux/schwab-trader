@@ -1,25 +1,23 @@
-"""Market-data producer - builds the brain's structured top-of-funnel.
+"""Market-data producer — builds the brain's structured top-of-funnel.
 
 This is the DATA-GATHERING half of the system, split out of bot.py so it can run
 on the BRAIN's schedule (gather -> think -> emit a trade plan) instead of on the
 trader's. It has ZERO Schwab dependencies: pure stdlib urllib to FMP (movers +
-earnings + market regime), Alpha Vantage (stock news), Nasdaq's free public
-screener (small-cap universe), Nasdaq Trader (halts/resumptions), and SEC EDGAR
-(fresh 8-Ks). Output is signals/candidates.json - write-only here; only the
-brain reads it. The trader (bot.py) never touches this file.
+earnings + market regime), Alpha Vantage (stock news), and Nasdaq's free public
+screener (small-cap universe). Output is signals/candidates.json — write-only here;
+only the brain reads it. The trader (bot.py) never touches this file.
 
 It combines LAGGING movers (gainers/most-active/losers) with LEADING signals:
-upcoming earnings (FMP), stock news (Alpha Vantage), trading halts/resumptions,
-and fresh SEC 8-K filings. News tickers are cross-referenced against a small-cap
-universe (Nasdaq's free public screener) to DISCOVER small-caps that are in the
-news (not just annotate names we already had), so the brain can position BEFORE
-a move. Each row is tagged with its reason(s). A top-level `market` block gives
-the brain the macro tape to read first.
+upcoming earnings (FMP) and stock news (Alpha Vantage). News tickers are cross-
+referenced against a small-cap universe (Nasdaq's free public screener) to DISCOVER
+small-caps that are in the news (not just annotate names we already had), so the
+brain can position BEFORE a move. Each row is tagged with its reason(s). A top-level
+`market` block gives the brain the macro tape to read first.
 
 Run: `python candidates.py`  (no Schwab creds needed)
 Optional env: FMP_API_KEY (movers + earnings + small-cap universe + market regime),
 ALPHA_API_KEY (stock news + small-cap-in-news discovery). Missing keys just no-op
-the corresponding sources; worst case the file is small or empty.
+the corresponding sources; worst case the file is small or absent.
 """
 from __future__ import annotations
 
@@ -73,6 +71,7 @@ FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 # Alpha Vantage stock-news key. Accept either name (the GitHub secret is ALPHA_API_KEY).
 AV_API_KEY    = (os.environ.get("ALPHA_API_KEY") or os.environ.get("ALPHAVANTAGE_API_KEY", "")).strip()
 
+# Cached SEC CIK -> ticker map (one fetch per process; the file is ~large but static).
 _SEC_CIK_TICKERS: dict[int, str] | None = None
 
 
@@ -87,7 +86,7 @@ def _parse_dt(val):
 
 def _http_json(url: str, timeout: int = 20, retries: int = 2, headers: dict | None = None):
     """GET JSON with a light retry on TRANSIENT failures only (connection blip /
-    timeout / 5xx). A 4xx (FMP 402 Payment Required, 404, ...) is PERMANENT - re-raise
+    timeout / 5xx). A 4xx (FMP 402 Payment Required, 404, ...) is PERMANENT — re-raise
     immediately without retrying so we never waste the call budget hammering a dead
     endpoint. Raises the last error if every attempt fails (callers degrade gracefully).
     A malformed body (json) also propagates without retry (retrying won't fix it)."""
@@ -102,7 +101,7 @@ def _http_json(url: str, timeout: int = 20, retries: int = 2, headers: dict | No
                 return json.loads(r.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             if 400 <= exc.code < 500:
-                raise  # permanent (402/404/...) - don't retry, don't burn budget
+                raise  # permanent (402/404/...) — don't retry, don't burn budget
             last_exc = exc  # 5xx: transient
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
             last_exc = exc  # network blip: transient
@@ -112,7 +111,8 @@ def _http_json(url: str, timeout: int = 20, retries: int = 2, headers: dict | No
 
 
 def _http_text(url: str, timeout: int = 20, retries: int = 2, headers: dict | None = None) -> str:
-    """GET text/XML with the same retry behavior as _http_json."""
+    """GET text/XML with the same transient-retry behavior as _http_json (used by the
+    no-key Nasdaq-halts RSS and SEC EDGAR feeds, which return XML, not JSON)."""
     import time
     import urllib.error
     import urllib.request
@@ -124,10 +124,10 @@ def _http_text(url: str, timeout: int = 20, retries: int = 2, headers: dict | No
                 return r.read().decode("utf-8", errors="replace")
         except urllib.error.HTTPError as exc:
             if 400 <= exc.code < 500:
-                raise
-            last_exc = exc
+                raise  # permanent (404/403/...) — don't retry
+            last_exc = exc  # 5xx: transient
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
-            last_exc = exc
+            last_exc = exc  # network blip: transient
         if attempt < retries:
             time.sleep(0.5 * (2 ** attempt))
     raise last_exc  # type: ignore[misc]
@@ -148,11 +148,11 @@ def _merge_candidate(seen: dict, sym: str, *, name=None, price=None, pct=None,
                      vol=None, mktcap=None) -> bool:
     """Add a candidate or merge into an existing one. The KEY behavior: when a
     symbol shows up from more than one source, we ACCUMULATE its reasons in a
-    `signals` list instead of overwriting - so the brain can see that, e.g., a
+    `signals` list instead of overwriting — so the brain can see that, e.g., a
     +4% mover ALSO reports earnings tomorrow. Returns True if newly added."""
     if not sym:
         return False
-    sym = str(sym).strip().upper()
+    sym = str(sym).strip().upper()  # normalize so the same ticker never splits into two rows
     row = seen.get(sym)
     if row is None:
         seen[sym] = {
@@ -202,7 +202,15 @@ def _fetch_movers(seen: dict) -> None:
 
 def _fetch_leading(seen: dict) -> None:
     """LEADING funnel (the proactive upgrade): UPCOMING EARNINGS so the brain can
-    position BEFORE the report. Isolated in try/except: a failed endpoint no-ops."""
+    position BEFORE the report. (FMP's analyst grade/price-target feeds were dropped:
+    grade-latest-news 404s and price-target-latest-news is 402 Payment Required on
+    the free tier — analyst actions now reach the brain via the news feed + web
+    search.) Isolated in try/except: a failed endpoint just no-ops.
+
+    Two uses of the earnings calendar: (a) ENRICH any existing candidate that reports
+    soon (a mover reporting tomorrow is high-priority); (b) ADD covered names
+    reporting in the lookahead window that aren't on any list yet — "who's reporting
+    soon", the pre-position pool."""
     try:
         today = datetime.now(timezone.utc).date()
         end = today + timedelta(days=EARNINGS_LOOKAHEAD_DAYS)
@@ -232,11 +240,18 @@ def _fetch_leading(seen: dict) -> None:
         print(f"(warn) FMP earnings-calendar failed (skipped): {exc}")
 
 
+# ===== no-key LEADING feeds: trading halts (Nasdaq Trader) + fresh SEC 8-Ks (EDGAR) =====
+# These need NO API key, so they run every time and are the reason the brain can drop its
+# live "halts" / "8-K" web searches. Both are wrapped so a dead endpoint just no-ops.
+
 def _xml_local(tag: str) -> str:
+    """Strip any '{namespace}' prefix from an XML tag and lowercase it (RSS/Atom feeds
+    namespace their elements, so we match on the local name only)."""
     return str(tag).rsplit("}", 1)[-1].lower()
 
 
 def _xml_text(elem: ElementTree.Element, *names: str) -> str | None:
+    """First non-empty text of any descendant whose local tag matches one of `names`."""
     wanted = {n.lower() for n in names}
     for child in elem.iter():
         if _xml_local(child.tag) in wanted and child.text:
@@ -247,6 +262,7 @@ def _xml_text(elem: ElementTree.Element, *names: str) -> str | None:
 
 
 def _xml_attr(elem: ElementTree.Element, name: str, attr: str) -> str | None:
+    """Value of `attr` on the first descendant whose local tag matches `name`."""
     lname = name.lower()
     for child in elem.iter():
         if _xml_local(child.tag) == lname:
@@ -257,14 +273,16 @@ def _xml_attr(elem: ElementTree.Element, name: str, attr: str) -> str | None:
 
 
 def _market_tz():
+    """US market timezone for interpreting Nasdaq halt timestamps (they're ET, no zone)."""
     try:
         from zoneinfo import ZoneInfo
         return ZoneInfo("America/New_York")
-    except Exception:  # noqa: BLE001 - Windows may lack zoneinfo data
+    except Exception:  # noqa: BLE001 - Windows may lack zoneinfo data; fall back to UTC
         return timezone.utc
 
 
 def _parse_halt_dt(date_val: str | None, time_val: str | None) -> datetime | None:
+    """Parse a Nasdaq halt date+time (ET, several possible formats) -> UTC datetime."""
     if not date_val:
         return None
     raw_date = str(date_val).strip()
@@ -285,6 +303,7 @@ def _parse_halt_dt(date_val: str | None, time_val: str | None) -> datetime | Non
 
 
 def _parse_feed_dt(val: str | None) -> datetime | None:
+    """Parse an RSS/Atom timestamp (RFC822 via email.utils, ISO fallback) -> UTC."""
     if not val:
         return None
     try:
@@ -299,6 +318,7 @@ def _parse_feed_dt(val: str | None) -> datetime | None:
 
 
 def _is_today_or_recent(dt: datetime | None, *, hours: int = 24) -> bool:
+    """True if `dt` is today's UTC date OR within the last `hours` (freshness gate)."""
     if not dt:
         return False
     now = datetime.now(timezone.utc)
@@ -306,7 +326,10 @@ def _is_today_or_recent(dt: datetime | None, *, hours: int = 24) -> bool:
 
 
 def _fetch_halts(seen: dict) -> None:
-    """LEADING halt/resume funnel from Nasdaq Trader RSS. A dead endpoint no-ops."""
+    """LEADING halt/resume funnel from the free Nasdaq Trader RSS — LULD halts often
+    precede the biggest small-cap moves, so catching the RESUME is the edge. Keeps only
+    today's/recent events, caps at MAX_HALTS, tags them `halt_resume`. A dead endpoint
+    just no-ops (the brain simply won't see halts that run)."""
     try:
         xml = _http_text(HALTS_URL, timeout=25, headers={"User-Agent": "Mozilla/5.0"})
         root = ElementTree.fromstring(xml)
@@ -336,6 +359,7 @@ def _fetch_halts(seen: dict) -> None:
                 "halt_dt": halt_dt,
                 "reason": _xml_text(item, "ReasonCode", "HaltReason", "Reason", "ReasonCodeDescription"),
             })
+        # Prefer names with a resumption set, then most recent event.
         picked.sort(key=lambda x: (x["resume_dt"] is not None, x["event_dt"] or datetime.min.replace(tzinfo=timezone.utc)),
                     reverse=True)
         added = 0
@@ -356,6 +380,7 @@ def _fetch_halts(seen: dict) -> None:
 
 
 def _sec_cik_tickers() -> dict[int, str]:
+    """Fetch + cache SEC's CIK -> ticker map (company_tickers.json). One call per process."""
     global _SEC_CIK_TICKERS
     if _SEC_CIK_TICKERS is not None:
         return _SEC_CIK_TICKERS
@@ -377,6 +402,8 @@ def _sec_cik_tickers() -> dict[int, str]:
 
 
 def _entry_cik(entry: ElementTree.Element, title: str | None) -> int | None:
+    """CIK for an EDGAR atom <entry> — from a <cik> element, else the '(0001234567)' in
+    the title — normalized to an int (leading zeros stripped) to match the ticker map."""
     raw = _xml_text(entry, "cik", "cikNumber", "companyCik")
     if not raw and title:
         match = re.search(r"\((0*\d{1,10})\)", title)
@@ -390,6 +417,7 @@ def _entry_cik(entry: ElementTree.Element, title: str | None) -> int | None:
 
 
 def _entry_link(entry: ElementTree.Element) -> str | None:
+    """Best filing URL for an EDGAR atom <entry> (link href, else id/link text)."""
     href = _xml_attr(entry, "link", "href")
     if href:
         return href
@@ -397,7 +425,10 @@ def _entry_link(entry: ElementTree.Element) -> str | None:
 
 
 def _fetch_sec_8k(seen: dict) -> None:
-    """Fresh SEC 8-K funnel. SEC calls carry User-Agent and failures no-op."""
+    """LEADING funnel of FRESH SEC 8-K filings (material events: contracts, M&A, FDA,
+    offerings) — the earliest catalyst, often before the stock moves. Maps each filing's
+    CIK to a ticker, keeps only the last ~12h, dedupes by (ticker, url), caps at MAX_8K,
+    tags `sec_8k`. SEC requires a descriptive User-Agent; failures no-op."""
     try:
         cik_map = _sec_cik_tickers()
         xml = _http_text(SEC_8K_ATOM_URL, timeout=25, headers=SEC_HEADERS)
@@ -440,8 +471,13 @@ def _fetch_sec_8k(seen: dict) -> None:
 
 
 def _fetch_smallcap_universe() -> dict[str, dict]:
-    """Map of SMALL-CAP symbol -> {market_cap, volume, price, pct} from Nasdaq's
-    FREE public screener. Returns {} on any failure."""
+    """Map of SMALL-CAP symbol -> {market_cap, volume, price, pct} (market cap ~$50M-$2B,
+    above our $2 floor) from Nasdaq's FREE public screener — one no-auth call covering
+    the whole US market with real market caps AND volume. Two jobs: (a) DISCOVER which
+    names in the news feed are small-caps, and (b) ENRICH them with cap/volume/price the
+    news feed itself lacks (news rows otherwise arrive with only a headline). Returns
+    {} on any failure (graceful — just disables small-cap tagging that run).
+    (FMP's screener is 402 Payment Required on the free tier, so we don't use it.)"""
     def _num(v):
         try:
             return float(str(v).replace("$", "").replace(",", "").replace("%", "").strip() or 0)
@@ -471,7 +507,9 @@ def _fetch_smallcap_universe() -> dict[str, dict]:
 
 
 def _av_time_to_iso(t) -> str | None:
-    """Alpha Vantage's time_published is 'YYYYMMDDTHHMMSS' (UTC)."""
+    """Alpha Vantage's time_published is 'YYYYMMDDTHHMMSS' (UTC). Return ISO 8601 so the
+    brain can judge how FRESH a catalyst is (hot news = move may still be ahead; days-old
+    news = likely already priced in). None if missing/unparseable."""
     if not t:
         return None
     try:
@@ -481,8 +519,13 @@ def _av_time_to_iso(t) -> str | None:
 
 
 def _parse_av_feed(payload: dict) -> list[dict]:
+    """Turn an Alpha Vantage NEWS_SENTIMENT response into one row per on-topic ticker
+    (relevance-filtered, deduped to each ticker's most-recent mention; CRYPTO:/FOREX:
+    pseudo-tickers skipped). Sentiment is NOT filtered here — the caller decides
+    (small-caps surface on any non-bearish coverage; mega-caps need bullish)."""
     feed = payload.get("feed")
     if not isinstance(feed, list):
+        # AV signals rate-limit / bad key via an Information/Note/Error message.
         note = payload.get("Information") or payload.get("Note") or payload.get("Error Message")
         if note:
             print(f"(news) AV said: {str(note)[:140]}")
@@ -514,6 +557,8 @@ def _parse_av_feed(payload: dict) -> list[dict]:
 
 
 def _carry_forward_news(seen: dict, prev: dict) -> int:
+    """Re-add the previous run's news names (both small-cap and bullish) so the signal
+    persists on throttled runs between actual Alpha Vantage calls."""
     carried = 0
     for row in prev.get("candidates", []):
         sigs = row.get("signals") or []
@@ -529,20 +574,28 @@ def _carry_forward_news(seen: dict, prev: dict) -> int:
 
 
 def _fetch_news(seen: dict, prev: dict, smallcap: dict[str, dict]) -> dict:
+    """LEADING stock-news signal with small-cap DISCOVERY. One deep AV pull gives every
+    ticker in the news; we then split it:
+      * ticker in the small-cap universe + not clearly bearish -> `news_smallcap`
+        (the names we want BROUGHT to us — small-caps in the news, even if not yet a
+        mover), and
+      * otherwise, bullish-leaning -> `news_bullish` (mostly mega-cap context).
+    Throttled by a per-UTC-day counter (persisted in candidates.json) to stay under
+    AV's free 25/day cap. Returns the news meta to persist. No-ops without a key."""
     today = datetime.now(timezone.utc).date().isoformat()
     meta = {"news_updated_utc": prev.get("news_updated_utc"),
             "news_calls_date": prev.get("news_calls_date"),
             "news_calls_today": prev.get("news_calls_today", 0) or 0}
     if not AV_API_KEY:
         return meta
-    calls = meta["news_calls_today"] if meta["news_calls_date"] == today else 0
+    calls = meta["news_calls_today"] if meta["news_calls_date"] == today else 0  # reset on new day
     meta["news_calls_date"] = today
     last = _parse_dt(meta["news_updated_utc"])
     age_min = (datetime.now(timezone.utc) - last).total_seconds() / 60 if last else 1e9
     if calls >= NEWS_DAILY_BUDGET or age_min < NEWS_REFRESH_MIN:
         why = "daily budget reached" if calls >= NEWS_DAILY_BUDGET else f"{age_min:.0f}m < {NEWS_REFRESH_MIN}m"
         carried = _carry_forward_news(seen, prev)
-        print(f"(news) throttled ({why}; {calls}/{NEWS_DAILY_BUDGET} today) - carried {carried} prior names")
+        print(f"(news) throttled ({why}; {calls}/{NEWS_DAILY_BUDGET} today) — carried {carried} prior names")
         meta["news_calls_today"] = calls
         return meta
     try:
@@ -569,11 +622,12 @@ def _fetch_news(seen: dict, prev: dict, smallcap: dict[str, dict]) -> dict:
     except Exception as exc:  # noqa: BLE001 - never let news break the run
         print(f"(warn) news fetch failed: {exc}")
         _carry_forward_news(seen, prev)
-        meta["news_calls_today"] = calls
+        meta["news_calls_today"] = calls  # a failed call shouldn't burn the budget
     return meta
 
 
 def _read_candidates() -> dict:
+    """Previous candidates.json (for the news throttle / carry-forward). {} if none."""
     try:
         with open(CANDIDATES_FILE, encoding="utf-8") as fh:
             return json.load(fh)
@@ -582,6 +636,10 @@ def _read_candidates() -> dict:
 
 
 def _slim_row(row: dict) -> dict:
+    """Token-diet for the brain: drop fields that carry NO information — null/empty
+    values and the redundant singular `signal` (the `signals` list already holds it).
+    Lossless: every meaningful value (and the full `signals` list) is preserved, so
+    the brain sees the identical candidate set and makes the identical decision."""
     return {k: v for k, v in row.items()
             if k != "signal" and v is not None and v != []}
 
@@ -596,14 +654,18 @@ def _write_candidates(seen: dict, news_meta: dict | None = None,
         "updated_utc": datetime.now(timezone.utc).isoformat(),
         "count": len(seen),
         "signal_counts": counts,
+        # Macro tape the brain reads first (omitted entirely if unavailable):
         **({"market": market} if market else {}),
         **({"market_updated_utc": market_utc} if market_utc else {}),
+        # AV news throttle state (persisted across runs):
         **(news_meta or {}),
         "candidates": [_slim_row(r) for r in sorted(seen.values(), key=lambda x: x["symbol"])],
     }
     try:
         os.makedirs(os.path.dirname(CANDIDATES_FILE), exist_ok=True)
         with open(CANDIDATES_FILE, "w", encoding="utf-8") as fh:
+            # Compact separators (no pretty-print whitespace): ~46% fewer bytes/tokens
+            # for the brain to read each run, with byte-for-byte the same parsed data.
             json.dump(data, fh, separators=(",", ":"))
         print(f"Wrote {CANDIDATES_FILE}: {len(seen)} candidates {counts}")
     except Exception as exc:  # noqa: BLE001
@@ -611,6 +673,9 @@ def _write_candidates(seen: dict, news_meta: dict | None = None,
 
 
 def _fmp_quote_one(symbol: str) -> dict | None:
+    """One FMP quote row for a symbol (index ETF / ^VIX), or None on any failure. The
+    `stable` quote body may be a list or a single dict; tolerate both. A 402/404 (paid/
+    missing on the free tier) just returns None — the caller degrades to partial data."""
     try:
         data = _http_json(f"{FMP_BASE}/quote?symbol={symbol}&apikey={FMP_API_KEY}", timeout=15)
     except Exception:  # noqa: BLE001 - permanent or transient: caller degrades gracefully
@@ -623,6 +688,9 @@ def _fmp_quote_one(symbol: str) -> dict | None:
 
 
 def _fetch_sector_perf() -> list[dict]:
+    """Best-effort sector-performance snapshot [{sector, pct}, ...] sorted hot->cold. The
+    FMP path/shape varies and may be paid; every shape is tried in turn and on total
+    failure we return [] (the brain simply won't see a sector tilt — no regression)."""
     today = datetime.now(timezone.utc).date().isoformat()
     for ep in (f"sector-performance-snapshot?date={today}", "sector-performance", "sectors-performance"):
         try:
@@ -653,24 +721,31 @@ def _fetch_sector_perf() -> list[dict]:
 
 
 def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
+    """Top-level MACRO snapshot so the brain can read the tape BEFORE picking: index
+    trend (SPY/QQQ %), a volatility read (VIX), the day's hot/cold sectors, and a
+    conservative derived `tone`. All FMP-sourced (Alpha Vantage's daily budget is
+    reserved for news) and THROTTLED to ~REGIME_REFRESH_MIN (the tape moves slowly) to
+    protect the FMP call budget. Every sub-call is isolated — whatever is available is
+    included; if everything fails the block is simply absent (zero regression). Returns
+    (market_dict, market_updated_utc)."""
     if not FMP_API_KEY:
         return prev.get("market") or {}, prev.get("market_updated_utc")
     last = _parse_dt(prev.get("market_updated_utc"))
     age_min = (datetime.now(timezone.utc) - last).total_seconds() / 60 if last else 1e9
     if age_min < REGIME_REFRESH_MIN and prev.get("market"):
-        print(f"(regime) throttled ({age_min:.0f}m < {REGIME_REFRESH_MIN}m) - reusing prior tape")
+        print(f"(regime) throttled ({age_min:.0f}m < {REGIME_REFRESH_MIN}m) — reusing prior tape")
         return prev["market"], prev.get("market_updated_utc")
 
     market: dict = {}
-    for sym in REGIME_INDEXES:
+    for sym in REGIME_INDEXES:  # broad-market trend via ETF proxies
         row = _fmp_quote_one(sym)
         if not row:
             continue
         pct = row.get("changesPercentage")
         if pct is None:
             pct = row.get("changePercentage")
-        if pct is None:
-            price, prev_close = row.get("price"), row.get("previousClose")
+        if pct is None:  # some feeds drop % after hours — derive it from price vs prior close
+            price, prev_close = row.get("price"), row.get("previousClose")  # note: not the `prev` param
             try:
                 pct = (float(price) / float(prev_close) - 1.0) * 100.0 if price and prev_close else None
             except (TypeError, ValueError, ZeroDivisionError):
@@ -680,7 +755,7 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
                 market[f"{sym.lower()}_pct"] = round(float(pct), 2)
             except (TypeError, ValueError):
                 pass
-    vix_row = _fmp_quote_one("%5EVIX") or _fmp_quote_one("VIXY")
+    vix_row = _fmp_quote_one("%5EVIX") or _fmp_quote_one("VIXY")  # ^VIX (URL-encoded), ETF fallback
     vix_val = vix_row.get("price") if vix_row else None
     if vix_val is not None:
         try:
@@ -691,8 +766,8 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
     if sectors:
         market["sectors"] = sectors
 
-    spy, vix = market.get("spy_pct"), market.get("vix")
-    if spy is not None or vix is not None:
+    spy, vix = market.get("spy_pct"), market.get("vix")  # conservative hint; the brain still judges
+    if spy is not None or vix is not None:  # set a tone whenever we have ANY macro read
         if (spy is not None and spy <= -1.0) or (vix is not None and vix >= 25):
             market["tone"] = "risk_off"
         elif spy is not None and spy >= 0.3:
@@ -701,7 +776,7 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
             market["tone"] = "neutral"
 
     if not market:
-        print("(regime) no macro data available this run (endpoints unavailable) - omitting tape")
+        print("(regime) no macro data available this run (endpoints unavailable) — omitting tape")
         return prev.get("market") or {}, prev.get("market_updated_utc")
     print(f"(regime) tape: {market.get('tone','?')} | SPY {market.get('spy_pct','?')}% "
           f"QQQ {market.get('qqq_pct','?')}% VIX {market.get('vix','?')} | "
@@ -710,19 +785,26 @@ def _fetch_market_regime(prev: dict) -> tuple[dict, str | None]:
 
 
 def fetch_fmp_candidates() -> None:
-    """Build the brain's structured top-of-funnel and write signals/candidates.json."""
+    """Build the brain's structured top-of-funnel and write signals/candidates.json.
+    Combines a LAGGING list (today's movers) with LEADING signals — upcoming earnings
+    (FMP) and stock news (Alpha Vantage), the latter cross-referenced against a
+    small-cap universe (Nasdaq's free screener) to DISCOVER small-caps in the news —
+    so the brain can act BEFORE the move. Each source is keyed and isolated: missing keys / failed
+    endpoints just no-op (worst case = today's movers, or an empty file). Throttles
+    the AV news call to stay under its 25/day free cap.
+    The halts + SEC-8K feeds need NO key, so the prefetch runs even with no API keys set."""
     prev = _read_candidates()
     seen: dict[str, dict] = {}
     if FMP_API_KEY:
         _fetch_movers(seen)    # lagging (already moved)
         _fetch_leading(seen)   # leading: upcoming earnings
     else:
-        print("(info) no FMP_API_KEY - skipping FMP movers/earnings sources.")
+        print("(info) no FMP_API_KEY — skipping FMP movers/earnings sources.")
     _fetch_halts(seen)         # leading: same-day halt/resume feed (no key)
     _fetch_sec_8k(seen)        # leading: fresh material 8-K filings (no key)
-    market, market_utc = _fetch_market_regime(prev)
-    smallcap = _fetch_smallcap_universe() if AV_API_KEY else {}
-    news_meta = _fetch_news(seen, prev, smallcap)
+    market, market_utc = _fetch_market_regime(prev)  # macro tape (throttled, FMP)
+    smallcap = _fetch_smallcap_universe() if AV_API_KEY else {}  # small-cap map (discovery + enrichment)
+    news_meta = _fetch_news(seen, prev, smallcap)  # news + small-cap-in-news discovery
     _write_candidates(seen, news_meta=news_meta, market=market, market_utc=market_utc)
 
 
