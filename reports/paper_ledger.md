@@ -1,17 +1,17 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-05T20:20:23Z_
+_Updated 2026-06-05T20:25:22Z_
 
-**Equity:** $972.23  (start $1000.00, **-27.77 / -2.8%**)  
+**Equity:** $972.53  (start $1000.00, **-27.47 / -2.7%**)  
 **Cash:** $181.12   **Invested:** $802.12   **Open positions:** 11  
-**Realized P/L:** $-16.76   **Unrealized:** $-11.01   **Closed trades:** 3   **Win rate:** 0%
+**Realized P/L:** $-16.76   **Unrealized:** $-10.71   **Closed trades:** 3   **Win rate:** 0%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
 | DRTS | stock | 6 | $10.52 | $9.35 | $13.50 | $9.00 | $-7.02 |
-| GASS | stock | 15 | $9.51 | $9.62 | $10.40 | $8.95 | $+1.65 |
+| GASS | stock | 15 | $9.51 | $9.64 | $10.40 | $8.95 | $+1.95 |
 | HPE | stock | 1 | $53.57 | $52.72 | $65.00 | $50.00 | $-0.85 |
 | JFB | stock | 11 | $5.79 | $5.68 | $7.25 | $5.00 | $-1.21 |
 | NRXP | stock | 35 | $4.22 | $4.14 | $4.65 | $4.00 | $-2.80 |
