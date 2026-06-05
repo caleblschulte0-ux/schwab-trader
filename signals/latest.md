@@ -1,49 +1,79 @@
-# Brain Run — 2026-06-05T14:22:15Z
+# Brain Run — 2026-06-05T14:43:00Z
 
-Funnel: scanned 284 → 190 fit budget → 85 with catalyst → 4 finalists → picked 1
-
----
-
-## Macro Tape
-SPY -0.94%, VIX 16.38, tone: **neutral**. Semis are today's story: NVDA -3.1%, MRVL -7.8%, MU -7.1%, INTC -6.6% dragging the broad index. Sector leaders: Communication Services +2.4%, Financials +1.65%, **Industrials +1.56%**, Tech +1.26%. Consumer Defensive -1.43% is the lone notable loser sector. Normal discipline — slightly green-sector tilt toward Industrials/Comms.
+**Funnel:** scanned 289 → 255 fit budget → 53 with catalyst → 3 finalists → picked 0
 
 ---
 
-## Anti-Chase / Prior-Run Guard
-Prior run (13:55Z) had orders = []. Run before that (13:25Z) placed orders for **TBLA** (31 × $4.74) and **FF** (33 × $4.37). FF at $4.37 was already picked at a better price — re-ordering FF now at $4.53 would be chasing a name from a recent run at a worse price. Per anti-chase rules: **FF is off the board this run.** TBLA not reconsidered (not a strong setup today).
+## Macro Tape (STEP 0)
+
+**RISK_OFF.** SPY −1.05%, QQQ −2.11%, VIX 16.58. Broad selling led by Energy (−2.5%), Technology (−1.13%), Consumer Cyclical (−1.1%). Only bright spots: Consumer Defensive (+1.56%), Basic Materials (+0.60%), Real Estate (+0.42%), Communication Services (+0.25%). Regime: materially pickier this run — take FEWER positions, demand the cleanest relative strength, lean toward defined-catalyst entries. "Sitting out" is correct on an ugly tape when no setup clears the bar.
+
+*Note: tape has deteriorated since the prior run (14:22Z tape read was "neutral" with sectors mostly green). SPY has shed another ~0.1 pt intraday and QQQ has pushed to −2.1%. The risk regime has clearly tipped risk_off.*
 
 ---
 
-## Pick
+## Collision Guard
 
-### BUY GASS — StealthGas Inc. (15 shares @ $9.45, TP $10.25, SL $8.95)
-**Catalyst (FRESH — ~1.3 hours old):** "STEALTHGAS INC. Reports First Quarter 2026 Financial And Operating Results" published 2026-06-05T13:01 UTC via marketscreener.com. Sentiment: Bullish (0.542). Q1 guidance from Q4 call was $37.4M rev / $0.32 EPS; company released results this morning. The stock is only +2.4% on the day with 32K volume — very early in the move with clear room to the target. The prior run's GASS read (-0.4% / 157K volume) appears to have been a data artifact; candidates refreshed at 14:07 UTC show a genuine +2.4% gain with fresh bullish earnings data. **Industrials** is the 3rd-hottest sector today (+1.56%), directly benefiting LPG/LNG shipping. Market cap $349M (small-cap sweet spot). Risk/reward: +8.5% / -5.3% = 1.6:1. Size: 15 × $9.45 = $141.75 ✓.
+Prior orders.json written at 14:22:15Z; current candidates.json built at 14:27:34Z (a fresh pipeline build, newer than prior orders). Estimated current time ≈ 14:43Z → ~21 min since prior write. Guard clears — proceeding with full scan.
 
-**Why not FF again:** Already ordered at $4.37 in the 13:25 run. Re-buying at $4.53 (+3.7% higher) violates the anti-chase rule — same name, worse entry, no new catalyst since the prior order.
-
----
-
-## Notable Passes
-
-- **STI** (Solidion Technology): +76.1% intraday on AI battery patent news. Near-vertical blow-off — hard pass.
-- **BBCP** (Concrete Pumping Holdings): +43.6%, no visible catalyst. Extended. Pass.
-- **BCDA** (BioCardia): +48.5% — sub-$2 floor ($1.36). Disqualified.
-- **HCAT** (Health Catalyst): Asset sale catalyst 12h old, already +10.8%. Move priced in. Pass.
-- **IOVA** (Iovance): Headline "Climbs 15%" on Australia approval — but current data shows -1.94%. Pop fully priced in / fading. Pass.
-- **DNUT** (Krispy Kreme): National Doughnut Day = soft seasonal PR, not a fundamental catalyst. Pass.
-- **COYA** (Coya Therapeutics): Roth/MKM Buy initiation, +3.5%, catalyst now 7.5h old. Good setup but slightly stale. Added to watchlist for pullback.
-- **BNAI** (Brand Engagement Network): $1M AI deal for a $109M cap. Deal size underwhelms relative to market cap. Pass.
+Prior run placed **GASS** (15 × $9.45, TP $10.25, SL $8.95). GASS is at $9.25 +0.8% in today's candidates, still confirming strength on a risk-off tape. Will not re-order.
 
 ---
 
 ## Holdings Review
-9 open positions at ~$522 cost basis (from holdings.json at 02:55 UTC, stale — doesn't reflect any fills since market open). Prior run estimated ~$813 deployed if TBLA + FF (13:25 orders) filled. Adding GASS = ~$955 deployed at most, leaving ~$45 reserve — right at the edge. If prior orders did NOT fill, deploying GASS = ~$664, leaving ~$336 (comfortable).
 
-**ONDS** (held @ avg $12.39, candidates show $10.98 = -11.4%): No negative catalyst in today's funnel — listed only as `mover` (active). Relative weakness versus the +1.56% Industrials sector is a flag worth watching. No confirmed thesis break. **Holding** per "when in doubt, HOLD" rule.
+Nine confirmed positions (source: holdings.json 02:55 UTC). Total at avg cost ≈ $522. With GASS pending (~$142), total deployed if GASS fills ≈ $664, leaving ~$336 in powder.
 
-All other holdings (DRTS, HPE, JFB, NVGS, NVTS, SLDB, TISI, TLYS) not in today's candidates. No adverse news surfaced. **Holding.**
+- **ONDS** (Ondas Holdings): avg $12.39, current $10.935 = **−$7.28 paper (−11.8%)**. Down −8.65% today — the steepest known loser. But Ondas's drone/railroad comms thesis has not broken on a company-specific catalyst; this is sector selling (Industrials −0.58%). Per "When in doubt, HOLD" — holding. The bot's original stop (if set) would have already triggered via the auto-exit; the fact it remains in holdings means it hasn't crossed that level yet.
+- All other positions (DRTS, HPE, JFB, NVGS, NVTS, SLDB, TISI, TLYS) not visible in today's candidates. No adverse news surfaced in the funnel for any of them. Holding all.
+
+---
+
+## Scan — Full Funnel
+
+289 candidates in total. Signal breakdown: 139 movers | 71 news_smallcap | 48 sec_8k | 25 news_bullish | 22 halt/resume | 1 earnings_soon.
+
+**Leading count (97):** news_smallcap 71 + news_bullish 25 + earnings_soon 1. Screened all for FRESH catalyst + relative strength vs risk-off tape.
+
+### Finalists evaluated
+
+**BNAI (Brand Engagement Network)** — +12.0% at $18.30, $108M cap, 184K volume. **Catalyst (FRESH, published 10:15 UTC today):** $1M strategic investment in Accelevate Solutions fleet-AI (~10% stake + warrant to ~20%) AND a $1M investor capital commitment to buy BNAI stock at $17.82/share in monthly tranches through November 2026. Dual catalyst is real and substantive. $17.82 investor anchor creates a measurable support floor. Best relative-strength name on a risk-off tape. **Verdict: extended at +12% on risk-off — do not chase.** Adding to watchlist at $17.50 pullback (near investor anchor); that's the clean entry.
+
+**HCAT (Health Catalyst)** — +9.8% at $2.13, $155M cap, 2M+ volume. Catalyst: Med-Metrix agreed to acquire Vitalware LLC from Health Catalyst. **Catalyst age: published 02:08 UTC (~12.5 hours ago).** Solid relative strength and real volume, but 12-hour-old catalyst on a risk-off day likely has the move priced in. Pass.
+
+**GASS** — already ordered by the prior run (14:22:15Z). Not re-ordering.
+
+### Notable passes (wider scan)
+
+| Name | Reason passed |
+|------|--------------|
+| STI +71.5% | Near-vertical blow-off on AI battery patent. Hard pass. |
+| BBCP +43.4% | No catalyst in funnel; massively extended. Pass. |
+| STAK +59.1% | LUDP halt/resume, pre-market. No catalyst. Too speculative on risk-off. |
+| BESS +38.4% | Halt resume (M), extended. Pass. |
+| JLHL +29.6% | Chinese holding, no catalyst. Pass. |
+| MRLN +23.3% | No catalyst listed. Pass. |
+| HURC +18.4% | No catalyst listed. Mystery run — risky without reason. Pass. |
+| CMND +18.2% | No catalyst, biotech. Pass. |
+| SONM +11.6% | Mystery mover, no catalyst surfaced. Pass. |
+| COYA +2.7% | Roth/MKM initiation (fresh, 06:39 UTC today). Watchlist trigger at $4.80 in place — not triggered yet. Keep watching. |
+| CABA −3.6% | 83% response rate for rese-cel (dermatomyositis). Bullish catalyst but stock is losing on it = weak relative strength on risk-off. Pass. |
+| IOVA −1.7% | Australia Amtagvi approval. Overnight catalyst — already priced in and fading. Pass. |
+| GOGO −2.5% | $7.5M NOAA contract (published ~27h ago, borderline stale). Watchlist trigger at $3.85, getting closer. Keep watching. |
+| AGX +10.9% | $764/share — well over $150 budget. Pass. |
+| NOTV +146% | $0.21/share — sub-$2 floor. Disqualified. |
+| BCDA +52.2% | $1.40/share — sub-$2 floor. Disqualified. |
+
+---
+
+## Decision
+
+**No new orders.** Risk-off tape + 9 existing holdings + no setup that clears the elevated bar after a full 289-candidate scan. GASS (prior run) is the active entry. BNAI watchlist entry added at $17.50 pullback for a cleaner R/R when/if the extended move cools.
 
 ---
 
 ## Web Search
-1 targeted search: verified GASS Q1 2026 results timing and prior guidance ($37.4M rev / $0.32 EPS). Confirmed the earnings were scheduled for release this morning (10 AM ET conference call). Candidates.json bullish sentiment (0.542) on the actual results press release validates the pick.
+
+1 targeted search: verified BNAI catalyst (finalist check). Confirmed the $1M Accelevate investment is real (10% stake + 20% warrant option) and the $17.82 investor capital commitment is a separate confirmed structural support. Deal is more substantial than the headline implied — but still not a chase at +12% on risk-off.
+
+*Sectors favored: Consumer Defensive, Basic Materials, Real Estate, Comm Services | Avoid: Energy, Tech, Consumer Cyclical*

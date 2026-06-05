@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-05T14:22:15Z",
+  "generated_utc": "2026-06-05T14:43:00Z",
   "watch": [
     {"symbol": "LASE", "trigger": "pullback", "trigger_price": 3.00,
      "quantity": 21, "limit_price": 3.05, "take_profit": 3.90, "stop_loss": 2.55,
@@ -24,9 +24,12 @@
      "good_until": "2026-06-09", "note": "Canaccord Genuity initiates coverage with Buy / $32 PT (published 16:09 UTC June 4 — fresh initiation). Stock at ~$27 up 8.6% — buy the pullback to $25.50 rather than chasing. $1.88B cardiac biotech with upcoming clinical milestones."},
     {"symbol": "GOGO", "trigger": "pullback", "trigger_price": 3.85,
      "quantity": 16, "limit_price": 3.90, "take_profit": 4.80, "stop_loss": 3.55,
-     "good_until": "2026-06-07", "note": "SD Government (a Gogo company) won $7.5M multi-year NOAA framework contract for hurricane hunter aircraft comms ahead of 2026 hurricane season. Communication Services sector is today's hottest (+2.4%). Current ~$4.05 — buy the pullback to $3.85 near gap support. NOTE: stock showing mild relative weakness today (-1.6%) despite hot sector — set trigger conservatively. Catalyst published 11:10 UTC June 4."},
+     "good_until": "2026-06-07", "note": "SD Government (a Gogo company) won $7.5M multi-year NOAA framework contract for hurricane hunter aircraft comms ahead of 2026 hurricane season. Communication Services sector neutral today (+0.25%). Current ~$4.01 and drifting lower on risk-off tape — trigger at $3.85 near gap support could fire today or tomorrow."},
     {"symbol": "COYA", "trigger": "pullback", "trigger_price": 4.80,
      "quantity": 31, "limit_price": 4.82, "take_profit": 5.50, "stop_loss": 4.45,
-     "good_until": "2026-06-10", "note": "Roth/MKM initiates Coya Therapeutics with Buy rating (published 06:39 UTC June 5 — fresh today). Tiny biotech $118M cap, neurology focus. Stock at $5.04 +3.5% on initiation — buy the pullback to $4.80 rather than chasing the day-1 pop. R/R from trigger: +14.6% / -7.3%."}
+     "good_until": "2026-06-10", "note": "Roth/MKM initiates Coya Therapeutics with Buy rating (published 06:39 UTC June 5 — fresh today). Tiny biotech $118M cap, neurology focus. Stock at $5.00 on risk-off day — trigger at $4.80 could fire if selling continues. R/R from trigger: +14.6% / -7.3%."},
+    {"symbol": "BNAI", "trigger": "pullback", "trigger_price": 17.50,
+     "quantity": 8, "limit_price": 17.65, "take_profit": 19.00, "stop_loss": 16.60,
+     "good_until": "2026-06-08", "note": "Brand Engagement Network: (1) $1M investment in Accelevate fleet AI, ~10% stake + warrant to 20%; (2) $1M investor capital commitment to buy BNAI stock at $17.82/share over 6 months. Dual catalyst with $17.82 investor anchor providing support floor. Up +12% today to $18.30 — too extended to chase. Buy the pullback to $17.50, near the investor commitment price. R/R: +8.6% / -5.1%. Catalyst published 10:15 UTC June 5 (fresh)."}
   ]
 }
