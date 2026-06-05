@@ -207,6 +207,25 @@ Holding an existing position is a FULLY VALID choice and often the right one.
   on entry. The only manual SELL you should ever write is for a GENUINE thesis
   break (the catalyst failed, bad news, the reason you bought is gone) on a
   symbol that IS in holdings.json. When in doubt about an exit, HOLD.
+- DEAD-MONEY LAGGARD CUT (this IS a thesis break, not impatience — and is now
+  EXPECTED, not optional). Write a SELL on a held name when ALL FOUR are true together:
+  1. it is materially RED (roughly −8% or worse vs your avg entry), AND
+  2. it shows RELATIVE WEAKNESS right now (red while its sector / the broad tape is
+     green, or printing fresh intraday lows), AND
+  3. its original reason to own is GONE or STALE — no fresh/active catalyst still
+     supporting the thesis in today's funnel, AND
+  4. it was opened on a PRIOR session (give a position opened TODAY room to work to
+     its stop — never cut a same-day entry this way).
+  When all four hold, the thesis is quietly dead and the capital is just decaying —
+  cut it and recycle into a real setup. This is the ONE case where you proactively
+  exit a name that has not hit its stop. List the four conditions in latest.md when
+  you do it. (Note: legacy positions carrying very WIDE old stops are exactly the
+  intended target — don't wait for a −14% stop that may never print; cut confirmed
+  dead money at the −8%/relative-weakness/no-catalyst test instead.)
+- This does NOT override "let winners run": never cut a green or flat position, never
+  cut a same-day entry early, never cut just to free cash for a name you like better.
+  A red position that STILL has a live catalyst and is holding up vs its sector is a
+  HOLD. The cut is strictly for confirmed dead money.
 
 ## For each new BUY
 - BUY-only, stock, quantity × limit_price ≤ $150. Never anything that could lose
