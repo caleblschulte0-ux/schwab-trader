@@ -1,5 +1,8 @@
 {
-  "generated_utc": "2026-06-05T13:55:22Z",
-  "funnel": {"scanned": 281, "leading": 99, "in_budget": 248, "had_catalyst": 67, "finalists": 4, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-05T14:22:15Z",
+  "funnel": {"scanned": 284, "leading": 112, "in_budget": 190, "had_catalyst": 85, "finalists": 4, "picked": 1},
+  "orders": [
+    {"symbol": "GASS", "action": "BUY", "instrument": "stock",
+     "quantity": 15, "limit_price": 9.45, "take_profit": 10.25, "stop_loss": 8.95}
+  ]
 }
