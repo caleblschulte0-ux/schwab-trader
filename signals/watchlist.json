@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-05T19:31:25Z",
+  "generated_utc": "2026-06-05T20:08:45Z",
   "watch": [
     {
       "symbol": "BBCP",
@@ -31,8 +31,8 @@
       "limit_price": 34.10,
       "take_profit": 36.50,
       "stop_loss": 32.40,
-      "good_until": "2026-06-07",
-      "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5). +6.5% on risk-off tape = strong relative strength. Pullback to $34.00 improves R/R to ~7.3% / -4.7% = ~1.6:1. Insider conviction persists."
+      "good_until": "2026-06-08",
+      "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5). +5.7% on risk-off tape vs Industrials -2.1% = exceptional relative strength. Pullback to $34.00 improves R/R to ~7.3% / -4.7% = ~1.6:1. Insider conviction persists."
     },
     {
       "symbol": "GIII",
@@ -42,8 +42,8 @@
       "limit_price": 32.60,
       "take_profit": 35.50,
       "stop_loss": 30.80,
-      "good_until": "2026-06-08",
-      "note": "Q1 FY2027 earnings beat with tariff refund boost (8-K filed 13:29 UTC 6/5). Up +4.9% vs Consumer Cyclical sector -2.57% — strong relative strength. At $32.50 pullback: R/R ~+9.2% / -5.2% = ~1.8:1."
+      "good_until": "2026-06-09",
+      "note": "Q1 FY2027 earnings beat with tariff refund boost (8-K filed 13:29 UTC 6/5). Up +4.9% vs Consumer Cyclical sector -3.92% — exceptional relative strength. At $32.50 pullback: R/R ~+9.2% / -5.2% = ~1.8:1."
     },
     {
       "symbol": "MNKD",
@@ -54,7 +54,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-11",
-      "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 catalyst + Q1 revenue +15% YoY. Healthcare sector green (+0.66% on 6/5 risk-off tape). Enter on volume breakout above $3.65."
+      "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 catalyst + Q1 revenue +15% YoY. Healthcare sector green on risk-off tape. Enter on volume breakout above $3.65."
     },
     {
       "symbol": "GHRS",
