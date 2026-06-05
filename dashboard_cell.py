@@ -3,7 +3,9 @@
 # a dashboard INSIDE the Colab output. Private to you, nothing published.
 # Re-run the cell anytime to refresh.
 
-import json, urllib.request, datetime
+import json
+import urllib.request
+import datetime
 from IPython.display import HTML, display
 
 RAW = "https://raw.githubusercontent.com/caleblschulte0-ux/schwab-trader/main/"

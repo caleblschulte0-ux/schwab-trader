@@ -87,7 +87,7 @@ def main(argv: list[str]) -> int:
     print(f"  Account:     {display_acct}")
     print(f"  Action:      {args.side} {args.quantity} {args.symbol}")
     print(f"  Order type:  LIMIT @ ${args.limit_price:,.2f}")
-    print(f"  Time-in-force: DAY")
+    print("  Time-in-force: DAY")
     print(f"  Est. {'cost' if args.side == 'BUY' else 'proceeds'}: ${estimated:,.2f}")
 
     if not args.yes:
