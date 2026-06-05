@@ -1,6 +1,17 @@
 {
-  "generated_utc": "2026-06-05T15:52:44Z",
+  "generated_utc": "2026-06-05T16:18:47Z",
   "watch": [
+    {
+      "symbol": "BBCP",
+      "trigger": "pullback",
+      "trigger_price": 10.00,
+      "quantity": 14,
+      "limit_price": 10.10,
+      "take_profit": 11.20,
+      "stop_loss": 9.40,
+      "good_until": "2026-06-07",
+      "note": "Q2 FY26 EPS beat 4x ($0.04 vs $0.01), revenue $106.8M vs $98.6M, guidance raised. Gapped +34% — enter only on pullback/consolidation near $10.00 gap support."
+    },
     {
       "symbol": "FF",
       "trigger": "pullback",
@@ -10,7 +21,7 @@
       "take_profit": 4.65,
       "stop_loss": 3.98,
       "good_until": "2026-06-07",
-      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5, very fresh). Basic Materials sector green (+0.23%) on risk-off day. +2.2% today on low churn. Enter only on pullback to $4.20 support."
+      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5, very fresh). Basic Materials sector green (+0.23%) on risk-off day. Currently $4.42. Enter only on pullback to $4.20 support."
     },
     {
       "symbol": "GIII",
@@ -21,18 +32,7 @@
       "take_profit": 36.50,
       "stop_loss": 32.00,
       "good_until": "2026-06-06",
-      "note": "G-III Apparel Q1 FY27 beat boosted by tariff refund (13:29 UTC 6/5, fresh earnings). Up +9.3% today. Consumer Cyclical headwind (-1.66%) today — wait for pullback consolidation to $33.50 before entry."
-    },
-    {
-      "symbol": "GOGO",
-      "trigger": "pullback",
-      "trigger_price": 3.85,
-      "quantity": 16,
-      "limit_price": 3.90,
-      "take_profit": 4.80,
-      "stop_loss": 3.55,
-      "good_until": "2026-06-07",
-      "note": "SD Government (Gogo) won $7.5M multi-year NOAA contract for hurricane hunter comms. Currently $4.00, -2.9% — trigger at $3.85 near gap support could fire today."
+      "note": "G-III Apparel Q1 FY27 beat boosted by tariff refund (13:29 UTC 6/5, fresh earnings). Up +8.5% today. Consumer Cyclical headwind — wait for pullback consolidation to $33.50 before entry."
     },
     {
       "symbol": "LASE",
@@ -43,7 +43,7 @@
       "take_profit": 3.90,
       "stop_loss": 2.55,
       "good_until": "2026-06-07",
-      "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest + $250K J&J laser drilling order. Currently $3.58, -1.1% today. Wait for pullback to $3.00 near support."
+      "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest + $250K J&J laser drilling order. Currently $3.65. Wait for pullback to $3.00 near support."
     },
     {
       "symbol": "SVCO",
