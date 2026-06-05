@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-05T18:35:19.215931+00:00",
+  "updated_utc": "2026-06-05T18:40:17.851622+00:00",
   "holdings": [
     {
       "symbol": "DRTS",
@@ -20,11 +20,6 @@
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22
-    },
-    {
-      "symbol": "NTLA",
-      "quantity": 4,
-      "avg_price": 13.19
     },
     {
       "symbol": "NVGS",
