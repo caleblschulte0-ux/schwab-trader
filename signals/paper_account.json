@@ -1,5 +1,5 @@
 {
-  "cash": 477.9800000000001,
+  "cash": 322.9948000000001,
   "start_equity": 1000.0,
   "positions": {
     "HPE": {
@@ -22,13 +22,6 @@
       "tp": 26.5,
       "sl": 19.5,
       "opened_utc": "2026-06-04T13:00:42.886650+00:00"
-    },
-    "NVTS": {
-      "qty": 2,
-      "entry": 29.25,
-      "tp": 37.0,
-      "sl": 27.0,
-      "opened_utc": "2026-06-04T13:20:29.294380+00:00"
     },
     "DRTS": {
       "qty": 6,
@@ -60,17 +53,62 @@
       "multiplier": 1,
       "opened_utc": "2026-06-04T17:18:48.487431+00:00"
     },
-    "ONDS": {
-      "qty": 5,
-      "entry": 12.39,
-      "tp": 14.4,
-      "sl": 10.8,
+    "NTLA": {
+      "qty": 4,
+      "entry": 13.19,
+      "tp": 18.0,
+      "sl": 13.0,
       "kind": "stock",
       "multiplier": 1,
-      "opened_utc": "2026-06-04T18:25:23.440445+00:00"
+      "opened_utc": "2026-06-05T18:00:29.867442+00:00"
+    },
+    "RXRX": {
+      "qty": 18,
+      "entry": 3.29,
+      "tp": 4.5,
+      "sl": 3.1,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-05T18:00:30.123809+00:00"
+    },
+    "NRXP": {
+      "qty": 35,
+      "entry": 4.22,
+      "tp": 4.65,
+      "sl": 4.0,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-05T18:00:30.964456+00:00"
     }
   },
-  "realized_pnl": 0.0,
-  "closed_trades": [],
-  "updated_utc": "2026-06-05T02:55:24.017372+00:00"
+  "realized_pnl": -15.755200000000002,
+  "closed_trades": [
+    {
+      "symbol": "NVTS",
+      "qty": 2,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 29.25,
+      "exit": 25.6099,
+      "pnl": -7.28,
+      "pnl_pct": -12.44,
+      "opened_utc": "2026-06-04T13:20:29.294380+00:00",
+      "closed_utc": "2026-06-05T18:00:26.705565+00:00",
+      "reason": "hit stop $27.0"
+    },
+    {
+      "symbol": "ONDS",
+      "qty": 5,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 12.39,
+      "exit": 10.695,
+      "pnl": -8.48,
+      "pnl_pct": -13.68,
+      "opened_utc": "2026-06-04T18:25:23.440445+00:00",
+      "closed_utc": "2026-06-05T18:00:28.166212+00:00",
+      "reason": "brain SELL"
+    }
+  ],
+  "updated_utc": "2026-06-05T18:00:33.492391+00:00"
 }
