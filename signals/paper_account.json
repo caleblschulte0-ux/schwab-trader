@@ -1,5 +1,5 @@
 {
-  "cash": 272.0148000000001,
+  "cash": 323.7748000000001,
   "start_equity": 1000.0,
   "positions": {
     "HPE": {
@@ -53,15 +53,6 @@
       "multiplier": 1,
       "opened_utc": "2026-06-04T17:18:48.487431+00:00"
     },
-    "NTLA": {
-      "qty": 4,
-      "entry": 13.19,
-      "tp": 18.0,
-      "sl": 13.0,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-05T18:00:29.867442+00:00"
-    },
     "RXRX": {
       "qty": 18,
       "entry": 3.29,
@@ -90,7 +81,7 @@
       "opened_utc": "2026-06-05T18:20:22.717098+00:00"
     }
   },
-  "realized_pnl": -15.755200000000002,
+  "realized_pnl": -16.755200000000002,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -117,7 +108,20 @@
       "opened_utc": "2026-06-04T18:25:23.440445+00:00",
       "closed_utc": "2026-06-05T18:00:28.166212+00:00",
       "reason": "brain SELL"
+    },
+    {
+      "symbol": "NTLA",
+      "qty": 4,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 13.19,
+      "exit": 12.94,
+      "pnl": -1.0,
+      "pnl_pct": -1.9,
+      "opened_utc": "2026-06-05T18:00:29.867442+00:00",
+      "closed_utc": "2026-06-05T18:35:21.347208+00:00",
+      "reason": "hit stop $13.0"
     }
   ],
-  "updated_utc": "2026-06-05T18:30:30.043934+00:00"
+  "updated_utc": "2026-06-05T18:35:26.875042+00:00"
 }
