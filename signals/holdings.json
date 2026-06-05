@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-05T18:00:25.361189+00:00",
+  "updated_utc": "2026-06-05T18:05:17.079224+00:00",
   "holdings": [
     {
       "symbol": "DRTS",
@@ -17,19 +17,24 @@
       "avg_price": 5.79
     },
     {
+      "symbol": "NRXP",
+      "quantity": 35,
+      "avg_price": 4.22
+    },
+    {
+      "symbol": "NTLA",
+      "quantity": 4,
+      "avg_price": 13.19
+    },
+    {
       "symbol": "NVGS",
       "quantity": 2,
       "avg_price": 23.55
     },
     {
-      "symbol": "NVTS",
-      "quantity": 2,
-      "avg_price": 29.25
-    },
-    {
-      "symbol": "ONDS",
-      "quantity": 5,
-      "avg_price": 12.39
+      "symbol": "RXRX",
+      "quantity": 18,
+      "avg_price": 3.29
     },
     {
       "symbol": "SLDB",
