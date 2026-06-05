@@ -1,82 +1,57 @@
-# Brain Run — 2026-06-05T18:15:10Z
+# Brain Run — 2026-06-05T18:44Z
 
-**Funnel:** scanned 273 → 260 fit budget → 118 with catalyst → 3 finalists → picked 0
-
----
-
-## Market Tape — RISK_OFF
-
-SPY −1.71%, QQQ −3.52%, VIX 18.14. Broad selling led by Technology (−3.02%) and Energy (−4.35%). Only Consumer Defensive (+1.03%), Healthcare (+0.92%), and Real Estate (+0.34%) green. Industrials −1.11%, Consumer Cyclical −2.31%. Risk-off rules applied: demanded exceptional relative strength + verified catalysts, limited new entries, preserved powder.
+**Funnel:** scanned 274 → 265 fit budget → 42 with catalyst → 3 finalists → picked 1
 
 ---
 
-## Collision Guard
+## Tape / Regime
 
-`orders.json` was last written at **17:59:14Z** (~16 min ago). Cleared; proceeding normally.
-
----
-
-## Finalists Evaluated
-
-### GIII — G-III Apparel **[ELIMINATED after verification]**
-- Price: $34.03, +6.2% vs Consumer Cyclical −2.31% = strong relative strength.
-- Catalyst: Q1 FY2027 8-K filed today, headline "earnings boosted by tariff refund."
-- **Verification (web search):** Q1 EPS of $1.50 driven almost entirely by a **$1.75/share one-time IEEPA tariff refund** ($77.9M net tax benefit). Strip that out: non-GAAP EPS = **−$0.21** vs +$0.19 prior year — underlying operations deteriorated. Revenue $536M, **−8% YoY.** The pop is a one-time accounting item; investors re-rate these lower quickly. **Eliminated — headline trap.**
-- Catalyst age: today, but non-recurring accounting item — thesis does not hold.
-
-### NSP — Insperity **[WATCHLIST — maintained at better entry]**
-- Price: $35.30, +5.45% vs Industrials −1.11% = genuine relative strength.
-- Catalyst: CEO multimillion-dollar open-market share purchase (published 13:40 UTC today). Durable insider conviction.
-- Real setup. Already in watchlist at $34.00 pullback (R/R ~1.42:1). Buying at $35.30 compresses R/R to ~1.3:1 without improving the thesis. Not chasing — watchlist handles it.
-
-### FF — FutureFuel **[WATCHLIST — maintained at better entry]**
-- Price: $4.48, +2.4% vs Basic Materials −0.52% = modest outperformance. Early stage.
-- Catalyst: CEO open-market buy of 10,000 shares (12:21 UTC today). Fresh, insider conviction.
-- Already in watchlist at $4.20 pullback. Risk-off tape makes waiting for confirmed support the right call.
+SPY −2.16%, VIX 19.15 → **risk_off**. Running materially pickier: demanding relative strength (green on a red tape), hard-catalyst quality, skeptical of weak-sector names. Green sectors: Consumer Defensive (+0.87%), Healthcare (+0.66%), Real Estate (+0.54%). Red: Energy (−4.47%), Technology (−2.92%), Consumer Cyclical (−2.57%), Industrials (−1.56%).
 
 ---
 
-## Decision: No New Positions This Run
+## Pick: GASS — StealthGas Inc. (BUY 15 @ $9.50 lmt)
 
-1. Risk-off tape → BRAIN.md demands fewer/smaller positions and cleaner setups.
-2. 10 positions already open, $661 deployed — above the 6-position guideline; preserve the ~$339 remaining for an exceptional setup.
-3. Best direct-buy candidate (GIII) eliminated by fundamental due diligence (one-time tariff accounting).
-4. Both remaining finalists (NSP, FF) already covered at better prices in the watchlist.
-5. Sitting out one risk-off run while 10 positions are active is disciplined, not lazy.
+**Catalyst age:** ~5.5 h — Q1 2026 results published 13:01 UTC today (fresh intraday).
 
----
+Q1 revenue $42.8M (+1.9% YoY / +9% QoQ). Net income $15.9M, **+13% YoY**. EPS $0.43. Zero bank debt, growing cash. Contracted revenue backlog: $52M locked through end-2026, $100M through 2029. Management flagged Iran-driven LPG trade route reshuffling as a structural tailwind for U.S.-oriented shippers. Web-verified: genuine beat — not a one-time accounting item.
 
-## Holdings Read
+**Why this passes the risk-off bar:** Industrials sector is −1.56%, but GASS is green (+2.67%) = real relative strength. Balance-sheet fortress (zero debt + hard multi-year backlog). Stock only +2.67% on a +13% net-income beat = early stage, not blown out. Defined-catalyst entry (earnings print), not momentum chasing.
 
-| Symbol | Qty | Avg   | Last Seen    | Est Unreal |
-|--------|-----|-------|--------------|------------|
-| DRTS   | 6   | $10.52 | not in funnel | unknown    |
-| HPE    | 1   | $53.57 | not in funnel | unknown    |
-| JFB    | 11  | $5.79  | not in funnel | unknown    |
-| NRXP   | 35  | $4.22  | $4.195 today  | −$0.88     |
-| NTLA   | 4   | $13.19 | not in funnel | unknown    |
-| NVGS   | 2   | $23.55 | $21.92 today  | −$3.26     |
-| RXRX   | 18  | $3.29  | not in funnel | unknown    |
-| SLDB   | 9   | $6.86  | not in funnel | unknown    |
-| TISI   | 3   | $18.09 | not in funnel | unknown    |
-| TLYS   | 12  | $4.84  | not in funnel | unknown    |
-
-**NRXP** ($4.195, +3.58% today): Fresh bullish catalyst ("IV ketamine beats nasal esketamine in remission rates," published 12:39 UTC, Bullish 0.459). Down only −0.6% vs avg $4.22 — noise. TP $4.65 / SL $4.00 from prior buy. Thesis live. **HOLD.**
-
-**NVGS** ($21.92, +0.83% today): −6.9% vs avg $23.55 — approaching −8% laggard threshold but not there yet. Has a fresh funnel catalyst today ("2026 Shipping Outlook and Ammonia Investment Updates," Somewhat-Bullish, published 14:09 UTC). Condition 3 (stale catalyst) not met. **HOLD.**
-
-**All other positions:** Not appearing in today's funnel. Without confirmed current prices I cannot verify condition 1 (≥−8%) of the dead-money laggard cut. No manual SELL issued — bot stop-losses are the exit mechanism.
-
-**Watchlist cleanup:** NTLA and RXRX are both currently held — removed from watchlist this run to prevent erroneous re-buy triggers.
+**Entry:** $9.50 lmt | 15 shares = $142.50 ≤ $150 ✓  
+**Take-profit:** $10.40 (+9.5% from lmt) — post-earnings rerate  
+**Stop-loss:** $8.95 (−5.8%)  
+**R/R:** ~1.64:1 ✓  
+**Volume:** 155K confirming participation.
 
 ---
 
-## Notable Passes
+## Finalists Passed
 
-- **SPHL** (+188%, halt/resume): Blow-off, no room. Hard pass.
-- **STI** (+52.7%, halt/resume): Blow-off. Hard pass.
-- **BNAI** (+47%, halt/resume + news): AI fleet deal. Already ran 47% — blow-off territory. Pass.
-- **HURC** (+21.5%, earnings today): Real catalyst (fiscal Q2 results) but +21% intraday = deprioritize range. Pass.
-- **BBCP** (+31.3%): Watchlist already at $10.00 pullback. Not chasing.
-- **III** (−0.9%, AI agentic tools story, sentiment 0.621): Highest sentiment in funnel but no price momentum. Watch for bounce entry.
-- **GASS** (+2.7%, Q1 earnings): Interesting but Energy sector −4.35% headwind; catalyst details unverified; search budget used on GIII.
+**GIII ($33.91, +5.84%)** — G-III Apparel Q1 beat. Previously web-verified this run as a tariff-refund accounting item: underlying non-GAAP EPS was −$0.21 vs +$0.19 prior year; revenue −8% YoY. The pop is a one-time IEEPA refund, not operating improvement. Sector (Consumer Cyclical −2.57%) is also a headwind. **Hard pass — headline trap confirmed.**
+
+**III ($4.27, −0.58%)** — ISG Partners "AI is taking over IT work" survey (Bullish 0.621). Excellent relative strength (nearly flat while Tech −2.92%). Passed: catalyst is ISG's own published research product, not a company event (no earnings beat, insider buy, or regulatory milestone). On a risk-off tape I require a hard catalyst. Strong relative strength noted — revisit if a harder company-level catalyst emerges.
+
+---
+
+## Holdings Assessment
+
+**NRXP ($4.18, +3.21% | avg $4.22):** Fresh ketamine study bullish headline published 12:39 UTC today. Healthcare sector leading (+0.66%). Down only −$0.04/share from avg. Thesis fully active. **HOLD.**
+
+**NVGS ($21.88, +0.644% | avg $23.55):** Down ~−7.1% from avg. Dead-money cut requires ALL FOUR conditions: (1) ≥−8% ← not met (−7.1%); (2) relative weakness ← FAILS (green on a red tape). **HOLD.** Will watch for condition 1 tipping over.
+
+**TISI (avg $18.09, stop $16.00, last seen ~$15.40 prior run):** Not in today's funnel; no current price confirmed. Prior run flagged stop at $16.00 may have fired at ~$15.40. Still in holdings.json — source of truth says position is open. Dead-money conditions cannot be confirmed without today's price. Bot stop-loss at $16.00 is the primary exit mechanism. **Monitor closely.**
+
+**DRTS, HPE, JFB, NTLA, PLSE, RXRX, SLDB, TLYS:** Not present in today's funnel — no current prices available. Cannot compute unrealized P/L or assess relative weakness. No SELL triggered; bot stop-losses remain active.
+
+---
+
+## Watchlist Changes
+
+- **REMOVED PLSE** — PLSE is now in holdings (2 shares @ $25.49 avg; watchlist triggered the entry). Re-buying an owned symbol is prohibited per OWNED rule.
+- BBCP pullback $10.00 — valid; Q2 earnings beat + guidance raised, currently $10.34.
+- FF pullback $4.20 — valid; CEO insider buy catalyst active, currently $4.475.
+- NSP pullback $34.00 — valid; CEO open-market purchase active, currently $35.37. Waiting for better entry.
+- LASE pullback $3.00 — kept with caution; confirm DoD/SOCOM thesis still active before trigger fires.
+- MNKD breakout $3.65 — Healthcare sector leading today; FDA pediatric Afrezza approval + FUROSCIX PDUFA Jul 26. Valid.
+- GHRS breakout $26.50 — Phase 2b TRD primary endpoint met; next catalyst CINP World Congress Jun 26–29. Valid.
