@@ -1,7 +1,9 @@
 {
-  "generated_utc": "2026-06-05T17:24:52Z",
-  "funnel": {"scanned": 272, "leading": 81, "in_budget": 200, "had_catalyst": 44, "finalists": 4, "picked": 0},
+  "generated_utc": "2026-06-05T17:59:14Z",
+  "funnel": {"scanned": 273, "leading": 82, "in_budget": 210, "had_catalyst": 55, "finalists": 3, "picked": 1},
   "orders": [
-    {"symbol": "ONDS", "action": "SELL"}
+    {"symbol": "ONDS", "action": "SELL"},
+    {"symbol": "NRXP", "action": "BUY", "instrument": "stock",
+     "quantity": 35, "limit_price": 4.25, "take_profit": 4.65, "stop_loss": 4.00}
   ]
 }

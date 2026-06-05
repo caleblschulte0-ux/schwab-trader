@@ -1,66 +1,57 @@
-# Brain Run — 2026-06-05T17:24:52Z
+# Brain Run — 2026-06-05T17:59:14Z
 
-Funnel: scanned 272 → ~200 fit budget → 44 with catalyst → 4 finalists → picked 0 new entries
+**Funnel:** scanned 273 → 210 fit budget → 55 with catalyst → 3 finalists → picked 1
+
+**Collision guard:** prior orders.json was 2026-06-05T17:24:52Z (~34 min ago). Proceeding normally.
 
 ---
 
 ## Market Tape — RISK_OFF
 
-SPY: **−1.8%** | VIX: **18.68** | Tone: **risk_off**
-
-Sector performance (best → worst):
-Consumer Defensive +0.97% | Healthcare +0.83% | Real Estate +0.33% | Communication −0.26% | Basic Materials −0.56% | Industrials −0.63% | Financials −0.64% | Utilities −0.64% | **Technology −1.86%** | **Consumer Cyclical −2.21%** | **Energy −3.77%**
-
-Risk_off protocol active: demand cleaner setups, strongest relative strength, fewer new entries. Sitting out is correct when nothing qualifies.
+SPY −1.71%, QQQ −3.39%, VIX 18.14. Broad market firmly risk-off: Technology −3.02%, Consumer Cyclical −2.31%, Energy −4.35% leading the damage. Only Consumer Defensive (+1.03%), Healthcare (+0.92%), and Real Estate (+0.34%) are green. Discipline applied: demanding defined catalysts, names showing relative strength while the tape is red, limiting to 1 new position.
 
 ---
 
-## Holdings Review
+## Holdings Assessment
 
-**ONDS** (5 shares @ $12.39 avg → current $10.685 in funnel, approx −13.8%): Dead-money laggard cut confirmed. Originally issued SELL at 16:39Z — carrying forward.
-1. ✅ Materially red: ~−13.8% vs avg (well past −8% threshold)
-2. ✅ Relative weakness: down >10% today vs −1.8% tape — severely underperforming even a bad market
-3. ✅ No fresh catalyst: appears only as `mover` in today's funnel, no active news or thesis
-4. ✅ Prior session: holdings.json dated 02:55 UTC, position opened before today
-→ **SELL** maintained.
+**ONDS** ($10.64, −11.1% today, avg $12.39 = −14.2%): All four dead-money criteria met — (1) −14.2% vs avg, (2) underperforming a −1.71% tape by ~10 points, (3) no fresh catalyst in today's funnel, (4) prior session position. Re-issuing SELL (first issued 17:24:52Z; re-confirming since holdings.json still shows the position).
 
-**TISI** (3 @ $18.09 avg, last seen $15.40 in previous run → −14.9% vs avg): Dashboard stop was $16.00 — TISI has been trading below it. Dead-money laggard check: Conditions 1 (−14.9% ✅), 3 (not in today's funnel, no fresh catalyst ✅), 4 (prior session ✅) are met. **BUT Condition 2 (relative weakness) is NOT confirmed** — at 16:39Z, TISI was −0.39% today vs Industrials sector −0.63%, showing marginal outperformance. Without a current price in today's funnel, Condition 2 cannot be definitively confirmed. All four must hold together — HOLD. If the bot's stop order is active at $16.00 it should auto-exit; otherwise reassess next run with price data.
+**TISI** (~$15.40, avg $18.09 = −14.9%): Bot stop at $16.00 was already below last-known price; auto-exit likely fired during today's session. Not issuing a manual SELL — bot handles it. Dead-money conditions 1/3/4 met; Industrials −1.11% today confirms condition 2 as well.
 
-**NVGS** (2 @ $23.55, last seen showing +1.35% intraday vs −1.8% tape): Strong relative strength. Dead-money laggard Condition 2 NOT met. HOLD.
+**NVGS** ($21.97, avg $23.55 = −6.7%): Up +1.0% today — showing intraday relative strength on a bad tape. Does NOT meet dead-money condition 1 (−6.7% < −8% threshold). HOLD. Shipping/gas/ammonia catalyst present in today's funnel.
 
-**HPE, DRTS, JFB, NVTS, SLDB, TLYS**: Not in today's funnel — no current price data to apply 4-condition test. Prior run showed DRTS, HPE, TLYS in the green vs avg. HOLD all.
+**DRTS, HPE, JFB, NVTS, SLDB, TLYS**: Not in today's movers/news candidates — trading quietly. Last known prices show HPE +9.9%, TLYS +9.3%, SLDB +2.5%, DRTS +3.2% vs avg. HOLD all.
 
 ---
 
-## Finalists Evaluated
+## Pick: BUY NRXP — 35 shares @ $4.25 limit
 
-**GIII** (G-III Apparel) — mover + sec_8k, $34.585, +7.94% on −2.21% sector / −1.8% tape
-- Catalyst: "Q1 fiscal 2027 earnings boosted by tariff refund" (13:29 UTC today, fresh)
-- **Investigated via web search:** Beat is almost entirely driven by one-time $102.7M tariff refund (~$1.75/share after-tax). Adjusted EPS is **negative (−$0.21)**. Underlying sales down 8% YoY. Guidance raised and Marc Jacobs acquisition announced — real positives — but the headline earnings quality is low.
-- **Decision: PASS + remove from watchlist.** Hollow beat in the worst-performing sector today (Consumer Cyclical −2.21%) on a risk_off tape. Do not chase; do not wait for a pullback entry. Removed from watchlist this run.
-- Catalyst age: fresh today, but quality insufficient.
+**Catalyst age:** Fresh today (published 12:39 UTC, ~5.5 hours old). Independent Osmind/Yale real-world evidence study presented at American Society of Clinical Psychopharmacology conference: IV ketamine achieved 34% remission vs 26% for nasal esketamine (Spravato/J&J) in 8,224 patients — statistically significant (OR 1.51).
 
-**NSP** (Insperity) — news_smallcap, $35.245, +5.3%
-- Catalyst: CEO multimillion-dollar open-market share purchase (13:40 UTC today, ~3.5h ago). Insider conviction signal — CEO personally risked significant capital. Volume 278K. Market cap $1.345B. Industrials sector (−0.63%, relatively stable).
-- Relative strength: +5.3% vs −1.8% tape — genuine green-on-red outperformance.
-- **Decision: WATCHLIST pullback at $34.00.** On risk_off tape with 8 open positions, buying at the top of today's 5% move is too aggressive. CEO insider catalyst persists over days; pullback to $34.00 improves R/R from ~1.4:1 to ~2:1. Added to watchlist.
-- Catalyst age: 3.5h, fresh and durable (insider buys have multi-day follow-through).
+**Why NRXP specifically:** NRx Pharmaceuticals makes NRX-100, a proprietary preservative-free IV ketamine formulation. Company filed ANDA with FDA; decision goal date **July 29, 2026** — a hard upcoming catalyst ~8 weeks out. Today's third-party data directly validates the IV ketamine modality and strengthens the ANDA regulatory narrative. NRx issued a press release today citing the Osmind presentation.
 
-**NRXP** (NRx Pharmaceuticals) — news_smallcap, $4.045, −0.12%
-- Catalyst: "IV ketamine patients remitted more than nasal esketamine" (12:39 UTC today)
-- **Investigated via web search:** Third-party academic data from Osmind Inc./Yale researchers — NRXP merely "noted" the presentation. Non-randomized observational study with limitations. Benefit to NRx is indirect at best. Market absorbed this on 1M+ volume and stock is flat — the informed reaction is "not much here."
-- **Decision: PASS.** Indirect catalyst, academic data with limitations, market already priced it flat. Not tradeable on risk_off tape.
+**Sector strength:** Healthcare +0.92% — second-best sector on a risk-off day. NRXP showing relative strength: up +4.4% while tech/cyclicals are being hit hard.
 
-**GASS** (StealthGas) — news_smallcap, $9.54, +3.92%
-- Catalyst: Q1 2026 earnings beat, Bullish 0.537 sentiment, published 13:01 UTC today. Genuine fundamental catalyst.
-- **Decision: PASS.** Energy sector is the absolute worst performer today (−3.77%). Even with real relative strength vs tape, sector headwind on a risk_off day is too steep for a new entry. No watchlist entry either — sector theme is outright bearish today.
+**Stage:** Up only +4.4% today with 1.41M volume (~9% of $153M market cap — high conviction). Early stage of potential multi-day move into the July 29 ANDA decision. No blow-off pattern.
+
+**Setup:** Limit $4.25, TP $4.65 (+9.4%), SL $4.00 (−5.9%). R/R 1.59:1. Stop below the $4.00 psychological level. 35 × $4.25 = $148.75 ✓.
 
 ---
 
-## Result
+## Notable Names Passed
 
-**0 new BUY orders.** Risk_off tape, 8 open positions after ONDS sell, all four finalists failed on catalyst quality or entry timing grounds. This is a disciplined sit-out — not a "nothing found" failure. The watchlist holds the best setups at better entries. Powder preserved at ~$540 (after ONDS exit).
+**GIII** ($34.50, +7.68%): G-III Apparel Q1 earnings beat (tariff refund, 13:29 UTC). Strong relative strength vs. Consumer Cyclical −2.31%. But already +7.7% — past ideal early entry; R/R squeezed to ~1.3:1. Passed for NRXP (better sector, earlier stage, hard upcoming catalyst).
 
-**1 SELL: ONDS** — dead-money laggard confirmed (all 4 conditions met, −13.8% vs avg, no catalyst, prior session, relative weakness vs tape).
+**NSP** ($35.22, +5.23%): Insperity CEO open-market share purchase (13:40 UTC). Already on watchlist as pullback to $34.00. Not chasing the intraday high.
 
-Watchlist changes this run: removed GIII (hollow earnings beat) and SVCO (stale, not in funnel); added NSP (CEO mega insider buy, pullback at $34.00).
+**BNAI** ($23.17, +41.8%): AI fleet deal, halt/resume, +42% move. Blow-off territory. Hard pass.
+
+**GASS** ($9.51, +3.5%): StealthGas Q1 earnings beat. Energy sector −4.35% today — sector headwind too strong on a risk-off day.
+
+**DNUT** ($3.50, +6.9%): National Doughnut Day media coverage. Not a real trading catalyst. Pass.
+
+---
+
+## Watchlist Status
+
+All 9 existing items (BBCP, FF, NSP, LASE, MNKD, GHRS, NTLA, RXRX, PLSE) carry forward unchanged — good_until dates still valid, none triggered based on today's data. No new watchlist additions beyond today's direct NRXP BUY.
