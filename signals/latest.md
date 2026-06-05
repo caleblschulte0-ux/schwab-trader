@@ -1,55 +1,79 @@
-# Brain Run — 2026-06-05T16:18:47Z
+# Brain Run — 2026-06-05T16:39:30Z
 
-Funnel: scanned 276 → 195 fit budget → 28 with real catalyst → 3 finalists → 0 new buys picked
+**Funnel:** scanned 279 → 195 fit budget → 18 with real catalyst → 2 finalists → picked 0 new (SELL ONDS retained)
 
 ---
 
-## Tape Read — RISK_OFF
+## Market Tape
 
-SPY −1.34% · QQQ −2.85% · VIX 17.02. Only Consumer Defensive (+1.13%), Healthcare (+0.54%), Real Estate (+0.34%), and Basic Materials (+0.23%) are green. Technology −0.99%, Consumer Cyclical −1.66%, Energy −2.61%. Running with elevated bar: demand relative strength (green names on a red tape) and very fresh catalysts; no forcing trades into a falling market.
+**risk_off.** SPY −1.56%, VIX 17.91 (elevated). Green sectors: Consumer Defensive +0.97%, Healthcare +0.83%, Real Estate +0.33%. Red: Communication Services −0.26%, Basic Materials −0.56%, Industrials −0.63%, Financial Services −0.64%, Utilities −0.64%, Technology −1.86%, Consumer Cyclical −2.21%, Energy −3.77%. Broad-based selloff — demanded cleaner setups and stronger relative strength this run. Sitting out on new entries is correct on this tape.
+
+---
+
+## Collision Guard
+
+Previous orders.json stamped 2026-06-05T16:18:47Z. This run writing at 16:39:30Z — gap is 20 min 43 sec, well past the ~10-minute guard. Proceeding normally.
 
 ---
 
 ## Holdings Review
 
-**ONDS → SELL (dead-money laggard — all 4 criteria met)**
-1. Materially red: avg $12.39, last seen $10.77 → **−13.1%** vs cost basis. ✓
-2. Relative weakness: −10.0% today while broad tape already down; printing fresh session lows in the actives list. ✓
-3. Original catalyst gone/stale: no supporting news or thesis in today's 276-name funnel. ✓
-4. Prior-session entry: holdings.json stamped 02:55 UTC, multi-day position. ✓
-Capital is decaying — cut now and recycle.
+| Symbol | Avg   | Last Seen | Est. P&L | Action |
+|--------|-------|-----------|----------|--------|
+| DRTS   | $10.52 | ~$10.86 (prior run) | +$2.04 | HOLD |
+| HPE    | $53.57 | ~$58.85 (prior run) | +$5.28 | HOLD |
+| JFB    | $5.79  | ~$5.87 (prior run)  | +$0.88 | HOLD |
+| NVGS   | $23.55 | ~$21.07 (prior run) | −$4.96 | HOLD — not in candidates; cannot confirm all 4 dead-money conditions |
+| NVTS   | $29.25 | ~$29.43 (prior run) | +$0.36 | HOLD |
+| **ONDS** | $12.39 | $10.74 today | −$8.25 | **SELL** — all 4 conditions confirmed: −13.3% vs avg, mover/loser in candidates today at −10.3%, no active catalyst in funnel, prior-session entry. SELL carried from prior run. |
+| SLDB   | $6.86  | ~$7.03 (prior run)  | +$1.53 | HOLD |
+| TISI   | $18.09 | ~$17.00 (prior run) | −$3.27 | HOLD — not in candidates; cannot confirm dead-money quad-test |
+| TLYS   | $4.84  | ~$5.03 (prior run)  | +$2.28 | HOLD |
 
-**Winners holding / let run:** DRTS ($10.86, +21.6% today, avg $10.52 → green), HPE ($58.85, +25.2% today, avg $53.57 → green), TLYS ($5.03, +7.0% today, avg $4.84 → green), JFB ($5.87, ~flat, above avg).
-
-**Monitors (no cut yet):** NVGS ($21.07, avg $23.55, −10.5% vs avg) but was +1.4% today — relative strength vs Energy sector breaks dead-money condition 2; hold. TISI (~$17.00, avg $18.09, −6.1% vs avg) — below the −8% threshold for condition 1; hold. NVTS ($29.43, avg $29.25) — essentially flat; hold. SLDB ($7.03, avg $6.86) — slightly above avg; hold.
-
-**COYA note:** A prior run issued a BUY for COYA at ~$4.97 limit. COYA is now at $4.74, down −2.67% today on a Roth/MKM Buy initiation that the market is rejecting. If already filled, this is approaching a watch situation; current price is still above the stop that run set ($4.68). Will reassess when holdings.json refreshes.
-
----
-
-## Finalists Reviewed — No New Buys
-
-**BBCP (Concrete Pumping Holdings)** — +34.8% today on Q2 FY26 earnings: EPS $0.04 vs $0.01 expected (4× beat), revenue $106.8M vs $98.6M expected (+14% YoY), raised full-year guidance. Excellent fundamental catalyst (reported June 4, ~18h ago). Already in the extended/blow-off zone at +35%; hard-pass for a direct order. Added to watchlist as pullback at $10.00 — if it bases near the gap, entry is legitimate then. Catalyst age: fresh enough; stage: too extended.
-
-**GIII (G-III Apparel)** — +8.47% on Q1 FY27 earnings boosted by tariff refund (published 13:29 UTC today, 2.7h ago). Catalyst is real and fresh. Consumer Cyclical sector is −1.66% today — headwind on risk-off tape. Watchlist pullback at $33.50 from prior run remains valid; not extending the entry here.
-
-**GDC (GD Culture Group)** — Committee formed today to review $10.75/share going-private proposal (published 15:39 UTC, very fresh). Web research: original offer announced May 5, 2026 — 30+ days ago, Chinese small-cap ADR, non-binding and subject to financing/diligence. High deal-failure risk. Committee formation is procedural; the big move happened on May 5. PASS — stale underlying event, excessive execution risk, unsuitable for risk-off.
+Dead-money cut applied to **ONDS** only (all 4 conditions met). Other red names (NVGS, TISI) cannot be cut because current prices are absent from candidates.json — defaulting to HOLD per BRAIN.md ("When in doubt about an exit, HOLD").
 
 ---
 
-## Passed Notable Names
+## New BUY Candidates Evaluated
 
-- **GOGO**: −5.34% despite NOAA contract win (published 07:40 UTC). Failing on its own catalyst = thesis break. **Removed from watchlist this run.**
-- **COYA**: −2.67% despite Roth/MKM Buy initiation (very bullish sentiment 0.808). Healthcare (green sector) but the market is rejecting the catalyst — red flag.
-- **FF (FutureFuel)**: +1.03%, CEO open-market purchase of 10k shares (published 12:21 UTC). Basic Materials sector is green (+0.23%). Watchlist pullback at $4.20 remains active; current $4.42 hasn't reached the trigger yet.
-- **HURC**: +20.1% on Q2 results — extended, past entry window.
-- **BNAI**: +32.8% on AI vehicle fleet deal — extended, LUDP halt history adds risk.
-- **GASS (StealthGas)**: +2.5% on Q1 earnings (Bullish 0.532). Energy sector −2.61% today; sector headwind overrules the modest positive catalyst.
+### GIII — $34.40, +7.37% | G-III Apparel Q1 FY27 earnings
+- Catalyst (2026-06-05T13:29 UTC, ~3h old): Q1 FY27 EPS beat boosted by tariff refund. 8-K + Bullish news_smallcap (0.397). Volume 713K confirmed.
+- Stage: +7.37% is within the acceptable "5–8% consolidating with room" zone. Strong relative strength vs Consumer Cyclical sector (−2.21%).
+- Decision: **WATCHLIST ONLY (pullback $33.50) — not upgrading to direct BUY.** Prior run (16:18Z) explicitly chose the pullback entry over buying at $34.40; setup is unchanged (same price, catalyst 20 min older). Anti-fixation rule: not genuinely better — no re-pick. Watchlist trigger live through 2026-06-06.
+
+### GASS — $9.46, +3.05% | StealthGas Q1 2026 earnings
+- Catalyst (2026-06-05T13:01 UTC, ~3.5h old): Q1 results — Bullish (0.532). Volume 111K. Market cap $352M.
+- Stage: only +3% — early, which is good.
+- Negative: Energy sector worst today at −3.77%. In risk_off, this sector headwind disqualifies without exceptional strength. Volume 111K is modest.
+- Decision: **Pass** — energy headwind too significant on risk_off tape.
+
+### BNAI — $21.13, +29.31% | Brand Engagement Network
+- AI fleet deal ($1M), LUDP halt, 5.9M volume. +29% — **too extended**. Hard pass.
+
+### HURC — $20.55, +20.04% | Hurco Q2 FY26 earnings
+- Neutral sentiment (0.037), 87K volume (thin). +20% — **deprioritize** per stage rule. Pass.
+
+### STI — $35.70, +57.2% | Solidion Technology
+- AI battery patents, 27.5M volume. +57% — **HARD PASS**. Blow-off candle.
+
+### Other Considered
+- CABA: −5.41% in green Healthcare sector (relative weakness), 10h-old catalyst. Pass.
+- COYA: −3.9% in green Healthcare sector, analyst initiation 10h ago now fading. Pass.
+- BZUN: +0.19%, Chinese small cap, CEO ADS purchase — risk_off day. Pass.
+- DNUT: +6.1% — "National Doughnut Day" marketing PR, not a durable catalyst. Pass.
 
 ---
 
-## Action Summary
+## Watchlist Status
 
-- **SELL**: ONDS (dead-money laggard — all 4 conditions confirmed)
-- **New BUY orders**: 0 (risk-off tape; no immediate setup clears the elevated bar)
-- **Watchlist**: GOGO removed; BBCP added at $10.00 pullback
+10 active entries maintained (see watchlist.json). Notable:
+- **FF** ($4.405): Approaching $4.20 pullback trigger. Note corrected — Basic Materials is −0.56% today (sector note in prior run was wrong); CEO open-market buy remains a valid catalyst regardless.
+- **LASE** ($3.265, −9.81% today): Falling toward $3.00 watchlist trigger — monitor DoD/SOCOM thesis freshness before trigger fires.
+- **GIII** ($34.40): Unchanged; pullback $33.50 trigger intact, expires 2026-06-06.
+- BBCP still above $10.00 trigger at $10.68.
+
+---
+
+## Summary
+
+risk_off tape; no new BUYs warranted. ONDS SELL confirmed and retained. Watchlist in good shape with 10 level-defined setups across several catalysts. Next run: check for updated prices on NVGS and TISI to evaluate dead-money conditions if they appear in candidates.

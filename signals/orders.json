@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-06-05T16:18:47Z",
-  "funnel": {"scanned": 276, "leading": 83, "in_budget": 195, "had_catalyst": 28, "finalists": 3, "picked": 0},
+  "generated_utc": "2026-06-05T16:39:30Z",
+  "funnel": {"scanned": 279, "leading": 84, "in_budget": 195, "had_catalyst": 18, "finalists": 2, "picked": 0},
   "orders": [
     {"symbol": "ONDS", "action": "SELL"}
   ]
