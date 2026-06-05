@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-05T16:39:30Z",
+  "generated_utc": "2026-06-05T17:24:52Z",
   "watch": [
     {
       "symbol": "BBCP",
@@ -10,7 +10,7 @@
       "take_profit": 11.20,
       "stop_loss": 9.40,
       "good_until": "2026-06-07",
-      "note": "Q2 FY26 EPS beat 4x ($0.04 vs $0.01), revenue $106.8M vs $98.6M, guidance raised. Gapped +34% — enter only on pullback/consolidation near $10.00 gap support."
+      "note": "Q2 FY26 EPS beat 4x ($0.04 vs $0.01 est), revenue $106.8M vs $98.6M, guidance raised. Gapped +30%+ — enter only on pullback/consolidation near $10.00 gap support."
     },
     {
       "symbol": "FF",
@@ -21,18 +21,18 @@
       "take_profit": 4.65,
       "stop_loss": 3.98,
       "good_until": "2026-06-07",
-      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5). Currently ~$4.40. Basic Materials sector -0.56% today (risk_off). CEO insider buy is the primary catalyst — sector headwind is modest, pullback to $4.20 support improves R/R to ~+10.7%/-5.2%."
+      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5). Currently ~$4.39. Basic Materials −0.56% today. CEO insider buy is the primary catalyst — pullback to $4.20 support improves R/R to ~+10.7% / −5.2%."
     },
     {
-      "symbol": "GIII",
+      "symbol": "NSP",
       "trigger": "pullback",
-      "trigger_price": 33.50,
+      "trigger_price": 34.00,
       "quantity": 4,
-      "limit_price": 33.60,
+      "limit_price": 34.10,
       "take_profit": 36.50,
-      "stop_loss": 32.00,
-      "good_until": "2026-06-06",
-      "note": "G-III Apparel Q1 FY27 beat boosted by tariff refund (13:29 UTC 6/5, fresh earnings). Up ~+7.4% at $34.40; Consumer Cyclical headwind (-2.21%) — wait for pullback to $33.50 before entry."
+      "stop_loss": 32.40,
+      "good_until": "2026-06-07",
+      "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5, fresh). Currently $35.245 (+5.3% vs −1.8% tape). Industrials sector (−0.63%), relatively stable. Pullback to $34.00 improves R/R to ~7.3% / −4.7% = ~1.6:1. CEO insider conviction persists over days."
     },
     {
       "symbol": "LASE",
@@ -43,18 +43,7 @@
       "take_profit": 3.90,
       "stop_loss": 2.55,
       "good_until": "2026-06-07",
-      "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest + $250K J&J laser drilling order. Currently $3.265 (-9.8% today, falling toward trigger). Confirm DoD/SOCOM thesis still active before trigger fires."
-    },
-    {
-      "symbol": "SVCO",
-      "trigger": "pullback",
-      "trigger_price": 12.50,
-      "quantity": 5,
-      "limit_price": 12.65,
-      "take_profit": 16.00,
-      "stop_loss": 11.50,
-      "good_until": "2026-06-07",
-      "note": "Silvaco Q1 beat, Jefferies upgrade, ITRI partnership. Ran to ~$15 — pullback to $12.50 near earnings gap support is the entry."
+      "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest + $250K J&J laser drilling order. Currently $3.51 (−3% today, falling toward trigger). Confirm DoD/SOCOM thesis still active before trigger fires — catalyst may be from prior session."
     },
     {
       "symbol": "MNKD",
@@ -65,7 +54,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-11",
-      "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 catalyst + Q1 revenue +15% YoY. Enter on volume breakout above $3.65."
+      "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 catalyst + Q1 revenue +15% YoY. Enter on volume breakout above $3.65. Healthcare sector green today (+0.83%)."
     },
     {
       "symbol": "GHRS",
@@ -76,7 +65,7 @@
       "take_profit": 31.00,
       "stop_loss": 23.50,
       "good_until": "2026-06-12",
-      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). Next catalyst: CINP World Congress June 26-29. Wait for breakout above $26.50 on volume."
+      "note": "Phase 2b TRD met primary endpoint (MADRS −15.5 vs placebo, p<0.0001). Next catalyst: CINP World Congress June 26-29. Wait for breakout above $26.50 on volume."
     },
     {
       "symbol": "NTLA",
@@ -87,7 +76,7 @@
       "take_profit": 18.00,
       "stop_loss": 13.00,
       "good_until": "2026-06-11",
-      "note": "Phase 3 lonvoguran (HAE, in vivo gene editing) + rolling BLA submission. Buy pullback to $14.50 support."
+      "note": "Phase 3 lonvoguran (HAE, in vivo gene editing) + rolling BLA submission. Buy pullback to $14.50 support. Healthcare sector green today (+0.83%)."
     },
     {
       "symbol": "RXRX",
