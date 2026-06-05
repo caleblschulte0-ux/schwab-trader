@@ -74,13 +74,14 @@ it does NOT change any guardrail, only how picky you are:
 `candidates.py` runs BEFORE you every single run and gathers the wide funnel FOR you —
 deterministically and at ZERO token cost: hundreds of names from FMP movers (gainers /
 most-active / losers), the FMP earnings calendar (who reports soon), Alpha Vantage news
-with sentiment, a Nasdaq small-cap universe cross-ref (small-caps in the news), plus the
-market regime and sector performance. **`signals/candidates.json` IS your top of funnel
-— read it FIRST and TRUST it for breadth.** Your job is JUDGMENT over a pre-gathered
-pool, NOT gathering. Do NOT hand-run broad "top gainers / most active / earnings soon /
-today's news" web searches — that only re-discovers what is already in the file and
-burns the subscription budget for nothing. Targeted web search keeps a small, specific
-role (see the end of this step), but the file does the heavy lifting.
+with sentiment, Nasdaq Trader halts/resumptions, fresh SEC 8-Ks, a Nasdaq small-cap
+universe cross-ref (small-caps in the news), plus the market regime and sector
+performance. **`signals/candidates.json` IS your top of funnel — read it FIRST and TRUST
+it for breadth.** Your job is JUDGMENT over a pre-gathered pool, NOT gathering. Do NOT
+hand-run broad "top gainers / most active / earnings soon / today's news" web searches —
+that only re-discovers what is already in the file and burns the subscription budget for
+nothing. Targeted web search keeps a small, specific role (see the end of this step), but
+the file does the heavy lifting.
 
 SOURCE — `signals/candidates.json` (this is your funnel). The bot pre-fetches both LAGGING and
 LEADING names with live price + % change. Read this first. Each row now carries a
@@ -102,6 +103,10 @@ LEADING names with live price + % change. Read this first. Each row now carries 
 - `news_bullish` — LEADING: bullish market-wide news coverage (skews mega-cap, so
   often over the $150 budget — useful context, occasionally tradeable). READ the
   headline; confirm a real, durable catalyst and that the move isn't already spent.
+- `halt_resume` — LEADING: a stock halted/resuming today (catch the resume). Check
+  `halt_reason`, `halt_time`, `resume_time`, and freshness before treating it as tradeable.
+- `sec_8k` — LEADING: filed a material 8-K in the last few hours. READ the headline:
+  contract win = bullish; dilutive offering = bearish.
 NEWS FRESHNESS — a catalyst's `catalyst.published_utc` tells you HOW OLD the news is.
 This is now a PRIMARY selection filter, not a tiebreaker:
 - BEST: catalyst broke in the last few HOURS and the stock has barely moved — the
@@ -124,25 +129,18 @@ leading tag AND a small `pct_change` (e.g. `["mover","earnings_soon"]`, up only
 gap can go either direction, so a defined `stop_loss` is mandatory on those.
 
 ### Targeted web search — ONLY to fill the gaps candidates.json can't see
-candidates.json already covers movers, earnings, and news — so do NOT re-search those.
-Use WebSearch SPARINGLY: AT MOST ~3 targeted searches per run, and SKIP any that aren't
-relevant this run (0 searches on a quiet, clean-funnel day is perfectly fine). The only
-things worth a search are what the file genuinely does NOT contain:
-1. TRADING HALTS & resumptions today (LULD halts often precede the biggest small-cap
-   moves — catch the resume). Not in candidates.json.
-2. BREAKING in the last 1–2 hours — fresh SEC 8-K filings / material news (new
-   contracts, M&A, FDA, offerings) on names not already flagged. The freshest edge.
-   (Read the sign: a dilutive raise is bearish, a contract win is bullish.)
-3. SYMPATHY / read-through — when a leader already in candidates.json is moving on a
+candidates.json already covers movers, earnings, news, halts/resumptions, and fresh SEC
+8-Ks — so do NOT re-search those. Use WebSearch SPARINGLY: AT MOST ~1 targeted search per
+run, and SKIP it when it is not relevant this run (0 searches on a quiet, clean-funnel day
+is perfectly fine). The only broad gap still worth a search is:
+1. SYMPATHY / read-through — when a leader already in candidates.json is moving on a
    theme, search its smaller peers that haven't moved yet.
-You may spend ONE of those three slots instead on VERIFYING a specific finalist (is the
-catalyst real, is the move already spent) when a pick hinges on it. That is the ENTIRE
-web-search budget. Never hand-scrape broad gainer / most-active / 52-week-high / general
-news / sector lists — candidates.json already IS those lists. A run that reads the funnel
-carefully and does 0–3 targeted searches is an EFFICIENT, GOOD run. Breadth is the file's
-job now; judgment is yours. (Note: trading halts and SEC 8-K feeds are being moved INTO
-candidates.py — once they appear as `halt_resume` / `sec_8k` tagged rows in the file,
-drop searches #1 and #2 too and lean further on the file.)
+You may spend the slot instead on VERIFYING a specific finalist (is the catalyst real, is
+the move already spent) when a pick hinges on it. That is the ENTIRE web-search budget.
+Never hand-scrape broad gainer / most-active / 52-week-high / general news / sector lists —
+candidates.json already IS those lists. A run that reads the funnel carefully and does 0–1
+targeted searches is an EFFICIENT, GOOD run. Breadth is the file's job now; judgment is
+yours.
 
 ## STEP 2 — WHITTLE DOWN (disciplined filter)
 From the wide pool, narrow with judgment:
