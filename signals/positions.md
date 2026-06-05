@@ -1,21 +1,24 @@
-# Open Positions — updated 2026-06-05T19:16:08Z
+# Open Positions — updated 2026-06-05T19:31:25Z
 
 | Symbol | Qty | Avg    | Take-profit | Stop   | Last seen | Unrealized $ |
 |--------|-----|--------|-------------|--------|-----------|--------------|
-| DRTS   |   6 | $10.52 | —           | —      | n/a       | —            |
-| GASS   |  15 | $ 9.51 | —           | —      | $ 9.40    | −$1.65       |
-| HPE    |   1 | $53.57 | —           | —      | n/a       | —            |
-| JFB    |  11 | $ 5.79 | —           | —      | n/a       | —            |
-| NRXP   |  35 | $ 4.22 | —           | —      | $ 4.16    | −$2.10       |
-| NVGS   |   2 | $23.55 | —           | —      | $21.89    | −$3.32       |
-| PLSE   |   2 | $25.49 | —           | —      | n/a       | —            |
-| RXRX   |  18 | $ 3.29 | —           | —      | $ 3.23    | −$1.08       |
-| SLDB   |   9 | $ 6.86 | —           | —      | n/a       | —            |
-| TISI   |   3 | $18.09 | —           | —      | n/a       | —            |
-| TLYS   |  12 | $ 4.84 | —           | —      | n/a       | —            |
+| DRTS   |   6 | $10.52 | bot-managed | bot-managed | n/a (not in funnel) | — |
+| GASS   |  15 |  $9.51 | bot-managed | bot-managed | $9.48     | -$0.45 |
+| HPE    |   1 | $53.57 | bot-managed | bot-managed | n/a (not in funnel) | — |
+| JFB    |  11 |  $5.79 | bot-managed | bot-managed | n/a (not in funnel) | — |
+| NRXP   |  35 |  $4.22 | bot-managed | bot-managed | $4.12     | -$3.50 |
+| NVGS   |   2 | $23.55 | bot-managed | bot-managed | $21.82    | -$3.46 |
+| PLSE   |   2 | $25.49 | bot-managed | bot-managed | n/a (not in funnel) | — |
+| RXRX   |  18 |  $3.29 | bot-managed | bot-managed | $3.235    | -$0.99 |
+| SLDB   |   9 |  $6.86 | bot-managed | bot-managed | n/a (not in funnel) | — |
+| TISI   |   3 | $18.09 | bot-managed | bot-managed | n/a (not in funnel) | — |
+| TLYS   |  12 |  $4.84 | bot-managed | bot-managed | n/a (not in funnel) | — |
 
-**Open positions:** 11   **Est. cash deployed:** ~$801 of ~$1,000   **Powder left:** ~$199
+**Open positions:** 11   **Est. cash deployed:** ~$802 of ~$1,000   **Powder left:** ~$198
 
-Unrealized on priced positions (4 of 11): −$8.15 (GASS −$1.65, NRXP −$2.10, NVGS −$3.32, RXRX −$1.08)
-
-_Note: take-profit and stop-loss are bot-managed from original order entries; not stored in holdings.json. "n/a" last seen = symbol not in today's candidates funnel._
+Notes:
+- GASS: StealthGas, Q1 2026 earnings bullish catalyst today. UP +3.3% on risk-off tape — showing relative strength.
+- NRXP: UP +1.7% today. IV ketamine study results bullish. Holding.
+- NVGS: -7.35% below avg, approaching the -8% dead-money threshold. Watching — UP today; thesis not broken yet.
+- RXRX: -1.7% below avg (fine). Insider Form 144 sale (40k shares) reported today — monitoring.
+- 7 positions not appearing in today's funnel; current prices unavailable from pre-built scan.

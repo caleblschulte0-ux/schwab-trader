@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-05T19:16:08Z",
+  "generated_utc": "2026-06-05T19:31:25Z",
   "watch": [
     {
       "symbol": "BBCP",
@@ -21,7 +21,7 @@
       "take_profit": 4.65,
       "stop_loss": 3.98,
       "good_until": "2026-06-07",
-      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5). Basic Materials flat. CEO insider buy catalyst — pullback to $4.20 support improves R/R to ~+10.7% / −5.2%."
+      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5). Basic Materials flat. CEO insider buy catalyst — pullback to $4.20 support improves R/R to ~+10.7% / -5.2%."
     },
     {
       "symbol": "NSP",
@@ -32,7 +32,7 @@
       "take_profit": 36.50,
       "stop_loss": 32.40,
       "good_until": "2026-06-07",
-      "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5). +5.45% on risk-off tape. Pullback to $34.00 improves R/R to ~7.3% / −4.7% = ~1.6:1. Insider conviction persists."
+      "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5). +6.5% on risk-off tape = strong relative strength. Pullback to $34.00 improves R/R to ~7.3% / -4.7% = ~1.6:1. Insider conviction persists."
     },
     {
       "symbol": "GIII",
@@ -43,7 +43,7 @@
       "take_profit": 35.50,
       "stop_loss": 30.80,
       "good_until": "2026-06-08",
-      "note": "Q1 FY2027 earnings beat with tariff refund boost (filed 8-K 13:29 UTC 6/5). Up +6.2% today vs Consumer Cyclical sector −2.57% — strong relative strength. At $32.50 pullback: R/R ~+9.2% / −5.2% = ~1.8:1. Catalyst good for a few days."
+      "note": "Q1 FY2027 earnings beat with tariff refund boost (8-K filed 13:29 UTC 6/5). Up +4.9% vs Consumer Cyclical sector -2.57% — strong relative strength. At $32.50 pullback: R/R ~+9.2% / -5.2% = ~1.8:1."
     },
     {
       "symbol": "MNKD",
@@ -65,7 +65,7 @@
       "take_profit": 31.00,
       "stop_loss": 23.50,
       "good_until": "2026-06-12",
-      "note": "Phase 2b TRD met primary endpoint (MADRS −15.5 vs placebo, p<0.0001). Next catalyst: CINP World Congress June 26-29. Healthcare sector leading on risk-off day. Enter on breakout above $26.50 on volume."
+      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). Next catalyst: CINP World Congress June 26-29. Healthcare sector leading on risk-off day. Enter on breakout above $26.50 on volume."
     }
   ]
 }
