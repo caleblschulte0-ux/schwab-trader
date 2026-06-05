@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-05T18:44:00Z",
+  "generated_utc": "2026-06-05T19:16:08Z",
   "watch": [
     {
       "symbol": "BBCP",
@@ -35,15 +35,15 @@
       "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5). +5.45% on risk-off tape. Pullback to $34.00 improves R/R to ~7.3% / −4.7% = ~1.6:1. Insider conviction persists."
     },
     {
-      "symbol": "LASE",
+      "symbol": "GIII",
       "trigger": "pullback",
-      "trigger_price": 3.00,
-      "quantity": 21,
-      "limit_price": 3.05,
-      "take_profit": 3.90,
-      "stop_loss": 2.55,
-      "good_until": "2026-06-07",
-      "note": "DoD MEIA Vulcan LSAD anti-drone evaluation selection + SOCOM interest + $250K J&J laser drilling order. Trending lower. CONFIRM DoD/SOCOM thesis still active before trigger fires — original catalyst may be from prior session."
+      "trigger_price": 32.50,
+      "quantity": 4,
+      "limit_price": 32.60,
+      "take_profit": 35.50,
+      "stop_loss": 30.80,
+      "good_until": "2026-06-08",
+      "note": "Q1 FY2027 earnings beat with tariff refund boost (filed 8-K 13:29 UTC 6/5). Up +6.2% today vs Consumer Cyclical sector −2.57% — strong relative strength. At $32.50 pullback: R/R ~+9.2% / −5.2% = ~1.8:1. Catalyst good for a few days."
     },
     {
       "symbol": "MNKD",
