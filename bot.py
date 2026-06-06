@@ -141,18 +141,25 @@ def _market_tz():
         return timezone.utc
 
 
-def market_is_open(now: datetime | None = None) -> bool:
-    """True ONLY during the US regular session (Mon-Fri, 09:30-16:00 ET, DST-aware).
-    The trader is an intraday strategy and Schwab only fills during regular hours, so
-    the executor must never act outside this window — regardless of what triggers it
-    (a misfiring external cron can poke the workflow at any hour). Note: does NOT know
-    market holidays; a weekday holiday still reads 'open', but the broker simply rejects
-    orders and there's nothing fresh to trade, so the run is a harmless no-op anyway."""
-    from datetime import time as _time
+# Operating window = the US regular session (09:30-16:00 ET) widened by a buffer on
+# each side. With the default 60-min buffer the executor is active 08:30-17:00 ET —
+# i.e. 1 hour before the open through 1 hour after the close. Tune the buffer here.
+SESSION_BUFFER_MIN = 60
+
+
+def in_trading_window(now: datetime | None = None) -> bool:
+    """True during the executor's operating window: the US regular session
+    (09:30-16:00 ET) PLUS SESSION_BUFFER_MIN on each side — so 08:30-17:00 ET with the
+    default 60-min buffer — Mon-Fri, DST-aware. The trader acts ONLY in this window,
+    regardless of when the external cron pokes it. (Market holidays aren't modeled; a
+    weekday holiday simply no-ops at the broker.)"""
     et = (now or datetime.now(timezone.utc)).astimezone(_market_tz())
     if et.weekday() >= 5:  # Sat/Sun
         return False
-    return _time(9, 30) <= et.time() <= _time(16, 0)
+    cur = et.hour * 60 + et.minute
+    open_min = 9 * 60 + 30 - SESSION_BUFFER_MIN   # 08:30 ET with the default buffer
+    close_min = 16 * 60 + SESSION_BUFFER_MIN      # 17:00 ET with the default buffer
+    return open_min <= cur <= close_min
 
 
 def get_positions(client: SchwabClient) -> dict[str, dict]:
@@ -824,10 +831,10 @@ def main() -> int:
     # enforce it in CODE here — not just at the trigger — and no-op cleanly (before
     # even logging in to Schwab) when the market is closed. Override for a manual test
     # with IGNORE_MARKET_HOURS=true.
-    if not market_is_open() and os.environ.get("IGNORE_MARKET_HOURS", "").strip().lower() != "true":
+    if not in_trading_window() and os.environ.get("IGNORE_MARKET_HOURS", "").strip().lower() != "true":
         et = datetime.now(timezone.utc).astimezone(_market_tz())
-        print(f"Market CLOSED ({et:%a %H:%M} ET) — executor no-op. "
-              "(Set IGNORE_MARKET_HOURS=true to force a run.)")
+        print(f"Outside trading window ({et:%a %H:%M} ET; active 08:30-17:00 ET) — "
+              "executor no-op. (Set IGNORE_MARKET_HOURS=true to force a run.)")
         print("=== done ===")
         return 0
     if DRY_RUN:  # load the simulated book BEFORE get_positions() reads from it
