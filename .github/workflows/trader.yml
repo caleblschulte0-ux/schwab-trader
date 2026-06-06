@@ -38,12 +38,19 @@ jobs:
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python bot.py
 
+      # Refresh the edge scorecard from the closed-trades the bot just updated.
+      # Pure stdlib, no account/API access, zero trading side effects; never fail the
+      # run over the analyzer (|| true) — it's reporting, not trading.
+      - name: Analyze track record
+        if: always()
+        run: python analyze.py || true
+
       - name: Commit data snapshots
         if: always()
         run: |
           git config user.name "schwab-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
+          git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md reports/track_record.md signals/performance.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
@@ -64,7 +71,7 @@ jobs:
             # snapshot files — so we never commit a stale full tree that reverts the
             # brain's orders/picks changed under us. (Mirror of the brain.yml fix.)
             git reset --mixed origin/main
-            git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md 2>/dev/null || true
+            git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md reports/track_record.md signals/performance.json 2>/dev/null || true
             git diff --cached --quiet && { echo "snapshot already current."; exit 0; }
             git commit -m "bot: update holdings + paper-book snapshot [skip ci]"
             sleep $((i * 3))

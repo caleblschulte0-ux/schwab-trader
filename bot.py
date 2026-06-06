@@ -64,6 +64,7 @@ MIN_STOP_UNDER_ENTRY  = 0.005
 MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump traps
 RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
 WATCHLIST_FILE        = "signals/watchlist.json"
+CANDIDATES_FILE       = "signals/candidates.json"  # read-only here: ENTRY ATTRIBUTION only (see _entry_meta)
 # --- paper trading (DRY_RUN): a simulated book so the brain has MEMORY of what it
 #     "owns" (kills the re-pick/averaging-down churn) AND we get a real P/L scorecard. ---
 PAPER_ACCOUNT_FILE    = "signals/paper_account.json"   # simulated cash + positions + closed trades
@@ -175,6 +176,13 @@ def write_holdings(positions: dict) -> None:
 # and so we accumulate a real running P/L scorecard in PAPER_LEDGER_FILE.
 _PAPER: dict | None = None   # loaded in main() when DRY_RUN; mutated by buy()/sell()
 
+# Entry ATTRIBUTION (read-only): candidates.json gives each symbol its signal tag(s)
+# + catalyst freshness + the macro tape. Captured at BUY time and carried onto the
+# closed trade so analyze.py can tell which SIGNALS actually make money. Purely
+# additive instrumentation — wrapped so a failure here can NEVER affect a trade.
+_CANDIDATES_BY_SYM: dict[str, dict] = {}
+_TAPE_TONE: str | None = None
+
 
 def load_paper_account() -> dict:
     """Load the simulated book, or initialize a fresh one at PAPER_START_EQUITY."""
@@ -229,7 +237,7 @@ def paper_blocked(state: dict) -> set:
 def paper_record_buy(sym: str, qty: int, price: float, tp, sl, *,
                      kind: str = "stock", multiplier: int = 1, occ=None,
                      underlying=None, option_type=None, strike=None,
-                     expiration=None) -> None:
+                     expiration=None, meta: dict | None = None) -> None:
     """Simulate a fill: deduct cash, open a position carrying its OWN tp/sl so the
     bot can manage the exit even after the brain drops the name from orders.json.
     For options, `multiplier` is OPTION_MULTIPLIER (100) and `price` is the per-share
@@ -249,6 +257,8 @@ def paper_record_buy(sym: str, qty: int, price: float, tp, sl, *,
         "kind": kind, "multiplier": multiplier,
         "opened_utc": datetime.now(timezone.utc).isoformat(),
     }
+    if meta:  # entry attribution (signal/catalyst/tape) — carried to the closed trade
+        pos["meta"] = meta
     if kind != "stock":  # carry the contract details for the ledger / EOD breakdown
         pos.update({"occ": occ, "underlying": underlying, "option_type": option_type,
                     "strike": strike, "expiration": expiration})
@@ -272,13 +282,23 @@ def paper_record_sell(sym: str, price: float, why: str) -> None:
     pnl_pct = (price / pos["entry"] - 1) * 100 if pos["entry"] else 0.0
     _PAPER["cash"] += proceeds
     _PAPER["realized_pnl"] += pnl
-    _PAPER["closed_trades"].append({
+    closed_dt = datetime.now(timezone.utc)
+    opened_dt = _parse_dt(pos.get("opened_utc"))
+    hold_h = round((closed_dt - opened_dt).total_seconds() / 3600, 2) if opened_dt else None
+    trade = {
         "symbol": sym, "qty": qty, "kind": pos.get("kind", "stock"), "multiplier": mult,
         "entry": round(pos["entry"], 4),
         "exit": round(price, 4), "pnl": round(pnl, 2), "pnl_pct": round(pnl_pct, 2),
         "opened_utc": pos.get("opened_utc"),
-        "closed_utc": datetime.now(timezone.utc).isoformat(), "reason": why,
-    })
+        "closed_utc": closed_dt.isoformat(), "reason": why,
+        "hold_h": hold_h,
+    }
+    meta = pos.get("meta") or {}   # entry attribution captured at BUY time (may be absent on old positions)
+    for k in ("signals", "catalyst_age_h", "market_cap", "volume",
+              "ref_price", "entry_ask", "entry_last", "tape_tone"):
+        if k in meta:
+            trade[k] = meta[k]
+    _PAPER["closed_trades"].append(trade)
     unit = "contract(s)" if pos.get("kind", "stock") != "stock" else "sh"
     print(f"[{sym}] PAPER CLOSE: SELL {qty} {unit} @ ${price:.2f} → P/L ${pnl:+.2f} "
           f"({pnl_pct:+.1f}%) [{why}]")
@@ -429,6 +449,51 @@ def live_last(q: dict) -> float | None:
     return None
 
 
+def load_candidates_index() -> tuple[dict[str, dict], str | None]:
+    """Read signals/candidates.json (written by candidates.py) into {SYMBOL: row}
+    plus the macro tape `tone`, for ENTRY ATTRIBUTION only. Read-only and best-effort:
+    any problem returns ({}, None). Attribution is a nice-to-have that must never
+    affect trading; the trader does not otherwise depend on this file."""
+    try:
+        with open(CANDIDATES_FILE, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception:  # noqa: BLE001 - missing/corrupt -> no attribution, no harm
+        return {}, None
+    by_sym: dict[str, dict] = {}
+    for row in (data.get("candidates") or []):
+        sym = str(row.get("symbol", "")).strip().upper()
+        if sym:
+            by_sym[sym] = row
+    tone = (data.get("market") or {}).get("tone")
+    return by_sym, tone
+
+
+def _entry_meta(sym: str, ref_price, q: dict | None) -> dict:
+    """Build the attribution record captured at BUY time: the entry SIGNAL tag(s),
+    catalyst freshness (hours), size context, the brain's intended price (for slippage
+    analysis), the live ask/last at the fill, and the macro tape. Fully defensive —
+    every field degrades to None and any exception yields {} so this instrumentation
+    can NEVER block or alter a trade."""
+    try:
+        row = _CANDIDATES_BY_SYM.get(str(sym).upper(), {})
+        cat = row.get("catalyst") or {}
+        pub = _parse_dt(cat.get("published_utc"))
+        age_h = round((datetime.now(timezone.utc) - pub).total_seconds() / 3600, 2) if pub else None
+        q = q or {}
+        return {
+            "signals": row.get("signals") or ([row["signal"]] if row.get("signal") else []),
+            "catalyst_age_h": age_h,
+            "market_cap": row.get("market_cap"),
+            "volume": row.get("volume"),
+            "ref_price": round(float(ref_price), 4) if ref_price else None,
+            "entry_ask": live_ask(q),
+            "entry_last": live_last(q),
+            "tape_tone": _TAPE_TONE,
+        }
+    except Exception:  # noqa: BLE001 - attribution must never break a trade
+        return {}
+
+
 def build_occ_symbol(underlying, expiration, option_type, strike) -> str | None:
     """Schwab/OCC option symbol: 6-char underlying (right-space-padded) + YYMMDD +
     C/P + strike*1000 as 8 digits. e.g. ('AAPL','2025-01-17','put',150) ->
@@ -503,9 +568,9 @@ def validate_pick(order: dict) -> tuple[bool, str]:
     return True, "ok"
 
 
-def buy(client, acct, sym: str, qty: int, limit: float, tp=None, sl=None):
+def buy(client, acct, sym: str, qty: int, limit: float, tp=None, sl=None, meta=None):
     if DRY_RUN:
-        paper_record_buy(sym, qty, limit, tp, sl)  # simulate the fill into the paper book
+        paper_record_buy(sym, qty, limit, tp, sl, meta=meta)  # simulate the fill into the paper book
         return
     try:
         order = client.create_limit_order(
@@ -558,14 +623,15 @@ def _build_option_order(occ: str, contracts: int, premium: float, instruction, e
 
 def buy_option(client, acct, occ: str, contracts: int, premium: float, *,
                underlying=None, option_type="put", strike=None, expiration=None,
-               tp=None, sl=None):
+               tp=None, sl=None, meta=None):
     """Buy-to-open a long put. Paper by default. A REAL order fires ONLY when
     DRY_RUN=false AND OPTIONS_LIVE=true (the second gate keeps options paper-only
     until deliberately enabled, even after stocks go live)."""
     if DRY_RUN:
         paper_record_buy(occ, contracts, premium, tp, sl, kind=option_type or "put",
                          multiplier=OPTION_MULTIPLIER, occ=occ, underlying=underlying,
-                         option_type=option_type, strike=strike, expiration=expiration)
+                         option_type=option_type, strike=strike, expiration=expiration,
+                         meta=meta)
         return
     if not OPTIONS_LIVE:
         print(f"[{occ}] OPTIONS_LIVE off — real option order suppressed (paper-only by design).")
@@ -670,7 +736,8 @@ def try_enter(client, acct, sym: str, want_qty, ref_limit: float,
     if qty <= 0:
         print(f"[{sym}] SKIP — 1 share at ${entry:.2f} exceeds ${MAX_DOLLARS_PER_TRADE:.0f} cap")
         return
-    buy(client, acct, sym, qty, entry, tp=tp, sl=sl)
+    meta = _entry_meta(sym, ref_limit, q)  # attribution only — does not affect the order
+    buy(client, acct, sym, qty, entry, tp=tp, sl=sl, meta=meta)
     bought.add(sym)
 
 
@@ -717,21 +784,25 @@ def try_enter_option(client, acct, pick: dict, positions: dict, blocked: set,
         print(f"[{occ}] SKIP — 1 contract (${entry*OPTION_MULTIPLIER:.0f}) exceeds "
               f"${MAX_DOLLARS_PER_OPTION:.0f} put cap")
         return
+    meta = _entry_meta(underlying, ref or pick.get("limit_price"), q)  # attribution only
     buy_option(client, acct, occ, contracts, entry, underlying=underlying,
                option_type=pick.get("option_type"), strike=pick.get("strike"),
                expiration=pick.get("expiration"),
-               tp=pick.get("take_profit"), sl=pick.get("stop_loss"))
+               tp=pick.get("take_profit"), sl=pick.get("stop_loss"), meta=meta)
     bought.add(occ)
 
 
 def main() -> int:
-    global _PAPER
+    global _PAPER, _CANDIDATES_BY_SYM, _TAPE_TONE
     mode = "DRY-RUN (paper book)" if DRY_RUN else "LIVE (real orders!)"
     print(f"=== Executor | mode: {mode} ===")
     if DRY_RUN:  # load the simulated book BEFORE get_positions() reads from it
         _PAPER = load_paper_account()
         print(f"Paper book: cash ${_PAPER['cash']:.2f}, "
               f"{len(_PAPER['positions'])} open, realized ${_PAPER['realized_pnl']:+.2f}")
+    # Load the entry-attribution index (read-only; best-effort). Lets each fill record
+    # WHY it was bought — signal tag, catalyst age, tape — for analyze.py to score.
+    _CANDIDATES_BY_SYM, _TAPE_TONE = load_candidates_index()
 
     client = get_client()
     acct = client.get_account_numbers().accounts[0]

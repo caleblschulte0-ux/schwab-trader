@@ -1,0 +1,17 @@
+{
+  "updated_utc": "2026-06-06T00:53:25Z",
+  "n": 3,
+  "expectancy": -5.5867,
+  "win_rate": 0.0,
+  "total_realized": -16.76,
+  "profit_factor": 0.0,
+  "max_drawdown": -16.76,
+  "by_signal": {
+    "untagged": {
+      "n": 3,
+      "win_rate": 0.0,
+      "expectancy": -5.5867
+    }
+  },
+  "sample_sufficient": false
+}
