@@ -132,6 +132,29 @@ def is_fresh(generated_utc: str | None) -> bool:
     return age_h <= MAX_SIGNAL_AGE_HOURS
 
 
+def _market_tz():
+    """US market timezone (handles EDT/EST automatically); falls back to UTC."""
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo("America/New_York")
+    except Exception:  # noqa: BLE001 - some hosts lack tz data; degrade to UTC
+        return timezone.utc
+
+
+def market_is_open(now: datetime | None = None) -> bool:
+    """True ONLY during the US regular session (Mon-Fri, 09:30-16:00 ET, DST-aware).
+    The trader is an intraday strategy and Schwab only fills during regular hours, so
+    the executor must never act outside this window — regardless of what triggers it
+    (a misfiring external cron can poke the workflow at any hour). Note: does NOT know
+    market holidays; a weekday holiday still reads 'open', but the broker simply rejects
+    orders and there's nothing fresh to trade, so the run is a harmless no-op anyway."""
+    from datetime import time as _time
+    et = (now or datetime.now(timezone.utc)).astimezone(_market_tz())
+    if et.weekday() >= 5:  # Sat/Sun
+        return False
+    return _time(9, 30) <= et.time() <= _time(16, 0)
+
+
 def get_positions(client: SchwabClient) -> dict[str, dict]:
     if DRY_RUN:  # paper book is the source of truth in dry-run (real account untouched)
         return paper_positions_as_holdings(_PAPER or {})
@@ -796,6 +819,17 @@ def main() -> int:
     global _PAPER, _CANDIDATES_BY_SYM, _TAPE_TONE
     mode = "DRY-RUN (paper book)" if DRY_RUN else "LIVE (real orders!)"
     print(f"=== Executor | mode: {mode} ===")
+    # MARKET-HOURS GUARD: the executor must NEVER run trading logic outside the US
+    # regular session. The external cron can poke this workflow at any hour, so we
+    # enforce it in CODE here — not just at the trigger — and no-op cleanly (before
+    # even logging in to Schwab) when the market is closed. Override for a manual test
+    # with IGNORE_MARKET_HOURS=true.
+    if not market_is_open() and os.environ.get("IGNORE_MARKET_HOURS", "").strip().lower() != "true":
+        et = datetime.now(timezone.utc).astimezone(_market_tz())
+        print(f"Market CLOSED ({et:%a %H:%M} ET) — executor no-op. "
+              "(Set IGNORE_MARKET_HOURS=true to force a run.)")
+        print("=== done ===")
+        return 0
     if DRY_RUN:  # load the simulated book BEFORE get_positions() reads from it
         _PAPER = load_paper_account()
         print(f"Paper book: cash ${_PAPER['cash']:.2f}, "
