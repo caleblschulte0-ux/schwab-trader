@@ -1,6 +1,6 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-06T00:05:23Z_
+_Updated 2026-06-06T00:10:24Z_
 
 **Equity:** $973.04  (start $1000.00, **-26.96 / -2.7%**)  
 **Cash:** $181.12   **Invested:** $802.12   **Open positions:** 11  
