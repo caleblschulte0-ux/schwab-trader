@@ -1,5 +1,5 @@
 {
-  "cash": 2.714800000000082,
+  "cash": 15.244800000000083,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -96,29 +96,30 @@
         "tape_tone": "risk_off"
       }
     },
-    "ARTV": {
-      "qty": 18,
-      "entry": 6.88,
-      "tp": 8.35,
-      "sl": 7.15,
+    "ALOT": {
+      "qty": 7,
+      "entry": 15.58,
+      "tp": 16.55,
+      "sl": 14.45,
       "kind": "stock",
       "multiplier": 1,
-      "opened_utc": "2026-06-08T14:20:35.036000+00:00",
+      "opened_utc": "2026-06-08T14:25:29.277427+00:00",
       "meta": {
         "signals": [
+          "sec_8k",
           "news_smallcap"
         ],
-        "catalyst_age_h": 3.84,
-        "market_cap": 178454372.0,
-        "volume": 94105,
-        "ref_price": 7.65,
-        "entry_ask": 6.87,
-        "entry_last": 6.87,
+        "catalyst_age_h": 3.93,
+        "market_cap": 117008096.0,
+        "volume": 13962,
+        "ref_price": 15.25,
+        "entry_ask": 15.55,
+        "entry_last": 15.49,
         "tape_tone": "risk_on"
       }
     }
   },
-  "realized_pnl": -23.9452,
+  "realized_pnl": -26.1952,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -186,7 +187,31 @@
       "closed_utc": "2026-06-08T13:20:19.324360+00:00",
       "reason": "brain SELL",
       "hold_h": 96.33
+    },
+    {
+      "symbol": "ARTV",
+      "qty": 18,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 6.88,
+      "exit": 6.755,
+      "pnl": -2.25,
+      "pnl_pct": -1.82,
+      "opened_utc": "2026-06-08T14:20:35.036000+00:00",
+      "closed_utc": "2026-06-08T14:25:26.157636+00:00",
+      "reason": "hit stop $7.15",
+      "hold_h": 0.08,
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst_age_h": 3.84,
+      "market_cap": 178454372.0,
+      "volume": 94105,
+      "ref_price": 7.65,
+      "entry_ask": 6.87,
+      "entry_last": 6.87,
+      "tape_tone": "risk_on"
     }
   ],
-  "updated_utc": "2026-06-08T14:20:43.193692+00:00"
+  "updated_utc": "2026-06-08T14:25:37.199092+00:00"
 }

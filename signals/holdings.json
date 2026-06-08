@@ -1,6 +1,11 @@
 {
-  "updated_utc": "2026-06-08T14:20:26.618695+00:00",
+  "updated_utc": "2026-06-08T14:25:20.811033+00:00",
   "holdings": [
+    {
+      "symbol": "ARTV",
+      "quantity": 18,
+      "avg_price": 6.88
+    },
     {
       "symbol": "AVR",
       "quantity": 15,
