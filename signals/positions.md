@@ -1,4 +1,4 @@
-# Open Positions — updated 2026-06-08T13:52:07Z
+# Open Positions — updated 2026-06-08T13:55:12Z
 
 | Symbol | Qty | Avg     | Take-profit | Stop    | Last seen               | Unrealized $ |
 |--------|-----|---------|-------------|---------|-------------------------|--------------|
@@ -17,4 +17,6 @@
 
 > ⚠️ GASS and TLYS are in today's two weakest sectors (Energy −5.64%, Consumer Cyclical −4.13%). Neither had prices in today's funnel so dead-money laggard conditions cannot be confirmed. Flag for verification next run when prices become available.
 >
-> Pending new order: NRIX BUY 10 @ $14.65 (Roche $700M collaboration deal, healthcare).
+> ⚠️ Pending NRIX BUY (orders.json limit $14.65) is effectively stale — NRIX has since traded to $16.88 (+15.3%), well above the 5% backstop ceiling (~$15.38). The executor will likely reject this entry. Next brain run should reassess or drop NRIX.
+> 
+> ⚠️ Collision guard: orders.json was written at 13:52:07Z; current time 13:55:12Z (< 10 min). This dashboard refresh is the only write this run.
