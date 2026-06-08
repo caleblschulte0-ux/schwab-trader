@@ -1,14 +1,14 @@
 {
-  "updated_utc": "2026-06-08T20:20:23.853841+00:00",
+  "updated_utc": "2026-06-08T20:25:24.991584+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
       "quantity": 7,
       "avg_price": 15.58,
       "opened_utc": "2026-06-08T14:25:29.277427+00:00",
-      "last": 15.68,
-      "unrealized_pct": 0.64,
-      "value": 109.76
+      "last": 16.41,
+      "unrealized_pct": 5.33,
+      "value": 114.87
     },
     {
       "symbol": "AVR",
@@ -42,18 +42,18 @@
       "quantity": 18,
       "avg_price": 3.26,
       "opened_utc": "2026-06-08T20:15:25.379322+00:00",
-      "last": 3.2306,
-      "unrealized_pct": -0.9,
-      "value": 58.15
+      "last": 3.25,
+      "unrealized_pct": -0.31,
+      "value": 58.5
     },
     {
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.34,
-      "unrealized_pct": 2.84,
-      "value": 151.9
+      "last": 4.35,
+      "unrealized_pct": 3.08,
+      "value": 152.25
     },
     {
       "symbol": "PLSE",
@@ -69,9 +69,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.32,
-      "unrealized_pct": 0.91,
-      "value": 59.76
+      "last": 3.3197,
+      "unrealized_pct": 0.9,
+      "value": 59.75
     },
     {
       "symbol": "SLDB",
