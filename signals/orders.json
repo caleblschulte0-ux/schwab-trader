@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-06-08T13:52:07Z",
-  "funnel": {"scanned": 276, "leading": 89, "in_budget": 230, "had_catalyst": 42, "finalists": 3, "picked": 1},
+  "generated_utc": "2026-06-08T14:28:15Z",
+  "funnel": {"scanned": 279, "leading": 89, "in_budget": 220, "had_catalyst": 42, "finalists": 3, "picked": 1},
   "orders": [
-    {"symbol": "NRIX", "action": "BUY", "instrument": "stock",
-     "quantity": 10, "limit_price": 14.65, "take_profit": 15.95, "stop_loss": 13.95}
+    {"symbol": "ALOT", "action": "BUY", "instrument": "stock",
+     "quantity": 9, "limit_price": 15.25, "take_profit": 16.55, "stop_loss": 14.45}
   ]
 }

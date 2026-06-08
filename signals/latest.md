@@ -1,61 +1,42 @@
-# Brain Run — 2026-06-08T13:52:07Z
+# Brain Run — 2026-06-08T14:28:15Z
 
-Funnel: scanned 276 → 230 fit budget → 42 with catalyst → 3 finalists → picked 1
+Funnel: scanned 279 → 220 fit budget → 42 with catalyst → 3 finalists → picked 1
 
----
+## Market Tape
+SPY +0.73%, VIX 18.67 → tone: **risk_on**. The sector table is mixed — Healthcare the only green sector (+0.19%), but individual mega-cap semiconductor and tech names are strongly positive (INTC +8.6%, MRVL +9.2%, MU +7.3%, CBRS +14.7%). The sector ETF data appears to lag or use different weighting vs. individual movers. Treating this as a healthy-enough tape for normal discipline. Healthcare tailwind consistent with the biotech/pharma names moving today.
 
-## Market Tape — RISK_OFF
+## Collision Guard
+Previous orders.json stamped 13:52:07Z — 36 min ago. Proceeding normally.
 
-SPY -2.58%, VIX 18.83. Broad selloff: Energy -5.64%, Tech -4.51%, Consumer Cyclical -4.13%, Industrials -2.03%. **Healthcare is the ONLY positive sector (+0.19%).** Running in risk-off mode: materially pickier, demanding strong relative strength or defined-catalyst entries, leaning toward sitting out over forcing trades into a falling market.
+## Holdings Review
 
----
+**AVR** (15 shares, avg $9.87) — Currently in funnel at $9.58 (−3.0% vs avg). Fresh catalyst today (Anteris PARADIGM expansion, French regulatory clearance, 10:09 UTC). Not near −8% dead-money threshold. **HOLD.**
 
-## Account Status
+**DRTS, GASS, JFB, NRXP, PLSE, RXRX, SLDB, TISI, TLYS** — Not in today's funnel; current prices unavailable. Sector-level estimates do not push any single name close to −8% from avg (Energy −5.64%, Industrials −2.03%, Consumer Cyclical −4.13%). Cannot confirm all four dead-money laggard conditions without live prices. **Holding all — let bot-managed stops protect each position.** GASS (energy) and TLYS (consumer cyclical) remain flagged for dead-money review if prices appear next run.
 
-10 open positions (~$850 deployed of ~$1,000). Approximately $150 powder remaining. With the account near full deployment and a risk-off tape, no new trades are made unless the catalyst is clearly exceptional.
+**NRIX (previous BUY order, not yet in holdings)** — Ordered at limit $14.65; currently at $16.05. Executor almost certainly rejected this — live ask ($16.05) exceeds the 5% backstop ceiling ($14.65 × 1.05 = $15.38). NOT re-ordering per anti-chase rule: the stock kept rising AFTER the limit was set, meaning the edge at $14.65 no longer exists at current prices.
 
----
+## Pick: ALOT — AstroNova Inc.
 
-## Pick: NRIX — BUY 10 shares @ $14.65
+**Catalyst (age: same-day, fresh):** AstroNova reported Q1 FY2027 results this morning (8-K published 10:09 UTC today + confirmed news coverage). **Verified beat:** EPS $0.19 vs. $0.14 estimate (+$0.05), revenue $39.4M (+4.4% YoY). Aerospace segment surged 16.3% YoY to $13.3M; aerospace operating profit up 96%; commercial aircraft sales up 46%. Book-to-bill 118% company-wide, 147% in aerospace. Backlog grew to $18.2M. Secured a $10M multiyear ToughWriter defense contract. Both sec_8k and news_smallcap signals confirmed.
 
-**Catalyst (freshness: TODAY, 8-K filed ~05:10 UTC):** Nurix Therapeutics and Roche announced a global strategic collaboration to co-develop and co-commercialize **Bexobrutideg** (BTK degrader) for B-cell malignancies and beyond. Deal terms: **$700M upfront cash payment** to Nurix, up to **$2.3B total milestones**, 50/50 U.S. profit-share, low-to-high-teens ex-U.S. royalties. This is one of the largest upfront collaboration payments in recent biotech history for a company of this size (~$1.5B market cap).
+**Why it's the best setup:** Only +5.0% on fresh earnings. Early-stage by every measure — a clean aerospace-driven Q1 beat on a $117M market cap name with strong forward momentum (125% book-to-bill on orders). Aerospace/defense is structurally durable regardless of sector ETF data. Catalyst is not binary; the beat is already confirmed.
 
-**Why the stock is down -4.19% and why that's the opportunity:** NRIX surged ~50-70% premarket on the news (~$21.48 vs Friday's close of $14.64), then fully faded back to the pre-announcement price by the open. This is a textbook mechanical premarket-to-open distribution by fast-money traders — not a fundamental rejection of the deal. The deal is pricing in at zero premium over the pre-announcement close, which is irrational for a $700M upfront payment on a ~$1.5B market cap company.
-
-**Healthcare sector alignment:** Healthcare is the only green sector (+0.19%) while everything else is red. This is the defined-catalyst-entry preference from the risk-off rules — the sell is entirely mechanical (premarket giveback), not news-driven.
-
-**Setup:** 10 shares × $14.65 = $146.50 (under $150 cap). TP $15.95 (+8.9%), SL $13.95 (-4.8%). Reward/risk ~1.9:1. Catalyst age: ~8 hours (today, intraday). Volume from funnel: 1,633,096 — healthy confirmation.
-
-**Risk acknowledged:** Deal closes Q3 2026 subject to HSR antitrust review. Nurix carries 40% development costs. Risk-off tape. These are priced in at current level.
-
----
+**Trade:** 9 shares × $15.25 limit = $137.25 ≤ $150 ✓ | TP $16.55 (+8.5%) | SL $14.45 (−5.2%) | R/R ≈ 1.63:1. Targets sit within the required +5–10% TP / −3–6% SL band.
 
 ## Notable Passes
 
-**ARTV (Artiva Biotherapeutics, -10.81%):** Appeared to have RMAT designation + EULAR data — initially compelling. Verification revealed: RMAT designation was granted ~May 19 (3 weeks ago, stale), today is just a management webcast recapping EULAR data already presented June 3–6. A dilutive 424B5 follow-on offering was filed coinciding with the catalyst run-up. Stock ran $1.47 → $14.53 (52-week range) — massive move already done. Sell is justified. **Hard pass.**
+**ARTV (Artiva Biotherapeutics, +5.4% in funnel / ~+17% intraday)** — Genuine catalyst: EULAR 2026 late-breaking oral data (71% ACR50 response in refractory RA, zero relapses, outpatient) + FDA alignment for Phase 3 RA trial H2 2026. Note: RMAT designation mentioned in funnel is for lymphoma (not RA); today's catalyst is the EULAR data webcast. Stock moved from ~$6.85 close to intraday high $9.01 before pulling back — **~17% intraday** puts it squarely in the deprioritize zone per stage rule. Previous brain also flagged dilutive offering concerns (though this may have been a confusion with AEVA's offering — leaving open). Adding to watchlist as pullback entry at $7.60.
 
-**BBCP (Concrete Pumping Holdings, +30.7%):** No identifiable catalyst, already extended +30.7% intraday. Stage rule: hard pass.
+**ELDN (Eledon Pharmaceuticals, +7.0%)** — T1D tegoprubart trial results, good volume (344K). Quality biotech setup but clinical-stage binary vs. a confirmed earnings beat. ALOT is better risk/reward.
 
-**CDLX/FEMY/HUBC/KIDZ/ZCMD (halt_resume names):** Already up 780–2100%+ from halt. Completely blown off. No entry.
+**DLTH (Duluth Holdings, +17.7%)** — Fresh Q1 beat but already in the extended/deprioritize zone. Stage rule: pass.
 
-**ALVO (Alvotech, -5.35%):** "FDA accepts application" for Entyvio biosimilar = filing received for review, not approval. Minor step. Down -5.35% with $1.1B market cap on a risk-off day. Not compelling enough.
+**ALVO (Alvotech, +16.6%)** — FDA accepts biosimilar application. Already +16.6% — extended zone, pass.
 
-**NCSM (NCS Multistage, -7.16%):** Weatherford acquisition announced. Stock down -7.16% suggests deal price is at or below current market — not the acquisition premium setup needed for a safe arb. Pass.
+**MPAA (+34%), TNGX (+34.6%), SUNE (+153%)** — Parabolic blow-offs. Hard pass on all.
 
-**COYA, ALOT, LENZ:** Healthcare names with real catalysts but all RED today and not yet showing recovery. Watchlisted for breakout entries when conditions improve.
+**CAL (Caleres, +6.9%)** — Q1 beat, but Consumer Cyclical is today's weakest sector (−4.13%). Sector headwind is a real risk; ALOT has no such headwind.
 
----
-
-## Holdings Read
-
-**AVR** (15 shares, avg $9.87): Current price $9.64 (-2.3% vs avg). Fresh catalyst today: "Anteris Advances Global PARADIGM Expansion with French Regulatory Clearance" (published 2026-06-08T10:09:15). Healthcare sector green. Well above -8% dead-money threshold. **HOLD.** TP $10.41, SL $9.16.
-
-**DRTS, GASS, JFB, NRXP, PLSE, RXRX, SLDB, TISI, TLYS:** Not in today's funnel — current prices not visible this run. Cannot confirm all 4 dead-money laggard conditions without current prices. On this risk-off tape, condition 2 (relative weakness while sector is green) is unlikely to trigger since all sectors are red. **Holding all.** ⚠️ GASS (energy, -5.64% today) and TLYS (consumer cyclical, -4.13% today) are in the two weakest sectors — flag these for dead-money check when prices become visible next run.
-
----
-
-## Watchlist Updates
-
-- **MNKD** ($3.65 breakout): Retained. FDA pediatric Afrezza approval (May 29) + FUROSCIX PDUFA approaching. Healthcare sector green.
-- **GHRS** ($26.50 breakout): Retained. Phase 2b TRD endpoint hit, CINP conference June 26–29. Healthcare sector green.
-- **COYA** ($4.75 breakout, NEW): ALSTARS ALS trial active-treatment extension phase began today (2026-06-08T12:00). Fresh clinical milestone. Waiting for price recovery above $4.75 before entering — catalyst age ~1.5h, stock still in sell-off.
+## Watchlist
+MNKD (FDA pediatric Afrezza approval, breakout $3.65), GHRS (Phase 2b TRD beat, breakout $26.50), COYA (ALSTARS ALS trial extension active today, breakout $4.75), ARTV (EULAR RA data, pullback $7.60) — see watchlist.json.
