@@ -1,5 +1,5 @@
 {
-  "cash": 1.7448000000000832,
+  "cash": 60.59480000000008,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -15,15 +15,6 @@
       "tp": 21.5,
       "sl": 16.0,
       "opened_utc": "2026-06-04T13:40:26.820680+00:00"
-    },
-    "JFB": {
-      "qty": 11,
-      "entry": 5.79,
-      "tp": 7.25,
-      "sl": 5.0,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-04T17:18:48.487431+00:00"
     },
     "RXRX": {
       "qty": 18,
@@ -126,7 +117,7 @@
       }
     }
   },
-  "realized_pnl": -21.6952,
+  "realized_pnl": -26.535200000000003,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -246,7 +237,21 @@
       "closed_utc": "2026-06-08T16:00:30.128714+00:00",
       "reason": "brain SELL",
       "hold_h": 98.67
+    },
+    {
+      "symbol": "JFB",
+      "qty": 11,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 5.79,
+      "exit": 5.35,
+      "pnl": -4.84,
+      "pnl_pct": -7.6,
+      "opened_utc": "2026-06-04T17:18:48.487431+00:00",
+      "closed_utc": "2026-06-08T20:00:25.593257+00:00",
+      "reason": "sell brain",
+      "hold_h": 98.69
     }
   ],
-  "updated_utc": "2026-06-08T19:55:22.886004+00:00"
+  "updated_utc": "2026-06-08T20:00:27.569836+00:00"
 }
