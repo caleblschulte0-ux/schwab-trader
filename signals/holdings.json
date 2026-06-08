@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T20:45:21.186720+00:00",
+  "updated_utc": "2026-06-08T20:50:23.958877+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -42,9 +42,9 @@
       "quantity": 18,
       "avg_price": 3.26,
       "opened_utc": "2026-06-08T20:15:25.379322+00:00",
-      "last": 3.29,
-      "unrealized_pct": 0.92,
-      "value": 59.22
+      "last": 3.3,
+      "unrealized_pct": 1.23,
+      "value": 59.4
     },
     {
       "symbol": "NRXP",
@@ -69,9 +69,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.32,
-      "unrealized_pct": 0.91,
-      "value": 59.76
+      "last": 3.31,
+      "unrealized_pct": 0.61,
+      "value": 59.58
     },
     {
       "symbol": "SLDB",
