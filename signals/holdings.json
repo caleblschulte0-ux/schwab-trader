@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T15:00:32.205615+00:00",
+  "updated_utc": "2026-06-08T15:05:21.495768+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -50,11 +50,6 @@
       "symbol": "TISI",
       "quantity": 3,
       "avg_price": 18.09
-    },
-    {
-      "symbol": "TLYS",
-      "quantity": 12,
-      "avg_price": 4.84
     }
   ]
 }

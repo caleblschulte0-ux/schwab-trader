@@ -1,24 +1,24 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-08T15:00:45Z_
+_Updated 2026-06-08T15:05:27Z_
 
-**Equity:** $968.41  (start $1000.00, **-31.59 / -3.2%**)  
+**Equity:** $967.97  (start $1000.00, **-32.03 / -3.2%**)  
 **Cash:** $84.24   **Invested:** $900.48   **Open positions:** 10  
-**Realized P/L:** $-15.28   **Unrealized:** $-16.32   **Closed trades:** 7   **Win rate:** 14%
+**Realized P/L:** $-15.28   **Unrealized:** $-16.75   **Closed trades:** 7   **Win rate:** 14%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
 | ALOT | stock | 7 | $15.58 | $15.60 | $16.55 | $14.45 | $+0.14 |
-| AVR | stock | 15 | $9.87 | $9.43 | $10.41 | $9.16 | $-6.60 |
-| DRTS | stock | 6 | $10.52 | $9.54 | $13.50 | $9.00 | $-5.86 |
-| GASS | stock | 15 | $9.51 | $9.35 | $10.40 | $8.95 | $-2.40 |
-| JFB | stock | 11 | $5.79 | $5.61 | $7.25 | $5.00 | $-1.98 |
-| NRXP | stock | 35 | $4.22 | $4.27 | $4.65 | $4.00 | $+1.75 |
+| AVR | stock | 15 | $9.87 | $9.45 | $10.41 | $9.16 | $-6.30 |
+| DRTS | stock | 6 | $10.52 | $9.55 | $13.50 | $9.00 | $-5.82 |
+| GASS | stock | 15 | $9.51 | $9.37 | $10.40 | $8.95 | $-2.10 |
+| JFB | stock | 11 | $5.79 | $5.56 | $7.25 | $5.00 | $-2.53 |
+| NRXP | stock | 35 | $4.22 | $4.26 | $4.65 | $4.00 | $+1.40 |
 | PLSE | stock | 2 | $25.49 | $25.77 | $31.50 | $23.50 | $+0.56 |
-| RXRX | stock | 18 | $3.29 | $3.35 | $4.50 | $3.10 | $+1.17 |
-| SLDB | stock | 9 | $6.86 | $6.57 | $10.50 | $5.90 | $-2.61 |
+| RXRX | stock | 18 | $3.29 | $3.35 | $4.50 | $3.10 | $+1.08 |
+| SLDB | stock | 9 | $6.86 | $6.56 | $10.50 | $5.90 | $-2.70 |
 | TISI | stock | 3 | $18.09 | $17.93 | $21.50 | $16.00 | $-0.48 |
 
 ## Last 15 closed trades
