@@ -1,27 +1,27 @@
 {
-  "generated_utc": "2026-06-08T14:54:22Z",
+  "generated_utc": "2026-06-08T15:22:17Z",
   "watch": [
     {
       "symbol": "MNKD",
       "trigger": "breakout",
       "trigger_price": 3.65,
-      "quantity": 17,
+      "quantity": 40,
       "limit_price": 3.70,
-      "take_profit": 5.50,
-      "stop_loss": 3.10,
+      "take_profit": 4.00,
+      "stop_loss": 3.50,
       "good_until": "2026-06-11",
-      "note": "FDA approved Afrezza pediatric (ages 6+) May 29 + FUROSCIX PDUFA July 26 upcoming catalyst. Enter on volume breakout above $3.65."
+      "note": "FDA approved Afrezza pediatric (ages 6+) May 29 + FUROSCIX PDUFA July 26 upcoming catalyst. Enter on volume breakout above $3.65. TP/SL tightened to +8.1%/-5.4% from entry."
     },
     {
       "symbol": "GHRS",
       "trigger": "breakout",
       "trigger_price": 26.50,
-      "quantity": 2,
+      "quantity": 5,
       "limit_price": 26.75,
-      "take_profit": 31.00,
-      "stop_loss": 23.50,
+      "take_profit": 29.00,
+      "stop_loss": 25.40,
       "good_until": "2026-06-12",
-      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Enter on breakout above $26.50 on volume."
+      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Enter on breakout above $26.50 on volume. TP +8.4% / SL -5.1% from $26.75 entry."
     },
     {
       "symbol": "COYA",
@@ -29,10 +29,10 @@
       "trigger_price": 4.75,
       "quantity": 31,
       "limit_price": 4.80,
-      "take_profit": 5.25,
-      "stop_loss": 4.45,
+      "take_profit": 5.20,
+      "stop_loss": 4.50,
       "good_until": "2026-06-11",
-      "note": "ALSTARS ALS trial: first cohort began blinded active-treatment extension 2026-06-08 (fresh). Currently ~$4.50 consolidating below trigger. Enter only on volume breakout above $4.75."
+      "note": "ALSTARS ALS trial: first cohort began blinded active-treatment extension 2026-06-08 (fresh catalyst today, 12:00 UTC). Currently ~$4.48 consolidating below trigger. Enter only on volume breakout above $4.75. TP +8.3% / SL -6.3% from $4.80 entry."
     },
     {
       "symbol": "ELDN",
@@ -42,8 +42,8 @@
       "limit_price": 3.35,
       "take_profit": 3.65,
       "stop_loss": 3.15,
-      "good_until": "2026-06-10",
-      "note": "Eledon tegoprubart T1D trial promising results (11:39 UTC today). Stock up only 0.7% on clinical data; volume 647K confirms participation. $265M cap. Enter on pullback to $3.30 support."
+      "good_until": "2026-06-11",
+      "note": "Eledon tegoprubart T1D trial promising results (11:39 UTC today). Stock up only +2.2% ($3.485) on clinical data with volume 738K — not priced in. $269M cap. Enter on pullback to $3.30 support. TP +8.9% / SL -6.0% from $3.35 entry."
     },
     {
       "symbol": "ELVA",
@@ -53,8 +53,19 @@
       "limit_price": 10.05,
       "take_profit": 10.90,
       "stop_loss": 9.55,
+      "good_until": "2026-06-11",
+      "note": "Electrovaya analyst price target raise (sentiment 0.852, very bullish), published 13:03 UTC today. Stock +1.1% ($10.45) on very bullish analyst call — barely priced in. Energy sector tailwind (+0.82%). Enter on pullback to $10.00. TP +8.4% / SL -5.0% from $10.05 entry."
+    },
+    {
+      "symbol": "ALVO",
+      "trigger": "pullback",
+      "trigger_price": 3.80,
+      "quantity": 38,
+      "limit_price": 3.85,
+      "take_profit": 4.20,
+      "stop_loss": 3.62,
       "good_until": "2026-06-10",
-      "note": "Electrovaya analyst price target raise (sentiment 0.852, very bullish), published 13:03 UTC today. Stock -0.68% on very bullish analyst call — not priced in yet. $508M cap. Enter on pullback to $10.00."
+      "note": "Alvotech: FDA accepted Entyvio (vedolizumab) biosimilar NDA for review (Bullish, published 14:08 UTC today — very fresh). Up +13.7% on 816K volume. Durable FDA catalyst; enter on pullback to $3.80 intraday support. TP +9.1% / SL -4.7% from $3.85 entry."
     }
   ]
 }

@@ -1,87 +1,83 @@
 # Trading Brain — Run Report
-**UTC: 2026-06-08T14:54:22Z**
+**UTC: 2026-06-08T15:22:17Z**
 
-Funnel: scanned 280 → 220 fit budget/price floor → 60 with catalyst → 5 finalists → picked 0 new BUYs (1 dead-money SELL on TLYS)
+Funnel: scanned 285 → 215 fit budget/price floor → 72 with catalyst → 5 finalists → picked 0
 
 ---
 
 ## Market Tape
-SPY +0.71%, VIX 18.48 → **risk_on** tone. Broad green but technology sector mildly red (-0.56%), masking massive single-stock semiconductor moves: INTC +11.3%, MRVL +13.6%, MU +9.1%. INTC catalyst confirmed: Google placed a 3M+ TPU order with Intel Foundry for 2028; NVIDIA evaluating Intel's 18A process for advanced packaging. Major foundry-validation story. No clean small-cap sympathy play identified — all semi-adjacent ETFs already up 20-24%.
-
-Strongest sectors: Consumer Defensive (+1.21%), Energy (+0.82%), Financial Services (+0.66%), Consumer Cyclical (+0.54%). Weakest: Utilities (-0.78%), Communication Services (-0.76%), Technology (-0.56%), Healthcare (-0.36%).
+SPY +1.03%, VIX 17.97 → **risk_on.** Broad green; semiconductors leading (INTC +12.7%, MRVL +13.4%, MU +10.3%). Hot sectors: Consumer Defensive (+1.21%), Energy (+0.82%), Financials (+0.66%), Consumer Cyclical (+0.54%). Weakest: Utilities (−0.78%), Communication Services (−0.76%), Technology (−0.56%), **Healthcare (−0.36%)** — noteworthy since most holdings are biotech/healthcare names and sector drag is real.
 
 ---
 
 ## Collision Guard
-Prior orders.json generated at 2026-06-08T14:28:15Z — ~26 minutes ago. Clear to proceed normally.
+Prior `orders.json` generated 14:54:22Z; candidates updated 15:07:31Z → ~13 min elapsed → **proceed normally.**
+
+---
+
+## Capital Situation
+All ~$1,000 deployed across 10 open positions. No powder for new BUYs this run. No confirmed dead-money conditions met to free capital. Primary action this run: maintain watchlist for auto-entry when positions exit via their bot-managed stops/TPs.
 
 ---
 
 ## Holdings Review
 
-**ALOT (AstroNova, 7 shares @ $15.58 avg):** Current $15.50 (-0.5% vs avg). Up +6.97% today on Q1 aerospace earnings beat — 8-K filed 10:29 UTC. Thesis live and fresh. **HOLD.**
+**ALOT (AstroNova, 7 × $15.58):** Last $15.44 (−0.9% vs avg). Fresh catalyst today: 8-K + news_smallcap — "AstroNova rides 16% aerospace surge as flight-deck printers lift Q1 results" (Bullish 0.54, published 10:29 UTC). Thesis live and fresh; well above dead-money threshold. **HOLD.**
 
-**AVR (Anteris Medical, 15 shares @ $9.87 avg):** Current $9.50 (-3.8% vs avg). Catalyst: French regulatory clearance for PARADIGM trial expansion (10:09 UTC, sentiment 0.843 bullish). Down from avg but well above -8% threshold; thesis active. **HOLD.**
+**AVR (Anteris Medical, 15 × $9.87):** Last $9.46 (−4.2% vs avg). Fresh catalyst today: French regulatory clearance for PARADIGM trial global expansion (Bullish 0.844, published 10:09 UTC). −4.2% is not −8%; thesis active with live catalyst. **HOLD.**
 
-**DRTS (Alpha Tau Medical, 6 shares @ $10.52 avg):** Current ~$9.55 (-9.2% vs avg). Above the dead-money threshold numerically, but: healthcare sector is itself -0.36% today (mildly red along with the stock, so relative weakness vs sector is borderline). No specific negative catalyst. Using approximate price from web research. Condition 1 met; conditions 2 and 3 uncertain without live data. **Monitoring — not cutting today without confirmed price and clear relative weakness.**
+**DRTS (Alpha Tau Medical, 6 × $10.52):** Prior-run estimate ~$9.55 (−9.2% vs avg). Dead-money check: condition 1 ✓ (−9.2%), condition 3 ✓ (no catalyst in funnel), condition 4 ✓ (prior session). **Condition 2 ambiguous**: healthcare sector is −0.36% (also mildly red), so stock is not clearly red *while sector is green* — the sector is declining alongside it. Per BRAIN.md ALL FOUR conditions required; condition 2 not cleanly confirmed. **HOLD** — will cut immediately if next run shows sector turns green while DRTS stays red.
 
-**GASS (StealthGas, 15 shares @ $9.51 avg):** Current ~$9.64 (+1.4% vs avg). **Green. HOLD.**
+**GASS (StealthGas, 15 × $9.51):** Prior-run ~$9.64 (+1.4% vs avg). Energy sector HOT today (+0.82%). **Green/flat. HOLD.**
 
-**JFB (11 shares @ $5.79 avg):** Current ~$5.69 (-1.7% vs avg). Well above dead-money threshold. **HOLD.**
+**JFB (11 × $5.79):** Prior-run ~$5.69 (−1.7% vs avg). Well above dead-money threshold. **HOLD.**
 
-**NRXP (NRx Pharmaceuticals, 35 shares @ $4.22 avg):** Current ~$4.10 (-2.8% vs avg). **HOLD.**
+**NRXP (NRx Pharmaceuticals, 35 × $4.22):** Prior-run ~$4.10 (−2.8% vs avg). Healthcare weak but far from −8%. **HOLD.**
 
-**PLSE (Pulse Biosciences, 2 shares @ $25.49 avg):** Current ~$25.52 (essentially flat). **HOLD.**
+**PLSE (Pulse Biosciences, 2 × $25.49):** Prior-run ~$25.52 (essentially flat). **HOLD.**
 
-**RXRX (Recursion Pharma, 18 shares @ $3.29 avg):** Current ~$3.55 (+7.9% vs avg). **Green. HOLD.**
+**RXRX (Recursion Pharma, 18 × $3.29):** Prior-run ~$3.55 (+7.9% vs avg). **Green. HOLD.**
 
-**SLDB (Solid Biosciences, 9 shares @ $6.86 avg):** Current ~$7.08 (+3.2% vs avg). **Green. HOLD.**
+**SLDB (Solid Biosciences, 9 × $6.86):** Prior-run ~$7.08 (+3.2% vs avg). **Green. HOLD.**
 
-**TISI (Team Inc, 3 shares @ $18.09 avg):** Web research returned a wide range ($15.40–$17.72). At the low end that's -14.9%; at the high end it's -2%. Cannot confirm dead-money conditions without a clean current price. Industrials sector is -0.14% (slightly red). **Flagged — monitoring next run.**
-
----
-
-## Dead-Money Cut: TLYS (Tilly's) — SELL
-
-All four dead-money laggard conditions confirmed:
-
-1. **Materially RED:** $4.33 current vs $4.84 avg = **-10.5%** ✓
-2. **Relative weakness:** Consumer Cyclical sector +0.54% today (green). TLYS absent from all movers, gainers, and news lists — flat-to-red while sector is green ✓
-3. **Thesis gone/stale:** No Tilly's catalyst anywhere in today's 280-candidate funnel ✓
-4. **Prior session entry:** Not a same-day position; clearly from a prior session ✓
-
-Issuing SELL. Frees ~$52 in capital.
+**TISI (Team Inc., 3 × $18.09):** Prior-run estimate ~$17.00 (−6.0% vs avg). Flagged last run; industrials sector −0.14% (slightly red). Condition 2 not met (sector not green). **HOLD** — needs clean current price and confirmed sector green divergence to trigger a cut.
 
 ---
 
-## ARTV — Disqualified from Re-Entry (Anti-Chase Rule)
-
-Prior positions.md (14:34:57Z) showed ARTV held at 18 shares @ $6.88 avg. Current holdings.json (14:45:22Z) shows ARTV GONE — exited/stopped between those timestamps. Current ARTV price is $6.77, which is RED vs the $6.88 avg buy. Per hard anti-chase rules: **"A name that is RED since you first liked it is disqualified from re-entry this session."** ARTV is NOT going on the watchlist and NOT being re-bought.
+## Dead-Money Cut Assessment
+No SELL orders issued. DRTS (−9.2%) and TISI (−6%) are the two closest to the dead-money threshold, but condition 2 (relative weakness while sector is green) is not confirmed for either: healthcare and industrials are both slightly red today, so these stocks are declining *with* their sectors, not in spite of them. All four conditions must hold simultaneously.
 
 ---
 
-## Finalists (No New BUYs — Account Over-Deployed)
+## Finalists (No New BUYs — No Capital Available)
 
-Account has 11 positions (~$1,158 deployed vs ~$1,000 target). After TLYS exit: ~10 positions, ~$1,100 deployed. No new BUY orders this run — recycling capital via natural exits before opening fresh names.
+**1. ALVO — Alvotech ($4.025, +13.7%) — news_smallcap** ← best catalyst today
+Catalyst: FDA accepted Entyvio (vedolizumab) biosimilar NDA for review — Bullish 0.423, published 14:08 UTC (very fresh, ~74 min ago at run time). Volume 816K confirms real participation. Market cap $1.26B (larger small-cap). Already +13.7% but move is fresh and FDA biosimilar catalysts are durable. **Added to watchlist as pullback entry at $3.80.** Catalyst age: 74 min.
 
-**1. ELDN (Eledon Pharma, $3.435, +0.73%) → WATCHLIST (pullback $3.30)**
-news_smallcap, sentiment 0.401 bullish. Catalyst: promising tegoprubart results in T1D (Type 1 Diabetes) trials, published 11:39 UTC (~3.2h ago). Volume 647K — very high for a $265M market cap name, confirming real participation. Stock barely moved (+0.7%) on clinical data. Early stage; catalyst not priced in.
-Catalyst age: 3.2h.
+**2. ELDN — Eledon Pharmaceuticals ($3.485, +2.2%) — news_smallcap**
+Catalyst: tegoprubart promising T1D trial results (Bullish 0.442, published 11:39 UTC). Volume 738K on a $269M cap name — very high participation. Only +2.2% on meaningful clinical data = early stage. Existing watchlist pullback entry at $3.30 updated. Catalyst age: ~3.7h.
 
-**2. ELVA (Electrovaya, $10.27, -0.68%) → WATCHLIST (pullback $10.00)**
-news_smallcap, sentiment 0.852 (very bullish). Catalyst: analyst issues significant price target raise, published 13:03 UTC (~1.9h ago). Stock is *down* -0.68% on a very bullish analyst call — suggesting the market hasn't processed this yet. $508M market cap (slightly above small-cap but fits budget). Fresh catalyst barely priced in.
-Catalyst age: 1.9h.
+**3. ELVA — Electrovaya ($10.45, +1.1%) — news_smallcap**
+Catalyst: analyst issues "huge" price target raise (Bullish 0.852, published 13:03 UTC). Stock barely moved on very bullish analyst coverage. Energy sector tailwind (+0.82%). Existing watchlist pullback entry at $10.00 remains active. Catalyst age: ~2.3h.
 
-**3. ALVO (Alvotech, $4.025, +13.7%) — PASSED (mid-stage)**
-Very fresh catalyst (FDA accepted Entyvio biosimilar NDA, published 14:08 UTC). But already +13.7% — mid-stage of the move given the over-deployment situation. Pass.
+**4. CAL — Caleres ($13.47, +8.9%) — news_smallcap**
+Q1 earnings beat; Consumer Cyclical sector hot (+0.54%). Good stage (+8.9% not extended). No capital available — watchlist candidate if a slot opens.
 
-**4. CAL (Caleres, $13.515, +9.3%) — PASSED (already moved)**
-Q1 beat catalyst, but up 9.3% and mid-move. Consumer Cyclical sector supportive but the stage is late.
+**5. ARTV — Artiva Biotherapeutics ($6.755, −1.4%) — DISQUALIFIED**
+RMAT designation + EULAR data (Bullish 0.891 — highest sentiment in funnel). BUT: per anti-chase hard rule, ARTV was previously held and exited at a loss this session, and current price ($6.755) remains below the prior entry avg ($6.88) → **RED since first liked = disqualified from re-entry this session.** Not added to watchlist.
 
-**5. DMRC (Digimarc, $13.65, +0.15%) — PASSED (weaker catalyst)**
-New CEO appointment 8-K (12:38 UTC), sentiment 0.407. Interesting setup (new CEO = potential re-rating) but softer catalyst vs ELDN/ELVA. Dropped for this run.
+---
+
+## Notable Passes
+- **DLTH** (+28%): Strong Q1 results; too extended.
+- **TNGX** (+33%): Extended blow-off.
+- **MPAA** (+39%): Extended.
+- **OCC** (+67.6%): Parabolic.
+- **FRSX** ($2.14, +13.8%): $17.5M strategic investment at $34M valuation (fresh 14:11 UTC). Above $2 floor but micro-cap liquidity risk; no capital anyway.
+- **GHM** (−15.4%): Record revenue but stock DOWN hard on guidance — possible guidance disappointment. Potential put candidate if capital frees up; skipped this run.
+- Sub-$2 names (ADCT, AIM, BYND, PRPH, SGMO, etc.) — below price floor.
 
 ---
 
 ## Watchlist Summary
-Active items: MNKD (breakout $3.65, FDA pediatric approval), GHRS (breakout $26.50, Phase 2b TRD data), COYA (breakout $4.75, ALSTARS ALS milestone today), **ELDN** (pullback $3.30, T1D trial data barely priced), **ELVA** (pullback $10.00, analyst PT raise barely priced).
+Six active entries: MNKD (breakout $3.65, FDA pediatric + FUROSCIX July PDUFA, TP/SL tightened this run), GHRS (breakout $26.50, Phase 2b TRD data, TP/SL tightened this run), COYA (breakout $4.75, ALSTARS ALS milestone today at $4.48 — not triggered yet), ELDN (pullback $3.30, T1D data), ELVA (pullback $10.00, analyst PT raise), **ALVO new** (pullback $3.80, FDA biosimilar review).

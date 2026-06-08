@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-08T14:54:22Z",
-  "funnel": {"scanned": 280, "leading": 79, "in_budget": 220, "had_catalyst": 60, "finalists": 5, "picked": 0},
-  "orders": [
-    {"symbol": "TLYS", "action": "SELL"}
-  ]
+  "generated_utc": "2026-06-08T15:22:17Z",
+  "funnel": {"scanned": 285, "leading": 80, "in_budget": 215, "had_catalyst": 72, "finalists": 5, "picked": 0},
+  "orders": []
 }
