@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T20:10:23.030004+00:00",
+  "updated_utc": "2026-06-08T20:15:23.803716+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -42,9 +42,9 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.33,
-      "unrealized_pct": 2.61,
-      "value": 151.55
+      "last": 4.3309,
+      "unrealized_pct": 2.63,
+      "value": 151.58
     },
     {
       "symbol": "PLSE",
