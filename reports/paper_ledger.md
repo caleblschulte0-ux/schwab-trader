@@ -1,24 +1,24 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-08T16:00:43Z_
+_Updated 2026-06-08T16:05:27Z_
 
-**Equity:** $965.35  (start $1000.00, **-34.65 / -3.5%**)  
+**Equity:** $965.38  (start $1000.00, **-34.62 / -3.5%**)  
 **Cash:** $1.74   **Invested:** $976.56   **Open positions:** 10  
-**Realized P/L:** $-21.70   **Unrealized:** $-12.95   **Closed trades:** 8   **Win rate:** 12%
+**Realized P/L:** $-21.70   **Unrealized:** $-12.93   **Closed trades:** 8   **Win rate:** 12%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
-| ALOT | stock | 7 | $15.58 | $15.90 | $16.55 | $14.45 | $+2.24 |
-| AVR | stock | 15 | $9.87 | $9.34 | $10.41 | $9.16 | $-8.02 |
+| ALOT | stock | 7 | $15.58 | $15.82 | $16.55 | $14.45 | $+1.70 |
+| AVR | stock | 15 | $9.87 | $9.34 | $10.41 | $9.16 | $-7.95 |
 | GASS | stock | 15 | $9.51 | $9.43 | $10.40 | $8.95 | $-1.27 |
-| GIII | stock | 4 | $34.80 | $34.70 | $38.00 | $32.90 | $-0.40 |
+| GIII | stock | 4 | $34.80 | $34.68 | $38.00 | $32.90 | $-0.48 |
 | JFB | stock | 11 | $5.79 | $5.48 | $7.25 | $5.00 | $-3.41 |
-| NRXP | stock | 35 | $4.22 | $4.23 | $4.65 | $4.00 | $+0.35 |
+| NRXP | stock | 35 | $4.22 | $4.25 | $4.65 | $4.00 | $+0.88 |
 | PLSE | stock | 2 | $25.49 | $25.79 | $31.50 | $23.50 | $+0.60 |
 | RXRX | stock | 18 | $3.29 | $3.35 | $4.50 | $3.10 | $+1.17 |
-| SLDB | stock | 9 | $6.86 | $6.52 | $10.50 | $5.90 | $-3.06 |
+| SLDB | stock | 9 | $6.86 | $6.53 | $10.50 | $5.90 | $-3.01 |
 | TISI | stock | 3 | $18.09 | $17.71 | $21.50 | $16.00 | $-1.14 |
 
 ## Last 15 closed trades

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T16:00:28.295140+00:00",
+  "updated_utc": "2026-06-08T16:05:20.882461+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -12,14 +12,14 @@
       "avg_price": 9.87
     },
     {
-      "symbol": "DRTS",
-      "quantity": 6,
-      "avg_price": 10.52
-    },
-    {
       "symbol": "GASS",
       "quantity": 15,
       "avg_price": 9.51
+    },
+    {
+      "symbol": "GIII",
+      "quantity": 4,
+      "avg_price": 34.8
     },
     {
       "symbol": "JFB",
