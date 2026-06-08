@@ -1,0 +1,141 @@
+name: schwab-trader-sell-brain
+
+# The SELL BRAIN: a SECOND Claude routine, sibling to the buy brain (brain.yml), whose ONLY
+# job is exits. It reads what we hold (+ age/unrealized), the buy brain's original thesis,
+# and fresh market data, then judges each position on THESIS HEALTH — never on a pre-set price
+# level. It writes its exit JUDGMENT to signals/proposed_sells.json; route_sells.py (a
+# deterministic money-gate) then decides which sells happen autonomously vs. need the human's
+# OK (significant positions — a big winner, a long hold, a large chunk of the book).
+#
+# Runs staggered from the buy brain. Suggested external cron: 15,45 13-21 * * 1-5 (UTC).
+
+on:
+  workflow_dispatch: {}
+
+concurrency:
+  group: sell-brain
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write     # to open the "approve this sell" issue for significant positions
+
+jobs:
+  sell-brain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Gate on the same subscription token as the buy brain — green no-op until it's set.
+      - name: Check for subscription token
+        id: gate
+        env:
+          TOK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$TOK" ]; then
+            echo "No CLAUDE_CODE_OAUTH_TOKEN yet — skipping sell brain."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code
+        if: steps.gate.outputs.ready == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Set up Python
+        if: steps.gate.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run the sell brain
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "You are the SELL BRAIN for this repository. Follow SELL_BRAIN.md EXACTLY. Your ONLY job is deciding exits. Steps: (1) read signals/holdings.json (what you own, with opened_utc + unrealized_pct), signals/latest.md (the buy brain's original thesis per name), and signals/candidates.json (fresh catalyst status); (2) optionally run ONE targeted web search to check a holding's thesis health; (3) judge EACH holding on THESIS HEALTH, NOT price — bias hard toward HOLD and NEVER sell on a drawdown alone; (4) WRITE signals/proposed_sells.json (the names you want to exit, each with a reason and an urgent true/false flag) and a human-readable signals/sell_review.md (per-position reasoning). Do NOT place trades, do NOT run git/shell, do NOT set price levels — only read inputs, optionally web search, and write those two files." \
+            --allowedTools "Read,Write,WebSearch" \
+            --model sonnet \
+            --permission-mode acceptEdits \
+            --output-format text
+
+      # Deterministic money-gate: split proposed sells into autonomous (sell_orders.json) vs
+      # awaiting-approval (pending_sells.json) by the significance thresholds. Tunable via env.
+      - name: Route sells (money-gate)
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          LONG_HELD_DAYS: ${{ vars.LONG_HELD_DAYS || '10' }}
+          TOP_GAIN_PCT: ${{ vars.TOP_GAIN_PCT || '25' }}
+          TOP_SIZE_PCT: ${{ vars.TOP_SIZE_PCT || '35' }}
+        run: python route_sells.py
+
+      # Open/update ONE approval issue listing the significant sells awaiting the human's OK.
+      - name: Approval issue for significant sells
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/pending_body.md
+          import json
+          try:
+              pend = json.load(open("signals/pending_sells.json")).get("pending", [])
+          except Exception:
+              pend = []
+          if pend:
+              print("The **sell brain** wants to exit these **significant** positions (a big "
+                    "winner, a long-held name, or a large share of the book).\n")
+              print("Reply **`approve`** to sell all, or **`approve SYM`** for one. "
+                    "Comment **`hold`** or just close this issue to keep them.\n")
+              for p in pend:
+                  print(f"- **{p['symbol']}** — {p.get('reason','')}  "
+                        f"_(significant: {p.get('significance','')}; "
+                        f"{p.get('unrealized_pct','?')}%, held {p.get('days_held','?')}d)_")
+          PY
+          if [ -s /tmp/pending_body.md ]; then
+            NUM=$(gh issue list --state open --search "Sell approval needed in:title" \
+                    --json number --jq '.[0].number // empty')
+            if [ -n "$NUM" ]; then
+              gh issue edit "$NUM" --body-file /tmp/pending_body.md
+              gh issue comment "$NUM" --body "Refreshed $(date -u +%H:%MZ) — pending sells updated above."
+            else
+              gh issue create --title "🤔 Sell approval needed" --body-file /tmp/pending_body.md
+            fi
+            echo "Approval issue posted/updated."
+          else
+            echo "No significant sells need approval this run."
+          fi
+
+      - name: Commit sell-brain output
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          git config user.name "schwab-sell-brain"
+          git config user.email "sell-brain@users.noreply.github.com"
+          FILES="signals/proposed_sells.json signals/sell_orders.json signals/pending_sells.json signals/sell_review.md"
+          git add $FILES 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sell brain produced no changes."
+            exit 0
+          fi
+          git commit -m "sell-brain: update exit decisions [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push; then echo "pushed."; exit 0; fi
+            echo "push rejected (main moved); syncing and retrying ($i)..."
+            git fetch origin main
+            # --mixed: re-stage ONLY our files onto fresh main so we never revert others.
+            git reset --mixed origin/main
+            git add $FILES 2>/dev/null || true
+            git diff --cached --quiet && { echo "sell output already current."; exit 0; }
+            git commit -m "sell-brain: update exit decisions [skip ci]"
+            sleep $((i * 3))
+          done
+          echo "Could not push sell-brain output after retries — non-fatal (next run refreshes)."
+          exit 0

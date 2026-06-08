@@ -65,6 +65,7 @@ MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump 
 RECENT_BUY_COOLDOWN_MIN = 60    # don't re-buy a symbol bought in the last hour
 WATCHLIST_FILE        = "signals/watchlist.json"
 CANDIDATES_FILE       = "signals/candidates.json"  # read-only here: ENTRY ATTRIBUTION only (see _entry_meta)
+SELL_ORDERS_FILE      = "signals/sell_orders.json"  # SELL decisions from the sell brain (router-approved / urgent)
 # --- paper trading (DRY_RUN): a simulated book so the brain has MEMORY of what it
 #     "owns" (kills the re-pick/averaging-down churn) AND we get a real P/L scorecard. ---
 PAPER_ACCOUNT_FILE    = "signals/paper_account.json"   # simulated cash + positions + closed trades
@@ -116,6 +117,30 @@ def load_orders() -> tuple[str | None, list[dict], dict]:
     with open(ORDERS_FILE, encoding="utf-8") as fh:
         data = json.load(fh)
     return data.get("generated_utc"), data.get("orders", []) or [], data.get("funnel") or {}
+
+
+def load_sell_orders() -> set[str]:
+    """Symbols the SELL pipeline wants closed — `signals/sell_orders.json`, written by
+    route_sells.py after the sell brain (autonomous, urgent, or human-approved). This is
+    the ONLY price-independent exit path now: a position is HELD until this file (or a
+    legacy orders.json SELL) names it. Fresh-guarded so a stale file can't fire an old
+    SELL on a re-bought name. Any read problem returns an empty set (fail-safe: no sells)."""
+    if not os.path.exists(SELL_ORDERS_FILE):
+        return set()
+    try:
+        with open(SELL_ORDERS_FILE, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not read sell orders: {exc}")
+        return set()
+    if not is_fresh(data.get("generated_utc")):
+        print("(info) sell_orders.json is stale — ignoring.")
+        return set()
+    out = {str(o.get("symbol", "")).strip().upper()
+           for o in (data.get("sells") or []) if o.get("symbol")}
+    if out:
+        print(f"Sell pipeline wants closed: {', '.join(sorted(out))}")
+    return out
 
 
 def is_fresh(generated_utc: str | None) -> bool:
@@ -181,20 +206,35 @@ def get_positions(client: SchwabClient) -> dict[str, dict]:
     return out
 
 
-def write_holdings(positions: dict) -> None:
-    """Write the account's REAL holdings to a file the brain trusts as ground truth."""
-    data = {
-        "updated_utc": datetime.now(timezone.utc).isoformat(),
-        "holdings": [
-            {"symbol": s, "quantity": p["qty"], "avg_price": p["avg"]}
-            for s, p in sorted(positions.items())
-        ],
-    }
+def write_holdings(positions: dict, marks: dict | None = None) -> None:
+    """Write the account's REAL holdings to a file the brain trusts as ground truth.
+    ENRICHED with `opened_utc` + a current `last` mark + `unrealized_pct` + `value` so the
+    SELL ROUTER (route_sells.py) can classify a holding as long-held / top-winner / over-
+    sized WITHOUT needing live quotes of its own. The buy brain ignores the extra fields.
+    `marks` is {symbol: last_price}; opened_utc comes from the paper book (None when live)."""
+    marks = marks or {}
+    paper_pos = (_PAPER or {}).get("positions", {}) if DRY_RUN else {}
+    rows = []
+    for s, p in sorted(positions.items()):
+        avg = p["avg"]
+        qty = p["qty"]
+        mult = p.get("multiplier", 1)
+        row = {"symbol": s, "quantity": qty, "avg_price": avg}
+        opened = paper_pos.get(s, {}).get("opened_utc")
+        if opened:
+            row["opened_utc"] = opened
+        last = marks.get(s)
+        if last:
+            row["last"] = round(last, 4)
+            row["unrealized_pct"] = round((last / avg - 1) * 100, 2) if avg else None
+            row["value"] = round(qty * last * mult, 2)
+        rows.append(row)
+    data = {"updated_utc": datetime.now(timezone.utc).isoformat(), "holdings": rows}
     try:
         os.makedirs(os.path.dirname(HOLDINGS_FILE), exist_ok=True)
         with open(HOLDINGS_FILE, "w", encoding="utf-8") as fh:
             json.dump(data, fh, indent=2)
-        print(f"Wrote {HOLDINGS_FILE}: {len(data['holdings'])} holding(s)")
+        print(f"Wrote {HOLDINGS_FILE}: {len(rows)} holding(s)")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not write holdings file: {exc}")
 
@@ -567,10 +607,9 @@ def _validate_option_pick(order: dict) -> tuple[bool, str]:
     cost = premium * OPTION_MULTIPLIER * contracts
     if cost > MAX_DOLLARS_PER_OPTION:
         return False, f"max risk ${cost:.0f} > ${MAX_DOLLARS_PER_OPTION:.0f} put cap"
-    if tp <= 0 or sl <= 0:
-        return False, "missing take_profit/stop_loss"
-    # Long put GAINS premium as the underlying falls: tp above entry premium, sl below.
-    if tp < premium * (1 + MIN_TP_OVER_ENTRY) or sl > premium * (1 - MIN_STOP_UNDER_ENTRY):
+    # tp/sl are OPTIONAL now — the SELL BRAIN manages exits by judgment, not pre-set levels.
+    # If the brain still supplies them, sanity-check the sides (long put: tp>entry, sl<entry).
+    if (tp and sl) and (tp < premium * (1 + MIN_TP_OVER_ENTRY) or sl > premium * (1 - MIN_STOP_UNDER_ENTRY)):
         return False, "tp/stop not on correct sides of premium (long put: tp>entry, sl<entry)"
     return True, "ok"
 
@@ -591,9 +630,9 @@ def validate_pick(order: dict) -> tuple[bool, str]:
         return False, "bad quantity/limit_price"
     if limit < MIN_SHARE_PRICE:
         return False, f"under ${MIN_SHARE_PRICE:.0f} price floor (penny-stock guard)"
-    if tp <= 0 or sl <= 0:
-        return False, "missing take_profit/stop_loss"
-    if tp < limit * (1 + MIN_TP_OVER_ENTRY) or sl > limit * (1 - MIN_STOP_UNDER_ENTRY):
+    # tp/sl are OPTIONAL now — the SELL BRAIN manages exits by judgment, not pre-set levels.
+    # If the brain still supplies them, sanity-check the sides (tp above / sl below entry).
+    if (tp and sl) and (tp < limit * (1 + MIN_TP_OVER_ENTRY) or sl > limit * (1 - MIN_STOP_UNDER_ENTRY)):
         return False, "tp/stop not on correct sides of entry"
     return True, "ok"
 
@@ -848,7 +887,11 @@ def main() -> int:
     client = get_client()
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
-    write_holdings(positions)  # ground-truth holdings file for the brain
+    # One live quote per held name, reused for: holdings enrichment, the exit sell price,
+    # and the end-of-run paper mark-to-market (no double-quoting).
+    marks = {s: live_last(quote(client, s)) for s in positions}
+    marks = {s: m for s, m in marks.items() if m}
+    write_holdings(positions, marks)  # enriched ground-truth holdings for the brain + sell router
     blocked, orders_ok = get_blocked_buy_symbols(client, acct.hash_value)
     print(f"Held: {', '.join(positions) or '(none)'} | No-rebuy: "
           f"{', '.join(blocked) or '(none)'} | read_ok={orders_ok}")
@@ -857,54 +900,27 @@ def main() -> int:
     fresh = bool(orders) and is_fresh(generated_utc)
     if funnel:  # the brain's funnel tally (proof of how wide it scanned)
         print(f"Funnel this run: {funnel}")
-    # Map each symbol -> its tp/stop from the latest picks (for exit management).
-    # Option picks have no "symbol" (they carry underlying/strike/expiration) — their
-    # exit levels come from the paper position's own stored tp/sl (added below).
-    levels = {o["symbol"]: o for o in orders
-              if o.get("action") == "BUY" and o.get("symbol")} if orders else {}
-    brain_sells = {o.get("symbol") for o in orders if o.get("action") == "SELL"} if fresh else set()
 
-    # Watchlist: brain-set names to auto-enter on a trigger between brain runs.
-    # Merge their tp/stop into `levels` (orders.json wins) so a watchlist-triggered
-    # fill still has exit protection before the brain next rewrites orders.json.
-    watch = load_watchlist()
-    for w in watch:
-        wsym = w.get("symbol")
-        if wsym and wsym not in levels:
-            levels[wsym] = {"symbol": wsym, "action": "BUY",
-                            "take_profit": w.get("take_profit"),
-                            "stop_loss": w.get("stop_loss")}
+    # EXITS are now JUDGMENT-DRIVEN, not price-driven: there are NO pre-set take-profit /
+    # stop-loss auto-exits anymore. A position is HELD until the SELL pipeline explicitly
+    # names it — sell_orders.json (written by route_sells.py after the sell brain) or a
+    # legacy orders.json SELL. This is what lets a future-AMD ride through a drawdown.
+    brain_sells = load_sell_orders()
+    if fresh:
+        brain_sells |= {str(o.get("symbol")).strip().upper()
+                        for o in orders if o.get("action") == "SELL" and o.get("symbol")}
 
-    # Paper positions carry their OWN entry tp/sl — fall back to them so a held
-    # paper name still exits on target/stop even once the brain stops re-listing it
-    # (the whole point of giving the brain memory: it no longer re-picks held names).
-    if DRY_RUN and _PAPER is not None:
-        for psym, p in _PAPER["positions"].items():
-            if psym not in levels:
-                levels[psym] = {"symbol": psym, "action": "BUY",
-                                "take_profit": p.get("tp"), "stop_loss": p.get("sl")}
+    watch = load_watchlist()  # brain-set names to auto-enter on a trigger (used by entries below)
 
-    # ---- EXITS: manage held positions (sell-to-close on target/stop/brain) ----
-    # A long put is LONG premium, so the exit math is identical to a long stock:
-    # take profit when the mark rises to tp, stop when it falls to sl. Only the close
-    # function differs (sell_option vs sell) — dispatched on the position's kind.
+    # ---- EXITS: close ONLY what the sell pipeline asks for (judgment, not price). ----
+    # Stocks close with sell(), long puts with sell_option() — dispatched on position kind.
     for sym, pos in positions.items():
-        q = quote(client, sym)
-        last = live_last(q)
-        pick = levels.get(sym, {})
-        tp = pick.get("take_profit")
-        sl = pick.get("stop_loss")
-        close = sell_option if pos.get("kind", "stock") != "stock" else sell
+        last = marks.get(sym)
         if sym in brain_sells:
-            close(client, acct, sym, int(pos["qty"]), last or pos["avg"], "brain SELL")
-        elif last and tp and last >= tp:
-            close(client, acct, sym, int(pos["qty"]), last, f"hit target ${tp}")
-        elif last and sl and last <= sl:
-            close(client, acct, sym, int(pos["qty"]), last, f"hit stop ${sl}")
+            close = sell_option if pos.get("kind", "stock") != "stock" else sell
+            close(client, acct, sym, int(pos["qty"]), last or pos["avg"], "sell brain")
         else:
-            tptxt = f"${tp}" if tp else "?"
-            sltxt = f"${sl}" if sl else "?"
-            print(f"[{sym}] hold — last ${last} (target {tptxt} / stop {sltxt})")
+            print(f"[{sym}] hold — last ${last if last else '?'}")
 
     # ---- ENTRIES: priced off the LIVE ask. Two sources: watchlist triggers
     #      (independent of orders freshness) and fresh BUY picks from orders.json.
@@ -963,12 +979,13 @@ def main() -> int:
                           tp=order.get("take_profit"), sl=order.get("stop_loss"))
 
     # ---- PAPER bookkeeping: mark-to-market, persist the book + running ledger ----
+    # Reuse the marks pulled at the top; quote any names bought THIS run that aren't in it.
     if DRY_RUN and _PAPER is not None:
-        marks: dict[str, float] = {}
         for sym in list(_PAPER["positions"]):
-            last = live_last(quote(client, sym))
-            if last:
-                marks[sym] = last
+            if sym not in marks:
+                last = live_last(quote(client, sym))
+                if last:
+                    marks[sym] = last
         save_paper_account(_PAPER)
         write_paper_ledger(_PAPER, marks)
 

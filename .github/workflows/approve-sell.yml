@@ -1,0 +1,128 @@
+name: approve-sell
+
+# Human approval loop for the sell brain. When the sell brain wants to exit a SIGNIFICANT
+# position (big winner / long hold / large chunk of the book), route_sells.py parks it in
+# signals/pending_sells.json and the sell-brain workflow opens a "Sell approval needed" issue.
+# Here, you approve by COMMENTING on that issue:
+#   * "approve"            -> sell ALL pending
+#   * "approve SYM [SYM]"  -> sell just those
+#   * "hold" / "keep" / "no" -> discard all pending (keep holding)
+# Approved names are moved into signals/sell_orders.json; the executor closes them next run.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: approve-sell
+  cancel-in-progress: false
+
+jobs:
+  approve:
+    # Only on the sell-approval issue, and only the repo owner can approve (safety if public).
+    if: >
+      contains(github.event.issue.title, 'Sell approval needed') &&
+      github.event.comment.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Apply approval / hold
+        id: apply
+        env:
+          COMMENT: ${{ github.event.comment.body }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, re
+          from datetime import datetime, timezone
+
+          def load(p):
+              try:
+                  return json.load(open(p))
+              except Exception:
+                  return {}
+          def dump(p, d):
+              json.dump(d, open(p, "w"), indent=2)
+
+          comment = (os.environ.get("COMMENT") or "").strip()
+          low = comment.lower()
+          pend = load("signals/pending_sells.json").get("pending", [])
+          pend_syms = [str(p.get("symbol","")).strip().upper() for p in pend]
+
+          if not pend:
+              print("result=no-pending"); raise SystemExit(0)
+
+          if re.match(r"^(hold|keep|no|cancel)\b", low):
+              dump("signals/pending_sells.json", {"generated_utc": datetime.now(timezone.utc).isoformat(), "pending": []})
+              print("result=held")
+              print(f"approved={''}")
+              raise SystemExit(0)
+
+          m = re.match(r"^approve\b(.*)", low)
+          if not m:
+              print("result=ignored"); raise SystemExit(0)
+
+          want = [t.strip().upper() for t in re.split(r"[,\s]+", m.group(1)) if t.strip()]
+          approved = pend_syms if not want else [s for s in pend_syms if s in want]
+          if not approved:
+              print("result=none-matched"); raise SystemExit(0)
+
+          # Merge approved into sell_orders.json (dedupe by symbol), fresh timestamp.
+          so = load("signals/sell_orders.json")
+          sells = {str(s.get("symbol","")).strip().upper(): s for s in so.get("sells", [])}
+          for p in pend:
+              s = str(p.get("symbol","")).strip().upper()
+              if s in approved:
+                  sells[s] = {"symbol": s, "reason": f"approved: {p.get('reason','sell brain')}", "urgent": False}
+          dump("signals/sell_orders.json",
+               {"generated_utc": datetime.now(timezone.utc).isoformat(), "sells": list(sells.values())})
+
+          # Remove approved from pending.
+          remaining = [p for p in pend if str(p.get("symbol","")).strip().upper() not in approved]
+          dump("signals/pending_sells.json",
+               {"generated_utc": datetime.now(timezone.utc).isoformat(), "pending": remaining})
+
+          print("result=approved")
+          print(f"approved={' '.join(approved)}")
+          PY
+
+      - name: Commit & push approved sells
+        if: steps.apply.outputs.result == 'approved' || steps.apply.outputs.result == 'held'
+        run: |
+          git config user.name "schwab-sell-brain"
+          git config user.email "sell-brain@users.noreply.github.com"
+          FILES="signals/sell_orders.json signals/pending_sells.json"
+          git add $FILES 2>/dev/null || true
+          git diff --cached --quiet && { echo "nothing to commit."; exit 0; }
+          git commit -m "sell-brain: human-approved sells [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push; then echo "pushed."; break; fi
+            git fetch origin main
+            git reset --mixed origin/main
+            git add $FILES 2>/dev/null || true
+            git diff --cached --quiet && { echo "already current."; exit 0; }
+            git commit -m "sell-brain: human-approved sells [skip ci]"
+            sleep $((i * 3))
+          done
+
+      - name: Acknowledge on the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          case "${{ steps.apply.outputs.result }}" in
+            approved) gh issue comment ${{ github.event.issue.number }} --body "✅ Approved: \`${{ steps.apply.outputs.approved }}\` — the executor will close ${{ steps.apply.outputs.approved }} on its next run." ;;
+            held)     gh issue comment ${{ github.event.issue.number }} --body "👍 Holding all pending positions — discarded the sell proposals." ;;
+            none-matched) gh issue comment ${{ github.event.issue.number }} --body "⚠️ None of those symbols are in the pending list. Reply \`approve\` for all, or \`approve SYM\`." ;;
+            *) echo "No actionable command in comment." ;;
+          esac

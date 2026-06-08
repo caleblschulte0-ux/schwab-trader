@@ -10,8 +10,8 @@ job each run is to **scan a WIDE universe**, then surface the best 1–3 asymmet
 setups and TAKE them when the entry is sound. Be hungry: "no trade" is an
 acceptable conclusion ONLY after you've scanned broadly and genuinely found
 nothing with an edge — it should be RARE, and rare because the market was dead,
-never because you only looked at a few names. Do NOT force trades, and do NOT
-force exits (see Holding rules). Bias toward action when a real setup exists.
+never because you only looked at a few names. Do NOT force trades. You handle BUYS only —
+a separate SELL BRAIN owns all exits, so never write a SELL. Bias toward action on a real setup.
 
 ## Two-routine collision guard — CHECK BEFORE WRITING
 Two routines run this playbook ~30 min apart. To avoid one overwriting the
@@ -21,9 +21,8 @@ current time (to the second, never rounded). A rounded time (e.g. writing
 "16:00:00Z" at 15:44) makes a stale file look fresh and FALSE-TRIGGERS this
 guard, wasting a run. Always write the true current UTC time.
 - If it was written LESS THAN ~10 minutes ago, the other routine just ran. Do
-  NOT overwrite orders.json this run. Instead, only manage exits if needed
-  (a genuine thesis-break SELL on a held name) and otherwise leave the files
-  alone — end the run without rewriting orders.json/latest.md.
+  NOT overwrite orders.json this run — leave the files alone and end the run
+  without rewriting orders.json/latest.md.
 - If it's older than ~10 minutes (or missing), proceed normally: scan, pick,
   and write all files as usual.
 This keeps the two routines acting like one brain every ~30 min, never clobbering
@@ -34,8 +33,8 @@ Your holdings are the source of truth in **`signals/holdings.json`**, which the 
 rewrites every run from the account — REAL positions when live, and the SIMULATED
 paper book when in dry-run. Either way it is your MEMORY: treat it as real.
 - Empty `holdings` → you own NOTHING; hunt for fresh entries.
-- Listed symbols → positions you ALREADY OWN (with avg price). Do NOT re-buy them;
-  manage them (let winners run; exit only on a genuine thesis break).
+- Listed symbols → positions you ALREADY OWN (with avg price). Do NOT re-buy them.
+  Exits are the SELL BRAIN's job — you just avoid re-buying what you hold.
 
 ### ANTI-CHASE / ANTI-FIXATION — the #1 past failure, do not repeat it
 On 2026-06-03 the brain re-picked the SAME name (KYTX) in 11 of 15 runs and kept
@@ -90,7 +89,8 @@ LEADING names with live price + % change. Read this first. Each row now carries 
 - `mover` — LAGGING: already a top gainer / most-active / biggest loser today.
 - `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date, and
   eps_estimate when known). The "who's reporting soon" pre-position pool. Earnings
-  gaps cut both ways → a defined `stop_loss` is mandatory on these.
+  gaps cut both ways → only pre-position when you genuinely like the risk (the sell
+  brain manages the exit afterward; you don't set a stop).
 - `news_smallcap` — LEADING + DISCOVERY: a SMALL-CAP (market cap < ~$2B) that is in
   the news right now, surfaced by cross-referencing the news feed against a small-cap
   universe — names BROUGHT to us, even if they aren't movers yet. These rows now also
@@ -126,7 +126,7 @@ because they already ran. Treat them as a distinct, HIGH-PRIORITY bucket: this i
 how you get in BEFORE the move instead of chasing it after. A name carrying both a
 leading tag AND a small `pct_change` (e.g. `["mover","earnings_soon"]`, up only
 ~3%) is an ideal early entry. Note: `earnings_soon` cuts both ways — an earnings
-gap can go either direction, so a defined `stop_loss` is mandatory on those.
+gap can go either direction, so only take it if you genuinely like the asymmetry.
 
 ### Targeted web search — ONLY to fill the gaps candidates.json can't see
 candidates.json already covers movers, earnings, news, halts/resumptions, and fresh SEC
@@ -184,9 +184,9 @@ Judge the entry RELATIVE TO THE SETUP and to WHERE IN THE MOVE you are:
   resistance with no room = NOT OK, that's chasing a blow-off — pass or wait for
   a pullback/base.
 - PRE-POSITIONING ahead of a known catalyst is GOOD: entering 1–3 days BEFORE a
-  scheduled earnings/FDA/conference date with a defined stop is exactly the
-  proactive behavior we want. Be honest about the risk — a catalyst can gap the
-  stock either way, so size to $150 and let the `stop_loss` cap the downside.
+  scheduled earnings/FDA/conference date is exactly the proactive behavior we want.
+  Be honest about the risk — a catalyst can gap the stock either way, so size to the
+  $150 cap (that IS your defined risk now; the sell brain handles the exit).
 - PRE-BREAKOUT COIL is preferred: a name near its 52-week high tightening on
   low/declining volume is a better entry than the same name after it has already
   popped. Buy the coil, not the blow-off candle. (If the trigger is a clean break
@@ -198,48 +198,23 @@ Judge the entry RELATIVE TO THE SETUP and to WHERE IN THE MOVE you are:
   only a sanity reference; put it near the current market so the backstop doesn't
   needlessly veto the entry.
 
-## Holding rules (IMPORTANT — do not undermine)
-Holding an existing position is a FULLY VALID choice and often the right one.
-- NEVER write a SELL just because time has passed, or to free up cash for a new
-  idea, or because you feel you "should do something." A winner is allowed to run
-  all day and overnight.
-- The bot auto-exits ONLY when price hits the `take_profit` or `stop_loss` you set
-  on entry. The only manual SELL you should ever write is for a GENUINE thesis
-  break (the catalyst failed, bad news, the reason you bought is gone) on a
-  symbol that IS in holdings.json. When in doubt about an exit, HOLD.
-- DEAD-MONEY LAGGARD CUT (this IS a thesis break, not impatience — and is now
-  EXPECTED, not optional). Write a SELL on a held name when ALL FOUR are true together:
-  1. it is materially RED (roughly −8% or worse vs your avg entry), AND
-  2. it shows RELATIVE WEAKNESS right now (red while its sector / the broad tape is
-     green, or printing fresh intraday lows), AND
-  3. its original reason to own is GONE or STALE — no fresh/active catalyst still
-     supporting the thesis in today's funnel, AND
-  4. it was opened on a PRIOR session (give a position opened TODAY room to work to
-     its stop — never cut a same-day entry this way).
-  When all four hold, the thesis is quietly dead and the capital is just decaying —
-  cut it and recycle into a real setup. This is the ONE case where you proactively
-  exit a name that has not hit its stop. List the four conditions in latest.md when
-  you do it. (Note: legacy positions carrying very WIDE old stops are exactly the
-  intended target — don't wait for a −14% stop that may never print; cut confirmed
-  dead money at the −8%/relative-weakness/no-catalyst test instead.)
-- This does NOT override "let winners run": never cut a green or flat position, never
-  cut a same-day entry early, never cut just to free cash for a name you like better.
-  A red position that STILL has a live catalyst and is holding up vs its sector is a
-  HOLD. The cut is strictly for confirmed dead money.
+## Exits are NOT your job — the SELL BRAIN owns them
+You are the **BUY BRAIN only**. A separate routine — the **SELL BRAIN** (`SELL_BRAIN.md`) —
+decides every exit by judgment on thesis health. There are no pre-set exit levels anymore.
+- **Do NOT set `take_profit` or `stop_loss`** on your picks. They're optional and are NO LONGER
+  used for exits — leave them off.
+- **Do NOT write any `SELL`.** You no longer issue exits of any kind. The sell brain handles
+  all selling, on its own cadence.
+- Your only responsibility toward holdings is the **anti-chase rule below**: a symbol already in
+  `holdings.json` is OWNED — never issue another BUY for it, never re-pick it, never average down.
+- "Let winners run" is now enforced structurally — nothing auto-sells on price. Find good new
+  BUYS and leave the open positions to the sell brain.
 
 ## For each new BUY
 - BUY-only, stock, quantity × limit_price ≤ $150. Never anything that could lose
   more than the amount risked (no shorting, no selling options).
-- Set a `take_profit` (above entry) and `stop_loss` (below entry) from THAT setup's
-  own chart levels (next resistance for the target, support / below-the-low for the
-  stop) — but keep them TIGHT enough to actually trigger in a session. This is a DAY
-  trade, not a multi-week swing: aim for roughly **+5–10% take-profit and −3–6%
-  stop-loss** (~1.5–2:1 reward/risk), then snug your level-based numbers into that
-  band. Do NOT set a +20–50% "let it ride" target — those never fill in a day, so the
-  trade just sits open booking nothing (this was the problem: a whole day, zero
-  closes). Tight, reachable targets = the bot actually takes profits and recycles the
-  capital into the next setup. (Holding rules still apply: never force a SELL on time;
-  this only changes WHERE you place tp/sl, not that you respect them.)
+- **You do NOT set exit levels.** `take_profit`/`stop_loss` are OPTIONAL and no longer used
+  for exits — omit them. Your job ends at a sound entry; the SELL BRAIN owns the exit.
 
 ## Long PUTS — the ONLY way you express a bearish view (PAPER-ONLY for now)
 When a name looks like it's rolling over (breakdown below support, bad guidance,
@@ -257,9 +232,9 @@ HARD RULES (the bot rejects anything that breaks them, so don't waste a pick):
 - Underlying must be ≥ $2 (no penny-stock puts) and liquid enough to actually have
   options. Pick a strike near the money and an expiration ~2–6 weeks out (enough
   time for the thesis to play out; avoid same-week lottery tickets).
-- Set `take_profit` ABOVE the entry premium and `stop_loss` BELOW it — a long put
-  GAINS value (premium rises) as the stock falls, so it exits exactly like a long:
-  profit when the premium hits tp, stop when it drops to sl.
+- Do NOT set `take_profit`/`stop_loss` on puts either — the SELL BRAIN manages put exits on
+  thesis (a long put gains as the stock falls; the sell brain closes it when the bearish thesis
+  is spent or proven wrong).
 - Puts are PAPER-ONLY right now — they show up in the paper ledger as `put` rows;
   no real option order is placed. Treat them as real bets for learning P/L.
 
@@ -273,10 +248,10 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   "funnel": {"scanned": 190, "leading": 35, "in_budget": 40, "had_catalyst": 12, "finalists": 3, "picked": 1},
   "orders": [
     {"symbol": "HLIT", "action": "BUY", "instrument": "stock",
-     "quantity": 9, "limit_price": 15.50, "take_profit": 16.60, "stop_loss": 14.85},
+     "quantity": 9, "limit_price": 15.50},
     {"action": "BUY", "instrument": "option", "option_type": "put",
      "underlying": "XYZ", "strike": 12.5, "expiration": "2026-07-17",
-     "contracts": 1, "limit_price": 0.55, "take_profit": 1.00, "stop_loss": 0.25}
+     "contracts": 1, "limit_price": 0.55}
   ]
 }
 ```
@@ -286,17 +261,13 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
   file IS the funnel, so a high `scanned` count comes from reading it, not from hand-
   searching. Include `leading` = how many candidates carried a LEADING tag
   (earnings_soon/news_smallcap/news_bullish), so we can track how proactive we are.
-- STOCK BUY entries MUST include symbol, quantity, limit_price, take_profit,
-  stop_loss; quantity × limit_price ≤ $150.
+- STOCK BUY entries MUST include symbol, quantity, limit_price; quantity × limit_price ≤ $150.
+  Do NOT include take_profit/stop_loss (exits belong to the sell brain).
 - PUT BUY entries (bearish, defined-risk, paper-only) use `instrument:"option"`,
   `option_type:"put"`, and MUST include `underlying`, `strike`, `expiration`
-  (YYYY-MM-DD), `contracts`, `limit_price` (per-share premium), `take_profit`,
-  `stop_loss`. premium × 100 × contracts ≤ $100. `limit_price`/`take_profit`/
-  `stop_loss` are all per-share premium (e.g. tp 1.00 means the premium doubling
-  from 0.55 → 1.00). NO calls, NO writing options, NO spreads — those are rejected.
-- SELL entries (only for symbols in holdings.json) need only
-  `{"symbol":"...","action":"SELL"}`. Puts auto-exit on their tp/stop — you don't
-  need to write a SELL for them.
+  (YYYY-MM-DD), `contracts`, `limit_price` (per-share premium). premium × 100 ×
+  contracts ≤ $100. NO calls, NO writing options, NO spreads — those are rejected.
+- **Do NOT write `SELL` entries** — the SELL BRAIN owns all exits. Your orders are BUYS only.
 - Nothing qualifies → keep the `funnel` counts and use `"orders": []`.
 
 ### B. `signals/latest.md` — your reasoning (overwrite each run)
