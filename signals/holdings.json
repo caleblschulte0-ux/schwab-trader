@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T18:10:29.273514+00:00",
+  "updated_utc": "2026-06-08T18:15:22.960874+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -42,36 +42,36 @@
       "quantity": 11,
       "avg_price": 5.79,
       "opened_utc": "2026-06-04T17:18:48.487431+00:00",
-      "last": 5.54,
-      "unrealized_pct": -4.32,
-      "value": 60.94
+      "last": 5.53,
+      "unrealized_pct": -4.49,
+      "value": 60.83
     },
     {
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.15,
-      "unrealized_pct": -1.66,
-      "value": 145.25
+      "last": 4.1393,
+      "unrealized_pct": -1.91,
+      "value": 144.88
     },
     {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 25.46,
-      "unrealized_pct": -0.12,
-      "value": 50.92
+      "last": 25.41,
+      "unrealized_pct": -0.31,
+      "value": 50.82
     },
     {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.3275,
-      "unrealized_pct": 1.14,
-      "value": 59.9
+      "last": 3.32,
+      "unrealized_pct": 0.91,
+      "value": 59.76
     },
     {
       "symbol": "SLDB",
