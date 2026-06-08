@@ -1,23 +1,23 @@
-# Open Positions — updated 2026-06-08T14:34:57Z
+# Open Positions — updated 2026-06-08T14:54:22Z
 
-| Symbol | Qty | Avg     | Take-profit | Stop        | Last seen               | Unrealized $ |
-|--------|-----|---------|-------------|-------------|-------------------------|--------------|
-| ARTV   | 18  | $6.88   | bot-managed | bot-managed | $6.75 (in funnel today) | −$2.34       |
-| AVR    | 15  | $9.87   | bot-managed | bot-managed | $9.63 (in funnel today) | −$3.60       |
-| DRTS   |  6  | $10.52  | bot-managed | bot-managed | not in funnel           | —            |
-| GASS   | 15  | $9.51   | bot-managed | bot-managed | not in funnel           | —            |
-| JFB    | 11  | $5.79   | bot-managed | bot-managed | not in funnel           | —            |
-| NRXP   | 35  | $4.22   | bot-managed | bot-managed | not in funnel           | —            |
-| PLSE   |  2  | $25.49  | bot-managed | bot-managed | not in funnel           | —            |
-| RXRX   | 18  | $3.29   | bot-managed | bot-managed | not in funnel           | —            |
-| SLDB   |  9  | $6.86   | bot-managed | bot-managed | not in funnel           | —            |
-| TISI   |  3  | $18.09  | bot-managed | bot-managed | not in funnel           | —            |
-| TLYS   | 12  | $4.84   | bot-managed | bot-managed | not in funnel           | —            |
+| Symbol | Qty | Avg    | Take-profit | Stop        | Last seen   | Unrealized $   |
+|--------|-----|--------|-------------|-------------|-------------|----------------|
+| ALOT   |  7  | $15.58 | $16.55      | $14.45      | $15.50      | −$0.56         |
+| AVR    | 15  | $9.87  | bot-managed | bot-managed | $9.50       | −$5.55         |
+| DRTS   |  6  | $10.52 | bot-managed | bot-managed | ~$9.55 *    | ~−$5.82        |
+| GASS   | 15  | $9.51  | bot-managed | bot-managed | $9.64 *     | +$1.95         |
+| JFB    | 11  | $5.79  | bot-managed | bot-managed | ~$5.69 *    | ~−$1.10        |
+| NRXP   | 35  | $4.22  | bot-managed | bot-managed | $4.10 *     | −$4.20         |
+| PLSE   |  2  | $25.49 | bot-managed | bot-managed | ~$25.52 *   | +$0.06         |
+| RXRX   | 18  | $3.29  | bot-managed | bot-managed | ~$3.55 *    | +$4.68         |
+| SLDB   |  9  | $6.86  | bot-managed | bot-managed | $7.08 *     | +$1.98         |
+| TISI   |  3  | $18.09 | bot-managed | bot-managed | ~$17.00 * † | ~−$3.27        |
+| TLYS   | 12  | $4.84  | bot-managed | bot-managed | $4.33 *     | −$6.12 **SELL**|
 
-**Open positions:** 11   **Est. cash deployed:** ~$973 of ~$1,000   **Powder left:** ~$27 (ALOT buy pending ~$137 — fills from settled cash)
+\* Price from web research (not live feed). ALOT and AVR from candidates.json live data.  
+† TISI web data returned wide range ($15.40–$17.72); used midpoint estimate ~$17.00. Actual unrealized may be worse.
 
-**Holdings notes (2026-06-08T14:34:57Z):**
-- **ARTV** ($6.75, −1.9% vs avg $6.88): EULAR 2026 late-breaking oral today — AlloNK 71% ACR50 in refractory RA + FDA RMAT designation. Stock pulled from ~$9 intraday high back to $6.75. Thesis still live; HOLD.
-- **AVR** ($9.63, −2.4% vs avg $9.87): French regulatory clearance for DurAVR transcatheter valve announced today (10:09 UTC). Modest red vs cost; catalyst intact. HOLD.
-- **DRTS / GASS / JFB / NRXP / PLSE / RXRX / SLDB / TISI / TLYS**: Not in today's funnel. Cannot assess dead-money laggard criteria without live prices. Flag for review next run when prices are visible — check −8% + relative weakness + stale catalyst conditions.
-- **Pending fill**: ALOT (AstroNova) — 9 shares @ $15.25 | TP $16.55 | SL $14.45. Q1 aerospace beat (+16.3%). Current price $15.39 (+6.2%), on track.
+**Open positions:** 11 (→ 10 after TLYS SELL executes)  
+**Est. cash deployed:** ~$1,158 of ~$1,000 (over-deployed — 11 positions vs ~6-position target)  
+**Powder left:** Over-deployed; TLYS exit frees ~$52. Prioritizing natural exits via bot-managed stops/TPs before opening new positions.  
+**Est. total unrealized P&L (visible positions):** ~−$17.95

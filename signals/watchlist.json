@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-08T14:34:57Z",
+  "generated_utc": "2026-06-08T14:54:22Z",
   "watch": [
     {
       "symbol": "MNKD",
@@ -10,7 +10,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-11",
-      "note": "FDA approved Afrezza pediatric (ages 6+) May 29 + FUROSCIX PDUFA July 26 upcoming catalyst. Healthcare sector tailwind. Enter on volume breakout above $3.65."
+      "note": "FDA approved Afrezza pediatric (ages 6+) May 29 + FUROSCIX PDUFA July 26 upcoming catalyst. Enter on volume breakout above $3.65."
     },
     {
       "symbol": "GHRS",
@@ -21,7 +21,7 @@
       "take_profit": 31.00,
       "stop_loss": 23.50,
       "good_until": "2026-06-12",
-      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Healthcare sector green. Enter on breakout above $26.50 on volume."
+      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Enter on breakout above $26.50 on volume."
     },
     {
       "symbol": "COYA",
@@ -32,7 +32,29 @@
       "take_profit": 5.25,
       "stop_loss": 4.45,
       "good_until": "2026-06-11",
-      "note": "ALSTARS ALS trial: first cohort began blinded active-treatment extension phase 2026-06-08 (12:00 UTC). Fresh clinical milestone. Current price $4.55 — consolidating below trigger. Enter only on volume breakout above $4.75."
+      "note": "ALSTARS ALS trial: first cohort began blinded active-treatment extension 2026-06-08 (fresh). Currently ~$4.50 consolidating below trigger. Enter only on volume breakout above $4.75."
+    },
+    {
+      "symbol": "ELDN",
+      "trigger": "pullback",
+      "trigger_price": 3.30,
+      "quantity": 44,
+      "limit_price": 3.35,
+      "take_profit": 3.65,
+      "stop_loss": 3.15,
+      "good_until": "2026-06-10",
+      "note": "Eledon tegoprubart T1D trial promising results (11:39 UTC today). Stock up only 0.7% on clinical data; volume 647K confirms participation. $265M cap. Enter on pullback to $3.30 support."
+    },
+    {
+      "symbol": "ELVA",
+      "trigger": "pullback",
+      "trigger_price": 10.00,
+      "quantity": 14,
+      "limit_price": 10.05,
+      "take_profit": 10.90,
+      "stop_loss": 9.55,
+      "good_until": "2026-06-10",
+      "note": "Electrovaya analyst price target raise (sentiment 0.852, very bullish), published 13:03 UTC today. Stock -0.68% on very bullish analyst call — not priced in yet. $508M cap. Enter on pullback to $10.00."
     }
   ]
 }

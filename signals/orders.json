@@ -1,8 +1,7 @@
 {
-  "generated_utc": "2026-06-08T14:28:15Z",
-  "funnel": {"scanned": 279, "leading": 89, "in_budget": 220, "had_catalyst": 42, "finalists": 3, "picked": 1},
+  "generated_utc": "2026-06-08T14:54:22Z",
+  "funnel": {"scanned": 280, "leading": 79, "in_budget": 220, "had_catalyst": 60, "finalists": 5, "picked": 0},
   "orders": [
-    {"symbol": "ALOT", "action": "BUY", "instrument": "stock",
-     "quantity": 9, "limit_price": 15.25, "take_profit": 16.55, "stop_loss": 14.45}
+    {"symbol": "TLYS", "action": "SELL"}
   ]
 }
