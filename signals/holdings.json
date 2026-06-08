@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T19:05:22.024627+00:00",
+  "updated_utc": "2026-06-08T19:10:23.032189+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -15,63 +15,63 @@
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.535,
-      "unrealized_pct": -3.39,
-      "value": 143.03
+      "last": 9.51,
+      "unrealized_pct": -3.65,
+      "value": 142.65
     },
     {
       "symbol": "GASS",
       "quantity": 15,
       "avg_price": 9.51,
       "opened_utc": "2026-06-05T18:40:21.855163+00:00",
-      "last": 9.415,
-      "unrealized_pct": -1.0,
-      "value": 141.22
+      "last": 9.41,
+      "unrealized_pct": -1.05,
+      "value": 141.15
     },
     {
       "symbol": "GIII",
       "quantity": 4,
       "avg_price": 34.8,
       "opened_utc": "2026-06-08T16:00:39.697867+00:00",
-      "last": 34.605,
-      "unrealized_pct": -0.56,
-      "value": 138.42
+      "last": 34.83,
+      "unrealized_pct": 0.09,
+      "value": 139.32
     },
     {
       "symbol": "JFB",
       "quantity": 11,
       "avg_price": 5.79,
       "opened_utc": "2026-06-04T17:18:48.487431+00:00",
-      "last": 5.46,
-      "unrealized_pct": -5.7,
-      "value": 60.06
+      "last": 5.44,
+      "unrealized_pct": -6.04,
+      "value": 59.84
     },
     {
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.195,
-      "unrealized_pct": -0.59,
-      "value": 146.83
+      "last": 4.21,
+      "unrealized_pct": -0.24,
+      "value": 147.35
     },
     {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 25.47,
-      "unrealized_pct": -0.08,
-      "value": 50.94
+      "last": 25.4725,
+      "unrealized_pct": -0.07,
+      "value": 50.95
     },
     {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.325,
-      "unrealized_pct": 1.06,
-      "value": 59.85
+      "last": 3.315,
+      "unrealized_pct": 0.76,
+      "value": 59.67
     },
     {
       "symbol": "SLDB",
