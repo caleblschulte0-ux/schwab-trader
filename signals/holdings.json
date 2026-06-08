@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T17:10:23.864960+00:00",
+  "updated_utc": "2026-06-08T17:15:24.107118+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -15,27 +15,27 @@
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.38,
-      "unrealized_pct": -4.96,
-      "value": 140.7
+      "last": 9.39,
+      "unrealized_pct": -4.86,
+      "value": 140.85
     },
     {
       "symbol": "GASS",
       "quantity": 15,
       "avg_price": 9.51,
       "opened_utc": "2026-06-05T18:40:21.855163+00:00",
-      "last": 9.43,
-      "unrealized_pct": -0.84,
-      "value": 141.45
+      "last": 9.42,
+      "unrealized_pct": -0.95,
+      "value": 141.3
     },
     {
       "symbol": "GIII",
       "quantity": 4,
       "avg_price": 34.8,
       "opened_utc": "2026-06-08T16:00:39.697867+00:00",
-      "last": 34.46,
-      "unrealized_pct": -0.98,
-      "value": 137.84
+      "last": 34.64,
+      "unrealized_pct": -0.46,
+      "value": 138.56
     },
     {
       "symbol": "JFB",
@@ -51,25 +51,25 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.11,
-      "unrealized_pct": -2.61,
-      "value": 143.85
+      "last": 4.095,
+      "unrealized_pct": -2.96,
+      "value": 143.32
     },
     {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 25.53,
-      "unrealized_pct": 0.16,
-      "value": 51.06
+      "last": 25.51,
+      "unrealized_pct": 0.08,
+      "value": 51.02
     },
     {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.3301,
+      "last": 3.33,
       "unrealized_pct": 1.22,
       "value": 59.94
     },
@@ -78,9 +78,9 @@
       "quantity": 9,
       "avg_price": 6.86,
       "opened_utc": "2026-06-04T13:00:42.683106+00:00",
-      "last": 6.4627,
-      "unrealized_pct": -5.79,
-      "value": 58.16
+      "last": 6.475,
+      "unrealized_pct": -5.61,
+      "value": 58.27
     },
     {
       "symbol": "TISI",
