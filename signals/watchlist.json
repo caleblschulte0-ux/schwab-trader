@@ -1,50 +1,6 @@
 {
-  "generated_utc": "2026-06-05T20:08:45Z",
+  "generated_utc": "2026-06-08T13:16:02Z",
   "watch": [
-    {
-      "symbol": "BBCP",
-      "trigger": "pullback",
-      "trigger_price": 10.00,
-      "quantity": 14,
-      "limit_price": 10.10,
-      "take_profit": 11.20,
-      "stop_loss": 9.40,
-      "good_until": "2026-06-07",
-      "note": "Q2 FY26 EPS beat 4x ($0.04 vs $0.01 est), revenue $106.8M vs $98.6M, guidance raised. Gapped +30%+ on 6/5 — enter only on pullback/consolidation near $10.00 gap support."
-    },
-    {
-      "symbol": "FF",
-      "trigger": "pullback",
-      "trigger_price": 4.20,
-      "quantity": 35,
-      "limit_price": 4.22,
-      "take_profit": 4.65,
-      "stop_loss": 3.98,
-      "good_until": "2026-06-07",
-      "note": "FutureFuel CEO open-market buy of 10k shares (12:21 UTC 6/5). Basic Materials flat. CEO insider buy catalyst — pullback to $4.20 support improves R/R to ~+10.7% / -5.2%."
-    },
-    {
-      "symbol": "NSP",
-      "trigger": "pullback",
-      "trigger_price": 34.00,
-      "quantity": 4,
-      "limit_price": 34.10,
-      "take_profit": 36.50,
-      "stop_loss": 32.40,
-      "good_until": "2026-06-08",
-      "note": "Insperity CEO multimillion-dollar open-market share purchase (13:40 UTC 6/5). +5.7% on risk-off tape vs Industrials -2.1% = exceptional relative strength. Pullback to $34.00 improves R/R to ~7.3% / -4.7% = ~1.6:1. Insider conviction persists."
-    },
-    {
-      "symbol": "GIII",
-      "trigger": "pullback",
-      "trigger_price": 32.50,
-      "quantity": 4,
-      "limit_price": 32.60,
-      "take_profit": 35.50,
-      "stop_loss": 30.80,
-      "good_until": "2026-06-09",
-      "note": "Q1 FY2027 earnings beat with tariff refund boost (8-K filed 13:29 UTC 6/5). Up +4.9% vs Consumer Cyclical sector -3.92% — exceptional relative strength. At $32.50 pullback: R/R ~+9.2% / -5.2% = ~1.8:1."
-    },
     {
       "symbol": "MNKD",
       "trigger": "breakout",
@@ -54,7 +10,7 @@
       "take_profit": 5.50,
       "stop_loss": 3.10,
       "good_until": "2026-06-11",
-      "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 catalyst + Q1 revenue +15% YoY. Healthcare sector green on risk-off tape. Enter on volume breakout above $3.65."
+      "note": "FDA approved Afrezza for pediatric use (ages 6+) May 29 + FUROSCIX PDUFA July 26 catalyst + Q1 revenue +15% YoY. Healthcare sector is the ONLY green sector today (+0.19% on SPY -2.58% tape). Enter on volume breakout above $3.65."
     },
     {
       "symbol": "GHRS",
@@ -65,7 +21,7 @@
       "take_profit": 31.00,
       "stop_loss": 23.50,
       "good_until": "2026-06-12",
-      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). Next catalyst: CINP World Congress June 26-29. Healthcare sector leading on risk-off day. Enter on breakout above $26.50 on volume."
+      "note": "Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). Next catalyst: CINP World Congress June 26-29. Healthcare sector leading on risk-off tape. Enter on breakout above $26.50 on volume."
     }
   ]
 }

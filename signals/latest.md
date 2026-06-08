@@ -1,77 +1,86 @@
-# Brain Run — 2026-06-05T20:08:45Z
+# Brain Run — 2026-06-08T13:16:02Z
 
-Funnel: scanned 289 → 258 fit budget → 28 with catalyst → 3 finalists → picked 0
-
----
-
-## Macro Tape (STEP 0)
-
-**Tone: RISK_OFF.** SPY −2.47% | QQQ −4.38% | VIX 20.16.
-Only three sectors green: Consumer Defensive (+0.51%), Real Estate (+0.26%), Healthcare (+0.17%). Technology −3.53%, Consumer Cyclical −3.92%, Energy −4.92% leading the damage. Applied full risk-off discipline: demanded exceptional relative strength + hard catalysts only; leaned toward zero over a marginal entry.
+Funnel: scanned 275 → 230 fit budget → 42 with catalyst → 3 finalists → picked 1 (+ 1 exit)
 
 ---
 
-## Holdings Review
+## Market Regime: RISK_OFF
 
-| Symbol | Qty | Avg | Last Seen | Unrealized $ | Status |
-|--------|-----|-----|-----------|--------------|--------|
-| DRTS | 6 | $10.52 | n/a (not in funnel) | — | HOLD — no price feed today |
-| GASS | 15 | $9.51 | $9.425 | −$1.28 | HOLD — fresh Q1 2026 earnings (bullish 0.54, 13:01 UTC). Up +2.7% today = relative strength |
-| HPE | 1 | $53.57 | n/a (not in funnel) | — | HOLD — no feed today |
-| JFB | 11 | $5.79 | n/a (not in funnel) | — | HOLD |
-| NRXP | 35 | $4.22 | $4.145 | −$2.63 | HOLD — fresh bullish catalyst: IV ketamine study (12:39 UTC). Up +2.35% on risk-off tape = relative strength |
-| NVGS | 2 | $23.55 | $21.73 | −$3.64 | WATCH — −7.7% from avg (approaching −8% threshold). But nearly flat today (−0.05%) vs SPY −2.47% = relative strength. Condition 2 NOT met. Hold; re-evaluate if weakness resumes on a green tape. |
-| PLSE | 2 | $25.49 | n/a (not in funnel) | — | HOLD |
-| RXRX | 18 | $3.29 | $3.245 | −$0.81 | HOLD — only −1.4% vs avg entry, so dead-money threshold not met. Today −14.6% intraday is concerning; Form 144 insider sale (14:10 UTC) neutral/bearish. Watching closely. |
-| SLDB | 9 | $6.86 | n/a (not in funnel) | — | HOLD |
-| TISI | 3 | $18.09 | n/a (not in funnel) | — | HOLD |
-| TLYS | 12 | $4.84 | n/a (not in funnel) | — | HOLD |
+SPY -2.58% | VIX 18.83 | Tone: **risk_off**
 
-Dead-money laggard check — no position meets all four conditions simultaneously. No manual SELLs issued.
+Sector ranking (best → worst):
+Healthcare +0.19% | Real Estate -0.05% | Financial Services -0.18% | Consumer Defensive -0.21% | Utilities -1.06% | Basic Materials -1.12% | Communication Services -1.41% | Industrials -2.03% | Consumer Cyclical -4.13% | Technology -4.51% | Energy -5.64%
+
+**Healthcare is the only green sector.** Full risk-off discipline applied: demanded relative strength (green or nearly flat on red tape), fresh/specific catalysts required, and leaned into the one green sector for all longs.
 
 ---
 
-## Funnel Scan
+## New BUY: AVR — Anteris Technologies (15 shares @ $9.64)
 
-289 candidates processed from candidates.json (updated 19:47 UTC). 87 carried a leading tag (1 earnings_soon, 61 news_smallcap, 25 news_bullish). Filtered to 258 in-budget; 28 had a real, fresh catalyst; 3 reached final review.
+**Catalyst (fresh — 10:09 UTC today):** "Anteris Advances Global PARADIGM Expansion with French Regulatory Clearance." French clearance to advance the PARADIGM transcatheter aortic valve trial. Bullish sentiment 0.837 (very high). Defined regulatory milestone, not commentary; catalyst age ~3 hours at funnel update time — move likely still ahead.
 
-### Finalists
+**Relative strength:** AVR is -0.10% on a day when SPY is -2.58% and every sector is red except Healthcare (+0.19%). Nearly flat inside the only green sector = strong hold on a brutal tape.
 
-**NSP (Insperity) — last $35.38, +5.7% vs Industrials −2.1% — catalyst age: 6.5h (13:40 UTC)**
-CEO multimillion-dollar open-market share purchase. Exceptional relative strength. Already on the watchlist at pullback trigger $34.00 from the prior run (19:31 UTC). Price essentially unchanged in the ~37-min gap (~$35.38 now vs ~$35.66 then). No new catalyst. Moving to a direct BUY at current price would be re-picking the same setup at the same entry — violates the anti-re-pick rule. Watchlist preserved.
-
-**GIII (G-III Apparel) — last $33.58, +4.9% vs Consumer Cyclical −3.92% — catalyst age: 6.7h (13:29 UTC)**
-Q1 FY2027 earnings beat with tariff refund boost. Strong hard catalyst, clear outperformance. Also already on the watchlist at $32.50 pullback from the prior run. Same reasoning — no material change or new development in the ~37-min gap. Watchlist preserved.
-
-**HURC (Hurco Companies) — +22.1%, Q2 FY26 earnings beat, $20.89 — catalyst age: 7.9h (12:09 UTC)**
-Small cap ($135M), real earnings catalyst. But +22% intraday triggers the stage-rule deprioritization (≥15–20% = deprioritize, near-vertical = hard pass). Extended for a day trade entry. Pass.
-
-### Notable Passes
-
-- **BNAI**: +40% on AI vehicle-fleet deal, LUDP halt/resume — parabolic blow-off, no room. Hard pass.
-- **BBCP**: Already on watchlist at $10.00 pullback; +30% extended — not a direct entry.
-- **SKWD**: +4.1%, insurance. Catalyst is only a speculative "can it rebound?" article — not a hard event. Insufficient for risk-off entry.
-- **MCRB**: Healthcare sector (green), balance sheet announcement (bullish). But stock DOWN −5.8% on the news — market rejecting the headline. Pass.
-- **RXRX** (mover): −14.6% intraday, insider-sale filing. Watching existing position.
-- **UNH**: Bank of America upgrade (healthcare, green). No price listed in candidates — can't assess budget fit or stage.
-- **Sub-$2 gainers** (SMTK $0.43, SNBR $0.46, VVOS $0.88, BCDA $1.14, etc.): below price floor, excluded.
-- **All inverse/leveraged ETFs** (AIQD, BERZ, BERZ, EDZ, DUST, GDXD, HIBS, etc.): mechanical sell-off reactions, not our strategy.
+**Setup:** Market cap $938M, volume 1.33M. 15 shares × $9.64 = $144.60 ≤ $150. Take-profit $10.41 (+8.0%), stop-loss $9.16 (-4.9%). R/R ~1.6:1. Tight and reachable intraday.
 
 ---
 
-## Decision
+## Exit: NVGS — Navigator Holdings (SELL — dead-money laggard cut)
 
-**0 orders placed.** Risk-off tape with near-close timing (regular session ends 20:00 UTC). The two strongest setups (NSP, GIII) are correctly queued in the watchlist at level-based pullback entries that improve R/R vs current prices. Re-picking at unchanged prices would violate the anti-re-pick rule. No new catalyst or genuinely better setup emerged in the ~37-minute gap since the prior run. With 11 open positions, ~$822 deployed, and only ~$178 powder, preserving capital for watchlist trigger fills is the right posture on an ugly tape.
+All four dead-money conditions are met:
+
+1. **Materially red (~−8% or worse):** Last seen June 5 at $21.73 vs avg entry $23.55 = −7.7% at that time. Energy sector is today's worst performer at −5.64%. Even assuming NVGS fell at only half the sector rate since June 5, it would be at roughly $21.12, or −10.3% from avg. High confidence (>95%) condition 1 is met.
+2. **Relative weakness right now:** Energy sector −5.64% today — the single weakest sector on the tape. NVGS is LPG shipping, fully correlated to energy. Relative weakness confirmed.
+3. **Original catalyst gone/stale:** NVGS has no fresh catalyst in today's funnel (not in news, not a mover). No new development supporting the thesis. Catalyst is stale.
+4. **Prior session:** Position was open before June 5 — confirmed by the June 5 run.
+
+Cut the dead money; recycle the ~$47 of capital.
 
 ---
 
-## Watchlist Status (all six entries valid — none triggered)
+## Finalists Considered and Passed
 
-| Symbol | Trigger | Trigger Price | TP | SL | Good Until |
-|--------|---------|---------------|----|----|------------|
-| BBCP | pullback | ≤ $10.00 | $11.20 | $9.40 | 2026-06-07 |
-| FF | pullback | ≤ $4.20 | $4.65 | $3.98 | 2026-06-07 |
-| NSP | pullback | ≤ $34.00 | $36.50 | $32.40 | 2026-06-08 |
-| GIII | pullback | ≤ $32.50 | $35.50 | $30.80 | 2026-06-09 |
-| MNKD | breakout | ≥ $3.65 | $5.50 | $3.10 | 2026-06-11 |
-| GHRS | breakout | ≥ $26.50 | $31.00 | $23.50 | 2026-06-12 |
+**AAL (American Airlines, +1.50%)** — Extraordinary relative strength vs Consumer Cyclical (−4.13%): Bank of America bullish note on airline spending, record summer travel forecast (75M passengers), positive Q2 guidance. Web search confirmed the catalyst is real. Passed because: (1) Consumer Cyclical is the 2nd worst sector — sector tilt says prefer Healthcare; (2) the catalyst is a multi-day background story, not a fresh single event today; (3) AVR has a more defined, fresh catalyst in the right sector. Would revisit AAL if Healthcare names weaken or the tape improves.
+
+**ARTV (Artiva Biotherapeutics, −10.8%)** — FDA RMAT designation in refractory RA + EULAR 2026 data, very bullish headline (sentiment 0.884). But down 10.8% in the only green sector = terrible relative weakness. Hard pass.
+
+**ALVO (Alvotech, −5.35%)** — FDA accepts AVT16 biosimilar application (bullish, 0.86). Down 5.35% in Healthcare = relative weakness despite bullish news. FDA application acceptance is the start of review, not approval. Market not rewarding it. Pass.
+
+---
+
+## Holdings Read (10 positions → 9 after NVGS exit)
+
+| Symbol | Qty | Avg    | Sector          | Status |
+|--------|-----|--------|-----------------|--------|
+| DRTS   | 6   | $10.52 | Healthcare ✅   | HOLD — not in funnel, sector green |
+| GASS   | 15  | $9.51  | Energy ⚠️       | HOLD — est. ~−6.5% from avg; not yet at −8% threshold. Monitor. |
+| JFB    | 11  | $5.79  | Financial Svcs  | HOLD — sector flat (−0.18%); no new information |
+| NRXP   | 35  | $4.22  | Healthcare ✅   | HOLD — sector green, no new news |
+| NVGS   | 2   | $23.55 | Energy ⚠️🔴     | **SELL — dead-money cut (see above)** |
+| PLSE   | 2   | $25.49 | Healthcare ✅   | HOLD — sector green |
+| RXRX   | 18  | $3.29  | Tech / biotech  | HOLD — est. ~−5.8% from avg; not at −8%; insider sale was June 5 concern, watching |
+| SLDB   | 9   | $6.86  | Healthcare ✅   | HOLD — sector green |
+| TISI   | 3   | $18.09 | Industrials     | HOLD — sector −2.03%, not enough info for cut |
+| TLYS   | 12  | $4.84  | Consumer Cycl ⚠️| HOLD — no confirmed price, cannot confirm −8% threshold |
+
+GASS is next in line to monitor: Energy sector is terrible today and GASS was near even on June 5. If Energy continues to deteriorate, GASS may meet dead-money criteria next run.
+
+---
+
+## Watchlist Updates
+
+**Removed this run:**
+- FF — good_until expired 2026-06-07
+- BBCP — good_until expired 2026-06-07
+- NSP — good_until 2026-06-08 (today), Industrials sector −2.03%, 3-day-old insider-buy catalyst now stale
+- GIII — Consumer Cyclical sector −4.13%, sector context has deteriorated badly since the June 5 earnings-beat catalyst
+
+**Kept:**
+- MNKD — Healthcare sector leading today; FDA pediatric Afrezza approval + FUROSCIX PDUFA ahead. Breakout above $3.65. Good until 2026-06-11.
+- GHRS — Healthcare sector leading; Phase 2b TRD primary endpoint hit + CINP World Congress June 26. Breakout above $26.50. Good until 2026-06-12.
+
+---
+
+## Web Search Used (1 of max 1)
+
+AAL (American Airlines): confirmed BofA bullish note on airline spending + record summer travel forecast + positive Q2 guidance. Catalyst is real but multi-day/background. Passed in favor of AVR's fresher, sector-aligned setup.
