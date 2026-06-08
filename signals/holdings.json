@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T20:15:23.803716+00:00",
+  "updated_utc": "2026-06-08T20:20:23.853841+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -15,9 +15,9 @@
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.34,
-      "unrealized_pct": -5.37,
-      "value": 140.1
+      "last": 9.52,
+      "unrealized_pct": -3.55,
+      "value": 142.8
     },
     {
       "symbol": "GASS",
@@ -38,13 +38,22 @@
       "value": 139.68
     },
     {
+      "symbol": "LASE",
+      "quantity": 18,
+      "avg_price": 3.26,
+      "opened_utc": "2026-06-08T20:15:25.379322+00:00",
+      "last": 3.2306,
+      "unrealized_pct": -0.9,
+      "value": 58.15
+    },
+    {
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.3309,
-      "unrealized_pct": 2.63,
-      "value": 151.58
+      "last": 4.34,
+      "unrealized_pct": 2.84,
+      "value": 151.9
     },
     {
       "symbol": "PLSE",
