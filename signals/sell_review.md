@@ -1,6 +1,8 @@
-# Sell Brain Review — 2026-06-08T21:26:15Z
+# Sell Brain Review — 2026-06-08T21:43:11Z
 
 **0 exits proposed. No urgent flags. All 10 positions HOLD.**
+
+> **Web search used this run:** AVR (Anteris Technologies) — verified PARADIGM DurAVR pivotal trial status. Confirmed intact: US enrollment active, CMS TAVR coverage in place, $320M raise funding the trial. Drawdown is sector drag only.
 
 ---
 
@@ -8,19 +10,19 @@
 
 | Symbol | Decision | Reasoning |
 |--------|----------|-----------|
-| ALOT   | **HOLD** | Opened today (14:25 UTC). Q1 FY2027 earnings beat catalyst (aerospace +16.3% YoY, $10M ToughWriter defense contract, book-to-bill 147%). +2.63% and working. Thesis is fresh and intact — no reason to exit. |
-| AVR    | **HOLD** | French PARADIGM regulatory clearance catalyst (published today ~10:09 UTC, Bullish 0.837) is a concrete regulatory milestone that is fully intact. −5.27% is sector-driven (Healthcare −1.13% today); the clearance was not reversed or qualified. Thesis unbroken — do not sell on sector drag. |
-| GASS   | **HOLD** | LPG shipping conviction hold opened June 5. Q1 2026 beat (net income +13% YoY, zero bank debt, $52M hard backlog), Iran/Middle East trade-route reshuffling thesis. −1.79% over 3 sessions in a mildly negative Energy tape (−0.57%) is noise. Story unbroken. |
-| GIII   | **HOLD** | Opened today (16:00 UTC) on Q1 earnings beat + guidance raise. Consumer Cyclical sector leading today (+0.96%). −1.26% is trivial intraday drift on a position opened hours ago. Thesis intact. |
-| LASE   | **HOLD** | Opened today (20:15 UTC) — barely 70 minutes old. Thesis: Laser Shield counter-drone system selected under Vulcan Defense Initiative competitive evaluation (published 15:39 UTC, Bullish 0.433, 33M volume). Government procurement selection catalyst is still very early in its pricing cycle. Flat at $3.26. No exit warranted. |
-| NRXP   | **HOLD** | FDA ANDA decision goal date July 29, 2026 (~7 weeks out) is the binary catalyst; thesis fully live. +3.08% over 3 sessions. Independent Osmind/Yale study (8,224 patients) confirmed IV ketamine efficacy validating NRX-100 modality. Leading position — no reason to exit. |
-| PLSE   | **HOLD** | Canaccord Genuity Buy/$32 PT initiation (June 4) thesis is intact — sell-side initiations play out over days to weeks. −2.90% over 3 sessions in a weak Healthcare tape (Healthcare −1.13%) is sector noise. No negative catalyst. |
-| RXRX   | **HOLD** | AI drug discovery platform; Q1 beat + Phase 2 pipeline signals. +0.34% over 3 sessions against broadly weak Healthcare (−1.13%) = relative strength. No thesis-breaking news in today's funnel. Hold. |
-| SLDB   | **HOLD** | **ONE targeted web search run this session.** No thesis-breaking news found. SLDB CEO presented at Goldman Sachs 47th Annual Global Healthcare Conference today (June 8, 4:00 PM ET) — active institutional engagement is a positive signal, not distress. Share authorization doubling (vote June 10) is standard clinical-stage biotech practice. Phase 3 IMPACT DUCHENNE advancing on schedule. −6.56% is a drawdown, not a broken thesis. |
-| TISI   | **HOLD** | Q1 beat (Adj EBITDA +45.2%, FY guidance raised) + prior insider buying. −2.87% over 4 sessions in a mildly negative Industrials tape (−0.78% today) is ordinary noise. Thesis unbroken. |
+| ALOT   | **HOLD** | Opened today (14:25 UTC) on Q1 FY2027 earnings beat: aerospace segment +16.3% YoY, $10M ToughWriter defense contract, book-to-bill 147%. +3.02% and working. Thesis fresh and intact. |
+| AVR    | **HOLD** | Anteris Technologies DurAVR PARADIGM pivotal trial thesis confirmed via web search: US enrollment active, CMS TAVR national coverage secured, $320M raise funding the trial. −5.27% is Healthcare-sector drag (sector −1.13%) on a same-day position — the regulatory/trial milestone is not reversed. Thesis unbroken. |
+| GASS   | **HOLD** | LPG shipping conviction hold opened June 5. Thesis: Q1 2026 beat (net income +13% YoY), zero bank debt, Iran/Middle East trade-route reshuffling. −1.79% over 3 sessions in a −0.57% Energy tape is noise. No new adverse news in today's candidates. Story intact. |
+| GIII   | **HOLD** | Opened today (16:00 UTC) on Q1 earnings beat + guidance raise. Consumer Cyclical leading today (+0.96%). −1.26% is trivial intraday drift on a position opened hours ago. Thesis intact. |
+| LASE   | **HOLD** | Opened today (20:15 UTC). Thesis: Laser Shield counter-drone system selected under Vulcan Defense Initiative competitive evaluation (published 15:39 UTC, Bullish 0.433, 33M volume confirmed in candidates.json). Government procurement selection catalyst is early in its pricing cycle. +0.31%. No exit warranted. |
+| NRXP   | **HOLD** | FDA ANDA decision goal date July 29, 2026 (~7 weeks out) is the live binary catalyst. Independent Osmind/Yale study (8,224 patients) confirmed IV ketamine efficacy validating NRX-100 modality. +3.08% leading the book. No adverse news. Hold through the catalyst. |
+| PLSE   | **HOLD** | Canaccord Genuity Buy/$32 PT initiation (June 4) thesis intact — sell-side initiations play out over days to weeks. −2.90% over 3 sessions in weak Healthcare tape (−1.13%) is sector noise, not a thesis break. No negative catalyst. |
+| RXRX   | **HOLD** | AI drug discovery platform; Q1 beat + Phase 2 pipeline signals. +0.61% shows relative strength against a broadly weak Healthcare sector (−1.13%). No thesis-breaking news in today's funnel. |
+| SLDB   | **HOLD** | Phase 3 IMPACT DUCHENNE advancing on schedule. CEO presented at Goldman Sachs 47th Annual Global Healthcare Conference today (June 8, 4:00 PM ET) — active institutional engagement is a positive signal. Share authorization doubling vote on June 10 is standard clinical-stage biotech housekeeping. −6.56% is the deepest drawdown in the book but there is no adverse clinical or regulatory event. Hold. |
+| TISI   | **HOLD** | Q1 beat (Adj EBITDA +45.2%, full-year guidance raised) + prior insider buying. −2.87% over 4 sessions in a mildly negative Industrials tape (−0.78%) is ordinary mean-reversion noise. Thesis unbroken. |
 
 ---
 
 ## Summary
 
-Clean hold run — zero exits. No thesis has broken across any of the 10 positions. The deepest stress is SLDB at −6.56% (4 days held) and AVR at −5.27% (opened today); web search on SLDB confirmed no adverse clinical or regulatory events — CEO is actively presenting to institutional investors today. AVR's drawdown is pure Healthcare-sector drag against an intact same-day regulatory milestone. All three positions opened today (ALOT, GIII, LASE) are too new to judge by price. NRXP (+3.08%) leads the book with its July FDA binary approaching. A run that sells nothing is correct when no thesis has died.
+Clean hold run — zero exits. No thesis has broken across any of the 10 positions. Web search on AVR confirmed the PARADIGM trial is fully live (US enrollment, CMS coverage, $320M funded), so its −5.27% drawdown is pure Healthcare-sector weakness. SLDB (−6.56%) remains the deepest stress in the book; CEO's Goldman Sachs appearance today signals institutional health, not distress — there is no clinical or regulatory adverse event to exit on. All three same-day positions (ALOT, GIII, LASE) are too new to judge by price. NRXP (+3.08%) leads with a hard FDA binary seven weeks out. A run that sells nothing is correct when no thesis has died.
