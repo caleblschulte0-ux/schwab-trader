@@ -1,5 +1,5 @@
 {
-  "cash": 15.244800000000083,
+  "cash": 84.24480000000008,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -22,13 +22,6 @@
       "tp": 21.5,
       "sl": 16.0,
       "opened_utc": "2026-06-04T13:40:26.820680+00:00"
-    },
-    "TLYS": {
-      "qty": 12,
-      "entry": 4.84,
-      "tp": 6.2,
-      "sl": 4.2,
-      "opened_utc": "2026-06-04T14:00:38.502163+00:00"
     },
     "JFB": {
       "qty": 11,
@@ -119,7 +112,7 @@
       }
     }
   },
-  "realized_pnl": -26.1952,
+  "realized_pnl": -15.275199999999998,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -211,7 +204,21 @@
       "entry_ask": 6.87,
       "entry_last": 6.87,
       "tape_tone": "risk_on"
+    },
+    {
+      "symbol": "TLYS",
+      "qty": 12,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 4.84,
+      "exit": 5.75,
+      "pnl": 10.92,
+      "pnl_pct": 18.8,
+      "opened_utc": "2026-06-04T14:00:38.502163+00:00",
+      "closed_utc": "2026-06-08T15:00:35.781665+00:00",
+      "reason": "brain SELL",
+      "hold_h": 97.0
     }
   ],
-  "updated_utc": "2026-06-08T14:55:28.612776+00:00"
+  "updated_utc": "2026-06-08T15:00:45.521296+00:00"
 }

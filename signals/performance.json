@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-06-08T14:55:28Z",
-  "n": 6,
-  "expectancy": -4.3667,
-  "win_rate": 0.0,
-  "total_realized": -26.2,
-  "profit_factor": 0.0,
+  "updated_utc": "2026-06-08T15:00:45Z",
+  "n": 7,
+  "expectancy": -2.1829,
+  "win_rate": 14.3,
+  "total_realized": -15.28,
+  "profit_factor": 0.417,
   "max_drawdown": -26.2,
   "by_signal": {
     "untagged": {
-      "n": 5,
-      "win_rate": 0.0,
-      "expectancy": -4.79
+      "n": 6,
+      "win_rate": 16.7,
+      "expectancy": -2.1717
     },
     "news_smallcap": {
       "n": 1,
