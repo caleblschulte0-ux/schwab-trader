@@ -1,6 +1,28 @@
 {
-  "generated_utc": "2026-06-08T15:57:00Z",
+  "generated_utc": "2026-06-08T18:44:17Z",
   "watch": [
+    {
+      "symbol": "LASE",
+      "trigger": "pullback",
+      "trigger_price": 3.20,
+      "quantity": 45,
+      "limit_price": 3.25,
+      "take_profit": 4.20,
+      "stop_loss": 2.95,
+      "good_until": "2026-06-11",
+      "note": "Laser Photonics counter-drone system selected under Vulcan Defense Initiative anti-UAS program (15:39 UTC today). $130M mktcap, 29.8M volume on catalyst day — extraordinary confirmation. Up 7.4% ($3.33); enter on healthy pullback to $3.20 consolidation. TP +29% / SL -9.2% from $3.25 entry."
+    },
+    {
+      "symbol": "KSS",
+      "trigger": "breakout",
+      "trigger_price": 16.50,
+      "quantity": 9,
+      "limit_price": 16.60,
+      "take_profit": 18.50,
+      "stop_loss": 15.50,
+      "good_until": "2026-06-11",
+      "note": "Kohl's analyst raises price target post-Q1 results (16:36 UTC today, very fresh). Consumer Cyclical hottest sector today (+1.10%). Up 4.69% ($16.19); breakout above $16.50 confirms continuation. TP +11.4% / SL -6.6% from $16.60 entry."
+    },
     {
       "symbol": "MNKD",
       "trigger": "breakout",
@@ -10,7 +32,7 @@
       "take_profit": 4.00,
       "stop_loss": 3.50,
       "good_until": "2026-06-11",
-      "note": "FUROSCIX PDUFA July 26 upcoming catalyst (primary thesis — Afrezza pediatric approval May 29 now stale). Enter on volume breakout above $3.65. TP +8.1% / SL -5.4% from $3.70 entry."
+      "note": "FUROSCIX PDUFA July 26 upcoming catalyst (primary thesis). Enter on volume breakout above $3.65. TP +8.1% / SL -5.4% from $3.70 entry."
     },
     {
       "symbol": "GHRS",
@@ -32,7 +54,7 @@
       "take_profit": 5.20,
       "stop_loss": 4.50,
       "good_until": "2026-06-11",
-      "note": "ALSTARS ALS trial: first cohort began blinded active-treatment extension 2026-06-08 (fresh catalyst today, 12:00 UTC). Currently ~$4.52 consolidating below trigger. Enter only on volume breakout above $4.75. TP +8.3% / SL -6.3% from $4.80 entry."
+      "note": "ALSTARS ALS trial: first cohort began blinded active-treatment extension 2026-06-08 (fresh catalyst today, 12:00 UTC). Currently ~$4.56 consolidating below trigger. Enter only on volume breakout above $4.75. TP +8.3% / SL -6.3% from $4.80 entry."
     },
     {
       "symbol": "ELDN",
@@ -43,7 +65,18 @@
       "take_profit": 3.65,
       "stop_loss": 3.15,
       "good_until": "2026-06-11",
-      "note": "Eledon tegoprubart T1D trial promising results (11:39 UTC today). Stock +3.8% ($3.54) on clinical data with volume 827K. $273M cap. Enter on pullback to $3.30 support. TP +8.9% / SL -6.0% from $3.35 entry."
+      "note": "Eledon tegoprubart T1D trial promising results (11:39 UTC today). Stock +4.0% ($3.55) on clinical data, volume 1.2M. $274M mktcap. Healthcare sector weak today — enter only on pullback to $3.30 support for better R/R. TP +8.9% / SL -6.0% from $3.35 entry."
+    },
+    {
+      "symbol": "ALVO",
+      "trigger": "pullback",
+      "trigger_price": 3.90,
+      "quantity": 38,
+      "limit_price": 3.92,
+      "take_profit": 4.25,
+      "stop_loss": 3.65,
+      "good_until": "2026-06-10",
+      "note": "Alvotech: FDA accepted Entyvio (vedolizumab) biosimilar NDA for review (Bullish, published 14:08 UTC today). Now up +14.8% ($4.07) — raised pullback trigger from $3.80 to $3.90 to track the new level. Durable FDA catalyst; enter on intraday pullback to $3.90. TP +8.4% / SL -6.6% from $3.92 entry."
     },
     {
       "symbol": "ELVA",
@@ -54,18 +87,7 @@
       "take_profit": 10.90,
       "stop_loss": 9.55,
       "good_until": "2026-06-11",
-      "note": "Electrovaya analyst price target raise (sentiment 0.852, very bullish), published 13:03 UTC today. Stock +1.4% ($10.48) on very bullish analyst call — barely priced in. Energy sector tailwind (+0.85%). Enter on pullback to $10.00. TP +8.4% / SL -5.0% from $10.05 entry."
-    },
-    {
-      "symbol": "ALVO",
-      "trigger": "pullback",
-      "trigger_price": 3.80,
-      "quantity": 38,
-      "limit_price": 3.85,
-      "take_profit": 4.20,
-      "stop_loss": 3.62,
-      "good_until": "2026-06-10",
-      "note": "Alvotech: FDA accepted Entyvio (vedolizumab) biosimilar NDA for review (Bullish, published 14:08 UTC today). Up +13.8% on 816K volume. Durable FDA catalyst; enter on pullback to $3.80 intraday support. TP +9.1% / SL -4.7% from $3.85 entry."
+      "note": "Electrovaya very bullish analyst price target raise (published 13:03 UTC today). Stock flat ($10.34) on analyst call — barely priced in. Enter on pullback to $10.00 round-number support. TP +8.4% / SL -5.0% from $10.05 entry."
     }
   ]
 }

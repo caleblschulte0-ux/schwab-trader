@@ -1,9 +1,5 @@
 {
-  "generated_utc": "2026-06-08T15:57:00Z",
-  "funnel": {"scanned": 289, "leading": 88, "in_budget": 230, "had_catalyst": 65, "finalists": 4, "picked": 1},
-  "orders": [
-    {"symbol": "DRTS", "action": "SELL"},
-    {"symbol": "GIII", "action": "BUY", "instrument": "stock",
-     "quantity": 4, "limit_price": 34.65, "take_profit": 38.00, "stop_loss": 32.90}
-  ]
+  "generated_utc": "2026-06-08T18:44:17Z",
+  "funnel": {"scanned": 293, "leading": 96, "in_budget": 230, "had_catalyst": 28, "finalists": 3, "picked": 0},
+  "orders": []
 }

@@ -1,103 +1,89 @@
 # Trading Brain — Run Report
-**UTC: 2026-06-08T15:57:00Z**
+**UTC: 2026-06-08T18:44:17Z**
 
-Funnel: scanned 289 → 230 fit budget/price floor → 65 with catalyst → 4 finalists → picked 1
+Funnel: scanned 293 → 230 fit budget/price floor → 28 with catalyst → 3 finalists → picked 0
 
 ---
 
 ## Market Tape
-SPY +0.91%, VIX 18.16 → **risk_on.** Broad green; semis still leading (INTC +12.9%, MRVL +15.5%, MU +11.2%). Hot sectors: Consumer Defensive (+1.46%), Technology (+1.12%), Financial Services (+0.98%), Consumer Cyclical (+0.93%), Energy (+0.85%). Weakest: Utilities (−0.83%), Basic Materials (−0.64%), Communication Services (−0.25%), **Healthcare (−0.32%)**. Broad tape green, supportive of action.
+SPY +0.57%, VIX 18.45 → **risk_on.** Semis still strong (INTC +13.1%, MRVL +14.2%, MU +10.3%). Hot sectors: Consumer Defensive (+1.28%), Consumer Cyclical (+1.10%), Technology (+0.54%), Financial Services (+0.37%), Energy (+0.06%). Weakest: Healthcare (−1.09%), Real Estate (−1.21%), Utilities (−1.35%), Basic Materials (−0.62%). Normal aggressiveness — prefer Consumer/Tech; skeptical of Healthcare longs.
 
 ---
 
 ## Collision Guard
-Prior `orders.json` generated 15:22:17Z; current time ~15:57:00Z → ~35 min elapsed → **proceed normally.**
+Prior `orders.json` generated 15:57:00Z; current time ~18:44:17Z → ~2h47m elapsed → **proceed normally.**
 
 ---
 
-## Holdings Review
+## Why No Orders This Run — Account Nearly Fully Deployed
 
-**ALOT (AstroNova, 7 × $15.58):** Last ~$15.55 (−0.2% vs avg). Fresh catalyst today: Q1 results beat + 16% aerospace surge (Bullish 0.492, published 10:29 UTC). Thesis live. **HOLD.**
-
-**AVR (Anteris Medical, 15 × $9.87):** Last $9.45 (−4.2% vs avg). French regulatory clearance for PARADIGM expansion (Bullish 0.81, published 10:09 UTC). −4.2% well above dead-money −8% threshold; catalyst still live. **HOLD.**
-
-**DRTS (Alpha Tau Medical, 6 × $10.52):** Current ~$9.40 (−10.6% vs avg). **Dead-money cut — ALL 4 CONDITIONS MET:**
-1. ✓ Materially RED: −10.6% vs avg $10.52
-2. ✓ Relative weakness: stock red while broad tape (SPY +0.91%) is GREEN
-3. ✓ Catalyst gone/stale: not in today's funnel, no active catalyst
-4. ✓ Prior session: not opened today
-**→ SELL issued.** Freeing ~$56 in capital to recycle.
-
-**GASS (StealthGas, 15 × $9.51):** Prior ~$9.64 (+1.4% vs avg). Energy sector HOT (+0.85%). **HOLD.**
-
-**JFB (11 × $5.79):** Prior ~$5.69 (−1.7% vs avg). Well above dead-money threshold. **HOLD.**
-
-**NRXP (NRx Pharmaceuticals, 35 × $4.22):** Prior ~$4.10 (−2.8% vs avg). Healthcare weak but far from −8%. **HOLD.**
-
-**PLSE (Pulse Biosciences, 2 × $25.49):** Prior ~$25.52 (essentially flat). **HOLD.**
-
-**RXRX (Recursion Pharma, 18 × $3.29):** Prior ~$3.55 (+7.9% vs avg). **Green. HOLD.**
-
-**SLDB (Solid Biosciences, 9 × $6.86):** Prior ~$7.08 (+3.2% vs avg). **Green. HOLD.**
-
-**TISI (Team Inc., 3 × $18.09):** Current ~$17.72 (−2.0% vs avg). Industrials now +0.2% (green). Condition 1 NOT met (−2% far below −8% threshold). **HOLD.**
+10 positions open. Cost basis ~$977 of the ~$1,000 account. Estimated free cash ~$23 — not enough for any meaningful position above the $2 price floor. Three compelling setups identified (LASE, KSS, JACK); all added/maintained on watchlist to fire automatically when the SELL BRAIN frees capital.
 
 ---
 
-## New BUY: GIII — G-III Apparel
+## Finalists (watchlisted — no cash to execute)
 
-**GIII ($34.635, +2.7%) — news_smallcap / Consumer Cyclical**
-Catalyst: "G-III Apparel Posts Q1 Earnings Beat, Lifts Guidance" (Bullish 0.473, published 10:10 UTC today — ~5.7h old but stock only +2.7% = market underreacting). Volume 372K on a $1.46B cap confirms real participation. Consumer Cyclical sector is hot today (+0.93%) — one of the top 4 sectors. The guidance raise (not just a beat) is a forward-looking management signal that typically sustains price action through the session. Only +2.7% after a beat + guidance raise in a hot sector = early stage.
+### 1. LASE — Laser Photonics Corp ($3.33, +7.4%) ★ TOP PICK
+**Catalyst:** "Laser Shield Counter-Drone System Selected Under Vulcan Defense Initiative to Advance Anti-UAS Capabilities" — published 15:39 UTC today (~3 hrs ago, **FRESH**). Anti-drone / anti-UAS defense is a live macro narrative. **Volume: 29.8M shares** on a $130M mktcap company — extraordinary for this size; nearly the full float trading today. Stock up only 7.4% — early, not extended. Clean entry if a pullback develops.
+- Watchlisted: pullback trigger $3.20, entry $3.25, qty 45, TP $4.20, SL $2.95
+- Catalyst age: ~3 hrs — freshest actionable catalyst in today's funnel
+- Would be the pick if we had powder
 
-- Entry: 4 × $34.65 = $138.60 ≤ $150 ✓
-- Take-profit: $38.00 (+9.7%) — sensible intraday target
-- Stop-loss: $32.90 (−5.0%) — below today's low/support
-- R/R: $3.35 / $1.75 = 1.91:1 ✓
-- Catalyst age: ~5.7h (OK — today, intraday, volume confirming)
-- Capital source: DRTS cut (~$56) + remaining powder (~$99) = ~$155 available
+### 2. KSS — Kohl's Corp ($16.19, +4.69%)
+**Catalyst:** "Analyst lifts target after Q1 and shares rebound" — published 16:36 UTC today (~2 hrs ago, very fresh). Consumer Cyclical sector is #2 today (+1.10%) — direct sector tailwind. Volume 3.57M confirming broad participation. Only +4.69% — early stage.
+- Watchlisted: breakout trigger $16.50, entry $16.60, qty 9, TP $18.50, SL $15.50
+- Sector tailwind: Consumer Cyclical leading today
+
+### 3. JACK — Jack in the Box ($11.38, +0.53%)
+**Catalyst:** 8-K filed today — company to repay $110M of securitized debt and seek $650M refinancing. Structural positive (debt reduction). Published 14:10 UTC. Consumer sector. Stock barely moved (+0.53%) — either very early or market unimpressed.
+- Not added to watchlist: insufficient conviction; ~0.5% reaction to debt news is underwhelming and not a clean setup signal. Monitoring.
 
 ---
 
-## Finalists Considered
+## Holdings Review (10 positions, all managed by SELL BRAIN)
 
-**1. GIII ($34.635, +2.7%) — PICKED** (see above)
+| Symbol | Qty | Avg    | Last     | Unrealized $ | Notes                         |
+|--------|-----|--------|----------|--------------|-------------------------------|
+| ALOT   |  7  | $15.58 | $16.02   | +$3.08       | Green. AstroNova Q1 beat.     |
+| AVR    | 15  | $9.87  | $9.57    | −$4.50       | Drawdown; French reg catalyst |
+| GASS   | 15  | $9.51  | $9.44    | −$1.13       | Slight red; energy flat today |
+| GIII   |  4  | $34.80 | $34.51   | −$1.16       | Q1 beat + guidance raise      |
+| JFB    | 11  | $5.79  | $5.53    | −$2.86       | Drawdown −4.5%                |
+| NRXP   | 35  | $4.22  | $4.15    | −$2.63       | Drawdown −1.8%                |
+| PLSE   |  2  | $25.49 | $25.40   | −$0.19       | Essentially flat               |
+| RXRX   | 18  | $3.29  | $3.33    | +$0.72       | Slightly green                |
+| SLDB   |  9  | $6.86  | $6.49    | −$3.33       | Drawdown −5.4% (notable)      |
+| TISI   |  3  | $18.09 | $17.70   | −$1.17       | Drawdown −2.2%                |
 
-**2. ALVO ($4.03, +13.8%) — Passed / on watchlist**
-FDA accepted Entyvio biosimilar NDA (very strong durable catalyst, 14:08 UTC). Already +13.8% — stage concern on direct entry. Watchlist pullback at $3.80 remains active. Best idea today but too extended for direct buy now.
-
-**3. ELDN ($3.54, +3.8%) — Passed / on watchlist**
-Tegoprubart promising T1D trial data (Bullish 0.402, 11:39 UTC). Volume 827K, $273M cap. Healthcare sector headwind (−0.32%). Lower conviction vs GIII on sector alignment. Watchlist pullback at $3.30 remains active. Would have been the pick but GIII wins on sector alignment and catalyst definitiveness.
-
-**4. ELVA ($10.48, +1.4%) — Watchlist**
-Very bullish analyst PT raise (sentiment 0.862), Energy tailwind. Stock barely moved; waiting for pullback to $10.00.
+Anti-fixation: none of the above symbols were reconsidered for re-entry this run. SELL BRAIN managing exits.
 
 ---
 
 ## Notable Passes
-- **DLTH** (+29.2%): Q1 results, too extended.
-- **MPAA** (+42%): Extended blow-off.
-- **OCC** (+60%): Parabolic.
-- **CBRS** (+19.6%): Way over $150/share budget.
-- **INTC** (+12.9%): Way over $150/share budget.
-- **GLMD** (Galmed, Colospan acquisition): Fresh catalyst 15:07 UTC but price ~$0.696 — **SUB-$2 PRICE FLOOR VIOLATION**, hard skip.
-- **ARTV** ($6.76, −1.3%): RMAT designation + EULAR data (sentiment 0.86 — highest in funnel). Disqualified per prior-session loss and anti-re-entry rule.
-- **GHM** (−15.9%): Record revenue but stock sold off hard — guidance disappointment; potential put candidate if capital frees up.
-- **CAL** (+8.7%): Q1 beat, Consumer Cyclical hot. More extended than GIII; prefer GIII's earlier stage + guidance raise.
-- Sub-$2 names (ADCT, AIM, BYND, GMM, NCRA, PRPH, etc.) — below price floor.
+
+- **MPAA** (+32.1%, $13.99): Q4 earnings pop, already extended 32%. Stage rule: deprioritize >20%. Pass.
+- **DLTH** (+27.6%, $4.24): 8-K today, already up 27%+. Extended. Pass.
+- **TNGX** (+57.1%, $31.77): Tango Therapeutics 8-K + massive move. Blow-off. Hard pass.
+- **ABAT** (+27.2%, $3.96): American Battery Tech 8-K. Extended. Pass.
+- **INHD (+1329%), NPT (+637%), BYAH (+303%), SUNE (+299%):** LUDP halt-resume blow-offs. Parabolic manipulation traps. Hard passes.
+- **INTC** (+13.1%, $112): Large-cap, over $150 budget per meaningful position.
+- **LENZ** (−4.0%, $6.73): Bullish China licensing catalyst but stock DOWN on a risk_on day — negative relative strength. Pass.
+- **MLYS** (−4.1%, $22.72): Healthcare (weak sector); late-breaking data presentation but stock falling. Pass.
+- **GHM** (−15.6%, $90.43): Record fiscal 2026 revenue 8-K but stock sold off hard — market disappointment on something (guidance/margins?). Put candidate but healthcare not in theme.
+- **ALVO** (+14.8%, $4.07): Was in watchlist at $3.80 pullback; now up 14.8%. Updated watchlist trigger to $3.90 to track current levels. FDA Entyvio biosimilar NDA accepted — durable catalyst.
+- Sub-$2 names (AMOD, AREB, AIM, BYND, etc.): below price floor, skip regardless.
 
 ---
 
-## Watchlist Summary (6 active entries)
-- **MNKD**: breakout $3.65 — FUROSCIX PDUFA July 26 (primary catalyst; Afrezza pediatric May 29 now stale)
-- **GHRS**: breakout $26.50 — Phase 2b TRD hit primary endpoint, CINP conference June 26-29
-- **COYA**: breakout $4.75 — ALSTARS ALS trial cohort 1 active treatment extension (fresh today)
-- **ELDN**: pullback $3.30 — tegoprubart T1D promising results (today)
-- **ELVA**: pullback $10.00 — analyst huge PT raise (today)
-- **ALVO**: pullback $3.80 — FDA biosimilar Entyvio NDA accepted (today, fresh)
+## Watchlist Changes This Run
+- **ADDED:** LASE (defense/anti-drone pullback $3.20), KSS (Consumer Cyclical breakout $16.50)
+- **UPDATED:** ALVO — raised pullback trigger from $3.80 → $3.90 to match current $4.07 level
+- **KEPT:** MNKD (FUROSCIX PDUFA July), GHRS (Phase 2b TRD, CINP June 26-29), COYA (ALSTARS trial today), ELDN (T1D trial data), ELVA (analyst huge PT raise)
+- **Watchlist total:** 8 entries (under 12-item cap)
 
 ---
 
-## Capital After This Run (estimated)
-- 9 held positions + 1 new GIII = 10 positions
-- Est. deployed after DRTS exit + GIII entry: ~$976
-- Powder remaining: ~$24 (nearly fully deployed)
+## Capital Status
+- Open positions: 10 | Est. deployed: ~$977 | Powder: ~$23
+- Net unrealized: approx. −$13 across all positions
+- Market: 2h16m to close (18:44 UTC → market closes ~20:00 UTC/4pm ET)
