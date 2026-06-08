@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-08T20:05:23.435208+00:00",
+  "updated_utc": "2026-06-08T20:10:23.030004+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -60,9 +60,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.3104,
-      "unrealized_pct": 0.62,
-      "value": 59.59
+      "last": 3.32,
+      "unrealized_pct": 0.91,
+      "value": 59.76
     },
     {
       "symbol": "SLDB",
