@@ -1,20 +1,17 @@
-# Open Positions — updated 2026-06-08T19:58:52Z
+# Open Positions — updated 2026-06-08T20:17:31Z
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen | Unrealized $      |
 |--------|-----|---------|-------------|------|-----------|-------------------|
-| ALOT   |   7 | $15.58  | —           | —    | $16.01    | +$3.01 (+2.8%)    |
-| AVR    |  15 | $9.87   | —           | —    | $9.475    | −$5.93 (−4.0%)    |
-| GASS   |  15 | $9.51   | —           | —    | $9.36     | −$2.25 (−1.6%)    |
-| GIII   |   4 | $34.80  | —           | —    | $35.22    | +$1.68 (+1.2%)    |
-| JFB    |  11 | $5.79   | —           | —    | $5.395    | −$4.35 (−6.8%)    |
-| NRXP   |  35 | $4.22   | —           | —    | $4.285    | +$2.28 (+1.5%)    |
-| PLSE   |   2 | $25.49  | —           | —    | $24.99    | −$1.00 (−2.0%)    |
-| RXRX   |  18 | $3.29   | —           | —    | $3.315    | +$0.45 (+0.8%)    |
-| SLDB   |   9 | $6.86   | —           | —    | $6.425    | −$3.92 (−6.3%)    |
-| TISI   |   3 | $18.09  | —           | —    | $17.69    | −$1.20 (−2.2%)    |
+| ALOT   | 7   | $15.58  | sell brain  | sell brain | $15.68 | +$0.70  |
+| AVR    | 15  | $9.87   | sell brain  | sell brain | $9.34  | -$7.95  |
+| GASS   | 15  | $9.51   | sell brain  | sell brain | $9.34  | -$2.55  |
+| GIII   | 4   | $34.80  | sell brain  | sell brain | $34.92 | +$0.48  |
+| NRXP   | 35  | $4.22   | sell brain  | sell brain | $4.33  | +$3.85  |
+| PLSE   | 2   | $25.49  | sell brain  | sell brain | $24.84 | -$1.30  |
+| RXRX   | 18  | $3.29   | sell brain  | sell brain | $3.31  | +$0.37  |
+| SLDB   | 9   | $6.86   | sell brain  | sell brain | $6.41  | -$4.05  |
+| TISI   | 3   | $18.09  | sell brain  | sell brain | $17.57 | -$1.56  |
 
-**Open positions:** 10   **Est. cash deployed (cost basis):** ~$977 of ~$1,000   **Powder left:** ~$23
+**Open positions:** 9   **Est. cash deployed:** $900.86 of ~$1,000   **Powder left:** ~$99
 
-**Portfolio net unrealized:** −$11.23. Gainers: ALOT (+$3.01), GIII (+$1.68), NRXP (+$2.28), RXRX (+$0.45). Near-stop territory: JFB (−6.8%), SLDB (−6.3%) — most likely sell brain exit candidates; exits would free ~$120 for watchlist fills.
-
-*Take-profit / Stop show "—" — exits managed by the SELL BRAIN, not pre-set levels.*
+Total unrealized: **-$12.01** across open book.
