@@ -8,7 +8,8 @@ import urllib.request
 import datetime
 from IPython.display import HTML, display
 
-RAW = "https://raw.githubusercontent.com/caleblschulte0-ux/schwab-trader/main/"
+# CHANGE THIS to your own repo: "https://raw.githubusercontent.com/<your-user>/<your-repo>/main/"
+RAW = "https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO/main/"
 
 def grab(path):
     try:

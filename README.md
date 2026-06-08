@@ -35,10 +35,10 @@ If you're on a phone/Colab, skip the scripts below and use the notebook
 **`schwab_colab.ipynb`** instead — it's self-contained and walks you through
 each step in cells.
 
-**Open it directly in Colab** (replace nothing — this repo's path is baked in):
+**Open it directly in Colab** (replace `YOUR_GITHUB_USERNAME/YOUR_REPO` with your own):
 
 ```
-https://colab.research.google.com/github/caleblschulte0-ux/schwab-trader/blob/claude/schwab-trading-integration-wRfeP/schwab_colab.ipynb
+https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/schwab_colab.ipynb
 ```
 
 Then run the cells top to bottom:

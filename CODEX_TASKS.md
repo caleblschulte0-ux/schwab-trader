@@ -58,7 +58,7 @@ form companies file for material events (new contracts, M&A, offerings, executiv
 changes) — the freshest catalysts, often before the stock moves.
 
 **Sources (free, no key — but SEC REQUIRES a descriptive `User-Agent` header on every
-request, e.g. `schwab-trader/1.0 (caleblschulte0@gmail.com)`; SEC rate-limits to ~10
+request, e.g. `schwab-trader/1.0 (you@example.com)`; SEC rate-limits to ~10
 req/s, so make few calls):**
 - Recent 8-K filings (Atom): `https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type=8-K&company=&dateb=&owner=include&count=100&output=atom`
   — gives company name, **CIK**, filing datetime, and a link per filing.

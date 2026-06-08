@@ -43,8 +43,12 @@ MAX_HALTS             = 60      # cap same-day halt/resume names added as candid
 SEC_8K_ATOM_URL       = ("https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent"
                          "&type=8-K&company=&dateb=&owner=include&count=100&output=atom")
 SEC_TICKERS_URL       = "https://www.sec.gov/files/company_tickers.json"
+# SEC asks for a descriptive User-Agent with a contact email. Set SEC_CONTACT_EMAIL
+# to your own address (env var / repo secret); the placeholder default works for low
+# volume but identify yourself properly if you run this heavily.
+SEC_CONTACT_EMAIL     = os.environ.get("SEC_CONTACT_EMAIL", "schwab-trader-bot@example.com").strip()
 SEC_HEADERS           = {
-    "User-Agent": "schwab-trader/1.0 (caleblschulte0@gmail.com)",
+    "User-Agent": f"schwab-trader/1.0 ({SEC_CONTACT_EMAIL})",
     "Accept": "application/atom+xml, application/xml, application/json, text/xml",
 }
 MAX_8K                = 80      # cap fresh same-day SEC 8-K names added as candidates
