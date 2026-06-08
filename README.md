@@ -1,204 +1,132 @@
-# schwab-trader
+# schwab-trader 🤖📈
 
-A small, beginner-friendly Python integration for the **Charles Schwab Trader
-API**, built on the [`schwab-trader`](https://pypi.org/project/schwab-trader/)
-library. It covers the three things you asked for:
+An AI-driven, guardrailed **day-trading bot** for Charles Schwab. A "brain" (Claude)
+scans the market every few minutes, picks setups, and a separate executor places and
+manages the trades — all running on GitHub Actions, no server to babysit.
 
-1. **Auth setup** — log in once via OAuth, cache the tokens.
-2. **Account balances & positions** — see what you hold.
-3. **Place a basic limit order** — buy/sell at a price you choose.
+> **Status: paper-trading experiment.** It ships in **paper mode** (`DRY_RUN=true`) — it
+> simulates trades and tracks a P&L scorecard without touching real money. Prove it works
+> on paper before ever going live. Trading is risky; you run this at your own risk.
 
-> ⚠️ **This places *real* orders against a *real* brokerage account.** Test
-> with tiny quantities and limit prices far from the market so nothing fills
-> until you trust it.
-
----
-
-## How the pieces fit together
-
-| File | What it does |
-|------|--------------|
-| `.env` | Your secrets (App Key, Secret, callback URL). **Gitignored.** |
-| `.env.example` | A template to copy into `.env`. |
-| `config.py` | Loads `.env` into a tidy `Settings` object. |
-| `schwab_session.py` | Token persistence + builds an authenticated client. |
-| `auth_setup.py` | **Step 1.** One-time browser login → writes `token.json`. |
-| `accounts.py` | **Step 2.** Prints balances and positions. |
-| `place_order.py` | **Step 3.** Places a limit order. |
-| `token.json` | Cached OAuth tokens (auto-created). **Gitignored.** |
+**👉 To set up your own copy, follow [SETUP.md](SETUP.md).** This page explains what it is,
+how it works, how to tune it, and where to see results.
 
 ---
 
-## 📱 Running on Google Colab (mobile-friendly, no laptop needed)
+## How it works
 
-If you're on a phone/Colab, skip the scripts below and use the notebook
-**`schwab_colab.ipynb`** instead — it's self-contained and walks you through
-each step in cells.
+Three independent pieces, wired together through files in `signals/` and triggered by an
+external cron. The **brain decides**, the **executor acts** — they never run in the same
+process, so the bot can execute fast without the brain in the loop.
 
-**Open it directly in Colab** (replace `YOUR_GITHUB_USERNAME/YOUR_REPO` with your own):
+```mermaid
+flowchart LR
+    cron([cron-job.org<br/>every few min]) -->|triggers| BW[brain.yml]
+    cron -->|triggers| TW[trader.yml]
 
+    BW --> C[candidates.py<br/>gathers market funnel]
+    C --> CJ[(signals/<br/>candidates.json)]
+    CJ --> B{{Claude brain<br/>follows BRAIN.md}}
+    H[(signals/<br/>holdings.json)] --> B
+    B --> O[(signals/<br/>orders.json)]
+
+    TW --> E[bot.py<br/>executor + guardrails]
+    O --> E
+    E <-->|live quotes / orders| S[(Schwab API)]
+    E --> H
+    E --> L[(reports/<br/>paper_ledger.md)]
+    E --> A[analyze.py] --> TR[(reports/<br/>track_record.md)]
+
+    WD([watchdog.yml]) -.->|alerts if it stalls| E
 ```
-https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/schwab_colab.ipynb
-```
 
-Then run the cells top to bottom:
-1. Install + paste your App Key/Secret (hidden input — nothing is saved to the file).
-2. Tap the login URL → approve in your browser.
-3. Paste the `https://127.0.0.1/?code=...` URL back → saves `token.json`.
-4. View balances & positions.
-5. Place a test limit order (priced so it won't fill).
-
-> Colab wipes files when the runtime resets, so `token.json` won't persist
-> forever there. The notebook's last cell explains how to reconnect, and you
-> can mount Google Drive to keep tokens across sessions.
-
-The rest of this README covers the **command-line scripts** (for running on a
-regular computer).
+1. **`candidates.py`** builds a wide funnel — movers, upcoming earnings, trading halts, fresh
+   SEC 8-Ks, news — into `signals/candidates.json`.
+2. **The brain** (`.github/workflows/brain.yml` running Claude against **`BRAIN.md`**) reads that
+   funnel + what it currently holds, researches, and writes its picks to `signals/orders.json`.
+3. **`bot.py`** reads the picks, prices off Schwab's *live* quote, enforces the risk guardrails,
+   and places/manages trades. It re-writes `holdings.json` (the brain's memory) and the P&L ledger.
+4. **`analyze.py`** scores the closed trades (win rate, expectancy, by-signal breakdown).
+5. **`watchdog.yml`** independently alerts you if the executor stops running during market hours.
 
 ---
 
-## One-time setup
+## Repo map
 
-### 1. Install dependencies
+| File | What it is |
+|------|------------|
+| **`bot.py`** | The executor. Places/exits trades, enforces all risk guardrails, manages the paper book. |
+| **`candidates.py`** | Market-data funnel → `signals/candidates.json`. Pure stdlib, no Schwab needed. |
+| **`BRAIN.md`** | **The strategy, in plain English.** Edit this to change how the brain thinks. |
+| **`STRATEGY.md`** | The high-level risk rules / prime directive. |
+| **`analyze.py`** | Track-record analyzer → `reports/track_record.md` (win rate, expectancy, attribution). |
+| **`.github/workflows/`** | `brain.yml` (picks), `trader.yml` (executes), `watchdog.yml` (stall alert). |
+| **`auth_setup.py`** | One-time Schwab OAuth login → refresh token. |
+| **`accounts.py` / `place_order.py`** | Manual helpers: view balances, place a single order by hand. |
+| **`config.py` / `schwab_session.py`** | Credential loading + authenticated Schwab client. |
+| **`signals/`** | Live state the pieces pass between each other (orders, holdings, candidates, latest read). |
+| **`reports/`** | Human-readable output: `paper_ledger.md` (P&L) and `track_record.md` (edge analysis). |
+| **`SETUP.md`** | Step-by-step guide to run your own copy (built for a human *or* a Claude agent). |
+| **`dashboard_cell.py` / `index.html`** | Optional viewers for your data (set your repo path inside). |
+
+---
+
+## ⚙️ Tune it (the knobs you'll actually touch)
+
+Two ways to change behavior — pick whichever is easier:
+- **Just ask your Claude:** e.g. *"change the per-trade cap to $200"* — these are all clearly
+  labeled constants at the top of the file.
+- **Or edit it yourself** — here's where each common knob lives:
+
+| Want to change… | Set this | Where | Default |
+|-----------------|----------|-------|---------|
+| Paper vs. **real money** | `DRY_RUN` variable | GitHub repo Variables | `true` (paper) |
+| **Max $ per trade** | `MAX_DOLLARS_PER_TRADE` | `bot.py` (top) | `150` |
+| **Starting paper cash** | `PAPER_START_EQUITY` | `bot.py` (top) | `1000` |
+| **Trading window** (buffer before/after the session) | `SESSION_BUFFER_MIN` | `bot.py` (top) | `60` min |
+| **Penny-stock floor** | `MIN_SHARE_PRICE` | `bot.py` (top) | `$2` |
+| **Anti-chase slippage cap** | `MAX_SLIPPAGE` | `bot.py` (top) | `5%` |
+| **The actual strategy / how it picks** | edit the prose | **`BRAIN.md`** | — |
+| Funnel sources & limits | the `KNOBS` block | `candidates.py` (top) | — |
+
+The whole strategy is **plain-English in `BRAIN.md`** — change the trading style by editing that
+file, no code required.
+
+---
+
+## 📊 Where to see results
+
+After it runs, check these (they auto-update each cycle):
+- **`reports/paper_ledger.md`** — running equity, cash, open positions, realized P&L, every closed trade.
+- **`reports/track_record.md`** — the edge analysis: win rate, **expectancy**, drawdown, and a
+  breakdown of which *signals* actually make money.
+- **`signals/latest.md`** — the brain's reasoning for the most recent run (what it saw, why it picked).
+
+---
+
+## ❓ Troubleshooting / FAQ
+
+| Symptom | Cause & fix |
+|---------|-------------|
+| Bot runs fail with **`invalid_grant` / HTTP 400** | The Schwab refresh token expired (~7-day limit). Re-run `python auth_setup.py` and update the `SCHWAB_REFRESH_TOKEN` secret. |
+| **"Market CLOSED — no-op"** in the logs | Working as intended — the bot only trades **08:30–17:00 ET**, Mon–Fri. |
+| **No trades / nothing happening** | Check: `DRY_RUN` value, market hours, the token is valid, and `signals/orders.json` is fresh. |
+| **Weak or empty picks** | Missing `FMP_API_KEY` / `ALPHA_API_KEY` — the funnel degrades without them. |
+| **Brain never runs** | `CLAUDE_CODE_OAUTH_TOKEN` secret isn't set (see SETUP.md). |
+| Bot stopped and nobody noticed | The `executor-watchdog` workflow opens an alert issue when it stalls during market hours. |
+| **How do I go live?** | Only after `track_record.md` shows positive expectancy over a real sample — then set `DRY_RUN=false`. See SETUP.md. |
+| **How do I change the strategy?** | Edit **`BRAIN.md`** (plain English) and `STRATEGY.md`. No code needed. |
+
+---
+
+## Running the manual scripts locally (optional)
+
+The repo also includes hand-operated helpers (not needed for the automated bot):
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate   # optional but recommended
 pip install -r requirements.txt
+cp .env.example .env          # fill in your Schwab app key/secret
+python auth_setup.py          # one-time login -> token.json
+python accounts.py            # view balances & positions
+python place_order.py BUY AAPL 1 185.00   # place one order by hand
 ```
-
-### 2. Add your credentials
-
-Your `.env` file is already created with your App Key, Secret, and callback
-URL. If you ever need to recreate it:
-
-```bash
-cp .env.example .env
-# then edit .env and paste your real values
-```
-
-`.env` and `token.json` are listed in `.gitignore`, so they will **never** be
-committed.
-
-> 🔐 **Security:** anyone with your App Key + Secret can trade on your account.
-> If they're ever exposed (e.g. pasted into a chat or pushed to GitHub),
-> regenerate the secret in the
-> [Schwab Developer Portal](https://developer.schwab.com).
-
-> ℹ️ Your callback URL must **exactly** match what's registered for your app
-> in the portal. We use `https://127.0.0.1`.
-
----
-
-## Step 1 — Authenticate
-
-```bash
-python auth_setup.py
-```
-
-What happens:
-
-1. The script prints an authorization URL. **Open it in your browser** and log
-   in to Schwab, then approve the app.
-2. Schwab redirects your browser to `https://127.0.0.1/?code=...`. **The page
-   won't load** — nothing is running on `127.0.0.1`. That's expected and fine.
-3. **Copy the entire URL** from your browser's address bar and paste it back
-   into the script.
-4. The script swaps that one-time `code` for an **access token** and a
-   **refresh token**, and saves them to `token.json`.
-
-You only do this when your refresh token expires.
-
-**Token lifetimes (important):**
-
-- **Access token** — ~30 minutes. Used on every API call. The code refreshes
-  it automatically and silently using the refresh token.
-- **Refresh token** — ~7 days. When it expires, API calls start failing and
-  you'll be told to **re-run `python auth_setup.py`**.
-
-> The `code` in the redirect URL is only valid for ~30 seconds, so paste it
-> promptly. If it expires, just run the script again.
-
----
-
-## Step 2 — Balances & positions
-
-```bash
-python accounts.py
-```
-
-Example output:
-
-```
-Found 1 account(s).
-
-================================================================
-Account 12345678  (MARGIN)
-================================================================
-Balances:
-  Total account value   $25,431.12
-  Cash balance          $5,000.00
-  Buying power          $10,000.00
-  ...
-
-Positions (2):
-  SYMBOL           QTY     AVG PRICE       MKT VALUE       DAY P/L
-  --------------------------------------------------------------
-  AAPL              10       $180.50       $1,852.00        $17.00
-  MSFT               5       $410.20       $2,075.50       -$5.50
-```
-
----
-
-## Step 3 — Place a limit order
-
-A **limit order** only fills at your price *or better*:
-
-- **BUY limit** → fills at or **below** your limit price.
-- **SELL limit** → fills at or **above** your limit price.
-
-```bash
-# BUY 1 share of AAPL, only if it's $185.00 or lower
-python place_order.py BUY AAPL 1 185.00
-
-# SELL 1 share of AAPL at $999 (a price it won't reach — safe for testing)
-python place_order.py SELL AAPL 1 999.00
-
-# Skip the confirmation prompt (for scripts)
-python place_order.py BUY AAPL 1 185.00 --yes
-
-# Choose a specific account when you have more than one
-python place_order.py BUY AAPL 1 185.00 --account 12345678
-```
-
-By default the script shows a summary and asks you to type `yes` before
-sending. Orders are **DAY** orders (expire at market close if unfilled).
-
-> 💡 The account number shown in the Schwab app is **not** what the API uses —
-> it needs an encrypted "hash". The script fetches and maps this for you
-> automatically.
-
----
-
-## Troubleshooting
-
-| Symptom | Fix |
-|---|---|
-| `No saved tokens found...` | Run `python auth_setup.py` first. |
-| `Could not refresh your access token...` | Refresh token expired (~7 days). Re-run `auth_setup.py`. |
-| `Token exchange failed` | The `code` expired (re-run), or the callback URL / keys don't match the portal. |
-| `Account ... not found` | Use a number from `accounts.py`, or omit `--account`. |
-| Order rejected by Schwab | Check market hours, buying power, and that the symbol is tradable. |
-
----
-
-## Where to go next
-
-The `SchwabClient` exposes much more than this starter uses:
-
-- `client.get_quotes("AAPL")` — live quotes
-- `client.get_orders(...)`, `client.cancel_order(...)` — manage open orders
-- `client.create_market_order(...)`, `create_stop_order(...)`,
-  `create_bracket_order(...)` — other order types
-- `client.get_price_history(...)`, `get_option_chain(...)` — market data
-
-Build on `schwab_session.get_client()` to reuse the authenticated session.
