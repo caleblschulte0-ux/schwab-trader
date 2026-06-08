@@ -1,5 +1,5 @@
 {
-  "cash": 230.2648000000001,
+  "cash": 126.55480000000009,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -8,13 +8,6 @@
       "tp": 10.5,
       "sl": 5.9,
       "opened_utc": "2026-06-04T13:00:42.683106+00:00"
-    },
-    "NVGS": {
-      "qty": 2,
-      "entry": 23.55,
-      "tp": 26.5,
-      "sl": 19.5,
-      "opened_utc": "2026-06-04T13:00:42.886650+00:00"
     },
     "DRTS": {
       "qty": 6,
@@ -81,9 +74,30 @@
       "kind": "stock",
       "multiplier": 1,
       "opened_utc": "2026-06-05T18:40:21.855163+00:00"
+    },
+    "AVR": {
+      "qty": 15,
+      "entry": 9.87,
+      "tp": 10.41,
+      "sl": 9.16,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-08T13:20:22.638369+00:00",
+      "meta": {
+        "signals": [
+          "news_smallcap"
+        ],
+        "catalyst_age_h": 3.19,
+        "market_cap": 938378837.0,
+        "volume": 1332039,
+        "ref_price": 9.64,
+        "entry_ask": 9.85,
+        "entry_last": 9.69,
+        "tape_tone": "risk_off"
+      }
     }
   },
-  "realized_pnl": -21.185200000000002,
+  "realized_pnl": -23.9452,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -137,7 +151,21 @@
       "closed_utc": "2026-06-08T12:49:11.497891+00:00",
       "reason": "hit stop $50.0",
       "hold_h": 95.81
+    },
+    {
+      "symbol": "NVGS",
+      "qty": 2,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 23.55,
+      "exit": 22.17,
+      "pnl": -2.76,
+      "pnl_pct": -5.86,
+      "opened_utc": "2026-06-04T13:00:42.886650+00:00",
+      "closed_utc": "2026-06-08T13:20:19.324360+00:00",
+      "reason": "brain SELL",
+      "hold_h": 96.33
     }
   ],
-  "updated_utc": "2026-06-08T13:15:28.147681+00:00"
+  "updated_utc": "2026-06-08T13:20:25.074156+00:00"
 }
