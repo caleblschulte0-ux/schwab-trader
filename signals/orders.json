@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-08T20:17:31Z",
-  "funnel": {"scanned": 314, "leading": 98, "in_budget": 170, "had_catalyst": 75, "finalists": 4, "picked": 1},
-  "orders": [
-    {"symbol": "LASE", "action": "BUY", "instrument": "stock", "quantity": 30, "limit_price": 3.27}
-  ]
+  "generated_utc": "2026-06-08T20:47:22Z",
+  "funnel": {"scanned": 323, "leading": 98, "in_budget": 270, "had_catalyst": 88, "finalists": 3, "picked": 0},
+  "orders": []
 }

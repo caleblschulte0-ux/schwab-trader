@@ -1,75 +1,80 @@
-# Brain Run — 2026-06-08T20:17:31Z
+# Brain Run — 2026-06-08T20:47:22Z
 
-Funnel: scanned 314 → 170 fit budget → 75 with catalyst → 4 finalists → picked 1
+Funnel: scanned 323 → 270 fit budget → 88 with catalyst → 3 finalists → picked 0
 
 ---
 
 ## Market Tape
-SPY +0.3%, VIX 18.73 → **risk_on** (mild green). Top sectors: Consumer Defensive +1.23%, Consumer Cyclical +1.16%, Financial Services +0.31%, Technology +0.05%. Weakest: Utilities -1.36%, Real Estate -0.98%, Healthcare -0.93%. Broad market constructive but not ripping — normal discipline applies. Defense/small-cap catalyst plays run on their own thesis independent of macro sector tilt.
+SPY +0.23%, VIX 18.83 → **neutral**. Only Consumer Defensive (+1.22%) and Consumer Cyclical (+0.96%) are green. Technology flat (-0.07%), Healthcare (-1.13%), Real Estate (-1.2%), Utilities (-1.82%) all red. Broad breadth is narrow — a rotation day. Normal discipline; no forced entries.
 
 ---
 
 ## Portfolio Constraint
-9 positions open, ~$900.86 deployed of ~$1,000. **~$99 powder remaining.** Single position slot. Priority on the best fresh-catalyst early-stage name that fits within $99.
+10 positions open, ~$1,072 cost basis of ~$1,000 total capital. **Account effectively at capacity — no new buys.** The sell brain needs to create room before the next entry. Correct posture this run: zero new orders, update watchlist for when powder returns.
 
 ---
 
-## Pick: BUY LASE — 30 shares @ $3.27 limit (~$98.10)
+## No New Orders
 
-**Laser Photonics Corporation (LASE)** — counter-drone defense play.
-
-**Catalyst (fresh, confirmed real):** Department of War selected Laser Photonics' *Laser Shield Anti-Drone (LSAD) system* under the MEIA Vulcan Call for Solutions (Vulcan Defense Initiative) competitive evaluation program. This is a rigorous government procurement milestone — not a press release pump — advancing the company to an exclusive technical exchange with government engineers as part of the DoW's counter-UAS pipeline. Coverage broke on defense trade press (uasweekly.com) at **15:39 UTC today** (catalyst age: ~2 hours at scan time). Web search confirmed legitimate and material.
-
-**Why now / why early:**
-- +5.45% today on **32M volume** — extraordinary participation vs. $126M market cap (~25% of mktcap traded today). Institutional-level conviction.
-- Only +5% despite such volume = buyers accumulating, move likely still ahead.
-- $3.27/share — well above $2 floor; 30 shares × $3.27 = $98.10 within remaining ~$99 powder.
-- Not in holdings (confirmed no overlap).
-
-**Why defense right now:** Counter-drone/anti-UAS spending is a bipartisan US defense priority. A competitive program selection is the kind of de-risking event that drives multi-day moves as sector-focused institutions rotate in.
-
-**Risk:** Government evaluation selection is NOT a contract award — this is a procurement pipeline milestone. If some price discovery happened before today (original DoW selection was June 2), upside could be partially front-run. However, the 32M volume today confirms this is when the broad market found out.
-
-**Entry:** Limit $3.27 (near current ask). Bot executes at live ask ± 5%.
+**Account is fully deployed.** With 10 positions costing ~$1,072 in aggregate (above the ~$1,000 guideline), there is no meaningful room for another $150 position. Rather than force a tiny fractional entry or push further over capacity, the right call is to wait. Sitting out a run when the account is at capacity is correct behavior — this is not "no trade because we didn't look," it's "no trade because we looked at 323 names and none clears the bar given zero available powder."
 
 ---
 
-## Finalists Passed
+## Finalists Reviewed (watchlist candidates, not orders)
 
-**NRIX ($15.41, +5.26%) — Roche $2.3B BTK degrader deal (15:09 UTC, Reuters):**
-Extraordinary catalyst but stock already ran to $16.94 intraday (+15.7%) and pulled back, signaling sell-the-news digestion. Watchlist breakout trigger at $16.50 is the right structure — enter when demand proves itself on re-break. Not a direct buy here.
+**PMN ($9.71, +6.35%, ~$87M) — news_smallcap, HC Wainwright $18 PT**
+Fresh catalyst: HC Wainwright & Co. reiterated $18 price target this afternoon (16:09 UTC, ~4.5 hours old). Stock up only 6.35% despite a massive analyst gap ($9.71 vs $18 PT = 85% to target). Very small biotech — high risk — but the combination of fresh analyst attention, tiny cap, and barely-started move fits the early-entry profile. No cash to act now; added to watchlist at $10.00 breakout trigger.
 
-**KSS ($16.46, +6.44%) — Kohl's analyst upgrade (16:36 UTC, fresh):**
-Consumer Cyclical (top sector today), analyst target raise post-Q1. At $16.46 — essentially at the $16.50 watchlist breakout trigger; bot fires automatically if it clears. Would use all remaining powder. LASE is a cleaner early-stage small-cap setup with stronger volume signal.
+**LENZ ($6.72, -4.14%, ~$210M) — news_smallcap, China licensing deal**
+Bullish catalyst: China licensing partner deal for VIZZ presbyopia drug (15:40 UTC, fresh). Red flag: stock is DOWN 4.14% despite bullish news on a neutral tape. A stock that cannot rally on its own positive news is a warning, not an opportunity. Healthcare sector also among the weakest today (-1.13%). Passed.
 
-**ELVA ($10.345, ~flat) — Electrovaya analyst price target raise (13:03 UTC):**
-Bullish catalyst but stock barely moved despite the call — uncertain ignition. Healthcare sector weak today (-0.93%). Pullback watchlist trigger at $10.00 remains the better entry structure.
-
----
-
-## Current Holdings Read
-| Symbol | Qty | Avg | Last | Unrealized $ |
-|--------|-----|-----|------|--------------|
-| ALOT | 7 | $15.58 | $15.68 | +$0.70 |
-| AVR | 15 | $9.87 | $9.34 | -$7.95 |
-| GASS | 15 | $9.51 | $9.34 | -$2.55 |
-| GIII | 4 | $34.80 | $34.92 | +$0.48 |
-| NRXP | 35 | $4.22 | $4.33 | +$3.85 |
-| PLSE | 2 | $25.49 | $24.84 | -$1.30 |
-| RXRX | 18 | $3.29 | $3.31 | +$0.37 |
-| SLDB | 9 | $6.86 | $6.41 | -$4.05 |
-| TISI | 3 | $18.09 | $17.57 | -$1.56 |
-
-Mixed book (~$900.86 deployed). AVR (-5.4%) and SLDB (-6.6%) are the laggards — sell brain watching. NRXP (+2.6%), ALOT (+0.6%), RXRX (+0.6%), GIII (+0.3%) working. No re-buys issued for any held name (anti-chase rule enforced).
+**RLYB ($15.91, -0.25%, ~$84M) — news_smallcap, $215M merger**
+Bullish catalyst: Mintz advising on $215M private placement concurrent with Avenzo Therapeutics merger (15:39 UTC). However, private placements are dilutive and market indifference (stock flat) confirms no ignition. Passed.
 
 ---
 
-## Watchlist Status (8 active triggers)
-- **NRIX** breakout $16.50 — not triggered ($15.41). Valid, Roche deal thesis intact.
-- **KSS** breakout $16.50 — nearly at trigger ($16.46). Could fire anytime.
-- **MNKD** breakout $3.65 — not triggered ($3.40). FUROSCIX PDUFA Jul 26 pre-position thesis.
-- **GHRS** breakout $26.50 — not in today's candidates; TRD Phase 2b data catalyst intact.
-- **COYA** breakout $4.75 — barely moved on ALS trial news; volume too thin to trigger yet.
+## Notable Names Passed
+
+**ALVO ($4.24, +19.77%)** — FDA accepted Entyvio biosimilar NDA (real, durable catalyst, 14:08 UTC). Already extended 20%; watchlist pullback at $3.90 still live.
+
+**NRIX ($15.64, +6.83%)** — Roche $2.3B / $700M upfront BTK degrader deal (15:09 UTC). Pulled back from $16.94 high. Watchlist breakout at $16.50 remains the highest-conviction entry in the queue.
+
+**KSS ($16.23, +4.98%)** — Consumer Cyclical thesis, analyst upgrade. Watchlist breakout at $16.50 still live and only $0.27 away — very close to triggering.
+
+**POET ($12.28, +3.54%)** — AI photonics Lumilens deal + $400M raise. Catalyst STALE: original announcement June 3 (5 days ago). Stock has sold off from $15.48 on dilution fears. Today's headline was recycled coverage, not a new development. Hard pass.
+
+**OCC ($19.00, +54.47%)** — Optical Cable Q2 earnings beat, fresh (17:11 UTC). Already +54% intraday — blow-off, no room. Hard pass.
+
+**INTC ($110.27, +11.19%)** — Broad semiconductor rally day (MRVL +9.6%, MU +9.9%, SOXL +15.8%). No specific INTC catalyst in funnel. Only 1 share fits $150 budget; already up 11%; no cash anyway.
+
+---
+
+## Holdings Read (2026-06-08T20:25Z snapshot)
+
+| Symbol | Qty | Avg | Last | Unreal % | Value |
+|--------|-----|-----|------|----------|-------|
+| ALOT | 7 | $15.58 | $16.41 | +5.33% | $114.87 |
+| AVR | 15 | $9.87 | $9.52 | -3.55% | $142.80 |
+| GASS | 15 | $9.51 | $9.34 | -1.79% | $140.10 |
+| GIII | 4 | $34.80 | $34.92 | +0.34% | $139.68 |
+| LASE | 18 | $3.26 | $3.25 | -0.31% | $58.50 |
+| NRXP | 35 | $4.22 | $4.35 | +3.08% | $152.25 |
+| PLSE | 2 | $25.49 | $24.84 | -2.55% | $49.68 |
+| RXRX | 18 | $3.29 | $3.32 | +0.90% | $59.75 |
+| SLDB | 9 | $6.86 | $6.41 | -6.56% | $57.69 |
+| TISI | 3 | $18.09 | $17.57 | -2.87% | $52.71 |
+
+ALOT and NRXP leading. SLDB (-6.56%) is the primary laggard and most likely sell-brain candidate. AVR (-3.55%) also under water. Semiconductor rally didn't lift RXRX or LASE materially. No re-buys issued on any held name — anti-chase rule enforced.
+
+---
+
+## Watchlist Status (9 active triggers)
+- **NRIX** breakout $16.50 — not triggered ($15.64). Roche deal thesis intact; highest-conviction entry.
+- **KSS** breakout $16.50 — very close ($16.23, +$0.27 to trigger). Consumer Cyclical hot today.
+- **MNKD** breakout $3.65 — not triggered ($3.39). FUROSCIX PDUFA Jul 26 pre-position.
+- **GHRS** breakout $26.50 — TRD Phase 2b data catalyst intact; CNS congress June 26-29.
+- **COYA** breakout $4.75 — ALS trial extension started; not yet triggered.
 - **ELDN** pullback $3.30 — healthcare weak today; pullback entry thesis valid.
-- **ALVO** pullback $3.90 — still at $4.24, hasn't pulled back. FDA NDA acceptance catalyst intact.
-- **ELVA** pullback $10.00 — still at $10.35, hasn't pulled back to trigger.
+- **ALVO** pullback $3.90 — still at $4.24; hasn't pulled back. FDA NDA catalyst intact.
+- **ELVA** pullback $10.00 — still at $10.35; hasn't pulled back. Analyst PT raise catalyst.
+- **PMN** breakout $10.00 — NEW. HC Wainwright $18 PT, $87M micro-cap biotech, barely moved.
