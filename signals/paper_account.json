@@ -1,5 +1,5 @@
 {
-  "cash": 126.55480000000009,
+  "cash": 2.714800000000082,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -95,6 +95,27 @@
         "entry_last": 9.69,
         "tape_tone": "risk_off"
       }
+    },
+    "ARTV": {
+      "qty": 18,
+      "entry": 6.88,
+      "tp": 8.35,
+      "sl": 7.15,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-08T14:20:35.036000+00:00",
+      "meta": {
+        "signals": [
+          "news_smallcap"
+        ],
+        "catalyst_age_h": 3.84,
+        "market_cap": 178454372.0,
+        "volume": 94105,
+        "ref_price": 7.65,
+        "entry_ask": 6.87,
+        "entry_last": 6.87,
+        "tape_tone": "risk_on"
+      }
     }
   },
   "realized_pnl": -23.9452,
@@ -167,5 +188,5 @@
       "hold_h": 96.33
     }
   ],
-  "updated_utc": "2026-06-08T14:15:52.678031+00:00"
+  "updated_utc": "2026-06-08T14:20:43.193692+00:00"
 }
