@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-06-08T12:45:18Z",
-  "n": 3,
-  "expectancy": -5.5867,
+  "updated_utc": "2026-06-08T12:49:16Z",
+  "n": 4,
+  "expectancy": -5.2975,
   "win_rate": 0.0,
-  "total_realized": -16.76,
+  "total_realized": -21.19,
   "profit_factor": 0.0,
-  "max_drawdown": -16.76,
+  "max_drawdown": -21.19,
   "by_signal": {
     "untagged": {
-      "n": 3,
+      "n": 4,
       "win_rate": 0.0,
-      "expectancy": -5.5867
+      "expectancy": -5.2975
     }
   },
   "sample_sufficient": false
