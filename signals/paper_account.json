@@ -1,5 +1,5 @@
 {
-  "cash": 84.24480000000008,
+  "cash": 1.7448000000000832,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -8,13 +8,6 @@
       "tp": 10.5,
       "sl": 5.9,
       "opened_utc": "2026-06-04T13:00:42.683106+00:00"
-    },
-    "DRTS": {
-      "qty": 6,
-      "entry": 10.52,
-      "tp": 13.5,
-      "sl": 9.0,
-      "opened_utc": "2026-06-04T13:20:29.481632+00:00"
     },
     "TISI": {
       "qty": 3,
@@ -110,9 +103,30 @@
         "entry_last": 15.49,
         "tape_tone": "risk_on"
       }
+    },
+    "GIII": {
+      "qty": 4,
+      "entry": 34.8,
+      "tp": 38.0,
+      "sl": 32.9,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-08T16:00:39.697867+00:00",
+      "meta": {
+        "signals": [
+          "news_smallcap"
+        ],
+        "catalyst_age_h": 5.84,
+        "market_cap": 1461225955.0,
+        "volume": 372454,
+        "ref_price": 34.65,
+        "entry_ask": 34.73,
+        "entry_last": 34.7,
+        "tape_tone": "risk_on"
+      }
     }
   },
-  "realized_pnl": -15.275199999999998,
+  "realized_pnl": -21.6952,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -218,7 +232,21 @@
       "closed_utc": "2026-06-08T15:00:35.781665+00:00",
       "reason": "brain SELL",
       "hold_h": 97.0
+    },
+    {
+      "symbol": "DRTS",
+      "qty": 6,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 10.52,
+      "exit": 9.45,
+      "pnl": -6.42,
+      "pnl_pct": -10.17,
+      "opened_utc": "2026-06-04T13:20:29.481632+00:00",
+      "closed_utc": "2026-06-08T16:00:30.128714+00:00",
+      "reason": "brain SELL",
+      "hold_h": 98.67
     }
   ],
-  "updated_utc": "2026-06-08T15:55:29.641519+00:00"
+  "updated_utc": "2026-06-08T16:00:43.602271+00:00"
 }

@@ -1,15 +1,15 @@
 # Track Record — Edge Analysis
 
-_Updated 2026-06-08T15:55:29Z · source: signals/paper_account.json (paper / DRY_RUN)_
+_Updated 2026-06-08T16:00:43Z · source: signals/paper_account.json (paper / DRY_RUN)_
 
-> ⚠️ **SAMPLE TOO SMALL (7 closed trades, need ≥20).** Everything below is DIRECTIONAL ONLY — not statistically conclusive. Do not change strategy parameters or go live off this. Let it gather a clean sample first.
+> ⚠️ **SAMPLE TOO SMALL (8 closed trades, need ≥20).** Everything below is DIRECTIONAL ONLY — not statistically conclusive. Do not change strategy parameters or go live off this. Let it gather a clean sample first.
 
 ## Headline
 
 **Verdict: NEGATIVE EXPECTANCY ❌**  
-**Closed trades:** 7   **Win rate:** 14%   **Total realized:** $-15.28  
-**Expectancy (avg $/trade):** $-2.18   **Avg %/trade:** -3.60%  
-**Avg win:** $+10.92   **Avg loss:** $-4.37   **Payoff ratio:** 2.50   **Profit factor:** 0.42  
+**Closed trades:** 8   **Win rate:** 12%   **Total realized:** $-21.70  
+**Expectancy (avg $/trade):** $-2.71   **Avg %/trade:** -4.42%  
+**Avg win:** $+10.92   **Avg loss:** $-4.66   **Payoff ratio:** 2.34   **Profit factor:** 0.33  
 **Max drawdown (realized):** $-26.20
 
 ## Entry slippage (stocks)
@@ -24,32 +24,32 @@ _Updated 2026-06-08T15:55:29Z · source: signals/paper_account.json (paper / DRY
 | Bucket | Trades | Win% | Total $ | Expectancy $ | Avg Win | Avg Loss | PF |
 |--------|-------:|-----:|--------:|-------------:|--------:|---------:|---:|
 | news_smallcap | 1 | 0% | $-2.25 | $-2.25 | $+0.00 | $-2.25 | 0.00 |
-| untagged | 6 | 17% | $-13.03 | $-2.17 | $+10.92 | $-4.79 | 0.46 |
+| untagged | 7 | 14% | $-19.45 | $-2.78 | $+10.92 | $-5.06 | 0.36 |
 
 ### By macro tape at entry
 
 | Bucket | Trades | Win% | Total $ | Expectancy $ | Avg Win | Avg Loss | PF |
 |--------|-------:|-----:|--------:|-------------:|--------:|---------:|---:|
 | risk_on | 1 | 0% | $-2.25 | $-2.25 | $+0.00 | $-2.25 | 0.00 |
-| untagged | 6 | 17% | $-13.03 | $-2.17 | $+10.92 | $-4.79 | 0.46 |
+| untagged | 7 | 14% | $-19.45 | $-2.78 | $+10.92 | $-5.06 | 0.36 |
 
 ### By catalyst freshness
 
 | Bucket | Trades | Win% | Total $ | Expectancy $ | Avg Win | Avg Loss | PF |
 |--------|-------:|-----:|--------:|-------------:|--------:|---------:|---:|
 | 2-12h | 1 | 0% | $-2.25 | $-2.25 | $+0.00 | $-2.25 | 0.00 |
-| no-catalyst/untagged | 6 | 17% | $-13.03 | $-2.17 | $+10.92 | $-4.79 | 0.46 |
+| no-catalyst/untagged | 7 | 14% | $-19.45 | $-2.78 | $+10.92 | $-5.06 | 0.36 |
 
 ### By exit reason
 
 | Bucket | Trades | Win% | Total $ | Expectancy $ | Avg Win | Avg Loss | PF |
 |--------|-------:|-----:|--------:|-------------:|--------:|---------:|---:|
-| brain SELL | 3 | 33% | $-0.32 | $-0.11 | $+10.92 | $-5.62 | 0.97 |
+| brain SELL | 4 | 25% | $-6.74 | $-1.69 | $+10.92 | $-5.89 | 0.62 |
 | hit stop | 4 | 0% | $-14.96 | $-3.74 | $+0.00 | $-3.74 | 0.00 |
 
 ### By kind
 
 | Bucket | Trades | Win% | Total $ | Expectancy $ | Avg Win | Avg Loss | PF |
 |--------|-------:|-----:|--------:|-------------:|--------:|---------:|---:|
-| stock | 7 | 14% | $-15.28 | $-2.18 | $+10.92 | $-4.37 | 0.42 |
+| stock | 8 | 12% | $-21.70 | $-2.71 | $+10.92 | $-4.66 | 0.33 |
 
