@@ -1,6 +1,11 @@
 {
-  "updated_utc": "2026-06-08T13:20:18.739143+00:00",
+  "updated_utc": "2026-06-08T13:25:19.036569+00:00",
   "holdings": [
+    {
+      "symbol": "AVR",
+      "quantity": 15,
+      "avg_price": 9.87
+    },
     {
       "symbol": "DRTS",
       "quantity": 6,
@@ -20,11 +25,6 @@
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22
-    },
-    {
-      "symbol": "NVGS",
-      "quantity": 2,
-      "avg_price": 23.55
     },
     {
       "symbol": "PLSE",
