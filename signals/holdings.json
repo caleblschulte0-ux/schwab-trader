@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-09T20:45:26.298695+00:00",
+  "updated_utc": "2026-06-09T20:50:22.235860+00:00",
   "holdings": [
     {
       "symbol": "APLD",
@@ -33,9 +33,9 @@
       "quantity": 14,
       "avg_price": 2.12,
       "opened_utc": "2026-06-09T15:21:12.349780+00:00",
-      "last": 2.11,
-      "unrealized_pct": -0.47,
-      "value": 29.54
+      "last": 2.1,
+      "unrealized_pct": -0.94,
+      "value": 29.4
     },
     {
       "symbol": "GASS",
@@ -87,9 +87,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.2126,
-      "unrealized_pct": -2.35,
-      "value": 57.83
+      "last": 3.22,
+      "unrealized_pct": -2.13,
+      "value": 57.96
     },
     {
       "symbol": "SLDB",
