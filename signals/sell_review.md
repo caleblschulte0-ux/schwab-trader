@@ -1,36 +1,34 @@
-# Sell Brain Review — 2026-06-09T18:20:00Z
+# Sell Brain Review — 2026-06-09T21:53:41Z
 
 **0 exits proposed. No urgent flags. All 10 positions HOLD.**
 
-> **Web search this run:** SLDB — primary watch from previous run. June 10 annual meeting confirmed for tomorrow (8:00 AM ET, virtual). Proposals: election of directors, ratification of auditor, and **increase authorized shares from 240M → 480M**. No capital raise announcement or offering terms found pre-vote. The authorization is a prerequisite for a raise, not a raise itself. No clinical failures, no going-concern signal. Thesis intact — but **monitor immediately post-vote**: if a follow-on offering or ATM program is announced following the June 10 vote, reassess SLDB urgently.
+> **Web search this run:** Searched AVR (Anteris Technologies — PARADIGM pivotal trial thesis), SLDB (Solid Biosciences — June 10 shareholder vote to double authorized shares 240M→480M), GASS (StealthGas — Q1 2026 results), and TISI (Team Inc. — Q1 2026 results). No thesis-breaking events found across any position.
 
 ---
 
 ## Per-Position Rulings
 
-| Symbol | Decision | Reasoning |
-|--------|----------|-----------|
-| ALOT   | **HOLD** | Opened June 8, +3.02% — one of the book's two leaders. Positive follow-through, no negative news. Thesis intact. |
-| AVR    | **HOLD** | Opened June 8, −5.27%. Unexplained same-day drawdown on a 1-day-old biotech; no confirmed June 2026 thesis-breaking event. Prior search found only stale 2024-era data unrelated to this position. Healthcare tape was −1.13% that session. Cannot sell on price alone — HOLD. |
-| GASS   | **HOLD** | Opened June 5, −1.79% over 4 sessions. Energy sector −0.57% headwind is the explanation. No adverse news in funnel or prior searches. Thesis unbroken. |
-| GIII   | **HOLD** | Opened June 8, −1.26%. Trivial same-day drift on a fresh Consumer Cyclical entry; insufficient time to judge thesis. HOLD by default. |
-| LASE   | **HOLD** | Opened June 8, +0.31%. Vulcan Defense Initiative counter-drone selection catalyst (published June 8T15:39 UTC) confirmed live in candidates.json funnel (33M+ volume, bullish). Government procurement thesis is ~1 day old and fully intact. |
-| NRXP   | **HOLD** | Opened June 5, +3.08% — co-leader of the book. Working, thesis intact, no adverse news. |
-| PLSE   | **HOLD** | Opened June 5, −2.90% over 4 sessions. Healthcare sector drag; no clinical event, FDA action, or thesis failure identified. Price action only, not thesis action. |
-| RXRX   | **HOLD** | Opened June 5, +0.61% over 4 sessions — showing relative strength inside weak Healthcare. AI drug discovery thesis intact; no adverse news. |
-| SLDB   | **HOLD** | Opened June 4, −6.56% — most stressed position. **This run's web search:** June 10 annual meeting confirmed; only vote on share authorization (240M→480M), no capital raise announcement yet. No clinical failures, no FDA rejections, no going-concern signals. CEO actively presenting at Goldman Sachs (June 8) and Jefferies (June 3) conferences. Drawdown traces to Healthcare tape weakness, not a broken thesis. **Critical watch: if a follow-on offering or ATM program is announced post-June 10 vote, reassess immediately.** |
-| TISI   | **HOLD** | Opened June 4, −2.87% over 5 sessions. Industrials sector −0.78% headwind. No adverse news found. Thesis unbroken. |
+| Symbol | Held | Unreal% | Decision | Reasoning |
+|--------|------|---------|----------|-----------|
+| ALOT   | 1d   | +3.02%  | **HOLD** | One of the book's two leaders. Opened June 8, no negative news, positive follow-through. Thesis intact. |
+| AVR    | 1d   | −5.27%  | **HOLD** | Anteris Technologies — PARADIGM pivotal trial thesis. Sharp day-one drawdown, but Healthcare sector was −1.13% June 8; no confirmed trial failure, fraud, or going-concern event found. Cannot sell on price alone. **Watch: next data readout or trial news.** |
+| GASS   | 4d   | −1.79%  | **HOLD** | StealthGas — Q1 2026 earnings beat (EPS $0.40 vs $0.33 est., revenue +14.4%); strong Q2/FY guidance. Catalyst confirmed and intact, −1.79% is normal post-earnings mean-reversion on a thin-volume shipper. Story unbroken. |
+| GIII   | 1d   | −1.26%  | **HOLD** | G-III Apparel — one day old, trivial same-day drift. Consumer Cyclical sector was +0.96% June 8 (mild headwind relative to peer group). No thesis data yet to evaluate. HOLD by default. |
+| LASE   | 1d   | +0.31%  | **HOLD** | Laser Shield counter-drone system selected under Vulcan Defense Initiative (published June 8 ~15:39 UTC). Catalyst is roughly 30 hours old, still fresh, confirmed in candidates.json (33M+ volume, bullish). Defense procurement thesis fully intact. |
+| NRXP   | 4d   | +3.08%  | **HOLD** | NRx Pharmaceuticals — co-leader of the book. Working, buy brain highlighted positively. No adverse news, thesis intact. |
+| PLSE   | 4d   | −2.90%  | **HOLD** | Pulse Biosciences — 4 days, −2.90%. Healthcare sector weakness accounts for the drag. No clinical event, FDA action, or structural miss found. Price action only, not thesis action. |
+| RXRX   | 4d   | +0.61%  | **HOLD** | Recursion Pharmaceuticals — AI drug discovery. Showing relative strength inside a weak Healthcare tape. No adverse news, thesis intact. |
+| SLDB   | 5d   | −6.56%  | **HOLD** | Solid Biosciences — most stressed position (SGT-003 / Duchenne muscular dystrophy thesis). **Web search confirmed:** June 10 annual meeting (tomorrow morning) votes on increasing authorized shares 240M→480M. No capital raise announcement found yet; authorization is a prerequisite, not a raise itself. CEO presented at Goldman Sachs June 8 and Jefferies June 3 — no going-concern signals. No clinical failures or FDA rejections. Drawdown maps to broad Healthcare weakness. **HOLD now — but if a follow-on offering or ATM program is announced post-June 10 vote, reassess immediately and escalate to SELL.** |
+| TISI   | 5d   | −2.87%  | **HOLD** | Team Inc. — Q1 2026 results strong (revenue +8.3% YoY, EBITDA +45.2%, margin expansion). Full-year guidance raised. Industrials sector −0.78% headwind explains the modest pullback from purchase price. Thesis confirmed by earnings; no adverse news. |
 
 ---
 
 ## Summary
 
-Clean hold run — zero exits. Every drawdown maps to sector headwinds (Healthcare −1.13%, Industrials −0.78%, Energy −0.57%) or normal same-day drift on the June 8 entries. No thesis has broken across any of the 10 positions.
+Clean hold run — zero exits proposed. Every drawdown in the book traces to sector-level headwinds (Healthcare −1.13%, Industrials −0.78%, Energy −0.57%) or normal same-day drift on the June 8 entries. No single position has a broken original thesis.
 
-**Primary watch for next run:** SLDB — June 10 annual meeting vote on share doubling occurs tomorrow morning. If a capital raise announcement follows the vote, thesis economics change and an immediate SELL flag is warranted. Secondary watch: AVR, whose large same-day drawdown (−5.27%) remains unexplained by confirmed news.
+**Top watches for next run:**
+1. **SLDB** — June 10 authorization vote is the binary event to track. If dilutive capital raise is announced in the immediate aftermath, that is a thesis-changing event warranting a sell flag.
+2. **AVR** — −5.27% day-one drawdown remains unexplained by specific news; any confirmed trial setback or regulatory action would break the thesis.
 
-NRXP (+3.08%) and ALOT (+3.02%) lead the book. LASE's defense procurement catalyst is intact at roughly the day-1 mark.
-
-Sources:
-- [Solid Biosciences DEF 14A FY2026](https://www.sec.gov/Archives/edgar/data/0001707502/000119312526173642/sldb-20260422.htm)
-- [Solid Biosciences seeks approval to double authorized shares at 2026 meeting](https://www.stocktitan.net/sec-filings/SLDB/def-14a-solid-biosciences-inc-definitive-proxy-statement-c74ba9274d82.html)
+**Leaders:** NRXP (+3.08%) and ALOT (+3.02%). LASE's defense procurement catalyst is ~30 hrs old and still live.
