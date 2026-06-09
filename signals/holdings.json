@@ -1,41 +1,41 @@
 {
-  "updated_utc": "2026-06-09T19:10:25.188972+00:00",
+  "updated_utc": "2026-06-09T19:15:30.416915+00:00",
   "holdings": [
     {
       "symbol": "APLD",
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 41.875,
-      "unrealized_pct": 1.05,
-      "value": 83.75
+      "last": 41.68,
+      "unrealized_pct": 0.58,
+      "value": 83.36
     },
     {
       "symbol": "ATHE",
       "quantity": 1,
       "avg_price": 4.23,
       "opened_utc": "2026-06-09T13:35:32.693966+00:00",
-      "last": 4.33,
-      "unrealized_pct": 2.36,
-      "value": 4.33
+      "last": 4.29,
+      "unrealized_pct": 1.42,
+      "value": 4.29
     },
     {
       "symbol": "AVR",
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.43,
-      "unrealized_pct": -4.46,
-      "value": 141.45
+      "last": 9.41,
+      "unrealized_pct": -4.66,
+      "value": 141.15
     },
     {
       "symbol": "EVTL",
       "quantity": 14,
       "avg_price": 2.12,
       "opened_utc": "2026-06-09T15:21:12.349780+00:00",
-      "last": 2.125,
-      "unrealized_pct": 0.24,
-      "value": 29.75
+      "last": 2.12,
+      "unrealized_pct": 0.0,
+      "value": 29.68
     },
     {
       "symbol": "GASS",
@@ -51,27 +51,27 @@
       "quantity": 4,
       "avg_price": 34.8,
       "opened_utc": "2026-06-08T16:00:39.697867+00:00",
-      "last": 34.38,
-      "unrealized_pct": -1.21,
-      "value": 137.52
+      "last": 34.36,
+      "unrealized_pct": -1.26,
+      "value": 137.44
     },
     {
       "symbol": "NRXP",
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 3.89,
-      "unrealized_pct": -7.82,
-      "value": 136.15
+      "last": 3.885,
+      "unrealized_pct": -7.94,
+      "value": 135.97
     },
     {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 25.99,
-      "unrealized_pct": 1.96,
-      "value": 51.98
+      "last": 25.8,
+      "unrealized_pct": 1.22,
+      "value": 51.6
     },
     {
       "symbol": "PMN",
