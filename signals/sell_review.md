@@ -1,34 +1,63 @@
-# Sell Brain Review — 2026-06-09T23:59:00Z
+# Sell Review — 2026-06-09T12:00:00Z
 
-**Web search this run: SLDB** — No thesis-breaking news found. Management presented at Goldman Sachs 47th Annual Global Healthcare Conference on June 8. Inducement grants (new hiring) signal ongoing operations. Annual meeting June 10 will vote on doubling authorized shares — dilution watch item, but not a thesis killer. Phase 3 thesis intact. HOLD confirmed.
+**One routine exit proposed: LASE. No urgent sells.**
+
+Web search this run: **SLDB** — Goldman Sachs conference presentation Jun 8 confirms management actively telling the story. No clinical failure, no FDA hold. Annual meeting Jun 10 will vote on doubling authorized shares (dilution watch item, not thesis break). Phase 3 DMD thesis intact. HOLD confirmed.
+
+Prior-run LASE sell recommendation reviewed and **confirmed**: quick-trade catalyst has been flat at entry with no follow-through across multiple consecutive runs.
 
 ---
 
 ## Per-Position Rulings
 
-| Symbol | Opened | Unreal%  | Decision | One-line Reason |
-|--------|--------|----------|----------|-----------------|
-| ALOT   | Jun 8  | +3.02%   | **HOLD** | Positive drift, no adverse catalyst in any feed; thesis intact. |
-| AVR    | Jun 8  | −5.27%   | **HOLD** | Drawdown is Healthcare sector drag; no safety signal, enrollment halt, or trial failure — thesis intact. |
-| GASS   | Jun 5  | −1.79%   | **HOLD** | LPG shipping thesis is structural; minor drift on soft Energy tape, no adverse catalyst; reassess as quick-trade if no fresh catalyst surfaces next run. |
-| GIII   | Jun 8  | −1.26%   | **HOLD** | Trivial 1-day drawdown; no guidance cut, tariff shock, or adverse event visible. |
-| LASE   | Jun 8  | +0.31%   | **SELL** | Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection) is fully spent over multiple consecutive runs — no follow-on contract, no new defense announcement, price flat at entry. Dead money. |
-| NRXP   | Jun 5  | +3.08%   | **HOLD** | Leading the book, no adverse news; thesis intact. |
-| PLSE   | Jun 5  | −2.90%   | **HOLD** | Healthcare sector headwind; no clinical event, trial setback, or guidance revision — sector drag only. |
-| RXRX   | Jun 5  | +0.61%   | **HOLD** | AI drug-discovery thesis undisturbed; flat-to-positive, no negative signal. |
-| SLDB   | Jun 4  | −6.56%   | **HOLD** | Web-searched this run: Goldman Sachs conference presentation Jun 8, no new adverse Phase 3 event, no FDA clinical hold. Drawdown is unexplained price volatility; thesis intact. |
-| TISI   | Jun 4  | −2.87%   | **HOLD** | Operational turnaround confirmed last run (Q1 2026 revenue +8.3%, positive full-year guidance, new CEO); multi-week story, not a spent quick trade. |
+**ALOT** — HOLD
+Opened Jun 8, +3.02%. Positive drift, no adverse news in any feed. Thesis intact.
+
+**AVR** — HOLD
+Opened Jun 8, -5.27%. Healthcare sector drag; no safety signal, enrollment halt, or trial failure identified. Drawdown alone is not a sell trigger. Monitor for any clinical or dilution event.
+
+**GASS** — HOLD
+Opened Jun 5, -1.79%. LPG shipping thesis is structural; drawdown is in line with soft Energy tape (-0.57% sector). No adverse catalyst. Continue monitoring — reassess if still no fresh catalyst by next run.
+
+**GIII** — HOLD
+Opened Jun 8, -1.26%. Trivial one-day pullback. No guidance cut, tariff shock, or adverse event visible. Thesis intact.
+
+**LASE** — **SELL** (routine, urgent: false)
+Opened Jun 8 at 20:15 UTC, +0.31%. Quick-trade name bought into a counter-drone selection catalyst (Vulcan Defense Initiative, published Jun 8 15:39 UTC). Now 24+ hours post-catalyst with price flat at entry and no follow-on contract or new defense announcement across multiple consecutive runs. Momentum is dead. Quick-trade thesis failed to materialize; no path to a new catalyst identified. Exit.
+
+**NRXP** — HOLD
+Opened Jun 5, +3.08%. Leading the book. Thesis intact, no adverse news.
+
+**PLSE** — HOLD
+Opened Jun 5, -2.90%. Healthcare sector headwind; no clinical event, trial setback, or guidance revision — sector drag only. Thesis intact.
+
+**RXRX** — HOLD
+Opened Jun 5, +0.61%. AI drug-discovery thesis undisturbed. Flat-to-positive; no negative signal.
+
+**SLDB** — HOLD
+Opened Jun 4, -6.56%. Web-searched this run: no clinical failure, no FDA clinical hold, no going-concern risk. Management presented at Goldman Sachs conference Jun 8 — story still being told. Watch item: Jun 10 annual meeting vote to double authorized shares (240M → 480M) is dilution preparation; reassess if a distressed capital raise follows. Drawdown is unexplained price volatility; thesis intact.
+
+**TISI** — HOLD
+Opened Jun 4, -2.87%. Operational turnaround thesis intact (Q1 2026 revenue growth, positive guidance, new CEO). Multi-week conviction hold — not a spent quick trade. Normal pullback.
 
 ---
 
 ## Summary
 
-One exit proposed: **LASE** (routine, non-urgent) — catalyst has been fully spent across multiple consecutive runs with no follow-through. Clear dead-money case: price at entry, no path to a new catalyst.
-
-All nine other positions remain **HOLD**. No urgent exits. No thesis-shattering events detected.
+| Symbol | Opened | Unrlzd% | Decision |
+|--------|--------|---------|----------|
+| ALOT | Jun 8 | +3.02% | HOLD |
+| AVR | Jun 8 | -5.27% | HOLD |
+| GASS | Jun 5 | -1.79% | HOLD |
+| GIII | Jun 8 | -1.26% | HOLD |
+| LASE | Jun 8 | +0.31% | **SELL** — quick-trade stalled, catalyst spent |
+| NRXP | Jun 5 | +3.08% | HOLD |
+| PLSE | Jun 5 | -2.90% | HOLD |
+| RXRX | Jun 5 | +0.61% | HOLD |
+| SLDB | Jun 4 | -6.56% | HOLD — thesis checked, intact |
+| TISI | Jun 4 | -2.87% | HOLD |
 
 **Active watch triggers for next run:**
-1. **SLDB** — urgent-sell if new adverse Phase 3 IMPACT DUCHENNE event, FDA clinical hold, or distressed capital raise. Annual meeting Jun 10 share-doubling vote is dilution risk; monitor outcome.
-2. **AVR** — monitor for enrollment halt, safety signal, or distressed capital raise. Healthcare weakness is ongoing sector headwind.
-3. **PLSE** — any clinical event or guidance revision triggers reassessment; Healthcare sector drag continues.
-4. **GASS** — now 4+ days held with no catalyst update; next run determine whether this is structural or dead-money quick trade.
+1. **SLDB** — urgent-sell if adverse Phase 3 event, FDA clinical hold, or distressed capital raise. Monitor Jun 10 authorized-share vote outcome.
+2. **AVR** — monitor for enrollment halt, safety signal, or capital raise; healthcare sector weakness ongoing.
+3. **GASS** — 4+ days with no fresh catalyst; if no new LPG/shipping catalyst surfaces next run, reassess as dead-money quick trade.
