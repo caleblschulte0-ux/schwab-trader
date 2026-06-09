@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-06-09T11:48:00Z",
+  "generated_utc": "2026-06-09T14:22:07Z",
   "sells": [
     {
       "symbol": "LASE",
-      "reason": "Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection, Jun 8 15:39 UTC) has produced zero follow-through — stock entered at $3.26, currently $3.27 (+0.31%) with no new defense contract, program expansion, or follow-on announcement in any feed across 24+ hours. Momentum is dead and the quick-trade thesis has fully failed to materialize. Re-confirming prior-run SELL recommendation.",
+      "reason": "Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection, published Jun 8 15:39 UTC) has now been in the market 33+ hours with zero follow-through — stock entered at $3.26, last $3.27 (+0.31%), no new contract award, program expansion, or follow-on announcement in any feed. Momentum is dead. The catalyst was the entire thesis for this quick-trade entry; it has completely failed to materialize. Second consecutive run confirming SELL.",
       "urgent": false
     }
   ]
