@@ -31,6 +31,7 @@ permissions:
 jobs:
   brain:
     runs-on: ubuntu-latest
+    timeout-minutes: 15   # Claude + web research; kill a hang instead of letting it sit.
     steps:
       - uses: actions/checkout@v4
         with:

@@ -20,6 +20,9 @@ permissions:
 jobs:
   trade:
     runs-on: ubuntu-latest
+    # Bound a hung run: the executor finishes in seconds, so 6 min is generous. A frozen
+    # network call now dies fast instead of sitting ~15 min and jamming the queued runs.
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
 
