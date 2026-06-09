@@ -1,5 +1,5 @@
 {
-  "cash": 2.7824000000000915,
+  "cash": 114.29240000000009,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -73,28 +73,6 @@
         "tape_tone": "risk_off"
       }
     },
-    "ALOT": {
-      "qty": 7,
-      "entry": 15.58,
-      "tp": 16.55,
-      "sl": 14.45,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-08T14:25:29.277427+00:00",
-      "meta": {
-        "signals": [
-          "sec_8k",
-          "news_smallcap"
-        ],
-        "catalyst_age_h": 3.93,
-        "market_cap": 117008096.0,
-        "volume": 13962,
-        "ref_price": 15.25,
-        "entry_ask": 15.55,
-        "entry_last": 15.49,
-        "tape_tone": "risk_on"
-      }
-    },
     "GIII": {
       "qty": 4,
       "entry": 34.8,
@@ -159,7 +137,7 @@
       }
     }
   },
-  "realized_pnl": -27.017599999999998,
+  "realized_pnl": -24.5676,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -317,7 +295,32 @@
       "entry_ask": 3.25,
       "entry_last": 3.25,
       "tape_tone": "risk_on"
+    },
+    {
+      "symbol": "ALOT",
+      "qty": 7,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 15.58,
+      "exit": 15.93,
+      "pnl": 2.45,
+      "pnl_pct": 2.25,
+      "opened_utc": "2026-06-08T14:25:29.277427+00:00",
+      "closed_utc": "2026-06-09T14:05:31.886398+00:00",
+      "reason": "Q1 earnings presentation catalyst (June 9) has played out: stock popped +8.2% intraday on the event then fully reverted to -0.39% below avg entry ($15.52 vs $15.58 avg). Quick-trade thesis was the earnings catalyst; that event has now occurred, neutral-sentiment result, pop faded with no follow-through. Catalyst spent.",
+      "hold_h": 23.67,
+      "signals": [
+        "sec_8k",
+        "news_smallcap"
+      ],
+      "catalyst_age_h": 3.93,
+      "market_cap": 117008096.0,
+      "volume": 13962,
+      "ref_price": 15.25,
+      "entry_ask": 15.55,
+      "entry_last": 15.49,
+      "tape_tone": "risk_on"
     }
   ],
-  "updated_utc": "2026-06-09T14:00:46.986557+00:00"
+  "updated_utc": "2026-06-09T14:05:37.202940+00:00"
 }

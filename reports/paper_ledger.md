@@ -1,31 +1,31 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-09T14:00:46Z_
+_Updated 2026-06-09T14:05:37Z_
 
-**Equity:** $975.92  (start $1000.00, **-24.08 / -2.4%**)  
-**Cash:** $2.78   **Invested:** $970.20   **Open positions:** 11  
-**Realized P/L:** $-27.02   **Unrealized:** $+2.94   **Closed trades:** 10   **Win rate:** 10%
+**Equity:** $971.49  (start $1000.00, **-28.51 / -2.9%**)  
+**Cash:** $114.29   **Invested:** $861.14   **Open positions:** 10  
+**Realized P/L:** $-24.57   **Unrealized:** $-3.94   **Closed trades:** 11   **Win rate:** 18%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
-| ALOT | stock | 7 | $15.58 | $15.93 | $16.55 | $14.45 | $+2.45 |
-| ATHE | stock | 1 | $4.23 | $4.40 | $4.75 | $3.70 | $+0.17 |
+| ATHE | stock | 1 | $4.23 | $4.83 | $4.75 | $3.70 | $+0.60 |
 | AVR | stock | 15 | $9.87 | $9.53 | $10.41 | $9.16 | $-5.17 |
-| GASS | stock | 15 | $9.51 | $9.54 | $10.40 | $8.95 | $+0.38 |
-| GIII | stock | 4 | $34.80 | $35.72 | $38.00 | $32.90 | $+3.68 |
-| NRXP | stock | 35 | $4.22 | $4.30 | $4.65 | $4.00 | $+2.80 |
+| GASS | stock | 15 | $9.51 | $9.49 | $10.40 | $8.95 | $-0.30 |
+| GIII | stock | 4 | $34.80 | $35.40 | $38.00 | $32.90 | $+2.38 |
+| NRXP | stock | 35 | $4.22 | $4.24 | $4.65 | $4.00 | $+0.65 |
 | PLSE | stock | 2 | $25.49 | $25.62 | $31.50 | $23.50 | $+0.26 |
 | PMN | stock | 5 | $10.62 | $9.77 | $12.50 | $9.20 | $-4.25 |
-| RXRX | stock | 18 | $3.29 | $3.47 | $4.50 | $3.10 | $+3.24 |
-| SLDB | stock | 9 | $6.86 | $6.66 | $10.50 | $5.90 | $-1.85 |
+| RXRX | stock | 18 | $3.29 | $3.44 | $4.50 | $3.10 | $+2.74 |
+| SLDB | stock | 9 | $6.86 | $6.63 | $10.50 | $5.90 | $-2.07 |
 | TISI | stock | 3 | $18.09 | $18.50 | $21.50 | $16.00 | $+1.23 |
 
 ## Last 15 closed trades
 
 | Symbol | Kind | Qty | Entry | Exit | P/L | % | Reason | Closed |
 |--------|------|-----|-------|------|-----|---|--------|--------|
+| ALOT | stock | 7 | $15.58 | $15.93 | $+2.45 | +2.2% | Q1 earnings presentation catalyst (June 9) has played out: stock popped +8.2% intraday on the event then fully reverted to -0.39% below avg entry ($15.52 vs $15.58 avg). Quick-trade thesis was the earnings catalyst; that event has now occurred, neutral-sentiment result, pop faded with no follow-through. Catalyst spent. | 2026-06-09T14:05 |
 | LASE | stock | 18 | $3.26 | $3.23 | $-0.48 | -0.8% | sell brain | 2026-06-09T12:30 |
 | JFB | stock | 11 | $5.79 | $5.35 | $-4.84 | -7.6% | sell brain | 2026-06-08T20:00 |
 | DRTS | stock | 6 | $10.52 | $9.45 | $-6.42 | -10.2% | brain SELL | 2026-06-08T16:00 |
