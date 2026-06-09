@@ -1,66 +1,67 @@
-Funnel: scanned 279 → 97 leading-tagged → 162 in-budget → 86 with catalyst → 4 finalists → picked 1
+Funnel: scanned 274 → 185 fit budget → 140 with catalyst → 4 finalists → picked 1
 
-**Run timestamp:** 2026-06-09T14:57:33Z UTC
-
----
-
-## Market Tape — 2026-06-09T14:27Z
-
-SPY +0.30%, VIX 18.28 → **risk_on** (mild). Hot sectors: Financial Services (+1.50%), Communication Services (+0.86%), Consumer Cyclical (+0.53%), Industrials (+0.52%), Basic Materials (+0.50%). Weak: Energy (−1.28%), Consumer Defensive (−0.46%), Healthcare (−0.27%), Technology (−0.03%). Normal aggressiveness. Tilt toward Industrials and Financial names; skepticism on Energy/Healthcare longs.
+**Run timestamp:** 2026-06-09T15:26:45Z UTC
 
 ---
 
-## Pick: EVTL — BUY 69 shares @ $2.17 ($149.73)
+## Market Tape — 2026-06-09T15:20Z
 
-**Vertical Aerospace (EVTL)** — eVTOL aircraft manufacturer, ~$276M market cap.
+SPY −0.35%, VIX 19.21 → **neutral** (mild softness, not alarming). Sectors: Basic Materials (+0.56%) and Financial Services (+0.46%) leading; Technology (−2.33%) and Energy (−2.96%) lagging badly; Consumer Cyclical (−1.05%) notably weak. Running disciplined — real catalysts only, no momentum chasing.
 
-**Catalyst (web-verified):** On June 9, Vertical Aerospace announced its final full-scale Valo prototype completed its first piloted flight on June 5, ahead of the upcoming Critical Design Review (CDR). A CDR is the last major technical programme gate before full-scale production — clearing the prototype flight test ahead of it is a genuine milestone. Confirmed via Morningstar/BusinessWire and Investing.com. Catalyst published ~12:10 UTC today (~2.7 hours ago).
+---
 
-**Why now:** Despite clearly bullish news, EVTL is trading at exactly 0.0% change on 709K volume — the market has not yet absorbed the news. This is the ideal early-entry scenario: fresh catalyst, stock hasn't moved, real volume confirms participation. Industrials sector positive today (+0.52%). No EVTL position held.
+## Collision Guard
 
-**Catalyst age:** ~2.7 hours. Budget: 69 × $2.17 = $149.73 ✓. Price $2.17 is above the $2 floor.
+Previous orders.json stamped 14:57:33Z; candidates updated 15:20:38Z (~23 min gap). Proceeding normally.
+
+---
+
+## Holdings Read (11 positions, ~$944 deployed)
+
+Book is nearly fully deployed. EVTL (previous run's pick) is red at $2.125 (−2.07% since pick) — **disqualified per anti-chase rule**.
+
+- **APLD (+1.5%)**: AI data center, watchlist fill at $41.44. Sell brain active.
+- **ATHE (+11.9%)**: MSA Phase 3 FDA nod catalyst. Sell brain manages exit.
+- **AVR (−8.2%)**: Weakest position. Sell brain active.
+- **GASS (−0.8%)**: Tanker, nearly flat. Hold.
+- **GIII (−0.3%)**: Near flat. Hold.
+- **NRXP (−3.9%)**: Minor red. Sell brain monitors.
+- **PLSE (−0.2%)**: Essentially flat. Hold.
+- **PMN (−5.8%)**: Drawdown since today's open. Sell brain active.
+- **RXRX (+0.6%)**: Gentle recovery. Hold.
+- **SLDB (−4.2%)**: Modest drawdown. Sell brain monitors.
+- **TISI (−1.1%)**: Minor red. Hold.
+
+No re-buys on any held symbol.
+
+---
+
+## Pick: RNAC — BUY 20 shares @ $6.94 ($138.80)
+
+**Cartesian Therapeutics** — small-cap mRNA CAR-T biotech, autoimmune focus.
+
+**Catalyst (filed 7:16 UTC, ~8 hours ago):** 8-K announces strategic licensing deal with WestGene Biopharma: WestGene's LNP delivery platform + Cartesian's mRNA CAR-T technology combined for autoimmune diseases. Clinical trial initiation expected H2 2026; data readout H1 2027. Web-verified as a real, material partnership (not a speaking appearance or vague MOU). mRNA CAR-T for autoimmune is an active high-value area.
+
+**Stage:** +18.4% at $6.94 — in the "deprioritize" zone (15–20%). Justified entry because: (1) the partnership is substantive and clinically validated, not promotional; (2) near-term binary milestones ahead (trial initiation H2 2026); (3) the stock has been holding gains through 2+ hours of regular session (basing, not blow-off). The catalyst out-argues the earlier-stage alternatives this run.
+
+**Catalyst age:** ~8 hours. Budget: 20 × $6.94 = $138.80 ✓. Price $6.94 is above the $2 floor. No take_profit/stop_loss — SELL BRAIN owns the exit.
 
 ---
 
 ## Finalists Considered (passed)
 
-**BHC ($5.195, +1.66%) — PASS / WATCHLIST**
-Bausch Health Canada signed a letter of intent with the pan-Canadian Pharmaceutical Alliance for public drug plan coverage of OKEDI (risperidone extended-release) for schizophrenia. Catalyst published 11:59 UTC today (fresh, ~3 hours). Volume 197K, market cap $1.94B. Only +1.66% so far — quality early-stage setup. Passed this run as EVTL's flat-on-news entry is cleaner. Added to watchlist with breakout trigger at $5.35.
+**ATLX** (Atlas Lithium, $3.66, +2.2%): Initially compelling — small-cap in the top sector (Basic Materials), barely moved, fresh news. Web search revealed the catalyst is only a CEO speaking appearance at the Giga USA conference, not a deal or announcement. Soft catalyst → removed from orders and watchlist. +2.2% is the ceiling, not a setup.
 
-**ALVO ($4.285, +1.06%) — PASS / WATCHLIST**
-FDA accepted Alvotech's AVT16 biosimilar application. Somewhat bullish. Catalyst published 07:40 UTC (~7 hours ago, getting stale). Healthcare sector slightly negative (−0.27%). Still on watchlist as pullback entry to $3.90.
+**BNAI** (Brand Engagement Network, $21.30, +16.6%): Real catalyst — AI health joint venture with Intervent International formed today. Volume 1.93M confirms participation. But already +16.6% extended and book is nearly full. RNAC's harder catalyst wins the slot.
 
-**BZUN ($2.685, +0.19%) — PASS**
-Baozun co-founder added 12% more to his stake (insider buy). Stock barely moved, fresh catalyst (~11:10 UTC). Against: Chinese VIE structure and geopolitical risk, very thin volume 61K (exit liquidity concern). Not the right use of remaining powder.
+**BHC** (Bausch Health, $5.15, +0.78%): Canada pan-Canadian Pharmaceutical Alliance letter of intent for OKEDI (risperidone ER) public drug plan coverage — published 11:59 UTC (fresh). Very early, +0.78% barely moved. Passed because the catalyst is a regulatory process step for one drug at a highly leveraged company; RNAC's deal is structurally more compelling. Kept on watchlist at $5.35 breakout.
 
----
-
-## Notable Passes (funnel-wide)
-
-- **NUVL (+38.8% at $122.84)**: Nuvalent oncology 8-K — extended blow-off, no room. Hard pass.
-- **BNAI (+24.8% at $22.81)**: AI health JV — interesting but >20% extended, stage rule says pass.
-- **LESL (+24.2% at $6.37)**: No clear catalyst, extended. Pass.
-- **FCEL (+20% at $18.60)**: No catalyst listed, extended. Pass.
-- **ATHE (+22.35%)**: Already held — do not rebuy.
-- **ATLX ($3.75, +4.75%)**: Brazilian lithium CEO at Giga USA; still below watchlist breakout at $4.00.
-- **EH (−20.2% at $6.95)**: Disappointing Q1 earnings — move mostly spent, bad put entry.
-- **DBI (−16.2% at $7.44)**: Bad Q1 results — move spent. Pass.
-- **CCTG (+780%)**, **AZI (+258%)**: LUDP halt names — pump-and-dump pattern. Hard pass.
-- All sub-$2 names (CPOP, BTCT, GMM, FRSX, HIHO, etc.) eliminated at price floor.
+**DBI** (Designer Brands, $6.94, −21.85%): Bad Q1 2026 earnings in Consumer Cyclical (today's worst sector −1.05%). Considered long put for bearish thesis. Passed: most of the earnings-shock move is already in; crowded book makes adding another position imprudent.
 
 ---
 
-## Holdings Read (10 positions, ~$842 deployed)
+## Watchlist Changes
 
-- **ATHE (+13.7%)**: MSA Phase 3 FDA nod yesterday still driving. Sell brain manages exit.
-- **GIII (+0.32%)**: Consumer Cyclical, modest positive. Hold.
-- **TISI (+2.27%)**: Slow grind up. Hold.
-- **RXRX (+1.70%)**: Gradual recovery. Hold.
-- **PLSE (+0.20%)**: Essentially flat. Hold.
-- **GASS (−0.70%)**: Near flat; tanker thesis intact. Hold.
-- **NRXP (−3.67%)**: Minor red. Sell brain monitors.
-- **SLDB (−4.08%)**: Modest drawdown. Sell brain monitors.
-- **AVR (−6.99%)**: Weakest position. Sell brain active.
-- **PMN (−5.84%)**: Opened today, in drawdown. Sell brain active.
-
-No re-buys on any held symbol. No averaging down.
+- **Removed:** APLD (now owned — anti-chase rule), ATLX (catalyst = speaking appearance, not deal), KSS (Consumer Cyclical now worst sector today — headwind).
+- **Added:** ZLAB (Zai Lab China NMPA approval for advanced cervical cancer, barely moved +0.97% at $16.64 — breakout trigger $17.00).
+- **Kept:** BHC, NRIX, MNKD, GHRS, COYA, ELDN, ALVO, BWAY.

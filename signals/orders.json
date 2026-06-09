@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-06-09T14:57:33Z",
-  "funnel": {"scanned": 279, "leading": 97, "in_budget": 162, "had_catalyst": 86, "finalists": 4, "picked": 1},
+  "generated_utc": "2026-06-09T15:26:45Z",
+  "funnel": {"scanned": 274, "leading": 86, "in_budget": 185, "had_catalyst": 140, "finalists": 4, "picked": 1},
   "orders": [
-    {"symbol": "EVTL", "action": "BUY", "instrument": "stock",
-     "quantity": 69, "limit_price": 2.17}
+    {"symbol": "RNAC", "action": "BUY", "instrument": "stock",
+     "quantity": 20, "limit_price": 6.94}
   ]
 }

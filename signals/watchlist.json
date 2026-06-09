@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-09T14:57:33Z",
+  "generated_utc": "2026-06-09T15:26:45Z",
   "watch": [
     {
       "symbol": "BHC",
@@ -10,29 +10,7 @@
       "take_profit": 6.10,
       "stop_loss": 4.90,
       "good_until": "2026-06-11",
-      "note": "Bausch Health Canada LoI for OKEDI (risperidone ER) public drug plan coverage — fresh catalyst 11:59 UTC June 9, stock only +1.66%; breakout above $5.35 confirms participation. TP +12.9% / SL -9.3% from $5.40 entry."
-    },
-    {
-      "symbol": "APLD",
-      "trigger": "pullback",
-      "trigger_price": 41.50,
-      "quantity": 3,
-      "limit_price": 41.75,
-      "take_profit": 49.00,
-      "stop_loss": 38.50,
-      "good_until": "2026-06-13",
-      "note": "Applied Digital 8-K: $1.59B senior notes + $550M revolver + CoreWeave MOU. AI data center growth catalyst. Buy pullback to $41.50; TP +17.4% / SL -7.8% from $41.75 entry."
-    },
-    {
-      "symbol": "ATLX",
-      "trigger": "breakout",
-      "trigger_price": 4.00,
-      "quantity": 36,
-      "limit_price": 4.05,
-      "take_profit": 5.20,
-      "stop_loss": 3.50,
-      "good_until": "2026-06-13",
-      "note": "Atlas Lithium CEO at Giga USA (June 9, 11:29 UTC) — critical minerals/Brazilian lithium thesis. Early move +4.7% to $3.75 on $110M cap. Breakout above $4.00 confirms momentum. TP +28% / SL -13.5% from $4.05 entry."
+      "note": "Bausch Health Canada LoI for OKEDI (risperidone ER) public drug plan coverage — fresh catalyst 11:59 UTC June 9, stock only +0.8% at $5.15; breakout above $5.35 confirms participation. TP +12.9% / SL -9.3% from $5.40 entry."
     },
     {
       "symbol": "NRIX",
@@ -43,18 +21,7 @@
       "take_profit": 19.50,
       "stop_loss": 15.25,
       "good_until": "2026-06-12",
-      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Stock ran to $16.94 then pulled back. $1.6B cap getting $700M upfront = transformative. Phase 3 start this summer. Enter on re-breakout above $16.50; TP $19.50 (+17%), SL $15.25 (-8.1%)."
-    },
-    {
-      "symbol": "KSS",
-      "trigger": "breakout",
-      "trigger_price": 16.50,
-      "quantity": 9,
-      "limit_price": 16.60,
-      "take_profit": 18.50,
-      "stop_loss": 15.50,
-      "good_until": "2026-06-12",
-      "note": "Kohl's analyst raises price target post-Q1 (June 8). Consumer Cyclical is hot macro sector today (+0.53%). Breakout above $16.50 confirms continuation. TP +11.4% / SL -6.6% from $16.60 entry."
+      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Stock ran then pulled back. $1.6B cap getting $700M upfront = transformative. Phase 3 start this summer. Enter on re-breakout above $16.50; TP $19.50 (+17%), SL $15.25 (-8.1%)."
     },
     {
       "symbol": "MNKD",
@@ -98,7 +65,7 @@
       "take_profit": 3.65,
       "stop_loss": 3.15,
       "good_until": "2026-06-12",
-      "note": "Eledon tegoprubart T1D trial promising results (June 8). Healthcare sector weak today — enter only on pullback to $3.30 support for better R/R. TP +8.9% / SL -6.0% from $3.35 entry."
+      "note": "Eledon tegoprubart T1D trial promising results (June 8). Healthcare sector slightly weak — enter only on pullback to $3.30 support for better R/R. TP +8.9% / SL -6.0% from $3.35 entry."
     },
     {
       "symbol": "ALVO",
@@ -109,7 +76,7 @@
       "take_profit": 4.25,
       "stop_loss": 3.65,
       "good_until": "2026-06-12",
-      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.29; wait for pullback to $3.90 support for clean entry. Durable FDA acceptance catalyst. TP +8.4% / SL -6.6% from $3.92 entry."
+      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.26; wait for pullback to $3.90 support for clean entry. Durable FDA acceptance catalyst. TP +8.4% / SL -6.6% from $3.92 entry."
     },
     {
       "symbol": "BWAY",
@@ -120,7 +87,18 @@
       "take_profit": 15.50,
       "stop_loss": 13.10,
       "good_until": "2026-06-12",
-      "note": "BrainsWay 12-month sustained depression remission study published (June 9, 11:58 UTC — fresh). TMS clinical milestone. Stock at $14.28 today; wait for pullback to $13.75 support. TP +11.9% / SL -5.4% from $13.85 entry."
+      "note": "BrainsWay 12-month sustained depression remission study accepted in Frontiers in Neuroscience (June 9, 11:58 UTC — fresh). TMS clinical milestone. Stock at $14.455; wait for pullback to $13.75 support. TP +11.9% / SL -5.4% from $13.85 entry."
+    },
+    {
+      "symbol": "ZLAB",
+      "trigger": "breakout",
+      "trigger_price": 17.00,
+      "quantity": 8,
+      "limit_price": 17.15,
+      "take_profit": 19.50,
+      "stop_loss": 16.00,
+      "good_until": "2026-06-13",
+      "note": "Zai Lab China NMPA approval for advanced cervical cancer indication (June 9). Stock only +0.97% at $16.64 — barely moved on a regulatory win. Enter on breakout above $17.00 confirming institutional participation. TP +13.7% / SL -6.7% from $17.15 entry."
     }
   ]
 }
