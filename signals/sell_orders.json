@@ -1,4 +1,10 @@
 {
-  "generated_utc": "2026-06-09T10:03:13.603460+00:00",
-  "sells": []
+  "generated_utc": "2026-06-09T10:18:32.342622+00:00",
+  "sells": [
+    {
+      "symbol": "LASE",
+      "reason": "Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection, June 8) is spent: no follow-on contract award or new defense announcement in 1+ sessions, momentum faded from $4.49 peak to $3.27 chop zone, volume cooling from 139M avg \u2014 pre-set watch trigger (absence of follow-on news within 1-2 sessions) is met; stock flat to purchase price, no reason to hold.",
+      "urgent": false
+    }
+  ]
 }
