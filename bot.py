@@ -119,24 +119,25 @@ def load_orders() -> tuple[str | None, list[dict], dict]:
     return data.get("generated_utc"), data.get("orders", []) or [], data.get("funnel") or {}
 
 
-def load_sell_orders() -> set[str]:
-    """Symbols the SELL pipeline wants closed — `signals/sell_orders.json`, written by
-    route_sells.py after the sell brain (autonomous, urgent, or human-approved). This is
-    the ONLY price-independent exit path now: a position is HELD until this file (or a
-    legacy orders.json SELL) names it. Fresh-guarded so a stale file can't fire an old
-    SELL on a re-bought name. Any read problem returns an empty set (fail-safe: no sells)."""
+def load_sell_orders() -> dict[str, str]:
+    """Map of {symbol: reason} the SELL pipeline wants closed — `signals/sell_orders.json`,
+    written by route_sells.py after the sell brain (autonomous, urgent, or human-approved).
+    This is the ONLY price-independent exit path now: a position is HELD until this file (or a
+    legacy orders.json SELL) names it. The reason flows through to the ledger so each close
+    records WHY. Fresh-guarded so a stale file can't fire an old SELL on a re-bought name. Any
+    read problem returns an empty map (fail-safe: no sells)."""
     if not os.path.exists(SELL_ORDERS_FILE):
-        return set()
+        return {}
     try:
         with open(SELL_ORDERS_FILE, encoding="utf-8") as fh:
             data = json.load(fh)
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not read sell orders: {exc}")
-        return set()
+        return {}
     if not is_fresh(data.get("generated_utc")):
         print("(info) sell_orders.json is stale — ignoring.")
-        return set()
-    out = {str(o.get("symbol", "")).strip().upper()
+        return {}
+    out = {str(o.get("symbol", "")).strip().upper(): (o.get("reason") or "sell brain")
            for o in (data.get("sells") or []) if o.get("symbol")}
     if out:
         print(f"Sell pipeline wants closed: {', '.join(sorted(out))}")
@@ -906,18 +907,21 @@ def main() -> int:
     # legacy orders.json SELL. This is what lets a future-AMD ride through a drawdown.
     brain_sells = load_sell_orders()
     if fresh:
-        brain_sells |= {str(o.get("symbol")).strip().upper()
-                        for o in orders if o.get("action") == "SELL" and o.get("symbol")}
+        for o in orders:
+            if o.get("action") == "SELL" and o.get("symbol"):
+                # sell_orders.json (the new pipeline) wins; legacy SELLs only fill gaps.
+                brain_sells.setdefault(str(o.get("symbol")).strip().upper(), "brain SELL (legacy)")
 
     watch = load_watchlist()  # brain-set names to auto-enter on a trigger (used by entries below)
 
     # ---- EXITS: close ONLY what the sell pipeline asks for (judgment, not price). ----
     # Stocks close with sell(), long puts with sell_option() — dispatched on position kind.
+    # The sell brain's reason rides through to the ledger so each close records WHY.
     for sym, pos in positions.items():
         last = marks.get(sym)
         if sym in brain_sells:
             close = sell_option if pos.get("kind", "stock") != "stock" else sell
-            close(client, acct, sym, int(pos["qty"]), last or pos["avg"], "sell brain")
+            close(client, acct, sym, int(pos["qty"]), last or pos["avg"], brain_sells[sym])
         else:
             print(f"[{sym}] hold — last ${last if last else '?'}")
 
