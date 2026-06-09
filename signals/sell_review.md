@@ -1,8 +1,8 @@
-# Sell Brain Review — 2026-06-09T20:35:07Z
+# Sell Brain Review — 2026-06-09T04:33:53Z
 
 **0 exits proposed. No urgent flags. All 10 positions HOLD.**
 
-> **Web search this run:** AVR — searched for PARADIGM trial adverse events or regulatory actions. Result: the agent surfaced data on the *old* Aravive Inc (AXLerate-OC trial, dissolved 2024) which is a *different entity* from the current AVR ticker ($9.35, active position). No adverse information on the current company was found. PARADIGM thesis from the morning run remains operative.
+> **Web search this run:** AVR — targeted search to verify the PARADIGM trial thesis (prior search had returned data from a defunct entity). Confirmed: AVR is **Anteris Technologies Global Corp.**, a medical-device company with the DurAVR transcatheter heart valve in a ~1,000-patient global pivotal trial (PARADIGM) vs. approved TAVR devices. French regulatory clearance obtained 2026-06-08 (the day the position was opened) enabled French site enrollment; US enrollment launched May 2026 with CMS reimbursement secured; $320M raise with Medtronic strategic backing completed January 2026 resolved prior going-concern concerns. Thesis fully confirmed intact.
 
 ---
 
@@ -10,28 +10,30 @@
 
 | Symbol | Opened | Unreal%  | Decision | One-line Reason |
 |--------|--------|----------|----------|-----------------|
-| ALOT   | Jun 8  | +3.02%   | **HOLD** | Leading the book; no adverse news found in funnel; catalyst intact. |
-| AVR    | Jun 8  | −5.27%   | **HOLD** | PARADIGM pivotal trial thesis intact; web search confirmed no adverse data on current company; drawdown is Healthcare sector drag (−1.13%), not a thesis break. |
-| GASS   | Jun 5  | −1.79%   | **HOLD** | LPG shipping thesis intact; 4-day drift of −1.79% is normal; no adverse news in candidates funnel. |
-| GIII   | Jun 8  | −1.26%   | **HOLD** | Consumer Cyclical healthy (+0.96% yesterday); trivial drift on 1-day position; no earnings miss or guidance cut. |
-| LASE   | Jun 8  | +0.31%   | **HOLD** | Vulcan Defense Initiative counter-UAS catalyst confirmed present in today's candidates funnel; government procurement story has multi-session legs; thesis 1 day old and still live. |
-| NRXP   | Jun 5  | +3.08%   | **HOLD** | Co-leading the book; hard FDA ANDA decision catalyst still ~7 weeks out (≈Jul 29); no adverse regulatory communication; thesis intact. |
-| PLSE   | Jun 5  | −2.90%   | **HOLD** | Clinical-stage biotech; no binary event failed; −2.90% over 4 days is normal Healthcare sector volatility; thesis intact. |
-| RXRX   | Jun 5  | +0.61%   | **HOLD** | AI drug-discovery pipeline intact; holding slight positive in weak Healthcare tape; no adverse news in funnel. |
-| SLDB   | Jun 4  | −6.56%   | **HOLD** | Morning run web search confirmed thesis intact (CEO at Goldman Sachs conference Jun 8, no FDA hold, no clinical setback). Annual meeting Jun 10 is routine. Drawdown is multi-day Healthcare sector drag, not a company-specific break. |
-| TISI   | Jun 4  | −2.87%   | **HOLD** | Q1 turnaround thesis (revenue growth, EBITDA improvement) intact; Industrials sector drag (−0.78%) explains the drift; no adverse news. |
+| ALOT   | Jun 8  | +3.02%   | **HOLD** | Leading the book; no adverse news in candidates funnel; catalyst-driven momentum still positive. |
+| AVR    | Jun 8  | −5.27%   | **HOLD** | PARADIGM pivotal trial thesis confirmed intact via web search: French clearance was the Jun-8 catalyst, US enrollment live, Medtronic-backed $320M raise secures runway — no company-specific adverse event; drawdown is Healthcare sector drag (−1.13%). |
+| GASS   | Jun 5  | −1.79%   | **HOLD** | LPG shipping thesis intact; normal 4-day drift in neutral macro tape; not in funnel simply means no fresh catalyst, not a broken thesis. |
+| GIII   | Jun 8  | −1.26%   | **HOLD** | Consumer Cyclical sector healthy; trivial 1-day drift on a day-old position; no earnings miss or guidance cut signaled. |
+| LASE   | Jun 8  | +0.31%   | **HOLD** | Counter-UAS catalyst (Vulcan Defense Initiative selection) still present in today's funnel; government procurement thesis is multi-session, not a single-day pop — still alive. |
+| NRXP   | Jun 5  | +3.08%   | **HOLD** | Conviction hold into ~Jul 29 FDA ANDA decision; co-leading the book; no adverse regulatory communication; thesis fully intact. |
+| PLSE   | Jun 5  | −2.90%   | **HOLD** | Clinical-stage biotech; no binary event failed; −2.90% over 4 days is ordinary Healthcare sector volatility, not a thesis break. |
+| RXRX   | Jun 5  | +0.61%   | **HOLD** | AI drug-discovery pipeline intact; holding positive in weak Healthcare tape; no adverse news in funnel. |
+| SLDB   | Jun 4  | −6.56%   | **HOLD** | Thesis confirmed intact in prior run (CEO at Goldman Sachs conference Jun 8, no FDA hold, no clinical setback); drawdown is multi-day Healthcare sector drag; annual meeting Jun 10 (tomorrow) is routine — any adverse IMPACT DUCHENNE data or halt-on-bad-news would trigger urgent reassessment. |
+| TISI   | Jun 4  | −2.87%   | **HOLD** | Q1 turnaround thesis (revenue growth + EBITDA improvement) intact; Industrials sector drag (−0.78%) explains drift; no adverse news. |
 
 ---
 
 ## Summary
 
-Second clean hold run of the day — zero exits proposed. The AVR web search returned data on a defunct 2023-era entity (old Aravive) that no longer maps to the current ticker; no adverse information on the live company was surfaced. All drawdowns remain traceable to Healthcare (−1.13%) and Industrials (−0.78%) sector-level pressure, not company-specific thesis breaks.
+Third clean hold run — zero exits proposed. The targeted AVR web search resolved the prior ambiguity: AVR is Anteris Technologies, the PARADIGM trial is actively enrolling across multiple countries, and the Jun-8 French clearance was the direct entry catalyst. Thesis is clean.
+
+All drawdowns remain attributable to Healthcare (−1.13%) and Industrials (−0.78%) sector pressure, not company-specific breaks. No spent catalysts, no failed binary events, no structural thesis invalidations found across the book.
 
 **Top watches for next run:**
-1. **SLDB** — Most-stressed (−6.56%, held 5 days). Annual meeting Jun 10 (tomorrow) is routine per morning confirmation. Watch for any adverse IMPACT DUCHENNE data or halt-on-bad-news — that would be urgent.
-2. **AVR** — Second-weakest (−5.27%). Needs a cleaner targeted search on the *current* company to verify PARADIGM trial status directly. Any adverse safety/efficacy disclosure is an urgent-sell trigger.
-3. **LASE** — Catalyst confirmed alive today. Watch for volume fade with no follow-on news — a silent stall kills the quick-trade thesis.
-4. **NRXP** — Conviction hold into ~Jul 29 FDA date; only sell trigger is a surprise adverse regulatory communication.
+1. **SLDB** — Most-stressed (−6.56%, held 5 days). Annual meeting **today** (Jun 10). Watch for any adverse IMPACT DUCHENNE data, FDA hold, or halt-on-bad-news — that would be an urgent-sell trigger.
+2. **AVR** — PARADIGM thesis now clean. Next watch: any safety/efficacy disclosure or enrollment hold from the trial.
+3. **LASE** — Quick-trade catalyst (counter-drone selection). Watch for volume fade with no follow-on defense procurement news — silent stall kills the thesis.
+4. **NRXP** — Conviction hold to ~Jul 29 FDA date; only sell trigger is a surprise adverse regulatory communication.
 
 **Leaders:** NRXP (+3.08%), ALOT (+3.02%).
 **Most-watched:** SLDB (−6.56%), AVR (−5.27%).
