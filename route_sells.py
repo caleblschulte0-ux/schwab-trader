@@ -65,9 +65,10 @@ def _days_held(opened_utc) -> float | None:
     return (datetime.now(timezone.utc) - dt).total_seconds() / 86400.0
 
 
-def classify(holding: dict, book_value: float) -> tuple[bool, list[str]]:
-    """Return (is_significant, reasons). A holding is significant if it's long-held, a big
-    winner, or a large share of the book — the cases worth a human heads-up before selling."""
+def classify(holding: dict, book_value: float) -> tuple[bool, list[str], float | None]:
+    """Return (is_significant, reasons, days_held). A holding is significant if it's long-held,
+    a big winner, or a large share of the book — the cases worth a human heads-up before
+    selling. days_held is returned so callers don't recompute it."""
     reasons: list[str] = []
     days = _days_held(holding.get("opened_utc"))
     if days is not None and days >= LONG_HELD_DAYS:
@@ -78,7 +79,7 @@ def classify(holding: dict, book_value: float) -> tuple[bool, list[str]]:
     val = holding.get("value")
     if val and book_value > 0 and (val / book_value) * 100 >= TOP_SIZE_PCT:
         reasons.append(f"{val / book_value * 100:.0f}% of book (>= {TOP_SIZE_PCT:.0f}%)")
-    return (bool(reasons), reasons)
+    return (bool(reasons), reasons, days)
 
 
 def route() -> dict:
@@ -98,7 +99,7 @@ def route() -> dict:
             continue   # already sold / not held — skip
         reason = p.get("reason") or "sell brain"
         urgent = bool(p.get("urgent"))
-        significant, sig_reasons = classify(holdings[sym], book_value)
+        significant, sig_reasons, days = classify(holdings[sym], book_value)
         entry = {"symbol": sym, "reason": reason, "urgent": urgent}
         if not significant or urgent:
             autonomous.append(entry)
@@ -108,7 +109,7 @@ def route() -> dict:
             pending.append({**entry,
                             "significance": "; ".join(sig_reasons),
                             "unrealized_pct": holdings[sym].get("unrealized_pct"),
-                            "days_held": round(_days_held(holdings[sym].get("opened_utc")) or 0, 1)})
+                            "days_held": round(days or 0, 1)})
 
     # Preserve already-approved sells still awaiting execution (a symbol we previously routed
     # to sell_orders that's still held) so a router re-run can't clobber a human-approved sell.

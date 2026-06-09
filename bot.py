@@ -887,10 +887,9 @@ def main() -> int:
     client = get_client()
     acct = client.get_account_numbers().accounts[0]
     positions = get_positions(client)
-    # One live quote per held name, reused for: holdings enrichment, the exit sell price,
-    # and the end-of-run paper mark-to-market (no double-quoting).
-    marks = {s: live_last(quote(client, s)) for s in positions}
-    marks = {s: m for s, m in marks.items() if m}
+    # One live quote per held name (drop any that fail to quote), reused for: holdings
+    # enrichment, the exit sell price, and the end-of-run paper mark-to-market (no double-quoting).
+    marks = {s: m for s in positions if (m := live_last(quote(client, s)))}
     write_holdings(positions, marks)  # enriched ground-truth holdings for the brain + sell router
     blocked, orders_ok = get_blocked_buy_symbols(client, acct.hash_value)
     print(f"Held: {', '.join(positions) or '(none)'} | No-rebuy: "
