@@ -1,32 +1,32 @@
 {
-  "updated_utc": "2026-06-09T18:45:28.263821+00:00",
+  "updated_utc": "2026-06-09T18:50:31.333818+00:00",
   "holdings": [
     {
       "symbol": "APLD",
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 41.79,
-      "unrealized_pct": 0.84,
-      "value": 83.58
+      "last": 41.82,
+      "unrealized_pct": 0.92,
+      "value": 83.64
     },
     {
       "symbol": "ATHE",
       "quantity": 1,
       "avg_price": 4.23,
       "opened_utc": "2026-06-09T13:35:32.693966+00:00",
-      "last": 4.35,
-      "unrealized_pct": 2.84,
-      "value": 4.35
+      "last": 4.32,
+      "unrealized_pct": 2.13,
+      "value": 4.32
     },
     {
       "symbol": "AVR",
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.42,
-      "unrealized_pct": -4.56,
-      "value": 141.3
+      "last": 9.39,
+      "unrealized_pct": -4.86,
+      "value": 140.85
     },
     {
       "symbol": "EVTL",
@@ -42,9 +42,9 @@
       "quantity": 15,
       "avg_price": 9.51,
       "opened_utc": "2026-06-05T18:40:21.855163+00:00",
-      "last": 9.42,
-      "unrealized_pct": -0.95,
-      "value": 141.3
+      "last": 9.415,
+      "unrealized_pct": -1.0,
+      "value": 141.22
     },
     {
       "symbol": "GIII",
@@ -60,18 +60,18 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 3.855,
-      "unrealized_pct": -8.65,
-      "value": 134.93
+      "last": 3.8586,
+      "unrealized_pct": -8.56,
+      "value": 135.05
     },
     {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 26.19,
-      "unrealized_pct": 2.75,
-      "value": 52.38
+      "last": 25.995,
+      "unrealized_pct": 1.98,
+      "value": 51.99
     },
     {
       "symbol": "PMN",
@@ -87,9 +87,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.215,
-      "unrealized_pct": -2.28,
-      "value": 57.87
+      "last": 3.2136,
+      "unrealized_pct": -2.32,
+      "value": 57.84
     },
     {
       "symbol": "SLDB",
