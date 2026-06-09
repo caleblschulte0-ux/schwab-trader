@@ -1,14 +1,14 @@
 {
-  "updated_utc": "2026-06-09T12:35:21.953525+00:00",
+  "updated_utc": "2026-06-09T12:40:22.620430+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
       "quantity": 7,
       "avg_price": 15.58,
       "opened_utc": "2026-06-08T14:25:29.277427+00:00",
-      "last": 16.24,
-      "unrealized_pct": 4.24,
-      "value": 113.68
+      "last": 16.1585,
+      "unrealized_pct": 3.71,
+      "value": 113.11
     },
     {
       "symbol": "AVR",
@@ -56,13 +56,22 @@
       "value": 50.56
     },
     {
+      "symbol": "PMN",
+      "quantity": 5,
+      "avg_price": 10.62,
+      "opened_utc": "2026-06-09T12:35:23.835631+00:00",
+      "last": 9.3896,
+      "unrealized_pct": -11.59,
+      "value": 46.95
+    },
+    {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.34,
-      "unrealized_pct": 1.52,
-      "value": 60.12
+      "last": 3.35,
+      "unrealized_pct": 1.82,
+      "value": 60.3
     },
     {
       "symbol": "SLDB",
