@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-09T13:20:21.873536+00:00",
+  "updated_utc": "2026-06-09T13:25:22.807842+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -15,9 +15,9 @@
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.35,
-      "unrealized_pct": -5.27,
-      "value": 140.25
+      "last": 9.52,
+      "unrealized_pct": -3.55,
+      "value": 142.8
     },
     {
       "symbol": "GASS",
@@ -42,9 +42,9 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.34,
-      "unrealized_pct": 2.84,
-      "value": 151.9
+      "last": 4.3481,
+      "unrealized_pct": 3.04,
+      "value": 152.18
     },
     {
       "symbol": "PLSE",
@@ -60,27 +60,27 @@
       "quantity": 5,
       "avg_price": 10.62,
       "opened_utc": "2026-06-09T12:35:23.835631+00:00",
-      "last": 9.3896,
-      "unrealized_pct": -11.59,
-      "value": 46.95
+      "last": 10.03,
+      "unrealized_pct": -5.56,
+      "value": 50.15
     },
     {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.3497,
-      "unrealized_pct": 1.81,
-      "value": 60.29
+      "last": 3.34,
+      "unrealized_pct": 1.52,
+      "value": 60.12
     },
     {
       "symbol": "SLDB",
       "quantity": 9,
       "avg_price": 6.86,
       "opened_utc": "2026-06-04T13:00:42.683106+00:00",
-      "last": 6.71,
-      "unrealized_pct": -2.19,
-      "value": 60.39
+      "last": 6.54,
+      "unrealized_pct": -4.66,
+      "value": 58.86
     },
     {
       "symbol": "TISI",
