@@ -1,42 +1,42 @@
-# Sell Review — 2026-06-09T13:05:00Z
+# Sell Review — 2026-06-09T13:25:47Z
 
-**One routine exit: LASE (fourth consecutive recommendation). No urgent sells.**
+**No sells this run. All 10 positions HOLD.**
 
-Web search this run: **SLDB** — no trial failure, FDA clinical hold, safety signal, or distressed capital raise found. Phase 3 IMPACT DUCHENNE trial (SGT-003/DMD) thesis intact; strong cash runway, positive FDA Type C feedback confirmed; thesis is a conviction hold through the drawdown.
+Web search this run: **PMN** — no failed trial, FDA clinical hold, safety signal, or dilutive capital raise found. HC Wainwright $18 PT reiteration (Jun 8) intact; company presenting at HC Wainwright Neuro Perspectives Expert Summit Jun 15-16; PRECISE-AD Phase 1b interim data expected early Q3 2026. Thesis live despite sharp intraday drawdown.
 
 ---
 
 ## Per-Position Rulings
 
 **ALOT** — HOLD
-Opened Jun 8, +3.02%. Positive drift on a 1-day-old quick-trade position; no adverse news in any feed. Thesis intact, still running.
+Opened Jun 8, +3.71%. Quick-trade momentum continues; positive drift strengthened since prior review (+3.02% → +3.71%). No adverse news in any feed. Thesis intact and working.
 
 **AVR** — HOLD
-Opened Jun 8, -5.27%. No clinical event, enrollment halt, safety signal, or dilution filing in candidates or news feed. Healthcare sector weak (-1.13% tape) accounts for the drift. Buy brain flagged for monitoring; drawdown alone is not a sell trigger — thesis not broken. Continue monitoring for an adverse clinical or capital-raise event.
+Opened Jun 8, -3.65%. No clinical event, enrollment halt, safety signal, or dilution filing detected. Improved from -5.27% yesterday. Healthcare sector weakness explains the drift; drawdown alone is not a sell trigger. Thesis intact. Continuing to monitor for adverse clinical or capital-raise event.
 
 **GASS** — HOLD
-Opened Jun 5, -1.79%. LPG/gas shipping structural thesis: no adverse event, contract cancellation, fleet write-down, or going-concern signal. Energy sector soft (-0.57%) explains the drift. Thesis intact.
+Opened Jun 5, -1.89%. LPG/gas shipping structural thesis: no contract cancellation, fleet write-down, or going-concern signal in any feed. Energy sector soft but the structural story is unchanged. Thesis intact.
 
 **GIII** — HOLD
-Opened Jun 8, -1.26%. Trivial one-day pullback. Consumer Cyclical constructive (+0.96%). No guidance cut, tariff shock, or adverse event visible. Thesis intact.
-
-**LASE** — **SELL** (routine, urgent: false)
-Opened Jun 8 at 20:15 UTC on counter-drone selection catalyst (Vulcan Defense Initiative, published Jun 8 15:39 UTC). The intraday +5.8% run occurred before our entry at $3.26; the stock has returned to near-flat ($3.27, +0.31%) with no new defense contract, program expansion, or follow-on announcement in any feed. The entire thesis for this quick-trade was the single selection event — that event is spent with zero follow-through. Fourth consecutive sell recommendation.
+Opened Jun 8, +1.32%. Recovered from the minor pullback in yesterday's review (-1.26% → +1.32%). Consumer Cyclical macro tailwind constructive. No guidance cut, tariff shock, or adverse event. Thesis intact and showing follow-through.
 
 **NRXP** — HOLD
-Opened Jun 5, +3.08%. Leading the book. No adverse news in any feed. Thesis intact and working.
+Opened Jun 5, +0.95%. Eased from +3.08% yesterday but still positive. No adverse news in any feed. Thesis intact.
 
 **PLSE** — HOLD
-Opened Jun 5, -2.90%. No clinical trial setback, regulatory action, or safety signal visible. Healthcare sector headwind (-1.13%) accounts for the drift — sector drag is not a thesis break. Thesis intact.
+Opened Jun 5, -0.82%. Healthcare sector headwind persists but PLSE has improved substantially from yesterday's -2.90%. No clinical trial setback, regulatory action, or safety signal visible. Thesis intact.
+
+**PMN** — HOLD
+Opened Jun 9 (today), -11.59% ($10.62 → $9.39). Sharp intraday drawdown on a fresh position. **Web search clean:** no failed trial, FDA clinical hold, safety signal, or dilutive financing found. Thesis (HC Wainwright $18 PT reiteration, Jun 8) remains intact — HC Wainwright Neuro Perspectives Expert Summit Jun 15-16 is an upcoming catalyst event where PMN will present; PRECISE-AD Phase 1b blinded interim data expected early Q3 2026; analyst consensus "Strong Buy." Price is near the watchlist stop-loss level ($9.20) but has not triggered it, and price alone is never the criterion here. A drawdown on a live, multi-catalyst thesis is a HOLD.
 
 **RXRX** — HOLD
-Opened Jun 5, +0.61%. AI drug-discovery thesis undisturbed. Flat-to-slightly-positive drift; no negative signal in any feed. Thesis intact.
+Opened Jun 5, +1.82%. AI drug-discovery thesis undisturbed. Positive drift with no negative signal in any feed. Thesis intact.
 
 **SLDB** — HOLD
-Opened Jun 4, -6.56%. Web search this run: no thesis-breaking news found. Phase 3 IMPACT DUCHENNE trial (SGT-003) on track with FDA Type C alignment; ~$380M cash provides runway into H1 2028; March 2026 Phase 1/2 data showed 60% mean microdystrophin expression at Day 90. The -6.56% drawdown is sector-driven volatility in a weak healthcare tape, not a thesis break. Buy brain flagged for monitoring; monitoring done — thesis intact. HOLD.
+Opened Jun 4, -4.08%. Prior run web search confirmed thesis intact (Phase 3 IMPACT DUCHENNE SGT-003 on track, ~$380M cash runway into H1 2028, FDA Type C alignment confirmed). Improved from -6.56% yesterday. No new 8-K or prospectus in candidates feed signaling a capital raise or setback. Thesis intact.
 
 **TISI** — HOLD
-Opened Jun 4, -2.87%. Operational turnaround conviction hold. Industrials sector soft (-0.78%) but no company-specific adverse event in any feed. Normal pullback within an intact thesis. HOLD.
+Opened Jun 4, -2.87%. Operational turnaround conviction hold. Unchanged from prior review. Industrials sector soft but no company-specific adverse event in any feed. Normal pullback within an intact thesis. HOLD.
 
 ---
 
@@ -44,18 +44,18 @@ Opened Jun 4, -2.87%. Operational turnaround conviction hold. Industrials sector
 
 | Symbol | Opened | Unrlzd% | Decision |
 |--------|--------|---------|----------|
-| ALOT   | Jun 8  | +3.02%  | HOLD |
-| AVR    | Jun 8  | -5.27%  | HOLD — drawdown only, no thesis break found |
-| GASS   | Jun 5  | -1.79%  | HOLD — structural thesis, no adverse event |
-| GIII   | Jun 8  | -1.26%  | HOLD |
-| LASE   | Jun 8  | +0.31%  | **SELL** — quick-trade catalyst spent, no follow-through |
-| NRXP   | Jun 5  | +3.08%  | HOLD |
-| PLSE   | Jun 5  | -2.90%  | HOLD — sector drag only, thesis intact |
-| RXRX   | Jun 5  | +0.61%  | HOLD |
-| SLDB   | Jun 4  | -6.56%  | HOLD — web search clean, Phase 3 DMD thesis intact |
+| ALOT   | Jun 8  | +3.71%  | HOLD — thesis working |
+| AVR    | Jun 8  | -3.65%  | HOLD — improved; drawdown only, no thesis break |
+| GASS   | Jun 5  | -1.89%  | HOLD — structural thesis, no adverse event |
+| GIII   | Jun 8  | +1.32%  | HOLD — recovered, thesis intact |
+| NRXP   | Jun 5  | +0.95%  | HOLD — thesis intact |
+| PLSE   | Jun 5  | -0.82%  | HOLD — improved; sector drag only |
+| PMN    | Jun 9  | -11.59% | HOLD — web search clean; HC Wainwright thesis + conference + Q3 data live |
+| RXRX   | Jun 5  | +1.82%  | HOLD — AI thesis intact |
+| SLDB   | Jun 4  | -4.08%  | HOLD — improved; Phase 3 DMD thesis intact (prior web search) |
 | TISI   | Jun 4  | -2.87%  | HOLD — turnaround thesis intact |
 
 **Active watch triggers for next run:**
-1. **AVR** — monitor for enrollment halt, safety signal, or dilutive capital raise.
-2. **SLDB** — watch for any 8-K/prospectus signaling a capital raise or trial setback.
-3. **LASE** — if not yet executed, catalyst remains spent; SELL stands.
+1. **PMN** — thesis intact but -11.59% on day 1 warrants monitoring. Watch for any negative clinical signal, dilution filing, or news that breaks the HC Wainwright / PRECISE-AD thesis before the Jun 15-16 conference.
+2. **AVR** — continue monitoring for enrollment halt, safety signal, or dilutive capital raise.
+3. **SLDB** — watch for any 8-K/prospectus signaling a capital raise or trial setback.
