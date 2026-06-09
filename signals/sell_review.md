@@ -1,8 +1,8 @@
-# Sell Brain Review — 2026-06-09T09:17:03Z
+# Sell Brain Review — 2026-06-09T13:44:18Z
 
 **0 exits proposed. No urgent flags. All 10 positions HOLD.**
 
-> **Web search this run:** SLDB (Solid Biosciences) — confirmed no thesis-breaking events. Phase 3 IMPACT DUCHENNE trial on schedule, SGT-003 interim data positive (60% mean microdystrophin expression in 40 patients, favorable safety profile), CEO presented at Goldman Sachs and Jefferies healthcare conferences June 3 & 8. Annual stockholder meeting June 10 approved share count increase (routine). No FDA holds, no adverse data, no going-concern signal. Thesis intact; −6.56% is sector/market drag only.
+> **Web search this run:** SLDB (Solid Biosciences) — confirmed no thesis-breaking events. CEO Bo Cumbo presented at Goldman Sachs 47th Annual Global Healthcare Conference on June 8 (yesterday). Company reporting normal business: new-hire RSU grants, annual meeting June 10 with routine agenda (share authorization increase, auditor ratification). No adverse clinical data, no FDA holds, no going-concern signal. Drawdown is sector drag only; thesis intact.
 
 ---
 
@@ -10,28 +10,28 @@
 
 | Symbol | Opened | Unreal%  | Decision | One-line Reason |
 |--------|--------|----------|----------|-----------------|
-| ALOT   | Jun 8  | +3.02%   | **HOLD** | Day-old position in profit; no adverse news; catalyst working. |
-| AVR    | Jun 8  | −5.27%   | **HOLD** | PARADIGM pivotal trial expanding (French regulatory clearance Jun 8, U.S. patients enrolled); −5.27% is sector drag (Healthcare −1.13%), not a thesis break. |
-| GASS   | Jun 5  | −1.79%   | **HOLD** | LPG shipping structural thesis intact; −1.79% over 4 days is normal post-catalyst settling, no adverse news in candidates funnel. |
-| GIII   | Jun 8  | −1.26%   | **HOLD** | Consumer Cyclical sector healthy (+0.96% today); trivial drift on 1-day-old position, no thesis event. |
-| LASE   | Jun 8  | +0.31%   | **HOLD** | Vulcan Defense Initiative counter-UAS selection confirmed live in candidates.json (published 15:39 UTC Jun 8); government procurement pipeline is multi-session. |
-| NRXP   | Jun 5  | +3.08%   | **HOLD** | Hard catalyst ahead (FDA ANDA decision ~July 29); book co-leader; no adverse FDA communication. |
-| PLSE   | Jun 5  | −2.90%   | **HOLD** | Clinical-stage thesis intact; −2.90% in 4 days is normal volatility for biotech, no binary event failed. |
-| RXRX   | Jun 5  | +0.61%   | **HOLD** | AI drug-discovery pipeline intact; slight relative strength vs Healthcare sector; no adverse news in funnel. |
-| SLDB   | Jun 4  | −6.56%   | **HOLD** | Web search confirms thesis intact: Phase 3 IMPACT DUCHENNE enrolling, SGT-003 interim data favorable (60% microdystrophin expression, 40 patients), management at investor conferences — drawdown is sector headwind, no company-specific break. |
-| TISI   | Jun 4  | −2.87%   | **HOLD** | Q1 turnaround thesis (revenue growth, EBITDA improvement) intact; Industrials sector down −0.78% today, normal drag. |
+| ALOT   | Jun 8  | +3.02%   | **HOLD** | Day-old position leading the book; no adverse news; catalyst intact. |
+| AVR    | Jun 8  | −5.27%   | **HOLD** | PARADIGM pivotal trial active (French regulatory clearance Jun 8, U.S. patients enrolling); drawdown is Healthcare sector drag (−1.13%), not a thesis break — no adverse safety or trial disclosure. |
+| GASS   | Jun 5  | −1.79%   | **HOLD** | LPG shipping thesis intact; −1.79% over 4 days is normal post-catalyst drift; no adverse news in today's candidates funnel. |
+| GIII   | Jun 8  | −1.26%   | **HOLD** | Consumer Cyclical sector healthy (+0.96% today); trivial drift on 1-day-old position; no earnings miss or guidance cut. |
+| LASE   | Jun 8  | +0.31%   | **HOLD** | Vulcan Defense Initiative counter-UAS selection confirmed live catalyst (published Jun 8, 15:39 UTC); government procurement pipeline is multi-session; thesis 1 day old and working. |
+| NRXP   | Jun 5  | +3.08%   | **HOLD** | Co-leading the book; hard FDA catalyst still ahead (~July 29 ANDA decision); no adverse regulatory communication; thesis intact. |
+| PLSE   | Jun 5  | −2.90%   | **HOLD** | Clinical-stage thesis intact; −2.90% in 4 days is normal biotech volatility; no binary event failed; Healthcare sector drag explains the move. |
+| RXRX   | Jun 5  | +0.61%   | **HOLD** | AI drug-discovery pipeline intact; holding slight positive in a weak Healthcare tape; no adverse news in funnel. |
+| SLDB   | Jun 4  | −6.56%   | **HOLD** | Web search confirms thesis intact: CEO at Goldman Sachs conference Jun 8, company hiring (new RSU grants), no FDA hold or clinical setback found. −6.56% over 5 days with Healthcare sector −1.13% today is macro drag, not a company-specific break. Annual meeting June 10 is routine — share authorization increase is standard biotech practice, not a going-concern signal. |
+| TISI   | Jun 4  | −2.87%   | **HOLD** | Q1 turnaround thesis intact (revenue growth, EBITDA improvement); Industrials sector down −0.78% today; normal sector-level drag on a multi-day hold. |
 
 ---
 
 ## Summary
 
-Clean hold run — zero exits proposed. Every drawdown traces to sector-level pressure (Healthcare −1.13%, Industrials −0.78%) or normal post-catalyst settling. Web search on SLDB (most stressed at −6.56%, held since June 4) confirmed the Phase 3 gene therapy trial is on schedule with favorable interim data — the drawdown is macro, not thesis.
+Clean hold run — zero exits proposed. Every drawdown is traceable to sector-level pressure (Healthcare −1.13%, Industrials −0.78%, Energy −0.57%) or normal post-entry settling, not a company-specific thesis break. No position shows a spent catalyst, failed binary event, or structural story inflection.
 
 **Top watches for next run:**
-1. **SLDB** — Watch for any dilution signal from the newly approved share authorization. Absent that, conviction HOLD.
-2. **AVR** — Second day at −5.27%; any adverse PARADIGM safety disclosure would be thesis-shattering (urgent sell). None today.
-3. **LASE** — Catalyst 1 day old; watch for volume follow-through confirming momentum.
-4. **NRXP** — Hard catalyst July 29 (FDA ANDA); conviction hold unless surprise adverse FDA communication.
+1. **SLDB** — Most-stressed position (−6.56%, held 5 days). Thesis confirmed intact today. Watch for any adverse IMPACT DUCHENNE data release or halt on bad news — that would be urgent.
+2. **AVR** — Second-weakest (−5.27% day-old). PARADIGM trial thesis active. Any adverse safety communication would be thesis-shattering (urgent sell). None today.
+3. **LASE** — Fresh catalyst (1 day old). Watch for volume follow-through; if momentum dies with no follow-on news, re-evaluate as spent.
+4. **NRXP** — Conviction hold into July 29 FDA date; only sell trigger is a surprise adverse FDA communication.
 
 **Leaders:** NRXP (+3.08%), ALOT (+3.02%).
 **Most-watched:** SLDB (−6.56%), AVR (−5.27%).
