@@ -1,70 +1,69 @@
-Funnel: scanned 273 → 86 leading-tagged → 32 in-budget → 19 with catalyst → 3 finalists → picked 0
+Funnel: scanned 269 → 83 leading-tagged → 78 in-budget → 18 with catalyst → 2 finalists → picked 0
 
-**Run timestamp:** 2026-06-09T15:51:17Z UTC
+**Run timestamp:** 2026-06-09T16:23:14Z UTC
 
 ---
 
 ## Market Tape — 2026-06-09T15:30Z
 
-SPY −1.07%, VIX 20.54 → **risk_off**. Tape reversed hard vs. the 14:57 run (was risk_on +0.30%). Only green sectors: Basic Materials (+0.56%), Financial Services (+0.46%). Everything else red: Energy (−2.96%), Technology (−2.33%), Consumer Cyclical (−1.05%), Industrials (−0.91%), Utilities (−0.81%), Real Estate (−0.45%), Healthcare (−0.34%), Communication Services (−0.33%), Consumer Defensive (−0.30%). Risk-off posture: be pickier, fewer/smaller positions, demand cleaner setups.
+SPY −1.07%, VIX 20.54 → **risk_off** (unchanged from prior run). Only green sectors: Basic Materials (+0.56%), Financial Services (+0.46%). Everything else red: Energy (−2.96%), Technology (−2.33%), Consumer Cyclical (−1.05%), Industrials (−0.91%), Utilities (−0.81%), Real Estate (−0.45%), Healthcare (−0.34%), Communication Services (−0.33%), Consumer Defensive (−0.30%). Tape continues deteriorating into the afternoon.
 
 ---
 
-## No orders this run — reasons
+## No Orders This Run — Reasons
 
-**1. Nearly no powder:** 12 positions open, ~$974 of ~$1,000 deployed. Only ~$26 undeployed. Even a single minimum-size entry at the $2 floor would be a token position; no meaningful risk/reward can be constructed. Sitting out is structurally correct, not a choice.
+**1. Nearly no powder:** 12 positions open, ~$974 cost basis of ~$1,000 deployed. Only ~$26 undeployed. No meaningful new position can be sized. Sitting out is structurally correct.
 
-**2. Risk-off tape:** SPY flipped from +0.30% to −1.07% intraday; VIX moved from 18.28 to 20.54. Buying into a deteriorating tape with no dry powder would be reckless.
+**2. Risk-off tape persists:** VIX remains 20.54, index red, tech sector worst at −2.33%. No clean setup that outargues the tape.
 
 ---
 
 ## Finalists Considered (passed)
 
-**NUVL ($122.91, +38.9%) — PASS (M&A priced in)**
-Web-verified: GSK is acquiring Nuvalent for ~$124/share all-cash ($10.6B deal, June 9 announcement). Stock at $122.91 vs. $124 offer = ~$1.09 of arb upside, substantial deal-break downside. The catalyst move is fully priced; no setup. Added to watchlist? No — M&A arb isn't a momentum trade for this strategy.
+**RNAC ($6.93, +18.3%) — PASS / WATCHLIST**
+Targeted web search confirmed strong catalyst: strategic licensing deal with WestGene Biopharma combining WestGene's LNP delivery platform with Cartesian's Descartes-08 mRNA in vivo CAR-T for autoimmune diseases (8-K filed 07:16Z today). Clinical trials H2 2026, data H1 2027. Genuine durable deal catalyst — not a one-day pop. However, stock already up +16% yesterday and +18% today; extended for immediate entry on risk-off tape. Added to watchlist at pullback $6.20 for when it consolidates. Catalyst age: ~9 hours (fresh).
 
-**ATHE ($4.70, +20.1%) — PASS (already held)**
-Still moving on the MSA Phase 3 FDA approval catalyst from this morning. Strong move, but ATHE is in holdings.json (1 share, avg $4.23, currently +13%). Anti-chase / no-rebuy rule is absolute. Sell brain manages the exit.
-
-**BNAI ($20.93, +14.56%) — PASS / WATCHLIST**
-Brand Engagement Network formed an AI health joint venture with Intervent International (fresh catalyst 11:11 UTC June 9). $136M market cap; 1.996M volume confirms real participation. Up 14.56% on the day — somewhat extended but not a blow-off. Risk-off tape plus depleted powder = not a buy right now. Added to watchlist as pullback entry at $19.50: 7 shares × $19.65 limit = $137.55 ≤ $150. TP $22.50 (+14.5%) / SL $18.25 (−7.1%).
+**BNAI ($21.15, +15.7%) — PASS / WATCHLIST (prior run)**
+Brand Engagement Network AI health JV with Intervent International (11:11Z today). Still holding gains at +15.7% through afternoon. At boundary of "deprioritize" threshold (15–20%). No powder to deploy regardless. Watchlist pullback at $19.50 from prior run remains live.
 
 ---
 
 ## Notable Passes (funnel-wide)
 
-- **LESL ($6.81, +32.7%)**: Leslie's — no catalyst listed, purely a momentum gainer, extended. Hard pass.
-- **PAYO ($6.53, +27.0%)**: Payoneer — no catalyst in funnel, large mystery move. No entry.
-- **RNAC ($6.93, +18.3%)**: Cartesian Therapeutics 8-K — extended 18% already, no room for this risk-off tape.
-- **DBI ($6.80, −23.4%)**: Designer Brands Q1 miss — sharp drop, put could work but move mostly spent, and no powder for premium.
-- **STI ($21.77, −24.8%)**: Large loser, no catalyst in funnel, likely bad earnings. Drop spent.
-- **TITN ($19.61, −17.8%)**: Titan Machinery 8-K + mover — not worth a put with $26 available.
-- **CCTG (+1,044%)**, **CHAI (+296%)**, **AZI (+191%)**: LUDP halt/resume manipulation names. Hard pass.
-- All sub-$2 names (CGTL, GMM, CPOP, GLE, etc.): price floor violated. Eliminated immediately.
-- **EVTL ($2.09, −1.84%)**: Already held (14 shares, avg $2.12). Anti-rebuy rule: pass.
-- **SLDB ($6.47, +1.79%)**: Already held (9 shares, avg $6.86). Pass.
-- **APLD**: Already held, watchlist item removed.
+- **NUVL ($122.99, +39.0%)**: GSK acquisition at ~$124/share — confirmed M&A arb, not a momentum trade. Hard pass.
+- **LESL ($6.80, +32.6%)**: Extended gainer, no fresh catalyst in funnel. Pass.
+- **ATHE (+19.2%)**: Already HELD (1 share, avg $4.23, +10.5%). Anti-rebuy rule absolute.
+- **DBI ($6.81, −23.3%)**: Designer Brands Q1 earnings miss (8-K + news, 10:39Z). Already repriced −23%; put premium rich, move spent. Pass.
+- **RNAC ($6.93, +18.3%)**: Extended after 2-day run; watchlist only.
+- **MRVL ($262, −9.3%)**: Tech selloff, price too high for $150 budget (can't buy any shares).
+- **ADBE** (earnings June 11, est. $5.83 EPS): Only earnings_soon candidate. At $291/share, $150 budget = 0 shares. Skip.
+- **BNAI ($21.15)**: Partially extended; watchlist handles it.
+- **CCTG (+1,043%)**, **CHAI (+261%)**, **PAVS (+1,521%)**: LUDP halt/resume manipulation names. Hard pass.
+- All sub-$2 names (CGTL $0.845, GMM $0.143, GLE $0.514, etc.): price floor violated.
+- **EVTL, SLDB, APLD, ATHE, GASS, GIII, NRXP, PLSE, PMN, RXRX, TISI, AVR**: Already held — no re-buys under any circumstances.
 
 ---
 
 ## Holdings Read (12 positions, ~$974 deployed)
 
-Tape turned risk-off this run. Notable movers among our positions:
-- **ATHE (+13.0%)**: Still performing well post-FDA Phase 3 nod. Sell brain manages exit at the right time.
-- **GASS (−1.68%)**: Tanker thesis intact, minor drift in a weak tape.
-- **EVTL (−1.42%)**: Just entered at the 14:57 run ($2.12 avg, 14 shares filled vs. 69 ordered). Market filled only 14 shares; small position, sell brain monitors.
-- **APLD (−0.61%)**: Opened at 14:50 UTC ($41.44). Applied Digital data center story. Minor red in risk-off tech tape.
-- **AVR (−8.71%)**: Weakest position, now at −8.71%. Sell brain active.
-- **NRXP (−7.11%)**: Still in drawdown since Jun 5. Sell brain active.
-- **PMN (−5.37%)**: Opened June 9, in drawdown. Sell brain active.
-- **SLDB (−5.69%)**: Hold from June 4. Sell brain active.
+- **ATHE (+10.5%)**: Best performer. MSA drug Phase 3 FDA nod catalyst from this morning still holding.
+- **GIII (−0.4%)**: G-III Apparel — minor drift, intact.
+- **TISI (−1.1%)**: Team Services, small drawdown.
+- **RXRX (−1.4%)**: Recursion Pharma, small drawdown.
+- **PLSE (−1.8%)**: Pulse Biosciences, small drawdown.
+- **APLD (−1.9%)**: Applied Digital, opened today — risk-off tech tape pressure.
+- **EVTL (−2.9%)**: Vertical Aerospace, small position (14 shares).
+- **GASS (−2.1%)**: StealthGas, holding.
+- **PMN (−5.4%)**: Opened today, in drawdown. Sell brain active.
+- **SLDB (−5.4%)**: Solid Bio from June 4. Sell brain active.
+- **AVR (−9.2%)**: Weakest. Sell brain should be close to exit trigger.
+- **NRXP (−9.8%)**: Weakest. Sell brain active — held since June 5.
 
-No re-buys, no averaging down, no new orders. Sitting tight until sell brain frees up capital.
+No re-buys, no averaging down. Capital will free up when sell brain exits weakest positions.
 
 ---
 
 ## Watchlist Update
 
-- **REMOVED**: APLD (now held — rebuy prohibited).
-- **ADDED**: BNAI pullback trigger at $19.50 (see finalists above).
-- **RETAINED**: BHC, ATLX, NRIX, KSS, MNKD, GHRS, COYA, ELDN, ALVO, BWAY.
+- **ADDED**: RNAC pullback trigger $6.20 (WestGene in vivo CAR-T deal — durable catalyst; wait for consolidation after 2-day run).
+- **RETAINED**: BHC (fresh catalyst, below trigger), ATLX, NRIX, KSS, MNKD, GHRS, COYA, ELDN, ALVO, BWAY, BNAI.
