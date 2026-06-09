@@ -1,11 +1,11 @@
 {
-  "updated_utc": "2026-06-09T12:25:16Z",
-  "n": 9,
-  "expectancy": -2.9489,
-  "win_rate": 11.1,
-  "total_realized": -26.54,
-  "profit_factor": 0.292,
-  "max_drawdown": -26.54,
+  "updated_utc": "2026-06-09T12:30:28Z",
+  "n": 10,
+  "expectancy": -2.702,
+  "win_rate": 10.0,
+  "total_realized": -27.02,
+  "profit_factor": 0.288,
+  "max_drawdown": -27.02,
   "by_signal": {
     "untagged": {
       "n": 8,
@@ -13,9 +13,9 @@
       "expectancy": -3.0363
     },
     "news_smallcap": {
-      "n": 1,
+      "n": 2,
       "win_rate": 0.0,
-      "expectancy": -2.25
+      "expectancy": -1.365
     }
   },
   "sample_sufficient": false

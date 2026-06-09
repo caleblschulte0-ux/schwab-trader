@@ -1,5 +1,5 @@
 {
-  "cash": 1.9148000000000849,
+  "cash": 60.112400000000086,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -115,30 +115,9 @@
         "entry_last": 34.7,
         "tape_tone": "risk_on"
       }
-    },
-    "LASE": {
-      "qty": 18,
-      "entry": 3.26,
-      "tp": null,
-      "sl": null,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-08T20:15:25.379322+00:00",
-      "meta": {
-        "signals": [
-          "news_smallcap"
-        ],
-        "catalyst_age_h": 4.6,
-        "market_cap": 126079652.0,
-        "volume": 32074476,
-        "ref_price": 3.27,
-        "entry_ask": 3.25,
-        "entry_last": 3.25,
-        "tape_tone": "risk_on"
-      }
     }
   },
-  "realized_pnl": -26.535200000000003,
+  "realized_pnl": -27.017599999999998,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -272,7 +251,31 @@
       "closed_utc": "2026-06-08T20:00:25.593257+00:00",
       "reason": "sell brain",
       "hold_h": 98.69
+    },
+    {
+      "symbol": "LASE",
+      "qty": 18,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 3.26,
+      "exit": 3.2332,
+      "pnl": -0.48,
+      "pnl_pct": -0.82,
+      "opened_utc": "2026-06-08T20:15:25.379322+00:00",
+      "closed_utc": "2026-06-09T12:30:26.150632+00:00",
+      "reason": "sell brain",
+      "hold_h": 16.25,
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst_age_h": 4.6,
+      "market_cap": 126079652.0,
+      "volume": 32074476,
+      "ref_price": 3.27,
+      "entry_ask": 3.25,
+      "entry_last": 3.25,
+      "tape_tone": "risk_on"
     }
   ],
-  "updated_utc": "2026-06-08T21:00:28.739282+00:00"
+  "updated_utc": "2026-06-09T12:30:27.907028+00:00"
 }

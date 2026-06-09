@@ -1,30 +1,30 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-08T21:00:28Z_
+_Updated 2026-06-09T12:30:27Z_
 
-**Equity:** $962.64  (start $1000.00, **-37.36 / -3.7%**)  
-**Cash:** $1.91   **Invested:** $971.55   **Open positions:** 10  
-**Realized P/L:** $-26.54   **Unrealized:** $-10.82   **Closed trades:** 9   **Win rate:** 11%
+**Equity:** $968.50  (start $1000.00, **-31.50 / -3.1%**)  
+**Cash:** $60.11   **Invested:** $912.87   **Open positions:** 9  
+**Realized P/L:** $-27.02   **Unrealized:** $-4.48   **Closed trades:** 10   **Win rate:** 10%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
-| ALOT | stock | 7 | $15.58 | $16.05 | $16.55 | $14.45 | $+3.29 |
-| AVR | stock | 15 | $9.87 | $9.35 | $10.41 | $9.16 | $-7.80 |
-| GASS | stock | 15 | $9.51 | $9.34 | $10.40 | $8.95 | $-2.55 |
-| GIII | stock | 4 | $34.80 | $34.36 | $38.00 | $32.90 | $-1.76 |
-| LASE | stock | 18 | $3.26 | $3.27 | $0.00 | $0.00 | $+0.18 |
-| NRXP | stock | 35 | $4.22 | $4.35 | $4.65 | $4.00 | $+4.55 |
-| PLSE | stock | 2 | $25.49 | $24.75 | $31.50 | $23.50 | $-1.48 |
-| RXRX | stock | 18 | $3.29 | $3.31 | $4.50 | $3.10 | $+0.36 |
-| SLDB | stock | 9 | $6.86 | $6.41 | $10.50 | $5.90 | $-4.05 |
+| ALOT | stock | 7 | $15.58 | $16.24 | $16.55 | $14.45 | $+4.62 |
+| AVR | stock | 15 | $9.87 | $9.51 | $10.41 | $9.16 | $-5.40 |
+| GASS | stock | 15 | $9.51 | $9.33 | $10.40 | $8.95 | $-2.70 |
+| GIII | stock | 4 | $34.80 | $35.26 | $38.00 | $32.90 | $+1.84 |
+| NRXP | stock | 35 | $4.22 | $4.26 | $4.65 | $4.00 | $+1.40 |
+| PLSE | stock | 2 | $25.49 | $24.84 | $31.50 | $23.50 | $-1.30 |
+| RXRX | stock | 18 | $3.29 | $3.35 | $4.50 | $3.10 | $+1.14 |
+| SLDB | stock | 9 | $6.86 | $6.58 | $10.50 | $5.90 | $-2.52 |
 | TISI | stock | 3 | $18.09 | $17.57 | $21.50 | $16.00 | $-1.56 |
 
 ## Last 15 closed trades
 
 | Symbol | Kind | Qty | Entry | Exit | P/L | % | Reason | Closed |
 |--------|------|-----|-------|------|-----|---|--------|--------|
+| LASE | stock | 18 | $3.26 | $3.23 | $-0.48 | -0.8% | sell brain | 2026-06-09T12:30 |
 | JFB | stock | 11 | $5.79 | $5.35 | $-4.84 | -7.6% | sell brain | 2026-06-08T20:00 |
 | DRTS | stock | 6 | $10.52 | $9.45 | $-6.42 | -10.2% | brain SELL | 2026-06-08T16:00 |
 | TLYS | stock | 12 | $4.84 | $5.75 | $+10.92 | +18.8% | brain SELL | 2026-06-08T15:00 |
