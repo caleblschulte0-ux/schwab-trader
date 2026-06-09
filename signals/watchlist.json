@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-09T14:17:42Z",
+  "generated_utc": "2026-06-09T14:38:15Z",
   "watch": [
     {
       "symbol": "APLD",
@@ -10,7 +10,7 @@
       "take_profit": 49.00,
       "stop_loss": 38.50,
       "good_until": "2026-06-13",
-      "note": "Applied Digital 8-K today: $1.59B senior notes + $550M revolver + CoreWeave MOU. AI data center growth catalyst. Stock +7% to $43.86 — buy the pullback when cash frees up. TP +17.4% / SL -7.8% from $41.75 entry."
+      "note": "Applied Digital 8-K: $1.59B senior notes + $550M revolver + CoreWeave MOU. AI data center growth catalyst. Buy pullback to $41.50; TP +17.4% / SL -7.8% from $41.75 entry."
     },
     {
       "symbol": "ATLX",
@@ -21,7 +21,7 @@
       "take_profit": 5.20,
       "stop_loss": 3.50,
       "good_until": "2026-06-13",
-      "note": "Atlas Lithium CEO at Giga USA event (June 9, 11:29 UTC) — critical minerals/Brazilian lithium thesis. Early move +4.2% to $3.73 on $110M cap. Breakout above $4 confirms momentum. TP +28% / SL -13.5% from $4.05 entry."
+      "note": "Atlas Lithium CEO at Giga USA (June 9, 11:29 UTC) — critical minerals/Brazilian lithium thesis. Early move +6.4% to $3.81 on $112M cap. Breakout above $4.00 confirms momentum. TP +28% / SL -13.5% from $4.05 entry."
     },
     {
       "symbol": "NRIX",
@@ -32,7 +32,7 @@
       "take_profit": 19.50,
       "stop_loss": 15.25,
       "good_until": "2026-06-12",
-      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Stock ran to $16.94 then pulled back to ~$15.64. $1.6B cap getting $700M upfront = transformative. Phase 3 start this summer. Enter on re-breakout above $16.50; TP $19.50 (+17%), SL $15.25 (-8.1%)."
+      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Stock ran to $16.94 then pulled back. $1.6B cap getting $700M upfront = transformative. Phase 3 start this summer. Enter on re-breakout above $16.50; TP $19.50 (+17%), SL $15.25 (-8.1%)."
     },
     {
       "symbol": "KSS",
@@ -43,7 +43,7 @@
       "take_profit": 18.50,
       "stop_loss": 15.50,
       "good_until": "2026-06-12",
-      "note": "Kohl's analyst raises price target post-Q1 (June 8). Consumer Cyclical is second-hottest macro sector today (+0.96%). Breakout above $16.50 confirms continuation. TP +11.4% / SL -6.6% from $16.60 entry."
+      "note": "Kohl's analyst raises price target post-Q1 (June 8). Consumer Cyclical is hot macro sector today (+0.53%). Breakout above $16.50 confirms continuation. TP +11.4% / SL -6.6% from $16.60 entry."
     },
     {
       "symbol": "MNKD",
@@ -98,7 +98,7 @@
       "take_profit": 4.25,
       "stop_loss": 3.65,
       "good_until": "2026-06-12",
-      "note": "Alvotech: FDA accepted Entyvio biosimilar NDA for review (June 8). Stock +19.8% ($4.24) — needs pullback to $3.90 for clean entry. Durable FDA acceptance catalyst. TP +8.4% / SL -6.6% from $3.92 entry."
+      "note": "Alvotech: FDA accepted Entyvio biosimilar NDA for review (June 8). Stock at $4.24, needs pullback to $3.90 for clean entry. Durable FDA acceptance catalyst. TP +8.4% / SL -6.6% from $3.92 entry."
     },
     {
       "symbol": "BWAY",
@@ -109,7 +109,7 @@
       "take_profit": 15.50,
       "stop_loss": 13.10,
       "good_until": "2026-06-12",
-      "note": "BrainsWay 12-month sustained depression remission study published (June 9, 11:58 UTC — fresh). TMS clinical milestone. Stock +0.17% to $14.43 — wait for pullback to $13.75 support. Healthcare sector weak today (-1.13%) so no immediate buy. TP +11.9% / SL -5.4% from $13.85 entry."
+      "note": "BrainsWay 12-month sustained depression remission study published (June 9, 11:58 UTC — very fresh). TMS clinical milestone. Stock at $14.71; wait for pullback to $13.75 support. Healthcare sector weak today (-0.27%) so no immediate buy. TP +11.9% / SL -5.4% from $13.85 entry."
     }
   ]
 }
