@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-06-09T10:18:32.342622+00:00",
+  "generated_utc": "2026-06-09T10:34:37.397303+00:00",
   "sells": [
     {
       "symbol": "LASE",
-      "reason": "Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection, June 8) is spent: no follow-on contract award or new defense announcement in 1+ sessions, momentum faded from $4.49 peak to $3.27 chop zone, volume cooling from 139M avg \u2014 pre-set watch trigger (absence of follow-on news within 1-2 sessions) is met; stock flat to purchase price, no reason to hold.",
+      "reason": "Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection, June 8) is spent: no follow-on contract award or new defense announcement through a second session, momentum gone from $4.49 peak to flat near entry ($3.27 vs $3.26 avg), volume cooling \u2014 catalyst was 'technical exchange' phase entry, not a contract award. Thesis was ride the momentum; momentum is dead.",
       "urgent": false
     }
   ]

@@ -1,9 +1,8 @@
-# Sell Brain Review — 2026-06-09T21:10:00Z
+# Sell Brain Review — 2026-06-09T22:47:33Z
 
 **1 exit proposed. No urgent flags.**
 
-> **Web search this run:** LASE (Laser Photonics / Laser Shield) — quick-trade name added June 8 on Vulcan Defense Initiative counter-drone selection; prior run set explicit watch trigger: volume collapse or absence of follow-on defense-contract news within 1–2 sessions.
-> **Result: watch trigger met. SELL.** No follow-on contract or new government announcement as of June 9. The original selection placed Laser Shield into a "technical exchange" phase with government engineers — not a contract award. Stock ran from <$1 to $4.49 peak pre-buy, then pulled back; volume cooling from 139M avg, stock now chopping $3.20–$3.70 with no fresh catalyst to reignite. NASDAQ compliance deficiency (late 10-Q) appears resolved per company 8-K. Thesis: quick-trade momentum play — that move is done.
+> **Web search this run:** SLDB (Solid Biosciences / SGT-003) — prior run set an urgent-sell watch trigger for "going-concern disclosure." Web search confirmed: going-concern language IS present in the Q1 2026 10-Q, but that filing covered the quarter ended March 31, 2026 — filed approximately May 2026, *before* the June 4 entry date. The buy brain entered knowing this risk was public. Phase 3 IMPACT DUCHENNE is proceeding normally (first participant dosed May 7, 2026), DSMB reviewed a Grade 3 myositis in the Phase 1/2 INSPIRE trial and recommended continuing without interruption, and CEO presented at Goldman Sachs Global Healthcare Conference June 8. No new adverse event in Phase 3. Thesis intact; watch trigger is not fired because the disclosure predates the position.
 
 ---
 
@@ -11,27 +10,27 @@
 
 | Symbol | Opened | Unreal%  | Decision | One-line Reason |
 |--------|--------|----------|----------|-----------------|
-| ALOT   | Jun 8  | +3.02%   | **HOLD** | In profit; no adverse catalyst in any data feed; thesis intact. |
-| AVR    | Jun 8  | −5.27%   | **HOLD** | PARADIGM pivotal trial (DurAVR® THV) intact and funded through completion; drawdown is Healthcare-sector noise (sector −1.13%), not a thesis break — confirmed by prior run. |
-| GASS   | Jun 5  | −1.79%   | **HOLD** | Minor drift in soft Energy tape; LPG shipping thesis structurally unchanged; no adverse catalyst surfacing. |
-| GIII   | Jun 8  | −1.26%   | **HOLD** | Trivial 1-day drawdown; no guidance cut, tariff shock, or adverse event identified; Consumer Cyclical tape supportive. |
-| LASE   | Jun 8  | +0.31%   | **SELL** | Quick-trade catalyst (counter-drone Vulcan selection) spent: no follow-on contract in 1+ sessions, momentum faded, watch trigger from prior run is met. |
-| NRXP   | Jun 5  | +3.08%   | **HOLD** | Co-leading the book; no adverse news in any data source; thesis intact. |
-| PLSE   | Jun 5  | −2.90%   | **HOLD** | Medical device name in persistent Healthcare headwind; no clinical event, trial read-out, or downgrade — sector drag only, thesis not broken. |
-| RXRX   | Jun 5  | +0.61%   | **HOLD** | Flat-to-positive; AI drug-discovery thesis undisturbed; no negative signal in the funnel. |
-| SLDB   | Jun 4  | −6.56%   | **HOLD** | Phase 3 IMPACT DUCHENNE trial (SGT-003, DMD) intact with positive FDA alignment — searched and confirmed by prior run; CEO at Goldman Sachs conference June 8; drawdown is sector-driven. |
-| TISI   | Jun 4  | −2.87%   | **HOLD** | Five-day drift in soft Industrials tape; no adverse catalyst, contract loss, or guidance cut in any feed. |
+| ALOT   | Jun 8  | +3.02%   | **HOLD** | In profit, no adverse catalyst in any feed, thesis intact. |
+| AVR    | Jun 8  | −5.27%   | **HOLD** | PARADIGM pivotal trial (DurAVR® THV) thesis intact; drawdown is Healthcare sector drag (sector −1.13%), not a thesis break. |
+| GASS   | Jun 5  | −1.79%   | **HOLD** | LPG shipping thesis is structural, not a spent quick-trade; minor drift in soft Energy tape with no adverse catalyst. |
+| GIII   | Jun 8  | −1.26%   | **HOLD** | Trivial 1-day drawdown; no guidance cut, tariff shock, or adverse event; Consumer Cyclical tape was supportive at entry. |
+| LASE   | Jun 8  | +0.31%   | **SELL** | Quick-trade catalyst (Vulcan Defense Initiative counter-drone selection) remains spent through a second session; no follow-on contract or government announcement; momentum dead, position flat. |
+| NRXP   | Jun 5  | +3.08%   | **HOLD** | Co-leading the book, no adverse news in any data source, thesis intact. |
+| PLSE   | Jun 5  | −2.90%   | **HOLD** | Medical device; Healthcare sector persistent headwind but no clinical event, trial setback, or downgrade — sector drag only. |
+| RXRX   | Jun 5  | +0.61%   | **HOLD** | Flat-to-positive; AI drug-discovery thesis undisturbed, no negative signal. |
+| SLDB   | Jun 4  | −6.56%   | **HOLD** | Phase 3 IMPACT DUCHENNE proceeding normally (first patient dosed May 7); going-concern language in Q1 10-Q predates the June 4 entry (not a new event); Grade 3 myositis in Phase 1/2 managed with DSMB clearing continuation; drawdown is sector-driven. |
+| TISI   | Jun 4  | −2.87%   | **HOLD** | Five-day drift in soft Industrials tape (−0.78%); no adverse catalyst, contract loss, or guidance cut in any feed. |
 
 ---
 
 ## Summary
 
-One exit proposed: **LASE** (routine, non-urgent). The quick-trade thesis — ride momentum following Vulcan Defense Initiative selection — has played out. The stock ran before we entered; we bought near the close at $3.26 with the catalyst aged ~4 hours; no follow-on contract emerged in the next session; volume is cooling and price is chopping with no fresh catalyst. The watch trigger set by the prior run is now satisfied. Exit is routine (not urgent): no thesis-shattering event, just a spent catalyst in a flat position.
+One exit proposed: **LASE** (routine, non-urgent). The counter-drone Vulcan Defense Initiative selection was a quick-trade catalyst that has now been stale through two full sessions. No follow-on contract emerged. Price is flat at $3.27 vs. $3.26 avg — holding this any longer is holding dead money with a spent story. This was also the call last run; it is reaffirmed.
 
-All nine other positions remain **HOLD**. Red positions (SLDB −6.56%, AVR −5.27%, PLSE −2.90%, TISI −2.87%, GASS −1.79%, GIII −1.26%) have no identifiable thesis breaks — all drawdowns are sector-driven or normal noise in intact stories.
+All nine other positions remain **HOLD**. The largest drawdown (SLDB −6.56%) was specifically web-searched this run and the thesis is confirmed intact — Phase 3 is enrolling, the safety event in Phase 1/2 was cleared by the DSMB, and the going-concern risk was pre-existing at purchase.
 
 **Watch triggers for next run:**
-1. **SLDB** — urgent-sell if adverse Phase 3 IMPACT DUCHENNE result, new FDA clinical hold on SGT-003, or going-concern disclosure.
-2. **AVR** — monitor for enrollment halt, safety signal, or capital raise at distress price.
-3. **PLSE** — Healthcare sector persistent headwind; monitor for any clinical event or guidance revision.
-4. **TISI / GASS** — approaching 5–6 day hold; reassess story freshness next run if no new catalyst.
+1. **SLDB** — urgent-sell if new adverse Phase 3 IMPACT DUCHENNE event, new FDA clinical hold, or capital-raise-at-distress-price announcement (going-concern risk is real even if pre-existing).
+2. **AVR** — monitor for enrollment halt, safety signal, or distressed capital raise in PARADIGM trial.
+3. **TISI / GASS** — now at 5–6 days held; if no fresh catalyst surfaces by next run, reassess whether the original thesis was a quick trade whose move is done.
+4. **PLSE** — Healthcare sector headwind persists; any clinical event or guidance revision triggers reassessment.
