@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-09T13:15:23.644924+00:00",
+  "updated_utc": "2026-06-09T13:20:21.873536+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
@@ -42,9 +42,9 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.3436,
-      "unrealized_pct": 2.93,
-      "value": 152.03
+      "last": 4.34,
+      "unrealized_pct": 2.84,
+      "value": 151.9
     },
     {
       "symbol": "PLSE",
@@ -69,9 +69,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.34,
-      "unrealized_pct": 1.52,
-      "value": 60.12
+      "last": 3.3497,
+      "unrealized_pct": 1.81,
+      "value": 60.29
     },
     {
       "symbol": "SLDB",
