@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-09T13:38:14Z",
+  "generated_utc": "2026-06-09T13:58:22Z",
   "watch": [
     {"symbol": "NRIX",
      "trigger": "breakout", "trigger_price": 16.50,
@@ -54,12 +54,6 @@
      "quantity": 10, "limit_price": 13.85,
      "take_profit": 15.50, "stop_loss": 13.10,
      "good_until": "2026-06-12",
-     "note": "BrainsWay 12-month sustained depression remission study published (June 9, 11:58 UTC — very fresh). TMS clinical milestone. Stock +3.74% to $14.41 — wait for pullback to $13.75 support. Healthcare sector weak today (-1.13%) so no immediate buy. TP +11.9% / SL -5.4% from $13.85 entry."},
-    {"symbol": "ATHE",
-     "trigger": "breakout", "trigger_price": 4.05,
-     "quantity": 15, "limit_price": 4.10,
-     "take_profit": 4.75, "stop_loss": 3.70,
-     "good_until": "2026-06-12",
-     "note": "Acumen Pharmaceuticals / ATHE: FDA granted Phase 3 nod for MSA (multiple system atrophy) drug that slowed decline 48% (June 9, 11:04 UTC). $60M microcap, stock barely moved (+0.5% to $3.92) — early entry opportunity. Volume thin today (10K) so wait for breakout above $4.05 to confirm participation. Healthcare sector weak today but catalyst is durable. TP +15.9% / SL -9.8% from $4.10 entry."}
+     "note": "BrainsWay 12-month sustained depression remission study published (June 9, 11:58 UTC — fresh). TMS clinical milestone. Stock +3.74% to $14.41 — wait for pullback to $13.75 support. Healthcare sector weak today (-1.13%) so no immediate buy. TP +11.9% / SL -5.4% from $13.85 entry."}
   ]
 }
