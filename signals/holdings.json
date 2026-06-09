@@ -1,14 +1,14 @@
 {
-  "updated_utc": "2026-06-09T12:45:22.538056+00:00",
+  "updated_utc": "2026-06-09T12:50:20.402758+00:00",
   "holdings": [
     {
       "symbol": "ALOT",
       "quantity": 7,
       "avg_price": 15.58,
       "opened_utc": "2026-06-08T14:25:29.277427+00:00",
-      "last": 16.1585,
-      "unrealized_pct": 3.71,
-      "value": 113.11
+      "last": 16.1266,
+      "unrealized_pct": 3.51,
+      "value": 112.89
     },
     {
       "symbol": "AVR",
@@ -42,9 +42,9 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 4.27,
-      "unrealized_pct": 1.18,
-      "value": 149.45
+      "last": 4.34,
+      "unrealized_pct": 2.84,
+      "value": 151.9
     },
     {
       "symbol": "PLSE",
@@ -69,18 +69,18 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.36,
-      "unrealized_pct": 2.13,
-      "value": 60.48
+      "last": 3.34,
+      "unrealized_pct": 1.52,
+      "value": 60.12
     },
     {
       "symbol": "SLDB",
       "quantity": 9,
       "avg_price": 6.86,
       "opened_utc": "2026-06-04T13:00:42.683106+00:00",
-      "last": 6.58,
-      "unrealized_pct": -4.08,
-      "value": 59.22
+      "last": 6.71,
+      "unrealized_pct": -2.19,
+      "value": 60.39
     },
     {
       "symbol": "TISI",
