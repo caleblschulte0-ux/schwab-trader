@@ -1,5 +1,8 @@
 {
-  "generated_utc": "2026-06-09T14:38:15Z",
-  "funnel": {"scanned": 296, "leading": 112, "in_budget": 168, "had_catalyst": 80, "finalists": 3, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-09T14:57:33Z",
+  "funnel": {"scanned": 279, "leading": 97, "in_budget": 162, "had_catalyst": 86, "finalists": 4, "picked": 1},
+  "orders": [
+    {"symbol": "EVTL", "action": "BUY", "instrument": "stock",
+     "quantity": 69, "limit_price": 2.17}
+  ]
 }

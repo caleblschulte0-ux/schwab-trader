@@ -1,61 +1,66 @@
-Funnel: scanned 296 → 168 fit budget → 80 with catalyst → 3 finalists → picked 0
+Funnel: scanned 279 → 97 leading-tagged → 162 in-budget → 86 with catalyst → 4 finalists → picked 1
 
-**Run timestamp:** 2026-06-09T14:38Z UTC
+**Run timestamp:** 2026-06-09T14:57:33Z UTC
 
 ---
 
 ## Market Tape — 2026-06-09T14:27Z
 
-SPY +0.30%, QQQ +0.06%, VIX 18.28 → **risk_on** (mild). Hot sectors: Financial Services (+1.5%), Communication Services (+0.86%), Consumer Cyclical (+0.53%), Industrials (+0.52%), Basic Materials (+0.50%). Weak: Energy (−1.28%), Consumer Defensive (−0.46%), Healthcare (−0.27%), Technology (−0.03%). Account has 10 open positions with ~$861 deployed (~86% of capital); ~$139 powder remaining — bar for any new buy is high.
+SPY +0.30%, VIX 18.28 → **risk_on** (mild). Hot sectors: Financial Services (+1.50%), Communication Services (+0.86%), Consumer Cyclical (+0.53%), Industrials (+0.52%), Basic Materials (+0.50%). Weak: Energy (−1.28%), Consumer Defensive (−0.46%), Healthcare (−0.27%), Technology (−0.03%). Normal aggressiveness. Tilt toward Industrials and Financial names; skepticism on Energy/Healthcare longs.
 
 ---
 
-## Headline Mover — NUVL (Nuvalent) +38.8% — PASS (too extended)
+## Pick: EVTL — BUY 69 shares @ $2.17 ($149.73)
 
-NUVL filed an 8-K at 07:03 UTC and gapped +38.8% to $122.84. Nuvalent makes ROS1/ALK-targeted kinase inhibitors (zidesamtinib PDUFA Sept 18, neladalkib PDUFA Nov 27). Surge follows ASCO data and FDA submission catalysts confirmed this morning. Entry is a hard pass — +38.8% in a single session is a full blow-off candle with no room. Searched for small-cap sympathy plays in the ROS1/ALK NSCLC space; none surfaced in the funnel or via web search that are identifiable, liquid, and early.
+**Vertical Aerospace (EVTL)** — eVTOL aircraft manufacturer, ~$276M market cap.
+
+**Catalyst (web-verified):** On June 9, Vertical Aerospace announced its final full-scale Valo prototype completed its first piloted flight on June 5, ahead of the upcoming Critical Design Review (CDR). A CDR is the last major technical programme gate before full-scale production — clearing the prototype flight test ahead of it is a genuine milestone. Confirmed via Morningstar/BusinessWire and Investing.com. Catalyst published ~12:10 UTC today (~2.7 hours ago).
+
+**Why now:** Despite clearly bullish news, EVTL is trading at exactly 0.0% change on 709K volume — the market has not yet absorbed the news. This is the ideal early-entry scenario: fresh catalyst, stock hasn't moved, real volume confirms participation. Industrials sector positive today (+0.52%). No EVTL position held.
+
+**Catalyst age:** ~2.7 hours. Budget: 69 × $2.17 = $149.73 ✓. Price $2.17 is above the $2 floor.
 
 ---
 
-## Finalists Considered
+## Finalists Considered (passed)
 
-**BZUN $2.72 (+1.45%, mcap $158M) — PASS**
-Baozun co-founder added 12% more to his stake; news published 11:10 UTC today (fresh, ~3.5h ago). Stock has barely moved on this insider signal — genuinely early. Thesis: insider conviction at low valuations on a small float. Against: Chinese VIE structure (delisting and regulatory risk), very thin volume today (54K shares — exit liquidity risk), and tech sector slightly negative (−0.03%). With only $139 powder and 10 open positions, deploying into a VIE name with thin volume is the wrong use of the remaining capital. Monitoring; would reconsider on a high-volume confirmation day.
+**BHC ($5.195, +1.66%) — PASS / WATCHLIST**
+Bausch Health Canada signed a letter of intent with the pan-Canadian Pharmaceutical Alliance for public drug plan coverage of OKEDI (risperidone extended-release) for schizophrenia. Catalyst published 11:59 UTC today (fresh, ~3 hours). Volume 197K, market cap $1.94B. Only +1.66% so far — quality early-stage setup. Passed this run as EVTL's flat-on-news entry is cleaner. Added to watchlist with breakout trigger at $5.35.
 
-**AMPG $7.02 (+6.85%, mcap $178M) — PASS**
-Amplitech Group surged on very high volume (3.9M shares) alongside the Israel-Iran ceasefire market headline. Small cap, real participation, early-ish +6.85% move. Against: no company-specific catalyst — the ceasefire is a broad macro event, not an Amplitech fundamental. Without a thesis anchored to the company's own business, this is a momentum chase with no defined stop thesis. Passed.
+**ALVO ($4.285, +1.06%) — PASS / WATCHLIST**
+FDA accepted Alvotech's AVT16 biosimilar application. Somewhat bullish. Catalyst published 07:40 UTC (~7 hours ago, getting stale). Healthcare sector slightly negative (−0.27%). Still on watchlist as pullback entry to $3.90.
 
-**BNAI $21.825 (+19.46%, mcap $134M) — PASS (deprioritize zone)**
-Brand Engagement Network announced an AI health JV with Intervent International (11:11 UTC, fresh). Bullish company-specific catalyst, real volume (1.56M). Against: already +19.46% intraday — firmly in the deprioritize zone (15–20%+); move is not basing. Tiny float adds pump-and-fade risk. No room relative to catalyst entry. Hard pass.
+**BZUN ($2.685, +0.19%) — PASS**
+Baozun co-founder added 12% more to his stake (insider buy). Stock barely moved, fresh catalyst (~11:10 UTC). Against: Chinese VIE structure and geopolitical risk, very thin volume 61K (exit liquidity concern). Not the right use of remaining powder.
 
 ---
 
 ## Notable Passes (funnel-wide)
 
-- **ATHE (+23.2%)** — OWNED (1 share @ $4.23). MSA drug FDA Phase 3 nod today; +15.1% unrealized. Sell brain manages exit.
-- **NUVL (+38.8%)** — Extended blow-off; see above.
-- **FCEL (+21.5%)** — Mover only, no catalyst in funnel, extended.
-- **LESL (+31.7%)** — Large move, no catalyst surfaced in funnel; too extended to enter blind.
-- **ATLX ($3.81, +6.4%)** — Brazilian lithium CEO at Giga USA (11:29 UTC, fresh, catalyst age ~3h). Still below watchlist breakout trigger $4.00. Bot will catch the entry automatically on breakout.
-- **BWAY ($14.71, +2.1%)** — 12-month TMS depression remission data published in journal (11:58 UTC, very fresh). Healthcare sector weak (−0.27%). Already in watchlist at pullback trigger $13.75.
-- **ALVO ($4.24, flat)** — FDA accepted Entyvio biosimilar NDA. In watchlist at pullback $3.90.
-- **IPSC ($2.205, +4.0%)** — T1D islet therapy article (04:10 UTC, ~10h old). Healthcare sector weak. Catalyst slightly stale; passed.
-- **DBI (−15.65%)** — Q1 earnings miss; Consumer Cyclical (hot sector) works against the put thesis. Passed.
+- **NUVL (+38.8% at $122.84)**: Nuvalent oncology 8-K — extended blow-off, no room. Hard pass.
+- **BNAI (+24.8% at $22.81)**: AI health JV — interesting but >20% extended, stage rule says pass.
+- **LESL (+24.2% at $6.37)**: No clear catalyst, extended. Pass.
+- **FCEL (+20% at $18.60)**: No catalyst listed, extended. Pass.
+- **ATHE (+22.35%)**: Already held — do not rebuy.
+- **ATLX ($3.75, +4.75%)**: Brazilian lithium CEO at Giga USA; still below watchlist breakout at $4.00.
+- **EH (−20.2% at $6.95)**: Disappointing Q1 earnings — move mostly spent, bad put entry.
+- **DBI (−16.2% at $7.44)**: Bad Q1 results — move spent. Pass.
+- **CCTG (+780%)**, **AZI (+258%)**: LUDP halt names — pump-and-dump pattern. Hard pass.
+- All sub-$2 names (CPOP, BTCT, GMM, FRSX, HIHO, etc.) eliminated at price floor.
 
 ---
 
-## Holdings Read (10 positions, ~$861 deployed)
+## Holdings Read (10 positions, ~$842 deployed)
 
-ALOT closed since last run (sell brain exit — freeing ~$111 in capital, now reflected in holdings).
+- **ATHE (+13.7%)**: MSA Phase 3 FDA nod yesterday still driving. Sell brain manages exit.
+- **GIII (+0.32%)**: Consumer Cyclical, modest positive. Hold.
+- **TISI (+2.27%)**: Slow grind up. Hold.
+- **RXRX (+1.70%)**: Gradual recovery. Hold.
+- **PLSE (+0.20%)**: Essentially flat. Hold.
+- **GASS (−0.70%)**: Near flat; tanker thesis intact. Hold.
+- **NRXP (−3.67%)**: Minor red. Sell brain monitors.
+- **SLDB (−4.08%)**: Modest drawdown. Sell brain monitors.
+- **AVR (−6.99%)**: Weakest position. Sell brain active.
+- **PMN (−5.84%)**: Opened today, in drawdown. Sell brain active.
 
-- **ATHE (+15.1%)**: FDA Phase 3 nod today = thesis strongly confirmed. Hold; sell brain manages exit.
-- **GIII (+1.75%)**: Consumer Cyclical (hot sector +0.53%). Modest positive drift. Hold.
-- **TISI (+2.27%)**: Slow grind positive. Hold.
-- **RXRX (+3.14%)**: Gradual recovery. Hold.
-- **PLSE (+0.14%)**: Essentially flat. Hold.
-- **GASS (−0.21%)**: Flat; tanker thesis intact. Hold.
-- **NRXP (−2.27%)**: Minor red. Sell brain monitors.
-- **SLDB (−3.64%)**: Modest drawdown. Sell brain monitors.
-- **AVR (−5.37%)**: Weakest position. Sell brain active.
-- **PMN (−8.00%)**: Steepest drawdown (opened today at $10.62, last $9.77). Sell brain active.
-
-No re-buys. No averaging down on any held symbol.
+No re-buys on any held symbol. No averaging down.
