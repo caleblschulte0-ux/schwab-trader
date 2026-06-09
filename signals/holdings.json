@@ -1,23 +1,23 @@
 {
-  "updated_utc": "2026-06-09T20:20:24.558908+00:00",
+  "updated_utc": "2026-06-09T20:25:24.973602+00:00",
   "holdings": [
     {
       "symbol": "APLD",
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 41.95,
-      "unrealized_pct": 1.23,
-      "value": 83.9
+      "last": 41.97,
+      "unrealized_pct": 1.28,
+      "value": 83.94
     },
     {
       "symbol": "ATHE",
       "quantity": 1,
       "avg_price": 4.23,
       "opened_utc": "2026-06-09T13:35:32.693966+00:00",
-      "last": 4.07,
-      "unrealized_pct": -3.78,
-      "value": 4.07
+      "last": 4.43,
+      "unrealized_pct": 4.73,
+      "value": 4.43
     },
     {
       "symbol": "AVR",
@@ -60,9 +60,9 @@
       "quantity": 35,
       "avg_price": 4.22,
       "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 3.87,
-      "unrealized_pct": -8.29,
-      "value": 135.45
+      "last": 3.99,
+      "unrealized_pct": -5.45,
+      "value": 139.65
     },
     {
       "symbol": "PLSE",
@@ -87,9 +87,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.21,
-      "unrealized_pct": -2.43,
-      "value": 57.78
+      "last": 3.23,
+      "unrealized_pct": -1.82,
+      "value": 58.14
     },
     {
       "symbol": "SLDB",
