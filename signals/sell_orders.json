@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-06-10T03:50:21.895937+00:00",
+  "generated_utc": "2026-06-10T04:03:08.523292+00:00",
   "sells": [
     {
       "symbol": "PMN",
-      "reason": "Quick trade on HC Wainwright PT reiteration (Jun 8) failed: stock reversed -8.24% day 1 with zero breakout follow-through, absent from candidates funnel again today. Underlying Alzheimer's Phase 1b story is real but was not the buy thesis \u2014 failed breakout = catalyst spent.",
+      "reason": "Quick-trade thesis dead: breakout from HC Wainwright PT reiteration produced zero follow-through, reversed -8.24% on day 1, absent from candidates funnel a second consecutive run. Momentum gone, no new catalyst. Not converting a failed breakout into a multi-month clinical hold.",
       "urgent": false
     },
     {
