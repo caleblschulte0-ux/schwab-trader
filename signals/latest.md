@@ -1,52 +1,55 @@
-# Brain Run — 2026-06-10T17:57:43Z
+# Brain Run — 2026-06-10T18:16:52Z
 
-**Funnel:** scanned 264 → 75 leading → 18 fit $43 budget → 8 with real catalyst → 3 finalists → picked 1
+Funnel: scanned 263 → leading 79 → in budget 45 → had catalyst 20 → finalists 5 → picked 0
 
 ---
 
-## Macro Tape
-**Risk_off.** SPY -1.03%, QQQ -1.34%, VIX 21.55. Only two sectors positive: Financial Services (+1.05%) and Energy (+0.59%). Everything else red, led by Basic Materials (-1.66%), Utilities (-1.58%), Consumer Cyclical (-1.46%). Running materially pickier this session — demand genuine relative strength, defined catalysts, and strong sector alignment.
+## Market Tape
+**Risk-OFF.** SPY -1.03%, VIX 21.55. Only Financial Services (+1.05%) and Energy (+0.59%) in the green; everything else red, with Basic Materials (-1.66%), Utilities (-1.58%), Consumer Cyclical (-1.46%), Healthcare (-1.08%), and Industrials (-1.08%) leading the selloff. Broad distribution day — applied maximum selectivity; required green relative strength plus a fresh, defined catalyst.
 
 ---
 
 ## Account Status
-13 open positions, ~$957 of ~$1,000 deployed. Approximately **$43 powder remaining**. Extremely tight. The bar for a new entry is high: it must be compelling enough to use nearly all remaining dry powder.
+13 open positions, ~$957 cost basis of ~$1,000 capital. **~$43 powder remaining** (≈$7 after the prior run's GO order fills). Account is effectively maxed. The bar for any new entry is extremely high on a risk_off tape with near-zero powder.
 
 ---
 
-## Pick: GO (Grocery Outlet Holdings) — BUY 4 shares @ $9.05 ($36.20)
-
-**Catalyst (age: ~5.5h):** Grocery Outlet simultaneously named Joe Miller as Chief Products & Merchandising Officer (CPMO) and Ferry as CFO — dual C-suite appointment announced via The Shelby Report at 12:09 UTC June 10. Dual leadership change at a beaten-down discount grocer is a real strategic signal: new CFO + CPMO combo typically precedes a retooled operating playbook.
-
-**Why NOW / setup quality:**
-- Up only +1.52% on 1.99M volume — very early stage, market just starting to price the leadership change
-- Consumer Defensive sector -0.07% today (flat vs. SPY -1.03%) — GO outperforming both broad tape AND its sector
-- Market cap $891M small-cap, discount grocery — one of the few categories that attracts buyers when macro is risk-off
-- No prior ownership; not on watchlist; not in holdings
-- 4 × $9.05 = $36.20 ≤ $43 remaining budget ✓; ≤ $150 cap ✓
+## No Orders This Run
+The prior run's GO order (4 × $9.05 = $36.20, Grocery Outlet dual C-suite hire catalyst at 12:09 UTC) is already queued and covers the best actionable setup from this funnel. Nothing in today's 263 candidates clears the bar for the last ~$43. Sitting out is correct: the account is maxed, the tape is distributing broadly, and forcing a trade here would be anti-discipline.
 
 ---
 
-## Finalists Passed
+## Finalists Reviewed
 
-**HROW (Harrow Health) — $36.92, +10.33%:** Strongest catalyst in the funnel — re-launching VERKAZIA (cyclosporine ophthalmic eye drops), announced 10:38 UTC. Real commercial catalyst. Up +10.3% against Healthcare sector -1.08% (exceptional relative strength). Passed: already up +10% intraday, and 1 share × $36.92 leaves minimal margin at near-zero powder. Added to watchlist for pullback to ~$33.
+**CBRL ($45.20, +24.5%) — HARD PASS**
+Cracker Barrel earnings beat; stock already up 24.5% intraday. Move is entirely spent — the blow-off candle, not the coil. Classic post-earnings chase trap. Pass.
 
-**IGIC (Intl General Insurance) — $25.51, +2.45%:** Financial Services (best sector today). Relative strength is real. However, catalyst is a TradingView analysis piece, not hard news — sector rotation rather than a catalyst move. Volume only 28.9K (thin). Soft catalyst; passed.
+**HROW ($37.00, +10.6%) — already on watchlist; no action needed**
+Harrow re-launched VERKAZIA (cyclosporine ophthalmic) at 10:38 UTC today. Real commercial catalyst; up +10.6% vs Healthcare -1.1% — exceptional relative strength on a risk_off day. Already on the watchlist for pullback to $33. Not re-issued here.
 
-**AEVA (Aeva Technologies) — $22.80, +2.84%:** City of Fargo government contract for CityOS AI intersection safety (catalyst 10:59 UTC). Strong relative strength vs. down tape. Already on the watchlist at a pullback trigger of $22.50 — not issuing a duplicate direct buy.
+**LGCL ($2.07, +11.3%) — PASSED**
+Lucas GC Limited received two AI patents (12:39 UTC, Bullish 0.443, $88.6M cap). Already up 11% on a patent filing — thin catalyst, no revenue guarantee, extended, risk_off tape. Pass.
 
----
+**FLYW ($14.175, +0.32%) — PASSED**
+Scholarship America deal analysis from Simply Wall Street (09:09 UTC, Bullish 0.474, $1.72B cap). Stock flat on a 9-hour-old analyst opinion piece. Not a hard catalyst event. On a risk_off day, opinion pieces don't move stocks — defined news does. Pass.
 
-## Notable Passes — Funnel
-
-- **CBRL +24.4%** — earnings beat, but already past the 15–20% deprioritize threshold. Hard pass.
-- **DSY +499%, CPOP +339%** — LUDP halt/resume speculative chaos. No edge.
-- **SMCI -20.5%, CRMT -54%** — PUT candidates? Already blown out to the downside; any put entry here chases a spent move.
-- **YB +16.9%** — already on watchlist at pullback $15.50; not a direct buy at current level.
-- **ADBE (reports 2026-06-11, EPS est $5.83)** — one-day pre-position candidate, but risk_off tape + near-zero powder make it inadvisable today.
-- **HITI, ALVO, FIVN, FLYW** — soft catalysts (analyst ratings, conference invites, opinion pieces). Below the bar on a risk_off day.
+**DFIN ($38.11, +1.76%) — PASSED for direct buy; ADDED to watchlist**
+Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC today, Bullish 0.502, volume 224K, $952M cap). Real SaaS fintech product launch — legitimate catalyst, fresh, stock barely moved (+1.76%). Problem: only 1 share ($38) affordable at current powder, too thin to matter. Added to watchlist at pullback $36.50 (3 shares × $36.75 = $110.25) for when sell brain frees capital.
 
 ---
 
-## Holdings Read
-BNAI is the sole winner (+6.47%, +$8.82 unrealized). TISI (-8.79%), RXRX (-6.99%), APLD (-6.18%), and ABSI (-5.48%) are the most stressed. Portfolio total unrealized ≈ -$18. After this run powder ≈ $7 — book is effectively fully deployed until the sell brain recycles capital. No anti-chase issues: all 13 held symbols are excluded from any re-buy.
+## Holdings Commentary
+- **BNAI +6.42%** ($20.71 vs avg $19.46): sole winner today; sell brain holds
+- **TISI -8.51%** ($16.55 vs avg $18.09): under material pressure; sell brain owns exit
+- **RXRX -5.78%** ($3.10 vs avg $3.29): biotech weak in risk_off tape; sell brain owns
+- **SLDB -5.03%** ($6.515 vs avg $6.86): sell brain owns
+- **ABSI -4.56%** ($6.795 vs avg $7.12): sell brain owns
+- APLD, GASS, AVR modestly negative; CLLS, PLSE, EVTL near flat; MNKD, ATHE tiny positions
+- **Net unrealized: ~-$13.86**
+
+---
+
+## Watchlist (12 items)
+Kept all 11 existing items — AEVA (City of Fargo AI contract, June 10), HROW (VERKAZIA re-launch, June 10), BHC (OKEDI LoI, June 9), NRIX (Roche BTK $700M deal, June 8), GHRS (TRD Phase 2b data), COYA (ALS trial extension, June 8), ELDN (T1D trial results, June 8), ALVO (FDA AVT16 acceptance, June 9), BWAY (TMS depression study, June 9), SPRY (CVS formulary update pending), YB (Q1 +36% revenue, dividend, June 10) — all carry valid upcoming catalysts with good_until dates June 12-17.
+
+Added **DFIN**: pullback trigger $36.50, 3 shares, iXBRL AI product launch catalyst today. Good_until June 14.
