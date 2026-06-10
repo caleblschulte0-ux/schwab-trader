@@ -1,23 +1,23 @@
 {
-  "updated_utc": "2026-06-10T12:30:27.069605+00:00",
+  "updated_utc": "2026-06-10T12:35:20.319813+00:00",
   "holdings": [
     {
       "symbol": "APLD",
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 40.95,
-      "unrealized_pct": -1.18,
-      "value": 81.9
+      "last": 41.12,
+      "unrealized_pct": -0.77,
+      "value": 82.24
     },
     {
       "symbol": "ATHE",
       "quantity": 1,
       "avg_price": 4.23,
       "opened_utc": "2026-06-09T13:35:32.693966+00:00",
-      "last": 4.132,
-      "unrealized_pct": -2.32,
-      "value": 4.13
+      "last": 4.04,
+      "unrealized_pct": -4.49,
+      "value": 4.04
     },
     {
       "symbol": "AVR",
@@ -27,6 +27,15 @@
       "last": 9.59,
       "unrealized_pct": -2.84,
       "value": 143.85
+    },
+    {
+      "symbol": "BNAI",
+      "quantity": 7,
+      "avg_price": 19.46,
+      "opened_utc": "2026-06-10T12:30:29.351141+00:00",
+      "last": 19.1,
+      "unrealized_pct": -1.85,
+      "value": 133.7
     },
     {
       "symbol": "EVTL",
@@ -56,15 +65,6 @@
       "value": 136.0
     },
     {
-      "symbol": "NRXP",
-      "quantity": 35,
-      "avg_price": 4.22,
-      "opened_utc": "2026-06-05T18:00:30.964456+00:00",
-      "last": 3.85,
-      "unrealized_pct": -8.77,
-      "value": 134.75
-    },
-    {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
@@ -74,20 +74,11 @@
       "value": 49.6
     },
     {
-      "symbol": "PMN",
-      "quantity": 5,
-      "avg_price": 10.62,
-      "opened_utc": "2026-06-09T12:35:23.835631+00:00",
-      "last": 10.6,
-      "unrealized_pct": -0.19,
-      "value": 53.0
-    },
-    {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.17,
+      "last": 3.1698,
       "unrealized_pct": -3.65,
       "value": 57.06
     },
