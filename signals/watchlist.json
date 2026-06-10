@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T19:22:31Z",
+  "generated_utc": "2026-06-10T19:52:00Z",
   "watch": [
     {
       "symbol": "AEVA",
@@ -10,7 +10,7 @@
       "take_profit": 26.50,
       "stop_loss": 21.00,
       "good_until": "2026-06-12",
-      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov't contract. Now $22.75 (+2.6%). Enter on pullback to $22.50. Qty 1 given near-maxed account."
+      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov't contract. Now $22.59 (+1.9%). Enter on pullback to $22.50. Qty 1 given near-maxed account."
     },
     {
       "symbol": "HROW",
@@ -21,7 +21,7 @@
       "take_profit": 41.00,
       "stop_loss": 32.50,
       "good_until": "2026-06-13",
-      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +10.7% to $37.04 vs Healthcare -1.3% -- strong relative strength. Enter on pullback to $35. 4x$35.20=$140.80."
+      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +10.7% to $37.03 vs Healthcare -1.74% -- strong relative strength. Enter on pullback to $35. 4x$35.20=$140.80."
     },
     {
       "symbol": "BHC",
@@ -131,7 +131,7 @@
       "take_profit": 42.00,
       "stop_loss": 34.00,
       "good_until": "2026-06-14",
-      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS/fintech product for regulatory compliance, stock barely moved (+0.5%) at $37.65. Enter on pullback to $36.50. 3x$36.75=$110.25."
+      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS/fintech product for regulatory compliance, stock barely moved at $37.45. Enter on pullback to $36.50. 3x$36.75=$110.25."
     }
   ]
 }
