@@ -1,4 +1,10 @@
 {
-  "generated_utc": "2026-06-10T02:19:06Z",
-  "sells": []
+  "generated_utc": "2026-06-10T10:22:37Z",
+  "sells": [
+    {
+      "symbol": "NRXP",
+      "reason": "Quick-trade thesis failed: bought Jun 5 on offering-close + IV ketamine clinical data (34% vs 26% remission) momentum, but 4+ trading days later the stock has drifted -6% with zero follow-through — momentum is dead. Fresh web search confirms structural financial deterioration (negative equity, 6-8 months runway) that guarantees another dilutive raise BEFORE the Q3 2026 ANDA decision, creating persistent dilution overhang that kills any near-term rally regardless of clinical progress. This is not a drawdown sell; the catalyst setup has demonstrably stalled and the structural setup has deteriorated.",
+      "urgent": false
+    }
+  ]
 }
