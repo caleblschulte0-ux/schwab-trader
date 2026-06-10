@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T14:54:00Z",
+  "generated_utc": "2026-06-10T15:35:00Z",
   "watch": [
     {
       "symbol": "AEVA",
@@ -10,7 +10,7 @@
       "take_profit": 26.50,
       "stop_loss": 21.00,
       "good_until": "2026-06-12",
-      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC today); tech sector hot. Up 5.8% -- enter on pullback to $22.50. 2 shares x $22.60 = $45.20 once powder frees up."
+      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). Tech sector hot. Up ~4% today -- enter on pullback to $22.50."
     },
     {
       "symbol": "BHC",
@@ -21,7 +21,7 @@
       "take_profit": 6.20,
       "stop_loss": 5.00,
       "good_until": "2026-06-11",
-      "note": "Bausch Health Canada LoI for OKEDI (risperidone ER) public drug plan coverage -- fresh catalyst 11:59 UTC June 9, stock only +0.59% at $5.14; breakout above $5.35 confirms participation."
+      "note": "Bausch Health Canada LoI for OKEDI (risperidone ER) public drug plan coverage -- fresh catalyst 11:59 UTC June 9. Stock only +0.59% at $5.14; breakout above $5.35 confirms participation."
     },
     {
       "symbol": "ATLX",
@@ -98,7 +98,7 @@
       "take_profit": 4.60,
       "stop_loss": 3.65,
       "good_until": "2026-06-12",
-      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.12 today; wait for pullback to $3.90 support for clean entry."
+      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.165 today; wait for pullback to $3.90 support for clean entry."
     },
     {
       "symbol": "BWAY",
@@ -120,7 +120,18 @@
       "take_profit": 12.50,
       "stop_loss": 9.50,
       "good_until": "2026-06-17",
-      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion pending. 'Definitive update in early June' per May 15 Q1 call -- overdue as of June 10. Stock at $9.64 positioning ahead. Breakout above $10.20 confirms announcement landed."
+      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update overdue as of June 10 (Q1 call said 'definitive update in early June'). Breakout above $10.20 confirms announcement landed."
+    },
+    {
+      "symbol": "YB",
+      "trigger": "pullback",
+      "trigger_price": 15.50,
+      "quantity": 9,
+      "limit_price": 15.60,
+      "take_profit": 18.50,
+      "stop_loss": 14.50,
+      "good_until": "2026-06-13",
+      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +17% today. Enter on pullback to $15.50 consolidation for better R/R. 9 shares x $15.60 = $140.40."
     }
   ]
 }

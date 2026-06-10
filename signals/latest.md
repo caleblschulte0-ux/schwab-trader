@@ -1,54 +1,53 @@
-# Brain Run — 2026-06-10T14:54:00Z
+# Brain Run — 2026-06-10 ~15:35 UTC
 
-Funnel: scanned 271 → 79 leading → 18 fit remaining budget (~$43) → 6 with fresh catalyst today → 3 finalists → picked 1
-
-## Market Tape
-Tone: **neutral**. SPY +0.1%, VIX 20.23 (slightly elevated, not alarming). Hot sectors: Financial Services (+1.26%), Communication Services (+1.08%), Technology (+0.74%), Industrials (+0.51%). Weak: Real Estate (-1.2%), Utilities (-1.36%), Consumer Cyclical (-0.42%), Healthcare (-0.13%). Normal discipline — lean toward tech/comm/finserv themes where the tape is green.
-
-## Account Status
-13 open positions, ~$957 cost-basis deployed of ~$1,000 account. Approximately **$43 free cash** remaining. Account near-max deployed — new buy sized to fit remaining powder only.
+Funnel: scanned 263 → 215 fit budget → 28 with catalyst → 4 finalists → picked 1
 
 ---
 
-## Pick: CGEM — BUY 3 shares @ $13.60 ($40.80)
+## Market Tape
 
-**Cullinan Therapeutics** (signals: sec_8k + news_smallcap). Today (June 10) is Cullinan's dedicated **Immunology Day** investor event. Two data readouts presented:
+SPY −0.71%, VIX 21.51, tone: **neutral** (borderline risk-off). Hot sectors: Financial Services (+1.01%), Technology (+0.37%). Weak: Utilities (−2.34%), Consumer Cyclical (−1.12%), Real Estate (−1.11%), Basic Materials (−1.10%). Semiconductors broadly crushed today (SOXL −6.9%, NVDA −2.5%, MRVL −3.2%, MU −3.0%). Running normal discipline; tilting toward Financial Services and Technology names. Avoiding semiconductor longs and weakest-sector plays.
 
-1. **CLN-978** (CD19xCD3 T cell engager): Previously shown remissions in SLE and RA at EULAR Congress June 6 — deep B-cell depletion confirmed across 30+ patients in Phase 1. Updated data presented again today.
-2. **Velinotamig** (BCMAxCD3 T cell engager): **New** initial clinical data presented for the first time today at this event.
+---
 
-8-K filed + news coverage at 11:10 UTC. Catalyst age: ~3.7 hours. Fresh, live investor event with new data release.
+## Holdings Check
 
-CD19 and BCMA are the two most validated targets in autoimmune B-cell therapy — Cullinan is bringing proven oncology T cell engager technology to autoimmune, one of the fastest-growing drug development themes. The investor-hosted data day with new BCMA readout is a material binary event; market has barely priced it at +3.07%.
+13 open positions (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI). Estimated cost basis deployed ≈ $957 of ~$1,000 — powder extremely thin. BNAI is the leading position (+7.6% unrealized). Most others in minor loss range (1–5%). Net portfolio unrealized ≈ −$10.64.
 
-Stock: $13.585, +3.07% on volume 182,658. Market cap $834M (solid small-cap). Bullish sentiment 0.435.
+CGEM (prior run's pick at $13.60 limit) did **not** fill — now at $12.90 (fell below limit). Anti-chase rule disqualifies re-entry this session.
 
-Previous run placed CGEM on the watchlist at 11 shares ($150 cap), but with only ~$43 powder remaining that size can't fill. Replacing with a direct 3-share order sized to fit available cash.
+---
 
-Healthcare sector is a headwind today (-0.13%), but company-specific catalyst events regularly override sector tape. The freshness, materiality (8-K filed), and early-stage move (+3%) justify deploying the remaining reserve.
+## Pick: DFIN — Donnelley Financial Solutions
+
+**Action:** BUY 4 shares @ $37.40 limit ($149.60)
+
+**Why:** At 12:08 UTC today DFIN issued a PR Newswire company press release announcing AI-powered iXBRL tagging for SEC filings — a direct AI upgrade to their core ArcSuite regulatory compliance product. The prior run (~14:54 UTC) saw DFIN at −1.2% and passed, noting "market not buying the AI story." Since then the stock has recovered from −1.2% to −0.27% at $37.35 — a failed breakdown / shakeout reversal. This is a *better* setup now: initial sell-off absorbed, buyers stepping back in, still essentially flat on fresh news.
+
+Verified via web search: iXBRL tagging is genuinely core to DFIN's revenue (EDGAR filing + iXBRL compliance services for capital-markets clients). The company has $172M in buybacks active and recently hired a new SaaS-background CEO (Ayman Sayed) driving AI transformation. The product launch is on-thesis for that transformation narrative and could attract funds rebuilding the AI-SaaS multiple. Technology sector is the leading sector today (+0.37%) in an otherwise negative tape.
+
+**Catalyst freshness:** Published 12:08 UTC (~3.5 hours before this run). Stock barely moved → earliest-stage entry.
+**Catalyst age:** Fresh, company-issued press release (PR Newswire).
+**Stage:** Very early — flat despite news. Shakeout absorbed.
+**Sector:** Technology (green today, strongest sector).
+**Risk:** Standard mid-cap ($933M market cap), liquid. Mild if broad market resumes sell-off.
 
 ---
 
 ## Notable Passes
 
-**AEVA** ($23.455, +5.8%) — City of Fargo selected Aeva CityOS for intersection safety and traffic operations (catalyst 10:59 UTC today, ~3.8 hrs). Bullish 0.417. Technology sector hot. Real municipal contract = durable, material catalyst and +5.8% is NOT parabolic. Would be the top pick if more powder were available. However, at $23.46/share only 1 share fits in ~$43 — a 1-share position is too thin. Added to watchlist at pullback trigger $22.50 for entry once sell brain frees capital.
-
-**DFIN** ($37.01, -1.2%) — Launched AI-powered iXBRL tagging for SEC filings (12:08 UTC today, freshest catalyst by sentiment: 0.547). Financial Services sector hot. BUT stock is DOWN -1.2% on the announcement — market not buying the AI story at this valuation. Product launches that don't move the stock in an AI-enthusiasm environment signal weak market-moving power. Pass.
-
-**CBRL** ($45.82, +26.2%) — Real earnings beat catalyst (Benchmark reiterated Hold). Up +26% intraday is a textbook blow-off. Hard pass per stage rule.
-
-**YB** ($16.99, +16.6%) — Real earnings catalyst: Q1 revenue +36%, cash dividend approved. But +16.6% intraday is extended — too late to chase.
-
-**ODC** ($92.89, -5.8%) — Record Q3 revenue + beat published 03:09 UTC (11+ hrs ago). Market selling into the good print. Stale and price-broken.
-
-**SMCI** (-15.5%) — No fresh identifiable catalyst in today's funnel. Price-break belongs to sell brain.
+- **CBRL** (+28.8%): Cracker Barrel earnings beat + Benchmark Hold reiteration. Real catalyst but move is entirely priced — textbook blow-off. Hard pass.
+- **YB** (+17.0%): Yuanbao Q1 revenue +36%, first cash dividend (published 10:20 UTC today). Strong fundamental catalysts. But +17% intraday puts it squarely in the "deprioritize" zone per stage rule. Added to watchlist at $15.50 pullback trigger for a better R/R entry if it consolidates.
+- **XOS** (+16.2%, 3.7M vol on $52M cap): Benzinga headlined "Why Is Xos Stock Gaining Wednesday?" — they're *asking* why, meaning no clear fundamental catalyst was identified even by them. Elevated micro-cap volume with no identified catalyst = likely pump/squeeze. Hard pass.
+- **CGEM** (−2.1%): Cullinan Therapeutics new T-cell engager clinical data (published 11:10 UTC). Was last run's pick at $13.60; now at $12.90 — has fallen from when flagged. Anti-chase rule disqualifies.
+- **EH** (+5.1%, 1.07M vol): EHang Q1 earnings call presentation published 06:38 UTC (~9 hours ago). Valid catalyst but aging, and Chinese-stock risk adds overhang in today's mixed macro tape.
+- **CMCL** (−1.5%): Caledonia Mining high-grade exploration results at Motapa (published 12:10 UTC — fresh). Real catalyst. BUT stock is down on the news and Basic Materials is today's 2nd-weakest sector (−1.1%) — sector drag too strong.
+- **Semiconductor puts**: SMCI −17.5% with no catalyst identified in funnel. Put premiums on $33 stock are likely $1.50–3.00/contract = over the $100 limit. Passed — no clean defined-risk put setup within limits today.
 
 ---
 
-## Holdings Read
-13 positions. Net unrealized approximately **-$10.21**. Account near fully deployed.
-
-Winners: BNAI +$2.24 (+1.6%), EVTL +$1.05 (+3.5%), CLLS +$0.44 (+0.3%), MNKD +$0.06 (+1.5%)
-Losers: AVR -$3.75 (-2.5%), TISI -$2.55 (-4.7%), APLD -$2.70 (-3.3%), RXRX -$1.53 (-2.6%), GASS -$1.88 (-1.3%), PLSE -$0.88 (-1.7%), SLDB -$0.54 (-0.9%), ATHE -$0.17 (-4.0%)
-
-TISI at -4.7% is the most extended loser — sell brain's call. CLLS (44 shares held, +0.3%) also shows up in today's news_smallcap bucket but it's already owned; the funnel notes Cellectis (CLLS) received FDA RMAT designation for lasme-cel in B-Cell ALL — same company, confirms thesis still live. No re-buy; sell brain manages exit.
+## Catalyst Age Summary (finalists)
+- DFIN: published 2026-06-10T12:08 UTC (~3.5h ago) — CHOSEN
+- YB: published 2026-06-10T10:20 UTC (~5.2h ago) — watchlist
+- CMCL: published 2026-06-10T12:10 UTC (~3.4h ago) — failed sector test
+- EH: published 2026-06-10T06:38 UTC (~8.9h ago) — too old, deprioritized
