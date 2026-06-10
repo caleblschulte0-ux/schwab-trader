@@ -1,41 +1,85 @@
-# Brain Run — 2026-06-10T20:38:22Z
+# Brain Run — 2026-06-10T21:06:47Z
 
-Funnel: scanned 321 → 138 fit budget → 78 with catalyst → 4 finalists → picked 0
+**Funnel:** scanned 314 → 138 fit budget → 48 with catalyst → 10 finalists → picked 0
 
-## Market Tape
-**RISK_OFF.** SPY -1.57%, QQQ -2.00%, VIX 22.24. Only Consumer Defensive (+0.62%) and Financial Services (+0.38%) are positive. Healthcare worst at -2.16%, Industrials -2.15%, Basic Materials -1.99%, Consumer Cyclical -1.95%. Broad selling across every major sector except defensives. Strategy adjustment: demand only the highest-conviction setups; prefer names showing relative strength (green on a red tape); accept 0 orders if bar isn't cleared.
+---
 
-## Account Status
-13 open positions, ~$932 deployed of ~$1,000 estimated capital. **~$68 powder remaining.** Account is nearly fully deployed. New positions this run would be limited to 1–7 shares of any tradeable name.
+## Market Tape — RISK_OFF
 
-## Finalists Evaluated
+SPY -1.57% | VIX 22.24 | Tone: **risk_off**
 
-### 1. OCC — Optical Cable Corp — $26.92, +28.13% — PASS (extended)
-**Catalyst (age: ~5 hours):** Q2 earnings beat — 27% sales growth, rising backlog. Filed 8-K today. Sentiment score 0.778 (highest in funnel). Market cap $237M, volume 2.68M. Multiple confirming signals (mover + sec_8k + news_smallcap).
-**Why passed:** Already up 28% intraday. BRAIN rules say 15–20%+ = deprioritize; near-vertical = hard pass. This is a 28% intraday gap — the earnings catalyst is fully priced in at this entry. No room to a sensible target without being next in line to baghold. In a risk_off tape this is exactly the kind of extended chase to avoid. With only ~$68 in powder (max 2 shares), the reward/risk is deeply unattractive.
+Sector scorecard (hot → cold):
+1. Consumer Defensive +0.62% ← only safe harbor
+2. Financial Services +0.38%
+3. Technology -0.82%
+4. Energy -0.83%
+5. Communication Services -1.68%
+6. Real Estate / Utilities -1.86%
+7. Consumer Cyclical -1.95%
+8. Basic Materials -1.99%
+9. Industrials -2.15%
+10. Healthcare -2.16% ← worst
 
-### 2. GO — Grocery Outlet — $9.24, +4.17% — PASS (soft catalyst)
-**Catalyst (age: ~8 hours):** Named new CPMO and CFO — management team appointments. Sentiment 0.417, volume 3.47M (strong). Consumer Staples/Defensive = strongest sector today.
-**Why passed:** The right sector (Consumer Defensive outperforming), right relative strength (green on red day), right volume — but the catalyst is soft. Executive appointments are a 2nd-tier catalyst: no earnings beat, no product launch, no contract win. In risk_off conditions BRAIN.md calls for "defined-catalyst entries over momentum chasing." 7 shares × $9.24 = $64.68 would be the size. Passing because bar is not cleared — if management articulates a specific growth plan, this could become a legitimate setup.
+Tape meaningfully negative on broad volume (VIX elevated at 22.24). Risk_off mandate engaged: materially picky, demand strong relative strength, lean toward sitting out.
 
-### 3. HROW — Harrow Health — $35.90, +7.29% — PASS (wrong sector, tiny position)
-**Catalyst (age: ~10 hours):** Re-launched VERKAZIA (cyclosporine ophthalmic emulsion) for vernal keratoconjunctivitis. Genuine pharmaceutical product re-launch. Sentiment 0.414, volume 1.28M.
-**Why passed:** Healthcare is the worst sector today at -2.16% — tailwind cut to headwind. With $68 budget only 1 share possible ($35.90). A single-share position has no meaningful upside; the powder is better preserved. Keeping on watchlist for pullback to $35 consolidation.
+---
 
-### 4. KALV — Kalvista Pharmaceuticals — $27.00, +0.04% — PASS / WATCHLISTED
-**Signal (age: ~5 hours):** Hit 52-week high at $27.00 with 4.24M volume — exceptionally strong accumulation on a day the broad market is -1.57%. This kind of volume at a technical breakout level on a bad tape is a leading signal.
-**Why passed / watchlisted:** Not yet confirmed as a breakout — stock tagged the 52-week high but hasn't cleanly cleared it with follow-through. This is a coil, not a confirmed breakout. With near-zero powder, an immediate buy doesn't make sense. **Added to watchlist** with breakout trigger at $27.25: if it clears that level, the bot enters at $27.45 (5 shares = $137.25). Good until June 12. Catalyst age: 5 hours.
+## Account State
 
-## Notable Names Passed (not finalists)
+13 open positions, ~$957 cost-basis deployed of ~$1,000 total. **~$43 powder remaining.** This is the binding constraint: even if a great setup appeared, a $43 position is too small to move the needle.
 
-- **CBRL +22.56%:** Cracker Barrel earnings beat — real catalyst, but too extended (22% intraday gap), same logic as OCC.
-- **AEVA +2.35%:** City of Fargo CityOS AI/lidar government contract. Real catalyst but only 1 share possible; already on watchlist at pullback to $22.50.
-- **DFIN +0.40%:** AI-powered iXBRL tagging product launch today (12:08 UTC). Real fintech catalyst in 2nd-best sector. 1 share only at $37.60. On watchlist at pullback to $36.50.
-- **CGEM -8.57%:** New CD19/BCMA T-cell engager clinical data today — negative price reaction to the data. Skip.
-- **SMCI -27.98%:** Super Micro Computer massive selloff. No catalyst listed in funnel; would need web search to investigate a put setup, but premium likely elevated on the volatility spike. Saved the web search slot.
+---
+
+## Finalists Considered (all passed)
+
+**CBRL ($44.49, +22.56%) — PASS**
+Cracker Barrel earnings beat, Consumer Defensive (strongest sector today). Tempting catalyst. But already +22.56% intraday, 8+ hours stale — firmly in the deprioritize zone. Analyst kept a Hold rating. The move is priced in; entering now is chasing. With only ~$43 powder, this barely buys 1 share anyway.
+
+**LAKE ($11.35, +18.97%) — PASS**
+Lakeland Industries Q1 EPS beat. Small-cap ($122M). Up 18.97%, borderline extended. Catalyst published 11:40Z — 9+ hours stale. Neutral sentiment. Industrials sector (second-worst today, -2.15%). Stock is green vs sector (real relative strength) but the move is 9 hours old.
+
+**OCC ($26.92, +28.13%) — PASS**
+Optical Cable Q2 on 27% sales growth (Bullish 0.75). Strong fundamental catalyst. Already +28% — hard-pass stage-of-move territory. Move is spent.
+
+**PLAY ($12.49, +9.08%) — PASS**
+Dave & Buster's fresh catalyst (grand opening, 19:00Z). Up 9%, acceptable range. But Consumer Cyclical (-1.95%) is second-worst sector today. Weak catalyst (single store opening) on an ugly tape. Pass.
+
+**KALV ($27.00, +0.04%) — watchlist (breakout at $27.25)**
+52-week high with 4.25M volume (unusual accumulation) on a -1.57% tape — exceptional relative strength. Already on watchlist from last run. Let the breakout trigger do its job.
+
+**DFIN ($37.60, +0.40%) — watchlist (pullback to $36.50)**
+AI-powered iXBRL SEC filing product launch, Financial Services sector. Barely moved on real product news. Already on watchlist.
+
+**HROW ($35.90, +7.3%) — watchlist (pullback to $35)**
+Harrow VERKAZIA eye-drop relaunch. Strong relative strength vs Healthcare -2.16%. Already on watchlist at $35 trigger.
+
+**REPX ($35.89, +3.10%) — PASS**
+Riley Exploration, fresh catalyst (19:09Z), relative strength vs Energy (-0.83%). But $43 powder = 1 share = $35.89. Position too tiny to be meaningful.
+
+**PRGO ($11.17, -0.09%) — PASS**
+Perrigo takeover speculation (17:40Z). Flat on down tape is mild relative strength. But Healthcare is worst sector (-2.16%) and takeover speculation without a named bidder lacks conviction.
+
+**LMNR ($13.18, +8.93%) — PASS**
+Limoneira Q2 earnings. Up ~9% but 9+ hours stale, neutral sentiment, no sector tailwind.
+
+---
+
+## Why Zero Orders
+
+1. **Risk_off tape:** SPY -1.57%, VIX 22.24. BRAIN.md: "Sitting out a run is acceptable and often correct on an ugly tape."
+2. **Nearly fully deployed:** ~$43 powder left — no meaningful position possible.
+3. **All compelling catalysts extended:** Every strong name (CBRL, OCC, LAKE) is up 18-28%, past the stage-of-move threshold.
+4. **Watchlist fully stocked:** 12 queued triggers spanning healthcare breakouts, biotech catalysts, and growth names — ready to auto-fire at tomorrow's open.
+
+---
 
 ## Holdings Read
-BNAI (+6.01%) is the lone winner. Largest drawdowns: TISI (-9.67%), ABSI (-9.27%), RXRX (-7.62%), APLD (-6.47%), SLDB (-5.54%). Moderate red: AVR (-3.75%), PLSE (-1.96%), CLLS (-0.31%), EVTL (-2.33%), ATHE (-1.89%), MNKD (-0.82%), GASS (-1.68%). Estimated total unrealized P&L: approximately **-$24.50**. The SELL BRAIN will manage all exits.
 
-## Decision
-**0 orders issued.** Risk_off market (SPY -1.57%, VIX 22.24) + ~$68 powder + 13 open positions = sit tight. No finalist cleared the risk_off bar: best candidates were either extended (OCC +28%, CBRL +22%), in the worst sector (HROW in Healthcare -2.16%), or had a soft catalyst (GO exec appointments). KALV added to watchlist as coil/breakout candidate. Preserving remaining powder for when the tape improves or the SELL BRAIN frees up capital.
+All 13 positions open. Sell brain monitors exits.
+- **BNAI +4.68%** — only winner; let run
+- **CLLS -0.31%** — flat, holding
+- **ABSI -9.13%, TISI -9.67%** — deepest drawdowns; sell brain call
+- **APLD -6.81%, RXRX -7.60%** — watching
+- Remainder -1% to -5%
+
+No position is re-buyable. All exits are the sell brain's responsibility.
