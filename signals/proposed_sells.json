@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-06-10T09:30:00Z",
+  "generated_utc": "2026-06-10T03:39:16Z",
   "sells": [
     {
-      "symbol": "NRXP",
-      "reason": "Quick-trade thesis failed: bought Jun 5 on IV ketamine/clinical momentum; now 4 trading days with zero follow-through and -6.16% drift. Prior web search confirmed negative equity and only 6-8 months cash runway, making a dilutive raise before the Q3 2026 ANDA decision near-certain. The dilution overhang structurally caps any rally regardless of clinical progress. Catalyst momentum is dead — this is not a drawdown sell; the capital structure thesis is broken.",
+      "symbol": "PMN",
+      "reason": "Quick trade on HC Wainwright PT reiteration (Jun 8); breakout above $10.00 failed with zero follow-through — reversed -8.24% on day 1 of holding and entirely absent from today's candidates funnel (no mover, no news signal). The quick-trade catalyst (analyst PT momentum) did not ignite; thesis spent.",
       "urgent": false
     }
   ]
