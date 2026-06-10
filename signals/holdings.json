@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-10T13:55:23.610253+00:00",
+  "updated_utc": "2026-06-10T14:00:36.790271+00:00",
   "holdings": [
     {
       "symbol": "ABSI",
@@ -15,9 +15,9 @@
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 41.59,
-      "unrealized_pct": 0.36,
-      "value": 83.18
+      "last": 40.88,
+      "unrealized_pct": -1.35,
+      "value": 81.76
     },
     {
       "symbol": "ATHE",
@@ -33,18 +33,18 @@
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.6,
-      "unrealized_pct": -2.74,
-      "value": 144.0
+      "last": 9.63,
+      "unrealized_pct": -2.43,
+      "value": 144.45
     },
     {
       "symbol": "BNAI",
       "quantity": 7,
       "avg_price": 19.46,
       "opened_utc": "2026-06-10T12:30:29.351141+00:00",
-      "last": 18.84,
-      "unrealized_pct": -3.19,
-      "value": 131.88
+      "last": 18.96,
+      "unrealized_pct": -2.57,
+      "value": 132.72
     },
     {
       "symbol": "CLLS",
@@ -60,9 +60,9 @@
       "quantity": 14,
       "avg_price": 2.12,
       "opened_utc": "2026-06-09T15:21:12.349780+00:00",
-      "last": 2.195,
-      "unrealized_pct": 3.54,
-      "value": 30.73
+      "last": 2.205,
+      "unrealized_pct": 4.01,
+      "value": 30.87
     },
     {
       "symbol": "GASS",
@@ -78,18 +78,18 @@
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 25.395,
-      "unrealized_pct": -0.37,
-      "value": 50.79
+      "last": 25.345,
+      "unrealized_pct": -0.57,
+      "value": 50.69
     },
     {
       "symbol": "RXRX",
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.22,
-      "unrealized_pct": -2.13,
-      "value": 57.96
+      "last": 3.23,
+      "unrealized_pct": -1.82,
+      "value": 58.14
     },
     {
       "symbol": "SLDB",
@@ -105,9 +105,9 @@
       "quantity": 3,
       "avg_price": 18.09,
       "opened_utc": "2026-06-04T13:40:26.820680+00:00",
-      "last": 17.25,
-      "unrealized_pct": -4.64,
-      "value": 51.75
+      "last": 17.21,
+      "unrealized_pct": -4.86,
+      "value": 51.63
     }
   ]
 }
