@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-10T13:10:25.630268+00:00",
+  "updated_utc": "2026-06-10T13:15:28.153204+00:00",
   "holdings": [
     {
       "symbol": "APLD",
@@ -15,36 +15,36 @@
       "quantity": 1,
       "avg_price": 4.23,
       "opened_utc": "2026-06-09T13:35:32.693966+00:00",
-      "last": 4.1,
-      "unrealized_pct": -3.07,
-      "value": 4.1
+      "last": 4.08,
+      "unrealized_pct": -3.55,
+      "value": 4.08
     },
     {
       "symbol": "AVR",
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.6,
-      "unrealized_pct": -2.74,
-      "value": 144.0
+      "last": 9.68,
+      "unrealized_pct": -1.93,
+      "value": 145.2
     },
     {
       "symbol": "BNAI",
       "quantity": 7,
       "avg_price": 19.46,
       "opened_utc": "2026-06-10T12:30:29.351141+00:00",
-      "last": 19.16,
-      "unrealized_pct": -1.54,
-      "value": 134.12
+      "last": 19.25,
+      "unrealized_pct": -1.08,
+      "value": 134.75
     },
     {
       "symbol": "EVTL",
       "quantity": 14,
       "avg_price": 2.12,
       "opened_utc": "2026-06-09T15:21:12.349780+00:00",
-      "last": 2.08,
-      "unrealized_pct": -1.89,
-      "value": 29.12
+      "last": 2.0896,
+      "unrealized_pct": -1.43,
+      "value": 29.25
     },
     {
       "symbol": "GASS",
@@ -54,15 +54,6 @@
       "last": 9.39,
       "unrealized_pct": -1.26,
       "value": 140.85
-    },
-    {
-      "symbol": "GIII",
-      "quantity": 4,
-      "avg_price": 34.8,
-      "opened_utc": "2026-06-08T16:00:39.697867+00:00",
-      "last": 34.0,
-      "unrealized_pct": -2.3,
-      "value": 136.0
     },
     {
       "symbol": "PLSE",
@@ -78,7 +69,7 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.16,
+      "last": 3.1601,
       "unrealized_pct": -3.95,
       "value": 56.88
     },
