@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T14:20:15Z",
+  "generated_utc": "2026-06-10T14:28:30Z",
   "watch": [
     {
       "symbol": "CGEM",
@@ -8,7 +8,7 @@
       "quantity": 11,
       "limit_price": 13.65,
       "good_until": "2026-06-13",
-      "note": "Cullinan Therapeutics 8-K: new clinical data on CD19/BCMA T cell engager programs for autoimmune diseases (11:10 UTC 6/10). Bullish catalyst, Healthcare sector green. Stock at $13.90 as of 14:07 UTC — already above trigger. Bot should fill on next live-ask check within 5% backstop of $13.65."
+      "note": "Cullinan Therapeutics 8-K: new clinical data on CD19/BCMA T cell engager programs for autoimmune diseases (11:10 UTC 6/10). Bullish catalyst, Healthcare sector green. Stock at $13.71 (6/10 14:28 UTC) — above trigger. Awaiting bot fill."
     },
     {
       "symbol": "BHC",
@@ -45,15 +45,6 @@
       "limit_price": 16.60,
       "good_until": "2026-06-12",
       "note": "Kohl's analyst raises price target post-Q1 (June 8). Breakout above $16.50 confirms continuation."
-    },
-    {
-      "symbol": "MNKD",
-      "trigger": "breakout",
-      "trigger_price": 3.65,
-      "quantity": 40,
-      "limit_price": 3.70,
-      "good_until": "2026-06-13",
-      "note": "MannKind FUROSCIX PDUFA date July 26 — upcoming binary FDA catalyst. Stock coiling. Enter on volume breakout above $3.65 as pre-positioning."
     },
     {
       "symbol": "GHRS",
