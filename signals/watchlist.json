@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T20:14:22Z",
+  "generated_utc": "2026-06-10T20:38:22Z",
   "watch": [
     {
       "symbol": "AEVA",
@@ -10,7 +10,7 @@
       "take_profit": 26.50,
       "stop_loss": 21.00,
       "good_until": "2026-06-12",
-      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov't contract. Now $22.74 (+2.6%). Enter on pullback to $22.50. Qty 1 given near-maxed account."
+      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov contract. Now $22.69 (+2.3%). Enter on pullback to $22.50. Qty 1 given near-maxed account."
     },
     {
       "symbol": "HROW",
@@ -21,18 +21,18 @@
       "take_profit": 41.00,
       "stop_loss": 32.50,
       "good_until": "2026-06-13",
-      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +10% to $36.82 vs Healthcare -1.74% -- strong relative strength. Enter on pullback to $35 consolidation. 4x$35.20=$140.80."
+      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +7.3% to $35.90 vs Healthcare -2.16% -- strong relative strength. Enter on pullback to $35 consolidation. 4x$35.20=$140.80."
     },
     {
-      "symbol": "BHC",
+      "symbol": "KALV",
       "trigger": "breakout",
-      "trigger_price": 5.35,
-      "quantity": 27,
-      "limit_price": 5.40,
-      "take_profit": 6.20,
-      "stop_loss": 5.00,
-      "good_until": "2026-06-13",
-      "note": "Bausch Health Canada LoI for OKEDI (risperidone ER) public drug plan coverage -- fresh catalyst June 9. Stock barely moved on the news. Breakout above $5.35 confirms participation."
+      "trigger_price": 27.25,
+      "quantity": 5,
+      "limit_price": 27.45,
+      "take_profit": 30.50,
+      "stop_loss": 25.50,
+      "good_until": "2026-06-12",
+      "note": "Kalvista Pharmaceuticals hit 52-week high at $27.00 with 4.2M volume on a -1.57% tape -- unusual accumulation signal. Breakout above $27.25 confirms momentum continuation. Small pharma $1.44B cap. 5x$27.45=$137.25."
     },
     {
       "symbol": "NRIX",
@@ -109,7 +109,7 @@
       "take_profit": 12.50,
       "stop_loss": 9.50,
       "good_until": "2026-06-17",
-      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update overdue as of June 10 (Q1 call said 'definitive update in early June'). Breakout above $10.20 confirms announcement landed."
+      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update overdue as of June 10 (Q1 call said definitive update in early June). Breakout above $10.20 confirms announcement landed."
     },
     {
       "symbol": "YB",
@@ -131,7 +131,7 @@
       "take_profit": 42.00,
       "stop_loss": 34.00,
       "good_until": "2026-06-14",
-      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS/fintech product for regulatory compliance, stock at $37.52 barely moved on news. Enter on pullback to $36.50. 3x$36.75=$110.25."
+      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS product for regulatory compliance, barely moved on news. Enter on pullback to $36.50. 3x$36.75=$110.25."
     }
   ]
 }
