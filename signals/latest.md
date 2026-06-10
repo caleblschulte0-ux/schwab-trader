@@ -1,39 +1,48 @@
-# Brain Run — 2026-06-09T16:53:47Z
+# Brain Run — 2026-06-10T13:28:15Z
 
-Funnel: scanned 270 → 28 fit remaining budget (~$26) → 14 with catalyst → 2 finalists → picked 0
+Funnel: scanned 276 → 228 fit budget → 38 with catalyst → 3 finalists → picked 1
 
 ## Market Tape
-SPY -1.36%, VIX 21.12 — **risk_off**. Sectors: Basic Materials +0.56%, Financial Services +0.46% lead; Energy -2.96%, Technology -2.33% weakest. Being materially pickier this run; extended momentum chases are off the table.
+SPY -0.29%, QQQ -1.15%, VIX 20.84 → tone: **neutral** (borderline cautious). Sector breakdown: Basic Materials +1.45% and Financial Services +0.32% are the only green sectors; Technology -2.66%, Energy -2.82%, Consumer Cyclical -1.70% all red. Semis especially ugly (MRVL -7.6%, AAOI -17%, IONL/IONX -19%). Kept that in mind — no momentum chasing in tech today.
 
-## Why 0 orders
-**Cash nearly fully deployed (~$26 remaining).** Twelve open positions consume ~$973.70 of the ~$1,000 account. With only ~$26 in powder, no position of meaningful size can be taken — even a single share of most candidates exceeds available cash. The priority is letting open positions work and leaving exits to the sell brain. Forcing a micro-trade in a risk_off environment with pennies left would be reckless.
+## Account Status
+11 open positions, ~$909 deployed at cost vs ~$1,000 total — nearly at capacity. Powder: ~$91. One conservatively sized trade fits; the sell brain must free capital before the next entry.
 
-## Finalists reviewed (both disqualified)
+## Pick: LAKE (BUY 9 shares @ $9.55)
 
-**NUVL (Nuvalent) +39.2% @ $123.21** — the best catalyst name in today's funnel. Filed an 8-K at 07:03 UTC; a ~$1.1B oncology name up 39% on a real event is the kind of move this strategy wants. **Disqualified: $123/share exceeds remaining ~$26 budget by 4×.** Cannot act; noted for context.
+**Lakeland Industries** — protective clothing / industrial garments manufacturer.
 
-**GENI (Genius Sports) +3.5% @ $6.685** — news_smallcap, Bullish sentiment 0.899, 4.57M volume, headline published 14:17 UTC today (fresh). Showing relative strength on a broadly red day. 10 shares = $66.85 — exceeds remaining cash (~$26). Catalyst is a marketing PR ("Edge" football product) rather than a material deal, so quality is low regardless. Disqualified by budget.
+Catalyst: "Lakeland Industries Releases Q1 2027 Financial Results" — published 2026-06-10T00:39:39Z (midnight ET, ~13 hours ago as of this run). Bullish sentiment 0.882 — highest conviction score in the entire funnel today. Stock only +1.38% at $9.54 despite massive volume: 1,126,667 shares traded on a $102M market cap company — roughly 11% of float in a single session, signaling genuine institutional/retail participation, not a thin pop.
 
-## Notable passes
+Why now despite being up only 1.38%: midnight earnings release gives retail the full day to discover it; the volume is building (not fading), which is the early-stage signature. This is exactly the entry profile this strategy wants: fresh catalyst, tiny move, volume confirming. Industrials sector is -0.53% today (a headwind), but individual earnings beats routinely override sector drift on micro-caps with this kind of volume confirmation.
 
-**LESL (Leslie's Pool Supply) +40.4% @ $7.20** — no catalyst in funnel (no 8-K, no news tag). Likely a short-squeeze or unconfirmed rumor; already up 40%, risk_off, unknown catalyst = hard pass.
+Sizing: 9 × $9.55 = $85.95. Fits within remaining ~$91 powder and well under $150 max per trade. Catalyst age: ~13 hours (today, fresh).
 
-**BNAI (Brand Engagement Network) +12.9% @ $20.62** — fresh AI-health JV catalyst (11:11 UTC today). On watchlist at pullback $19.50; better entry not yet triggered. Exceeds remaining budget at any meaningful quantity.
+## Finalist 2: CLLS ($2.99, +2.05%) — passed, watchlisted
 
-**ALVO (Alvotech) -0.35% @ $4.225** — FDA accepted AVT16 biosimilar application today. On watchlist at pullback $3.90; waiting for the level.
+Cellectis: FDA granted RMAT (Regenerative Medicine Advanced Therapy) designation for its off-the-shelf allogeneic leukemia CAR-T. Published 2026-06-10T01:09:19Z (fresh, ~12 hours). RMAT is a significant milestone — it flags the product as addressing an unmet need and provides expedited review, rolling review, and priority review eligibility for a potentially transformative technology. $217M market cap.
 
-**SMST +18.1% @ $53.34** — strong gainer, no catalyst in funnel, unknown driver on a risk_off day = skip.
+Why passed: volume only 41,942 shares — extremely thin. The catalyst hasn't reached the broader market yet. Placed on watchlist as breakout above $3.15 — that's the confirmation signal. Catalyst age: ~12 hours.
 
-**DBI (Designer Brands) -23.6% @ $6.78** — Q1 earnings report, big miss implied by the -23.6% move despite "Bullish" headline tag. Falling knife, no long entry.
+## Finalist 3: ACOG ($6.00, -0.33%) — passed
 
-## Catalyst age notes
-- NUVL: 8-K filed 07:03 UTC (fresh, ~9.8h old at run time)
-- GENI: headline 14:17 UTC (fresh, ~2.6h old)
-- BNAI: headline 11:11 UTC (fresh, ~5.7h old)
-- ALVO: headline 07:40 UTC (fresh, ~9.2h old)
+Alpha Cognition: positive top-line BEACON real-world study for ZUNVEYL in Alzheimer's. Bullish 0.456, published 02:10 UTC today. The stock is flat-to-negative on supposedly positive data with volume of only 92K — weak market reaction is a disqualifying red flag. Either the results weren't as compelling as the headline suggests or the move was already priced in. Pass.
 
-## Holdings read
-All 12 positions held; ATHE +8.5% is the only winner. AVR (-9.0%) and NRXP (-10.4%) are largest detractors. Sell brain manages all exits — no action from the buy brain on existing positions.
+## Notable Others
 
-## Watchlist status
-All 12 entries remain valid (good_until Jun 11–13). BHC breakout $5.35, ATLX breakout $4.00, RNAC pullback $6.20, NRIX breakout $16.50, KSS breakout $16.50, MNKD breakout $3.65, GHRS breakout $26.50, COYA breakout $4.75, ELDN pullback $3.30, ALVO pullback $3.90, BWAY pullback $13.75, BNAI pullback $19.50. No new additions (12/12 limit reached, budget exhausted).
+- **NUVL +39.28%**: GSK acquiring Nuvalent for $10.6B ($124/share, all-cash). Stock is at deal price — no opportunity, just a news item.
+- **ADBE (earnings 6/11 tomorrow)**: EPS estimate $5.83. Stock $290.55 — even 1 share exceeds $150 budget. Cannot size.
+- **ODC +17.38%** ($98.59): Oil-Dri record Q3 revenue, bullish 0.815. Already up 17% — deprioritize zone. Passed.
+- **ADUR +17.22%** ($16.88): Aduro Clean Technologies, no stated catalyst. Up 17% without identifiable reason — stage rule disqualifies.
+- **LESL +59%, RGNT +88%, CHAI +127%, CCTG +271%**: parabolic blow-offs — hard pass.
+- **ALHC +25.08%**: Alignment Healthcare, extended. Passed.
+- **ALTO -6.57%** listed as "New Strong Buy" per headline but stock falling — divergence = pass.
+- **STTK +9.49%** ($4.27): pricing a dilutive $75M offering — headwind for existing holders, confusing setup.
+- **DBI -20.9%, CRMT -19%**: already fully extended to downside; put premiums would be expensive and the move is over.
+- **NUVB (searched, not in funnel)**: NUVL sympathy play at $4.82 but DOWN 6.77% today — negative momentum disqualifies as sympathy play.
+
+## Holdings Read
+All 11 positions mildly negative (-1.3% to -4.8%). BNAI (opened today at $19.46, last $19.12) just entered via the watchlist fill. APLD in the funnel today with fresh catalyst (Applied Digital 210MW data center customer, sentiment 0.866) — already owned at avg $41.44, no re-buy. AVR also in the funnel (Form 4 filing, neutral) — already owned, no action.
+
+## Watchlist Update
+Removed BNAI (filled, now in holdings). Added CLLS (FDA RMAT breakout trigger $3.15). BHC good_until tomorrow 6/11 — last chance for that trigger. All 12 remaining entries still within their good_until windows.

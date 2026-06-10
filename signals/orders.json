@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-06-09T16:53:47Z",
-  "funnel": {"scanned": 270, "leading": 86, "in_budget": 28, "had_catalyst": 14, "finalists": 2, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-10T13:28:15Z",
+  "funnel": {"scanned": 276, "leading": 98, "in_budget": 228, "had_catalyst": 38, "finalists": 3, "picked": 1},
+  "orders": [
+    {"symbol": "LAKE", "action": "BUY", "instrument": "stock", "quantity": 9, "limit_price": 9.55}
+  ]
 }
