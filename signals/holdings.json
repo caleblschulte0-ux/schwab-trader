@@ -1,50 +1,50 @@
 {
-  "updated_utc": "2026-06-10T16:15:26.111624+00:00",
+  "updated_utc": "2026-06-10T16:25:26.349044+00:00",
   "holdings": [
     {
       "symbol": "ABSI",
       "quantity": 6,
       "avg_price": 7.12,
       "opened_utc": "2026-06-10T13:40:31.793998+00:00",
-      "last": 6.755,
-      "unrealized_pct": -5.13,
-      "value": 40.53
+      "last": 6.7686,
+      "unrealized_pct": -4.94,
+      "value": 40.61
     },
     {
       "symbol": "APLD",
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 39.5,
-      "unrealized_pct": -4.68,
-      "value": 79.0
+      "last": 39.41,
+      "unrealized_pct": -4.9,
+      "value": 78.82
     },
     {
       "symbol": "ATHE",
       "quantity": 1,
       "avg_price": 4.23,
       "opened_utc": "2026-06-09T13:35:32.693966+00:00",
-      "last": 4.16,
-      "unrealized_pct": -1.65,
-      "value": 4.16
+      "last": 4.0601,
+      "unrealized_pct": -4.02,
+      "value": 4.06
     },
     {
       "symbol": "AVR",
       "quantity": 15,
       "avg_price": 9.87,
       "opened_utc": "2026-06-08T13:20:22.638369+00:00",
-      "last": 9.67,
-      "unrealized_pct": -2.03,
-      "value": 145.05
+      "last": 9.64,
+      "unrealized_pct": -2.33,
+      "value": 144.6
     },
     {
       "symbol": "BNAI",
       "quantity": 7,
       "avg_price": 19.46,
       "opened_utc": "2026-06-10T12:30:29.351141+00:00",
-      "last": 20.75,
-      "unrealized_pct": 6.63,
-      "value": 145.25
+      "last": 20.57,
+      "unrealized_pct": 5.7,
+      "value": 143.99
     },
     {
       "symbol": "CLLS",
@@ -78,18 +78,18 @@
       "quantity": 1,
       "avg_price": 3.68,
       "opened_utc": "2026-06-10T14:15:31.891038+00:00",
-      "last": 3.65,
-      "unrealized_pct": -0.82,
-      "value": 3.65
+      "last": 3.66,
+      "unrealized_pct": -0.54,
+      "value": 3.66
     },
     {
       "symbol": "PLSE",
       "quantity": 2,
       "avg_price": 25.49,
       "opened_utc": "2026-06-05T18:20:22.717098+00:00",
-      "last": 24.92,
-      "unrealized_pct": -2.24,
-      "value": 49.84
+      "last": 24.9,
+      "unrealized_pct": -2.31,
+      "value": 49.8
     },
     {
       "symbol": "RXRX",
