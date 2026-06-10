@@ -1,8 +1,8 @@
-# Sell Review — 2026-06-10T22:33:30Z
+# Sell Review — 2026-06-10T23:12:04Z
 
 **No urgent sells. No sells at all. 0/13 positions exited.**
 
-Tape: SPY −1.57%, VIX 22.24, risk_off. Candidates.json and holdings.json are the same data as the 22:41Z web-verified run — no new information since TISI and ABSI were confirmed clean. No adverse signals for any holding in the funnel: PLSE appears with a fresh supportive warrant redemption 8-K; all others absent. Web search skipped this run — the 22:41Z search results are still current and nothing has changed to justify another.
+Tape: SPY −1.57%, VIX 22.24, risk_off. Web search this run confirmed TISI (Q1 beat, thesis intact) and ABSI (clinical data on track, no negative catalyst) — the two deepest drawdowns both hold. PLSE has a fresh supportive warrant redemption 8-K in candidates.json; all other holdings absent from today's funnel with no adverse signals. Every drawdown is explained by broad sector pressure (Healthcare −2.16%, Industrials −2.15%) on a market-wide risk_off day — not company-specific thesis breaks.
 
 ---
 
