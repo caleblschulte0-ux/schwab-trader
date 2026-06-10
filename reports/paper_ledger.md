@@ -1,22 +1,22 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-10T20:00:28Z_
+_Updated 2026-06-10T20:05:28Z_
 
-**Equity:** $931.37  (start $1000.00, **-68.63 / -6.9%**)  
+**Equity:** $932.31  (start $1000.00, **-67.69 / -6.8%**)  
 **Cash:** $2.50   **Invested:** $956.68   **Open positions:** 13  
-**Realized P/L:** $-40.82   **Unrealized:** $-27.81   **Closed trades:** 14   **Win rate:** 14%
+**Realized P/L:** $-40.82   **Unrealized:** $-26.87   **Closed trades:** 14   **Win rate:** 14%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
 | ABSI | stock | 6 | $7.12 | $6.38 | $0.00 | $0.00 | $-4.44 |
-| APLD | stock | 2 | $41.44 | $38.94 | $49.00 | $38.50 | $-5.00 |
-| ATHE | stock | 1 | $4.23 | $4.15 | $4.75 | $3.70 | $-0.08 |
+| APLD | stock | 2 | $41.44 | $38.89 | $49.00 | $38.50 | $-5.10 |
+| ATHE | stock | 1 | $4.23 | $4.07 | $4.75 | $3.70 | $-0.16 |
 | AVR | stock | 15 | $9.87 | $9.50 | $10.41 | $9.16 | $-5.55 |
-| BNAI | stock | 7 | $19.46 | $20.01 | $22.50 | $18.25 | $+3.85 |
+| BNAI | stock | 7 | $19.46 | $20.09 | $22.50 | $18.25 | $+4.41 |
 | CLLS | stock | 44 | $3.19 | $3.18 | $0.00 | $0.00 | $-0.44 |
-| EVTL | stock | 14 | $2.12 | $2.07 | $0.00 | $0.00 | $-0.70 |
+| EVTL | stock | 14 | $2.12 | $2.11 | $0.00 | $0.00 | $-0.14 |
 | GASS | stock | 15 | $9.51 | $9.35 | $10.40 | $8.95 | $-2.40 |
 | MNKD | stock | 1 | $3.68 | $3.63 | $0.00 | $0.00 | $-0.05 |
 | PLSE | stock | 2 | $25.49 | $24.99 | $31.50 | $23.50 | $-1.00 |
