@@ -1,10 +1,4 @@
 {
-  "generated_utc": "2026-06-10T04:33:05Z",
-  "sells": [
-    {
-      "symbol": "PMN",
-      "reason": "Quick-trade thesis dead: HC Wainwright PT reiteration produced zero follow-through; reversed -8.24% on day 1; absent from candidates funnel across multiple consecutive runs. Momentum gone, no new catalyst. Not converting a failed breakout into a multi-month clinical hold.",
-      "urgent": false
-    }
-  ]
+  "generated_utc": "2026-06-10T13:45:22Z",
+  "sells": []
 }
