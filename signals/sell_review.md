@@ -1,10 +1,10 @@
-# Sell Review — 2026-06-10T18:18:42Z
+# Sell Review — 2026-06-10T18:41:00Z
 
 **0 sells proposed. All 13 positions HOLD.**
 
 Tape: SPY −1.03%, VIX 21.55, tone risk_off. Only two green sectors: Financial Services +1.05%, Energy +0.59%. Everything else red; Basic Materials −1.66%, Utilities −1.58%, Consumer Cyclical −1.46%, Healthcare −1.08%, Industrials −1.08%.
 
-Web search this run: **TISI** — Q1 2026 revenue +8.3% YoY to $215.1M (highest Q1 since 2019), adjusted EBITDA +45.2% to $7.7M with 90bps margin expansion, FY2026 guidance raised ($920M–$945M revenue, EBITDA +16%). No adverse catalyst, downgrade, or structural miss found. Turnaround thesis intact.
+Web search this run: **TISI** — Q1 2026 revenue +8.3% YoY to $215.1M (highest Q1 since 2019), adjusted EBITDA +45.2% to $7.7M with 90bps margin expansion, FY2026 guidance raised ($920M–$945M revenue, EBITDA +16%). No adverse catalyst, downgrade, or structural miss found. Turnaround thesis intact. Insider purchased shares in early June.
 
 ---
 
