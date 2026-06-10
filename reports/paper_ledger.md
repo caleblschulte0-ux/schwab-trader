@@ -1,19 +1,19 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-10T13:15:30Z_
+_Updated 2026-06-10T13:20:29Z_
 
-**Equity:** $942.67  (start $1000.00, **-57.33 / -5.7%**)  
+**Equity:** $943.81  (start $1000.00, **-56.19 / -5.6%**)  
 **Cash:** $189.26   **Invested:** $769.92   **Open positions:** 10  
-**Realized P/L:** $-40.82   **Unrealized:** $-16.51   **Closed trades:** 14   **Win rate:** 14%
+**Realized P/L:** $-40.82   **Unrealized:** $-15.37   **Closed trades:** 14   **Win rate:** 14%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
-| APLD | stock | 2 | $41.44 | $40.86 | $49.00 | $38.50 | $-1.16 |
+| APLD | stock | 2 | $41.44 | $40.84 | $49.00 | $38.50 | $-1.20 |
 | ATHE | stock | 1 | $4.23 | $4.08 | $4.75 | $3.70 | $-0.15 |
 | AVR | stock | 15 | $9.87 | $9.68 | $10.41 | $9.16 | $-2.85 |
-| BNAI | stock | 7 | $19.46 | $19.25 | $22.50 | $18.25 | $-1.47 |
+| BNAI | stock | 7 | $19.46 | $19.42 | $22.50 | $18.25 | $-0.28 |
 | EVTL | stock | 14 | $2.12 | $2.09 | $0.00 | $0.00 | $-0.43 |
 | GASS | stock | 15 | $9.51 | $9.39 | $10.40 | $8.95 | $-1.80 |
 | PLSE | stock | 2 | $25.49 | $24.70 | $31.50 | $23.50 | $-1.58 |
