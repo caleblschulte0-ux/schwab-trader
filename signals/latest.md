@@ -1,65 +1,35 @@
-# Brain Run — 2026-06-10T18:53Z UTC
+# Brain Run — 2026-06-10T19:22:31Z
 
-Funnel: scanned 271 → 45 fit budget → 18 with catalyst → 4 finalists → picked 0
-
----
+Funnel: scanned 279 → 145 fit budget → 68 with catalyst → 5 finalists → picked 0
 
 ## Market Tape
-**RISK_OFF.** SPY -1.0%, VIX 21.27 (elevated). Only Financial Services (+0.92%) and Technology (+0.36%) in the green. Healthcare (-1.33%), Consumer Cyclical (-1.43%), Basic Materials (-1.75%) leading the red. Broad risk-off posture held all run.
-
----
+**RISK_OFF.** SPY -1.26%, VIX 21.89. Only Financial Services (+0.92%) and Technology (+0.36%) are green; every other sector is red, with Basic Materials (-1.75%), Utilities (-1.65%), Consumer Cyclical (-1.43%), and Healthcare (-1.33%) leading lower. Broad tape is selling off — demanding clean setups with strong relative strength.
 
 ## Account Status
-13 open positions, 12 of them underwater. Total cost deployed ~$957 of ~$1,000. **Remaining powder: ~$43.** This severely constrains any new position — even a 1-share trade in a $40 stock would consume nearly all remaining capital, leaving zero reserve. This is the dominant constraint for this run.
-
----
+13 open positions with a cost basis of ~$957 against a ~$1,000 account. Available powder: ~$43. The account is effectively fully deployed. No new trades are warranted — forcing a $40 position into a risk_off tape is not good judgment; it is small enough to be noise and large enough to further crowd a fully-loaded book.
 
 ## Finalists Considered
 
-### 1. HROW — $36.94, +10.4% (drug re-launch)
-Harrow re-launched VERKAZIA (cyclosporine ophthalmic) at 10:38 UTC today. Stock is +10.4% vs Healthcare sector -1.33% — excellent relative strength. Catalyst age: ~8 hours. Already up 10.4% makes this a middle-stage entry, not early. Already on watchlist at $35.00 pullback trigger; best setup is to wait for a consolidation dip rather than chase. With only ~$43 powder, entering even 1 share would nearly exhaust reserves. Pass.
+**CBRL (Cracker Barrel) — PASS.** Up +25.2% to $45.44 on an earnings beat. Benchmark reiterated HOLD post-beat. Consumer Cyclical sector is -1.43% — CBRL is dramatically outperforming its own sector, a relief rally / short-squeeze pattern. Catalyst at 12:50 UTC today. Too extended (+25%) to enter with any R/R case remaining.
 
-### 2. DFIN — $37.865, +1.1% (AI product launch)
-Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging at 12:08 UTC. Bullish sentiment (0.531). Only +1.1% — early in the move. Fintech/compliance SaaS is a real use-case AI story. Already on watchlist at $36.50 pullback trigger. With $43 powder, 1 share = $37.87 — would nearly exhaust capital and leave no reserve. Pass.
+**HROW (Harrow Inc.) — IN WATCHLIST (pullback trigger $35.00).** Up +10.7% to $37.04 on re-launch of VERKAZIA (cyclosporine ophthalmic, 10:38 UTC). Strong relative strength vs. Healthcare -1.33%. Already on watchlist for pullback entry at $35.00; bot will auto-enter if triggered. Entering at current $37.04 instead of the $35 target produces worse R/R, and I have near-zero powder anyway.
 
-### 3. LGCL — $2.02, +8.6% (AI patents)
-Lucas GC Limited received two patents for agentic AI frameworks, published 12:39 UTC. Tech sector is positive (+0.36%). Up 8.6% with catalyst ~6 hours old. Market cap $86M — micro-cap. 21 shares = $42.42 (fits within $43 powder). Rejected: patent announcements are weak catalysts (no immediate revenue); micro-cap volatility on a risk-off tape adds execution risk. The AI angle is genuine but not differentiated enough to force in a tiny size.
+**LGCL (Lucas GC Limited) — PASS.** Up +10.2% to $2.05, micro-cap ~$87M. Received two patents for Agentic AI technical frameworks (catalyst 12:39 UTC, bullish 0.44 sentiment). Early-stage move with a real AI theme, but volume was only ~83K shares — too thin to confirm real participation in a risk_off session.
 
-### 4. LAES — $3.08, flat (quantum semiconductor conference)
-SEALSQ CEO to lead quantum semiconductor discussion at GSA European Forum. Published 14:39 UTC (~2 hours ago). Very high volume (15.3M shares) vs essentially flat price. Volume without price move could mean distribution, not accumulation — ambiguous signal. No definitive bullish catalyst. Pass.
+**AEVA (Aeva Technologies) — IN WATCHLIST (pullback trigger $22.50).** Up +2.62% to $22.75 on City of Fargo government contract win for CityOS intersection safety (catalyst 10:59 UTC, bullish 0.41). Already on watchlist for pullback to $22.50, qty 1. Price is essentially at the trigger; remaining powder (~$43) allows only 1 share anyway. Watchlist auto-executes if it hits — no new action.
 
----
+**CGEM (Cullinan Therapeutics) — PASS (no PUT).** Down -9.9% to $11.87 despite "bullish" T cell engager clinical data at EULAR 2026. Healthcare sector down -1.33% explains much of the drag. Stock is already -10% on the session — entering a put now risks chasing the flush rather than leading it. Remaining powder ~$43 would be consumed entirely by a 1-contract put. Pass.
 
-## Notable Passes
+## Watchlist Review (all 12 items intact)
+- **AEVA** $22.75 — essentially at $22.50 pullback trigger; bot will execute if it ticks down.
+- **HROW** $37.04 — above $35.00 pullback trigger. Valid, good_until June 13.
+- **YB** $17.20 — above $15.50 pullback trigger. Yuanbao Q1 +36%, dividend approved. good_until June 13.
+- **DFIN** $37.65 — above $36.50 pullback trigger. AI-powered iXBRL SEC filing tool, fresh catalyst 12:08 UTC. good_until June 14.
+- **NRIX** $15.33 — below $16.50 breakout trigger. Roche $700M BTK degrader deal still intact. good_until June 14.
+- **BHC, GHRS, COYA, ELDN, ALVO, BWAY, SPRY** — all within good_until dates; catalysts unchanged.
 
-- **CBRL +26.96%** ($46.09): Cracker Barrel earnings beat. Already near-vertical +27% intraday — hard pass, no room.
-- **YB +17.6%** ($17.135): Yuanbao Q1 revenue +36% + cash dividend (catalyst 10:20 UTC). Good catalyst, but 17.6% intraday already in the deprioritize zone. On watchlist at $15.50 pullback.
-- **SMCI -21.8%** ($31.78): Super Micro announced $7B capital raise (equity + convertible) on $39B AI server backlog. Market read it as dilution + margin pressure. Puts are not viable: IV is sky-high post-22% drop (premiums too expensive for $43 budget), and chasing downside after a -22% crash mirrors chasing a rally. Pass.
-- **AEVA +3.9%** ($23.035): City of Fargo selected Aeva CityOS for intersection safety (10:59 UTC). Early-stage contract win. On watchlist at $22.50 pullback — no change needed.
-- **ADBE (earnings June 11)**: Only earnings_soon candidate. Reports tomorrow, EPS estimate $5.83. No price in funnel; Adobe likely $400+ per share — far above budget even for 1 share.
-
----
-
-## Holdings Read
-| Symbol | Unrealized | Status |
-|--------|-----------|--------|
-| BNAI   | +4.73%  | Only green; sell brain watching |
-| CLLS   | -0.47%  | Effectively flat |
-| EVTL   | -0.24%  | Effectively flat |
-| MNKD   | -1.44%  | Small starter position |
-| GASS   | -2.10%  | Holding |
-| PLSE   | -2.63%  | Holding |
-| ATHE   | -1.42%  | Holding |
-| APLD   | -5.33%  | Holding |
-| AVR    | -4.20%  | Holding |
-| ABSI   | -6.39%  | Sell brain to evaluate |
-| SLDB   | -5.83%  | Sell brain to evaluate |
-| RXRX   | -6.84%  | Sell brain to evaluate |
-| TISI   | -7.68%  | Sell brain to evaluate |
-
-All exits owned by the sell brain. No re-buys issued.
-
----
-
-## Decision
-**No new orders.** Risk-off tape + 13 crowded positions + ~$43 remaining powder = no meaningful entry available. Best setups (HROW, DFIN, AEVA, YB) are already on the watchlist with trigger-based entries. Remaining powder preserved for a high-conviction, fresh catalyst on a better tape.
+## Current Holdings
+Sell brain owns all exits. No action from this run.
+- **BNAI** is the one bright spot (+6.94% / +$9.45 unrealized).
+- **ABSI** -6.32%, **TISI** -7.71%, **APLD** -5.74% are the deepest underwater — sell brain monitors thesis health.
+- Account is ~93% deployed by current value, ~96% by cost basis.
