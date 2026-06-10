@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-06-10T14:20:15Z",
-  "funnel": {"scanned": 279, "leading": 91, "in_budget": 185, "had_catalyst": 15, "finalists": 3, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-10T14:54:00Z",
+  "funnel": {"scanned": 271, "leading": 79, "in_budget": 18, "had_catalyst": 6, "finalists": 3, "picked": 1},
+  "orders": [
+    {"symbol": "CGEM", "action": "BUY", "instrument": "stock", "quantity": 3, "limit_price": 13.60}
+  ]
 }
