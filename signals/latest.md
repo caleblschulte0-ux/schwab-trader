@@ -1,56 +1,39 @@
-# Brain Run — 2026-06-10T19:52:00Z
+# Brain Run — 2026-06-10T20:14:22Z
 
-Funnel: scanned 285 → 195 fit budget → 75 with catalyst → 5 finalists → picked 0
-
----
+Funnel: scanned 316 → 140 fit budget → 78 with catalyst → 4 finalists → picked 0
 
 ## Market Tape
+**risk_off.** SPY -1.38%, VIX 21.8. Only Financial Services (+0.63%) and Consumer Defensive (+0.33%) are green. Healthcare -1.74%, Consumer Cyclical -1.80%, Industrials -1.85%, Real Estate -1.93%, Basic Materials -2.03%. Broad distribution — this is a genuine risk-off day, not a rotation. Sitting out on a tape this ugly is correct.
 
-**RISK_OFF.** SPY -1.38%, VIX 21.8 (elevated). Only Financial Services (+0.63%) and Consumer Defensive (+0.33%) are green. Every other sector is red: Healthcare -1.74%, Consumer Cyclical -1.80%, Utilities -1.84%, Industrials -1.85%, Real Estate -1.93%, Basic Materials -2.03%. Tech is -0.22% — the strongest non-defensive sector. This is a broad-market down day. Sitting out is appropriate and often correct on an ugly tape.
+## Portfolio Context
+13 open positions, ~$956 cost basis deployed of ~$1,000. Estimated powder remaining: ~$43. Account is effectively at capacity. With only $43 of powder and a risk_off tape, the bar for a new entry is extremely high — and nothing in today's funnel clears it.
 
----
+## Finalists Considered
 
-## Capital Status: FULLY DEPLOYED — NO ORDERS
+**OCC (Optical Cable Corporation) — PASSED, extended**
++28.13% to $26.92, 2.55M volume, $227M mcap. Q2 earnings: 27% sales growth, rising backlog (Bullish, published 15:09 UTC). Real catalyst, real volume. But already extended 28%+ intraday — beyond the 15-20% deprioritization threshold. Blow-off candle territory. Would need consolidation near $23-24 before considering. Not actionable today.
 
-The account has 13 open positions with approximately **$957 of ~$1,000 deployed**. Powder remaining is ~$43 — not enough to fund a new $150 position. Even the best setup in today's funnel cannot be entered without first freeing capital. The SELL BRAIN must close something before a new buy is possible.
+**HROW (Harrow Health) — PASSED, catalyst aging + extended**
++10.03% to $36.82, 1M volume, $1.37B mcap. Re-launched VERKAZIA (cyclosporine ophthalmic for VKC) — a real product catalyst published 10:38 UTC (~9.5h ago). Stock already ran the full move. Still on watchlist at $35.00 pullback trigger. Not buying the extended price in a risk_off tape.
 
-Combined with the risk_off tape, **0 orders** is the correct and disciplined call. No trades were forced.
+**OMER (Omeros) — PASSED, reiteration not fresh catalyst**
++2.71% to $10.24, 865K volume, $741M mcap. H.C. Wainwright *reiterates* Buy, $40 target (published 12:09 UTC). A reiteration of a prior rating is not a new catalyst — the $40 target was already known. Modest move doesn't justify entry on a reiterated call in a risk_off session.
 
----
+**PLAY (Dave & Buster's) — PASSED, weak catalyst**
++9.26% to $12.51, 1.9M volume, $435M mcap. "Grand Opening in Sugar Land!" (published 18:59 UTC — very fresh). A single restaurant grand opening is a marketing event, not a business inflection. +9% on a grand opening headline in a broad red market looks like algo noise, not a durable catalyst.
 
-## Funnel Walk — Notable Names
+## Notable Other Passes
+- **CBRL** ($44.49, +22.56%): Extended on earnings beat, "Hold" reiterated — not a buy signal
+- **LAKE** ($11.35, +18.97%): Extended on Q1 EPS beat, neutral sentiment
+- **CGEM** ($11.80, -10.51%): Clinical data disappointed — already made the down-move
+- **AEVA** ($22.74, +2.57%): City of Fargo contract fresh but account at capacity; on watchlist at $22.50
+- **DFIN** ($37.52, +0.19%): AI-powered iXBRL tagging launch is a real product catalyst but stock barely moved; on watchlist at $36.50 pullback
 
-**HROW (Harrow Health) — Finalist, not buyable**
-Up +10.7% to $37.03 while Healthcare sector is down -1.74% — exceptional relative strength. Catalyst: re-launch of VERKAZIA® (cyclosporine ophthalmic) published 10:38 UTC today (fresh, ~9h ago). Volume: 951K confirming participation. Real product relaunch with commercial significance. Stage of move: moderate (~10%), not a blow-off. Would be a buy if we had $148 of powder (4 shares × ~$37). Already on the watchlist with a pullback trigger at $35.00.
+## No New Orders — Why This Is Correct
+1. **risk_off tape** — BRAIN.md: "Sitting out a run is acceptable and often correct on an ugly tape"
+2. **Account at capacity** — 13 positions, ~$43 powder. No room for a properly-sized entry
+3. **No fresh early-stage setup** — all compelling names are either extended (OCC +28%, CBRL +22%) or have aging catalysts (HROW 9.5h old)
+4. **No new sympathy angles** — checked the full funnel; no undiscovered peer plays on today's movers
 
-**OCC (Optical Cable) — Extended, pass**
-Up +23.2% to $25.89 on a genuine earnings beat: Q2 revenue +27%, rising backlog. Volume: 2.49M (massive confirmation). Bullish sentiment 0.76. Small-cap at $214M market cap. However, this is already extended well past the 20% deprioritize threshold with no room to a sensible near-term target relative to entry here. Catalyst age: 15:09 UTC today (~4.5h old), still fresh — but the intraday move is already spent. Pass today; if it consolidates over the next 1-2 sessions near support, could become a watchlist pullback entry.
-
-**CBRL (Cracker Barrel) — Extended, pass**
-Up +24.9% to $45.33 on an earnings beat. Volume: 9.6M. Benchmark reiterated Hold. Also extended past 20% threshold. Not a candidate even if we had powder.
-
-**AEVA (Aeva Technologies) — Fresh catalyst, not buyable**
-Up +1.9% to $22.59. City of Fargo selected Aeva CityOS for intersection safety (published 10:59 UTC today, ~9h ago). Small-cap AI/autonomous sensing. Good early-stage setup — barely moved on a real gov't contract. With only ~$43 of powder, even 1 share ($22.59) is a rounding-error position not worth executing. Already on watchlist at $22.50 pullback trigger.
-
-**DFIN (Donnelley Financial Solutions) — Flat, fresh AI catalyst**
-Flat at $37.45 (+0.0%). Launched AI-powered iXBRL SEC filing tagging tool (12:08 UTC today). Real SaaS product for fintech/regulatory compliance. Market hasn't moved on it yet — ideal early-entry setup conceptually. No powder to fund it. Already on watchlist at $36.50 pullback trigger.
-
----
-
-## Names Passed
-
-- **BATL** (+60.3%): Blow-off, no visible catalyst. Hard pass.
-- **DSY** (+338%), **CPOP** (+469%): Halt/resume pump spikes. Hard pass.
-- **AMPGR/AMPGZ** (+34-37%): Rights, illiquid, no real catalyst. Pass.
-- **CRMT** (-55.8%): Massive halt/down move — disaster risk. Pass.
-- **LAZ** (-13.2%): Large-cap selloff, no tradeable catalyst.
-- **LAKE** (+21.1%): Earnings beat but extended past the 20% threshold.
-- **CGEM** (-11.2%): Clinical data release, bearish; possible future put candidate but no powder or options review done this run.
-
----
-
-## Holdings Read
-
-13 open positions, ~$957 deployed. Most positions are underwater on a broad risk-off tape. Bright spot: **BNAI** is at +6.06% ($20.64 vs $19.46 avg), showing positive momentum relative to the selloff. The SELL BRAIN manages all exits — no action from this run.
-
-Watchlist maintained at 12 items (AEVA, HROW, BHC, NRIX, GHRS, COYA, ELDN, ALVO, BWAY, SPRY, YB, DFIN). All items remain valid within their good_until dates.
+## Current Holdings (sell brain manages all exits)
+ABSI (−10.4%), APLD (−6.2%), ATHE (−3.8%), AVR (−3.8%), BNAI (+3.2%), CLLS (−0.3%), EVTL (−0.5%), GASS (−1.7%), MNKD (−1.4%), PLSE (−2.0%), RXRX (−7.6%), SLDB (−3.6%), TISI (−9.7%). Portfolio broadly red in line with market. BNAI is the lone positive name showing relative strength. Sell brain owns all exits.
