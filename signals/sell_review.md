@@ -1,11 +1,11 @@
-# Sell Review — 2026-06-10T20:20:00Z
+# Sell Review — 2026-06-10T09:33:51Z
 
 **0 sells proposed. All 12 positions HOLD.**
 
 Tape context (Jun 9 close): SPY −1.36%, VIX 21.12 — risk_off. Technology −2.33%, Energy −2.96%.  
 Holdings snapshot: 2026-06-09T21:00:25Z. Candidates: 2026-06-09T16:07:51Z.
 
-Web search this run: **PMN** — ProMIS Neurosciences PRECISE-AD Phase 1b fully enrolled; blinded 6-month interim data expected early Q3 2026; Oppenheimer CNS Summit presentation June 10, 2026 (today). No clinical holds, no safety signals, no thesis-breaking events found. The −8.24% is risk-off/biotech-sector weakness; the forward catalyst is intact.
+Web search this run: **NRXP** — FDA review of KETAFREE ANDA progressing constructively. April 6 labeling alignment (minor formatting only); April 22 Discipline Review Letter flagged only minor administrative changes across all disciplines — no substantive deficiencies. Commercial manufacturing initiated May 5 at 1M doses/month. GDUFA goal date July 29, 2026 intact. One competitor (PharmaTher's KETARx, conventional formulation with Benzethonium Chloride) approved Aug 2025 and sold to undisclosed acquirer Dec 2025 — does not invalidate NRXP's preservative-free differentiation thesis. Drug shortage tailwind; FDA designated ketamine "highly strategic." No CRL, no rejection, no adverse FDA signal. Thesis fully on-track.
 
 ---
 
@@ -30,13 +30,13 @@ Opened Jun 5, −1.26% ($9.51 → $9.39). StealthGas LPG shipping. In Jun 9 cand
 Opened Jun 8, −2.30% ($34.80 → $34.00). G-III Apparel. Not in Jun 9 candidates; no earnings revision, guidance cut, or tariff/supply-chain event identified. Consumer Cyclical −1.05% Jun 9 is sector-level risk_off drag only. Thesis intact. HOLD.
 
 **NRXP — HOLD**  
-Opened Jun 5, −6.16% ($4.22 → $3.96). NRx Pharmaceuticals. Thesis: IV ketamine ANDA (KETAFREE™), FDA GDUFA goal date July 29, 2026. Not in Jun 9 candidates; no FDA action, clinical hold, or competitive event identified. The −6.16% is a drawdown on a position that was −10.4% mid-session Jun 9 and recovered — price is moving toward thesis, not away. HOLD.
+Opened Jun 5, −6.16% ($4.22 → $3.96). NRx Pharmaceuticals. **Web searched this run.** KETAFREE ANDA FDA review on-track: April labeling aligned (minor formatting only), April 22 DRL cited only minor administrative changes — no substantive deficiencies across all review disciplines. Commercial manufacturing started May 5 at 1M doses/month capacity ahead of GDUFA. One conventional-formulation competitor (PharmaTher's KETARx) already approved Aug 2025, but it uses Benzethonium Chloride — NRXP's preservative-free differentiation and pending citizen petition remain the bull case. Drug shortage tailwind; FDA designated ketamine "highly strategic." GDUFA July 29 intact. The −6.16% is biotech sector volatility against an actively advancing thesis. HOLD.
 
 **PLSE — HOLD**  
 Opened Jun 5, +1.10% ($25.49 → $25.77). Pulse Biosciences. Position is green. Not in Jun 9 candidates; no negative analyst action or clinical setback identified. Thesis intact. HOLD.
 
 **PMN — HOLD**  
-Opened Jun 9, −8.24% ($10.62 → $9.745). ProMIS Neurosciences. **Web searched this run.** PRECISE-AD Phase 1b fully enrolled; blinded 6-month interim data expected early Q3 2026; Oppenheimer CNS Summit presentation Jun 10 (today). No clinical holds, no safety signals, no thesis-breaking news found. The −8.24% move was on a risk_off day (SPY −1.36%, biotech broadly weak). Forward catalyst (Q3 interim data) intact. HOLD.
+Opened Jun 9, −8.24% ($10.62 → $9.745). ProMIS Neurosciences. PRECISE-AD Phase 1b fully enrolled; blinded 6-month interim data expected early Q3 2026; Oppenheimer CNS Summit presentation Jun 10 (today, per prior-run search). No clinical holds, no safety signals, no thesis-breaking news found. The −8.24% move was on a risk_off day (SPY −1.36%, biotech broadly weak). Forward catalyst (Q3 interim data) intact. HOLD.
 
 **RXRX — HOLD**  
 Opened Jun 5, −1.82% ($3.29 → $3.23). Recursion Pharmaceuticals. Technology sector fell −2.33% Jun 9; RXRX at −1.82% is outperforming its sector. Not in Jun 9 candidates; no pipeline failure or partnership dissolution identified. Thesis intact. HOLD.
@@ -59,7 +59,7 @@ Opened Jun 4, −3.26% ($18.09 → $17.50). Team Inc. industrial services. Not i
 | EVTL   | Jun 9  | −0.94%   | CDR upcoming; prototype flight milestone logged            | HOLD |
 | GASS   | Jun 5  | −1.26%   | SA confirms value gap still open; energy sector drag       | HOLD |
 | GIII   | Jun 8  | −2.30%   | Sector drag only; no company-specific break                | HOLD |
-| NRXP   | Jun 5  | −6.16%   | GDUFA Jul 29 intact; price recovered from session low      | HOLD |
+| NRXP   | Jun 5  | −6.16%   | FDA DRL minor-only; manufacturing live; GDUFA Jul 29 intact | HOLD |
 | PLSE   | Jun 5  | +1.10%   | Green; no adverse events                                   | HOLD |
 | PMN    | Jun 9  | −8.24%   | Q3 interim data intact; conference today; risk-off only    | HOLD |
 | RXRX   | Jun 5  | −1.82%   | Outperforming Tech sector; no pipeline miss                | HOLD |
