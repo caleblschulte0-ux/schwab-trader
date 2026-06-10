@@ -1,5 +1,5 @@
 {
-  "cash": 53.2624000000001,
+  "cash": 189.2624000000001,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -62,27 +62,6 @@
         "entry_ask": 9.85,
         "entry_last": 9.69,
         "tape_tone": "risk_off"
-      }
-    },
-    "GIII": {
-      "qty": 4,
-      "entry": 34.8,
-      "tp": 38.0,
-      "sl": 32.9,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-08T16:00:39.697867+00:00",
-      "meta": {
-        "signals": [
-          "news_smallcap"
-        ],
-        "catalyst_age_h": 5.84,
-        "market_cap": 1461225955.0,
-        "volume": 372454,
-        "ref_price": 34.65,
-        "entry_ask": 34.73,
-        "entry_last": 34.7,
-        "tape_tone": "risk_on"
       }
     },
     "ATHE": {
@@ -170,7 +149,7 @@
       }
     }
   },
-  "realized_pnl": -37.61759999999998,
+  "realized_pnl": -40.81759999999997,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -391,7 +370,31 @@
       "entry_ask": 10.6,
       "entry_last": 10.01,
       "tape_tone": "neutral"
+    },
+    {
+      "symbol": "GIII",
+      "qty": 4,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 34.8,
+      "exit": 34.0,
+      "pnl": -3.2,
+      "pnl_pct": -2.3,
+      "opened_utc": "2026-06-08T16:00:39.697867+00:00",
+      "closed_utc": "2026-06-10T13:10:25.630951+00:00",
+      "reason": "Quick trade momentum dead: bought Jun 8 at $34.65 on thesis that market was underreacting to guidance raise \u2014 5 days post-catalyst, stock has not re-rated (now $34.00, -1.9% from entry). Web search confirms guidance raise is explicitly contingent on IEEPA tariff conditions continuing, not organic improvement; underlying Q1 EPS stripped of $1.75/share one-time tariff refund was -$0.21 vs +$0.19 prior year; revenue -8% YoY. Intraday momentum thesis fully expired with no follow-through.",
+      "hold_h": 45.16,
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst_age_h": 5.84,
+      "market_cap": 1461225955.0,
+      "volume": 372454,
+      "ref_price": 34.65,
+      "entry_ask": 34.73,
+      "entry_last": 34.7,
+      "tape_tone": "risk_on"
     }
   ],
-  "updated_utc": "2026-06-10T13:05:30.606595+00:00"
+  "updated_utc": "2026-06-10T13:10:28.405376+00:00"
 }

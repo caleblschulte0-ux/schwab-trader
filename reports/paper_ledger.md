@@ -1,24 +1,23 @@
 # Paper-Trading Ledger (DRY_RUN)
 
-_Updated 2026-06-10T13:05:30Z_
+_Updated 2026-06-10T13:10:28Z_
 
-**Equity:** $940.29  (start $1000.00, **-59.71 / -6.0%**)  
-**Cash:** $53.26   **Invested:** $909.12   **Open positions:** 11  
-**Realized P/L:** $-37.62   **Unrealized:** $-22.09   **Closed trades:** 13   **Win rate:** 15%
+**Equity:** $940.72  (start $1000.00, **-59.28 / -5.9%**)  
+**Cash:** $189.26   **Invested:** $769.92   **Open positions:** 10  
+**Realized P/L:** $-40.82   **Unrealized:** $-18.46   **Closed trades:** 14   **Win rate:** 14%
 
 ## Open positions  _(option Entry/Last = per-share premium; Unrealized is the real $ P/L, ×100/contract)_
 
 | Symbol | Kind | Qty | Entry | Last | TP | SL | Unrealized |
 |--------|------|-----|-------|------|----|----|------------|
-| APLD | stock | 2 | $41.44 | $40.76 | $49.00 | $38.50 | $-1.36 |
+| APLD | stock | 2 | $41.44 | $40.86 | $49.00 | $38.50 | $-1.16 |
 | ATHE | stock | 1 | $4.23 | $4.10 | $4.75 | $3.70 | $-0.13 |
 | AVR | stock | 15 | $9.87 | $9.60 | $10.41 | $9.16 | $-4.05 |
-| BNAI | stock | 7 | $19.46 | $19.12 | $22.50 | $18.25 | $-2.38 |
-| EVTL | stock | 14 | $2.12 | $2.07 | $0.00 | $0.00 | $-0.69 |
+| BNAI | stock | 7 | $19.46 | $19.16 | $22.50 | $18.25 | $-2.10 |
+| EVTL | stock | 14 | $2.12 | $2.08 | $0.00 | $0.00 | $-0.56 |
 | GASS | stock | 15 | $9.51 | $9.39 | $10.40 | $8.95 | $-1.80 |
-| GIII | stock | 4 | $34.80 | $34.00 | $38.00 | $32.90 | $-3.20 |
 | PLSE | stock | 2 | $25.49 | $24.70 | $31.50 | $23.50 | $-1.58 |
-| RXRX | stock | 18 | $3.29 | $3.17 | $4.50 | $3.10 | $-2.16 |
+| RXRX | stock | 18 | $3.29 | $3.16 | $4.50 | $3.10 | $-2.34 |
 | SLDB | stock | 9 | $6.86 | $6.53 | $10.50 | $5.90 | $-2.97 |
 | TISI | stock | 3 | $18.09 | $17.50 | $21.50 | $16.00 | $-1.77 |
 
@@ -26,6 +25,7 @@ _Updated 2026-06-10T13:05:30Z_
 
 | Symbol | Kind | Qty | Entry | Exit | P/L | % | Reason | Closed |
 |--------|------|-----|-------|------|-----|---|--------|--------|
+| GIII | stock | 4 | $34.80 | $34.00 | $-3.20 | -2.3% | Quick trade momentum dead: bought Jun 8 at $34.65 on thesis that market was underreacting to guidance raise — 5 days post-catalyst, stock has not re-rated (now $34.00, -1.9% from entry). Web search confirms guidance raise is explicitly contingent on IEEPA tariff conditions continuing, not organic improvement; underlying Q1 EPS stripped of $1.75/share one-time tariff refund was -$0.21 vs +$0.19 prior year; revenue -8% YoY. Intraday momentum thesis fully expired with no follow-through. | 2026-06-10T13:10 |
 | PMN | stock | 5 | $10.62 | $10.60 | $-0.10 | -0.2% | Quick-trade thesis dead: HC Wainwright PT reiteration produced zero follow-through; reversed -8.24% on day 1; absent from candidates funnel across multiple consecutive runs. Momentum gone, no new catalyst. Not converting a failed breakout into a multi-month clinical hold. | 2026-06-10T12:30 |
 | NRXP | stock | 35 | $4.22 | $3.85 | $-12.95 | -8.8% | Quick-trade thesis failed: bought Jun 5 on IV ketamine/clinical momentum; now 4 trading days with zero follow-through and -6.16% drift. Prior web search confirmed negative equity and only 6-8 months cash runway, making a dilutive raise before the Q3 2026 ANDA decision near-certain. The dilution overhang structurally caps any rally regardless of clinical progress. Catalyst momentum is dead — this is not a drawdown sell; the capital structure thesis is broken. | 2026-06-10T12:30 |
 | ALOT | stock | 7 | $15.58 | $15.93 | $+2.45 | +2.2% | Q1 earnings presentation catalyst (June 9) has played out: stock popped +8.2% intraday on the event then fully reverted to -0.39% below avg entry ($15.52 vs $15.58 avg). Quick-trade thesis was the earnings catalyst; that event has now occurred, neutral-sentiment result, pop faded with no follow-through. Catalyst spent. | 2026-06-09T14:05 |
