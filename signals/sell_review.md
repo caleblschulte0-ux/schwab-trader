@@ -1,11 +1,11 @@
-# Sell Review — 2026-06-10T00:22:15Z
+# Sell Review — 2026-06-10T01:10:00Z
 
 **0 sells proposed. All 12 positions HOLD.**
 
 Tape context (Jun 9 close): SPY −1.36%, VIX 21.12 — risk_off. Technology −2.33%, Energy −2.96%.  
 Holdings snapshot: 2026-06-09T21:00:25Z.
 
-Web search this run: **NRXP** — KETAFREE (preservative-free IV ketamine) ANDA filed, FDA review goal date July 29, 2026. NDA for NRX-100 (oral ketamine) targeting June 2026 filing. $22.3M capital raise closed Jun 4 at $3.50/share funds runway. The −6.16% from avg reflects post-offering dilution drag (bought above offering price), not a thesis break. No trial failure, no halt, no regulatory adverse action. Thesis (multiple near-term FDA catalysts) intact.
+Web search this run: **PMN** — ProMIS Neurosciences. PRECISE-AD Phase 1b Alzheimer's trial fully enrolled (144 patients); blinded interim safety/biomarker data expected early Q3 2026; full efficacy data 2027. $175M PIPE closed May 2026 funds runway through 2027. Q1 2026 EPS beat. The −8.24% day-one drop is biotech volatility ahead of a binary readout, not a thesis break. No trial halt, no SAE, no financing failure. Thesis intact.
 
 ---
 
@@ -30,16 +30,16 @@ Opened Jun 5, −1.26% ($9.51 → $9.39). StealthGas — Seeking Alpha Jun 9: "T
 Opened Jun 8, −2.30% ($34.80 → $34.00). G-III Apparel. No candidates entry, no earnings release, no guidance cut. Consumer Cyclical sector fell −1.05% Jun 9 — decline is sector-correlated. Thesis intact.
 
 **NRXP — HOLD**  
-Opened Jun 5, −6.16% ($4.22 → $3.96). NRx Pharmaceuticals — web-searched this run: ANDA for KETAFREE with FDA goal date Jul 29, 2026; NDA for NRX-100 targeting Jun 2026; $22.3M raise at $3.50 closed Jun 4 (funds runway). The drag from avg reflects buying above the offering price; dilution already priced in. Multiple near-term FDA catalysts pending. No trial failure, no halt, no going-concern trigger since the raise closed. Thesis intact.
+Opened Jun 5, −6.16% ($4.22 → $3.96). NRx Pharmaceuticals — prior run confirmed: ANDA for KETAFREE with FDA goal date Jul 29, 2026; NDA for NRX-100 (oral ketamine) targeting Jun 2026 filing; $22.3M raise at $3.50 (Jun 4) funds runway. The drag from avg reflects buying above the offering price; dilution already priced in. Multiple near-term FDA catalysts pending. No trial failure, no halt, no going-concern trigger. Thesis intact.
 
 **PLSE — HOLD**  
 Opened Jun 5, +1.10% ($25.49 → $25.77). Pulse Biosciences — position green, not in today's candidates, no adverse catalyst. Thesis intact.
 
 **PMN — HOLD**  
-Opened Jun 9, −8.24% ($10.62 → $9.745). ProMIS Neurosciences — prior run web search confirmed: PRECISE-AD Phase 1b Alzheimer's trial fully enrolled, blinded interim data expected early Q3 2026; $175M PIPE (May 2026) funds runway through 2027. Same-day −8.24% is day-one biotech volatility before a binary readout, not a thesis break. No trial halt, no SAE, no pipeline failure. Thesis (imminent clinical data) intact.
+Opened Jun 9, −8.24% ($10.62 → $9.745). ProMIS Neurosciences — web-searched this run: PRECISE-AD Phase 1b trial fully enrolled (144 patients), blinded interim data expected early Q3 2026, $175M PIPE (May 2026) funds runway. Q1 EPS beat. Same-day −8.24% is pre-binary-event biotech volatility, not a thesis break. No trial halt, no safety event, no pipeline failure. Thesis (imminent clinical readout) intact.
 
 **RXRX — HOLD**  
-Opened Jun 5, −1.82% ($3.29 → $3.23). Recursion Pharmaceuticals — not in today's candidates, no pipeline failure or adverse event. Technology sector fell −2.33%; RXRX at −1.82% is actually outperforming that cohort. Thesis intact.
+Opened Jun 5, −1.82% ($3.29 → $3.23). Recursion Pharmaceuticals — not in today's candidates, no pipeline failure or adverse event. Technology sector fell −2.33%; RXRX at −1.82% is outperforming that cohort. Thesis intact.
 
 **SLDB — HOLD**  
 Opened Jun 4, −2.33% ($6.86 → $6.70). Solid Biosciences — candidates Jun 9: "Gene therapy programs show robust efficacy, safety, and regulatory momentum for key indications" (Bullish 0.442). Fresh positive coverage directly reinforces the clinical thesis. Thesis intact.
@@ -59,9 +59,9 @@ Opened Jun 4, −3.26% ($18.09 → $17.50). Team Inc. — no candidates entry, n
 | EVTL   | Jun 9  | −0.94%   | Yes (prototype/CDR, Bullish 0.487)   | HOLD — CDR milestone still ahead |
 | GASS   | Jun 5  | −1.26%   | Yes (neutral, value gap still open)  | HOLD — SA article confirms thesis not spent |
 | GIII   | Jun 8  | −2.30%   | No                                   | HOLD — sector drag only, no thesis failure |
-| NRXP   | Jun 5  | −6.16%   | No (web searched this run)           | HOLD — KETAFREE Jul 29 + NRX-100 NDA filing pending |
+| NRXP   | Jun 5  | −6.16%   | No (prior run web search)            | HOLD — KETAFREE Jul 29 + NRX-100 NDA filing pending |
 | PLSE   | Jun 5  | +1.10%   | No                                   | HOLD — green, no adverse news |
-| PMN    | Jun 9  | −8.24%   | No (prior run web search)            | HOLD — Phase 1b interim data weeks away; $175M PIPE |
+| PMN    | Jun 9  | −8.24%   | No (web searched this run)           | HOLD — Phase 1b interim data Q3; $175M PIPE funded |
 | RXRX   | Jun 5  | −1.82%   | No                                   | HOLD — outperforming Tech sector; no pipeline failure |
 | SLDB   | Jun 4  | −2.33%   | Yes (Bullish 0.442)                  | HOLD — fresh gene therapy coverage confirms thesis |
 | TISI   | Jun 4  | −3.26%   | No                                   | HOLD — Industrials drag; no adverse event |
