@@ -1,23 +1,23 @@
 {
-  "updated_utc": "2026-06-10T20:55:24.266157+00:00",
+  "updated_utc": "2026-06-10T21:00:25.852152+00:00",
   "holdings": [
     {
       "symbol": "ABSI",
       "quantity": 6,
       "avg_price": 7.12,
       "opened_utc": "2026-06-10T13:40:31.793998+00:00",
-      "last": 6.435,
-      "unrealized_pct": -9.62,
-      "value": 38.61
+      "last": 6.41,
+      "unrealized_pct": -9.97,
+      "value": 38.46
     },
     {
       "symbol": "APLD",
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 38.54,
-      "unrealized_pct": -7.0,
-      "value": 77.08
+      "last": 38.6471,
+      "unrealized_pct": -6.74,
+      "value": 77.29
     },
     {
       "symbol": "ATHE",
@@ -42,9 +42,9 @@
       "quantity": 7,
       "avg_price": 19.46,
       "opened_utc": "2026-06-10T12:30:29.351141+00:00",
-      "last": 20.66,
-      "unrealized_pct": 6.17,
-      "value": 144.62
+      "last": 20.48,
+      "unrealized_pct": 5.24,
+      "value": 143.36
     },
     {
       "symbol": "CLLS",
@@ -105,9 +105,9 @@
       "quantity": 9,
       "avg_price": 6.86,
       "opened_utc": "2026-06-04T13:00:42.683106+00:00",
-      "last": 6.48,
-      "unrealized_pct": -5.54,
-      "value": 58.32
+      "last": 6.63,
+      "unrealized_pct": -3.35,
+      "value": 59.67
     },
     {
       "symbol": "TISI",
