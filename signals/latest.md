@@ -1,60 +1,50 @@
-# Brain Run — 2026-06-10T13:58:45Z
+# Brain Run — 2026-06-10T14:20:15Z
 
-Funnel: scanned 278 → 205 fit budget → 18 with real/fresh catalyst → 3 finalists → picked 1 new (+ carried LAKE from prior run)
-
-## Collision Guard
-Prior orders.json generated_utc = 2026-06-10T13:28:15Z — ~30 minutes old → other routine ran ~30 min ago. Proceed normally.
+Funnel: scanned 279 → 91 leading → 185 fit budget → 15 with catalyst → 3 finalists → picked 0
 
 ## Market Tape
-SPY -0.29%, VIX 20.84 → tone: **neutral** (same read as prior run, holding). Sector breakdown unchanged: Basic Materials +1.45% leads, Financial Services +0.32%, Healthcare +0.16% barely positive. Technology -2.66%, Energy -2.82%, Consumer Cyclical -1.70% weak. No change to aggressiveness — normal discipline. Tech and semis remain impaired (MRVL -7.6%, AAOI -17%, leveraged semi ETFs off 17-20%). Avoid tech momentum; lean healthcare and basic materials.
+SPY -0.16%, QQQ -0.08%, VIX 20.4 → **neutral** tone. Technology -2.66% and Energy -2.82% are the session's worst sectors. Basic Materials +1.46% leads, Financial Services +0.32% and Healthcare +0.16% barely positive. Semis remain impaired (AVGO -4.5%, SMCI -12.5%). Broad tape is essentially flat but internals are weak beneath the surface. Favor Healthcare and Basic Materials; avoid tech momentum.
 
 ## Account Status
-10 open positions (GIII closed by sell brain since last run, freeing ~$139). ~$770 deployed at cost vs ~$1,000 total. Powder: ~$230. Two orders placed this run (LAKE $86 + ABSI $143 = $229) — essentially fully deployed if both fill. Sell brain must recycle capital before next cycle adds.
+12 open positions, ~$953 cost-basis deployed of ~$1,000 account. Approximately **$47 free cash** remaining. Account is near-max deployed — any new trade depends on the sell brain recycling capital first.
 
-## Prior Run Carried: LAKE (BUY 9 × $9.55 — still not in holdings, carry forward)
+## Collision Guard
+Prior orders.json generated_utc = 2026-06-10T13:58:45Z — ~21 minutes ago → past the 10-minute guard. Proceeding normally.
 
-Lakeland Industries earnings beat (Q1 2027) — catalyst still fresh, stock at $9.54 (+1.38%) with 1.13M shares volume on a $102M market cap (~11% of float). Carrying forward since LAKE is absent from holdings.json, meaning it hasn't filled yet. Same thesis intact: early move, high volume relative to market cap, fresh midnight earnings release.
+## Decision: 0 Orders
+Account has only ~$47 free cash. All three finalists failed to meet the bar for deploying the last reserve:
+- No setup is exceptional enough to justify draining the last ~$47 in cash.
+- If/when sell brain exits positions, the watchlist queue will act automatically on the best setups.
 
-## New Pick: ABSI (BUY 21 shares @ $6.83)
+## Finalist 1: XOS — PASS
+Xos Trucks, ~$4.00, +11.45%, volume 2,105,531 (enormous for a ~$50M cap stock). **Real catalyst**: $3M follow-on Hub order from a leading autonomous fleet operator (GlobeNewswire, June 9). GFX conference ongoing June 9–12 keeps visibility elevated. Q1 was strong (38.6% gross margin, units 3× YoY). Catalyst is genuine and volume confirms real participation.
 
-**Absci Corporation** — AI-powered protein design / drug discovery platform.
+**Why no trade**: Catalyst is ~24h old (borderline stale per freshness rules). A June 4 registered direct offering at $5.50/share creates hard overhead supply — institutional buyers from that offering are underwater and will sell into any rip toward $5.50. Stock already +11.45% intraday. With only $47 cash, the best-case outcome on ~12 shares is a ~$18 gain into $5.50 resistance. Not worth depleting the reserve into a capped move with known overhead. Skipping watchlist entry too — the offering overhang makes a level-based trigger hazardous.
 
-Catalyst: Leerink Partners initiated/upgraded to **Outperform** citing a "catalyst path" — published 2026-06-10T00:39:13Z (~13 hours ago as of this run). Bullish sentiment 0.506. Volume: 4,549,769 shares on a $1.065B market cap — strong participation. Stock +4.3% at $6.83.
+Catalyst age: ~24h.
 
-Why this pick:
-- **Institutional-grade catalyst**: Leerink is a specialized healthcare investment bank with deep biotech coverage. An Outperform rating from them carries genuine signal weight and often attracts follow-on buys from funds that track their coverage.
-- **"Catalyst path" language**: This phrasing explicitly signals upcoming binary events (data readouts, partnership announcements). The upgrade is not just valuation rerating — it flags specific near-term catalysts ahead, which means the move may have legs beyond today's +4.3%.
-- **Early stage**: +4.3% on 4.5M volume is healthy confirmation without being extended. Not in the 15-20%+ deprioritize zone.
-- **Sector tilt**: Healthcare is the only non-red sector I can act on today (+0.16%). ABSI fits the day's preferred sector.
-- **Not already owned**: Not in holdings, not in prior failed picks.
-- **AI drug design theme**: Structurally relevant — companies applying AI to drug design attract sustained institutional interest regardless of single-day tape.
+## Finalist 2: SPRY (ARS Pharma) — WATCHLIST (not ordered)
+$9.80, +4.145%, vol 206K, cap $973M. **Pending catalyst**: CVS Caremark formulary inclusion for neffy (epinephrine nasal spray for anaphylaxis). Per May 15 Q1 earnings call, a "definitive update in early June" was promised before the July 1 effective date. Today is June 10 — announcement is overdue or imminent. The +4.1% move today reflects positioning, not a confirmed event. Added to watchlist as breakout above $10.20: the bot enters on confirmation of the CVS announcement without needing cash today.
 
-Catalyst age: ~13 hours (today, borderline fresh — acceptable given volume confirmation of ongoing interest).
+Catalyst age: pending (not yet confirmed today).
 
-Sizing: 21 × $6.83 = $143.43 ✓ (under $150 cap).
+## Finalist 3: CGEM (Cullinan Therapeutics) — WATCHLIST (already there, above trigger)
+$13.90, +5.479%, vol 88K, cap $854M. New clinical data on CD19/BCMA T cell engager programs for autoimmune diseases (8-K + news, 11:10 UTC today — ~3h ago). Watchlist trigger was $13.50 (written at 13:49Z); stock is now at $13.90. If the bot hasn't filled yet, it will attempt on next cycle. Not issuing a duplicate order given cash constraints.
 
-## Finalist 2: CLLS ($2.99, +2.05%) — maintained on watchlist, not direct order
+Catalyst age: ~3h.
 
-Web-verified this run: RMAT designation is confirmed real (lasme-cel, off-the-shelf allogeneic B-ALL CAR-T), but Phase 2 just began enrollment — no near-term efficacy readout. Muted +2% reaction on ~42K volume confirms the market expected this milestone. Appropriate as a breakout trigger (volume surge above $3.15 = market catching on), NOT a direct buy into thin volume on expected news.
-
-## Finalist 3: ACOG ($6.00, -0.33%) — passed, confirmed
-
-Web-verified: BEACON is a post-approval real-world observational study for ZUNVEYL (already commercial, ~$2.5M Q1 revenue). Positive results confirm existing belief; they do not establish new efficacy. Stock flat/negative reaction after 11 hours confirms market indifference. Not a tradeable catalyst — pass.
-
-## Notable Others Evaluated
-
-- **ODC +17.38%** ($98.59): Record Q3 earnings, bullish 0.815. Already in deprioritize zone (+17%); the move ran this morning on overnight earnings. Pass.
-- **RLMD +9.6%** ($6.27): 13G passive investment disclosure (new 5%+ institutional holder). Mildly bullish but already moved +9.6% on filing-day — extended for the catalyst quality. Pass.
-- **AEVA -3.98%** ($22.17): City of Fargo selected AEVA CityOS for intersection safety — fresh catalyst (10:59 UTC, ~3h ago). But stock is DOWN -4% despite positive contract news, overwhelmed by tech sector drag (-2.66%). Going against sector headwinds without price confirmation. Pass.
-- **STTK +9.49%** ($4.27): Pricing a dilutive $75M public offering — potential headwind for existing holders. Unusual to run into an offering; confusing setup. Pass.
-- **ALGT +5.32%** ($86.69): Allegiant Travel 8-K "material event" — no detail on what the event is, can't underwrite the trade without knowing the catalyst. Pass.
-- **ADBE** (earnings 6/11 tomorrow): Only 1 share at ~$290+ exceeds $150 budget. Cannot size.
-- **YB +revenue 36%, cash dividend** ($14.57): Chinese fintech, only 19,774 shares traded — too illiquid for reliable fill. Pass.
-- **Tech/semi losers (MRVL -7.6%, AAPL -3.6%, INTC -2.1%)**: All too expensive for affordable puts at ≤$1.00 premium per contract within the $100 risk cap. Biggest losers (CRMT -19%, DBI -21%) already fully moved downside — chasing a completed put trade. No put picks this run.
-- **Leveraged ETFs, sub-$2 names, SEC 8-K boilerplate filings**: Eliminated across the board.
-
-## Watchlist Status
-12 items, all within good_until windows. CLLS note updated to reflect web-verified RMAT context (Phase 2 just enrolling). BHC expires tomorrow June 11 — last trigger window. All others (RNAC, ATLX, NRIX, KSS, MNKD, GHRS, COYA, ELDN, ALVO, BWAY) valid through June 12-13.
+## Notable Passes
+- **CBRL** +29.7%: Earnings beat catalyst, but fully extended — no room. Hard pass.
+- **CLLS** +10.7%: FDA RMAT for Lasme-cel — already in holdings (opened 13:25Z today). No re-buy.
+- **LAKE** +18.24%: Ordered at $9.55 in prior run (~13:58Z); not yet in holdings. Now at $11.28 without a new catalyst — do NOT re-order. Anti-chase rule applies. If prior limit order fails, we let it go.
+- **ABSI**: Also in prior run's orders AND now in holdings (opened 13:40Z). Holdings are source of truth — no re-buy.
+- **ODC**: Record Q3 earnings beat (bullish score 0.81) but stock DOWN -4.7% — sell-the-news. Bearish price action on bullish news means thesis is broken. No trade.
+- **HOOD** +8.7%: Large cap, ~$91/share, already extended and no catalyst specific to the underlying business today.
+- **ADBE**: Earnings tomorrow (June 11, est. $5.83 EPS). Tech sector -2.66% headwind and stock price far above $150 budget. Skip.
+- **AEVA** -4% despite City of Fargo contract win (fresh catalyst, 10:59 UTC): Same pattern as prior run — price is being overwhelmed by sector drag. Going against sector headwinds without price confirmation. Pass.
+- **Sub-$2 names** (ADTX, BMGL, GDC, NCRA, etc.): All below price floor. Eliminated.
+- **Leveraged ETFs** (BULG, HODU, LMNX, SMCZ, etc.): Not suitable instruments. Eliminated.
+- **SEC 8-K names with no sentiment/price**: Boilerplate filings (ABXL, AIFC, AMZN, CB, etc.) with no tradeable catalyst. Eliminated.
 
 ## Holdings Read
-All 10 positions modestly negative (-1.23% to -4.66% unrealized). No position at an alarming level — the sell brain has discretion on exits. BNAI opened today by watchlist fill (19.15, -1.59% on last). APLD holds at $40.93 — Applied Digital secured a new 210MW data center customer today (fresh bullish catalyst in funnel, sentiment 0.866) but already owned; no re-buy. AVR and TISI both in funnel today with neutral news (Form 4, tactical analysis pieces) — already owned, no action.
+All 12 positions carried. Portfolio has drifted modestly red in aggregate (~-$10.64 unrealized). CLLS +2.04% (RMAT catalyst still live) and EVTL +3.54% are the bright spots. TISI -4.86% is the deepest red but still within normal range — sell brain managing. No position is threatening a thesis break based on available news. No re-buys issued on any held name.

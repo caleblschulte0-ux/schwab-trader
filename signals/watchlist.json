@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T13:49:17Z",
+  "generated_utc": "2026-06-10T14:20:15Z",
   "watch": [
     {
       "symbol": "CGEM",
@@ -8,7 +8,7 @@
       "quantity": 11,
       "limit_price": 13.65,
       "good_until": "2026-06-13",
-      "note": "Cullinan Therapeutics 8-K: new clinical data on CD19/BCMA T cell engager programs for autoimmune diseases (11:10 UTC 6/10). Stock -0.75% despite bullish data — market hasn't priced it yet. Healthcare sector green today. Vol 1.39M confirms interest. Breakout above $13.50 on volume is the trigger."
+      "note": "Cullinan Therapeutics 8-K: new clinical data on CD19/BCMA T cell engager programs for autoimmune diseases (11:10 UTC 6/10). Bullish catalyst, Healthcare sector green. Stock at $13.90 as of 14:07 UTC — already above trigger. Bot should fill on next live-ask check within 5% backstop of $13.65."
     },
     {
       "symbol": "BHC",
@@ -89,7 +89,7 @@
       "quantity": 38,
       "limit_price": 3.92,
       "good_until": "2026-06-12",
-      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.16 today; wait for pullback to $3.90 support for clean entry."
+      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.15 today; wait for pullback to $3.90 support for clean entry."
     },
     {
       "symbol": "BWAY",
@@ -99,6 +99,15 @@
       "limit_price": 13.85,
       "good_until": "2026-06-12",
       "note": "BrainsWay 12-month sustained depression remission study published (June 9, 11:58 UTC — fresh). TMS clinical milestone. Wait for pullback to $13.75 support."
+    },
+    {
+      "symbol": "SPRY",
+      "trigger": "breakout",
+      "trigger_price": 10.20,
+      "quantity": 14,
+      "limit_price": 10.30,
+      "good_until": "2026-06-17",
+      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion pending. Per May 15 Q1 call, 'definitive update in early June' before July 1 effective date — overdue as of June 10. Stock at $9.80 +4.1% on positioning. Breakout above $10.20 confirms CVS announcement landed and momentum is real. 14 shares x $10.30 = $144.20."
     }
   ]
 }
