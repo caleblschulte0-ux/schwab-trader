@@ -1,70 +1,70 @@
-# Sell Review — 2026-06-10T18:41:00Z
+# Sell Review — 2026-06-10T18:42:17Z
 
-**0 sells proposed. All 13 positions HOLD.**
+**No urgent sells. No sells at all. 0/13 positions exited.**
 
-Tape: SPY −1.03%, VIX 21.55, tone risk_off. Only two green sectors: Financial Services +1.05%, Energy +0.59%. Everything else red; Basic Materials −1.66%, Utilities −1.58%, Consumer Cyclical −1.46%, Healthcare −1.08%, Industrials −1.08%.
+Tape: SPY −1.0%, VIX 21.27, risk_off. Only Financial Services (+0.92%) and Technology (+0.36%) are green. Healthcare −1.33%, Industrials −0.93%, Consumer Cyclical −1.43% — broad-market selling. All drawdowns are tape-driven, not thesis-driven.
 
-Web search this run: **TISI** — Q1 2026 revenue +8.3% YoY to $215.1M (highest Q1 since 2019), adjusted EBITDA +45.2% to $7.7M with 90bps margin expansion, FY2026 guidance raised ($920M–$945M revenue, EBITDA +16%). No adverse catalyst, downgrade, or structural miss found. Turnaround thesis intact. Insider purchased shares in early June.
+Web search this run: **TISI** — Q1 2026 revenue +8.3% YoY to $215.1M, Adjusted EBITDA +45.2% to $7.7M, FY2026 guidance intact (4% revenue growth, 16% EBITDA growth). Director Edward Stenger purchased $79,991 in shares in early June 2026. No adverse news, going-concern risk, or structural miss. Thesis confirmed alive.
 
 ---
 
 ## Per-Position Rulings
 
-**ABSI — HOLD** | opened Jun 10 (~13:40Z), −4.92% unrealized
-Opened same session; thesis has had no time to play out or break. No adverse news in today's candidates funnel. Intraday drawdown on a fresh entry in a risk_off tape is noise, not a thesis event.
+**ABSI — HOLD** | opened Jun 10 (same session), −5.76% unrealized
+Leerink Partners initiated at Outperform with "catalyst path" language flagging upcoming binary events in AI protein design (published Jun 10). Thesis is a fresh institutional upgrade; it hasn't played out or been reversed. Intraday drawdown on a risk_off tape on the same day of entry is noise, not a thesis event.
 
-**APLD — HOLD** | opened Jun 9, −4.15% unrealized
-Applied Digital AI/HPC data center infrastructure. Drawdown is consistent with the broad AI/infrastructure flush on a risk_off day (QQQ −1.34%). No company-specific adverse news in candidates. AI data center thesis structurally intact.
+**APLD — HOLD** | opened Jun 9, −5.10% unrealized
+Applied Digital AI/HPC infrastructure. Thesis: $1.59B senior secured notes + Goldman $550M revolving credit + CoreWeave lease-assignment MOU (Jun 9 8-K). Multi-year AI data center story. −5.1% on a risk_off day with QQQ down is sector-level noise, not a company-specific break.
 
 **ATHE — HOLD** | opened Jun 9, −1.42% unrealized
-No adverse clinical data, dilution event, or company-specific bad news in today's funnel. Minor pullback on a red tape day. Thesis not negated.
+Alterity Therapeutics: FDA granted Phase 3 plan nod for MSA drug showing 48% disease progression slowing. Durable regulatory milestone — the Phase 3 itself is still ahead. No adverse clinical news or dilution event visible. −1.42% is trivial.
 
-**AVR — HOLD** | opened Jun 8, −1.52% unrealized
-No clinical or regulatory reversal visible in the candidates. Minimal drawdown over 2 days. Cannot sell on noise.
+**AVR — HOLD** | opened Jun 8, −3.75% unrealized
+Anteris Technologies: French regulatory clearance for PARADIGM transcatheter aortic valve trial (Jun 8). A regulatory clearance does not expire or get reversed by price action. Healthcare sector dragging −1.33% explains the drift. No clinical reversal in today's funnel.
 
-**BNAI — HOLD** | opened Jun 10 (~12:30Z), +5.60% unrealized
-The book's sole winner in today's session. Thesis working in the intended direction on a risk_off tape. Financial Services sector strongest today (+1.05%). No basis for exit.
+**BNAI — HOLD** | opened Jun 10 (same session), +4.47% unrealized
+Brand Engagement Network: AI health JV with Intervent International (Jun 9). The book's strongest performer today despite a risk_off tape. Thesis working as intended; no basis for exit.
 
-**CLLS — HOLD** | opened Jun 10 (~13:25Z), −0.63% unrealized
-Cellectis allogeneic CAR-T / gene editing. Opened today; too fresh to have a spent catalyst. No adverse news in candidates. Trivial intraday drawdown.
+**CLLS — HOLD** | opened Jun 10 (same session), +0.31% unrealized
+Cellectis: FDA RMAT designation for lasme-cel (off-the-shelf allogeneic CAR-T for B-ALL leukemia). RMAT enables expedited review and rolling review eligibility — a durable multi-month regulatory catalyst. Phase 2 enrollment just started. Opened today; thesis not spent.
 
-**EVTL — HOLD** | opened Jun 9, +0.79% unrealized
-Vertical Aerospace eVTOL. Slightly positive; no adverse company news in today's funnel. Type certification runway still open. No basis for exit.
+**EVTL — HOLD** | opened Jun 9, 0.0% unrealized
+Vertical Aerospace: Final full-scale Valo prototype completed first piloted flight ahead of Critical Design Review (Jun 9 catalyst). CDR is the last major gate before production — the milestone that matters is upcoming, not past. No adverse news. Essentially flat.
 
-**GASS — HOLD** | opened Jun 5, −2.10% unrealized
-StealthGas LPG shipping. Five days held; no company-level adverse event (fleet, contract, guidance) in today's candidates. Energy is one of only two green sectors today (+0.59%) — GASS slightly lagging its sector, but a −2.10% drift over 5 days does not constitute a dead thesis. Cannot sell because time passed or because the drawdown is uncomfortable.
+**GASS — HOLD** | opened Jun 5, −2.07% unrealized
+StealthGas: Q1 earnings beat (net income +13% YoY, zero debt, $52M contracted backlog through 2026, Iran-driven LPG trade route tailwind). Energy sector near flat today (+0.07%). A −2.07% drift over 5 days on an earnings beat with a fortress balance sheet is noise. No company-specific adverse event.
 
-**MNKD — HOLD** | opened Jun 10 (~14:15Z), −0.82% unrealized
-MannKind (Afrezza / TYVASO DPI). Opened ~2.5h ago; essentially flat. No adverse news in funnel. Too fresh to judge thesis spent.
+**MNKD — HOLD** | opened Jun 10 (same session), −1.77% unrealized
+MannKind: Pre-catalyst position — FUROSCIX PDUFA July 26 is the hard upcoming catalyst; pediatric Afrezza approval already confirmed. Thesis is forward-looking and unresolved. Opened today; no adverse news.
 
-**PLSE — HOLD** | opened Jun 5, −1.02% unrealized
-Pulse Biosciences nsPFA cardiac catheter platform. An 8-K was filed today (sec_8k signal in candidates, 08:55 ET). Stock is down only −1.02% — if the 8-K contained materially adverse news the market reaction would be larger and sharper. Without a specific thesis-breaking item I can name, the mandate is HOLD. AFib catheter program thesis not demonstrably broken.
+**PLSE — HOLD** | opened Jun 5, −2.63% unrealized
+Pulse Biosciences: Canaccord $32 Buy initiation (Jun 4) implies ~25% upside from avg $25.49. An 8-K was filed today; however, the stock reaction is only −2.63% — a thesis-breaking disclosure would produce a sharper and larger decline. Without a specific named adverse event, mandate is HOLD.
 
-**RXRX — HOLD** | opened Jun 5, −6.14% unrealized
-Recursion Pharmaceuticals AI-driven drug discovery. Second-largest drawdown in the book. However, no company-specific adverse news (pipeline failure, partnership dissolution, FDA setback, going-concern) appears in today's candidates. Healthcare sector broadly weak (−1.08%); AI-biotech names down across the board on risk_off. Selling on a −6.14% drawdown in an intact thesis violates the mandate.
+**RXRX — HOLD** | opened Jun 5, −6.84% unrealized
+Recursion Pharmaceuticals: Q1 2026 earnings beat + AI drug discovery pipeline progress (Phase 2 FAP signals). No company-specific adverse news (pipeline failure, partnership break, FDA action) in today's candidates. Healthcare broadly weak −1.33%; AI-biotech names off across the board on risk_off. Selling on a −6.84% drawdown in an intact thesis violates the mandate.
 
-**SLDB — HOLD** | opened Jun 4, −5.17% unrealized
-Solid Biosciences DMD gene therapy (SGT-003, IMPACT DUCHENNE Phase 3). Thesis is a multi-month binary catalyst — Phase 3 readout. Nothing in today's candidates indicates a trial halt, adverse safety signal, or FDA action. Six days held with no adverse catalyst event. Price-only drawdown; thesis runway intact.
+**SLDB — HOLD** | opened Jun 4, −6.05% unrealized
+Solid Biosciences: DMD gene therapy (SGT-003). Phase 1/2 showed 110% dystrophin expression; Phase 3 IMPACT DUCHENNE enrolled first patient Q1 2026; pivotal interim data expected mid-2026. Citizens JMP Outperform at $15 PT. No adverse clinical signal or FDA action in today's funnel. Six days held with a durable multi-month catalyst runway. Price-only drawdown.
 
-**TISI — HOLD** | opened Jun 4, −7.41% unrealized
-Team Inc. industrial services / inspection. Largest drawdown in the book. **Web search this run confirmed thesis intact:** Q1 2026 revenue +8.3% YoY to $215.1M (highest Q1 since 2019), adjusted EBITDA +45.2% with 90bps margin expansion, FY2026 guidance raised (revenue $920M–$945M, EBITDA +16%). No adverse catalyst, going-concern risk, or structural miss found. The −7.41% is broad market / sector drag (Industrials −1.08% today) against a fundamentally improving business. Do NOT sell on price alone.
+**TISI — HOLD** | opened Jun 4, −7.63% unrealized
+Team Inc.: Web search confirmed thesis intact. Q1 revenue +8.3% YoY, Adjusted EBITDA +45.2%, full-year guidance maintained. Director Edward Stenger purchased $79,991 in shares in early June — fresh insider buying post-earnings. No going-concern risk, no downgrade, no structural miss found. Industrials sector −0.93% explains today's drift. Do NOT sell on price alone when fundamentals are improving and insiders are buying.
 
 ---
 
-## Summary
+## Summary Table
 
-| Symbol | Opened | Unrlzd%  | Thesis Status                                                          | Decision |
+| Symbol | Opened | Unrlzd % | Thesis Status                                                          | Decision |
 |--------|--------|----------|------------------------------------------------------------------------|----------|
-| ABSI   | Jun 10 | −4.92%   | Same-session; no adverse news; noise                                   | HOLD     |
-| APLD   | Jun 9  | −4.15%   | Sector-wide AI/semi flush; no company thesis event                     | HOLD     |
-| ATHE   | Jun 9  | −1.42%   | No adverse clinical or company news                                    | HOLD     |
-| AVR    | Jun 8  | −1.52%   | No adverse clinical/regulatory event; minimal drawdown                 | HOLD     |
-| BNAI   | Jun 10 | +5.60%   | Working; Financial Services +1.05% today; strongest position           | HOLD     |
-| CLLS   | Jun 10 | −0.63%   | Hours old; no adverse news visible                                     | HOLD     |
-| EVTL   | Jun 9  | +0.79%   | Slightly positive; no adverse news; certification runway open          | HOLD     |
-| GASS   | Jun 5  | −2.10%   | Sector drag only; no company-specific adverse event                    | HOLD     |
-| MNKD   | Jun 10 | −0.82%   | ~2.5h old; near flat; no adverse news                                  | HOLD     |
-| PLSE   | Jun 5  | −1.02%   | 8-K filed today; stock reaction minor; thesis not demonstrably broken  | HOLD     |
-| RXRX   | Jun 5  | −6.14%   | Sector/AI-biotech drift only; no company-specific thesis break         | HOLD     |
-| SLDB   | Jun 4  | −5.17%   | Phase 3 ongoing; no adverse clinical or regulatory signal              | HOLD     |
-| TISI   | Jun 4  | −7.41%   | Q1 beat + EBITDA +45% + guidance raised; web-confirmed intact          | HOLD     |
+| ABSI   | Jun 10 | −5.76%   | Fresh analyst upgrade same session; thesis not spent                   | HOLD     |
+| APLD   | Jun 9  | −5.10%   | Multi-year AI infra thesis; no company-level break                     | HOLD     |
+| ATHE   | Jun 9  | −1.42%   | FDA Phase 3 plan nod intact; Phase 3 ahead                             | HOLD     |
+| AVR    | Jun 8  | −3.75%   | French regulatory clearance intact; sector drag only                   | HOLD     |
+| BNAI   | Jun 10 | +4.47%   | Working; AI health JV thesis live                                      | HOLD     |
+| CLLS   | Jun 10 | +0.31%   | RMAT designation intact; Phase 2 just enrolled                         | HOLD     |
+| EVTL   | Jun 9  | 0.00%    | CDR milestone upcoming; prototype flight confirmed                     | HOLD     |
+| GASS   | Jun 5  | −2.07%   | Q1 beat + fortress balance sheet; sector/tape noise only               | HOLD     |
+| MNKD   | Jun 10 | −1.77%   | FUROSCIX PDUFA Jul 26 upcoming; thesis forward-looking                 | HOLD     |
+| PLSE   | Jun 5  | −2.63%   | Canaccord initiation intact; 8-K reaction minor; no named break        | HOLD     |
+| RXRX   | Jun 5  | −6.84%   | Q1 beat + AI pipeline intact; sector-level drawdown only               | HOLD     |
+| SLDB   | Jun 4  | −6.05%   | Phase 3 enrolled; mid-2026 data ahead; no adverse clinical signal      | HOLD     |
+| TISI   | Jun 4  | −7.63%   | Web-confirmed: Q1 beat, EBITDA +45%, fresh insider buy; thesis alive   | HOLD     |
