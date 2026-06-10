@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-10T20:20:23.146882+00:00",
+  "updated_utc": "2026-06-10T20:25:38.553586+00:00",
   "holdings": [
     {
       "symbol": "ABSI",
@@ -42,9 +42,9 @@
       "quantity": 7,
       "avg_price": 19.46,
       "opened_utc": "2026-06-10T12:30:29.351141+00:00",
-      "last": 20.0003,
-      "unrealized_pct": 2.78,
-      "value": 140.0
+      "last": 20.63,
+      "unrealized_pct": 6.01,
+      "value": 144.41
     },
     {
       "symbol": "CLLS",
@@ -60,9 +60,9 @@
       "quantity": 14,
       "avg_price": 2.12,
       "opened_utc": "2026-06-09T15:21:12.349780+00:00",
-      "last": 2.1,
-      "unrealized_pct": -0.94,
-      "value": 29.4
+      "last": 2.0705,
+      "unrealized_pct": -2.33,
+      "value": 28.99
     },
     {
       "symbol": "GASS",
@@ -96,9 +96,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.04,
-      "unrealized_pct": -7.6,
-      "value": 54.72
+      "last": 3.0393,
+      "unrealized_pct": -7.62,
+      "value": 54.71
     },
     {
       "symbol": "SLDB",
