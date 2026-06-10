@@ -1,14 +1,14 @@
 {
-  "generated_utc": "2026-06-10T13:58:45Z",
+  "generated_utc": "2026-06-10T13:49:17Z",
   "watch": [
     {
-      "symbol": "CLLS",
+      "symbol": "CGEM",
       "trigger": "breakout",
-      "trigger_price": 3.15,
-      "quantity": 44,
-      "limit_price": 3.22,
+      "trigger_price": 13.50,
+      "quantity": 11,
+      "limit_price": 13.65,
       "good_until": "2026-06-13",
-      "note": "Cellectis FDA RMAT designation for off-the-shelf allogeneic leukemia CAR-T (01:09 UTC 6/10). Web-verified: RMAT is real but Phase 2 just started enrollment — near-term catalysts limited. Low volume (42K) confirms market hasn't caught on yet. Only enter on confirmed breakout above $3.15 with volume surge."
+      "note": "Cullinan Therapeutics 8-K: new clinical data on CD19/BCMA T cell engager programs for autoimmune diseases (11:10 UTC 6/10). Stock -0.75% despite bullish data — market hasn't priced it yet. Healthcare sector green today. Vol 1.39M confirms interest. Breakout above $13.50 on volume is the trigger."
     },
     {
       "symbol": "BHC",
@@ -27,15 +27,6 @@
       "limit_price": 4.05,
       "good_until": "2026-06-13",
       "note": "Atlas Lithium CEO at Giga USA (June 9, 11:29 UTC) — critical minerals/Brazilian lithium thesis. Stock barely moved on $110M cap. Breakout above $4.00 confirms momentum."
-    },
-    {
-      "symbol": "RNAC",
-      "trigger": "pullback",
-      "trigger_price": 6.20,
-      "quantity": 23,
-      "limit_price": 6.30,
-      "good_until": "2026-06-13",
-      "note": "Cartesian Therapeutics strategic licensing deal with WestGene Biopharma: LNP delivery + Descartes-08 mRNA for in vivo CAR-T in autoimmune diseases (8-K 07:16 UTC June 9). Durable multi-year catalyst. Wait for pullback to $6.20 support."
     },
     {
       "symbol": "NRIX",
