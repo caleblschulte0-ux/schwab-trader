@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T18:16:52Z",
+  "generated_utc": "2026-06-10T18:35:14Z",
   "watch": [
     {
       "symbol": "AEVA",
@@ -10,18 +10,18 @@
       "take_profit": 26.50,
       "stop_loss": 21.00,
       "good_until": "2026-06-12",
-      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov't contract. Up ~2.8% today -- enter on pullback to $22.50. Qty 1 given near-maxed account."
+      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov't contract. Now $23.20 (+4.65%). Enter on pullback to $22.50. Qty 1 given near-maxed account."
     },
     {
       "symbol": "HROW",
       "trigger": "pullback",
-      "trigger_price": 33.00,
+      "trigger_price": 35.00,
       "quantity": 4,
-      "limit_price": 33.15,
-      "take_profit": 40.00,
-      "stop_loss": 30.50,
+      "limit_price": 35.20,
+      "take_profit": 41.00,
+      "stop_loss": 32.50,
       "good_until": "2026-06-13",
-      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +10.6% today vs Healthcare -1.1% -- strong relative strength. Enter on pullback to $33 support for better R/R. 4x$33.15=$132.60."
+      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +10.9% to $37.11 vs Healthcare -1.3% -- strong relative strength. Raised pullback trigger from $33 to $35 (stock ran further). 4x$35.20=$140.80."
     },
     {
       "symbol": "BHC",
@@ -87,7 +87,7 @@
       "take_profit": 4.60,
       "stop_loss": 3.65,
       "good_until": "2026-06-14",
-      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.21, up +1.2% vs market selloff -- mild relative strength. Wait for pullback to $3.90 support for clean entry."
+      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.185 today, mild relative strength vs selloff. Wait for pullback to $3.90 support for clean entry."
     },
     {
       "symbol": "BWAY",
@@ -120,7 +120,7 @@
       "take_profit": 18.50,
       "stop_loss": 14.50,
       "good_until": "2026-06-13",
-      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +17.3% today. Enter on pullback to $15.50 consolidation for better R/R. 9x$15.60=$140.40."
+      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +17.3% today to $17.10. Enter on pullback to $15.50 consolidation. 9x$15.60=$140.40."
     },
     {
       "symbol": "DFIN",
@@ -131,7 +131,7 @@
       "take_profit": 42.00,
       "stop_loss": 34.00,
       "good_until": "2026-06-14",
-      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS/fintech product for regulatory compliance, fresh catalyst, stock barely moved (+1.8%). Enter on pullback to $36.50. 3x$36.75=$110.25."
+      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS/fintech product for regulatory compliance, stock barely moved (+1.15%) at $37.88. Enter on pullback to $36.50. 3x$36.75=$110.25."
     }
   ]
 }
