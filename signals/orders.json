@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-06-10T15:35:00Z",
-  "funnel": {"scanned": 263, "leading": 151, "in_budget": 215, "had_catalyst": 28, "finalists": 4, "picked": 1},
+  "generated_utc": "2026-06-10T17:57:43Z",
+  "funnel": {"scanned": 264, "leading": 75, "in_budget": 18, "had_catalyst": 8, "finalists": 3, "picked": 1},
   "orders": [
-    {"symbol": "DFIN", "action": "BUY", "instrument": "stock", "quantity": 4, "limit_price": 37.40}
+    {"symbol": "GO", "action": "BUY", "instrument": "stock", "quantity": 4, "limit_price": 9.05}
   ]
 }
