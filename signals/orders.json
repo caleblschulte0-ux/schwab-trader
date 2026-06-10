@@ -1,7 +1,8 @@
 {
-  "generated_utc": "2026-06-10T13:28:15Z",
-  "funnel": {"scanned": 276, "leading": 98, "in_budget": 228, "had_catalyst": 38, "finalists": 3, "picked": 1},
+  "generated_utc": "2026-06-10T13:58:45Z",
+  "funnel": {"scanned": 278, "leading": 98, "in_budget": 205, "had_catalyst": 18, "finalists": 3, "picked": 1},
   "orders": [
-    {"symbol": "LAKE", "action": "BUY", "instrument": "stock", "quantity": 9, "limit_price": 9.55}
+    {"symbol": "LAKE", "action": "BUY", "instrument": "stock", "quantity": 9, "limit_price": 9.55},
+    {"symbol": "ABSI", "action": "BUY", "instrument": "stock", "quantity": 21, "limit_price": 6.83}
   ]
 }

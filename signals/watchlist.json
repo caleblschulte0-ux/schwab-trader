@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-10T13:28:15Z",
+  "generated_utc": "2026-06-10T13:58:45Z",
   "watch": [
     {
       "symbol": "CLLS",
@@ -8,7 +8,7 @@
       "quantity": 44,
       "limit_price": 3.22,
       "good_until": "2026-06-13",
-      "note": "Cellectis FDA RMAT designation for off-the-shelf allogeneic leukemia CAR-T (01:09 UTC 6/10, fresh). Only +2% on meaningful milestone. Volume 42K too thin now — breakout above $3.15 with volume confirms the market catching on."
+      "note": "Cellectis FDA RMAT designation for off-the-shelf allogeneic leukemia CAR-T (01:09 UTC 6/10). Web-verified: RMAT is real but Phase 2 just started enrollment — near-term catalysts limited. Low volume (42K) confirms market hasn't caught on yet. Only enter on confirmed breakout above $3.15 with volume surge."
     },
     {
       "symbol": "BHC",
@@ -98,7 +98,7 @@
       "quantity": 38,
       "limit_price": 3.92,
       "good_until": "2026-06-12",
-      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.16; wait for pullback to $3.90 support for clean entry."
+      "note": "Alvotech: FDA accepted AVT16 biosimilar application (June 9). Stock at $4.16 today; wait for pullback to $3.90 support for clean entry."
     },
     {
       "symbol": "BWAY",
