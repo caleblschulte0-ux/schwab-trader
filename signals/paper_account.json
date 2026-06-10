@@ -1,5 +1,5 @@
 {
-  "cash": 1.7324000000000908,
+  "cash": 53.2624000000001,
   "start_equity": 1000.0,
   "positions": {
     "SLDB": {
@@ -24,15 +24,6 @@
       "kind": "stock",
       "multiplier": 1,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00"
-    },
-    "NRXP": {
-      "qty": 35,
-      "entry": 4.22,
-      "tp": 4.65,
-      "sl": 4.0,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-05T18:00:30.964456+00:00"
     },
     "PLSE": {
       "qty": 2,
@@ -92,27 +83,6 @@
         "entry_ask": 34.73,
         "entry_last": 34.7,
         "tape_tone": "risk_on"
-      }
-    },
-    "PMN": {
-      "qty": 5,
-      "entry": 10.62,
-      "tp": 12.5,
-      "sl": 9.2,
-      "kind": "stock",
-      "multiplier": 1,
-      "opened_utc": "2026-06-09T12:35:23.835631+00:00",
-      "meta": {
-        "signals": [
-          "news_smallcap"
-        ],
-        "catalyst_age_h": 20.43,
-        "market_cap": 87076299.0,
-        "volume": 12682,
-        "ref_price": 10.1,
-        "entry_ask": 10.6,
-        "entry_last": 10.01,
-        "tape_tone": "neutral"
       }
     },
     "ATHE": {
@@ -177,9 +147,30 @@
         "entry_last": 2.11,
         "tape_tone": "risk_on"
       }
+    },
+    "BNAI": {
+      "qty": 7,
+      "entry": 19.46,
+      "tp": 22.5,
+      "sl": 18.25,
+      "kind": "stock",
+      "multiplier": 1,
+      "opened_utc": "2026-06-10T12:30:29.351141+00:00",
+      "meta": {
+        "signals": [
+          "news_smallcap"
+        ],
+        "catalyst_age_h": 25.32,
+        "market_cap": 134188506.0,
+        "volume": 2118140,
+        "ref_price": 19.65,
+        "entry_ask": 19.42,
+        "entry_last": 19.3,
+        "tape_tone": "risk_off"
+      }
     }
   },
-  "realized_pnl": -24.5676,
+  "realized_pnl": -37.61759999999998,
   "closed_trades": [
     {
       "symbol": "NVTS",
@@ -362,7 +353,45 @@
       "entry_ask": 15.55,
       "entry_last": 15.49,
       "tape_tone": "risk_on"
+    },
+    {
+      "symbol": "NRXP",
+      "qty": 35,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 4.22,
+      "exit": 3.85,
+      "pnl": -12.95,
+      "pnl_pct": -8.77,
+      "opened_utc": "2026-06-05T18:00:30.964456+00:00",
+      "closed_utc": "2026-06-10T12:30:27.070267+00:00",
+      "reason": "Quick-trade thesis failed: bought Jun 5 on IV ketamine/clinical momentum; now 4 trading days with zero follow-through and -6.16% drift. Prior web search confirmed negative equity and only 6-8 months cash runway, making a dilutive raise before the Q3 2026 ANDA decision near-certain. The dilution overhang structurally caps any rally regardless of clinical progress. Catalyst momentum is dead \u2014 this is not a drawdown sell; the capital structure thesis is broken.",
+      "hold_h": 114.5
+    },
+    {
+      "symbol": "PMN",
+      "qty": 5,
+      "kind": "stock",
+      "multiplier": 1,
+      "entry": 10.62,
+      "exit": 10.6,
+      "pnl": -0.1,
+      "pnl_pct": -0.19,
+      "opened_utc": "2026-06-09T12:35:23.835631+00:00",
+      "closed_utc": "2026-06-10T12:30:27.070304+00:00",
+      "reason": "Quick-trade thesis dead: HC Wainwright PT reiteration produced zero follow-through; reversed -8.24% on day 1; absent from candidates funnel across multiple consecutive runs. Momentum gone, no new catalyst. Not converting a failed breakout into a multi-month clinical hold.",
+      "hold_h": 23.92,
+      "signals": [
+        "news_smallcap"
+      ],
+      "catalyst_age_h": 20.43,
+      "market_cap": 87076299.0,
+      "volume": 12682,
+      "ref_price": 10.1,
+      "entry_ask": 10.6,
+      "entry_last": 10.01,
+      "tape_tone": "neutral"
     }
   ],
-  "updated_utc": "2026-06-09T21:00:27.654496+00:00"
+  "updated_utc": "2026-06-10T12:30:29.539505+00:00"
 }
