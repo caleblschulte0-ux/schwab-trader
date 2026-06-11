@@ -31,6 +31,12 @@ from xml.etree import ElementTree
 # ===== KNOBS (data sources only; no money guardrails live here) =====
 MIN_SHARE_PRICE       = 2.00    # hard floor: skip sub-$2 penny-stock pump/dump traps
 CANDIDATES_FILE       = "signals/candidates.json"
+SHORTLIST_FILE        = "signals/shortlist.json"   # slim, pre-ranked top-N the BRAIN reads
+SHORTLIST_MAX         = 40       # cap the brain's input pool (full funnel stays in candidates.json)
+# --- shortlist quality gates (drop the post-mortem's failure patterns before the brain) ---
+LIQ_MIN_VOLUME        = 300_000  # reject if volume is KNOWN and below this (too thin to fill cleanly)
+STALE_NEWS_MAX_H      = 24       # reject a news/8-K catalyst older than this (the move is priced in)
+EXTENDED_MAX_PCT      = 25.0     # reject already-blown-off names (don't chase a vertical move)
 FMP_BASE              = "https://financialmodelingprep.com/stable"
 # --- leading-signal funnel (proactive: find names BEFORE they run) ---
 EARNINGS_LOOKAHEAD_DAYS = 7     # enrich any candidate reporting within this window
@@ -676,6 +682,103 @@ def _write_candidates(seen: dict, news_meta: dict | None = None,
         print(f"(warn) could not write candidates file: {exc}")
 
 
+# ---- shortlist: pre-rank + filter + trim so the brain reads a slim top-N, not 300 rows ----
+HARD_SIGNALS = ("sec_8k", "news_smallcap", "earnings_soon", "halt_resume")  # leading catalysts
+
+
+def _catalyst_age_h(row: dict) -> float | None:
+    """Hours since the catalyst published (news / 8-K / halt). None when there's no
+    timestamp (e.g. an earnings_soon row, scored via its signal tag instead of age)."""
+    cat = row.get("catalyst") or {}
+    dt = _parse_dt(cat.get("published_utc"))
+    if not dt:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0
+
+
+def _score_candidate(row: dict) -> float:
+    """Rank a candidate for the brain's shortlist. Rewards the traits the trade
+    post-mortem said we lack at entry — FRESH catalysts, REAL liquidity, EARLY stage,
+    hard-catalyst conviction — and penalizes thin names and already-extended moves."""
+    score = 0.0
+    sigs = row.get("signals") or ([row["signal"]] if row.get("signal") else [])
+    score += 2.0 * sum(1 for s in sigs if s in HARD_SIGNALS)   # leading-catalyst conviction
+    score += 0.4 * len(sigs)                                    # multi-reason names
+    age = _catalyst_age_h(row)                                 # freshness
+    if age is not None and age >= 0:
+        if age <= 4:    score += 3.0
+        elif age <= 12: score += 1.5
+        elif age <= 24: score += 0.5
+    vol = row.get("volume") or 0                               # liquidity
+    if vol >= 1_000_000:    score += 2.0
+    elif vol >= 500_000:    score += 1.0
+    elif 0 < vol < 100_000: score -= 1.5                       # too thin to trade cleanly
+    pct = row.get("pct_change")                               # stage of move
+    if pct is not None:
+        if 0 <= pct <= 8:    score += 1.5                       # early, still moving
+        elif 8 < pct <= 15:  score += 0.3
+        elif pct > 20:       score -= 1.5                       # chasing a blow-off
+    return score
+
+
+def _passes_hard_filter(row: dict) -> bool:
+    """Drop the post-mortem's failure patterns before they reach the brain — illiquid
+    names, already-blown-off moves, and stale catalysts. Conservative: rejects only on
+    KNOWN-bad data, so a missing field never auto-rejects a name (no over-pruning)."""
+    sigs = row.get("signals") or ([row["signal"]] if row.get("signal") else [])
+    vol = row.get("volume")
+    if vol is not None and vol < LIQ_MIN_VOLUME:               # too thin to enter/exit cleanly
+        return False
+    pct = row.get("pct_change")
+    if pct is not None and pct > EXTENDED_MAX_PCT:             # vertical blow-off, no room left
+        return False
+    age = _catalyst_age_h(row)                                # stale news/8-K = priced in
+    if age is not None and age > STALE_NEWS_MAX_H and "earnings_soon" not in sigs:
+        return False                                           # (earnings_soon is forward-looking)
+    return True
+
+
+def _build_shortlist(seen: dict) -> list[dict]:
+    """Top SHORTLIST_MAX candidates by score (best first), each carrying its catalyst +
+    a `score` and `catalyst_age_h` so the brain can judge freshness with no web search."""
+    kept = [r for r in seen.values() if _passes_hard_filter(r)]
+    ranked = sorted(kept, key=_score_candidate, reverse=True)[:SHORTLIST_MAX]
+    out: list[dict] = []
+    for r in ranked:
+        row = dict(r)
+        age = _catalyst_age_h(r)
+        if age is not None:
+            row["catalyst_age_h"] = round(age, 1)
+        row["score"] = round(_score_candidate(r), 2)
+        out.append(_slim_row(row))
+    return out
+
+
+def _write_shortlist(seen: dict, market: dict | None = None,
+                     market_utc: str | None = None) -> None:
+    """Write the slim, pre-ranked top-N the brain actually reads. Keeps the macro tape
+    so the brain still reads the regime first. The full candidates.json is still written
+    (state + news carry-forward); this file is purely the brain's trimmed, ranked input."""
+    rows = _build_shortlist(seen)
+    data = {
+        "updated_utc": datetime.now(timezone.utc).isoformat(),
+        "scanned": len(seen),
+        "shortlisted": len(rows),
+        **({"market": market} if market else {}),
+        **({"market_updated_utc": market_utc} if market_utc else {}),
+        "candidates": rows,
+    }
+    try:
+        os.makedirs(os.path.dirname(SHORTLIST_FILE), exist_ok=True)
+        with open(SHORTLIST_FILE, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, separators=(",", ":"))
+        print(f"Wrote {SHORTLIST_FILE}: top {len(rows)} of {len(seen)} candidates (by score)")
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not write shortlist file: {exc}")
+
+
 def _fmp_quote_one(symbol: str) -> dict | None:
     """One FMP quote row for a symbol (index ETF / ^VIX), or None on any failure. The
     `stable` quote body may be a list or a single dict; tolerate both. A 402/404 (paid/
@@ -810,6 +913,7 @@ def fetch_fmp_candidates() -> None:
     smallcap = _fetch_smallcap_universe() if AV_API_KEY else {}  # small-cap map (discovery + enrichment)
     news_meta = _fetch_news(seen, prev, smallcap)  # news + small-cap-in-news discovery
     _write_candidates(seen, news_meta=news_meta, market=market, market_utc=market_utc)
+    _write_shortlist(seen, market=market, market_utc=market_utc)  # slim, pre-ranked brain input
 
 
 def main() -> int:

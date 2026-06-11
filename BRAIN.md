@@ -52,7 +52,7 @@ the single worst habit a catalyst trader can have. HARD RULES, no exceptions:
   buy again. Find a fresh name instead.
 
 ## STEP 0 — READ THE TAPE FIRST (market regime)
-Before hunting names, read the top-level **`market`** block in `candidates.json`
+Before hunting names, read the top-level **`market`** block in `signals/shortlist.json`
 (it may be absent if the macro feed was unavailable — then just proceed normally).
 It carries the day's broad-market read: `spy_pct` / `qqq_pct` (index trend %),
 `vix` (volatility), `sectors` (hot→cold list), and a derived `tone`
@@ -69,23 +69,26 @@ it does NOT change any guardrail, only how picky you are:
 - Use `sectors` as a TILT: prefer names in the day's strongest sectors/themes,
   be skeptical of longs in the weakest. Note the tape you saw in `latest.md`.
 
-## STEP 1 — START FROM THE PRE-BUILT FUNNEL (read candidates.json; don't re-gather it)
-`candidates.py` runs BEFORE you every single run and gathers the wide funnel FOR you —
-deterministically and at ZERO token cost: hundreds of names from FMP movers (gainers /
-most-active / losers), the FMP earnings calendar (who reports soon), Alpha Vantage news
-with sentiment, Nasdaq Trader halts/resumptions, fresh SEC 8-Ks, a Nasdaq small-cap
-universe cross-ref (small-caps in the news), plus the market regime and sector
-performance. **`signals/candidates.json` IS your top of funnel — read it FIRST and TRUST
-it for breadth.** Your job is JUDGMENT over a pre-gathered pool, NOT gathering. Do NOT
-hand-run broad "top gainers / most active / earnings soon / today's news" web searches —
-that only re-discovers what is already in the file and burns the subscription budget for
+## STEP 1 — START FROM THE PRE-RANKED SHORTLIST (read shortlist.json; don't re-gather it)
+`candidates.py` runs BEFORE you every single run: it gathers the wide funnel (hundreds of
+names from FMP movers, the earnings calendar, Alpha Vantage news, Nasdaq halts/resumptions,
+fresh SEC 8-Ks, a small-cap-in-the-news cross-ref, plus market regime and sectors), then
+SCORES and FILTERS it down to the best ~40 — all deterministically and at ZERO token cost.
+Stale catalysts (older than ~24h), illiquid names (thin volume), and already-blown-off
+movers are dropped before you ever see them. **`signals/shortlist.json` IS your top of
+funnel — read it FIRST, work DOWN it from the top (rows are sorted best-first by `score`),
+and TRUST it for breadth.** Your job is JUDGMENT over a pre-ranked pool, NOT gathering. Do
+NOT hand-run broad "top gainers / most active / earnings soon / today's news" web searches —
+that only re-discovers what the funnel already found and burns the subscription budget for
 nothing. Targeted web search keeps a small, specific role (see the end of this step), but
 the file does the heavy lifting.
 
-SOURCE — `signals/candidates.json` (this is your funnel). The bot pre-fetches both LAGGING and
-LEADING names with live price + % change. Read this first. Each row now carries a
-`signal` (primary reason) and a `signals` list (ALL reasons), plus an optional
-`catalyst`. Tags you'll see (top-level `signal_counts` tallies them):
+SOURCE — `signals/shortlist.json` (your funnel: the pre-ranked, pre-filtered top ~40).
+Each row carries live price + % change, a `signal` (primary reason) and a `signals` list
+(ALL reasons), an optional `catalyst`, plus two ranker fields — `score` (higher = fresher /
+more liquid / earlier) and `catalyst_age_h` (hours since the catalyst broke). The `score`
+is a GUIDE, not a command: #1 is not an automatic buy; you still judge each setup. Tags
+you'll see:
 - `mover` — LAGGING: already a top gainer / most-active / biggest loser today.
 - `earnings_soon` — LEADING: reports within ~7 days (catalyst: earnings_date, and
   eps_estimate when known). The "who's reporting soon" pre-position pool. Earnings
@@ -116,8 +119,8 @@ This is now a PRIMARY selection filter, not a tiebreaker:
   already up on it. The move is priced in; buying it now is chasing yesterday's news.
   (A genuinely NEW development on an old story — a fresh upgrade, next data point —
   resets the clock; the original headline alone does not.)
-Among your finalists, prefer the one with the FRESHEST catalyst. Note each pick's
-catalyst age in `latest.md`. Compare `published_utc` to the candidates `updated_utc`.
+Among your finalists, prefer the one with the FRESHEST catalyst — each row's
+`catalyst_age_h` gives this directly. Note each pick's catalyst age in `latest.md`.
 VOLUME (on movers and small-cap rows) confirms participation: prefer a catalyst move
 backed by real/rising volume over a thin pop.
 
@@ -128,17 +131,17 @@ leading tag AND a small `pct_change` (e.g. `["mover","earnings_soon"]`, up only
 ~3%) is an ideal early entry. Note: `earnings_soon` cuts both ways — an earnings
 gap can go either direction, so only take it if you genuinely like the asymmetry.
 
-### Targeted web search — ONLY to fill the gaps candidates.json can't see
-candidates.json already covers movers, earnings, news, halts/resumptions, and fresh SEC
+### Targeted web search — ONLY to fill the gaps the funnel can't see
+The funnel already covers movers, earnings, news, halts/resumptions, and fresh SEC
 8-Ks — so do NOT re-search those. Use WebSearch SPARINGLY: AT MOST ~1 targeted search per
 run, and SKIP it when it is not relevant this run (0 searches on a quiet, clean-funnel day
 is perfectly fine). The only broad gap still worth a search is:
-1. SYMPATHY / read-through — when a leader already in candidates.json is moving on a
+1. SYMPATHY / read-through — when a leader already in the shortlist is moving on a
    theme, search its smaller peers that haven't moved yet.
 You may spend the slot instead on VERIFYING a specific finalist (is the catalyst real, is
 the move already spent) when a pick hinges on it. That is the ENTIRE web-search budget.
 Never hand-scrape broad gainer / most-active / 52-week-high / general news / sector lists —
-candidates.json already IS those lists. A run that reads the funnel carefully and does 0–1
+the funnel already IS those lists. A run that reads the shortlist carefully and does 0–1
 targeted searches is an EFFICIENT, GOOD run. Breadth is the file's job now; judgment is
 yours.
 
@@ -256,11 +259,11 @@ EXACTLY this shape (note the `funnel` field — your scan tally):
 }
 ```
 - `funnel` is REQUIRED every run — fill in the real counts so we can see how wide we
-  looked (scanned → narrowed → finalists → picked). `scanned` now = the rows you
-  actually considered in candidates.json (plus any handful of web-search adds); the
-  file IS the funnel, so a high `scanned` count comes from reading it, not from hand-
-  searching. Include `leading` = how many candidates carried a LEADING tag
-  (earnings_soon/news_smallcap/news_bullish), so we can track how proactive we are.
+  looked (scanned → narrowed → finalists → picked). `scanned` = the full funnel size
+  (the `scanned` field at the top of shortlist.json, ~300); you then pick from its
+  ranked, pre-filtered top ~40. Include `leading` = how many of those carried a LEADING
+  tag (earnings_soon/news_smallcap/news_bullish/sec_8k/halt_resume), to track how
+  proactive we are.
 - STOCK BUY entries MUST include symbol, quantity, limit_price; quantity × limit_price ≤ $150.
   Do NOT include take_profit/stop_loss (exits belong to the sell brain).
 - PUT BUY entries (bearish, defined-risk, paper-only) use `instrument:"option"`,
@@ -322,4 +325,4 @@ orders.json pick. Shape (overwrite each run; use `"watch": []` when you have non
 Commit and push ALL written files (orders.json, latest.md, positions.md,
 watchlist.json, and reports/today.md when applicable) DIRECTLY to `main`. No new
 branch, no PR.
-(Do NOT edit holdings.json or candidates.json — the bot owns those files.)
+(Do NOT edit holdings.json, candidates.json, or shortlist.json — the bot owns those.)
