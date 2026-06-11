@@ -1,23 +1,23 @@
-# Sell Review — 2026-06-11T11:35:22Z
+# Sell Review — 2026-06-11T12:04:28Z
 
 **No urgent sells. No sells this run.**
 
-Tape context (Jun 10 close, last available data): SPY −1.57%, VIX 22.24, risk_off. All 13 positions re-assessed.
+Tape context (Jun 10 close): SPY −1.57%, VIX 22.24, risk_off. Healthcare worst (−2.16%), Industrials second-worst (−2.15%). Most drawdowns are sector-driven, not thesis-driven.
 
-Web search this run: **TISI** — Team Inc. confirmed as industrial integrity services turnaround. Q1 2026 earnings beat (revenue +8.3% YoY, Adj. EBITDA +45.2%, guidance raised), CEO and executive insider purchases as recently as May–June 2026. Thesis intact; drawdown is Industrials sector compression (−2.15% on Jun 10), not company-specific.
+Web searches this session: **ABSI** and **TISI** — see per-position rulings. Both theses confirmed intact.
 
 ---
 
 ## Per-Position Rulings
 
 **ABSI — HOLD** | opened Jun 10, −9.97% unrealized
-Absci (AI drug discovery). Prior-run search: Q1 revenue miss was pre-existing and known at Leerink Outperform upgrade time; actual thesis is ABS-201 H2'26 interim data (alopecia binary event), not current revenue. No clinical hold, no secondary, no FDA setback. The −9.97% is Healthcare worst-sector (−2.16%) amplified by the known revenue miss. Catalyst path intact. HOLD.
+Absci (AI drug discovery). WEB SEARCHED this run: Q1 revenue miss ($215K vs $1.43M consensus) was pre-existing and priced in before entry; actual thesis is ABS-201 H2'26 interim data (alopecia HEADLINE trial — SAD cohorts successfully dosed, favorable safety data confirmed). No clinical hold, secondary, or FDA setback. −9.97% is Healthcare worst-sector (−2.16%) amplified by the known revenue miss context at entry. Clinical catalyst path intact. HOLD.
 
 **APLD — HOLD** | opened Jun 9, −6.74% unrealized
-Applied Digital (AI/HPC data center infrastructure). Prior-run search: $550M Goldman Sachs revolving credit facility closed May 29 (strengthens balance sheet vs. thesis at entry); CoreWeave Building 3 MOU executing at Polaris Forge 1. No contract cancellations or adverse financing news. −6.74% tracks broad AI/tech selloff (NVDA −3.7%, MRVL −5.4%); thesis reinforced, not weakened. HOLD.
+Applied Digital (AI/HPC data center infrastructure). Prior-run search: $550M Goldman Sachs revolving credit facility closed May 29; CoreWeave Building 3 MOU executing at Polaris Forge 1. No contract cancellations or adverse financing news. −6.74% tracks broad AI/tech selloff (NVDA −3.7%, MRVL −5.4%); thesis reinforced, not weakened. HOLD.
 
 **ATHE — HOLD** | opened Jun 9, −1.89% unrealized
-Acumen Pharmaceuticals (MSA — FDA Phase 3 plan accepted, 48% slowing in Phase 2). −1.89% is noise on a Healthcare risk-off day; Phase 3 path intact, no adverse clinical or regulatory event visible. HOLD.
+Acumen Pharmaceuticals (MSA — FDA Phase 3 plan accepted, 48% slowing in Phase 2). −1.89% is noise on a Healthcare risk-off day; Phase 3 path intact, no adverse clinical or regulatory event. HOLD.
 
 **AVR — HOLD** | opened Jun 8, −3.75% unrealized
 Anteris Technologies (PARADIGM transcatheter aortic valve trial; French regulatory clearance Jun 8 was the entry catalyst). −3.75% over 3 days on sector compression; no adverse trial news or regulatory setback. Trial continues. HOLD.
@@ -55,7 +55,7 @@ Team Inc. (industrial integrity services turnaround). WEB SEARCHED this run: Q1 
 
 | Symbol | Opened | Unrlzd % | Thesis Status                                                                           | Decision |
 |--------|--------|----------|-----------------------------------------------------------------------------------------|----------|
-| ABSI   | Jun 10 | −9.97%   | ABS-201 H2'26 binary intact; Q1 miss pre-existing; Healthcare sector drag               | HOLD     |
+| ABSI   | Jun 10 | −9.97%   | ABS-201 H2'26 binary intact; Q1 miss pre-existing/known at entry; Healthcare drag       | HOLD     |
 | APLD   | Jun 9  | −6.74%   | $550M Goldman revolver closed; CoreWeave MOU executing; AI/tech sector selloff only     | HOLD     |
 | ATHE   | Jun 9  | −1.89%   | FDA Phase 3 path intact; noise-level Healthcare drawdown                                | HOLD     |
 | AVR    | Jun 8  | −3.75%   | PARADIGM trial ongoing; French clearance catalyst complete; no adverse news             | HOLD     |
