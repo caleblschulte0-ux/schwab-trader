@@ -89,7 +89,7 @@ jobs:
           # pre-digested pool to exercise judgment on, which is plenty for the every-20-min
           # routine. Reserve Opus for on-demand deep reviews. Flip to `--model opus` here
           # if you want every routine run on Opus (burns the allowance far faster).
-          claude -p "You are the trading BRAIN for this repository. Follow BRAIN.md EXACTLY and obey every guardrail in BRAIN.md and STRATEGY.md. Steps: (1) read the macro tape and candidates from signals/candidates.json and your real positions from signals/holdings.json; (2) run the web research BRAIN.md calls for; (3) WRITE the output files BRAIN.md specifies — signals/orders.json, signals/watchlist.json, signals/latest.md, and signals/positions.md. IMPORTANT: do NOT place any trades and do NOT run git or shell commands — only read the input files, search the web, and write those output files. Respect the orders.json timestamp collision-guard in BRAIN.md." \
+          claude -p "You are the trading BRAIN for this repository. Follow BRAIN.md EXACTLY and obey every guardrail in BRAIN.md and STRATEGY.md. Steps: (1) read the macro tape and the pre-ranked candidates from signals/shortlist.json (the top ~40, already scored/filtered) and your real positions from signals/holdings.json; (2) run the web research BRAIN.md calls for (at most ~1 targeted search); (3) WRITE the output files BRAIN.md specifies — signals/orders.json, signals/watchlist.json, signals/latest.md, and signals/positions.md. IMPORTANT: do NOT place any trades and do NOT run git or shell commands — only read the input files, search the web, and write those output files. Respect the orders.json timestamp collision-guard in BRAIN.md." \
             --allowedTools "Read,Edit,Write,WebSearch" \
             --model sonnet \
             --permission-mode acceptEdits \
@@ -102,7 +102,7 @@ jobs:
         run: |
           git config user.name "schwab-brain"
           git config user.email "brain@users.noreply.github.com"
-          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md signals/candidates.json reports/today.md"
+          FILES="signals/orders.json signals/watchlist.json signals/latest.md signals/positions.md signals/candidates.json signals/shortlist.json reports/today.md"
           git add $FILES 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Brain produced no changes."
