@@ -1,85 +1,81 @@
-# Brain Run — 2026-06-10T21:06:47Z
+# Brain Run — 2026-06-11T13:22:35Z
 
-**Funnel:** scanned 314 → 138 fit budget → 48 with catalyst → 10 finalists → picked 0
+**Funnel:** scanned 297 → 175 fit budget → 145 with catalyst → 4 finalists → picked 0
 
 ---
 
-## Market Tape — RISK_OFF
+## Market Tape — RISK_OFF (persistent)
 
-SPY -1.57% | VIX 22.24 | Tone: **risk_off**
+SPY -1.58% | VIX 21.23 | Tone: **risk_off**
 
 Sector scorecard (hot → cold):
 1. Consumer Defensive +0.62% ← only safe harbor
 2. Financial Services +0.38%
-3. Technology -0.82%
+3. Technology -0.81%
 4. Energy -0.83%
-5. Communication Services -1.68%
-6. Real Estate / Utilities -1.86%
-7. Consumer Cyclical -1.95%
-8. Basic Materials -1.99%
-9. Industrials -2.15%
-10. Healthcare -2.16% ← worst
+5. Communication Services -1.65%
+6. Real Estate -1.86%
+7. Utilities -1.86%
+8. Consumer Cyclical -1.93%
+9. Basic Materials -1.99%
+10. Healthcare -2.15% ← worst
+11. Industrials -2.15% ← worst (tied)
 
-Tape meaningfully negative on broad volume (VIX elevated at 22.24). Risk_off mandate engaged: materially picky, demand strong relative strength, lean toward sitting out.
+Second consecutive risk_off session. SPY -1.58%, VIX 21.23 (still elevated from yesterday's 22.24). Same sector hierarchy as prior run — Consumer Defensive the lone green sector, Healthcare/Industrials worst. Risk_off mandate engaged: maximum selectivity, powder preservation.
 
 ---
 
 ## Account State
 
-13 open positions, ~$957 cost-basis deployed of ~$1,000 total. **~$43 powder remaining.** This is the binding constraint: even if a great setup appeared, a $43 position is too small to move the needle.
+13 open positions, ~$957 cost basis deployed of ~$1,000. **~$43 powder remaining.** This is the binding constraint — there is no meaningful position size available regardless of setup quality.
 
 ---
 
 ## Finalists Considered (all passed)
 
-**CBRL ($44.49, +22.56%) — PASS**
-Cracker Barrel earnings beat, Consumer Defensive (strongest sector today). Tempting catalyst. But already +22.56% intraday, 8+ hours stale — firmly in the deprioritize zone. Analyst kept a Hold rating. The move is priced in; entering now is chasing. With only ~$43 powder, this barely buys 1 share anyway.
+**APPS ($10.22, +3.76%, 8.4M vol) — PASS**
+Digital Turbine hit 52-week high at $10.43 on a -1.58% tape. Green in red market = genuine relative strength. However: (1) no underlying business catalyst — the headline IS the price action, not a driver of it; (2) 52-week high = potential resistance, not a clean entry; (3) with $43 powder, max 4 shares × $10.22 = $40.88 — not a meaningful position. Catalyst age: ~5.5h (07:39 UTC). Pattern is momentum without a fundamental anchor.
 
-**LAKE ($11.35, +18.97%) — PASS**
-Lakeland Industries Q1 EPS beat. Small-cap ($122M). Up 18.97%, borderline extended. Catalyst published 11:40Z — 9+ hours stale. Neutral sentiment. Industrials sector (second-worst today, -2.15%). Stock is green vs sector (real relative strength) but the move is 9 hours old.
+**FUBO ($9.98, +2.57%, 2.25M vol) — PASS**
+NBCUniversal carriage deal restoring Telemundo, NBC, Bravo. Catalyst genuine (ends 8-month blackout). Telemundo restored in time for FIFA World Cup opening TODAY (June 11). Real content catalyst with sports timing. HOWEVER: (1) catalyst ~12h old (announced June 10 evening), stock already moved ~5-7% over two sessions — bulk of move priced in; (2) account has $43 free, max 4 shares = $39.92 — negligible; (3) risk_off tape adds headwind. Watchlist candidate noted for future positioning.
 
-**OCC ($26.92, +28.13%) — PASS**
-Optical Cable Q2 on 27% sales growth (Bullish 0.75). Strong fundamental catalyst. Already +28% — hard-pass stage-of-move territory. Move is spent.
+**MAMA ($13.64, +0.96%, 606K vol) — PASS**
+Mama's Creations Q1 earnings beat (Consumer Defensive sector — today's only green). Stock barely moved despite beat. But catalyst 12h stale (01:09 UTC), "Somewhat-Bullish" sentiment score only 0.34, and $43 powder = 3 shares max. Setup is marginal; would require exceptional circumstances to act with near-zero cash.
 
-**PLAY ($12.49, +9.08%) — PASS**
-Dave & Buster's fresh catalyst (grand opening, 19:00Z). Up 9%, acceptable range. But Consumer Cyclical (-1.95%) is second-worst sector today. Weak catalyst (single store opening) on an ugly tape. Pass.
+**OSPN ($14.13, +1.15%) — PASS**
+OneSpan rising as market drops. Relative strength noted. But "rises as market takes a dip" is a price-action description, NOT a business catalyst. No specific event driving the move. Sentiment score 0.42 but source just observing the stock is green — no tradeable thesis.
 
-**KALV ($27.00, +0.04%) — watchlist (breakout at $27.25)**
-52-week high with 4.25M volume (unusual accumulation) on a -1.57% tape — exceptional relative strength. Already on watchlist from last run. Let the breakout trigger do its job.
+---
 
-**DFIN ($37.60, +0.40%) — watchlist (pullback to $36.50)**
-AI-powered iXBRL SEC filing product launch, Financial Services sector. Barely moved on real product news. Already on watchlist.
+## Watchlist Update
 
-**HROW ($35.90, +7.3%) — watchlist (pullback to $35)**
-Harrow VERKAZIA eye-drop relaunch. Strong relative strength vs Healthcare -2.16%. Already on watchlist at $35 trigger.
-
-**REPX ($35.89, +3.10%) — PASS**
-Riley Exploration, fresh catalyst (19:09Z), relative strength vs Energy (-0.83%). But $43 powder = 1 share = $35.89. Position too tiny to be meaningful.
-
-**PRGO ($11.17, -0.09%) — PASS**
-Perrigo takeover speculation (17:40Z). Flat on down tape is mild relative strength. But Healthcare is worst sector (-2.16%) and takeover speculation without a named bidder lacks conviction.
-
-**LMNR ($13.18, +8.93%) — PASS**
-Limoneira Q2 earnings. Up ~9% but 9+ hours stale, neutral sentiment, no sector tailwind.
+All 12 entries maintained. Key note:
+- **NRIX** 8-K (June 11, 07:30 UTC) **confirmed positive** — EHA Congress clinical data for bexobrutideg: 92.9% ORR in 2nd-line CLL, 83% ORR in heavily pretreated R/R. Non-dilutive. Breakout trigger $16.50 remains valid.
+- **KALV** at $27.00 today (flat) — inches from $27.25 breakout trigger. Time-sensitive (good_until 2026-06-12).
+- **HROW** — Healthcare sector -2.15% today could push HROW toward the $35.00 pullback trigger.
+- **YB** — still above $15.50 trigger; risk_off tape could pull it back toward entry.
 
 ---
 
 ## Why Zero Orders
 
-1. **Risk_off tape:** SPY -1.57%, VIX 22.24. BRAIN.md: "Sitting out a run is acceptable and often correct on an ugly tape."
-2. **Nearly fully deployed:** ~$43 powder left — no meaningful position possible.
-3. **All compelling catalysts extended:** Every strong name (CBRL, OCC, LAKE) is up 18-28%, past the stage-of-move threshold.
-4. **Watchlist fully stocked:** 12 queued triggers spanning healthcare breakouts, biotech catalysts, and growth names — ready to auto-fire at tomorrow's open.
+1. **Risk_off tape** (second session): SPY -1.58%, VIX 21.23. BRAIN.md: "Sitting out a run is acceptable and often correct on an ugly tape."
+2. **Near-empty powder**: ~$43 remaining — no position large enough to be meaningful. Any entry at this size adds real risk with negligible expected return in dollar terms.
+3. **No fresh, early-stage catalysts**: Top gainers (DSY +291%, SDOT +108%, BATL +57%) are Chinese micro-caps or moves already spent. Everything with a real catalyst (FUBO, APPS) is either aging or lacking a fundamental driver.
+4. **Watchlist fully armed**: 12 trigger-based entries ready to auto-fire on clean breakouts/pullbacks — that's the correct mechanism for entering between runs.
 
 ---
 
 ## Holdings Read
 
-All 13 positions open. Sell brain monitors exits.
-- **BNAI +4.68%** — only winner; let run
-- **CLLS -0.31%** — flat, holding
-- **ABSI -9.13%, TISI -9.67%** — deepest drawdowns; sell brain call
-- **APLD -6.81%, RXRX -7.60%** — watching
-- Remainder -1% to -5%
+All 13 positions open. Sell brain owns all exits.
+- **BNAI +$4.62 (+3.4%)** — only meaningful winner; let run
+- **GASS +$0.14 (+0.1%)** — roughly flat, holding
+- **MNKD +$0.03 (+0.9%)** — tiny position, holding
+- **TISI −$5.25 (−9.7%)** — deepest drawdown; sell brain call
+- **ABSI −$3.60 (−8.4%)** — sell brain watching
+- **RXRX −$3.96 (−6.7%)** — sell brain watching
+- **CLLS −$4.84 (−3.5%)**, **APLD −$4.34 (−5.2%)** — tracking
+- Remainder between −1% and −3%
 
-No position is re-buyable. All exits are the sell brain's responsibility.
+Net unrealized across all positions: approximately −$23.65 on $957 cost basis (−2.5%). Manageable. Sell brain manages exits.
