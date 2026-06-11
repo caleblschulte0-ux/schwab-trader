@@ -1,81 +1,76 @@
-# Brain Run — 2026-06-11T13:22:35Z
+# Brain Run — 2026-06-11T13:34:41Z
 
-**Funnel:** scanned 297 → 175 fit budget → 145 with catalyst → 4 finalists → picked 0
-
----
-
-## Market Tape — RISK_OFF (persistent)
-
-SPY -1.58% | VIX 21.23 | Tone: **risk_off**
-
-Sector scorecard (hot → cold):
-1. Consumer Defensive +0.62% ← only safe harbor
-2. Financial Services +0.38%
-3. Technology -0.81%
-4. Energy -0.83%
-5. Communication Services -1.65%
-6. Real Estate -1.86%
-7. Utilities -1.86%
-8. Consumer Cyclical -1.93%
-9. Basic Materials -1.99%
-10. Healthcare -2.15% ← worst
-11. Industrials -2.15% ← worst (tied)
-
-Second consecutive risk_off session. SPY -1.58%, VIX 21.23 (still elevated from yesterday's 22.24). Same sector hierarchy as prior run — Consumer Defensive the lone green sector, Healthcare/Industrials worst. Risk_off mandate engaged: maximum selectivity, powder preservation.
+Funnel: scanned 301 → 85 fit budget → 28 with catalyst → 3 finalists → picked 0
 
 ---
 
-## Account State
+## Market Tape (RISK_OFF)
 
-13 open positions, ~$957 cost basis deployed of ~$1,000. **~$43 powder remaining.** This is the binding constraint — there is no meaningful position size available regardless of setup quality.
-
----
-
-## Finalists Considered (all passed)
-
-**APPS ($10.22, +3.76%, 8.4M vol) — PASS**
-Digital Turbine hit 52-week high at $10.43 on a -1.58% tape. Green in red market = genuine relative strength. However: (1) no underlying business catalyst — the headline IS the price action, not a driver of it; (2) 52-week high = potential resistance, not a clean entry; (3) with $43 powder, max 4 shares × $10.22 = $40.88 — not a meaningful position. Catalyst age: ~5.5h (07:39 UTC). Pattern is momentum without a fundamental anchor.
-
-**FUBO ($9.98, +2.57%, 2.25M vol) — PASS**
-NBCUniversal carriage deal restoring Telemundo, NBC, Bravo. Catalyst genuine (ends 8-month blackout). Telemundo restored in time for FIFA World Cup opening TODAY (June 11). Real content catalyst with sports timing. HOWEVER: (1) catalyst ~12h old (announced June 10 evening), stock already moved ~5-7% over two sessions — bulk of move priced in; (2) account has $43 free, max 4 shares = $39.92 — negligible; (3) risk_off tape adds headwind. Watchlist candidate noted for future positioning.
-
-**MAMA ($13.64, +0.96%, 606K vol) — PASS**
-Mama's Creations Q1 earnings beat (Consumer Defensive sector — today's only green). Stock barely moved despite beat. But catalyst 12h stale (01:09 UTC), "Somewhat-Bullish" sentiment score only 0.34, and $43 powder = 3 shares max. Setup is marginal; would require exceptional circumstances to act with near-zero cash.
-
-**OSPN ($14.13, +1.15%) — PASS**
-OneSpan rising as market drops. Relative strength noted. But "rises as market takes a dip" is a price-action description, NOT a business catalyst. No specific event driving the move. Sentiment score 0.42 but source just observing the stock is green — no tradeable thesis.
+SPY -1.58%, VIX 21.23. Broad market under pressure. Only two sectors green: Consumer Defensive (+0.62%) and Financial Services (+0.38%). Technology -0.81%, Healthcare -2.15%, Industrials -2.15%, Consumer Cyclical -1.93%, Basic Materials -1.99%. Tone: **risk_off**. Running materially pickier this session — demanding relative strength and defined catalysts before committing remaining powder.
 
 ---
 
-## Watchlist Update
+## Decision: No New Buys
 
-All 12 entries maintained. Key note:
-- **NRIX** 8-K (June 11, 07:30 UTC) **confirmed positive** — EHA Congress clinical data for bexobrutideg: 92.9% ORR in 2nd-line CLL, 83% ORR in heavily pretreated R/R. Non-dilutive. Breakout trigger $16.50 remains valid.
-- **KALV** at $27.00 today (flat) — inches from $27.25 breakout trigger. Time-sensitive (good_until 2026-06-12).
-- **HROW** — Healthcare sector -2.15% today could push HROW toward the $35.00 pullback trigger.
-- **YB** — still above $15.50 trigger; risk_off tape could pull it back toward entry.
+**Account is nearly fully deployed.** 13 open positions with ~$932 of ~$1,000 deployed — already 2x the target concurrent-position count. Only ~$68 of powder remains. Combined with a risk_off tape, the bar for a new entry is very high.
 
 ---
 
-## Why Zero Orders
+## Finalists Considered (and rejected)
 
-1. **Risk_off tape** (second session): SPY -1.58%, VIX 21.23. BRAIN.md: "Sitting out a run is acceptable and often correct on an ugly tape."
-2. **Near-empty powder**: ~$43 remaining — no position large enough to be meaningful. Any entry at this size adds real risk with negligible expected return in dollar terms.
-3. **No fresh, early-stage catalysts**: Top gainers (DSY +291%, SDOT +108%, BATL +57%) are Chinese micro-caps or moves already spent. Everything with a real catalyst (FUBO, APPS) is either aging or lacking a fundamental driver.
-4. **Watchlist fully armed**: 12 trigger-based entries ready to auto-fire on clean breakouts/pullbacks — that's the correct mechanism for entering between runs.
+### 1. NRIX — Nurix Therapeutics (sec_8k fresh today)
+**Thesis:** Roche deal ($700M upfront + up to $2.3B) announced June 8 for bexobrutideg (oral BTK degrader). Fresh 8-K filed today (11:06 UTC, ~2.5h before this run) presenting EHA Congress data: 83% ORR, 22.1 months mPFS in heavily-pretreated relapsed/refractory CLL. Oppenheimer maintains positive rating post-deal. Highest-conviction name in the pipeline.
+
+**Why not a direct buy now:** Already in watchlist with a breakout trigger at $16.50. With only ~$68 powder and risk_off tape, the trigger entry via watchlist is cleaner — waits for volume confirmation rather than chasing. If stock breaks $16.50, bot enters automatically (4 shares ≈ $66.40).
+
+### 2. XERS — Xeris Biopharma ($6.71, +3.23%)
+**Thesis:** Retiring $23M of 8% notes at a discount — balance sheet improvement. +3.23% relative strength vs Healthcare sector -2.15%.
+
+**Why passed:** Healthcare is the worst sector today (-2.15%). The debt-retirement catalyst is mildly positive but not a momentum driver. With the sector under heavy pressure and only $68 of powder left, risk/reward doesn't clear the bar. Skipped.
+
+### 3. AAPG — Ascentage Pharma ($17.07, flat)
+**Thesis:** B.Riley initiates with Buy, $45 price target on a $17 stock. Published 02:39 UTC (~11 hours old).
+
+**Why passed:** Catalyst stale (11h old) and stock completely flat — market shrugged at the initiation. Zero price confirmation. Skipped.
 
 ---
 
-## Holdings Read
+## Notable Names Passed (broader scan)
 
-All 13 positions open. Sell brain owns all exits.
-- **BNAI +$4.62 (+3.4%)** — only meaningful winner; let run
-- **GASS +$0.14 (+0.1%)** — roughly flat, holding
-- **MNKD +$0.03 (+0.9%)** — tiny position, holding
-- **TISI −$5.25 (−9.7%)** — deepest drawdown; sell brain call
-- **ABSI −$3.60 (−8.4%)** — sell brain watching
-- **RXRX −$3.96 (−6.7%)** — sell brain watching
-- **CLLS −$4.84 (−3.5%)**, **APLD −$4.34 (−5.2%)** — tracking
-- Remainder between −1% and −3%
+- **OCC** (+28%): No real underlying catalyst — just a stock-page article. Extended. Hard pass.
+- **BATL** (+57%), **DSY** (+291%), **PBLS** (+58%), **SDOT** (+108%): Parabolic no-catalyst movers. All fail the stage rule — blow-off tops with no room left.
+- **FUBO** (+2.6%): NBC/Fubo deal catalyst from 03:40 UTC — 10 hours old and already in the price. Stale.
+- **LMNR** (+8.9%): Lake Street buy reiteration, stale 11 hours. Move already taken.
+- **OSPN** (+1.15%): Rising while market dips — genuine relative strength. But catalyst from 07:40 UTC (6h old), and $68 budget makes sizing too thin. Watchlist candidate for a future run when account has more room.
+- **AMC** (+7.2%): 8-K filed today — content unknown, could be routine. AMC structurally challenged. Skipped.
+- **APPS** (+3.8%): Digital Turbine hit 52-week high. Interesting but catalyst is 6h old and $68 budget makes sizing negligible.
+- **KLAC / AMAT / LRCX**: Barclays buy call (~12:30 UTC, fresh). Strong semiconductor equipment thesis. All priced far above the $150 per-position budget. Untradeable at our size.
+- **HSIC** (Henry Schein): Analyst upgrade today (~12:04 UTC), bullish. Healthcare worst sector today. Skip.
 
-Net unrealized across all positions: approximately −$23.65 on $957 cost basis (−2.5%). Manageable. Sell brain manages exits.
+---
+
+## Holdings Read (Sell Brain's responsibility)
+
+| Symbol | Qty | Avg    | Last   | Unrlzd%  |
+|--------|-----|--------|--------|----------|
+| ABSI   | 6   | $7.12  | $6.47  | -9.1%    |
+| APLD   | 2   | $41.44 | $39.00 | -5.9%    |
+| ATHE   | 1   | $4.23  | $4.00  | -5.4%    |
+| AVR    | 15  | $9.87  | $9.60  | -2.7%    |
+| BNAI   | 7   | $19.46 | $20.25 | +4.1%    |
+| CLLS   | 44  | $3.19  | $3.08  | -3.5%    |
+| EVTL   | 14  | $2.12  | $2.16  | +1.9%    |
+| GASS   | 15  | $9.51  | $9.52  | +0.1%    |
+| MNKD   | 1   | $3.68  | $3.70  | +0.5%    |
+| PLSE   | 2   | $25.49 | $24.75 | -2.9%    |
+| RXRX   | 18  | $3.29  | $3.05  | -7.3%    |
+| SLDB   | 9   | $6.86  | $6.77  | -1.3%    |
+| TISI   | 3   | $18.09 | $16.34 | -9.7%    |
+
+BNAI, EVTL, GASS, MNKD in the green. ABSI (-9.1%) and TISI (-9.7%) approaching -10% pain levels. Healthcare/Industrial pressure today makes these vulnerable. All exits are the Sell Brain's call.
+
+---
+
+## Watchlist Status
+
+12 trigger-level setups in watchlist.json, all good_until dates valid. NRIX note updated with today's EHA clinical data confirmation (83% ORR CLL). Bot will auto-enter the instant any trigger fires.

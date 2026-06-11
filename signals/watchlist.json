@@ -1,49 +1,16 @@
 {
-  "generated_utc": "2026-06-11T13:22:35Z",
+  "generated_utc": "2026-06-11T13:34:41Z",
   "watch": [
-    {
-      "symbol": "AEVA",
-      "trigger": "pullback",
-      "trigger_price": 22.50,
-      "quantity": 1,
-      "limit_price": 22.60,
-      "take_profit": 26.50,
-      "stop_loss": 21.00,
-      "good_until": "2026-06-12",
-      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov contract. Now $22.69 (+2.3%). Enter on pullback to $22.50. Qty 1 given near-maxed account."
-    },
-    {
-      "symbol": "HROW",
-      "trigger": "pullback",
-      "trigger_price": 35.00,
-      "quantity": 4,
-      "limit_price": 35.20,
-      "take_profit": 41.00,
-      "stop_loss": 32.50,
-      "good_until": "2026-06-13",
-      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +7.3% to $35.90 vs Healthcare -2.16% -- strong relative strength. Enter on pullback to $35 consolidation. 4x$35.20=$140.80."
-    },
-    {
-      "symbol": "KALV",
-      "trigger": "breakout",
-      "trigger_price": 27.25,
-      "quantity": 5,
-      "limit_price": 27.45,
-      "take_profit": 30.50,
-      "stop_loss": 25.50,
-      "good_until": "2026-06-12",
-      "note": "Kalvista Pharmaceuticals hit 52-week high at $27.00 with 4.2M volume on a -1.57% tape -- unusual accumulation signal. Breakout above $27.25 confirms momentum continuation. Small pharma $1.44B cap. 5x$27.45=$137.25."
-    },
     {
       "symbol": "NRIX",
       "trigger": "breakout",
       "trigger_price": 16.50,
-      "quantity": 9,
+      "quantity": 4,
       "limit_price": 16.60,
       "take_profit": 19.50,
       "stop_loss": 15.50,
       "good_until": "2026-06-14",
-      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Non-dilutive. 8-K June 11 confirmed positive clinical data: 92.9% ORR in 2nd-line CLL (EHA Congress). Re-breakout above $16.50."
+      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Fresh 8-K June 11 (11:06 UTC) confirms EHA Congress data: 83% ORR, 22.1 months mPFS in 2nd-line CLL. Non-dilutive. Re-breakout above $16.50 on volume. 4x$16.60=$66.40."
     },
     {
       "symbol": "GHRS",
@@ -57,26 +24,48 @@
       "note": "GH Research Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 is next catalyst. Enter on breakout above $26.50 on volume."
     },
     {
-      "symbol": "COYA",
+      "symbol": "KALV",
       "trigger": "breakout",
-      "trigger_price": 4.75,
-      "quantity": 31,
-      "limit_price": 4.80,
-      "take_profit": 5.75,
-      "stop_loss": 4.35,
-      "good_until": "2026-06-14",
-      "note": "Coya Therapeutics ALSTARS ALS trial: first cohort began blinded active-treatment extension (June 8). ~$107M mktcap, barely moved. Volume breakout above $4.75 required."
+      "trigger_price": 27.25,
+      "quantity": 5,
+      "limit_price": 27.45,
+      "take_profit": 30.50,
+      "stop_loss": 25.50,
+      "good_until": "2026-06-12",
+      "note": "Kalvista Pharmaceuticals hit 52-week high at $27.00 today with 4.2M volume on a -1.58% tape — unusual accumulation vs broad weakness. Breakout above $27.25 confirms momentum continuation. Small pharma $1.44B cap. 5x$27.45=$137.25."
     },
     {
-      "symbol": "ELDN",
+      "symbol": "SPRY",
+      "trigger": "breakout",
+      "trigger_price": 10.20,
+      "quantity": 14,
+      "limit_price": 10.30,
+      "take_profit": 12.50,
+      "stop_loss": 9.50,
+      "good_until": "2026-06-17",
+      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update overdue as of June 10 (Q1 call said definitive update in early June). Breakout above $10.20 confirms announcement landed."
+    },
+    {
+      "symbol": "DFIN",
       "trigger": "pullback",
-      "trigger_price": 3.30,
-      "quantity": 44,
-      "limit_price": 3.35,
-      "take_profit": 4.00,
-      "stop_loss": 3.05,
+      "trigger_price": 36.50,
+      "quantity": 3,
+      "limit_price": 36.75,
+      "take_profit": 42.00,
+      "stop_loss": 34.00,
       "good_until": "2026-06-14",
-      "note": "Eledon tegoprubart T1D trial promising results (June 8). Enter on pullback to $3.30 support for better R/R."
+      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS product for regulatory compliance, barely moved on news. Enter on pullback to $36.50. 3x$36.75=$110.25."
+    },
+    {
+      "symbol": "YB",
+      "trigger": "pullback",
+      "trigger_price": 15.50,
+      "quantity": 9,
+      "limit_price": 15.60,
+      "take_profit": 18.50,
+      "stop_loss": 14.50,
+      "good_until": "2026-06-13",
+      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +18% today to $17.20. Enter on pullback to $15.50 consolidation. 9x$15.60=$140.40."
     },
     {
       "symbol": "ALVO",
@@ -101,37 +90,48 @@
       "note": "BrainsWay 12-month sustained depression remission study published (June 9). TMS clinical milestone. Wait for pullback to $13.75 support."
     },
     {
-      "symbol": "SPRY",
+      "symbol": "COYA",
       "trigger": "breakout",
-      "trigger_price": 10.20,
-      "quantity": 14,
-      "limit_price": 10.30,
-      "take_profit": 12.50,
-      "stop_loss": 9.50,
-      "good_until": "2026-06-17",
-      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update overdue as of June 10 (Q1 call said definitive update in early June). Breakout above $10.20 confirms announcement landed."
-    },
-    {
-      "symbol": "YB",
-      "trigger": "pullback",
-      "trigger_price": 15.50,
-      "quantity": 9,
-      "limit_price": 15.60,
-      "take_profit": 18.50,
-      "stop_loss": 14.50,
-      "good_until": "2026-06-13",
-      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +18% today to $17.20. Enter on pullback to $15.50 consolidation. 9x$15.60=$140.40."
-    },
-    {
-      "symbol": "DFIN",
-      "trigger": "pullback",
-      "trigger_price": 36.50,
-      "quantity": 3,
-      "limit_price": 36.75,
-      "take_profit": 42.00,
-      "stop_loss": 34.00,
+      "trigger_price": 4.75,
+      "quantity": 31,
+      "limit_price": 4.80,
+      "take_profit": 5.75,
+      "stop_loss": 4.35,
       "good_until": "2026-06-14",
-      "note": "Donnelley Financial Solutions launched AI-powered iXBRL SEC filing tagging (12:08 UTC June 10). Real SaaS product for regulatory compliance, barely moved on news. Enter on pullback to $36.50. 3x$36.75=$110.25."
+      "note": "Coya Therapeutics ALSTARS ALS trial: first cohort began blinded active-treatment extension (June 8). ~$107M mktcap, barely moved. Volume breakout above $4.75 required."
+    },
+    {
+      "symbol": "ELDN",
+      "trigger": "pullback",
+      "trigger_price": 3.30,
+      "quantity": 44,
+      "limit_price": 3.35,
+      "take_profit": 4.00,
+      "stop_loss": 3.05,
+      "good_until": "2026-06-14",
+      "note": "Eledon tegoprubart T1D trial promising results (June 8). Enter on pullback to $3.30 support for better R/R."
+    },
+    {
+      "symbol": "AEVA",
+      "trigger": "pullback",
+      "trigger_price": 22.50,
+      "quantity": 1,
+      "limit_price": 22.60,
+      "take_profit": 26.50,
+      "stop_loss": 21.00,
+      "good_until": "2026-06-12",
+      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov contract. Enter on pullback to $22.50. Qty 1 given near-maxed account."
+    },
+    {
+      "symbol": "HROW",
+      "trigger": "pullback",
+      "trigger_price": 35.00,
+      "quantity": 4,
+      "limit_price": 35.20,
+      "take_profit": 41.00,
+      "stop_loss": 32.50,
+      "good_until": "2026-06-13",
+      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +7.3% to $35.90 vs Healthcare -2.16% -- strong relative strength on catalyst day. Enter on pullback to $35 consolidation. 4x$35.20=$140.80."
     }
   ]
 }
