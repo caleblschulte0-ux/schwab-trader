@@ -1,4 +1,4 @@
-# Sell Review — 2026-06-11T07:33:08Z
+# Sell Review — 2026-06-11T12:31:04Z
 
 **No urgent sells. No sells this run.**
 
@@ -45,7 +45,7 @@ Recursion Pharmaceuticals (AI drug discovery). Six-day −7.60% tracks Healthcar
 Solid Biosciences (SGT-003 gene therapy for DMD). −3.35% over one week maps to Healthcare sector compression; no FDA, clinical, or corporate adverse news in candidates. Thesis intact. HOLD.
 
 **TISI — HOLD** | opened Jun 4, −9.67% unrealized
-Team Inc. (industrial integrity services). WEB SEARCHED. Q1 2026: revenue +8.3% YoY to $215M (best Q1 since 2019), Adj. EBITDA +45.2% with 90bps margin expansion, FY2026 guidance maintained (revenue $920M–$945M, EBITDA +16%). Orderly CEO transition (Gary Hill replacing retiring Keith Tucker). The −9.67% from $18.09 avg is pure Industrials sector drag (−2.15%) on a risk-off tape — thesis is not broken, it is strengthening. HOLD.
+Team Inc. (industrial integrity services). WEB SEARCHED. Q1 2026: revenue +8.3% YoY to $215M (best Q1 since 2019), Adj. EBITDA +45.2% with 90bps margin expansion, FY2026 guidance maintained (revenue $920M–$945M, EBITDA +16%). Orderly CEO transition (Gary Hill). The −9.67% from $18.09 avg is pure Industrials sector drag (−2.15%) on a risk-off tape — thesis is strengthening, not broken. HOLD.
 
 ---
 
