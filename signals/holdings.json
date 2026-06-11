@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-06-11T12:45:27.614264+00:00",
+  "updated_utc": "2026-06-11T12:50:23.327318+00:00",
   "holdings": [
     {
       "symbol": "ABSI",
@@ -15,9 +15,9 @@
       "quantity": 2,
       "avg_price": 41.44,
       "opened_utc": "2026-06-09T14:50:28.008910+00:00",
-      "last": 39.0592,
-      "unrealized_pct": -5.75,
-      "value": 78.12
+      "last": 39.3,
+      "unrealized_pct": -5.16,
+      "value": 78.6
     },
     {
       "symbol": "ATHE",
@@ -42,27 +42,27 @@
       "quantity": 7,
       "avg_price": 19.46,
       "opened_utc": "2026-06-10T12:30:29.351141+00:00",
-      "last": 20.12,
-      "unrealized_pct": 3.39,
-      "value": 140.84
+      "last": 20.4,
+      "unrealized_pct": 4.83,
+      "value": 142.8
     },
     {
       "symbol": "CLLS",
       "quantity": 44,
       "avg_price": 3.19,
       "opened_utc": "2026-06-10T13:25:26.877603+00:00",
-      "last": 3.12,
-      "unrealized_pct": -2.19,
-      "value": 137.28
+      "last": 3.0462,
+      "unrealized_pct": -4.51,
+      "value": 134.03
     },
     {
       "symbol": "EVTL",
       "quantity": 14,
       "avg_price": 2.12,
       "opened_utc": "2026-06-09T15:21:12.349780+00:00",
-      "last": 2.17,
-      "unrealized_pct": 2.36,
-      "value": 30.38
+      "last": 2.1596,
+      "unrealized_pct": 1.87,
+      "value": 30.23
     },
     {
       "symbol": "GASS",
@@ -96,9 +96,9 @@
       "quantity": 18,
       "avg_price": 3.29,
       "opened_utc": "2026-06-05T18:00:30.123809+00:00",
-      "last": 3.07,
-      "unrealized_pct": -6.69,
-      "value": 55.26
+      "last": 3.05,
+      "unrealized_pct": -7.29,
+      "value": 54.9
     },
     {
       "symbol": "SLDB",
