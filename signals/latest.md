@@ -1,76 +1,53 @@
-# Brain Run — 2026-06-11T13:34:41Z
+# Brain Run — 2026-06-11T17:41:00Z
 
-Funnel: scanned 301 → 85 fit budget → 28 with catalyst → 3 finalists → picked 0
+Funnel: scanned 299 → 93 leading → 185 fit budget → 42 with catalyst → 5 finalists → picked 1
 
----
+## Market Tape
 
-## Market Tape (RISK_OFF)
+SPY +1.21%, VIX 20.89, tone: **risk_on**. Industrials (+1.32%), Healthcare (+0.96%), and Technology (+0.86%) lead; Communication Services (-1.79%) and Consumer Cyclical (-0.65%) drag. Broad green tape — normal aggressiveness, prefer names in Industrials/Healthcare/Tech, skeptical of Comm Services longs.
 
-SPY -1.58%, VIX 21.23. Broad market under pressure. Only two sectors green: Consumer Defensive (+0.62%) and Financial Services (+0.38%). Technology -0.81%, Healthcare -2.15%, Industrials -2.15%, Consumer Cyclical -1.93%, Basic Materials -1.99%. Tone: **risk_off**. Running materially pickier this session — demanding relative strength and defined catalysts before committing remaining powder.
+## Capital Situation
 
----
+13 open positions, ~$957 of ~$1,000 deployed. Only ~$43 in powder. Account is nearly fully deployed; the sell brain holds exit authority on all existing names. New position sizing is constrained to available cash.
 
-## Decision: No New Buys
+## Pick: FATN — BUY 7 shares @ $6.35 limit ($44.45)
 
-**Account is nearly fully deployed.** 13 open positions with ~$932 of ~$1,000 deployed — already 2x the target concurrent-position count. Only ~$68 of powder remains. Combined with a risk_off tape, the bar for a new entry is very high.
+**FatPipe Networks (FATN)**, $6.30, +1.83%. Micro-cap ~$88M.
 
----
+Catalyst (14:40 UTC today — ~3 hours old, very fresh): "FatPipe Announces SATBoost for Starlink, Viasat and Amazon LEO: Up to 300% Faster Data Flow and Better Connectivity" (The AI Journal, sentiment 0.87 — highest in the entire funnel). FatPipe is a real SD-WAN/network optimization company; SATBoost is a network acceleration product aimed at the fast-growing satellite internet stack (Starlink, Viasat, Amazon Kuiper). Volume 457K is solid for an $88M market-cap name.
 
-## Finalists Considered (and rejected)
+Stage of move: barely moved (+1.83%) despite a high-conviction headline published 3 hours ago. This is the classic early entry — market hasn't noticed yet. Technology sector is one of today's top performers. Sized to remaining powder: 7 × $6.35 = $44.45.
 
-### 1. NRIX — Nurix Therapeutics (sec_8k fresh today)
-**Thesis:** Roche deal ($700M upfront + up to $2.3B) announced June 8 for bexobrutideg (oral BTK degrader). Fresh 8-K filed today (11:06 UTC, ~2.5h before this run) presenting EHA Congress data: 83% ORR, 22.1 months mPFS in heavily-pretreated relapsed/refractory CLL. Oppenheimer maintains positive rating post-deal. Highest-conviction name in the pipeline.
+Catalyst age: fresh today (14:40 UTC) — ideal per freshness rule.
 
-**Why not a direct buy now:** Already in watchlist with a breakout trigger at $16.50. With only ~$68 powder and risk_off tape, the trigger entry via watchlist is cleaner — waits for volume confirmation rather than chasing. If stock breaks $16.50, bot enters automatically (4 shares ≈ $66.40).
+## Finalists Considered / Passed
 
-### 2. XERS — Xeris Biopharma ($6.71, +3.23%)
-**Thesis:** Retiring $23M of 8% notes at a discount — balance sheet improvement. +3.23% relative strength vs Healthcare sector -2.15%.
+- **DRTS (Alpha Tau)** — $9.61, +4.0%, FDA clearance to complete REGAIN glioblastoma enrollment (12:39 UTC). Bullish (0.414). Healthcare sector. Volume 402K. Clean catalyst but sentiment lower than FATN and catalyst 5 hrs older. Added to watchlist pullback $9.25.
+- **DAKT (Daktronics)** — $20.71, +8.26%, Roth/MKM buy initiation (13:56 UTC). Volume 500K. Good setup but already up 8%+ — extension risk. Added to watchlist pullback $19.50.
+- **CAMP (CAMP4 Therapeutics)** — $4.39, +1.04%, Chardan buy initiation (13:09 UTC). Healthcare. Real catalyst but volume only 31K — too thin. Passed.
+- **TOYO** — $12.88, +2.22%, $185.6M US solar supply deals. Only up 2% on significant contract news. Added to watchlist breakout $13.25.
+- **HOFT (Hooker Furnishings)** — +21.65%, already extended intraday. Hard deprioritize per stage rule.
+- **CPNG (Coupang)** — +11.44%, extended move post-8-K. Passed.
+- **ATEX (Anterix)** — +21.98%, $79/share (near budget cap), extended. Passed.
+- **ADIL (Adial Pharma)** — +34.26%, halt-resume blow-off. Hard pass.
+- **ORCL (Oracle)** — -11.38%, big earnings miss selloff. Not a buy.
 
-**Why passed:** Healthcare is the worst sector today (-2.15%). The debt-retirement catalyst is mildly positive but not a momentum driver. With the sector under heavy pressure and only $68 of powder left, risk/reward doesn't clear the bar. Skipped.
+## Watchlist Updates
 
-### 3. AAPG — Ascentage Pharma ($17.07, flat)
-**Thesis:** B.Riley initiates with Buy, $45 price target on a $17 stock. Published 02:39 UTC (~11 hours old).
+Removed: KALV (expires 06-12 tomorrow) and AEVA (expires 06-12 tomorrow). Added DAKT (pullback $19.50) and TOYO (breakout $13.25). 12 active watchlist entries remain.
 
-**Why passed:** Catalyst stale (11h old) and stock completely flat — market shrugged at the initiation. Zero price confirmation. Skipped.
+## Holdings Read
 
----
+| Symbol | Unrealized | Note |
+|--------|------------|------|
+| BNAI   | +7.25%     | In candidates today (news_smallcap) — thesis intact, sell brain watching |
+| CLLS   | -0.31%     | Strong CAR-T data presented at EHA 2026 today — catalyst live, hold |
+| GASS   | -1.00%     | Quiet; near flat |
+| AVR    | -3.44%     | Modest drift, sell brain monitors |
+| ABSI   | -11.24%    | Deepest loser — sell brain owns exit decision |
+| TISI   | -8.68%     | Underwater; sell brain manages |
+| RXRX   | -8.81%     | Underwater; sell brain manages |
+| APLD   | -7.29%     | Underwater; sell brain manages |
+| Others | small      | Near flat — minimal P&L impact |
 
-## Notable Names Passed (broader scan)
-
-- **OCC** (+28%): No real underlying catalyst — just a stock-page article. Extended. Hard pass.
-- **BATL** (+57%), **DSY** (+291%), **PBLS** (+58%), **SDOT** (+108%): Parabolic no-catalyst movers. All fail the stage rule — blow-off tops with no room left.
-- **FUBO** (+2.6%): NBC/Fubo deal catalyst from 03:40 UTC — 10 hours old and already in the price. Stale.
-- **LMNR** (+8.9%): Lake Street buy reiteration, stale 11 hours. Move already taken.
-- **OSPN** (+1.15%): Rising while market dips — genuine relative strength. But catalyst from 07:40 UTC (6h old), and $68 budget makes sizing too thin. Watchlist candidate for a future run when account has more room.
-- **AMC** (+7.2%): 8-K filed today — content unknown, could be routine. AMC structurally challenged. Skipped.
-- **APPS** (+3.8%): Digital Turbine hit 52-week high. Interesting but catalyst is 6h old and $68 budget makes sizing negligible.
-- **KLAC / AMAT / LRCX**: Barclays buy call (~12:30 UTC, fresh). Strong semiconductor equipment thesis. All priced far above the $150 per-position budget. Untradeable at our size.
-- **HSIC** (Henry Schein): Analyst upgrade today (~12:04 UTC), bullish. Healthcare worst sector today. Skip.
-
----
-
-## Holdings Read (Sell Brain's responsibility)
-
-| Symbol | Qty | Avg    | Last   | Unrlzd%  |
-|--------|-----|--------|--------|----------|
-| ABSI   | 6   | $7.12  | $6.47  | -9.1%    |
-| APLD   | 2   | $41.44 | $39.00 | -5.9%    |
-| ATHE   | 1   | $4.23  | $4.00  | -5.4%    |
-| AVR    | 15  | $9.87  | $9.60  | -2.7%    |
-| BNAI   | 7   | $19.46 | $20.25 | +4.1%    |
-| CLLS   | 44  | $3.19  | $3.08  | -3.5%    |
-| EVTL   | 14  | $2.12  | $2.16  | +1.9%    |
-| GASS   | 15  | $9.51  | $9.52  | +0.1%    |
-| MNKD   | 1   | $3.68  | $3.70  | +0.5%    |
-| PLSE   | 2   | $25.49 | $24.75 | -2.9%    |
-| RXRX   | 18  | $3.29  | $3.05  | -7.3%    |
-| SLDB   | 9   | $6.86  | $6.77  | -1.3%    |
-| TISI   | 3   | $18.09 | $16.34 | -9.7%    |
-
-BNAI, EVTL, GASS, MNKD in the green. ABSI (-9.1%) and TISI (-9.7%) approaching -10% pain levels. Healthcare/Industrial pressure today makes these vulnerable. All exits are the Sell Brain's call.
-
----
-
-## Watchlist Status
-
-12 trigger-level setups in watchlist.json, all good_until dates valid. NRIX note updated with today's EHA clinical data confirmation (83% ORR CLL). Bot will auto-enter the instant any trigger fires.
+No re-buys on any held symbol. All exits are the sell brain's domain.

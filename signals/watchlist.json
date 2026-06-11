@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-11T13:34:41Z",
+  "generated_utc": "2026-06-11T17:41:00Z",
   "watch": [
     {
       "symbol": "NRIX",
@@ -10,7 +10,7 @@
       "take_profit": 19.50,
       "stop_loss": 15.50,
       "good_until": "2026-06-14",
-      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Fresh 8-K June 11 (11:06 UTC) confirms EHA Congress data: 83% ORR, 22.1 months mPFS in 2nd-line CLL. Non-dilutive. Re-breakout above $16.50 on volume. 4x$16.60=$66.40."
+      "note": "Roche deal: $700M upfront + up to $2.3B total for BTK degrader bexobrutideg (June 8). Fresh 8-K June 11 (11:47 UTC) confirms EHA Congress data: 83% ORR, 22.1 months mPFS in 2nd-line CLL. Non-dilutive. Re-breakout above $16.50 on volume. 4x$16.60=$66.40."
     },
     {
       "symbol": "GHRS",
@@ -22,17 +22,6 @@
       "stop_loss": 24.50,
       "good_until": "2026-06-17",
       "note": "GH Research Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 is next catalyst. Enter on breakout above $26.50 on volume."
-    },
-    {
-      "symbol": "KALV",
-      "trigger": "breakout",
-      "trigger_price": 27.25,
-      "quantity": 5,
-      "limit_price": 27.45,
-      "take_profit": 30.50,
-      "stop_loss": 25.50,
-      "good_until": "2026-06-12",
-      "note": "Kalvista Pharmaceuticals hit 52-week high at $27.00 today with 4.2M volume on a -1.58% tape — unusual accumulation vs broad weakness. Breakout above $27.25 confirms momentum continuation. Small pharma $1.44B cap. 5x$27.45=$137.25."
     },
     {
       "symbol": "SPRY",
@@ -65,7 +54,7 @@
       "take_profit": 18.50,
       "stop_loss": 14.50,
       "good_until": "2026-06-13",
-      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +18% today to $17.20. Enter on pullback to $15.50 consolidation. 9x$15.60=$140.40."
+      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst 10:20 UTC June 10). Ran +18% to $17.20. Enter on pullback to $15.50 consolidation. 9x$15.60=$140.40."
     },
     {
       "symbol": "ALVO",
@@ -112,17 +101,6 @@
       "note": "Eledon tegoprubart T1D trial promising results (June 8). Enter on pullback to $3.30 support for better R/R."
     },
     {
-      "symbol": "AEVA",
-      "trigger": "pullback",
-      "trigger_price": 22.50,
-      "quantity": 1,
-      "limit_price": 22.60,
-      "take_profit": 26.50,
-      "stop_loss": 21.00,
-      "good_until": "2026-06-12",
-      "note": "City of Fargo selected Aeva CityOS for intersection safety (catalyst 10:59 UTC June 10). AI/smart-city gov contract. Enter on pullback to $22.50. Qty 1 given near-maxed account."
-    },
-    {
       "symbol": "HROW",
       "trigger": "pullback",
       "trigger_price": 35.00,
@@ -132,6 +110,28 @@
       "stop_loss": 32.50,
       "good_until": "2026-06-13",
       "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10 at 10:38 UTC. Up +7.3% to $35.90 vs Healthcare -2.16% -- strong relative strength on catalyst day. Enter on pullback to $35 consolidation. 4x$35.20=$140.80."
+    },
+    {
+      "symbol": "DAKT",
+      "trigger": "pullback",
+      "trigger_price": 19.50,
+      "quantity": 7,
+      "limit_price": 19.65,
+      "take_profit": 23.50,
+      "stop_loss": 18.00,
+      "good_until": "2026-06-16",
+      "note": "Roth/MKM initiates Daktronics (display tech) with Buy rating (13:56 UTC June 11). Up 8.3% today to $20.71 on volume 500K. Buy-initiation upgrades often carry 2-3 days of momentum. Enter on pullback to $19.50 consolidation after today's pop. 7x$19.65=$137.55."
+    },
+    {
+      "symbol": "TOYO",
+      "trigger": "breakout",
+      "trigger_price": 13.25,
+      "quantity": 11,
+      "limit_price": 13.35,
+      "take_profit": 16.00,
+      "stop_loss": 12.25,
+      "good_until": "2026-06-16",
+      "note": "TOYO secures $185.6M in US solar supply deals (news_smallcap, June 11). Up only 2.22% to $12.88 on meaningful contract news - market hasn't priced it yet. Breakout above $13.25 on volume confirms follow-through. 11x$13.35=$146.85."
     }
   ]
 }
