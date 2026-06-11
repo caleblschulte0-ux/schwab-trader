@@ -1,8 +1,5 @@
 {
-  "generated_utc": "2026-06-11T17:41:00Z",
-  "funnel": {"scanned": 299, "leading": 93, "in_budget": 185, "had_catalyst": 42, "finalists": 5, "picked": 1},
-  "orders": [
-    {"symbol": "FATN", "action": "BUY", "instrument": "stock",
-     "quantity": 7, "limit_price": 6.35}
-  ]
+  "generated_utc": "2026-06-11T13:34:41Z",
+  "funnel": {"scanned": 301, "leading": 155, "in_budget": 85, "had_catalyst": 28, "finalists": 3, "picked": 0},
+  "orders": []
 }
