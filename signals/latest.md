@@ -1,54 +1,59 @@
-# Brain Run — 2026-06-12T13:44:27Z
+# Brain Run — 2026-06-12T17:40:52Z
 
-**Funnel:** scanned 266 → 40 shortlisted → 34 in budget → 15 with real catalyst → 3 finalists → picked 0
+**Funnel:** scanned 294 → 40 shortlisted → 37 in budget → 15 with real catalyst → 2 finalists → picked 0
 
-**Market tape:** SPY +0.17%, VIX 19.13 — tone **neutral**. Tech sector leading hard (+4.57%), Industrials +3.57%. Energy (-0.45%) and Consumer Defensive (-0.82%) lagging. Normal discipline.
+**Market tape:** SPY +0.54%, VIX 18.33 — tone **risk_on**. Technology (+1.53%), Utilities (+0.78%), Basic Materials (+0.57%) leading. Consumer Cyclical (-0.94%) and Healthcare (-0.22%) lagging. Normal-to-aggressive discipline warranted, but account is the binding constraint.
 
 ---
 
 ## Decision: No New Buys
 
-**Account is essentially fully deployed.** 13 open positions with ~$958 cost basis against ~$1,000 account — roughly $42 in remaining powder. No setup justified forcing a tiny position; the few interesting names are either extended or have weak catalysts. Sitting out this run is correct.
+**Account is essentially fully deployed.** 13 open positions with ~$957 cost basis against ~$1,000 account — approximately $43 in remaining powder. No position sized at $43 or less meaningfully moves the needle, and forcing a sub-$50 entry with 13 names already open is not disciplined capital allocation. Letting the sell brain work to free up capital first.
 
 ---
 
 ## Finalists Considered (and rejected)
 
-### 1. PGEN — Precigen ($4.53, +16.45%, catalyst age 7.4h)
-PAPZIMEOS gene therapy for RRP received 7-year orphan exclusivity, and new long-term durability data (complete responses beyond 4 years) were presented today. Genuine commercial traction: $21.6M Q1 2026 revenue. The underlying FDA approval is August 2025, but today's exclusivity + clinical durability data is a real, incremental catalyst. However, at +16.45% intraday this is firmly in the deprioritize zone (15–20%+ rule). The setup doesn't provide an exceptional enough argument to override that — and the only powder left ($42) makes the position size barely meaningful even if I took it. Pass.
+### 1. HLX — Helix Energy Solutions ($9.80, +0.31%, catalyst age 5.4h, score 8.8)
+Top-ranked name. FTC cleared the Helix/Hornbeck Offshore merger today. Both sec_8k + news_smallcap tags. Fresh catalyst, barely moved. Initially looked like a prime early entry — but verified: **HLX is the ACQUIRER, not the target.** This is an all-stock deal (Hornbeck shareholders receive 10.27 HLX shares). FTC clearance is modestly positive for the acquirer (removes deal-break risk, deal will close) but there's no converging acquisition price to trade toward. The +0.31% is the right reaction. Energy sector muted (+0.02%) today. No compelling upside asymmetry. **Pass.** Not added to watchlist (acquirer in all-stock deal ≠ arb target).
 
-### 2. TUYA — Tuya Smart ($2.20, +14.58%, catalyst age 3.6h)
-Partnership with Zeroth to upgrade home robots — bullish (0.40 sentiment), fresh news in the leading Technology sector (+4.57%). Volume 9.7M confirms participation. But at +14.6% it's approaching the deprioritize zone and there's no clean entry with $42 powder. Added to watchlist as a pullback target at $1.98 if it revisits support in coming days.
-
-### 3. YEXT — $3.78, -0.53% (catalyst age 10.9h)
-Director Seth Waugh bought $498k in company stock. Substantial insider conviction on a $379M small-cap. Stock is flat/slightly down despite the buy — no short-term momentum confirmation yet. Catalyst is slightly stale (10.9h). With $42 powder left, sizing would be too small to matter now. Added to watchlist at $3.72 pullback trigger; sized for when the sell brain frees up capital.
+### 2. HLIT — Harmonic Inc. ($14.87, +2.48%, catalyst age 2.4h, score 7.9)
+Strong fundamentals: Q1 2026 broadband revenue +43% YoY, EPS +143%, full-year guidance raised to $475–495M. Technology sector leading today (+1.53%). Freshest non-8K catalyst in the funnel (2.4h). The concern is that independent analysis suggests "gains from the transition may be priced in." Currently up 2.48% and has already run from lows. With $43 cash remaining, can only buy 2 shares ($29.74) — too small. **Pass on order; added to watchlist at $15.50 breakout** for when capital frees up. Best risk/reward entry would be on a pullback or a fresh breakout above the range.
 
 ---
 
 ## Notable Names Passed
 
-- **ABEO** (+3.2%, score 11.3): Board member resignation — neutral/bearish signal, not a buy.
-- **BBW** (+0.3%, score 10.3): CEO succession + expanded CFO duties — management transition is neutral, no momentum.
-- **SMSI** (−35.2%): Sharp drop with 8-K. Structural issues: 58% YoY revenue decline, reverse split approved May. Considered a put but the move is largely spent and $2.95 underlying makes liquid options unlikely.
-- **ASYS** (+17.0%): Already extended; "IT stocks in pre-market" list headline is not a catalyst.
-- **SHAZ** (+13.7%): No real catalyst — TradingView metric article.
-- **DXC** (Anthropic partner, flat, 12.4h): Stale partnership news, zero price action.
-- **PHGE** ($0.62): Below $2 price floor — hard pass.
-- **MCK / CTAS**: Large-cap, share price far above $150/position budget.
-- **Generic 8-K filers** (ISBA, ALDS, SNDA, FBNC, NEWTH, LEN-B, SAFX, HCIIP, CUENW): No actionable headlines.
+- **ABEO** ($5.56, +0.45%): Board member resignation — neutral-to-bearish signal for a small biotech. Not a buy.
+- **CCCC** ($4.03, +4.0%): Barclays maintains Buy/$7 target. Healthcare sector weak today (-0.22%). Catalyst 6.4h old. Skip.
+- **EYPT** ($12.89, +3.12%): "Analyst views and valuation in focus" — soft catalyst, healthcare weak. Pass.
+- **DXC** ($9.28, +5.16%): Johnson Fistel law firm investigation = **BEARISH** catalyst. Absolute pass.
+- **FCEL** ($17.23, -2.6%): Bullish article but stock going down on it. Against tape. Pass.
+- **GAU** ($2.12, +3.92%): AGM vote backing board = routine corporate event, not a catalyst. Near $2 floor.
+- **FJET** ($6.01, -10.96%): Down 11% on a bullish orbital-economy article — mismatch suggests unrelated drop. Unclear thesis, no clean bearish setup either (move may be spent).
+- **SMSI** ($2.81, -38.24%): 8-K triggered 38% drop. Most of the downside likely spent; option liquidity on a sub-$3 micro-cap after a crash is essentially nil. Put opportunity is past.
+- **SNBR** ($0.435): Below $2 price floor — hard pass.
+- **PHGE** ($0.53): Below $2 floor — hard pass.
+- **ASYS** ($24.68, +9.21%): "12 IT stocks in pre-market session" — list membership is not a catalyst. Already up 9.2%.
+- **TUYA** ($2.10, -4.55%): Was a mover earlier (see prior run) but now DOWN 4.5% — momentum has turned, near $2 floor. Watchlist cleared; not re-entering.
+- **Generic 8-K filers** (CLEV, DBGI, NROM, PRXA, ALFUW, ABCL, KVHI, BABB, CHMI-PA, PDLB, IBCP, IGTAW, REX, ASBPW, FREVS, TONX, GOAI, GRAF-WT, ISBA, ALDS): No actionable headlines visible; raw 8-K filings without narrative catalysts.
 
 ---
 
 ## Holdings Read
 
-13 positions open. **BNAI** is the standout winner (+9.97%, +$13.58). PLSE (+4.51%), SLDB (+3.43%) also green. **AVR** is the biggest laggard (−5.22%, −$7.73). ABSI (−9.97%), TISI (−7.63%), RXRX (−6.53%) underwater — all exits are the sell brain's call. MNKD is in the funnel this run but OWNED — no re-buy.
+13 positions open. Holdings timestamp from 2026-06-11 18:35 UTC — sell brain has had overnight + today's morning to act, positions likely similar or partially trimmed.
 
-Total unrealized P/L across 13 positions: approx **−$7.17** (improvement from yesterday's −$23.52 as tape recovered and BNAI ran).
+**Winners (paper):** BNAI +9.97% (+$13.58), PLSE +4.51% (+$2.30), SLDB +3.43% (+$2.12)
+**Near flat:** EVTL +0.47% (+$0.14), MNKD +0.14% (+$0.01)
+**Underwater:** ABSI -9.97% (-$4.26), TISI -7.63% (-$4.14), RXRX -6.53% (-$3.87), AVR -5.22% (-$7.73), APLD -2.38% (-$1.97), ATHE -1.89% (-$0.08), GASS -1.05% (-$1.50), CLLS -1.25% (-$1.76)
+
+Total estimated unrealized P&L: **-$7.16** across all 13 positions. BNAI is carrying the book; AVR and ABSI are the main drags.
 
 ---
 
 ## Watchlist Updates
 
-- Removed: **KALV** (expired 2026-06-12), **AEVA** (expired 2026-06-12)
-- Added: **YEXT** pullback trigger at $3.72 (director $498k insider buy, June 12)
-- Carried forward: NRIX, GHRS, SPRY, DFIN, YB, ALVO, BWAY, COYA, ELDN, HROW (good_until dates refreshed)
+- **Added:** HLIT (breakout $15.50 — strong Q1 fundamentals, tech sector leader, await capital)
+- **Carried forward:** NRIX, GHRS, SPRY, DFIN, YB (expires tomorrow), ALVO, BWAY, COYA, ELDN, HROW, YEXT
+- **Total watchlist:** 12 entries (at cap)

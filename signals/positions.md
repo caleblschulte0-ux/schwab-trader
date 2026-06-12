@@ -1,4 +1,4 @@
-# Open Positions — updated 2026-06-12T13:44:27Z
+# Open Positions — updated 2026-06-12T17:40:52Z
 
 | Symbol | Qty | Avg     | Take-profit | Stop       | Last seen | Unrealized $      |
 |--------|-----|---------|-------------|------------|-----------|-------------------|
