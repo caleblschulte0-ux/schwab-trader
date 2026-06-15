@@ -1,24 +1,22 @@
-# Open Positions — updated 2026-06-15T13:46:00Z
-*(holdings.json last written 2026-06-12T18:35:21Z — bot dormant over weekend; sell brain may have acted)*
+# Open Positions — updated 2026-06-15T17:44:23Z
+*(holdings.json last written 2026-06-12T18:35:21Z — prices below are as of that snapshot)*
 
-| Symbol | Qty | Avg    | Last   | Unrealized $      |
-|--------|-----|--------|--------|-------------------|
-| ABSI   |   6 |  $7.12 |  $6.53 | −$3.57  (−8.36%)  |
-| APLD   |   2 | $41.44 | $44.03 | +$5.17  (+6.24%)  |
-| ATHE   |   1 |  $4.23 |  $4.38 | +$0.15  (+3.43%)  |
-| AVR    |  15 |  $9.87 |  $9.11 | −$11.40  (−7.70%) |
-| BNAI   |   7 | $19.46 | $20.44 | +$6.86  (+5.04%)  |
-| CLLS   |  44 |  $3.19 |  $3.12 | −$3.30  (−2.35%)  |
-| EVTL   |  14 |  $2.12 |  $2.14 | +$0.28  (+0.94%)  |
-| GASS   |  15 |  $9.51 |  $9.63 | +$1.80  (+1.26%)  |
-| MNKD   |   1 |  $3.68 |  $3.73 | +$0.05  (+1.36%)  |
-| PLSE   |   2 | $25.49 | $25.67 | +$0.36  (+0.71%)  |
-| RXRX   |  18 |  $3.29 |  $3.16 | −$2.34  (−3.95%)  |
-| SLDB   |   9 |  $6.86 |  $7.15 | +$2.61  (+4.23%)  |
-| TISI   |   3 | $18.09 | $16.75 | −$4.02  (−7.41%)  |
+| Symbol | Qty | Avg     | Last    | Unrealized % | Unrealized $ | Value    |
+|--------|-----|---------|---------|--------------|--------------|----------|
+| ABSI   | 6   | $7.12   | $6.53   | -8.36%       | -$3.57       | $39.15   |
+| APLD   | 2   | $41.44  | $44.03  | +6.24%       | +$5.17       | $88.05   |
+| ATHE   | 1   | $4.23   | $4.38   | +3.43%       | +$0.15       | $4.38    |
+| AVR    | 15  | $9.87   | $9.11   | -7.70%       | -$11.40      | $136.65  |
+| BNAI   | 7   | $19.46  | $20.44  | +5.04%       | +$6.86       | $143.08  |
+| CLLS   | 44  | $3.19   | $3.12   | -2.35%       | -$3.30       | $137.06  |
+| EVTL   | 14  | $2.12   | $2.14   | +0.94%       | +$0.28       | $29.96   |
+| GASS   | 15  | $9.51   | $9.63   | +1.26%       | +$1.80       | $144.45  |
+| MNKD   | 1   | $3.68   | $3.73   | +1.36%       | +$0.05       | $3.73    |
+| PLSE   | 2   | $25.49  | $25.67  | +0.71%       | +$0.36       | $51.34   |
+| RXRX   | 18  | $3.29   | $3.16   | -3.95%       | -$2.34       | $56.88   |
+| SLDB   | 9   | $6.86   | $7.15   | +4.23%       | +$2.61       | $64.35   |
+| TISI   | 3   | $18.09  | $16.75  | -7.41%       | -$4.02       | $50.25   |
 
-**Open positions:** 13   **Est. market value deployed:** ~$949 of ~$1,000   **Powder left:** ~$51
+**Open positions:** 13   **Est. cash deployed:** ~$957 of ~$1,000   **Powder left:** ~$43
 
-**Total unrealized P/L:** approx **−$7.35** across the book
-
-> All exits are owned by the SELL BRAIN — no take-profit or stop-loss levels set here.
+*Note: A TRIP BUY order (~$149) was issued at 13:46Z today (not yet in holdings). If executed, available powder is effectively $0. Sell brain exits on ABSI/AVR/TISI (all >7% underwater) would free capital for fresh setups.*

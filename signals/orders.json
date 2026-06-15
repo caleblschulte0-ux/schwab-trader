@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-15T13:46:00Z",
-  "funnel": {"scanned": 289, "leading": 40, "in_budget": 37, "had_catalyst": 28, "finalists": 3, "picked": 1},
-  "orders": [
-    {"symbol": "TRIP", "action": "BUY", "instrument": "stock", "quantity": 12, "limit_price": 12.45}
-  ]
+  "generated_utc": "2026-06-15T17:44:23Z",
+  "funnel": {"scanned": 311, "leading": 40, "in_budget": 32, "had_catalyst": 25, "finalists": 3, "picked": 0},
+  "orders": []
 }

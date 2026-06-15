@@ -1,15 +1,6 @@
 {
-  "generated_utc": "2026-06-15T13:46:00Z",
+  "generated_utc": "2026-06-15T17:44:23Z",
   "watch": [
-    {
-      "symbol": "AIOT",
-      "trigger": "breakout",
-      "trigger_price": 4.40,
-      "quantity": 33,
-      "limit_price": 4.45,
-      "good_until": "2026-06-16",
-      "note": "PowerFleet Q4 FY2026 earnings released this morning (bullish sentiment, catalyst_age 2.4h). Stock barely +0.24% — market hasn't reacted yet. Breakout above $4.40 on volume confirms earnings acceptance."
-    },
     {
       "symbol": "NRIX",
       "trigger": "breakout",
@@ -18,8 +9,8 @@
       "limit_price": 16.60,
       "take_profit": 19.50,
       "stop_loss": 15.50,
-      "good_until": "2026-06-16",
-      "note": "Roche deal $700M upfront + $2.3B total for BTK degrader bexobrutideg. Fresh 8-K June 11 confirms EHA Congress data: 83% ORR, 22.1mo mPFS in 2nd-line CLL. Non-dilutive. Breakout above $16.50 on volume."
+      "good_until": "2026-06-18",
+      "note": "Roche deal $700M upfront + $2.3B total for BTK degrader bexobrutideg. EHA Congress data: 83% ORR, 22.1mo mPFS in 2nd-line CLL. Non-dilutive. Breakout above $16.50 on volume."
     },
     {
       "symbol": "GHRS",
@@ -30,7 +21,7 @@
       "take_profit": 31.00,
       "stop_loss": 24.50,
       "good_until": "2026-06-17",
-      "note": "GH Research Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Enter on breakout above $26.50 on volume."
+      "note": "GH Research Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Enter on breakout above $26.50."
     },
     {
       "symbol": "SPRY",
@@ -41,73 +32,7 @@
       "take_profit": 12.50,
       "stop_loss": 9.50,
       "good_until": "2026-06-17",
-      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update overdue (Q1 call said definitive update early June). Breakout above $10.20 confirms announcement landed."
-    },
-    {
-      "symbol": "DFIN",
-      "trigger": "pullback",
-      "trigger_price": 36.50,
-      "quantity": 3,
-      "limit_price": 36.75,
-      "take_profit": 42.00,
-      "stop_loss": 34.00,
-      "good_until": "2026-06-16",
-      "note": "Donnelley Financial AI-powered iXBRL SEC filing tagging launched June 10. Real SaaS for regulatory compliance, barely moved on news. Enter on pullback to $36.50. 3x$36.75=$110.25."
-    },
-    {
-      "symbol": "ALVO",
-      "trigger": "pullback",
-      "trigger_price": 3.90,
-      "quantity": 38,
-      "limit_price": 3.92,
-      "take_profit": 4.60,
-      "stop_loss": 3.65,
-      "good_until": "2026-06-16",
-      "note": "Alvotech FDA resubmission for AVT16 (Simponi) + Eylea biosimilars. Currently $4.17, -1.19% today. Wait for pullback to $3.90 support."
-    },
-    {
-      "symbol": "BWAY",
-      "trigger": "pullback",
-      "trigger_price": 13.75,
-      "quantity": 10,
-      "limit_price": 13.85,
-      "take_profit": 16.00,
-      "stop_loss": 12.75,
-      "good_until": "2026-06-16",
-      "note": "BrainsWay 12-month sustained depression remission study published (June 9). TMS clinical milestone. Wait for pullback to $13.75 support."
-    },
-    {
-      "symbol": "COYA",
-      "trigger": "breakout",
-      "trigger_price": 4.75,
-      "quantity": 31,
-      "limit_price": 4.80,
-      "take_profit": 5.75,
-      "stop_loss": 4.35,
-      "good_until": "2026-06-16",
-      "note": "Coya Therapeutics ALSTARS ALS trial: first cohort began blinded active-treatment extension (June 8). ~$107M mktcap, barely moved. Volume breakout above $4.75 required."
-    },
-    {
-      "symbol": "ELDN",
-      "trigger": "pullback",
-      "trigger_price": 3.30,
-      "quantity": 44,
-      "limit_price": 3.35,
-      "take_profit": 4.00,
-      "stop_loss": 3.05,
-      "good_until": "2026-06-16",
-      "note": "Eledon tegoprubart T1D trial promising results (June 8). Enter on pullback to $3.30 support for better R/R."
-    },
-    {
-      "symbol": "HROW",
-      "trigger": "pullback",
-      "trigger_price": 35.00,
-      "quantity": 4,
-      "limit_price": 35.20,
-      "take_profit": 41.00,
-      "stop_loss": 32.50,
-      "good_until": "2026-06-15",
-      "note": "Harrow re-launched VERKAZIA (cyclosporine ophthalmic) June 10. Up +7.3% to $35.90 vs Healthcare -2.16% on catalyst day. Enter on pullback to $35 consolidation. 4x$35.20=$140.80."
+      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update pending (Q1 call: definitive update early June). Breakout above $10.20 confirms announcement."
     },
     {
       "symbol": "YEXT",
@@ -118,7 +43,7 @@
       "take_profit": 4.50,
       "stop_loss": 3.45,
       "good_until": "2026-06-17",
-      "note": "Director Seth Waugh bought $498k in company stock (June 12). Substantial insider conviction on a $379M market-cap name. Pullback to $3.72 gives clean r/r entry. 20x$3.75=$75."
+      "note": "Director Seth Waugh bought $498k in company stock (June 12). Substantial insider conviction on $379M mktcap name. Pullback to $3.72 gives clean r/r. 20x$3.75=$75."
     },
     {
       "symbol": "HLIT",
@@ -129,7 +54,69 @@
       "take_profit": 18.00,
       "stop_loss": 14.20,
       "good_until": "2026-06-17",
-      "note": "Harmonic Q1 2026: broadband revenue +43% YoY, EPS +143%, full-year guidance raised to $475-495M. Fresh analyst article June 12. Technology sector leading. Breakout above $15.50 signals momentum resuming. 9x$15.60=$140.40."
+      "note": "Harmonic Q1 2026: broadband revenue +43% YoY, EPS +143%, full-year guidance raised. Breakout above $15.50 signals momentum resuming. 9x$15.60=$140.40."
+    },
+    {
+      "symbol": "DFIN",
+      "trigger": "pullback",
+      "trigger_price": 36.50,
+      "quantity": 3,
+      "limit_price": 36.75,
+      "take_profit": 42.00,
+      "stop_loss": 34.00,
+      "good_until": "2026-06-16",
+      "note": "Donnelley Financial AI-powered iXBRL SEC filing tagging launched June 10. Real SaaS for regulatory compliance. Enter on pullback to $36.50. 3x$36.75=$110.25."
+    },
+    {
+      "symbol": "ALVO",
+      "trigger": "pullback",
+      "trigger_price": 3.90,
+      "quantity": 38,
+      "limit_price": 3.92,
+      "take_profit": 4.60,
+      "stop_loss": 3.65,
+      "good_until": "2026-06-16",
+      "note": "Alvotech FDA resubmission for AVT16 (Simponi) + Eylea biosimilars pipeline. Wait for pullback to $3.90 support."
+    },
+    {
+      "symbol": "COYA",
+      "trigger": "breakout",
+      "trigger_price": 4.75,
+      "quantity": 31,
+      "limit_price": 4.80,
+      "take_profit": 5.75,
+      "stop_loss": 4.35,
+      "good_until": "2026-06-16",
+      "note": "Coya Therapeutics ALSTARS ALS trial: first cohort began blinded active-treatment extension (June 8). ~$107M mktcap. Volume breakout above $4.75 required."
+    },
+    {
+      "symbol": "ELDN",
+      "trigger": "pullback",
+      "trigger_price": 3.30,
+      "quantity": 44,
+      "limit_price": 3.35,
+      "take_profit": 4.00,
+      "stop_loss": 3.05,
+      "good_until": "2026-06-16",
+      "note": "Eledon tegoprubart T1D trial promising results (June 8). Enter on pullback to $3.30 support for better r/r."
+    },
+    {
+      "symbol": "CRML",
+      "trigger": "pullback",
+      "trigger_price": 10.00,
+      "quantity": 14,
+      "limit_price": 10.10,
+      "good_until": "2026-06-18",
+      "note": "Critical Metals Corp: Japan reportedly eyes Greenland rare earths — Tanbreez mine angle. Up 5.4% today (catalyst_age 5.9h, score 7.4). Critical minerals diversification theme. Pullback to $10 is cleaner entry. 14x$10.10=$141.40."
+    },
+    {
+      "symbol": "EVTC",
+      "trigger": "pullback",
+      "trigger_price": 26.50,
+      "quantity": 5,
+      "limit_price": 26.75,
+      "good_until": "2026-06-17",
+      "note": "Evertec: director insider purchase June 15 (catalyst_age 2.9h, sentiment bullish 0.492). +5% today. LatAm payments, $1.7B cap. Pullback to $26.50 improves r/r. 5x$26.75=$133.75."
     }
   ]
 }

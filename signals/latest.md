@@ -1,65 +1,75 @@
-# Brain Run — 2026-06-15T13:46:00Z
+# Brain Run — 2026-06-15T17:44:23Z
 
-**Funnel:** scanned 289 → 40 shortlisted → 40 with leading signal → 37 in budget → 28 with real catalyst → 3 finalists → picked 1
-
-**Market tape:** SPY **+1.52%**, VIX **16.09** → tone: **risk_on**. Broad green day; normal aggressiveness applies.
-
-Sector rankings: Industrials (+3.57%), Utilities (+1.39%), Technology (+0.94%), Basic Materials (+0.86%), Consumer Defensive (+0.58%). Weak: Communication Services (−0.84%), Healthcare (−0.37%), Consumer Cyclical (−0.35%).
-
-**Sector tilt:** Favor Industrials/Tech names; skeptical of Healthcare and Consumer Cyclical longs.
+**Funnel:** scanned 311 → 40 shortlisted (all leading) → 32 fit budget → 25 with real catalyst → 3 finalists → picked 0
 
 ---
 
-## Pick — BUY TRIP (12 shares @ $12.45 limit, $149.40)
-
-**Catalyst (age: 2.4h, confirmed via 8-K + web search):** Tripadvisor filed an 8-K this morning and announced the sale of TheFork — its European restaurant-reservation platform — to American Express for **$700M all-cash**. TheFork generated $232M LTM revenue and $28M LTM adjusted EBITDA. At $700M, Amex is paying ~3× revenue and ~25× EBITDA. Tripadvisor's market cap is $1.44B, so this single transaction delivers **~49% of market cap in cash**, with minimal tax leakage (net proceeds ≈ gross proceeds). Deal expected to close before end-2026 subject to regulatory approvals.
-
-**Why the setup is still alive:** The stock surged +14% in premarket, then settled to only +4.2% ($12.41) at the open. That pullback from premarket highs is a knee-jerk sell-the-gap reaction, not a fundamental reappraisal. The cash windfall is real, and the stock at +4.2% is dramatically under-pricing a company receiving nearly half its market cap in cash. Volume is confirming participation (7.66M shares, highest in the funnel). No blow-off at open; the stock is not extended. This is an early-session setup with material room to $14+ once buy-side models catch up.
-
-**Why it's the best name in the funnel:** Highest score (11.3), freshest confirmed double-signal (sec_8k + news_smallcap, 2.4h), highest volume, and a material, unambiguous capital event — not a thin press-release catalyst.
-
-**Sizing:** 12 × $12.45 = $149.40 (at the $150 cap). Account is nearly fully deployed (~$949 of ~$1,000 in open positions per holdings.json as of 2026-06-12); executor will trim or reject if cash is genuinely insufficient.
+## Market Tape
+SPY +1.93%, VIX 16.11 → **risk_on**. Broad green across most sectors.
+Hot sectors: Industrials (+3.31%), Comm Services (+1.65%), Utilities (+1.32%).
+Weak: Financial Services (-0.64%). Normal aggressiveness warranted — tape is constructive.
 
 ---
 
-## Finalists Considered and Passed
+## Why No Orders This Run
 
-**AIOT ($4.22, +0.24%, score 11.3):** PowerFleet released Q4 FY2026 results this morning (catalyst 2.4h, bullish sentiment 0.544). The stock has barely moved, which is either opportunity (market hasn't digested) or a warning (results mixed beneath the headline). Without visibility into the specific beat/miss magnitude, the flat reaction is a yellow flag. Added to watchlist: breakout above $4.40 would confirm market acceptance and create a clean entry.
-
-**WNC ($9.71, +8.61%, score 7.7):** Wabash tapped an Ontario dealer for Canadian highway fleets. Industrials is the strongest sector today (+3.57%), which accounts for most of the 8.6% move. The underlying catalyst — a regional distribution deal — does not independently justify 8.6%. Already extended without a proportionate catalyst; passed.
+**Account fully deployed.** Holdings.json (last updated 2026-06-12) shows 13 open positions with ~$957 cost basis, leaving ~$43 estimated powder — insufficient for a meaningful $150 new position. In addition, the prior run (13:46Z today) issued a TRIP BUY for ~$149 that has not yet been reflected in holdings; if executed, the account would be at ~$1,106 deployed. No new buys warranted until the sell brain clears some positions.
 
 ---
 
-## Notable Passes (rest of the funnel)
+## Finalists Evaluated (no buys possible)
 
-- **ELTX (−71%)** / **NMRA ($0.96)** / **AIM ($0.42)** / **MEHA ($0.02)** / **CNTX ($0.98)**: Blow-offs or sub-$2 floor. Hard pass.
-- **FOX (−13.8%)**, **BAND (−10.1%)**, **CMTL (−16.8%)**: Losers on bad 8-Ks. Puts would chase a completed downside move; options on blown-off names are too expensive. Pass.
-- **NTLA ($12.11, −1.94%)**: Headline claimed +5% premarket but stock is actually red. Healthcare sector weakest today. Pass.
-- **TNXP ($11.35, +6.57%)**: Director-buy signal is bullish but healthcare headwind and +6.57% already. Pass.
-- **VRA ($3.79, +9.54%)**: Turnaround earnings story, but +9.54% already and consumer cyclical weak. Extended. Pass.
-- **JACK (+7.48%, 16.4h)**: Catalyst is a $3.7M property sale — immaterial and stale. Pass.
-- **BMNR (+8.22%, 0.8h)**: Very fresh 8-K but no visible context on what it contains. Up 8.2% without knowing the news. Pass.
-- **ALGT (+6.45%)**: Move doesn't match the "catalyst" (flight diversion is negative news). Pass.
-- **INSP, SMPL, NRIX, KOS, ADTN**: Analyst notes, technical analysis, or stale investment-thesis articles — no fresh corporate event. Pass.
+**CRML — Critical Metals Corp ($10.44, +5.4%)** [catalyst age: 5.9h]
+Rare earths name getting attention as Japan reportedly eyes Greenland rare earth assets — Tanbreez mine angle. Sentiment bullish (0.617), volume 3.1M on a $1.53B name. Up 5.4% but not extended. Fresh thematic catalyst with critical minerals diversification tailwinds. Added to watchlist as pullback entry at $10.00.
 
----
+**EVTC — Evertec ($27.59, +4.99%)** [catalyst age: 2.9h]
+Director insider purchase is a high-conviction signal on a $1.7B LatAm payments name. Up ~5% on the buy signal. Clean catalyst, fresh (2.9h). At $27.59 × 5 shares = $137.95 — fits budget when powder is available. Added to watchlist at $26.50 pullback.
 
-## Holdings Read (as of 2026-06-12T18:35Z — bot dormant over weekend)
-13 open positions, ~$949 market value deployed of ~$1,000. Account is nearly fully invested.
-
-**Winners:** APLD +6.2% (+$5.17), BNAI +5.0% (+$6.86), SLDB +4.2% (+$2.61)
-**Near flat:** GASS +1.3%, MNKD +1.4%, EVTL +0.9%, PLSE +0.7%
-**Underwater:** AVR −7.7% (−$11.40), ABSI −8.4% (−$3.57), TISI −7.4% (−$4.02), RXRX −3.9% (−$2.34), CLLS −2.4% (−$3.30)
-
-Total estimated unrealized P/L: **−$7.35** across all 13 positions.
-
-Anti-chase confirmed: none of the 13 held symbols appear in today's orders.
+**EGY — Vaalco Energy ($5.54, +1.37%)** [catalyst age: 4.9h]
+Strong Gabon/Egypt well results released this morning. Stock barely moved (+1.4%) despite bullish news — still early. Small cap ($577M), energy sector up 0.92% today. Would need 27 shares × $5.55 = $149.85, fits budget. Early window but no powder to act.
 
 ---
 
-## Watchlist Updates
+## Notable Passes
 
-- **Removed:** YB (expired 2026-06-13)
-- **Added:** AIOT (breakout $4.40 — earnings confirmation play)
-- **Carried forward:** NRIX, GHRS, SPRY, DFIN, ALVO, BWAY, COYA, ELDN, HROW, YEXT, HLIT
-- **Total watchlist:** 12 entries (at cap)
+**TRIP ($12.87, +3.7%)** — Already the pick from the previous run (13:46Z today, $12.45 × 12 shares). TheFork $700M sale to AmEx is the catalyst. Skip re-buy per anti-chase rule.
+
+**CMTL ($2.77, -42.6%)** — Comtech selling satellite division to Gilat. Massive gap down on strategic uncertainty. No long entry. Put: stock barely above $2, options illiquid on a $79M cap name.
+
+**BAND ($56.32, -13.8%)** — Convertible note offering = dilutive = bearish. Legitimate put candidate, but $56 stock puts would cost ~$90-120 premium — exceeds available $43 powder.
+
+**PAYO ($7.03, +4.1%)** — T3 halt resume + 8-K. No specific content in the headline (generic 8-K filing notice). Can't assess the catalyst quality. Pass.
+
+**CODA ($9.61, -12.0%)** — Earnings call "highlights" were bullish per headline but stock down 12% — market rejected the print. Avoid fighting tape.
+
+**AGIO ($30.78, +4.5%)** — Mitapivat sickle cell data. Move partially spent (up 7.4% earlier per headline). Neutral sentiment score (0.005). Pass.
+
+**ELTX ($4.10, -72.4%) / NMRA ($0.87, -51.1%)** — Massive crash losers. NMRA well below $2 floor. Hard pass.
+
+---
+
+## Holdings Read (as of 2026-06-12 snapshot)
+
+13 open positions, ~$957 deployed of ~$1,000:
+
+| Symbol | Unrealized % | Note |
+|--------|-------------|------|
+| APLD | +6.24% | Running nicely |
+| BNAI | +5.04% | Holding well |
+| SLDB | +4.23% | Positive drift |
+| ATHE | +3.43% | Small position |
+| GASS | +1.26% | Slight positive |
+| MNKD | +1.36% | Tiny position |
+| EVTL | +0.94% | Near flat |
+| PLSE | +0.71% | Slight positive |
+| CLLS | -2.35% | Minor drawdown |
+| RXRX | -3.95% | Under water |
+| TISI | -7.41% | Sell brain watching |
+| AVR | -7.70% | Sell brain watching |
+| ABSI | -8.36% | Sell brain watching |
+
+The three losing positions (TISI, AVR, ABSI) are natural sell brain candidates. If any close, powder opens up for fresh entries. Watchlist is pre-loaded with CRML, EVTC, EGY, and existing quality setups to fire automatically when cash is available.
+
+---
+
+**No web search this run** — funnel broad and clean; no specific finalist required verification given zero available capital to deploy.
