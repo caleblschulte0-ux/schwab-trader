@@ -1,21 +1,24 @@
-# Open Positions — updated 2026-06-12T17:40:52Z
+# Open Positions — updated 2026-06-15T13:46:00Z
+*(holdings.json last written 2026-06-12T18:35:21Z — bot dormant over weekend; sell brain may have acted)*
 
-| Symbol | Qty | Avg     | Take-profit | Stop       | Last seen | Unrealized $      |
-|--------|-----|---------|-------------|------------|-----------|-------------------|
-| ABSI   |   6 |  $7.12  | sell brain  | sell brain |   $6.41   | −$4.26  (−9.97%)  |
-| APLD   |   2 | $41.44  | sell brain  | sell brain |  $40.46   | −$1.97  (−2.38%)  |
-| ATHE   |   1 |  $4.23  | sell brain  | sell brain |   $4.15   | −$0.08  (−1.89%)  |
-| AVR    |  15 |  $9.87  | sell brain  | sell brain |   $9.36   | −$7.73  (−5.22%)  |
-| BNAI   |   7 | $19.46  | sell brain  | sell brain |  $21.40   | +$13.58  (+9.97%) |
-| CLLS   |  44 |  $3.19  | sell brain  | sell brain |   $3.15   | −$1.76  (−1.25%)  |
-| EVTL   |  14 |  $2.12  | sell brain  | sell brain |   $2.13   | +$0.14  (+0.47%)  |
-| GASS   |  15 |  $9.51  | sell brain  | sell brain |   $9.41   | −$1.50  (−1.05%)  |
-| MNKD   |   1 |  $3.68  | sell brain  | sell brain |   $3.69   | +$0.01  (+0.14%)  |
-| PLSE   |   2 | $25.49  | sell brain  | sell brain |  $26.64   | +$2.30  (+4.51%)  |
-| RXRX   |  18 |  $3.29  | sell brain  | sell brain |   $3.08   | −$3.87  (−6.53%)  |
-| SLDB   |   9 |  $6.86  | sell brain  | sell brain |   $7.10   | +$2.12  (+3.43%)  |
-| TISI   |   3 | $18.09  | sell brain  | sell brain |  $16.71   | −$4.14  (−7.63%)  |
+| Symbol | Qty | Avg    | Last   | Unrealized $      |
+|--------|-----|--------|--------|-------------------|
+| ABSI   |   6 |  $7.12 |  $6.53 | −$3.57  (−8.36%)  |
+| APLD   |   2 | $41.44 | $44.03 | +$5.17  (+6.24%)  |
+| ATHE   |   1 |  $4.23 |  $4.38 | +$0.15  (+3.43%)  |
+| AVR    |  15 |  $9.87 |  $9.11 | −$11.40  (−7.70%) |
+| BNAI   |   7 | $19.46 | $20.44 | +$6.86  (+5.04%)  |
+| CLLS   |  44 |  $3.19 |  $3.12 | −$3.30  (−2.35%)  |
+| EVTL   |  14 |  $2.12 |  $2.14 | +$0.28  (+0.94%)  |
+| GASS   |  15 |  $9.51 |  $9.63 | +$1.80  (+1.26%)  |
+| MNKD   |   1 |  $3.68 |  $3.73 | +$0.05  (+1.36%)  |
+| PLSE   |   2 | $25.49 | $25.67 | +$0.36  (+0.71%)  |
+| RXRX   |  18 |  $3.29 |  $3.16 | −$2.34  (−3.95%)  |
+| SLDB   |   9 |  $6.86 |  $7.15 | +$2.61  (+4.23%)  |
+| TISI   |   3 | $18.09 | $16.75 | −$4.02  (−7.41%)  |
 
-**Open positions:** 13   **Est. cash deployed:** ~$958 of ~$1,000   **Powder left:** ~$42
+**Open positions:** 13   **Est. market value deployed:** ~$949 of ~$1,000   **Powder left:** ~$51
 
-**Total unrealized P/L:** approx **−$7.17** across the book
+**Total unrealized P/L:** approx **−$7.35** across the book
+
+> All exits are owned by the SELL BRAIN — no take-profit or stop-loss levels set here.

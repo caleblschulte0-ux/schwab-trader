@@ -1,6 +1,15 @@
 {
-  "generated_utc": "2026-06-12T17:40:52Z",
+  "generated_utc": "2026-06-15T13:46:00Z",
   "watch": [
+    {
+      "symbol": "AIOT",
+      "trigger": "breakout",
+      "trigger_price": 4.40,
+      "quantity": 33,
+      "limit_price": 4.45,
+      "good_until": "2026-06-16",
+      "note": "PowerFleet Q4 FY2026 earnings released this morning (bullish sentiment, catalyst_age 2.4h). Stock barely +0.24% — market hasn't reacted yet. Breakout above $4.40 on volume confirms earnings acceptance."
+    },
     {
       "symbol": "NRIX",
       "trigger": "breakout",
@@ -46,17 +55,6 @@
       "note": "Donnelley Financial AI-powered iXBRL SEC filing tagging launched June 10. Real SaaS for regulatory compliance, barely moved on news. Enter on pullback to $36.50. 3x$36.75=$110.25."
     },
     {
-      "symbol": "YB",
-      "trigger": "pullback",
-      "trigger_price": 15.50,
-      "quantity": 9,
-      "limit_price": 15.60,
-      "take_profit": 18.50,
-      "stop_loss": 14.50,
-      "good_until": "2026-06-13",
-      "note": "Yuanbao Q1 2026 revenue +36%, first cash dividend approved (catalyst June 10). Ran +18% to $17.20. Enter on pullback to $15.50 consolidation. 9x$15.60=$140.40."
-    },
-    {
       "symbol": "ALVO",
       "trigger": "pullback",
       "trigger_price": 3.90,
@@ -65,7 +63,7 @@
       "take_profit": 4.60,
       "stop_loss": 3.65,
       "good_until": "2026-06-16",
-      "note": "Alvotech FDA accepted AVT16 biosimilar application (June 9). Mild relative strength vs selloff. Wait for pullback to $3.90 support."
+      "note": "Alvotech FDA resubmission for AVT16 (Simponi) + Eylea biosimilars. Currently $4.17, -1.19% today. Wait for pullback to $3.90 support."
     },
     {
       "symbol": "BWAY",
@@ -120,7 +118,7 @@
       "take_profit": 4.50,
       "stop_loss": 3.45,
       "good_until": "2026-06-17",
-      "note": "Director Seth Waugh bought $498k in company stock (June 12). Substantial insider conviction on a $379M market-cap name. Stock flat/slightly down today despite buy. Pullback to $3.72 gives clean r/r entry. 20x$3.75=$75. Await capital from sell-brain exits."
+      "note": "Director Seth Waugh bought $498k in company stock (June 12). Substantial insider conviction on a $379M market-cap name. Pullback to $3.72 gives clean r/r entry. 20x$3.75=$75."
     },
     {
       "symbol": "HLIT",
@@ -131,7 +129,7 @@
       "take_profit": 18.00,
       "stop_loss": 14.20,
       "good_until": "2026-06-17",
-      "note": "Harmonic Q1 2026: broadband revenue +43% YoY, EPS +143%, full-year 2026 guidance raised to $475-495M. Fresh analyst bullish article June 12 (2.4h age). Technology sector leading today (+1.53%). Breakout above $15.50 signals momentum resuming. 9x$15.60=$140.40. Await sell-brain capital."
+      "note": "Harmonic Q1 2026: broadband revenue +43% YoY, EPS +143%, full-year guidance raised to $475-495M. Fresh analyst article June 12. Technology sector leading. Breakout above $15.50 signals momentum resuming. 9x$15.60=$140.40."
     }
   ]
 }
