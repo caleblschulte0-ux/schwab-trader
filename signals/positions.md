@@ -1,4 +1,4 @@
-# Open Positions — updated 2026-06-16T13:41:52Z
+# Open Positions — updated 2026-06-16T17:52:15Z
 *(holdings.json last written 2026-06-12T18:35:21Z — prices below are as of that snapshot)*
 
 | Symbol | Qty | Avg     | Last    | Unrealized % | Unrealized $ | Value    |
@@ -17,6 +17,4 @@
 | SLDB   | 9   | $6.86   | $7.15   | +4.23%       | +$2.61       | $64.35   |
 | TISI   | 3   | $18.09  | $16.75  | -7.41%       | -$4.02       | $50.25   |
 
-**Open positions:** 13   **Est. cash deployed (at cost):** ~$957 of ~$1,000   **Powder left:** ~$43
-
-*Note: holdings.json is 4 days old. Sell brain may have closed positions since June 12; treat this as a floor on what is held, not necessarily the current state.*
+**Open positions:** 13   **Est. cash deployed:** ~$957 of ~$1,000   **Powder left:** ~$43   **Net unrealized:** -$7.35

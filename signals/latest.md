@@ -1,43 +1,50 @@
-# Brain Run — 2026-06-16T13:41:52Z
+# Brain Run — 2026-06-16T17:52:15Z
 
-Funnel: scanned 299 → 39 in budget → 34 with catalyst → 4 finalists → picked 0
+Funnel: scanned 288 → 40 shortlisted → 39 in budget → 31 with catalyst → 3 finalists → picked 1
 
 ## Market Tape
-**Neutral.** SPY +0.07%, VIX 16.01. Market is essentially flat with no directional read from the indices. Industrials is the standout sector (+6.85%), followed by Energy (+1.19%), Communication Services (+1.09%), Utilities (+1.03%), and Technology (+0.94%). Financial Services is the sole meaningful laggard (-1.36%). Tone: standard discipline, slight tilt toward Industrials/drone/defense and CommSvc names.
+SPY -0.38%, VIX 15.91, tone: **neutral**. Clear sector rotation: Industrials (+5.21%), Utilities (+2.44%), Real Estate (+1.25%) leading; Technology is the day's worst sector (-1.97%). Not a risk-off day but definitely not a broad tech-momentum tape. Stock-picker's session — lean into Industrials/Utilities names, be skeptical of tech longs swimming against the current.
 
-## Account Status — Nearly Fully Deployed
-**13 open positions, ~$957 deployed of ~$1,000 account. Remaining powder: ~$43.** This is insufficient for a new standard $150 position. Holdings.json last updated 2026-06-12 (4 days stale) — sell brain may have freed up capital since then, but the file is authoritative and I'm treating all 13 positions as held. No new orders this run.
+## Holdings Check
+13 open positions (~$957 cost-basis deployed of ~$1,000). Powder: ~$43. Account is near-full; one small position is the maximum this run.
 
-## Finalists
+Positions already owned (no re-buys): ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI.
 
-### 1. RCAT — Red Cat Holdings ($11.97, +7.07%) — catalyst age 3.9h ❌ powder / stage
-Red Cat published "Positioning for Growth in Expanding Defense Drone Markets" ~3.9h ago. Volume 11.1M shares is real participation; Industrials sector (strongest today at +6.85%) amplifies the tailwind. Problem: already up 7% from the news — not blow-off territory yet, but enough that the early edge is partially spent. If it consolidates back toward $11.25, the setup becomes much cleaner. **Added to watchlist: pullback trigger $11.25, 13 shares × $11.35 = $147.55.**
+## Pick — BLDP (Ballard Power Systems)
+**BUY 10 shares @ $4.17 limit → $41.70**
 
-### 2. UMAC — Unusual Machines ($24.73, +1.22%) — catalyst age 1.1h ❌ powder
-Announced $30M strategic equity investment 1.1h ago — a concrete, dollar-quantified event on a drone manufacturer. Stock has barely moved (+1.2%), meaning we'd be genuinely early. Industrials/defense theme aligns with today's tape. Risk: "strategic equity" can mean dilution (new shares to a partner); the subdued stock reaction suggests the market is digesting this. At $1.18B market cap, slightly on the larger side for this strategy but fits the budget (5 shares ≈ $124). **Added to watchlist: breakout above $25.00 confirms buyers absorbing the dilution risk.**
+**Catalyst (5.4h old, published 2026-06-16T12:09 UTC):** Ballard Power secured a 15 MW fuel cell order — concrete contract win, not a vague announcement. Sentiment: Bullish (score 0.452).
 
-### 3. LPRO — Open Lending (T3 halt / merger) — catalyst age 0.4h ❌ no price data
-Web search confirmed: LPRO announced a Merger Agreement with Bregal Sagemount PE on June 16. T3 halt (news pending) resolved, 8-K filed 0.4h ago. However: (1) no current price in the shortlist to evaluate the arb spread; (2) shareholders recently approved a reverse stock split (1-for-5 to 1-for-7), signaling prior price pressure; (3) merger arb is a low-volatility, tight-spread play — not this strategy's strength. Not tradeable today without a known deal price vs. current trading price.
+**Stage:** +0.12% on the day — practically unchanged. The market has not bid this up yet. True early entry; the move is ahead, not behind.
 
-### 4. VNCE — Vince Holding Corp ($5.01, +3.94%) — catalyst age 1.8h ❌ powder
-Earnings guidance 8-K filed 1.8h ago, bullish sentiment 0.512. Microcap at $64M. Stock +3.9% reaction suggests the market read the guidance positively. Fresh catalyst, small-cap, barely moved — exactly the early-entry profile this strategy wants. Would be a real buy if powder were available. **Added to watchlist: breakout above $5.20, 28 shares × $5.30 = $148.40.**
+**Setup:** Small-cap ($1.26B market cap), well above $2 floor at $4.165. Volume 4.38M shares confirms broad participation. Fuel cells/clean energy sit loosely adjacent to Industrials and Utilities, the two hottest sectors today — not fighting sector headwinds.
+
+**Catalyst age:** 5.4h. Fresh, not stale.
+
+**Sizing:** 10 shares × $4.17 = $41.70 — consumes essentially all remaining powder responsibly.
+
+**Risk:** Small position by necessity. Fuel cell names can be volatile. Sell brain owns the exit.
+
+## Finalists Considered
+
+**DXC ($9.215, +4.6%, catalyst age 2.9h)** — TCS faces $70M U.S. Supreme Court loss; DXC is a direct IT-services competitor, so the read-through is logical and the catalyst is the freshest in the funnel. BUT: DXC is Technology sector, down -1.97% today. Sentiment is only "Somewhat-Bullish" (0.314). A company-specific catalyst in the weakest sector faces a real headwind; passed in favor of BLDP which is not swimming against the tape.
+
+**TRIP ($12.565, +0.04%, catalyst age 6.4h)** — Wedbush raised price target to $20 from $19. A $20 target vs. $12.57 price implies 59% upside — the analyst is constructive. However: a $1 PT raise is a modest catalyst; the stock has shown zero price response in 6.4 hours; at $12.57, only 3 shares fit the remaining powder (~$38) making the position even smaller than BLDP's. Not compelling enough.
 
 ## Notable Passes
-- **VITL** (+9.4%): 8-K is a routine annual shareholder meeting results filing (directors/auditor approved). No business catalyst — skip.
-- **SHMD** (+11.07%): AI-driven €26M factory orders, but news is 4.4h old and stock has already run 11%. Too extended.
-- **VLN** (+10.86%): Valens Semiconductor product announcement, price $2.45 barely above $2 floor, up 10.86% on 3.4h-old news. Pass.
-- **VENU** (-20.76%): Despite a "bullish" headline, stock is down 20.76%. Clear catalyst/price disconnect — likely bad news buried elsewhere. Do not touch long.
-- **STI** (-17.3%): Already spent the downside move; chasing puts on an exhausted drop is not the play.
-- **VFF** ($2.05): Cannabis expansion news but right at the $2 hard floor. Pass.
-- **BBAI / DNA / DSP**: RSU grants or insider sells — not business catalysts.
+- **BAND (-1.0%, $52.28):** $275M convertible notes offering — dilutive to equity, bearish setup. Skip.
+- **VITL (+0.09%):** Shareholders approved directors and KPMG at annual meeting — routine governance, not a catalyst.
+- **AVTX (-1.3%):** IND filing planned for 1H 2027 — forward-looking pipeline update; stock declining, no current setup.
+- **AMPG (+15.6%):** Business development hires; already +15.6% intraday → deprioritize per stage rules.
+- **ARQQ (+11.1%):** Neutral-sentiment quantum article; +11% intraday, late stage.
+- **VWAV (+14.78%):** Already +14.78%, late stage.
+- **AEVA (-10.2%):** LiDAR partnership with Bendix; neutral sentiment, stock already -10% — too late for a put, move is spent.
+- **HUN (-17.7%), ASTC (-18.3%), SNWV (-41.4%):** Crashed. Far too late for a put; move is priced in.
+- **SPCX ($213/share):** Exceeds $150 single-share budget.
+- **Bare 8-K entries (SPFX, GBLI, IRD, QSEAU, CRK, NTST, D, WLYB, LTCH):** Filing notices only; no actionable headline without reading the actual document.
+- **BIOA (+6.8%):** Phase 2 cardiovascular trial dosing first patient — neutral sentiment (0.017), already up 6.8%. Late stage on a weak signal.
 
-## Current Holdings Read
-Holdings as of 2026-06-12 (sell brain managing all exits):
-- **Green:** BNAI (+5.04%), APLD (+6.24%), SLDB (+4.23%), ATHE (+3.43%), GASS (+1.26%), MNKD (+1.36%), PLSE (+0.71%), EVTL (+0.94%)
-- **Red:** ABSI (-8.36%), AVR (-7.70%), TISI (-7.41%), RXRX (-3.95%), CLLS (-2.35%)
-- None of the 13 held symbols appear in today's shortlist → no anti-chase conflicts.
+## Watchlist Update
+**TOYO added** — breakout above $13.00. Launched a $357M, 1.5 GW HJT solar cell factory in Houston today (Bullish sentiment 0.741). Currently +0.97% at $12.52 — consolidating, not yet moved. Industrials-aligned theme. 11 shares × $13.10 = $144.10. Good until 2026-06-19.
 
-## Watchlist Changes This Run
-- **Pruned (expired today 2026-06-16):** DFIN, ALVO, COYA, ELDN
-- **New additions:** RCAT (pullback $11.25), UMAC (breakout $25.00), VNCE (breakout $5.20)
-- **Retained:** NRIX, GHRS, SPRY, YEXT, HLIT, CRML, EVTC
+Existing watchlist entries (NRIX, GHRS, SPRY, YEXT, HLIT, CRML, EVTC, RCAT, UMAC, VNCE) refreshed — good-until dates extended to June 18-19. Theses remain intact.

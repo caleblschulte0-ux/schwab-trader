@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-06-16T13:41:52Z",
-  "funnel": {"scanned": 299, "leading": 38, "in_budget": 39, "had_catalyst": 34, "finalists": 4, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-16T17:52:15Z",
+  "funnel": {"scanned": 288, "leading": 40, "in_budget": 39, "had_catalyst": 31, "finalists": 3, "picked": 1},
+  "orders": [
+    {"symbol": "BLDP", "action": "BUY", "instrument": "stock", "quantity": 10, "limit_price": 4.17}
+  ]
 }
