@@ -76,10 +76,16 @@ MAX_WATCHLIST           = 12    # cap watch items (bounds per-symbol quote calls
 MAX_WATCHLIST_AGE_HOURS = 48    # ignore a watchlist file older than this (fail-safe)
 # ==============================
 
-APP_KEY       = os.environ["SCHWAB_APP_KEY"].strip()
-APP_SECRET    = os.environ["SCHWAB_APP_SECRET"].strip()
-REFRESH_TOKEN = os.environ["SCHWAB_REFRESH_TOKEN"].strip()
+# Schwab creds. In DRY_RUN the paper book never places real orders and can mark
+# itself from free FMP quotes (see _fmp_quote_fallback), so a missing/expired Schwab
+# credential must NOT hard-crash import or the run — it degrades to FMP. Live mode
+# still requires all three (get_client raises and main re-raises when DRY_RUN=false).
+APP_KEY       = os.environ.get("SCHWAB_APP_KEY", "").strip()
+APP_SECRET    = os.environ.get("SCHWAB_APP_SECRET", "").strip()
+REFRESH_TOKEN = os.environ.get("SCHWAB_REFRESH_TOKEN", "").strip()
 CALLBACK      = os.environ.get("SCHWAB_CALLBACK_URL", "https://127.0.0.1/").strip()
+# Free fallback quote source for DRY_RUN when Schwab is unavailable (same key candidates.py uses).
+FMP_API_KEY   = os.environ.get("FMP_API_KEY", "").strip()
 DRY_RUN       = os.environ.get("DRY_RUN", "true").strip().lower() != "false"
 # SECOND, independent gate for OPTIONS: long puts stay PAPER-ONLY until this is
 # explicitly turned on — so even with DRY_RUN=false (stocks live), no REAL option
@@ -231,6 +237,11 @@ def write_holdings(positions: dict, marks: dict | None = None) -> None:
             row["value"] = round(qty * last * mult, 2)
         rows.append(row)
     data = {"updated_utc": datetime.now(timezone.utc).isoformat(), "holdings": rows}
+    # Tell the brain its REAL spendable cash so it sizes new buys off actual buying
+    # power — not a "$1,000 − cost basis" guess that ignores realized losses. In paper
+    # mode this is the simulated book's cash; live mode omits it (Schwab is the truth).
+    if DRY_RUN and _PAPER is not None:
+        data["cash"] = round(_PAPER.get("cash", 0.0), 2)
     try:
         os.makedirs(os.path.dirname(HOLDINGS_FILE), exist_ok=True)
         with open(HOLDINGS_FILE, "w", encoding="utf-8") as fh:
@@ -483,7 +494,41 @@ def get_blocked_buy_symbols(client: SchwabClient, account_hash: str) -> tuple[se
         return blocked, False
 
 
-def quote(client: SchwabClient, symbol: str) -> dict:
+# --- Free quote fallback (DRY_RUN only) -------------------------------------------
+# When Schwab auth is unavailable (e.g. the refresh token expired), the PAPER book
+# would otherwise freeze — no marks, no fills. These helpers mark the book from FMP
+# (the same free source candidates.py uses) so paper trading keeps running with NO
+# Schwab dependency at all. Live mode never uses this path.
+_FMP_QUOTES: dict[str, float] = {}   # {SYMBOL: last_price} cache, filled per run
+
+
+def _fmp_prefetch(symbols: list[str]) -> None:
+    """One batched FMP call for ALL given symbols (keeps us well under the free-tier
+    call budget), cached into _FMP_QUOTES. Best-effort: any failure just leaves the
+    cache as-is, and the affected marks are simply skipped (the book still persists)."""
+    syms = sorted({s.strip().upper() for s in symbols if s and s.strip()})
+    if not syms or not FMP_API_KEY:
+        return
+    import urllib.request
+    url = f"https://financialmodelingprep.com/api/v3/quote/{','.join(syms)}?apikey={FMP_API_KEY}"
+    try:
+        with urllib.request.urlopen(url, timeout=20) as r:
+            rows = json.loads(r.read().decode("utf-8"))
+    except Exception as exc:  # noqa: BLE001 - degrade gracefully (no marks this run)
+        print(f"(warn) FMP fallback quote failed: {exc}")
+        return
+    for row in rows if isinstance(rows, list) else []:
+        sym, price = row.get("symbol"), row.get("price")
+        if sym and isinstance(price, (int, float)) and price > 0:
+            _FMP_QUOTES[str(sym).strip().upper()] = float(price)
+    print(f"(info) FMP fallback marked {len(_FMP_QUOTES)}/{len(syms)} symbols.")
+
+
+def quote(client: SchwabClient | None, symbol: str) -> dict:
+    # DRY_RUN with no Schwab client: serve the FMP fallback price as both last & ask.
+    if client is None:
+        p = _FMP_QUOTES.get(str(symbol).strip().upper())
+        return {"lastprice": p, "askprice": p} if p else {}
     try:
         q = client.get_quotes(symbol)
         d = _as_dict(q)
@@ -885,14 +930,31 @@ def main() -> int:
     # WHY it was bought — signal tag, catalyst age, tape — for analyze.py to score.
     _CANDIDATES_BY_SYM, _TAPE_TONE = load_candidates_index()
 
-    client = get_client()
-    acct = client.get_account_numbers().accounts[0]
+    # Schwab login. In DRY_RUN a failure (e.g. expired refresh token) must NOT freeze the
+    # paper book — fall back to client=None and mark from FMP. Live mode cannot proceed
+    # without a real client, so re-raise there.
+    client = None
+    acct = None
+    try:
+        client = get_client()
+        acct = client.get_account_numbers().accounts[0]
+    except Exception as exc:  # noqa: BLE001
+        if not DRY_RUN:
+            raise
+        print(f"(warn) Schwab unavailable ({exc}) — DRY_RUN paper book will mark from FMP quotes.")
     positions = get_positions(client)
+    # When Schwab is down in DRY_RUN, batch-prefetch FMP quotes for every name we may
+    # need to price this run (held + fresh BUY picks + watchlist) in ONE call.
+    if client is None:
+        _gu, _ords, _fn = load_orders()
+        pick_syms = [o.get("symbol") for o in _ords if o.get("action") == "BUY" and o.get("symbol")]
+        watch_syms = [w.get("symbol") for w in load_watchlist()]
+        _fmp_prefetch(list(positions) + pick_syms + watch_syms)
     # One live quote per held name (drop any that fail to quote), reused for: holdings
     # enrichment, the exit sell price, and the end-of-run paper mark-to-market (no double-quoting).
     marks = {s: m for s in positions if (m := live_last(quote(client, s)))}
     write_holdings(positions, marks)  # enriched ground-truth holdings for the brain + sell router
-    blocked, orders_ok = get_blocked_buy_symbols(client, acct.hash_value)
+    blocked, orders_ok = get_blocked_buy_symbols(client, acct.hash_value if acct else "")
     print(f"Held: {', '.join(positions) or '(none)'} | No-rebuy: "
           f"{', '.join(blocked) or '(none)'} | read_ok={orders_ok}")
 

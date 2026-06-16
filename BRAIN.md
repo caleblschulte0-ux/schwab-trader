@@ -177,8 +177,14 @@ Keep the best 0–3. Quality of the FINALISTS is what matters; the funnel's brea
 already handled FOR you by candidates.py. A run that carefully reads a few hundred
 pre-built rows and yields 1 great pick (or 0) is a great run — you do NOT need to
 hand-search to feel "wide."
-Account has ~$1,000 to deploy total, ≤ $150 per position (so up to ~6 positions at
-once). Don't pile everything into one run — leave powder for later setups.
+Account is ~$1,000 total, ≤ $150 per position (so up to ~6 positions at once). Don't
+pile everything into one run — leave powder for later setups.
+**SIZE OFF REAL CASH, NOT HEADROOM.** Read the top-level `cash` field in
+`holdings.json` — that is your ACTUAL spendable buying power. Do NOT compute "powder"
+as $1,000 minus cost basis: realized losses already reduced the cash, so that math
+overstates what you can spend. If a pick's quantity × price exceeds `cash`, it cannot
+fill — trim the quantity to fit `cash`, or if `cash` is too small to take a meaningful
+position, issue NO buy and note that the account needs the sell brain to free capital.
 
 ## STEP 3 — STAGE / CHASE RULE (be proactive, not reckless)
 Judge the entry RELATIVE TO THE SETUP and to WHERE IN THE MOVE you are:
