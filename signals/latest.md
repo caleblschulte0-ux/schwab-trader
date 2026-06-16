@@ -1,75 +1,43 @@
-# Brain Run — 2026-06-15T17:44:23Z
+# Brain Run — 2026-06-16T13:41:52Z
 
-**Funnel:** scanned 311 → 40 shortlisted (all leading) → 32 fit budget → 25 with real catalyst → 3 finalists → picked 0
-
----
+Funnel: scanned 299 → 39 in budget → 34 with catalyst → 4 finalists → picked 0
 
 ## Market Tape
-SPY +1.93%, VIX 16.11 → **risk_on**. Broad green across most sectors.
-Hot sectors: Industrials (+3.31%), Comm Services (+1.65%), Utilities (+1.32%).
-Weak: Financial Services (-0.64%). Normal aggressiveness warranted — tape is constructive.
+**Neutral.** SPY +0.07%, VIX 16.01. Market is essentially flat with no directional read from the indices. Industrials is the standout sector (+6.85%), followed by Energy (+1.19%), Communication Services (+1.09%), Utilities (+1.03%), and Technology (+0.94%). Financial Services is the sole meaningful laggard (-1.36%). Tone: standard discipline, slight tilt toward Industrials/drone/defense and CommSvc names.
 
----
+## Account Status — Nearly Fully Deployed
+**13 open positions, ~$957 deployed of ~$1,000 account. Remaining powder: ~$43.** This is insufficient for a new standard $150 position. Holdings.json last updated 2026-06-12 (4 days stale) — sell brain may have freed up capital since then, but the file is authoritative and I'm treating all 13 positions as held. No new orders this run.
 
-## Why No Orders This Run
+## Finalists
 
-**Account fully deployed.** Holdings.json (last updated 2026-06-12) shows 13 open positions with ~$957 cost basis, leaving ~$43 estimated powder — insufficient for a meaningful $150 new position. In addition, the prior run (13:46Z today) issued a TRIP BUY for ~$149 that has not yet been reflected in holdings; if executed, the account would be at ~$1,106 deployed. No new buys warranted until the sell brain clears some positions.
+### 1. RCAT — Red Cat Holdings ($11.97, +7.07%) — catalyst age 3.9h ❌ powder / stage
+Red Cat published "Positioning for Growth in Expanding Defense Drone Markets" ~3.9h ago. Volume 11.1M shares is real participation; Industrials sector (strongest today at +6.85%) amplifies the tailwind. Problem: already up 7% from the news — not blow-off territory yet, but enough that the early edge is partially spent. If it consolidates back toward $11.25, the setup becomes much cleaner. **Added to watchlist: pullback trigger $11.25, 13 shares × $11.35 = $147.55.**
 
----
+### 2. UMAC — Unusual Machines ($24.73, +1.22%) — catalyst age 1.1h ❌ powder
+Announced $30M strategic equity investment 1.1h ago — a concrete, dollar-quantified event on a drone manufacturer. Stock has barely moved (+1.2%), meaning we'd be genuinely early. Industrials/defense theme aligns with today's tape. Risk: "strategic equity" can mean dilution (new shares to a partner); the subdued stock reaction suggests the market is digesting this. At $1.18B market cap, slightly on the larger side for this strategy but fits the budget (5 shares ≈ $124). **Added to watchlist: breakout above $25.00 confirms buyers absorbing the dilution risk.**
 
-## Finalists Evaluated (no buys possible)
+### 3. LPRO — Open Lending (T3 halt / merger) — catalyst age 0.4h ❌ no price data
+Web search confirmed: LPRO announced a Merger Agreement with Bregal Sagemount PE on June 16. T3 halt (news pending) resolved, 8-K filed 0.4h ago. However: (1) no current price in the shortlist to evaluate the arb spread; (2) shareholders recently approved a reverse stock split (1-for-5 to 1-for-7), signaling prior price pressure; (3) merger arb is a low-volatility, tight-spread play — not this strategy's strength. Not tradeable today without a known deal price vs. current trading price.
 
-**CRML — Critical Metals Corp ($10.44, +5.4%)** [catalyst age: 5.9h]
-Rare earths name getting attention as Japan reportedly eyes Greenland rare earth assets — Tanbreez mine angle. Sentiment bullish (0.617), volume 3.1M on a $1.53B name. Up 5.4% but not extended. Fresh thematic catalyst with critical minerals diversification tailwinds. Added to watchlist as pullback entry at $10.00.
-
-**EVTC — Evertec ($27.59, +4.99%)** [catalyst age: 2.9h]
-Director insider purchase is a high-conviction signal on a $1.7B LatAm payments name. Up ~5% on the buy signal. Clean catalyst, fresh (2.9h). At $27.59 × 5 shares = $137.95 — fits budget when powder is available. Added to watchlist at $26.50 pullback.
-
-**EGY — Vaalco Energy ($5.54, +1.37%)** [catalyst age: 4.9h]
-Strong Gabon/Egypt well results released this morning. Stock barely moved (+1.4%) despite bullish news — still early. Small cap ($577M), energy sector up 0.92% today. Would need 27 shares × $5.55 = $149.85, fits budget. Early window but no powder to act.
-
----
+### 4. VNCE — Vince Holding Corp ($5.01, +3.94%) — catalyst age 1.8h ❌ powder
+Earnings guidance 8-K filed 1.8h ago, bullish sentiment 0.512. Microcap at $64M. Stock +3.9% reaction suggests the market read the guidance positively. Fresh catalyst, small-cap, barely moved — exactly the early-entry profile this strategy wants. Would be a real buy if powder were available. **Added to watchlist: breakout above $5.20, 28 shares × $5.30 = $148.40.**
 
 ## Notable Passes
+- **VITL** (+9.4%): 8-K is a routine annual shareholder meeting results filing (directors/auditor approved). No business catalyst — skip.
+- **SHMD** (+11.07%): AI-driven €26M factory orders, but news is 4.4h old and stock has already run 11%. Too extended.
+- **VLN** (+10.86%): Valens Semiconductor product announcement, price $2.45 barely above $2 floor, up 10.86% on 3.4h-old news. Pass.
+- **VENU** (-20.76%): Despite a "bullish" headline, stock is down 20.76%. Clear catalyst/price disconnect — likely bad news buried elsewhere. Do not touch long.
+- **STI** (-17.3%): Already spent the downside move; chasing puts on an exhausted drop is not the play.
+- **VFF** ($2.05): Cannabis expansion news but right at the $2 hard floor. Pass.
+- **BBAI / DNA / DSP**: RSU grants or insider sells — not business catalysts.
 
-**TRIP ($12.87, +3.7%)** — Already the pick from the previous run (13:46Z today, $12.45 × 12 shares). TheFork $700M sale to AmEx is the catalyst. Skip re-buy per anti-chase rule.
+## Current Holdings Read
+Holdings as of 2026-06-12 (sell brain managing all exits):
+- **Green:** BNAI (+5.04%), APLD (+6.24%), SLDB (+4.23%), ATHE (+3.43%), GASS (+1.26%), MNKD (+1.36%), PLSE (+0.71%), EVTL (+0.94%)
+- **Red:** ABSI (-8.36%), AVR (-7.70%), TISI (-7.41%), RXRX (-3.95%), CLLS (-2.35%)
+- None of the 13 held symbols appear in today's shortlist → no anti-chase conflicts.
 
-**CMTL ($2.77, -42.6%)** — Comtech selling satellite division to Gilat. Massive gap down on strategic uncertainty. No long entry. Put: stock barely above $2, options illiquid on a $79M cap name.
-
-**BAND ($56.32, -13.8%)** — Convertible note offering = dilutive = bearish. Legitimate put candidate, but $56 stock puts would cost ~$90-120 premium — exceeds available $43 powder.
-
-**PAYO ($7.03, +4.1%)** — T3 halt resume + 8-K. No specific content in the headline (generic 8-K filing notice). Can't assess the catalyst quality. Pass.
-
-**CODA ($9.61, -12.0%)** — Earnings call "highlights" were bullish per headline but stock down 12% — market rejected the print. Avoid fighting tape.
-
-**AGIO ($30.78, +4.5%)** — Mitapivat sickle cell data. Move partially spent (up 7.4% earlier per headline). Neutral sentiment score (0.005). Pass.
-
-**ELTX ($4.10, -72.4%) / NMRA ($0.87, -51.1%)** — Massive crash losers. NMRA well below $2 floor. Hard pass.
-
----
-
-## Holdings Read (as of 2026-06-12 snapshot)
-
-13 open positions, ~$957 deployed of ~$1,000:
-
-| Symbol | Unrealized % | Note |
-|--------|-------------|------|
-| APLD | +6.24% | Running nicely |
-| BNAI | +5.04% | Holding well |
-| SLDB | +4.23% | Positive drift |
-| ATHE | +3.43% | Small position |
-| GASS | +1.26% | Slight positive |
-| MNKD | +1.36% | Tiny position |
-| EVTL | +0.94% | Near flat |
-| PLSE | +0.71% | Slight positive |
-| CLLS | -2.35% | Minor drawdown |
-| RXRX | -3.95% | Under water |
-| TISI | -7.41% | Sell brain watching |
-| AVR | -7.70% | Sell brain watching |
-| ABSI | -8.36% | Sell brain watching |
-
-The three losing positions (TISI, AVR, ABSI) are natural sell brain candidates. If any close, powder opens up for fresh entries. Watchlist is pre-loaded with CRML, EVTC, EGY, and existing quality setups to fire automatically when cash is available.
-
----
-
-**No web search this run** — funnel broad and clean; no specific finalist required verification given zero available capital to deploy.
+## Watchlist Changes This Run
+- **Pruned (expired today 2026-06-16):** DFIN, ALVO, COYA, ELDN
+- **New additions:** RCAT (pullback $11.25), UMAC (breakout $25.00), VNCE (breakout $5.20)
+- **Retained:** NRIX, GHRS, SPRY, YEXT, HLIT, CRML, EVTC
