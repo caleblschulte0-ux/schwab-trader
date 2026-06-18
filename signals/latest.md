@@ -1,74 +1,65 @@
-# Brain Run — 2026-06-17T17:49:07Z
+# Brain Run — 2026-06-18T13:49:38Z
 
-**Funnel:** scanned 317 → 40 shortlisted → 30 in budget → 14 with catalyst → 3 finalists → picked 0 (VSTM already on watchlist; no new orders issued)
+**Funnel:** scanned 300 → 39 in budget → 13 with catalyst → 3 finalists → picked 1 (RLMD)
 
 ---
 
 ## Market Tape
 
-SPY -0.15%, VIX 16.89, tone: **neutral**. Hot sectors: Utilities (+1.28%), Financial Services (+1.12%), Basic Materials (+0.88%), Healthcare (+0.85%), Energy (+0.14%). Cold: Technology (-0.24%), Real Estate (-0.50%), Consumer Cyclical (-0.61%), Consumer Defensive (-0.98%), Comms (-1.48%), Industrials (-4.11%). No regime distortion — normal discipline applies.
+SPY +0.63%, VIX 17.0, tone: **risk_on** (label). But sector breadth is deceptive — only Basic Materials (+0.23%) and Financial Services (+0.21%) are in the green. Technology -1.70%, Consumer Cyclical -2.07%, Communication Services -2.25%, Industrials -5.96%, Healthcare -0.48%, Energy -1.68%. A narrow rally; aggressiveness is calibrated accordingly. Lean toward non-tech names. Industrials weakness is severe — avoid.
 
 ---
 
 ## Portfolio State
 
-13 open positions; estimated ~$43 remaining powder (cost basis ~$957 of ~$1,000). Account is nearly fully deployed. Sell brain holds the key to freeing capital — no forced positions this run.
+13 open positions; ~$43 remaining powder (~$957 of $1,000 deployed at cost basis). Account is nearly fully deployed; any new position will be small by necessity. Sell brain holds the key to freeing capital.
 
 ---
 
-## Finalists
+## Pick
 
-### 1. VSTM — BEST SETUP, ALREADY ON WATCHLIST (not double-ordered)
+### RLMD — BUY 6 shares @ $6.65 limit ($39.90 total)
 
-**Verastem Oncology** | $4.275 | +6.61% | vol 1.1M | score 9.8 | catalyst age 4.7h | signals: sec_8k + news_smallcap
+**Relmada Therapeutics** | $6.60 | +0.76% | vol 1.36M | catalyst age 2.5h | signals: news_smallcap
 
-This is the clearest catalyst of the day. The 8-K filed this morning reports **RAMP 205 positive updated data**: 86% overall survival at 6 months, 68% PFS at 6 months, 52% confirmed ORR (15/29 patients), 83% tumor shrinkage — all in first-line metastatic pancreatic ductal adenocarcinoma, one of oncology's most lethal diseases. Separately, VS-7375 dosed its first patient June 16 in TARGET-D 201, a **Phase 2 registration-directed** KRAS G12D study. KRAS G12D is one of the hottest oncology targets right now. Healthcare sector is up +0.85% today.
+**Catalyst:** H.C. Wainwright initiates coverage with Buy rating today (2026-06-18, 11:08 UTC — 2.5h old). This adds to a unanimous 5-analyst bullish consensus: Piper Sandler Buy at $12.00 (March 2026), multiple others at Buy/Strong Buy, average consensus price target ~$12.40. Current price $6.60 → ~88% upside to consensus PT.
 
-Stock is only +6.6% on data this strong — characteristic of a move still early in the digestion cycle; institutional coverage will follow. The previous brain run (13:36 UTC) already placed VSTM on the watchlist at trigger_price $4.25, qty 34, limit $4.30. VSTM is currently at $4.275 (above trigger), so the watchlist entry should fire this cycle. **Issuing a duplicate order in orders.json would risk a double-buy — so no new order is placed here.** Good_until extended to 2026-06-20.
+**Entry rationale:** Analyst initiations are clean, definitive catalysts that drive multi-day follow-on momentum. The stock has barely moved (+0.76%) since the news dropped — this is early entry, not chasing. Healthcare sector is only mildly weak (-0.48%), not a severe headwind. Volume of 1.36M is decent participation for a ~$692M pharma name. Small-cap, fits the strategy's lean-small preference. 6 shares × $6.65 = $39.90, the maximum we can deploy with ~$43 remaining.
 
-### 2. ABCL — PASSED (more extended, later-stage catalyst)
-
-**AbCellera Biologics** | $5.645 | +10.90% | vol 3.4M | score 8.6 | catalyst age 5.4h | signals: sec_8k + news_smallcap
-
-Jazz Pharmaceuticals collaboration 8-K for next-gen T-cell engaging multispecific antibodies — legitimate deal catalyst in healthcare. Already up 10.9% with a 5.4h-old catalyst — later stage than VSTM. Market cap ~$1.66B. Passed: VSTM is earlier, cheaper, and the data event is more specific and measurable.
-
-### 3. CABA — PASSED (fresh but account maxed)
-
-**Cabaletta Bio** | $3.025 | +8.04% | vol 2.5M | score 7.7 | catalyst age 2.2h | signals: news_smallcap
-
-Rese-cel enrollment progress + new financing — dual positive in autoimmune cell therapy, freshest catalyst of the finalists at 2.2h. Healthcare sector aligned. If the account had dry powder, this would be a live buy — enrollment milestones in cell therapy are high-signal. Passed this run due to exhausted powder. Worth revisiting once sell brain frees capital.
+**Catalyst age:** 2.5h — fresh.
 
 ---
 
 ## Notable Passes
 
-- **BTGO** (+16.9%): Class-action deadline reminder is bearish, not bullish. Skip.
-- **CRML** (+9.15%): Greenland drill confirmed in shortlist today. Already on watchlist as pullback to $10.00 (good_until refreshed to June 20).
-- **BBBY** (+0.66%): Post-bankruptcy ticker confusion — opaque situation, no clean catalyst. Skip.
-- **DUOT** (+6.4%): $55M registered direct offering is dilutive; Industrials down -4.11%. Skip.
-- **ARQQ** (+14.2%): $7M class-action settlement is a cost/negative; too extended.
-- **DV** (+0.05%): Product launch with no market reaction, Comms sector cold (-1.48%). Skip.
-- **LABT** ($0.63): Sub-$2 hard floor. Pass.
-- **CRMD, ATEC, CERS, AQST, UMAC**: Shareholder-structure or analyst-coverage pieces — not actionable catalysts. All skipped.
-- **BNAI**: Already owned (open position); do not re-buy.
-- **ABSI**: Already owned; appears in shortlist +8.14% today — likely bouncing, but no re-buy.
+- **SWBI** ($16.62, +21.0%): Earnings beat (EPS +56.5%, revenue +27%) is genuinely strong, but +21% intraday is too extended. Hard pass — stage rule.
+- **LZB** ($40.24, +14.78%): Q4 retail sales growth catalyst is real, but already +14.8% intraday. Borderline extended, and Consumer Cyclical is -2.07%. Pass.
+- **STI** ($20.63, -0.96%): Solidion Technology — 7 new patents for composite anode battery materials targeting humanoid robots, space AI data centers, lunar economy. Sentiment score 0.815 (highest on shortlist), $175M micro-cap. Stock is barely down but not responding. Tech sector -1.7% is a headwind today. Put on watchlist as breakout at $22.00 — buy the confirmation, not the anticipation.
+- **SSYS** ($8.82, +0.92%): New DM PA6/66-GF30-FR material launch for rail/transportation. Real product catalyst (Bullish 0.439), but thinner volume and 5.9h stale. Lower priority than RLMD.
+- **AVGO** ($410.39, +4.45%): Fresh 8-K (0.6h old), strong mover — but $410/share is above the $150 budget cap. Can't enter.
+- **KR** (Kroger, fresh 0.8h): Q1 earnings beat, e-commerce +19%. Very fresh catalyst. But Consumer Defensive sector is -1.48%, and Kroger is large-cap with a price per share well above the remaining ~$43 budget.
+- **NVCR** ($14.48, -18.88%): Bad 8-K — potential put candidate. But after a -19% move, the bulk of the bearish trade is likely spent. Skip; chasing a large down-move on a put is the bearish equivalent of chasing a mover.
+- **TMCI** ($4.01, -2.67%): First surgical case with HyperPlate XM — real product catalyst (Bullish 0.416), but stock is DOWN -2.67% on the news. Market is not responding bullishly. Pass.
+- **Most news_smallcap rows (ULCC, TDOC, PLTK, NAK, PCT, SNDX, etc.):** Catalysts are technical analysis writeups, valuation articles, or shareholder structure pieces — not actionable events. All skipped.
+- **OBAI** ($1.025): Below $2 floor. Hard pass.
 
 ---
 
 ## Holdings Read
 
-*(holdings.json as of 2026-06-12 — sell brain's view may have updated)*
+*(holdings.json as of 2026-06-12 — sell brain's view may have updated since)*
 
-**Winners:** BNAI +5.04% (+$6.86), APLD +6.24% (+$5.17), SLDB +4.23% (+$2.61), GASS +1.26% (+$1.80), ATHE +3.43%, EVTL +0.94%, MNKD +1.36%, PLSE +0.71%
+**Winners:** BNAI +5.04% (+$6.86), APLD +6.24% (+$5.17), SLDB +4.23% (+$2.61), GASS +1.26% (+$1.80), ATHE +3.43% (+$0.15), EVTL +0.94% (+$0.28), MNKD +1.36% (+$0.05), PLSE +0.71% (+$0.36)
 
-**Losers needing sell-brain attention:** AVR -7.7% (-$11.40), TISI -7.41% (-$4.02), ABSI -8.36% (-$3.57), RXRX -3.95% (-$2.34), CLLS -2.35% (-$3.30)
+**Losers needing sell-brain attention:** AVR -7.70% (-$11.40), TISI -7.41% (-$4.02), ABSI -8.36% (-$3.57), RXRX -3.95% (-$2.34), CLLS -2.35% (-$3.30)
 
-Net unrealized: approximately **-$7.35** across all 13 positions. Sell brain should be reviewing AVR, TISI, and ABSI closely — biggest P&L drags.
+Net unrealized: **-$7.35** across 13 positions. AVR, TISI, and ABSI are the three biggest drags. Sell brain should be prioritizing these.
 
 ---
 
 ## Watchlist Changes This Run
 
-- **VSTM**: good_until extended 2026-06-18 → 2026-06-20 (catalyst just occurred today)
-- **CRML**: good_until extended 2026-06-18 → 2026-06-20 (confirmed in shortlist today, drill started)
-- All other entries unchanged; GHRS, SPRY, YEXT, HLIT, EVTC, VNCE expire June 18; RCAT, TOYO expire June 19
+- **STI** added: breakout at $22.00, 2 shares @ $22.25, good_until 2026-06-20 (AI/robotics/battery patent theme)
+- **GHRS, SPRY, YEXT, HLIT, EVTC, VNCE**: expired (good_until 2026-06-18), removed
+- **VSTM, CRML**: carried forward (good_until 2026-06-20)
+- **RCAT, TOYO**: carried forward (good_until 2026-06-19)
