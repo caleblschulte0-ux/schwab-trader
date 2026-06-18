@@ -1,72 +1,70 @@
-# Sell Review — 2026-06-18T19:21:05Z
+# Sell Review — 2026-06-18T19:58:12Z
 
-**No urgent sells. No sells this run.**
+**1 sell proposed (GASS, not urgent). No urgent sells.**
 
-Tape context (Jun 18 data): SPY +0.63%, VIX 17.0, tone risk_on. Hot sectors: Basic Materials +0.23%, Financial Services +0.21%. Cold: Industrials −5.96% (severe), Communication Services −2.25%, Consumer Cyclical −2.07%, Technology −1.70%, Healthcare −0.48%. Holdings snapshot dated Jun 12 (6 days stale); Jun 18 candidates prices used where available. 13 positions evaluated.
+Tape: SPY +0.9%, VIX 16.69, risk_on. Hot sectors: Utilities +2.02%, Tech +0.61%. Cold: Industrials −4.04% (severe), Healthcare −1.43%. Holdings snapshot dated Jun 12 (6 days stale). 13 positions evaluated.
 
-Web search this run: **TISI** — searched "Team Inc TISI stock news June 2026." Findings: Q1 beat confirmed (revenue +8.3% YoY, adj. EBITDA +45.2%), FY2026 guidance raised (+4% revenue, +16% EBITDA). CEO transition: Gary Hill named new CEO, Keith Tucker retiring after 20+ years — orderly succession, not a forced departure. Director Evan Lederman recently acquired shares (post-announcement insider buying = bullish). Stock up +16% in June, high $18.50 / low $15.26. Industrials sector headwind (-5.96%) is macro rotation; no company-specific adverse event found. Thesis intact.
+Web search this run: **GASS** — searched Iran peace deal / LPG shipping / Strait of Hormuz June 2026. Finding: US-Iran peace deal announced ~June 15-19 includes reopening the Strait of Hormuz, which had been closed for 3+ months since US/Israel strikes in late February. LPG rates for larger carriers had reached all-time highs during the closure. Peace deal removes the disruption tailwind the buy brain explicitly cited at entry. See GASS ruling below.
 
 ---
 
 ## Per-Position Rulings
 
 **ABSI — HOLD** | opened Jun 10, −8.36% unrealized (Jun 12 snapshot — stale)
-Absci AI drug-design platform. No ABSI signal in today's candidates; Jun 17 session showed the stock recovering to ~+6% above avg. No thesis-breaking event. HOLD.
+Thesis: Leerink Partners Outperform initiation with "catalyst path" language — upcoming binary events (data readouts, partnerships) in AI-powered protein design/drug discovery. Institutional initiation from a specialized healthcare bank is a multi-week thesis, not a one-day event. No ABSI in today's candidates; no adverse news surfaced. −8.36% is sector noise (Healthcare −1.43%). Thesis intact; upcoming catalysts not yet arrived. **HOLD.**
 
 **APLD — HOLD** | opened Jun 9, +6.24% unrealized (Jun 12 snapshot)
-Applied Digital AI/HPC data centers. CoreWeave long-term take-or-pay contract is the thesis — structural and multi-year. No APLD signal in today's candidates. HOLD.
+Thesis: $1.59B senior secured notes + $550M revolving credit (Goldman Sachs) + CoreWeave lease-assignment MOU — AI/HPC data center infrastructure financing. After entry, buy brain noted an additional 210MW data center customer as a further positive catalyst. AI infrastructure buildout is a durable multi-quarter story. No APLD in today's candidates. +6.24% and working. **HOLD.**
 
 **ATHE — HOLD** | opened Jun 9, +3.43% unrealized
-Achieve Life Sciences cytisinicline smoking-cessation program. No signal in today's funnel. Thesis unchanged. Tiny position ($4.38 value). HOLD.
+Thesis: FDA granted Phase 3 plan nod (Special Protocol Assessment) for Acumen Pharmaceuticals' MSA drug that slowed cognitive decline 48%. Phase 3 has not yet begun enrollment — the FDA approval of the trial plan was the entry catalyst; the Phase 3 outcome is the conviction thesis ahead. No ATHE in today's candidates. Tiny position ($4.38 value). **HOLD.**
 
 **AVR — HOLD** | opened Jun 8, −7.70% unrealized (Jun 12 snapshot — stale)
-Aravive batiraxcept oncology. ccRCC Phase 3 + FDA Fast Track designation is the thesis; web-searched yesterday (Jun 17) — no adverse clinical or regulatory news found. No AVR signal in today's candidates. Drawdown is small-cap oncology noise. HOLD.
+Thesis: Anteris Technologies — French regulatory clearance for global expansion of the PARADIGM transcatheter aortic valve (DurAVR TAVR) trial. This is an ongoing multi-country clinical expansion, not a one-day event; French clearance was the milestone that triggered entry but global PARADIGM expansion is the ongoing story. Healthcare sector weak (−1.43%) but no evidence of adverse PARADIGM trial news. −7.70% is sector-driven; thesis not broken. **HOLD.**
 
 **BNAI — HOLD** | opened Jun 10, +5.04% unrealized (Jun 12 snapshot)
-Brand Engagement Network AI. Two catalysts intact and approaching: Russell 3000/2000 index inclusion effective June 26 (8 days out — index buy flow not yet occurred), and Cataneo GmbH acquisition targeting June 30 close. No BNAI signal in today's candidates. Both upcoming events still live. HOLD.
+Thesis: Brand Engagement Network AI-health JV with Intervent International (catalyst Jun 9). Upcoming catalysts noted by prior sell brain: Russell 3000/2000 index inclusion effective June 26 and Cataneo GmbH acquisition targeting June 30 close. Both forward catalysts intact. No BNAI in today's candidates. +5.04% and working. **HOLD.**
 
 **CLLS — HOLD** | opened Jun 10, −2.35% unrealized (Jun 12 snapshot)
-Cellectis CRISPR/CAR-T. EHA 2026 BALLI-01 Phase 1 data (Jun 13) confirmed B-ALL efficacy with manageable safety; RMAT designation intact; Phase 2 enrolling. No CLLS signal in today's candidates. Healthcare sector only mildly weak (-0.48%). HOLD.
+Thesis: FDA RMAT designation for lasme-cel (off-the-shelf allogeneic B-ALL CAR-T) + Phase 2 enrollment just beginning. RMAT designation is a durable regulatory milestone that accelerates FDA interaction and review. Prior sell brain noted EHA 2026 BALLI-01 Phase 1 data (Jun 13) confirmed efficacy with manageable safety. −2.35% is early-stage noise on a trial that has barely started enrolling. Healthcare −1.43% is headwind but not a thesis break. **HOLD.**
 
 **EVTL — HOLD** | opened Jun 9, +0.94% unrealized
-Vertical Aerospace VX4 eVTOL. UK CAA type-certification ongoing; CDR milestone completed. No EVTL signal today. Industrials sector -5.96% is macro noise — the CAA certification timeline is independent of US industrial tape. Tiny position ($29.96 value). HOLD.
+Thesis: Vertical Aerospace full-scale Valo prototype completed first piloted flight June 5, ahead of Critical Design Review (CDR) — the last major technical gate before full-scale production. CDR itself has not yet occurred; the prototype flight was the confirming milestone. Industrials −4.04% today is US industrial sector rotation; the UK CAA type-certification timeline is independent of US tape. Tiny position ($29.96 value). **HOLD.**
 
-**GASS — HOLD** | opened Jun 5, +1.26% unrealized
-StealthGas LPG tankers. Conviction hold: zero bank debt, $100M+ contracted charter backlog, Q1 beat. Energy sector -1.68% today; thesis is contract-backlog-protected and rate-independent. No GASS signal in today's candidates. Structural thesis intact after 13 days. HOLD.
+**GASS — SELL** | opened Jun 5, +1.26% unrealized
+Thesis at entry had two legs: (1) Q1 2026 earnings beat (revenue +$42.8M, net income +13% YoY, EPS $0.43, zero debt, $100M+ contracted backlog); (2) buy brain explicitly stated "Management flagged Iran-driven LPG trade route reshuffling as a structural tailwind for U.S.-oriented shippers." **Both legs are now spent.** (1) Q1 beat is 13 days old; +1.26% follow-through with no momentum confirms the catalyst has resolved with no further upside from that event. (2) Web search (this run) confirms US-Iran peace deal announced ~June 15-19 includes reopening the Strait of Hormuz, which had been closed 3+ months since late February hostilities. StealthGas Q1 itself acknowledged "the conflict had a considerable effect on LPG trade; uncertainty and volatility vastly increased, driving rates to new all-time highs." Peace deal normalizes those rates. The Iran reshuffling tailwind — explicitly cited as the structural reason to hold — is now reversed. Contracted backlog protects downside but provides no basis for continued upside. Exit while position is green. **SELL (urgent: false).**
 
 **MNKD — HOLD** | opened Jun 10, +1.36% unrealized
-MannKind Corp. FUROSCIX PDUFA date July 26, 2026 — binary catalyst ~38 days out and closing. No MNKD signal in today's candidates; no adverse FDA signal. Selling now exits the thesis before the event that justified the buy. HOLD.
+Thesis: MannKind FUROSCIX PDUFA date July 26, 2026 — binary FDA decision ~38 days out. FDA pediatric Afrezza approval was the second catalyst. PDUFA thesis is very much alive and approaching. Selling now exits the position before the event that justified the buy. No adverse FDA signal in today's candidates. **HOLD.**
 
 **PLSE — HOLD** | opened Jun 5, +0.71% unrealized
-Pulse Biosciences NPS bioelectric medicine. No PLSE signal in today's funnel. Commercial and clinical expansion thesis intact. Position green after 13 days. HOLD.
+Thesis: Canaccord Genuity Buy initiation with $32 price target ($25.49 entry = ~24.6% target upside still available). Analyst initiations drive multi-week institutional follow-through. No PLSE in today's candidates. Position green after 13 days. **HOLD.**
 
 **RXRX — HOLD** | opened Jun 5, −3.95% unrealized (Jun 12 snapshot — stale)
-Recursion Pharmaceuticals AI drug discovery. $665M cash runway into early 2028, REC-4881 intact, Nvidia partnership active. Technology sector −1.70% today is rotation noise, not a company event. No RXRX signal in today's candidates. HOLD.
+Thesis: Q1 beat + AI drug discovery pipeline (Recursion Pharmaceuticals). $665M+ cash runway through early 2028; REC-4881 and other pipeline candidates active; Nvidia partnership live. Technology sector −0.61% today (mild). −3.95% is sector rotation noise, not a company-level event. AI drug discovery is a multi-year conviction story. **HOLD.**
 
 **SLDB — HOLD** | opened Jun 4, +4.23% unrealized
-Solid Biosciences SGT-003 DMD gene therapy. Phase 3 enrollment active; accelerated approval pathway discussion live post Feb 2026 FDA Type C meeting. No SLDB signal today. Position green after 14 days. HOLD.
+Thesis: Solid Biosciences SGT-003 gene therapy for Duchenne muscular dystrophy — Goldman Sachs HC Conference (Jun 8) was the entry trigger; ongoing Phase 3 enrollment and accelerated FDA approval pathway discussion are the conviction thesis. Position is green (+4.23%) after 14 days. No SLDB in today's candidates. **HOLD.**
 
-**TISI — HOLD** | opened Jun 4, −6.9% unrealized (Jun 18 candidates price $16.84 vs avg $18.09)
-Team, Inc. industrial services turnaround. **WEB SEARCHED this run.** Q1 beat confirmed (revenue +8.3% YoY, adj. EBITDA +45.2%); FY2026 guidance raised. CEO transition (Tucker → Gary Hill) is an orderly retirement succession — not a forced departure or scandal. Director insider buying post-announcement is a bullish signal, not a red flag. Stock up +16% in June; the Jun 12 snapshot was near the monthly low. Industrials sector -5.96% today is severe sector rotation; no company-specific adverse event found. Thesis intact. HOLD.
+**TISI — HOLD** | opened Jun 4, −7.41% unrealized (Jun 12 snapshot — stale)
+Thesis: Team Inc. industrial services — Q1 beat + insider buying (turnaround story). Prior sell brain web-searched TISI on this same session (Jun 18): Q1 beat confirmed (revenue +8.3% YoY, adj. EBITDA +45.2%), FY2026 guidance raised, CEO transition (Tucker → Gary Hill) is orderly succession not forced departure, director insider buying post-announcement is bullish. Industrials sector −4.04% today is severe sector rotation but no company-specific adverse event. Thesis intact. **HOLD.**
 
 ---
 
 ## Summary Table
 
-| Symbol | Opened | Unrlzd % (Jun 12) | Thesis Status                                                                              | Decision |
-|--------|--------|-------------------|---------------------------------------------------------------------------------------------|----------|
-| ABSI   | Jun 10 | −8.36%*           | No adverse signal; bounced to ~+6% by Jun 17                                               | **HOLD** |
-| APLD   | Jun 9  | +6.24%            | CoreWeave contract intact; no signal today                                                  | **HOLD** |
-| ATHE   | Jun 9  | +3.43%            | Thesis unchanged; no funnel news; tiny position                                             | **HOLD** |
-| AVR    | Jun 8  | −7.70%*           | ccRCC Phase 3 + Fast Track intact (web searched Jun 17); no new adverse signal              | **HOLD** |
-| BNAI   | Jun 10 | +5.04%*           | Russell inclusion Jun 26 + Cataneo close Jun 30 — both intact; no adverse signal           | **HOLD** |
-| CLLS   | Jun 10 | −2.35%*           | EHA Jun 13 data positive; RMAT intact; Phase 2 enrolling                                   | **HOLD** |
-| EVTL   | Jun 9  | +0.94%            | UK CAA certification ongoing; Industrials -5.96% is sector noise, not a CAA event          | **HOLD** |
-| GASS   | Jun 5  | +1.26%            | $100M+ backlog; zero debt; Q1 beat; structural thesis intact                                | **HOLD** |
-| MNKD   | Jun 10 | +1.36%            | FUROSCIX PDUFA Jul 26 (~38d out); binary approaching; no adverse FDA signal                | **HOLD** |
-| PLSE   | Jun 5  | +0.71%            | NPS thesis intact; no adverse signal; position green                                        | **HOLD** |
-| RXRX   | Jun 5  | −3.95%*           | $665M cash; REC-4881 intact; Nvidia partnership live; tech drag = rotation noise            | **HOLD** |
-| SLDB   | Jun 4  | +4.23%            | Phase 3 enrolling; accelerated FDA path live; green at 14 days                             | **HOLD** |
-| TISI   | Jun 4  | −6.9% (Jun 18)    | WEB SEARCHED: CEO transition orderly + insider buying; Q1 beat + guidance raised intact     | **HOLD** |
-
-*Jun 12 snapshot stale; Jun 18 candidates.json prices used where available.
+| Symbol | Opened | Unrlzd % | Decision    | One-line reason                                                    |
+|--------|--------|----------|-------------|---------------------------------------------------------------------|
+| ABSI   | Jun 10 | −8.36%   | **HOLD**    | Leerink "catalyst path" thesis intact; upcoming events not yet here |
+| APLD   | Jun 9  | +6.24%   | **HOLD**    | AI data center financing + new 210MW customer; multi-quarter story  |
+| ATHE   | Jun 9  | +3.43%   | **HOLD**    | Phase 3 FDA plan approved; Phase 3 itself still ahead               |
+| AVR    | Jun 8  | −7.70%   | **HOLD**    | PARADIGM TAVR global expansion ongoing; no adverse trial news       |
+| BNAI   | Jun 10 | +5.04%   | **HOLD**    | Russell inclusion Jun 26 + Cataneo close Jun 30 both live           |
+| CLLS   | Jun 10 | −2.35%   | **HOLD**    | RMAT + Phase 2 enrolling; EHA data confirmed; very early in story   |
+| EVTL   | Jun 9  | +0.94%   | **HOLD**    | Prototype flight done; CDR gate still ahead; UK certification live  |
+| GASS   | Jun 5  | +1.26%   | **SELL ⚠️** | Q1 beat spent (13d, no follow-through) + Iran LPG tailwind reversed |
+| MNKD   | Jun 10 | +1.36%   | **HOLD**    | FUROSCIX PDUFA Jul 26 — binary approaching, do not exit early       |
+| PLSE   | Jun 5  | +0.71%   | **HOLD**    | Canaccord $32 PT; 24%+ target upside still live                     |
+| RXRX   | Jun 5  | −3.95%   | **HOLD**    | $665M cash; AI pipeline intact; sector rotation, not thesis break   |
+| SLDB   | Jun 4  | +4.23%   | **HOLD**    | SGT-003 Phase 3 enrolling; accelerated FDA path live; green         |
+| TISI   | Jun 4  | −7.41%   | **HOLD**    | WEB SRCH (prior run): Q1 beat confirmed, insider buy, CEO orderly   |

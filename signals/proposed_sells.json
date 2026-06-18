@@ -1,4 +1,10 @@
 {
-  "generated_utc": "2026-06-18T19:21:05Z",
-  "sells": []
+  "generated_utc": "2026-06-18T19:58:12Z",
+  "sells": [
+    {
+      "symbol": "GASS",
+      "reason": "Two-legged thesis now both gone: (1) Q1 2026 earnings beat catalyst is 13 days old — only +1.26% follow-through, momentum fully spent; (2) the buy brain explicitly cited 'Iran-driven LPG trade route reshuffling as a structural tailwind for U.S.-oriented shippers' — web search confirms US-Iran peace deal announced ~June 15-19 is reopening the Strait of Hormuz, which was closed for 3+ months. LPG rates had reached all-time highs during the closure; normalization removes the pricing tailwind that justified the original thesis. Both catalysts are now gone; contracted backlog provides balance-sheet safety but not a reason to hold absent new upside thesis.",
+      "urgent": false
+    }
+  ]
 }
