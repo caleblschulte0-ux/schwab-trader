@@ -1,65 +1,61 @@
-# Brain Run — 2026-06-18T13:49:38Z
+# Brain Run — 2026-06-18T17:48:00Z
 
-**Funnel:** scanned 300 → 39 in budget → 13 with catalyst → 3 finalists → picked 1 (RLMD)
-
----
-
-## Market Tape
-
-SPY +0.63%, VIX 17.0, tone: **risk_on** (label). But sector breadth is deceptive — only Basic Materials (+0.23%) and Financial Services (+0.21%) are in the green. Technology -1.70%, Consumer Cyclical -2.07%, Communication Services -2.25%, Industrials -5.96%, Healthcare -0.48%, Energy -1.68%. A narrow rally; aggressiveness is calibrated accordingly. Lean toward non-tech names. Industrials weakness is severe — avoid.
+Funnel: scanned 324 → 40 shortlisted → 40 in budget → 14 with real catalyst → 3 finalists → picked 0
 
 ---
 
-## Portfolio State
+## Tape
 
-13 open positions; ~$43 remaining powder (~$957 of $1,000 deployed at cost basis). Account is nearly fully deployed; any new position will be small by necessity. Sell brain holds the key to freeing capital.
+**Risk-on.** SPY +0.9%, VIX 16.69. Top sectors: Utilities +2.02%, Tech +0.61%, Communication Services +0.48%, Consumer Cyclical +0.45%. Weak: Healthcare -1.43%, Industrials -4.04%. Broad green tape supports longs, but Healthcare and Industrials — the two weakest sectors — house most of today's interesting names.
 
 ---
 
-## Pick
+## No New Orders — Account Essentially Full
 
-### RLMD — BUY 6 shares @ $6.65 limit ($39.90 total)
+**Holdings as of last sync (2026-06-12):** 13 open positions, ~$957 deployed at cost of ~$1,000 account. Estimated powder: ~$43, potentially near zero if the RLMD order from the 13:49Z run filled (6 shares × $6.65 = $39.90). With so little remaining capital, only an exceptional sub-$50 setup clears the bar.
 
-**Relmada Therapeutics** | $6.60 | +0.76% | vol 1.36M | catalyst age 2.5h | signals: news_smallcap
+---
 
-**Catalyst:** H.C. Wainwright initiates coverage with Buy rating today (2026-06-18, 11:08 UTC — 2.5h old). This adds to a unanimous 5-analyst bullish consensus: Piper Sandler Buy at $12.00 (March 2026), multiple others at Buy/Strong Buy, average consensus price target ~$12.40. Current price $6.60 → ~88% upside to consensus PT.
+## Finalists Evaluated
 
-**Entry rationale:** Analyst initiations are clean, definitive catalysts that drive multi-day follow-on momentum. The stock has barely moved (+0.76%) since the news dropped — this is early entry, not chasing. Healthcare sector is only mildly weak (-0.48%), not a severe headwind. Volume of 1.36M is decent participation for a ~$692M pharma name. Small-cap, fits the strategy's lean-small preference. 6 shares × $6.65 = $39.90, the maximum we can deploy with ~$43 remaining.
+### SWBI (Smith & Wesson) — PASSED, extended
+- **Catalyst (age 6.4h):** Q4 2026 earnings — EPS beat by 56.5%, revenue +27% YoY. Strong and real.
+- **Why passed:** Already up 17.3% intraday — in the deprioritize zone (15–20%+). At $16.10, only 3 shares (~$48) fit the remaining powder. Too small a position to justify chasing a name that's had its full first-day move. Would be a buy with $150 available on any pullback toward $15.
 
-**Catalyst age:** 2.5h — fresh.
+### BBBY (Bed Bath & Beyond) — PASSED, insufficient powder
+- **Catalyst (age 5.9h):** Official Business Wire press release — "Accelerates Nationwide Rollout of Co-Branded Stores with The Container Store." Consumer Cyclical sector positive today (+0.45%).
+- **Setup:** Up 6.1% on volume 1.82M, not blown off. Risk-on tape, sector tailwind.
+- **Why passed:** Closest call of the run. The underlying concern: two bankruptcy-reorganized entities co-branding is speculative. At $6.01, only 7 shares ($42.07) fit remaining powder — itself uncertain if RLMD depleted it. Adding a 14th position for $42 on a moderately speculative catalyst doesn't clear the bar. Would take cleanly with $150 available.
+
+### TMCI (Treace Medical) — PASSED, sector headwind + weak price reaction
+- **Catalyst (age 6.4h):** First surgical case with new HyperPlate XM Dynamic Compression Locking Implant System — real product milestone.
+- **Why passed:** Healthcare is the second-weakest sector today (-1.43%). Stock barely moved (+1.62%) in 6+ hours despite the news — market isn't excited. Thin price reaction to a 6h-old catalyst suggests the setup has limited near-term momentum.
 
 ---
 
 ## Notable Passes
 
-- **SWBI** ($16.62, +21.0%): Earnings beat (EPS +56.5%, revenue +27%) is genuinely strong, but +21% intraday is too extended. Hard pass — stage rule.
-- **LZB** ($40.24, +14.78%): Q4 retail sales growth catalyst is real, but already +14.8% intraday. Borderline extended, and Consumer Cyclical is -2.07%. Pass.
-- **STI** ($20.63, -0.96%): Solidion Technology — 7 new patents for composite anode battery materials targeting humanoid robots, space AI data centers, lunar economy. Sentiment score 0.815 (highest on shortlist), $175M micro-cap. Stock is barely down but not responding. Tech sector -1.7% is a headwind today. Put on watchlist as breakout at $22.00 — buy the confirmation, not the anticipation.
-- **SSYS** ($8.82, +0.92%): New DM PA6/66-GF30-FR material launch for rail/transportation. Real product catalyst (Bullish 0.439), but thinner volume and 5.9h stale. Lower priority than RLMD.
-- **AVGO** ($410.39, +4.45%): Fresh 8-K (0.6h old), strong mover — but $410/share is above the $150 budget cap. Can't enter.
-- **KR** (Kroger, fresh 0.8h): Q1 earnings beat, e-commerce +19%. Very fresh catalyst. But Consumer Defensive sector is -1.48%, and Kroger is large-cap with a price per share well above the remaining ~$43 budget.
-- **NVCR** ($14.48, -18.88%): Bad 8-K — potential put candidate. But after a -19% move, the bulk of the bearish trade is likely spent. Skip; chasing a large down-move on a put is the bearish equivalent of chasing a mover.
-- **TMCI** ($4.01, -2.67%): First surgical case with HyperPlate XM — real product catalyst (Bullish 0.416), but stock is DOWN -2.67% on the news. Market is not responding bullishly. Pass.
-- **Most news_smallcap rows (ULCC, TDOC, PLTK, NAK, PCT, SNDX, etc.):** Catalysts are technical analysis writeups, valuation articles, or shareholder structure pieces — not actionable events. All skipped.
-- **OBAI** ($1.025): Below $2 floor. Hard pass.
+- **CRVO** (+7.6%, halt/resume/8-K): Catalyst = $10M registered direct offering at $4/share. Dilutive to existing shareholders — bearish event, not a long. Healthcare sector also weak. Hard pass.
+- **DPRO** (-1.9%): Closed acquisition of Skip Dynamix for up to $7.5M — real M&A event, but stock trading DOWN on the announcement. Market rejecting the deal.
+- **WYFI** (+17.8%): Article headline literally says "speculative call-option surge outruns weak fundamentals." Hard pass.
+- **CMTL** (-10.5%): Positive 9-1-1 deployment news but stock down 10.5% — structural issues dominating.
+- **Most other shortlist names:** Analysis/reference articles (financial health summaries, earnings forecast breakdowns, TA reports) — not tradeable catalysts.
+- **SEC 8-K names** (TWNPQ, FATPQ, ITOX, XPL, etc.): Filing notifications without readable content; mostly royalty trusts and small banks. Not actionable.
+
+---
+
+## Watchlist (carried forward, expiries intact)
+
+Five entries remain active: VSTM (breakout $4.25, RAMP 205 PDAC data, good thru 6/20), CRML (pullback $10, Greenland drill, good thru 6/20), RCAT (pullback $11.25, defense drone, good thru 6/19), TOYO (breakout $13, Houston solar factory, good thru 6/19), STI (breakout $22, 7 battery/AI patents, tech sector, good thru 6/20). **Capital note:** powder may be near zero — watchlist triggers will fail at execution if cash is exhausted. Sell brain clearing any position frees room for these.
 
 ---
 
 ## Holdings Read
 
-*(holdings.json as of 2026-06-12 — sell brain's view may have updated since)*
+*(holdings.json last written 2026-06-12 — sell brain's view may have updated since)*
 
-**Winners:** BNAI +5.04% (+$6.86), APLD +6.24% (+$5.17), SLDB +4.23% (+$2.61), GASS +1.26% (+$1.80), ATHE +3.43% (+$0.15), EVTL +0.94% (+$0.28), MNKD +1.36% (+$0.05), PLSE +0.71% (+$0.36)
+**Winners:** BNAI +5.0% (+$6.86), APLD +6.2% (+$5.17), SLDB +4.2% (+$2.61), GASS +1.3% (+$1.80)
 
-**Losers needing sell-brain attention:** AVR -7.70% (-$11.40), TISI -7.41% (-$4.02), ABSI -8.36% (-$3.57), RXRX -3.95% (-$2.34), CLLS -2.35% (-$3.30)
+**Losers:** AVR -7.7% (-$11.40), TISI -7.4% (-$4.02), ABSI -8.4% (-$3.57), RXRX -3.9% (-$2.34), CLLS -2.4% (-$3.30)
 
-Net unrealized: **-$7.35** across 13 positions. AVR, TISI, and ABSI are the three biggest drags. Sell brain should be prioritizing these.
-
----
-
-## Watchlist Changes This Run
-
-- **STI** added: breakout at $22.00, 2 shares @ $22.25, good_until 2026-06-20 (AI/robotics/battery patent theme)
-- **GHRS, SPRY, YEXT, HLIT, EVTC, VNCE**: expired (good_until 2026-06-18), removed
-- **VSTM, CRML**: carried forward (good_until 2026-06-20)
-- **RCAT, TOYO**: carried forward (good_until 2026-06-19)
+Net unrealized: **-$7.32** across 13 positions. Priority for sell brain: AVR and TISI have the largest unrealized dollar losses; ABSI and RXRX also in the red.

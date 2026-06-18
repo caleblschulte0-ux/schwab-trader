@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-18T13:49:38Z",
+  "generated_utc": "2026-06-18T17:48:00Z",
   "watch": [
     {
       "symbol": "VSTM",
@@ -21,7 +21,7 @@
       "take_profit": 12.50,
       "stop_loss": 9.25,
       "good_until": "2026-06-20",
-      "note": "Critical Metals Corp: Greenland drill program started June 17. Basic Materials sector hot. Pullback to $10 from prior spike is a clean entry. 14x$10.10=$141.40."
+      "note": "Critical Metals Corp: Greenland drill program started June 17. Pullback to $10 is a clean entry. 14x$10.10=$141.40."
     },
     {
       "symbol": "RCAT",
@@ -51,8 +51,10 @@
       "trigger_price": 22.00,
       "quantity": 2,
       "limit_price": 22.25,
+      "take_profit": 27.00,
+      "stop_loss": 19.50,
       "good_until": "2026-06-20",
-      "note": "Solidion Technology — 7 new patents on composite anode materials targeting humanoid robots, space AI data centers, lunar economy. Micro-cap $175M, highest sentiment score (0.815) on today's shortlist. Barely moved on news (-0.96%); buy the breakout when tech sector recovers. 2x$22.25=$44.50."
+      "note": "Solidion Technology — 7 new patents on composite anode materials targeting humanoid robots, space AI data centers, lunar economy. Tech sector positive today. 2x$22.25=$44.50."
     }
   ]
 }

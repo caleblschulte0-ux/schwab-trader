@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-18T13:49:38Z",
-  "funnel": {"scanned": 300, "leading": 40, "in_budget": 39, "had_catalyst": 13, "finalists": 3, "picked": 1},
-  "orders": [
-    {"symbol": "RLMD", "action": "BUY", "instrument": "stock", "quantity": 6, "limit_price": 6.65}
-  ]
+  "generated_utc": "2026-06-18T17:48:00Z",
+  "funnel": {"scanned": 324, "leading": 40, "in_budget": 40, "had_catalyst": 14, "finalists": 3, "picked": 0},
+  "orders": []
 }
