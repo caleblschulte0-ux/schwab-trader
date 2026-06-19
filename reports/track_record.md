@@ -1,6 +1,6 @@
 # Track Record — Edge Analysis
 
-_Updated 2026-06-18T22:35:19Z · source: signals/paper_account.json (paper / DRY_RUN)_
+_Updated 2026-06-19T18:35:17Z · source: signals/paper_account.json (paper / DRY_RUN)_
 
 > ⚠️ **SAMPLE TOO SMALL (14 closed trades, need ≥20).** Everything below is DIRECTIONAL ONLY — not statistically conclusive. Do not change strategy parameters or go live off this. Let it gather a clean sample first.
 
