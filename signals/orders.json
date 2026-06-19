@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-06-18T17:48:00Z",
-  "funnel": {"scanned": 324, "leading": 40, "in_budget": 40, "had_catalyst": 14, "finalists": 3, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-19T13:47:15Z",
+  "funnel": {"scanned": 293, "leading": 40, "in_budget": 40, "had_catalyst": 12, "finalists": 2, "picked": 1},
+  "orders": [
+    {"symbol": "SERV", "action": "BUY", "instrument": "stock", "quantity": 21, "limit_price": 7.00}
+  ]
 }

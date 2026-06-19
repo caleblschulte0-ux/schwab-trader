@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-18T17:48:00Z",
+  "generated_utc": "2026-06-19T13:47:15Z",
   "watch": [
     {
       "symbol": "VSTM",
@@ -10,7 +10,7 @@
       "take_profit": 5.25,
       "stop_loss": 3.70,
       "good_until": "2026-06-20",
-      "note": "Verastem 8-K June 17: RAMP 205 POSITIVE data (86% OS at 6mo, 52% ORR, 83% tumor shrinkage in metastatic PDAC) + VS-7375 Phase 2 KRAS G12D trial dosing first patient. Dual catalyst. Price already above trigger — should fire this cycle."
+      "note": "Verastem 8-K June 17: RAMP 205 POSITIVE data (86% OS at 6mo, 52% ORR, 83% tumor shrinkage in metastatic PDAC) + VS-7375 Phase 2 KRAS G12D trial dosing first patient. Dual clinical catalyst."
     },
     {
       "symbol": "CRML",
@@ -21,29 +21,7 @@
       "take_profit": 12.50,
       "stop_loss": 9.25,
       "good_until": "2026-06-20",
-      "note": "Critical Metals Corp: Greenland drill program started June 17. Pullback to $10 is a clean entry. 14x$10.10=$141.40."
-    },
-    {
-      "symbol": "RCAT",
-      "trigger": "pullback",
-      "trigger_price": 11.25,
-      "quantity": 13,
-      "limit_price": 11.35,
-      "take_profit": 13.50,
-      "stop_loss": 10.40,
-      "good_until": "2026-06-19",
-      "note": "Red Cat Holdings defense drone; buy consolidation pullback to ~$11.25 for better r/r. 13x$11.35=$147.55."
-    },
-    {
-      "symbol": "TOYO",
-      "trigger": "breakout",
-      "trigger_price": 13.00,
-      "quantity": 11,
-      "limit_price": 13.10,
-      "take_profit": 15.50,
-      "stop_loss": 11.75,
-      "good_until": "2026-06-19",
-      "note": "$357M 1.5GW HJT solar cell factory launch in Houston; coiling near $12.52; buy the break above $13 on volume. 11x$13.10=$144.10."
+      "note": "Critical Metals Corp: Greenland Tanbreez drill program started June 17. Pullback to $10 is clean support. Currently $10.15 — just above trigger. 14x$10.10=$141.40."
     },
     {
       "symbol": "STI",
