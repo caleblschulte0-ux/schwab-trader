@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-06-19T14:09:17Z",
+  "generated_utc": "2026-06-19T18:08:31Z",
   "sells": [
     {
       "symbol": "GASS",
-      "reason": "Both thesis legs spent: (1) Q1 2026 earnings beat (revenue +$42.8M, net income +13% YoY, EPS $0.43) is now 14+ days old with only +1.26% follow-through and zero momentum — catalyst resolved; (2) buy brain explicitly cited Iran-driven LPG trade route reshuffling as the structural tailwind — US-Iran peace deal confirmed reopening the Strait of Hormuz, normalizing LPG rates that spiked during the closure. Contracted backlog protects downside but provides no new upside thesis. Position is green — exit while it is.",
+      "reason": "Thesis spent on two legs: (1) Q1 2026 earnings beat is now 14+ days stale with only +1.26% follow-through and zero momentum — catalyst fully absorbed, no re-rating occurred; (2) Iran-driven LPG trade-route thesis invalidated — US-Iran peace deal reopened the Strait of Hormuz, normalizing LPG rates that had spiked during the closure. StealthGas Q1 itself acknowledged the conflict was the rate driver. Contracted backlog protects Q2 guidance but provides no new upside catalyst. Position is green, catalyst is gone — exit clean.",
       "urgent": false
     }
   ]
