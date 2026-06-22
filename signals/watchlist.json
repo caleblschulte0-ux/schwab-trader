@@ -1,38 +1,16 @@
 {
-  "generated_utc": "2026-06-22T13:52:18Z",
+  "generated_utc": "2026-06-22T17:48:30Z",
   "watch": [
-    {
-      "symbol": "UMAC",
-      "trigger": "breakout",
-      "trigger_price": 25.50,
-      "quantity": 5,
-      "limit_price": 25.65,
-      "take_profit": 28.50,
-      "stop_loss": 23.50,
-      "good_until": "2026-06-23",
-      "note": "Unusual Machines: $30M strategic equity investment in Powerus to scale U.S. autonomous drone manufacturing (June 16 GlobeNewswire). Domestic supply chain / China exclusion theme. Catalyst now ~6 days old but thesis is durable — breakout above $25.50 with volume would signal fresh momentum. 5x$25.65=$128.25."
-    },
-    {
-      "symbol": "CEVA",
-      "trigger": "pullback",
-      "trigger_price": 47.00,
-      "quantity": 3,
-      "limit_price": 47.15,
-      "take_profit": 54.00,
-      "stop_loss": 44.00,
-      "good_until": "2026-06-23",
-      "note": "CEVA semiconductor IP — strong tech tape today. Was extended ~+10% on prior run; too extended for active buy. Pullback to $47 support resets risk/reward for a tech-momentum entry. 3x$47.15=$141.45."
-    },
     {
       "symbol": "PRME",
       "trigger": "pullback",
-      "trigger_price": 3.00,
-      "quantity": 15,
-      "limit_price": 3.05,
-      "take_profit": 3.75,
-      "stop_loss": 2.65,
-      "good_until": "2026-06-25",
-      "note": "Prime Medicine FDA RMAT designation for CGD gene therapy (June 22, 1.6h old). Only up ~2.2% today on a genuine regulatory catalyst. Could not take as active order due to near-zero powder — watchlist on a pullback to $3.00 support. 15x$3.05=$45.75."
+      "trigger_price": 3.10,
+      "quantity": 14,
+      "limit_price": 3.15,
+      "take_profit": 3.90,
+      "stop_loss": 2.75,
+      "good_until": "2026-06-26",
+      "note": "Prime Medicine FDA RMAT designation for CGD gene therapy (June 22 8-K, 5.6h old). Up ~7.6% today to $3.48. Pullback to $3.10 support resets risk/reward with the regulatory catalyst still fresh. 14x$3.15=$44.10. Conditional on sell brain freeing up capital."
     }
   ]
 }
