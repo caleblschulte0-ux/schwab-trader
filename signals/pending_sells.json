@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-06-22T12:39:08.195698+00:00",
+  "generated_utc": "2026-06-22T15:38:50.468166+00:00",
   "pending": [
     {
       "symbol": "GASS",
-      "reason": "Thesis fully spent on two legs, now even more stale than prior run: (1) Q1 2026 earnings beat (revenue +$42.8M, EPS $0.43) is 17+ days old with only +1.26% total follow-through and dead momentum \u2014 catalyst absorbed with no re-rating; (2) Iran-driven LPG trade-route thesis explicitly invalidated by US-Iran peace deal reopening the Strait of Hormuz, normalizing the rates that had spiked during the conflict \u2014 StealthGas Q1 named the conflict as the rate driver. Three additional days since prior sell proposal have produced no fresh catalyst to renew the thesis. Position is green. Exit clean.",
+      "reason": "Both thesis legs confirmed spent for the third consecutive run. (1) Q1 2026 earnings beat (revenue +$42.8M, EPS $0.43) is now 17+ days old with only +1.26% total price follow-through and zero momentum \u2014 catalyst fully absorbed, no re-rating occurred. (2) Iran-driven LPG trade-route reshuffling thesis explicitly invalidated by the US-Iran peace deal reopening the Strait of Hormuz, normalizing the rates that had spiked during the conflict (StealthGas Q1 earnings named the Strait conflict as the direct rate driver). No new catalyst has appeared in today's candidates or prior scans to replace either leg. Position is green \u2014 exit clean.",
       "urgent": false,
       "significance": "held 17d (>= 10)",
       "unrealized_pct": 1.26,
-      "days_held": 16.7
+      "days_held": 16.9
     }
   ]
 }
