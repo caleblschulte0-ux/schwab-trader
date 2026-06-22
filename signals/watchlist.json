@@ -1,39 +1,6 @@
 {
-  "generated_utc": "2026-06-19T17:50:12Z",
+  "generated_utc": "2026-06-22T13:52:18Z",
   "watch": [
-    {
-      "symbol": "VSTM",
-      "trigger": "breakout",
-      "trigger_price": 4.25,
-      "quantity": 34,
-      "limit_price": 4.30,
-      "take_profit": 5.25,
-      "stop_loss": 3.70,
-      "good_until": "2026-06-20",
-      "note": "Verastem 8-K June 17: RAMP 205 POSITIVE data (86% OS at 6mo, 52% ORR, 83% tumor shrinkage in metastatic PDAC) + VS-7375 Phase 2 KRAS G12D trial dosing first patient. Dual clinical catalyst."
-    },
-    {
-      "symbol": "CRML",
-      "trigger": "pullback",
-      "trigger_price": 10.00,
-      "quantity": 14,
-      "limit_price": 10.10,
-      "take_profit": 12.50,
-      "stop_loss": 9.25,
-      "good_until": "2026-06-20",
-      "note": "Critical Metals Corp: Greenland Tanbreez drill program started June 17. Pullback to $10 is clean support. 14x$10.10=$141.40."
-    },
-    {
-      "symbol": "STI",
-      "trigger": "breakout",
-      "trigger_price": 22.00,
-      "quantity": 2,
-      "limit_price": 22.25,
-      "take_profit": 27.00,
-      "stop_loss": 19.50,
-      "good_until": "2026-06-20",
-      "note": "Solidion Technology — 7 new patents on composite anode materials targeting humanoid robots, space AI data centers, lunar economy. Tech sector positive today. 2x$22.25=$44.50."
-    },
     {
       "symbol": "UMAC",
       "trigger": "breakout",
@@ -43,7 +10,7 @@
       "take_profit": 28.50,
       "stop_loss": 23.50,
       "good_until": "2026-06-23",
-      "note": "Unusual Machines: $30M strategic equity investment in Powerus to scale U.S. autonomous drone manufacturing (June 16 GlobeNewswire). Domestic supply chain / China exclusion theme. Catalyst now 3 days old so not an active order, but thesis is durable — breakout above $25.50 with volume would signal fresh momentum. 5x$25.65=$128.25."
+      "note": "Unusual Machines: $30M strategic equity investment in Powerus to scale U.S. autonomous drone manufacturing (June 16 GlobeNewswire). Domestic supply chain / China exclusion theme. Catalyst now ~6 days old but thesis is durable — breakout above $25.50 with volume would signal fresh momentum. 5x$25.65=$128.25."
     },
     {
       "symbol": "CEVA",
@@ -54,7 +21,18 @@
       "take_profit": 54.00,
       "stop_loss": 44.00,
       "good_until": "2026-06-23",
-      "note": "CEVA semiconductor IP — analyst coverage bullish (0.403 sentiment) in strong tech sector. Up +10.71% today; too extended for active order. Pullback to $47 resets risk/reward for a tech-momentum entry. 3x$47.15=$141.45."
+      "note": "CEVA semiconductor IP — strong tech tape today. Was extended ~+10% on prior run; too extended for active buy. Pullback to $47 support resets risk/reward for a tech-momentum entry. 3x$47.15=$141.45."
+    },
+    {
+      "symbol": "PRME",
+      "trigger": "pullback",
+      "trigger_price": 3.00,
+      "quantity": 15,
+      "limit_price": 3.05,
+      "take_profit": 3.75,
+      "stop_loss": 2.65,
+      "good_until": "2026-06-25",
+      "note": "Prime Medicine FDA RMAT designation for CGD gene therapy (June 22, 1.6h old). Only up ~2.2% today on a genuine regulatory catalyst. Could not take as active order due to near-zero powder — watchlist on a pullback to $3.00 support. 15x$3.05=$45.75."
     }
   ]
 }
