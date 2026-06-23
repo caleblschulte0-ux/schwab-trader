@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-06-22T18:40:33.066003+00:00",
+  "generated_utc": "2026-06-23T12:39:57.219574+00:00",
   "pending": [
     {
       "symbol": "GASS",
-      "reason": "Both thesis legs confirmed spent \u2014 fourth consecutive run proposing exit. (1) Q1 2026 earnings beat (revenue +$42.8M, EPS $0.43) is 17+ days old with only +1.26% total price follow-through and zero momentum \u2014 catalyst fully absorbed, no re-rating occurred. (2) Iran-driven LPG trade-route reshuffling thesis explicitly invalidated by the US-Iran peace deal reopening the Strait of Hormuz, normalizing rates that had spiked during the conflict. No new GASS catalyst in today's candidates. Position is green \u2014 exit clean.",
+      "reason": "Fifth consecutive run proposing exit. Both thesis legs confirmed spent: (1) Q1 2026 earnings beat (revenue +$42.8M, EPS $0.43) is now 18+ days old with only +1.26% total price follow-through and zero momentum \u2014 catalyst fully absorbed, no re-rating occurred. (2) Iran-driven LPG trade-route reshuffling thesis explicitly invalidated by the US-Iran peace deal reopening the Strait of Hormuz, normalizing rates that were the direct driver per Q1 earnings commentary. No fresh GASS catalyst in any scan; energy sector strength is macro not GASS-specific. Position is green \u2014 exit clean.",
       "urgent": false,
-      "significance": "held 17d (>= 10)",
+      "significance": "held 18d (>= 10)",
       "unrealized_pct": 1.26,
-      "days_held": 17.0
+      "days_held": 17.7
     }
   ]
 }
