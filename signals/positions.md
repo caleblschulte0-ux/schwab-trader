@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-06-22T17:48:30Z
-*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; current prices may differ materially after 10 days)*
+# Open Positions — updated 2026-06-23T13:51:37Z
+*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; current prices may differ materially after 11 days)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen | Unrealized $ |
 |--------|-----|---------|-------------|------|-----------|--------------|
@@ -19,4 +19,6 @@
 
 **Open positions:** 13   **Est. cash deployed:** ~$957 of ~$1,000   **Powder left:** ~$43
 
-**Net unrealized (snapshot prices):** -$7.35 — book is roughly flat; sell brain needs to clean up losers (AVR -$11.40, TISI -$4.02, ABSI -$3.57).
+**Net unrealized (snapshot prices):** -$7.35 — book roughly flat at snapshot date; sell brain needs to work on key losers (AVR -$11.40, TISI -$4.02, ABSI -$3.57).
+
+*Note: TSHA BUY 6 @ $6.65 was ordered 2026-06-22; status unknown — not yet reflected in holdings.json.*

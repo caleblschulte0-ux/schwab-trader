@@ -1,63 +1,56 @@
-# Brain Run — 2026-06-22T17:48:30Z
+# Brain Run — 2026-06-23T13:51:37Z
 
-**Funnel:** scanned 317 → 40 shortlisted → 38 in budget → 31 with real catalyst → 4 finalists → picked 1
-
----
-
-## Market Tape
-SPY -0.33%, VIX 17.33, tone: **neutral**. Mixed but not ugly. Sector leaders: Basic Materials (+1.46%), Energy (+1.21%), Real Estate (+1.19%), Healthcare (+0.62%). Sector laggards: Technology (-1.34%), Communication Services (-2.65%), Industrials (-3.38%). Avoided tech/comms longs; favored healthcare catalysts.
+Funnel: scanned 323 → 40 shortlisted → 38 in-budget → 13 with real catalyst → 3 finalists → picked 0
 
 ---
 
-## Powder Check
-13 open positions consuming ~$957 of ~$1,000 starting capital. Approximately **$43 powder remaining**. Only room for a small position. The pick below is sized accordingly.
+## Tape (STEP 0)
+
+**Risk-off.** SPY −1.51%, VIX 20.15. Market is broadly red. Green sectors: Basic Materials (+1.52%), Real Estate (+1.24%), Energy (+0.94%), Healthcare (+0.70%), Utilities (+0.49%). Red sectors: Industrials (−6.75%), Communication Services (−1.92%), Technology (−0.73%), Consumer Cyclical (−0.59%), Financial Services (−0.20%). Raising the bar materially this run — demand cleaner setups, strongest relative strength, defined catalysts. Sitting out is acceptable on this tape.
 
 ---
 
-## Pick: TSHA — BUY 6 shares @ $6.65
+## Holdings status
 
-**Catalyst:** TSHA-102 posted durable, accumulating functional gains with strong safety in Rett syndrome trials — 8-K filed today (published 12:41 UTC, age ~5h). **Verified via web search:** 100% response rate in Phase 1/2 REVEAL trial (N=10), all patients gained additional functional skills across communication, fine motor, gross motor, and autonomic function. TSHA-102 holds FDA Breakthrough Therapy Designation. Today's release is the anticipated H1 2026 longer-term data update from Part A — the move is likely still early.
-
-**Why now:** Only +3.4% on what is genuinely strong clinical data. For a gene therapy with breakthrough designation and a 100% response rate, this is a muted reaction — suggests the market hasn't fully digested the update yet. Healthcare sector is green (+0.62%). Catalyst is fresh (5h), not stale.
-
-**Sizing:** 6 × $6.65 = $39.90 — the maximum position that fits within remaining ~$43 powder. Small but captures the thesis. The bot's live-ask execution and 5% backstop handle any slippage.
-
-**Catalyst age:** ~5h (ideal — fresh, not spent).
+Holdings.json last updated 2026-06-12 (11 days stale). Treating as real per BRAIN.md. 13 open positions, ~$957 deployed on ~$1,000 account → roughly **$43 available powder**. Account is effectively fully deployed. Note: TSHA BUY 6 @ $6.65 was ordered yesterday (June 22) — if it filled, powder is even lower; if not, TSHA is not in holdings and today's brain should not re-order it (carry-forward anti-chase).
 
 ---
 
-## Finalists Considered
+## Finalists
 
-| Symbol | Price | Chg% | Signal | Why passed |
-|--------|-------|-------|--------|------------|
-| TSHA | $6.64 | +3.4% | sec_8k + news_smallcap | **PICKED** |
-| PRME | $3.48 | +7.6% | news_smallcap | FDA RMAT for CGD gene therapy — real catalyst. But already +7.6% and almost no powder for an immediate buy. Moved to watchlist for pullback. |
-| BORR | $4.33 | +2.6% | news_smallcap | Director bought $1.9M of stock — strong insider signal. Energy sector positive (+1.21%). Solid but lower specificity catalyst vs TSHA clinical data. Would be next pick if more powder. |
-| ALTO | $5.22 | +3.9% | news_smallcap | Operational efficiency story on corn margins. Energy adjacent (ethanol). Sentiment 0.615. Decent but softer catalyst; TSHA wins the slot. |
+### 1. OSS — One Stop Systems ($18.19, −1.36%) | news_smallcap | catalyst_age 1.3h | score 6.4
+**Catalyst:** "One Stop Systems to join Russell 2000 index on June 29." Structural, mechanistic catalyst — passive index funds tracking the Russell 2000 must buy on the rebalance date. That's predictable, date-certain buying pressure with roughly 6 days to the event. The stock is *down* today on broad market weakness, which is actually favorable for entry — the catalyst is sector-agnostic and independent of the macro tape. Fresh news (1.3h). This is the best quality catalyst in the entire shortlist.
 
----
+**Why not buying today:** ~$43 available = at most 2 shares ($36.38). A $36 position has no meaningful impact. On risk_off + fully deployed, forcing a negligible entry is worse than waiting for capital to free up. Placed a **watchlist pullback trigger at $17.50** (good until June 27) so the bot enters automatically when sell brain frees capital.
 
-## Notable Passes
+### 2. RLMD — Relmada Therapeutics ($6.89, +2.38%) | news_smallcap | catalyst_age 1.4h | score 8.9
+**Catalyst:** H.C. Wainwright maintains Buy rating today (1.4h fresh). Best funnel score. **Relative strength:** RLMD is up +2.38% while SPY is −1.51% — notable green-on-red. Healthcare sector is green (+0.70%). At $6.89, 21 shares fit the $150 cap.
 
-- **ABSI** — already owned (anti-chase, no re-buy).
-- **ACHV** (+4.7%) — FDA *declined* to approve their smoking-cessation drug. Stock somehow up 4.7%. Paradoxical reaction, high uncertainty — hard pass.
-- **UNCY** (+15.9%) — Annual meeting vote results (neutral event). Already up ~16%, too extended, no real catalyst.
-- **RYAM** (-8.4%), **VLN** (-8.8%), **IMSR** (-7.4%), **PCT** (-3.6%), **LODE** (-3.6%), **TOYO** (-3.6%), **RZLV** (-3.3%) — all falling on weak/neutral catalysts. Bearish action, no entry.
-- **FDX** (earnings tomorrow, 1.2h catalyst age) — compelling pre-earnings setup but FDX is ~$280+/share; 1 share exceeds $150 budget.
-- **BBBY** (+1.6%) — "dig up old coupons" story. Not a trading catalyst.
-- **BOXL** (halt_resume, T3) — no price data in shortlist; cannot size or price entry.
-- **PNC** (sec_8k) — large-cap press release 8-K. Not a meaningful catalyst.
-- **Bare 8-Ks (GRMLW, SYPR, IPB, NWE, EBF, JOUT, CIMG, RVRC)** — no descriptive headline; cannot judge catalyst quality; skip.
-- **TIGR, ADTN, OMER, ABEO** — list articles and valuation pieces, not catalysts. Minimal price action.
+**Why not buying today:** Routine analyst reiteration — H.C. Wainwright maintains Buy on small biotech coverage regularly; no new fundamental news (trial data, deal, FDA event). On risk_off, the elevated bar demands a hard catalyst. +2.38% relative strength is promising but not conviction. With $43 in powder, even if I trusted this, the position would be 6 shares ($41). Added a **watchlist breakout trigger at $7.10** — confirms momentum if it breaks with volume.
+
+### 3. PHAT — Phathom Pharma ($10.69, −1.75%) | sec_8k + news_smallcap | catalyst_age 1.2h | score 8.8
+**Catalyst:** Phase 2 EoE study enrollment completed. A biotech milestone — full enrollment signals dosing is complete and readout is on the horizon. Healthcare sector green. Fresh (1.2h).
+
+**Why passing:** Stock is *down* −1.75% on its own catalyst. A stock falling on its news is telling you the market isn't excited. Enrollment completion without a readout date or efficacy signal is a neutral event; the real catalyst comes when data reads out. Clear pass on risk_off.
 
 ---
 
-## Holdings Read
-13 positions open, held per holdings.json (last snapshot 2026-06-12). No new buys on held symbols. Sell brain manages all exits. Key positions requiring sell-brain attention: AVR (-7.7%), TISI (-7.4%), ABSI (-8.4%).
+## Notable passes
+
+- **NVCT** (+19.61%, Haisco licensing deal NXP100/NXP200): Real, bullish catalyst — a licensing deal is significant for small-cap biopharma. BUT already +19.6% intraday on a risk_off tape. Well into "extended" territory with limited room. Deprioritize per BRAIN.md ("up ~15-20%+ intraday → DEPRIORITIZE").
+- **PAR** (−1.05%, Bolla Oil rewards program contract win): Real contract win, fresh 2.1h, sentiment 0.512 "Bullish." Technology sector red (−0.73%). Stock down on market drag. Decent catalyst but doesn't clear risk_off bar with minimal powder.
+- **NABL** (−1.96%, N-able Shadow AI Visibility product launch): Genuine product launch in AI/cybersecurity theme. But stock down nearly 2% on the announcement — market unimpressed. Technology sector red. Pass.
+- **ARQQ** (+9.85%): Up big but "catalyst" is a CFO RSU grant — insider compensation, not a business catalyst. Chasing 10% move with no fundamental driver on risk_off. Skip.
+- **BFLY** (−18.3%, 30M volume): Massive drop on what the shortlist shows as a board RSU grant. Something else is happening — avoid.
+- **LAES** (−0.64%, SEALSQ post-quantum ANSSI certification): Quantum security is a hot theme and ANSSI mandate is meaningful. But flat/slightly red despite the news, high volume (17M). Technology sector red. Would be interesting in a better tape.
+- **CCL** (earnings today): Reports today per the calendar, but no price in shortlist; large-cap cruise line likely above comfortable sizing anyway.
+- **BOLD** (T3 halt + 8-K): No price data in shortlist; T3 halts carry unknown direction risk. Cannot price or size. Skip.
+- Majority of the list (NCNO, NOMD, PRTH, MGTX, BJRI, VSTM, IOVA, TK, AVBP, YEXT, CBRL, PFLT, ZURA, etc.): catalysts are RSU grants, insider sales, TA analysis articles, Form 4 filings — not business catalysts. Filtered early.
 
 ---
 
-## Watchlist Updates
-- **PRME** kept — FDA RMAT designation (genuine regulatory catalyst, June 22). Up 7.6% today. Watching for pullback to $3.10; 14 shares at $3.15 = $44.10. Thesis stays alive; entry only fires if sell brain frees capital.
-- **UMAC** removed — good_until June 23, stale, not in today's shortlist.
-- **CEVA** removed — good_until June 23, tech sector is the day's weakest (-1.34%).
+## Conclusion
+
+**No orders.** Three conditions converge: (1) risk_off tape (SPY −1.51%, "sitting out is acceptable and often correct on an ugly tape" per BRAIN.md); (2) account fully deployed (~$957/$1,000 → $43 powder); (3) no setup in the funnel clears the elevated risk_off bar — best candidates have either weak catalysts (analyst reiteration, enrollment milestone), are extended (+19.6%), or are falling on their own news. Watchlist refreshed with OSS (Russell inclusion pullback) and RLMD (breakout trigger). Sell brain needs to free up capital before the next meaningful buy can happen.
+
+No web search conducted — shortlist provided sufficient data on all finalists; the OSS Russell 2000 inclusion was stated explicitly in the catalyst headline, no verification needed.

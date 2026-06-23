@@ -1,16 +1,27 @@
 {
-  "generated_utc": "2026-06-22T17:48:30Z",
+  "generated_utc": "2026-06-23T13:51:37Z",
   "watch": [
     {
-      "symbol": "PRME",
+      "symbol": "OSS",
       "trigger": "pullback",
-      "trigger_price": 3.10,
-      "quantity": 14,
-      "limit_price": 3.15,
-      "take_profit": 3.90,
-      "stop_loss": 2.75,
-      "good_until": "2026-06-26",
-      "note": "Prime Medicine FDA RMAT designation for CGD gene therapy (June 22 8-K, 5.6h old). Up ~7.6% today to $3.48. Pullback to $3.10 support resets risk/reward with the regulatory catalyst still fresh. 14x$3.15=$44.10. Conditional on sell brain freeing up capital."
+      "trigger_price": 17.50,
+      "quantity": 8,
+      "limit_price": 17.60,
+      "take_profit": 20.00,
+      "stop_loss": 16.50,
+      "good_until": "2026-06-27",
+      "note": "Russell 2000 inclusion June 29 — passive index funds must buy; stock at $18.19 down on market drag, pullback to $17.50 is a cleaner entry ahead of forced buying event. 8x$17.60=$140.80."
+    },
+    {
+      "symbol": "RLMD",
+      "trigger": "breakout",
+      "trigger_price": 7.10,
+      "quantity": 20,
+      "limit_price": 7.20,
+      "take_profit": 8.50,
+      "stop_loss": 6.50,
+      "good_until": "2026-06-25",
+      "note": "H.C. Wainwright Buy reiteration today (1.4h fresh); showing relative strength +2.4% vs risk_off tape; healthcare sector green; breakout above $7.10 confirms momentum. 20x$7.20=$144."
     }
   ]
 }

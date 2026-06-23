@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-22T17:48:30Z",
-  "funnel": {"scanned": 317, "leading": 40, "in_budget": 38, "had_catalyst": 31, "finalists": 4, "picked": 1},
-  "orders": [
-    {"symbol": "TSHA", "action": "BUY", "instrument": "stock", "quantity": 6, "limit_price": 6.65}
-  ]
+  "generated_utc": "2026-06-23T13:51:37Z",
+  "funnel": {"scanned": 323, "leading": 40, "in_budget": 38, "had_catalyst": 13, "finalists": 3, "picked": 0},
+  "orders": []
 }
