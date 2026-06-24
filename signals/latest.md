@@ -1,59 +1,53 @@
-# Brain Run — 2026-06-24T13:59:14Z
+# Brain Run — 2026-06-24T17:48:22Z
 
-**Funnel:** scanned 286 → 40 shortlisted → 38 leading → 36 in budget → 10 with genuine catalyst → 3 finalists → picked 0
+**Funnel:** scanned 294 → 40 shortlisted → 40 leading → 38 in budget → 14 with genuine catalyst → 3 finalists → picked 1
 
 ---
 
 ## Tape
 
-SPY +0.47% | VIX 18.94 | Tone: **risk_on** (mild)
+SPY −0.13% | VIX 19.96 | Tone: **neutral**
 
-Sectors best→worst: Communication Services +1.05%, Real Estate +0.89%, Utilities +0.86%, Financial +0.45%, Energy +0.09%, Industrials +0.04% | Technology -0.31%, Healthcare -0.42%, Consumer Defensive -0.59%, Consumer Cyclical -0.75%, Basic Materials -1.86%
+Sectors best→worst: Consumer Cyclical +1.48%, Industrials +1.12%, Healthcare +1.05%, Basic Materials +0.84%, Consumer Defensive −0.14%, Communication Services −0.25%, Financial Services −0.33%, Energy −0.37%, Utilities −0.76%, Real Estate −0.98%, Technology −1.11%
 
-Implication: favor Communication Services names; skeptical of longs in Basic Materials, Consumer Cyclical, or Healthcare today.
+Implication: favor Healthcare and Consumer Cyclical names; skeptical of Technology longs today. Running standard discipline — no tightening or loosening vs. a pure neutral tape.
 
 ---
 
-## Decision: No New Orders
+## Pick: WVE (Wave Life Sciences) — BUY 8 shares @ $6.10 limit (~$48.80)
 
-13 open positions — well above the ~6-position guideline. ~$51 powder remaining, which is less than a meaningful position even at minimum share counts. No trade forced.
+**Catalyst (age: 3.9h):** Wave Life Sciences initiated a Phase 2a obesity trial for WVE-007 (Investing.com, 2026-06-24T13:41Z). Clinical trial initiation is a hard, verifiable biotech event — not analyst opinion or promotional noise. Obesity remains one of the hottest medical themes in the market (GLP-1 era lifts all credible entrants in the space).
+
+**Setup:** At only +0.25% on the day, WVE has essentially not moved on this news. Volume is solid at 1.72M, confirming real participation without a blow-off. Healthcare is the 3rd strongest sector today (+1.05%). This is as early in the move as you can get on a named, concrete catalyst.
+
+**Stage:** EARLY — practically flat on a real drug development milestone. Entering here vs. after a pop is exactly the proactive edge this strategy targets.
+
+**Sizing:** 8 shares × $6.10 limit = $48.80. Fits the ~$51 remaining powder. Risk is fully defined to the position cost; sell brain owns the exit.
 
 ---
 
 ## Finalists Reviewed
 
-### IOVA — Iovance Biotherapeutics — PASS
-$4.44, +9.4% | Healthcare | catalyst age 10.9h | sentiment 0.803 (highest in funnel)
+### WVE — PICKED (above)
 
-The "Regulatory Nod" headline is credible — likely FDA approval continuation for lifileucel (Amtagvi) in melanoma, a genuine hard catalyst. Volume 17.9M confirms real participation. However: ~11 hours old, stock has absorbed the move at +9.4%, Healthcare sector is -0.42% today, and ~$51 remaining buys only 11 shares ($49) — not a meaningful position. Would need capital freed first.
+### TOI ($5.21, +3.58%) — PASS (close)
+Oncology Institute: 10% owner Jorey Chernett bought $90k of stock. Insider buying is a strong signal, and Healthcare is the right sector today. Passed only because WVE's clinical trial catalyst is harder/more verifiable and the entry is even earlier (flat vs. +3.6% already). Watchable when capital frees up via sell brain.
 
-### EPC — Edgewell Personal Care — PASS
-$26.22, +15.4% | Consumer Cyclical | catalyst age 0.4h | sentiment neutral 0.004
-
-"Edgewell Spurns A $30 Offer As Consumer Stocks Diverge." Real M&A story (rejected $30 bid, stock at $26.22). But +15.4% is at the stage-rule deprioritize threshold; Consumer Cyclical is -0.75% today; "Spurns" means no deal is imminent; sentiment is neutral. Gap to $30 doesn't overcome sector drag and extension at this entry point.
-
-### BBBY — Bed Bath & Beyond — PASS
-$6.61, +13.4% | Consumer Cyclical | catalyst age 9.9h | sentiment bullish 0.432
-
-"Launches First Phase of Co-Branded Stores with The Container Store." Interesting relaunch story, but: +13.4% over ~10 hours approaches extended, Consumer Cyclical sector headwind, and no powder for a meaningful entry.
+### RGNX ($10.30, +3.52%) — PASS
+Regenxbio: solidifying Duchenne gene therapy filing plans on FDA tailwind (bullish, 4.1h old). Solid healthcare catalyst but "planning to file" is a softer event than WVE's actual trial initiation. Would revisit with freed capital.
 
 ---
 
-## Notable Early Passes
+## Notable Passes
 
-- **KOPN** (-11.5% despite "bullish" design center news): something else driving the collapse while the market is green — knife-catch risk.
-- **LODE** (-4.5% on "bullish" solar recycling 8-K): Basic Materials worst sector today (-1.86%); market indifferent to the news.
-- **MGNX** (+2.4%, $24.5M Sanofi milestone): concrete financial catalyst but 10.9h old, muted move, Healthcare headwind.
-- **AMIX** (halt_resume + 8-K): no price data in shortlist; can't size or evaluate.
-- **GALT** (+11.4%, listed catalyst = Form 144 insider SALE): unexplained move — listed catalyst is bearish; chasing without understanding the real driver is not the mandate.
-- **MLTX** (-9.1%, "$200M public offering"): dilutive offering → justified decline.
-- **CALC / CTM**: sub-$1 — hard pass on price floor.
-
----
-
-## Watchlist
-
-Cleared both prior items: OSS ($17.50 trigger × 8 shares = $140) and RLMD ($7.20 × 20 = $144, expires tomorrow) exceed available powder (~$51). No new watchlist entries until capital is freed.
+- **UMAC ($20.00, −7.02%)** — West Palm Beach drone maker received a $30M investment (catalyst age 2.1h, bullish). Stock is DOWN 7% on it. Falling price on a bullish catalyst is a hard red flag — signals possible dilution concern, position unwind, or broader disappointment. Skip.
+- **ALKT ($15.77, +4.78%)** — Credit union digital banking partnership; moderate catalyst sitting in Technology, the worst sector today (−1.11%). Pass.
+- **SERV ($6.17, −3.74%)** — Board director appointment 8-K is routine and non-material. Stock falling. Skip.
+- **ADTX ($0.013)** — Hard-skipped; sub-$2 floor rule.
+- **PLAY, YELP, PRA, VSTS, SMPL** — Promo release, restaurant fluff, 52-week-high price notes, securities fraud coverage (bullish spin on bearish news). No actionable catalyst with edge.
+- **TOYO (−36.4%)** — Mover and news_smallcap but falling sharply; catalyst is a TradingView chart link, not a real named event. Hard pass.
+- **LODE (−2.9%, sec_8k)** — Solar panel recycling facility. Catalyst is real (Comstock Metals, JobsOhio support) but 7.3h old and stock is declining. Basic Materials is in the middle of the sector pack.
+- **Pure 8-K names (PGP, PTY, PCN, WEYS, PVH, BTBDW, CC, IRMD)** — No price/move data; PIMCO fund 8-Ks and routine corporate filings. Not tradeable setups.
 
 ---
 
@@ -61,4 +55,4 @@ Cleared both prior items: OSS ($17.50 trigger × 8 shares = $140) and RLMD ($7.2
 
 *(holdings.json last updated 2026-06-12 — prices ~12 days stale; current prices may differ materially)*
 
-Winners: APLD +6.2%, BNAI +5.0%, SLDB +4.2%, ATHE +3.4%. Laggards: AVR -7.7%, ABSI -8.4%, TISI -7.4%, RXRX -4.0%. Sell brain owns all exits.
+13 open positions, ~$949 deployed. Green: APLD (+6.24%), BNAI (+5.04%), SLDB (+4.23%), ATHE (+3.43%), MNKD (+1.36%), GASS (+1.26%), EVTL (+0.94%), PLSE (+0.71%). Underwater: ABSI (−8.36%), AVR (−7.70%), TISI (−7.41%), RXRX (−3.95%), CLLS (−2.35%). Sell brain owns all exits — no re-buys of any held name.

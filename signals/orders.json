@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-06-24T13:59:14Z",
-  "funnel": {"scanned": 286, "leading": 38, "in_budget": 36, "had_catalyst": 10, "finalists": 3, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-24T17:48:22Z",
+  "funnel": {"scanned": 294, "leading": 40, "in_budget": 38, "had_catalyst": 14, "finalists": 3, "picked": 1},
+  "orders": [
+    {"symbol": "WVE", "action": "BUY", "instrument": "stock", "quantity": 8, "limit_price": 6.10}
+  ]
 }
