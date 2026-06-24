@@ -1,59 +1,64 @@
-# Brain Run — 2026-06-23T17:45:30Z
+# Brain Run — 2026-06-24T13:59:14Z
 
-**Funnel:** scanned 304 → 40 shortlisted → 38 with leading tag → 40 in budget → 14 with real catalyst → 5 finalists → picked 1
-
----
-
-## Market Tape
-SPY −0.87%, VIX 18.63, tone: **neutral**. Broad market mildly red but not deeply so. Hot sectors: Utilities (+1.63%), Communication Services (+1.43%), Real Estate (+1.36%), Financial Services (+0.81%), Industrials (+0.80%), Energy (+0.76%), Healthcare (+0.73%), Technology (+0.43%). Weak: Basic Materials (−0.93%), Consumer Defensive (−0.39%), Consumer Cyclical (−0.30%). Applying normal discipline — no elevated bar needed, but setup quality still required.
+**Funnel:** scanned 286 → 40 shortlisted → 38 leading → 36 in budget → 10 with genuine catalyst → 3 finalists → picked 0
 
 ---
 
-## Pick: BUY ASPI — 5 shares @ $7.36 limit ($36.80 total)
+## Tape
 
-**Signal:** sec_8k + news_smallcap | catalyst_age: 5.4h | score: 9.8 (top of funnel)
+SPY +0.47% | VIX 18.94 | Tone: **risk_on** (mild)
 
-**Catalyst (verified):** ASP Isotopes' subsidiary (Tetra4/Renergen Virginia Gas Project) signed a **5-year take-or-pay helium contract at >$600/MCF** with an Asian industrial gases company, disclosed via 8-K today. Confirmed via SEC filing and GlobeNewswire press release. This is a binding commercial contract providing multi-year locked-in cash flow at premium helium pricing. Company expects to complete Phase 1 contracting (up to 70 MCF/day) by Q3 2026, with Phase 1 commercial operations also targeted for Q3.
+Sectors best→worst: Communication Services +1.05%, Real Estate +0.89%, Utilities +0.86%, Financial +0.45%, Energy +0.09%, Industrials +0.04% | Technology -0.31%, Healthcare -0.42%, Consumer Defensive -0.59%, Consumer Cyclical -0.75%, Basic Materials -1.86%
 
-**Why this setup:** Stock is up only +1.1% on a transformative revenue-visibility event — a clear underreaction. Volume of 2.6M shares confirms the news has circulated; the price hasn't followed. A take-or-pay contract at >$600/MCF (well above spot helium) for 5 years is hard commercial progress for a company still in Phase 1 ramp. This is LEADING (8-K + news_smallcap), early-stage move, fresh catalyst — the textbook entry.
-
-**Sizing note:** Account is nearly fully deployed (~$957 cost basis / $1,000 total). Only ~$43 powder available. 5 shares × $7.36 = $36.80 uses available cash responsibly. Small position but a real edge — "no trade" only applies when there's genuinely nothing; ASPI passes clearly.
+Implication: favor Communication Services names; skeptical of longs in Basic Materials, Consumer Cyclical, or Healthcare today.
 
 ---
 
-## Finalists Considered (passed)
+## Decision: No New Orders
 
-**ALLT — $7.36, +4.9%** — $40M buyback on $360M market cap (11%) is a genuine corporate action. Stock up 4.9% on it. Second-best catalyst in the funnel. Would have been the pick if ASPI didn't exist; passed because ASPI's setup is earlier (only +1.1%) with a harder catalyst, and remaining powder after ASPI is ~$6.
-
-**VWAV — $4.74, +8.8%** — Defense drone (TALON and D-FLY) launches at Eurosatory. Real product news, bullish sentiment (0.408). Up 8.8% already — a bit extended for a $120M micro-cap. Passed for ASPI.
-
-**ZVRA — $12.89, +1.9%** — Infant NPC study shows MIPLYFFA well tolerated. Real clinical milestone. Healthcare sector green today. Solid but "well tolerated" is a lower bar than a signed contract; ASPI wins on catalyst hardness.
-
-**OSS — $17.62, −3.1%** — Russell 2000 inclusion June 29 = mechanistic forced buying by index funds. Already on watchlist with pullback trigger at $17.50. Retained and good_until extended to 2026-06-28.
+13 open positions — well above the ~6-position guideline. ~$51 powder remaining, which is less than a meaningful position even at minimum share counts. No trade forced.
 
 ---
 
-## Notable Passes
+## Finalists Reviewed
 
-- **ULCC (+3.9%)** — "Hits 52-week high" is a lagging data point, not a new catalyst. Chasing a move.
-- **AMC (−22.8%)** — Dilutive $200M registered offering. Bearish catalyst, stock at $2.13 barely above floor. Move already priced in; no put candidate (stock collapsed, little incremental downside edge).
-- **WTI (+1.1%)** — Generic E&P sector article, not a company-specific catalyst. No edge.
-- **NKTX (+12.0%)** — TD Cowen initiation is real, but stock already up 12% on a micro-cap. Extended.
-- **CCL (−4.9%, earnings today)** — Reports today; could be interesting but at $28.71 limited shares fit in remaining powder, and earnings can gap either direction without more preparation.
-- **SGMO ($0.07, −56.8%), LMFA ($0.15, −24.0%)** — Sub-$2 price floor. Hard pass.
-- **MNPR (+18.4%, $81.32)** — Already up 18%, blow-off territory. $81/share = 1-share position. Skip.
-- **SLDB (+9.8% in shortlist)** — OWNED (9 shares, avg $6.86). Anti-chase: not re-buying.
-- **AMPG (−11.5%)** — Director selling shares = bearish signal. Falling on insider selling.
+### IOVA — Iovance Biotherapeutics — PASS
+$4.44, +9.4% | Healthcare | catalyst age 10.9h | sentiment 0.803 (highest in funnel)
+
+The "Regulatory Nod" headline is credible — likely FDA approval continuation for lifileucel (Amtagvi) in melanoma, a genuine hard catalyst. Volume 17.9M confirms real participation. However: ~11 hours old, stock has absorbed the move at +9.4%, Healthcare sector is -0.42% today, and ~$51 remaining buys only 11 shares ($49) — not a meaningful position. Would need capital freed first.
+
+### EPC — Edgewell Personal Care — PASS
+$26.22, +15.4% | Consumer Cyclical | catalyst age 0.4h | sentiment neutral 0.004
+
+"Edgewell Spurns A $30 Offer As Consumer Stocks Diverge." Real M&A story (rejected $30 bid, stock at $26.22). But +15.4% is at the stage-rule deprioritize threshold; Consumer Cyclical is -0.75% today; "Spurns" means no deal is imminent; sentiment is neutral. Gap to $30 doesn't overcome sector drag and extension at this entry point.
+
+### BBBY — Bed Bath & Beyond — PASS
+$6.61, +13.4% | Consumer Cyclical | catalyst age 9.9h | sentiment bullish 0.432
+
+"Launches First Phase of Co-Branded Stores with The Container Store." Interesting relaunch story, but: +13.4% over ~10 hours approaches extended, Consumer Cyclical sector headwind, and no powder for a meaningful entry.
+
+---
+
+## Notable Early Passes
+
+- **KOPN** (-11.5% despite "bullish" design center news): something else driving the collapse while the market is green — knife-catch risk.
+- **LODE** (-4.5% on "bullish" solar recycling 8-K): Basic Materials worst sector today (-1.86%); market indifferent to the news.
+- **MGNX** (+2.4%, $24.5M Sanofi milestone): concrete financial catalyst but 10.9h old, muted move, Healthcare headwind.
+- **AMIX** (halt_resume + 8-K): no price data in shortlist; can't size or evaluate.
+- **GALT** (+11.4%, listed catalyst = Form 144 insider SALE): unexplained move — listed catalyst is bearish; chasing without understanding the real driver is not the mandate.
+- **MLTX** (-9.1%, "$200M public offering"): dilutive offering → justified decline.
+- **CALC / CTM**: sub-$1 — hard pass on price floor.
+
+---
+
+## Watchlist
+
+Cleared both prior items: OSS ($17.50 trigger × 8 shares = $140) and RLMD ($7.20 × 20 = $144, expires tomorrow) exceed available powder (~$51). No new watchlist entries until capital is freed.
 
 ---
 
 ## Holdings Read
 
-13 open positions as of holdings.json (last updated 2026-06-12 — 11 days stale; actual prices have moved). Not re-buying any held symbol. SLDB appears in shortlist at $9.11 (+9.8%) but is owned — sell brain handles the exit. Account fully deployed: ~$957 cost basis / ~$1,000 total. Post-ASPI order powder: ~$6.
+*(holdings.json last updated 2026-06-12 — prices ~12 days stale; current prices may differ materially)*
 
----
-
-## Watchlist (unchanged except OSS good_until extended)
-
-- **OSS**: Pullback trigger $17.50, good_until 2026-06-28. Russell 2000 inclusion June 29 still valid; stock dipped further today (−3.1%, at $17.62 now — near trigger).
-- **RLMD**: Breakout trigger $7.10, good_until 2026-06-25. Still consolidating at $6.91 below trigger. H.C. Wainwright Buy reiteration was today's catalyst; healthcare sector green.
+Winners: APLD +6.2%, BNAI +5.0%, SLDB +4.2%, ATHE +3.4%. Laggards: AVR -7.7%, ABSI -8.4%, TISI -7.4%, RXRX -4.0%. Sell brain owns all exits.

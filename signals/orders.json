@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-23T17:45:30Z",
-  "funnel": {"scanned": 304, "leading": 38, "in_budget": 40, "had_catalyst": 14, "finalists": 5, "picked": 1},
-  "orders": [
-    {"symbol": "ASPI", "action": "BUY", "instrument": "stock", "quantity": 5, "limit_price": 7.36}
-  ]
+  "generated_utc": "2026-06-24T13:59:14Z",
+  "funnel": {"scanned": 286, "leading": 38, "in_budget": 36, "had_catalyst": 10, "finalists": 3, "picked": 0},
+  "orders": []
 }

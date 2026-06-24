@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-06-23T17:45:30Z
-*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; current prices may differ materially after 11 days)*
+# Open Positions — updated 2026-06-24T13:59:14Z
+*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; current prices may differ materially after ~12 days)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen | Unrealized $ |
 |--------|-----|---------|-------------|------|-----------|--------------|
@@ -17,8 +17,6 @@
 | SLDB   |  9  | $6.86   | —           | —    | $7.15     | +$2.61       |
 | TISI   |  3  | $18.09  | —           | —    | $16.75    | -$4.02       |
 
-**Open positions:** 13   **Est. cash deployed:** ~$957 of ~$1,000   **Powder left:** ~$43 (pre-ASPI order) → ~$6 after ASPI fills
+**Open positions:** 13   **Est. cash deployed:** ~$949 of ~$1,000   **Powder left:** ~$51
 
-**Net unrealized (snapshot prices):** -$7.35 — book roughly flat at 11-day-old snapshot; sell brain needed on key losers (AVR -$11.40, TISI -$4.02, ABSI -$3.57).
-
-*New order this run: ASPI BUY 5 @ $7.36 limit ($36.80) — will appear in holdings after fill.*
+**Net unrealized (snapshot prices):** -$7.35 — book roughly flat on 12-day-old data; sell brain needed on key laggards (AVR -$11.40, TISI -$4.02, ABSI -$3.57, RXRX -$2.34).

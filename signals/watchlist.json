@@ -1,27 +1,4 @@
 {
-  "generated_utc": "2026-06-23T17:45:30Z",
-  "watch": [
-    {
-      "symbol": "OSS",
-      "trigger": "pullback",
-      "trigger_price": 17.50,
-      "quantity": 8,
-      "limit_price": 17.60,
-      "take_profit": 20.00,
-      "stop_loss": 16.50,
-      "good_until": "2026-06-28",
-      "note": "Russell 2000 inclusion effective June 29 — index funds must buy. OSS at $17.62 today, down -3.1%; pullback to $17.50 is a clean entry 6 days before forced passive buying. 8x$17.60=$140.80."
-    },
-    {
-      "symbol": "RLMD",
-      "trigger": "breakout",
-      "trigger_price": 7.10,
-      "quantity": 20,
-      "limit_price": 7.20,
-      "take_profit": 8.50,
-      "stop_loss": 6.50,
-      "good_until": "2026-06-25",
-      "note": "H.C. Wainwright Buy reiteration (today, ~5h ago); stock at $6.91 consolidating; breakout above $7.10 confirms momentum. Healthcare sector green today. 20x$7.20=$144."
-    }
-  ]
+  "generated_utc": "2026-06-24T13:59:14Z",
+  "watch": []
 }
