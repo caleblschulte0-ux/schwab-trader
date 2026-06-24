@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-06-23T18:39:35.177969+00:00",
+  "generated_utc": "2026-06-24T12:38:38.381516+00:00",
   "pending": [
     {
       "symbol": "GASS",
-      "reason": "Both thesis legs dead \u2014 not a drawdown sell (position is green, +1.26%). (1) Q1 2026 earnings beat is 18+ days old with only +1.26% total price follow-through and zero momentum; catalyst fully absorbed, no re-rating occurred. (2) US-Iran peace deal reopened the Strait of Hormuz, normalizing LPG shipping rates that StealthGas named as the direct rate driver in Q1 earnings commentary \u2014 the trade-route reshuffling thesis is explicitly invalidated. Energy sector up today is broad macro, not a GASS-specific catalyst. Exit while green.",
+      "reason": "Both thesis legs dead (not a drawdown sell \u2014 position is green): (1) Q1 2026 earnings beat is now 19+ days old with only ~+1.3% total price follow-through; catalyst fully absorbed and momentum gone. (2) US-Iran peace deal reopened the Strait of Hormuz, normalizing the LPG trade-route reshuffling that management cited as the direct rate driver \u2014 this thesis leg is explicitly invalidated. Today's Energy sector strength is broad macro, not a GASS-specific catalyst.",
       "urgent": false,
-      "significance": "held 18d (>= 10)",
+      "significance": "held 19d (>= 10)",
       "unrealized_pct": 1.26,
-      "days_held": 18.0
+      "days_held": 18.7
     }
   ]
 }
