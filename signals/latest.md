@@ -1,61 +1,66 @@
-# Brain Run — 2026-06-25T13:52:15Z
+# Brain Run — 2026-06-25T17:43:22Z
 
-**Funnel:** scanned 323 → 40 shortlisted → 38 leading → 36 in budget → 14 with genuine catalyst → 2 finalists → picked 0
-
----
-
-## Tape
-
-SPY +0.61% | VIX 18.03 | Tone: **risk_on**
-
-Sectors best→worst: Healthcare +0.56%, Industrials +0.26%, Consumer Cyclical +0.21%, Basic Materials +0.19%, Consumer Defensive −0.21%, Energy −0.47%, Utilities −0.91%, Communication Services −0.99%, Financial Services −1.04%, Technology −1.06%, Real Estate −1.63%
-
-Implication: tilt toward healthcare and industrial names; skeptical of tech longs today. Risk_on tape — normal aggressiveness, but powder is nearly exhausted regardless.
+Funnel: scanned 328 → 35 leading → 31 in budget → 12 with real catalyst → 3 finalists → picked 1
 
 ---
 
-## No trade this run — powder exhausted
+## Market Tape
 
-Holdings (last updated 2026-06-12, ⚠ data is ~13 days stale) show **13 open positions at ~$957 cost basis** on a ~$1,000 account. Estimated powder: ~$43. Insufficient for a $150 position — even the strongest setup today could yield at most a ~9-share, ~$43 position. Not worth adding a 14th slot for a trade of that size. "Leave powder for later setups" applies.
+| | % | VIX | Tone |
+|--|---|-----|------|
+| SPY | +0.01% | 18.97 | **Neutral** |
 
----
+**Sectors (hot → cold):** Basic Materials (+1.71%) › Healthcare (+1.08%) › Comm Services (+0.09%) › Energy (flat) › Utilities (-0.16%) › Industrials (-0.67%) › Consumer Defensive (-1.11%) › Financial Services (-1.19%) › Consumer Cyclical (-1.20%) › Real Estate (-1.59%) › Technology (-2.12%)
 
-## Shortlist sweep
-
-**Already extended / lagging — hard pass:**
-- **NEO** ($12.90, +12.5%, catalyst age 2.4h) — board appointment. Weak catalyst; stock already up double-digits.
-- **MLKN** ($19.19, +11.3%) — post-earnings mover. Move is fully priced.
-- **INMD** ($14.79, +10.8%) — acquisition proposal from June 17 (8 days stale). Priced in.
-- **LILA** ($6.60, +10.9%) — TradingView valuation article only; no real catalyst.
-- **AYI** ($341.73, +11.9%) — out of budget at $341/share.
-
-**Going down on catalysts — passed:**
-- **NRXP** ($3.56, −5.3%) — first-patients milestone; stock ignoring the positive news.
-- **MRAM** ($21.40, −5.1%) — TradingView valuation article only; no real catalyst.
-- **HTZ** ($2.815, −6.2%) — debt upsizing/dilution (bearish catalyst); near the $2 floor.
-- **LAES** ($3.23, −3.3%) — promotional "targeting $2B valuation" piece; not tradeable.
-- **NNE** ($23.15, −3.1%) — NRC review update; nuclear/energy sector weak today.
-- **DAKT** ($19.35, −3.8%) — record Q4 earnings headline, stock declining anyway.
-
-**Bulk of list filtered — weak catalysts:**
-Most `news_smallcap` entries (JMIA, PD, CRVS, AHCO, ARDX, NIU, ORN, CTO, MATW, TLS, MAN, NVGS, NOMD, LILE, etc.) are TradingView algorithmically-generated forward-multiple articles — not real trading catalysts. Removed wholesale.
-
-**WKSP** ($1.08) — sub-$2 floor. Hard skip.
+Tilt: lean Basic Materials and Healthcare; skeptical of tech longs today. VIX ~19 elevated but not extreme — normal discipline applies.
 
 ---
 
-## Finalists (no powder to act, noted for next run when capital frees)
+## Pick: USAS — Americas Gold and Silver Corp
 
-**OPRX** ($4.74, +4.4%, catalyst age 2.4h) — `news_smallcap`, Healthcare IT micro-cap (~$89M market cap). "OptimizeRx puts HCP audience building inside ad-buying platforms" — a real product announcement integrating healthcare-professional audience targeting into ad-buying workflows. Healthcare sector leading today. Volume 806K. Entry is early (+4.4%, not blown off), catalyst is fresh. With ~$43 powder the max position is 9 shares × $4.74 = $42.66 — too small to act on, but the best name on the shortlist. Worth revisiting the next run if the sell brain has freed capital.
+**Catalyst (6.9h old, Yahoo Finance, sentiment Bullish 0.487):**
+*"Americas Gold and Silver Completes Phase 2 of No. 3 Shaft Upgrades at Galena, Increasing Current Hoisting Capacity by 100% and Provides Operations Update"*
 
-**PERI** ($8.96, +2.6%, catalyst age 0.7h) — `news_smallcap`, AI AdTech ($352M cap). "Is Perion Network positioning itself as an AI-powered AdTech growth story?" Freshest item on the list, but it's an analyst opinion piece, not a hard event. Technology sector −1.06% today creates a direct headwind. Passed.
+Doubling hoisting capacity is a concrete production milestone — not a fluff piece. The Galena mine is Americas Gold and Silver's core asset; expanding throughput directly supports higher output and revenue.
 
-**No web search conducted** — OPRX and PERI were identified from the shortlist without needing sympathy plays; no productive use for the search budget given powder constraints.
+**Setup:** +7.1% to $4.885 on 2.3M volume. Small-cap ($1.6B market cap). Basic Materials sector = today's leader (+1.71%). The +7% move on a real production milestone is moderate, not blown-off — there's room for continuation on the fundamental + sector tailwind. Volume confirms broad participation.
+
+**Entry rationale:** Best catalyst in the funnel, strongest sector alignment, solid volume. Stage is early-to-mid. With ~$51 remaining powder, 10 shares fits cleanly.
+
+**Order:** BUY 10 shares × $4.89 limit = $48.90
 
 ---
 
-## Holdings read
+## Finalists Considered
 
-*(holdings.json last updated 2026-06-12 — prices ~13 days stale; current prices differ materially)*
+**USAS ✓ Selected** — see above.
 
-13 open positions, ~$957 deployed. Green: APLD (+6.2%), BNAI (+5.0%), SLDB (+4.2%), ATHE (+3.4%), MNKD (+1.4%), GASS (+1.3%), EVTL (+0.9%), PLSE (+0.7%). Underwater: ABSI (−8.4%), AVR (−7.7%), TISI (−7.4%), RXRX (−4.0%), CLLS (−2.4%). Sell brain owns all exits — no re-buys of any held name. WVE ordered yesterday (2026-06-24) is not in the stale holdings snapshot; may or may not have been filled.
+**NRXP (NRx Pharmaceuticals, $3.645, +2.4%, catalyst age 6.9h):** Subsidiary HOPE Therapeutics treats first patients using Zeta Surgical's FDA-cleared Zeta TMS Navigation System. Real clinical milestone for a $132M micro-cap that has barely moved (+2.4%) — early entry available. Passed over USAS because volume is lower (659K vs 2.3M), sector is Healthcare vs today's #1 Basic Materials, and catalyst age is the same. Added to watchlist at breakout trigger $3.80 in case capital frees up.
+
+**UMAC (Unusual Machines, $18.85, -3.43%, catalyst age 3.4h):** Fresh 8-K + news — expanding Orlando drone battery manufacturing facility. Headline is bullish but the stock is DOWN 3.4% on it — market rejecting the catalyst. Only 2 shares fit the remaining budget (~$37.70). Negative price reaction on positive news is a warning signal; passed.
+
+---
+
+## Notable Passes
+
+- **WYY (+15.3%):** Catalyst is insider SALES — inherently bearish/dilutive. Already extended. Hard pass.
+- **NEO (+7.1%):** Board appointment only — not a trading catalyst.
+- **NDRA (-34.1%, halt/resume):** LUDP halt, crashed 34%. Move is spent; chasing a post-halt crash is not this strategy.
+- **AMBQ (+4.1%):** Closing of upsized public offering + full underwriter overallotment exercise = dilutive event. At $84.51/share, exceeds remaining budget anyway.
+- **SPRY (-23.8%):** ARS Pharmaceuticals on 4.76M volume with Cantor maintaining Overweight — something severe happened beyond the analyst note. Considered put; passed because cause is unclear, most of the crash is done, and budget is nearly exhausted.
+- **WAVE (+3.0%):** Direct offering at premium = dilution for existing holders. Bearish.
+- **Bulk of news_smallcap entries (VZLA, RLJ, WRD, VSTM, TOYO, VSTS, etc.):** TradingView forward-multiple / valuation articles — algorithmically generated, not actionable catalysts. Filtered wholesale.
+
+**No web search conducted** — USAS catalyst clear from headline; no sympathy play warranted. 0/1 search budget used.
+
+---
+
+## Holdings Read (snapshot 2026-06-12 — 13 days stale)
+
+13 open positions, ~$949 deployed of ~$1,000. ~$51 powder before today's USAS order.
+
+**Laggards (sell brain manages exits):** ABSI -8.4% ($39), AVR -7.7% ($137), TISI -7.4% ($50), RXRX -4.0% ($57), CLLS -2.4% ($137)
+**Winners:** APLD +6.2% ($88), BNAI +5.0% ($143), SLDB +4.2% ($64), ATHE +3.4%
+**Flat:** GASS +1.3%, MNKD +1.4%, PLSE +0.7%, EVTL +0.9%
+
+NOTE: holdings.json is 13 days old. Sell brain has been operating since; actual positions and available powder may differ materially. All 13 listed symbols remain DO-NOT-RE-BUY per anti-chase rules regardless.
