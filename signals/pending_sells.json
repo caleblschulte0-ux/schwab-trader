@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-06-25T12:39:03.957054+00:00",
+  "generated_utc": "2026-06-25T15:38:58.325357+00:00",
   "pending": [
     {
       "symbol": "GASS",
-      "reason": "Thesis remains dead on two independent legs (NOT a drawdown sell \u2014 position was green): (1) Q1 2026 earnings catalyst is now 20+ days old with only ~+1.3% total price follow-through \u2014 fully absorbed, no re-rating occurred. (2) US-Iran peace deal reopened the Strait of Hormuz, directly invalidating management's cited LPG trade-route reshuffling driver. Geopolitical thesis leg is broken by a hard external event with no reversal signal. Not in today's funnel. Exit while green.",
+      "reason": "Thesis dead on two independent legs \u2014 this is NOT a drawdown sell (position is green, ~+1.3%). (1) Q1 2026 earnings catalyst is 20+ days old with only ~+1.3% total price follow-through; catalyst fully absorbed, no re-rating occurred. (2) US-Iran peace deal reopened the Strait of Hormuz, directly invalidating management's cited LPG trade-route reshuffling driver \u2014 a hard external event with no reversal signal. Not in today's funnel. Exit while green.",
       "urgent": false,
       "significance": "held 20d (>= 10)",
       "unrealized_pct": 1.26,
-      "days_held": 19.7
+      "days_held": 19.9
     }
   ]
 }
