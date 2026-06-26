@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-06-25T17:43:22Z
-*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; current prices differ after ~13 days)*
+# Open Positions — updated 2026-06-26T13:49:14Z
+*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; current prices differ after ~14 days)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen | Unrealized $ |
 |--------|-----|---------|-------------|------|-----------|--------------|
@@ -17,6 +17,6 @@
 | SLDB   |  9  | $6.86   | —           | —    | $7.15     | +$2.61       |
 | TISI   |  3  | $18.09  | —           | —    | $16.75    | −$4.02       |
 
-**Open positions:** 13   **Est. cash deployed:** ~$949 of ~$1,000   **Powder left:** ~$51 (→ ~$2 after today's USAS order)
+**Open positions:** 13   **Est. cash deployed:** ~$957 of ~$1,000   **Powder left:** ~$0 after today's NRXP order ($42.72)
 
-**Net unrealized (snapshot prices):** −$7.35 — sell brain needs to work through laggards (AVR −$11.40, TISI −$4.02, ABSI −$3.57, RXRX −$2.34). Winners: BNAI +$6.86, APLD +$5.17, SLDB +$2.61.
+**Net unrealized (snapshot prices):** −$7.32 — sell brain needs to work through laggards (AVR −$11.40, TISI −$4.02, ABSI −$3.57, RXRX −$2.34). Winners: BNAI +$6.86, APLD +$5.17, SLDB +$2.61.

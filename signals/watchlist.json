@@ -1,13 +1,4 @@
 {
-  "generated_utc": "2026-06-25T17:43:22Z",
-  "watch": [
-    {"symbol": "NRXP", "trigger": "breakout", "trigger_price": 3.80,
-     "quantity": 13, "limit_price": 3.85, "take_profit": 4.50, "stop_loss": 3.45,
-     "good_until": "2026-06-27",
-     "note": "First patients treated with FDA-cleared Zeta TMS system — clinical milestone barely priced in (+2.4%). Breakout above 3.80 signals momentum confirmation. Only enter if capital frees up from existing holds."},
-    {"symbol": "LTBR", "trigger": "breakout", "trigger_price": 9.50,
-     "quantity": 5, "limit_price": 9.60, "take_profit": 11.50, "stop_loss": 8.75,
-     "good_until": "2026-06-27",
-     "note": "Lightbridge fuel samples removed from Idaho National Lab Advanced Test Reactor — real nuclear-fuel milestone. Barely moved today (+0.33%). Breakout above 9.50 is the momentum trigger."}
-  ]
+  "generated_utc": "2026-06-26T13:49:14Z",
+  "watch": []
 }
