@@ -1,13 +1,4 @@
 {
-  "generated_utc": "2026-06-26T18:40:35.031171+00:00",
-  "pending": [
-    {
-      "symbol": "GASS",
-      "reason": "Both thesis legs spent/broken. (1) Earnings catalyst (Q1 2026 net income +24% QoQ, $100M contracted revenues, released Jun 5 \u2014 day of entry) is fully absorbed: market had 22 days to re-rate and instead drove the stock from $9.51 to ~$8.06 (-15.3%). (2) Prior research identified US-Iran peace deal / Strait of Hormuz reopening as invalidating management's cited LPG trade-route reshuffling driver \u2014 a structural thesis break with no reversal. Today's funnel confirms no fresh catalyst (only a neutral TradingView price-prediction article, sentiment 0.141). Both reasons to own are gone.",
-      "urgent": false,
-      "significance": "held 21d (>= 10)",
-      "unrealized_pct": 1.26,
-      "days_held": 21.0
-    }
-  ]
+  "generated_utc": "2026-06-29T12:39:16.622704+00:00",
+  "pending": []
 }
