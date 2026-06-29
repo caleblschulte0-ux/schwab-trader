@@ -1,71 +1,54 @@
-# Brain Run — 2026-06-29T13:52:17Z
+# Brain Run — 2026-06-29T17:51:22Z
 
-**Funnel:** scanned 336 → 40 shortlisted (all LEADING: news_smallcap/halt_resume) → 38 in budget → 12 with actionable catalyst → 2 finalists → picked 1
+**Funnel:** scanned 353 → 40 shortlisted → 38 in budget → 32 with catalyst → 4 finalists → picked 0
 
 ---
 
 ## Market Tape
-- SPY: +1.27% | VIX: 18.25 | Tone: **risk_on**
-- Hot sectors: Consumer Cyclical (+2.36%), Healthcare (+1.12%), Industrials (+0.99%), Real Estate (+0.87%)
-- Cold: Energy (−0.53%), Communication Services (−0.41%), Consumer Defensive (−0.19%)
-- Green tape, moderate VIX — normal aggressiveness warranted.
 
-**Today's theme**: Russell reconstitution effective Friday June 27. ~30 of 40 shortlist entries are index addition/removal plays. The bulk of forced index-fund buying/selling happened at Friday's close; Monday gap-ups are catch-up pricing, not fresh leading entries. One genuine non-recon standout: KOPN.
+**Risk-on.** SPY +1.56%, VIX 17.77. Hot sectors: Consumer Cyclical (+3.35%), Communication Services (+2.08%), Technology (+0.85%), Industrials (+0.61%). Weak: Healthcare (−0.43%), Energy (−0.46%), Financial Services (−0.73%), Real Estate (−1.69%), Utilities (−1.37%), Basic Materials (−1.64%). Good tape for entries — the constraint is capital, not conviction.
 
 ---
 
-## Pick: KOPN — BUY 13 shares @ $3.82 limit (~$49.66)
+## No Orders — Capital Constraint
 
-**Catalyst (0.5h old, Investing.com / Stock Titan, sentiment Bullish 0.479):**
-*"Kopin receives orders for drone viewer from defense customers"*
+Holdings.json (last updated 2026-06-12) shows **13 open positions** with a total cost basis of ~$957 against a ~$1,000 account. Estimated powder remaining: **~$43**. That is below any meaningful entry ($2 floor × minimum shares). The sell brain must free up capital before fresh buys are executable. No orders this run despite a green tape with real setups in the funnel.
 
-**Web-verified**: Kopin Corporation announced multiple prototype orders for its **Sentinel FPV (First Person Viewer)** drone-viewer system from defense customers, ahead of the U.S. government's **Drone Dominance Program (DDP) Phase 2** evaluation awards expected in August 2026. Volume production orders (up to 40,000 goggles by end of 2028) are expected to follow Phase 2 awards. The company already secured a $3.2M initial contract in April 2026 — today's prototype orders expand that pipeline directly. This is a real defense-optics company with real contracts.
-
-- Price: $3.82 | Change: +0.8% — barely moved despite 10.8M shares of volume
-- Stage: VERY EARLY — only +0.8% off open on a fresh catalyst = ideal leading entry
-- Catalyst age: 0.5h — freshest, most actionable non-index-recon item in the funnel
-- Defense/drone theme: top secular tailwind (DDP, domestic reshoring, Ukraine analog)
-- Budget fit: 13 shares × $3.82 = $49.66 (≤ $150 cap; sized to available powder)
-- Bot will trim quantity if live cash is tighter than estimated.
+Note: holdings.json is 17 days stale — sell-brain activity since June 12 may have freed capital. But per BRAIN.md, I treat the file as real. The prior routine ordered KOPN at ~$50 (~4h ago) — not yet reflected in holdings.
 
 ---
 
-## Finalists Considered
+## Finalists Reviewed
 
-**KOPN ★** — picked (see above).
+**RGNX — $11.12 (+6.1%) | score 9.8 | sec_8k + news_smallcap | catalyst age 5.9h**
+Regenxbio dosed the first patient in its RGX-314 diabetic retinopathy gene therapy trial (8-K + Investing.com, published ~11:40 UTC). First patient in a Phase 2 DR trial is a meaningful clinical milestone in a large-market indication — exactly the leading catalyst this strategy targets. Up 6.1% on 1.15M volume; not extended. Healthcare sector is marginally weak today (−0.43%) but stock-specific catalyst strength overrides sector tilt. **Would be a buy if capital existed.** Added to watchlist on pullback to $10.60.
 
-**FIP ($4.95, +0.8%, 2.9h):** FTAI Infrastructure acquisition of Tidewater Logistics — genuine M&A catalyst, bullish sentiment (0.464), barely moved. Rejected vs KOPN: catalyst 6× older (2.9h vs 0.5h), no defined near-term trigger event, acquisition plays take longer to play out. Watchlisted at $5.10 breakout.
+**RPD — $7.91 (+3.9%) | score 7.9 | news_smallcap | catalyst age 3.9h**
+Rapid7 (cybersecurity) added to the Russell Microcap Value Index. Mechanical catalyst: passive index funds must buy by rebalancing deadline. Technology sector green (+0.85%), aligning with sector tilt. Up 3.9% on 924K volume — early stage, room to target. At $7.91 × 18 = $142 this fits the $150 cap perfectly. **Would take on breakout if capital frees.** Added to watchlist above $8.10.
+
+**NRGV — $4.475 (+6.3%) | score 7.4 | news_smallcap | catalyst age 4.4h**
+Energy Vault joins Russell 2000 — index inclusion forces passive buying. Decent volume (3.65M). Energy sector weak today (−0.46%), which cuts against the trade. Solid index-catalyst structure but sector headwind tips the tie to RPD. Deprioritized; not on watchlist this run.
+
+**PRME — $3.695 (+7.7%) | score 7.4 | news_smallcap | catalyst age 5.9h**
+H.C. Wainwright upgrades Prime Medicine to Buy. Analyst upgrade is a legitimate catalyst. Pre-revenue gene editing, Healthcare sector weakest today — higher binary risk on an already-weak-sector stock. Passed.
 
 ---
 
 ## Notable Passes
 
-**ISSC (+5.3%, Russell 2000 addition, 0.4h):** Index reconstitution — the forced passive-fund buying was at Friday's close; today's gap is mechanical catch-up, not a fresh catalyst. Already moved 5.3% on a one-time event. Watchlisted for pullback to $17.10.
-
-**JACK (+7.7%, Russell Microcap addition, 0.6h):** Same reconstitution logic. Up 7.7% on a one-time index-addition event — past the ideal entry window.
-
-**EIKN (+16.2%, Russell 3000E Growth addition, 3.9h):** Already up 16.2% intraday — exceeds the deprioritize threshold (>15%). Hard pass.
-
-**HELP (+7.6%, 2.0h):** Catalyst is a Form 40-F filing (governance/regulatory disclosure) — neutral institutional filing, not a directional catalyst for the stock.
-
-**GDYN (+5.0%):** Dropped from Russell 2000 Growth — an index removal is bearish pressure (index funds selling), not a buy signal.
-
-**CLVT (+7.6%, $2.13):** Just $0.13 above the $2 floor — in the danger zone. Also dropped from Russell 1000 Value (bearish). Pass.
-
-**HSHP (−3.0%, Russell addition):** Russell addition but stock is RED on the day — negative relative strength on a green tape disqualifies it.
-
-**IDR ($34.17, +5.0%, 3.9h):** "Soars 5.0%" article with no underlying new catalyst in the headline — looks like a recap article, not a fresh catalyst. Skip.
-
-**JATT / HONIV (halt_resume):** No price/volume data available; SPAC and Honeywell when-issued shares respectively — can't size a position responsibly. Pass.
-
-**BNAI ($18.23):** In today's shortlist but OWNED (7 shares, avg $19.46) — anti-chase rule applies, no re-buy regardless of setup.
-
-**Web search used:** 1 of 1 (KOPN verification — confirmed genuine defense order announcement with August DDP catalyst timeline; justified the slot).
+- **KOPN** ($4.27, +11.6%): Already ordered in the prior routine run ~4h ago at $3.82. Now priced higher from that pick — anti-chase, no re-buy.
+- **SLDB** ($9.33): Already held (holdings.json, 9 shares @ $6.86). Cannot re-buy.
+- **KYTX** ($8.67, +2.7%): Russell Microcap Growth addition. Brain has explicit anti-fixation warning on this name from June 2026 history. Move on.
+- **LRMR** ($3.09, −15.7%): Russell inclusion headline but stock is down 15.7% — contradictory signal, likely offsetting bad news. Hard pass on a big loser with a confused story.
+- **MLTX** ($19.97, +0.4%): Just completed a $200M public offering — dilutive secondary. Hard pass.
+- **PALI** ($2.19, +15.9%): FDA IND clearance (bullish catalyst) but already up 15.9% intraday and sitting just $0.19 above the $2 floor. Extended blow-off + near-penny risk. Pass.
+- **REPL** ($11.24, −3.4%): Earnings 8-K today with neutral sentiment; stock falling on the news. Long-term PDUFA thesis (Aug 2) intact, but near-term momentum has turned. Keeping watchlist entry at $11.30 (not lowering trigger — anti-chase).
+- **RPAY** ($4.30, +20.1%): Up 20.1% on Russell Microcap addition — already well past the deprioritize threshold (>15%). Hard pass on the blow-off.
+- **Halt names (JATT, HONIV)**: SPAC and Honeywell when-issued respectively — no tradeable setup.
+- **SEC-only rows (NRC, GRMLW, VABK, APOG, EBS, USDW, ACNT)**: Filing headlines only, no price/volume/directional catalyst readable.
 
 ---
 
-## Holdings Read (snapshot 2026-06-12 — 17 days stale)
+## Holdings Read
 
-13 open positions (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI), ~$957 cost-basis deployed.
-Holdings file last refreshed June 12; sell brain has been active since. Actual cash available is higher than ~$0 indicated in prior run — KOPN order sized conservatively to ~$50 to avoid over-deploying.
-No held symbol was re-picked this run.
+13 positions (per June 12 snapshot), ~$957 deployed. Sell brain owns all exits. Brighter positions: BNAI (+5.0%), APLD (+6.2%), SLDB (+4.2%). Underwater: ABSI (−8.4%), AVR (−7.7%), TISI (−7.4%). Portfolio needs sell-brain activity to recycle capital before new entries can fire.

@@ -1,6 +1,28 @@
 {
-  "generated_utc": "2026-06-29T13:52:17Z",
+  "generated_utc": "2026-06-29T17:51:22Z",
   "watch": [
+    {
+      "symbol": "RGNX",
+      "trigger": "pullback",
+      "trigger_price": 10.60,
+      "quantity": 13,
+      "limit_price": 10.65,
+      "take_profit": 12.50,
+      "stop_loss": 9.80,
+      "good_until": "2026-07-03",
+      "note": "First patient dosed in RGX-314 diabetic retinopathy Phase 2 trial (8-K, 2026-06-29). Fresh clinical milestone, large-market indication. Up 6.1% today — prefer entry on a pullback to $10.60 for better r/r. Catalyst age ~6h; move likely not spent."
+    },
+    {
+      "symbol": "RPD",
+      "trigger": "breakout",
+      "trigger_price": 8.10,
+      "quantity": 17,
+      "limit_price": 8.15,
+      "take_profit": 9.00,
+      "stop_loss": 7.50,
+      "good_until": "2026-07-02",
+      "note": "Rapid7 added to Russell Microcap Value Index — passive index-fund buying is mechanical. Tech sector green today. Up 3.9% at $7.91; breakout above $8.10 confirms buyers in control. Recon trades fade quickly — expires 2026-07-02."
+    },
     {
       "symbol": "REPL",
       "trigger": "breakout",
@@ -10,7 +32,7 @@
       "take_profit": 14.00,
       "stop_loss": 9.80,
       "good_until": "2026-07-07",
-      "note": "FDA accepted BLA resubmission for RP1 (melanoma); PDUFA Aug 2. Pre-PDUFA pre-positioning play — enter on breakout above 11.30."
+      "note": "FDA accepted BLA resubmission for RP1 (melanoma); PDUFA Aug 2. Pre-PDUFA pre-positioning play — enter on breakout above 11.30. Stock down 3.4% today on neutral earnings 8-K; long-term thesis unchanged. Trigger NOT lowered."
     },
     {
       "symbol": "FIP",
