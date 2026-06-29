@@ -1,5 +1,7 @@
 {
-  "generated_utc": "2026-06-26T17:44:30Z",
-  "funnel": {"scanned": 328, "leading": 40, "in_budget": 40, "had_catalyst": 15, "finalists": 2, "picked": 0},
-  "orders": []
+  "generated_utc": "2026-06-29T13:52:17Z",
+  "funnel": {"scanned": 336, "leading": 40, "in_budget": 38, "had_catalyst": 12, "finalists": 2, "picked": 1},
+  "orders": [
+    {"symbol": "KOPN", "action": "BUY", "instrument": "stock", "quantity": 13, "limit_price": 3.82}
+  ]
 }

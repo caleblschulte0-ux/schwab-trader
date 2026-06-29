@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-26T17:44:30Z",
+  "generated_utc": "2026-06-29T13:52:17Z",
   "watch": [
     {
       "symbol": "REPL",
@@ -9,8 +9,30 @@
       "limit_price": 11.45,
       "take_profit": 14.00,
       "stop_loss": 9.80,
+      "good_until": "2026-07-07",
+      "note": "FDA accepted BLA resubmission for RP1 (melanoma); PDUFA Aug 2. Pre-PDUFA pre-positioning play — enter on breakout above 11.30."
+    },
+    {
+      "symbol": "FIP",
+      "trigger": "breakout",
+      "trigger_price": 5.10,
+      "quantity": 29,
+      "limit_price": 5.15,
+      "take_profit": 5.90,
+      "stop_loss": 4.78,
+      "good_until": "2026-07-03",
+      "note": "FTAI Infrastructure acquiring Tidewater Logistics — M&A catalyst barely priced in (+0.8%). Break above $5.10 confirms buyers absorbing news. Fire if cash frees up."
+    },
+    {
+      "symbol": "ISSC",
+      "trigger": "pullback",
+      "trigger_price": 17.10,
+      "quantity": 8,
+      "limit_price": 17.15,
+      "take_profit": 19.50,
+      "stop_loss": 16.30,
       "good_until": "2026-07-02",
-      "note": "FDA accepted BLA resubmission for RP1 (melanoma) today; PDUFA Aug 2. Stock barely moved (+0.09%) on strong catalyst — enter on any upside confirm above 11.30. Pre-PDUFA pre-positioning play."
+      "note": "Russell 2000 addition effective today — passive index-fund buying support. Up 5.3% on open; prefer a pullback entry to $17.10 for better r/r. Expires quickly as recon trade fades."
     }
   ]
 }
