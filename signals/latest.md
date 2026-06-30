@@ -1,61 +1,55 @@
-# Brain Run — 2026-06-30T14:03:22Z
+# Brain Run — 2026-06-30T17:46:08Z
 
-**Funnel:** scanned 307 → 40 shortlisted (all leading signals) → 38 in budget → 16 with real catalyst → 3 finalists → picked 1
+**Funnel:** scanned 307 → 40 shortlisted (all carrying leading signals) → 30 in budget → 22 with real catalyst → 4 finalists → picked 0
 
 ---
 
 ## Market Tape
 
-**Neutral.** SPY +0.11%, VIX 17.58. Hot sectors: Consumer Cyclical (+3.87%), Industrials (+2.19%), Technology (+1.54%), Communication Services (+1.27%). Weak: Financial Services (−0.34%), Energy (−0.57%), Real Estate (−0.98%), Consumer Defensive (−1.2%), Utilities (−1.48%), Basic Materials (−1.66%). Today is the last trading day of June — Russell reconstitution effective date (end-of-month), which drove mechanical index-fund buying across several names in the funnel. Normal discipline applies.
+**Risk-on.** SPY +0.76%, VIX 16.66. Hot sectors: Technology (+2.32%), Industrials (+2.23%), Consumer Cyclical (+1.83%), Basic Materials (+1.27%). Weak: Consumer Defensive (−0.29%), Healthcare (−0.35%), Utilities (−0.38%), Energy (−0.63%), Real Estate (−0.81%). Broad green day; gave clean tech momentum a fair look but capital exhaustion is the binding constraint this run.
 
 ---
 
-## Pick: BUY ALKT — 8 shares × $17.00 = $136
+## Decision: No New Order — Fully Deployed
 
-**Catalyst (age ~6h, confirmed via web search):** JANA Partners filed a **Schedule 13D disclosing a 6.3% stake** in Alkami Technology and is **explicitly pushing for a sale of the company**, stating it is "exploring a sale, including by engaging with multiple parties interested in a potential acquisition." This is a real, public, documented activist campaign — JANA increased from a prior 5.1% stake, signaling escalating commitment.
-
-**Why now:** ALKT is up only 3.5% on this disclosure — the market is barely pricing in an M&A premium. Activist-forced sale processes routinely generate 20–40%+ premiums. JANA's public 13D filing puts the board on notice; they must now engage formally. This is an early-stage setup with significant room if talks progress.
-
-**Sector fit:** Fintech SaaS (digital banking platform for community banks and credit unions) — fits the Technology sector tailwind (+1.54% today).
-
-**Stage of move:** Up 3.5% at ~$17. Not extended; the story is fresh and broadening.
-
-**Risk:** If the sale process stalls, breaks down, or JANA backs off, the stock fades toward pre-disclosure levels. Sized at $136 — defined risk, within the $150 cap.
-
-**Catalyst age:** ~6h (filed 2026-06-30, propagating today).
+13 open positions with ~$957 cost basis deployed against ~$1,000 account. Approximately $43 powder remaining. The account is 2× the ~6-position guideline. Adding position #14 for $38–40 is a marginal use of the last powder; better to let the sell brain cycle and re-enter with room to breathe. No order emitted this run.
 
 ---
 
-## Finalists Passed
+## Finalists Considered
 
-**INV ($5.23, +7.17%) | news_smallcap | catalyst age 1.1h**
-Innventure named Bill Grieco as next CEO effective Oct. 1. Consumer Cyclical sector (hottest today, +3.87%), small-cap ($440M), fresh catalyst. But up 7.2% already on a CEO-change announcement — the move is meaningful for this catalyst type and likely largely priced in today. Watchlisted for pullback to $5.00 for a better entry.
+**POET ($10.01, +1.63%, catalyst_age 5.9h) — ELIMINATED**
+"POET says 2026 production ramp stays on track, eyes 1M units a month" — highest sentiment score in the funnel (0.82), top tech pick, sector aligned. Eliminated after targeted web verification revealed: $830M equity raised in the past 12 months, $661M in outstanding warrants (massive dilution overhang), and an active class-action lawsuit. Production milestone is real, but the structural dilution risk makes this a pass regardless of the headline.
 
-**FDMT ($12.88, +11.0%) | news_smallcap | catalyst age 6.9h**
-4D Molecular Therapeutics completed enrollment in the 4FRONT-2 trial for 4D-150 gene therapy in wet AMD — a real clinical milestone in a large market. Bullish catalyst; volume confirming (1.52M). But up +11% intraday — stage rule: deprioritize above 15–20%, and 11% on a biotech milestone often marks the day's peak. Watchlisted for pullback to $11.75.
+**MX ($4.77, +3.25%, catalyst_age 6.4h) — WATCHLISTED**
+Magnachip Semiconductor named Chae Lee as new CEO (8-K + EE Times Asia, score 8.8). Tech sector is the day's leader (+2.32%); new leadership in semiconductors is a legitimate medium-term catalyst. 8 shares × $4.77 = $38.16 would fit the remaining budget. Passed on buying the current $4.77 price — chasing a 3.25% move on a thin-catalyst day isn't worth the last powder. Parked on watchlist at $4.50 pullback for a cleaner entry.
+
+**EYPT ($14.89, +5.53%, catalyst_age 6.9h) — PASSED**
+Russell Growth Index addition drives institutional buying. Real catalyst but already up 5.5% on a 6.9-hour-old story; healthcare sector is today's laggard (−0.35%); sector headwind + extension = pass.
+
+**NVCR ($15.28, −1.29%, catalyst_age 6.3h) — PASSED**
+Novocure won CE Mark for Optune Pax (pancreatic cancer treatment) — genuine EU regulatory approval. Sentiment Bullish (0.405) but the stock is DOWN on the news. European approval alone rarely drives US equity prices materially; market is saying so in real time. Healthcare sector weakest tradeable sector today. Pass.
 
 ---
 
 ## Notable Passes
 
-**IFRX ($2.28, +18.75%)** — EMA action on Tavneos is a legitimate regulatory catalyst, but already up 18.75% intraday and only $0.28 above the $2 floor. Near-blow-off + penny-stock adjacency risk. Hard pass.
-
-**Russell index additions (EYPT +3.3%, YELP +2.6%, BRBR +7.2%)** — Real mechanical catalyst, but Russell reconstitution effective date was last Friday (June 27). The bulk of forced index-fund buying already occurred; these moves are largely priced in. Stale catalyst, not taking them.
-
-**VTGN / HCWB (halt/resume + 8-K)** — T3 regulatory halts that resumed at 4:00 AM. No live price or volume data in the funnel; can't size or judge entry. Pass.
-
-**APD ($297.42, +9.53%)** — Strong mover with a fresh 8-K catalyst, but at $297 only 1 share fits the $150 cap. Not a meaningful position; pass.
-
-**FIP ($4.36, −11.9%)** — Was on the prior watchlist as an M&A play. Down 11.9% today — thesis has broken. Dropped from watchlist.
-
-**RGNX, RPD, ISSC** — Prior watchlist Russell recon plays expiring July 2–3. Not in today's funnel and likely already triggered or expired. Dropped.
+- **SDOT** (+24.8% intraday): Blown off. Hard pass.
+- **RZLV** (+12.4%, buyback approval): Extended; neutral sentiment (0.04). Pass.
+- **PYXS** ($2.92, +2.2%, private placement $114M): Private placements are dilutive — elevated dilution risk for existing holders. Pass.
+- **EOSE** (−5.4%, $150M rights offering + warrants): Dilutive structure confirmed in 8-K. Pass.
+- **YHC / VTGN**: Sub-$2 gap-downs (−89% and −70% respectively) on likely bad 8-Ks. Hard pass.
+- **JACK** (−4.7%): Headline said "short squeeze surges 10%" but stock is actually red today — stale headline, move reversed. Pass.
+- **INV** ($4.97, −4.97%): Fell through the $5.00 watchlist trigger and kept falling — removed from watchlist. Falling knife.
+- **NEXT** ($7.47, +1.5%): LNG financing milestone is real but Energy is today's second-weakest sector (−0.63%). Pass.
+- **LAES, GJO, GJP, GJH, AMS, BNAIW, UGRO, GITS, VTIX, CBKM, CALM**: Bare SEC 8-K SEC filings with no readable catalyst (trust-related filings, warrant notices). All skipped.
 
 ---
 
 ## Holdings Note
 
-13 open positions per holdings.json (last updated 2026-06-12). Cost basis ~$957 against ~$1,000 account — powder estimated at ~$43. ALKT order fires if cash is available at execution; the bot enforces its own cash check. Sell brain must free capital for new entries to execute reliably.
+13 positions per holdings.json (last updated 2026-06-12 — 18 days stale; sell-brain activity since then may have changed the true book). Prior run's ALKT order (8 × $17.00 = $136) from 14:03 UTC may or may not have filled; holdings.json not yet updated to reflect it.
 
-Winners: BNAI (+$6.86), APLD (+$5.17), SLDB (+$2.61), GASS (+$1.80).
-Laggards: AVR (−$11.40), TISI (−$4.02), ABSI (−$3.57), CLLS (−$3.30), RXRX (−$2.34).
-Net unrealized at last snapshot: −$7.35.
+**Laggards the sell brain should be watching:** AVR (−7.7%, −$11.40), TISI (−7.4%, −$4.02), ABSI (−8.4%, −$3.57).
+**Winners holding well:** BNAI (+5.0%, +$6.86), APLD (+6.2%, +$5.17), SLDB (+4.2%, +$2.61).
+Net unrealized at June 12 snapshot prices: −$7.35.

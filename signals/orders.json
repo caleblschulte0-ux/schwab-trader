@@ -1,7 +1,5 @@
 {
-  "generated_utc": "2026-06-30T14:03:22Z",
-  "funnel": {"scanned": 307, "leading": 40, "in_budget": 38, "had_catalyst": 16, "finalists": 3, "picked": 1},
-  "orders": [
-    {"symbol": "ALKT", "action": "BUY", "instrument": "stock", "quantity": 8, "limit_price": 17.00}
-  ]
+  "generated_utc": "2026-06-30T17:46:08Z",
+  "funnel": {"scanned": 307, "leading": 40, "in_budget": 30, "had_catalyst": 22, "finalists": 4, "picked": 0},
+  "orders": []
 }

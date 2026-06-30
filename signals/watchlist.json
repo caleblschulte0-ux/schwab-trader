@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-06-30T14:03:22Z",
+  "generated_utc": "2026-06-30T17:46:08Z",
   "watch": [
     {
       "symbol": "REPL",
@@ -10,18 +10,7 @@
       "take_profit": 14.00,
       "stop_loss": 9.80,
       "good_until": "2026-07-07",
-      "note": "FDA accepted BLA resubmission for RP1 (melanoma); PDUFA Aug 2. Pre-PDUFA pre-positioning play — enter on breakout above 11.30. Longer-duration thesis unchanged."
-    },
-    {
-      "symbol": "INV",
-      "trigger": "pullback",
-      "trigger_price": 5.00,
-      "quantity": 29,
-      "limit_price": 5.05,
-      "take_profit": 6.25,
-      "stop_loss": 4.45,
-      "good_until": "2026-07-02",
-      "note": "Innventure named Bill Grieco CEO effective Oct 1 (fresh 1h catalyst). Consumer Cyclical sector hottest today (+3.87%). Up 7.2% on open — buy the dip for better r/r."
+      "note": "FDA accepted BLA resubmission for RP1 (melanoma); PDUFA Aug 2. Pre-PDUFA pre-positioning — enter on breakout above 11.30."
     },
     {
       "symbol": "FDMT",
@@ -32,7 +21,18 @@
       "take_profit": 14.50,
       "stop_loss": 10.50,
       "good_until": "2026-07-02",
-      "note": "4D Molecular completed 4FRONT-2 enrollment for 4D-150 wet AMD gene therapy — real clinical milestone. Up +11% today; pullback to $11.75 offers a clean entry with room to target."
+      "note": "4D Molecular completed 4FRONT-2 enrollment for 4D-150 wet AMD gene therapy — real clinical milestone. Pullback to $11.75 is clean entry."
+    },
+    {
+      "symbol": "MX",
+      "trigger": "pullback",
+      "trigger_price": 4.50,
+      "quantity": 8,
+      "limit_price": 4.55,
+      "take_profit": 5.50,
+      "stop_loss": 4.00,
+      "good_until": "2026-07-02",
+      "note": "Magnachip new CEO (Chae Lee) in tech-leading tape; pullback to $4.50 support is a cleaner entry than chasing current $4.77."
     }
   ]
 }
