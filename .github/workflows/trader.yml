@@ -38,6 +38,9 @@ jobs:
           SCHWAB_APP_KEY: ${{ secrets.SCHWAB_APP_KEY }}
           SCHWAB_APP_SECRET: ${{ secrets.SCHWAB_APP_SECRET }}
           SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
+          # Free fallback quote source: lets the DRY_RUN paper book keep marking even if
+          # the Schwab token is expired/unavailable (no Schwab dependency in paper mode).
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python bot.py
 
