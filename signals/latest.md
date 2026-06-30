@@ -1,54 +1,61 @@
-# Brain Run — 2026-06-29T17:51:22Z
+# Brain Run — 2026-06-30T14:03:22Z
 
-**Funnel:** scanned 353 → 40 shortlisted → 38 in budget → 32 with catalyst → 4 finalists → picked 0
+**Funnel:** scanned 307 → 40 shortlisted (all leading signals) → 38 in budget → 16 with real catalyst → 3 finalists → picked 1
 
 ---
 
 ## Market Tape
 
-**Risk-on.** SPY +1.56%, VIX 17.77. Hot sectors: Consumer Cyclical (+3.35%), Communication Services (+2.08%), Technology (+0.85%), Industrials (+0.61%). Weak: Healthcare (−0.43%), Energy (−0.46%), Financial Services (−0.73%), Real Estate (−1.69%), Utilities (−1.37%), Basic Materials (−1.64%). Good tape for entries — the constraint is capital, not conviction.
+**Neutral.** SPY +0.11%, VIX 17.58. Hot sectors: Consumer Cyclical (+3.87%), Industrials (+2.19%), Technology (+1.54%), Communication Services (+1.27%). Weak: Financial Services (−0.34%), Energy (−0.57%), Real Estate (−0.98%), Consumer Defensive (−1.2%), Utilities (−1.48%), Basic Materials (−1.66%). Today is the last trading day of June — Russell reconstitution effective date (end-of-month), which drove mechanical index-fund buying across several names in the funnel. Normal discipline applies.
 
 ---
 
-## No Orders — Capital Constraint
+## Pick: BUY ALKT — 8 shares × $17.00 = $136
 
-Holdings.json (last updated 2026-06-12) shows **13 open positions** with a total cost basis of ~$957 against a ~$1,000 account. Estimated powder remaining: **~$43**. That is below any meaningful entry ($2 floor × minimum shares). The sell brain must free up capital before fresh buys are executable. No orders this run despite a green tape with real setups in the funnel.
+**Catalyst (age ~6h, confirmed via web search):** JANA Partners filed a **Schedule 13D disclosing a 6.3% stake** in Alkami Technology and is **explicitly pushing for a sale of the company**, stating it is "exploring a sale, including by engaging with multiple parties interested in a potential acquisition." This is a real, public, documented activist campaign — JANA increased from a prior 5.1% stake, signaling escalating commitment.
 
-Note: holdings.json is 17 days stale — sell-brain activity since June 12 may have freed capital. But per BRAIN.md, I treat the file as real. The prior routine ordered KOPN at ~$50 (~4h ago) — not yet reflected in holdings.
+**Why now:** ALKT is up only 3.5% on this disclosure — the market is barely pricing in an M&A premium. Activist-forced sale processes routinely generate 20–40%+ premiums. JANA's public 13D filing puts the board on notice; they must now engage formally. This is an early-stage setup with significant room if talks progress.
+
+**Sector fit:** Fintech SaaS (digital banking platform for community banks and credit unions) — fits the Technology sector tailwind (+1.54% today).
+
+**Stage of move:** Up 3.5% at ~$17. Not extended; the story is fresh and broadening.
+
+**Risk:** If the sale process stalls, breaks down, or JANA backs off, the stock fades toward pre-disclosure levels. Sized at $136 — defined risk, within the $150 cap.
+
+**Catalyst age:** ~6h (filed 2026-06-30, propagating today).
 
 ---
 
-## Finalists Reviewed
+## Finalists Passed
 
-**RGNX — $11.12 (+6.1%) | score 9.8 | sec_8k + news_smallcap | catalyst age 5.9h**
-Regenxbio dosed the first patient in its RGX-314 diabetic retinopathy gene therapy trial (8-K + Investing.com, published ~11:40 UTC). First patient in a Phase 2 DR trial is a meaningful clinical milestone in a large-market indication — exactly the leading catalyst this strategy targets. Up 6.1% on 1.15M volume; not extended. Healthcare sector is marginally weak today (−0.43%) but stock-specific catalyst strength overrides sector tilt. **Would be a buy if capital existed.** Added to watchlist on pullback to $10.60.
+**INV ($5.23, +7.17%) | news_smallcap | catalyst age 1.1h**
+Innventure named Bill Grieco as next CEO effective Oct. 1. Consumer Cyclical sector (hottest today, +3.87%), small-cap ($440M), fresh catalyst. But up 7.2% already on a CEO-change announcement — the move is meaningful for this catalyst type and likely largely priced in today. Watchlisted for pullback to $5.00 for a better entry.
 
-**RPD — $7.91 (+3.9%) | score 7.9 | news_smallcap | catalyst age 3.9h**
-Rapid7 (cybersecurity) added to the Russell Microcap Value Index. Mechanical catalyst: passive index funds must buy by rebalancing deadline. Technology sector green (+0.85%), aligning with sector tilt. Up 3.9% on 924K volume — early stage, room to target. At $7.91 × 18 = $142 this fits the $150 cap perfectly. **Would take on breakout if capital frees.** Added to watchlist above $8.10.
-
-**NRGV — $4.475 (+6.3%) | score 7.4 | news_smallcap | catalyst age 4.4h**
-Energy Vault joins Russell 2000 — index inclusion forces passive buying. Decent volume (3.65M). Energy sector weak today (−0.46%), which cuts against the trade. Solid index-catalyst structure but sector headwind tips the tie to RPD. Deprioritized; not on watchlist this run.
-
-**PRME — $3.695 (+7.7%) | score 7.4 | news_smallcap | catalyst age 5.9h**
-H.C. Wainwright upgrades Prime Medicine to Buy. Analyst upgrade is a legitimate catalyst. Pre-revenue gene editing, Healthcare sector weakest today — higher binary risk on an already-weak-sector stock. Passed.
+**FDMT ($12.88, +11.0%) | news_smallcap | catalyst age 6.9h**
+4D Molecular Therapeutics completed enrollment in the 4FRONT-2 trial for 4D-150 gene therapy in wet AMD — a real clinical milestone in a large market. Bullish catalyst; volume confirming (1.52M). But up +11% intraday — stage rule: deprioritize above 15–20%, and 11% on a biotech milestone often marks the day's peak. Watchlisted for pullback to $11.75.
 
 ---
 
 ## Notable Passes
 
-- **KOPN** ($4.27, +11.6%): Already ordered in the prior routine run ~4h ago at $3.82. Now priced higher from that pick — anti-chase, no re-buy.
-- **SLDB** ($9.33): Already held (holdings.json, 9 shares @ $6.86). Cannot re-buy.
-- **KYTX** ($8.67, +2.7%): Russell Microcap Growth addition. Brain has explicit anti-fixation warning on this name from June 2026 history. Move on.
-- **LRMR** ($3.09, −15.7%): Russell inclusion headline but stock is down 15.7% — contradictory signal, likely offsetting bad news. Hard pass on a big loser with a confused story.
-- **MLTX** ($19.97, +0.4%): Just completed a $200M public offering — dilutive secondary. Hard pass.
-- **PALI** ($2.19, +15.9%): FDA IND clearance (bullish catalyst) but already up 15.9% intraday and sitting just $0.19 above the $2 floor. Extended blow-off + near-penny risk. Pass.
-- **REPL** ($11.24, −3.4%): Earnings 8-K today with neutral sentiment; stock falling on the news. Long-term PDUFA thesis (Aug 2) intact, but near-term momentum has turned. Keeping watchlist entry at $11.30 (not lowering trigger — anti-chase).
-- **RPAY** ($4.30, +20.1%): Up 20.1% on Russell Microcap addition — already well past the deprioritize threshold (>15%). Hard pass on the blow-off.
-- **Halt names (JATT, HONIV)**: SPAC and Honeywell when-issued respectively — no tradeable setup.
-- **SEC-only rows (NRC, GRMLW, VABK, APOG, EBS, USDW, ACNT)**: Filing headlines only, no price/volume/directional catalyst readable.
+**IFRX ($2.28, +18.75%)** — EMA action on Tavneos is a legitimate regulatory catalyst, but already up 18.75% intraday and only $0.28 above the $2 floor. Near-blow-off + penny-stock adjacency risk. Hard pass.
+
+**Russell index additions (EYPT +3.3%, YELP +2.6%, BRBR +7.2%)** — Real mechanical catalyst, but Russell reconstitution effective date was last Friday (June 27). The bulk of forced index-fund buying already occurred; these moves are largely priced in. Stale catalyst, not taking them.
+
+**VTGN / HCWB (halt/resume + 8-K)** — T3 regulatory halts that resumed at 4:00 AM. No live price or volume data in the funnel; can't size or judge entry. Pass.
+
+**APD ($297.42, +9.53%)** — Strong mover with a fresh 8-K catalyst, but at $297 only 1 share fits the $150 cap. Not a meaningful position; pass.
+
+**FIP ($4.36, −11.9%)** — Was on the prior watchlist as an M&A play. Down 11.9% today — thesis has broken. Dropped from watchlist.
+
+**RGNX, RPD, ISSC** — Prior watchlist Russell recon plays expiring July 2–3. Not in today's funnel and likely already triggered or expired. Dropped.
 
 ---
 
-## Holdings Read
+## Holdings Note
 
-13 positions (per June 12 snapshot), ~$957 deployed. Sell brain owns all exits. Brighter positions: BNAI (+5.0%), APLD (+6.2%), SLDB (+4.2%). Underwater: ABSI (−8.4%), AVR (−7.7%), TISI (−7.4%). Portfolio needs sell-brain activity to recycle capital before new entries can fire.
+13 open positions per holdings.json (last updated 2026-06-12). Cost basis ~$957 against ~$1,000 account — powder estimated at ~$43. ALKT order fires if cash is available at execution; the bot enforces its own cash check. Sell brain must free capital for new entries to execute reliably.
+
+Winners: BNAI (+$6.86), APLD (+$5.17), SLDB (+$2.61), GASS (+$1.80).
+Laggards: AVR (−$11.40), TISI (−$4.02), ABSI (−$3.57), CLLS (−$3.30), RXRX (−$2.34).
+Net unrealized at last snapshot: −$7.35.

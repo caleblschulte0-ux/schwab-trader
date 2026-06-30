@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-06-29T17:51:22Z
-*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; 17+ days of sell-brain activity may have changed the true book)*
+# Open Positions — updated 2026-06-30T14:03:22Z
+*(holdings.json last written 2026-06-12T18:35:21Z — prices below are from that snapshot; sell-brain activity since then may have changed the true book)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen (6/12) | Unrealized $ |
 |--------|-----|---------|-------------|------|------------------|--------------|
@@ -24,8 +24,6 @@
 - Laggards: AVR −$11.40, TISI −$4.02, ABSI −$3.57, CLLS −$3.30, RXRX −$2.34
 
 **Watchlist (bot-monitored, fires when triggered):**
-- RGNX — pullback $10.60, 13 shares, limit $10.65; TP $12.50 / SL $9.80; good until 2026-07-03 (first patient dosed in DR gene therapy trial — fresh clinical catalyst)
-- RPD — breakout $8.10, 17 shares, limit $8.15; TP $9.00 / SL $7.50; good until 2026-07-02 (Russell Microcap Value addition, tech sector green)
 - REPL — breakout $11.30, 13 shares, limit $11.45; TP $14.00 / SL $9.80; good until 2026-07-07 (pre-PDUFA Aug 2 positioning — BLA accepted for melanoma)
-- FIP — breakout $5.10, 29 shares, limit $5.15; TP $5.90 / SL $4.78; good until 2026-07-03 (M&A catalyst: Tidewater Logistics acquisition)
-- ISSC — pullback $17.10, 8 shares, limit $17.15; TP $19.50 / SL $16.30; good until 2026-07-02 (Russell 2000 addition)
+- INV — pullback $5.00, 29 shares, limit $5.05; TP $6.25 / SL $4.45; good until 2026-07-02 (new CEO catalyst today, Consumer Cyclical sector hottest today)
+- FDMT — pullback $11.75, 12 shares, limit $11.85; TP $14.50 / SL $10.50; good until 2026-07-02 (4FRONT-2 wet AMD trial enrollment complete — clinical milestone, buy the dip)
