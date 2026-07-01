@@ -1,49 +1,27 @@
 {
-  "generated_utc": "2026-07-01T13:39:44Z",
+  "generated_utc": "2026-07-01T17:38:41Z",
   "watch": [
+    {
+      "symbol": "RIG",
+      "trigger": "breakout",
+      "trigger_price": 5.05,
+      "quantity": 29,
+      "limit_price": 5.10,
+      "take_profit": 5.75,
+      "stop_loss": 4.60,
+      "good_until": "2026-07-06",
+      "note": "Fresh 8-K (0.4h old at scan): Transocean-Equinor deal for 3 harsh-environment rigs, $1B+ backlog over 7 rig-years at >$400k/day, confirmed via web search (SEC filing + Equinor/Offshore Energy coverage). Stock barely moved (+0.3%) since contracts don't start until 2027-2028 -- market hasn't reacted yet. Energy sector is red today, so wait for a confirmed breakout above $5.00 resistance rather than buying the flat reaction. No cash to buy now; re-evaluate if it triggers once capital frees up."
+    },
     {
       "symbol": "FMC",
       "trigger": "breakout",
-      "trigger_price": 11.75,
+      "trigger_price": 11.55,
       "quantity": 12,
-      "limit_price": 11.85,
+      "limit_price": 11.65,
       "take_profit": 13.00,
-      "stop_loss": 10.80,
-      "good_until": "2026-07-06",
-      "note": "Tessenderlo agreed to pay $13.30/sh for a 20% strategic stake ($400M, verified via web search) to fund FMC's debt paydown target; stock still at $11.50, hasn't re-rated toward the deal price yet. Enter on confirmation breakout above 11.75, not blind chase of the gap to $13.30."
-    },
-    {
-      "symbol": "REPL",
-      "trigger": "breakout",
-      "trigger_price": 11.30,
-      "quantity": 13,
-      "limit_price": 11.45,
-      "take_profit": 14.00,
-      "stop_loss": 9.80,
-      "good_until": "2026-07-07",
-      "note": "FDA accepted BLA resubmission for RP1 (melanoma); PDUFA Aug 2. Pre-PDUFA pre-positioning — enter on breakout above 11.30."
-    },
-    {
-      "symbol": "FDMT",
-      "trigger": "pullback",
-      "trigger_price": 11.75,
-      "quantity": 12,
-      "limit_price": 11.85,
-      "take_profit": 14.50,
       "stop_loss": 10.50,
-      "good_until": "2026-07-02",
-      "note": "4D Molecular completed 4FRONT-2 enrollment for 4D-150 wet AMD gene therapy — real clinical milestone. Pullback to $11.75 is clean entry."
-    },
-    {
-      "symbol": "MX",
-      "trigger": "pullback",
-      "trigger_price": 4.50,
-      "quantity": 8,
-      "limit_price": 4.55,
-      "take_profit": 5.50,
-      "stop_loss": 4.00,
-      "good_until": "2026-07-02",
-      "note": "Magnachip new CEO (Chae Lee) in tech-leading tape; pullback to $4.50 support is a cleaner entry than chasing current $4.77."
+      "good_until": "2026-07-06",
+      "note": "Fresh 8-K (6.4h old): Tessenderlo agreed to pay $13.30/sh (17% premium) for a ~20% strategic stake, $403M raise. Bullish vote of confidence from a strategic buyer, but stock is down -1.7% today (dilution overhang/mixed reaction) -- not chasing the dip blind. Enter only on confirmation reclaim above $11.55."
     }
   ]
 }
