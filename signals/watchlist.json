@@ -1,6 +1,17 @@
 {
-  "generated_utc": "2026-06-30T17:46:08Z",
+  "generated_utc": "2026-07-01T13:39:44Z",
   "watch": [
+    {
+      "symbol": "FMC",
+      "trigger": "breakout",
+      "trigger_price": 11.75,
+      "quantity": 12,
+      "limit_price": 11.85,
+      "take_profit": 13.00,
+      "stop_loss": 10.80,
+      "good_until": "2026-07-06",
+      "note": "Tessenderlo agreed to pay $13.30/sh for a 20% strategic stake ($400M, verified via web search) to fund FMC's debt paydown target; stock still at $11.50, hasn't re-rated toward the deal price yet. Enter on confirmation breakout above 11.75, not blind chase of the gap to $13.30."
+    },
     {
       "symbol": "REPL",
       "trigger": "breakout",
