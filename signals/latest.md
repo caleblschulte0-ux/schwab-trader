@@ -1,51 +1,56 @@
-# Brain Run — 2026-07-02T13:38:52Z
+# Brain Run — 2026-07-02T17:38:05Z
 
-**Funnel:** scanned 284 → 40 shortlisted (all leading-tagged: mover/news_smallcap/sec_8k) → 37 in budget (≤$150, ≥$2 floor) → 40 with a catalyst field, ~10 genuinely tradeable (non-boilerplate) → 3 finalists → picked 0
+**Funnel:** scanned 282 → 40 shortlisted (all leading-tagged: news_smallcap/sec_8k/mover+sec_8k) → 24 in budget (price known, ≥$2 floor, ≤$150; 16 pure sec_8k rows have no screener price data) → 40 with a catalyst field → 3 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Risk-on, mildly.** SPY +0.41%, VIX 16.04 (calm). Hot sectors: Financial Services (+2.76%), Basic Materials (+1.19%), Consumer Cyclical (+0.86%), Communication Services (+0.81%). Cold: Industrials (−3.73%), Utilities (−2.79%), Energy (−1.64%), Technology (−1.46%), Consumer Defensive (−1.17%). Normal-to-slightly-generous discipline on setup quality; none of today's best idiosyncratic catalysts happen to sit in the hot sectors, which is fine — they're stock-specific news, not sector beta plays.
+**Neutral, mixed under the surface.** SPY −0.6%, VIX 16.84 (calm-ish). Hot sectors: Consumer Defensive (+2.06%), Healthcare (+1.49%), Basic Materials (+1.44%). Cold: Technology (−3.16%), Consumer Cyclical (−2.86%), Real Estate (−2.48%), Communication Services (−2.24%), Energy (−2.03%). Normal discipline — nothing screams risk-off, but no reason to force size either. Moot point this run anyway (see below).
 
 ---
 
 ## Decision: No New Order — Still Zero Deployable Cash
 
-`holdings.json` refreshed yesterday (2026-07-01T18:35:22Z) — 13 open positions, cost basis ~$957 of the ~$1,000 account. `holdings.json`'s top-level `cash` field (and `paper_account.json`) both show **$2.50** real spendable cash, net of realized losses. That can't fund even 1 share of anything above the $2 price floor at a meaningful size. Per BRAIN.md STEP 2, the correct call is **no buy** — this account needs the **sell brain to free capital** (13 open positions is already ~2x the ~6-position guideline this size account is built for). Judgment work below is banked on the watchlist / for the record so the bot can act the instant cash frees up.
+`holdings.json` cash is **$2.50**, unchanged from the prior run. Cost basis across 13 open positions is ~$957 of the ~$1,000 account — already roughly double the ~6-position guideline this size account is built for. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50 can't fund even 1 share of anything above the $2 floor at a meaningful size, so the correct call is **no buy**, full stop, regardless of setup quality below. This account needs the **sell brain to free capital** before any new entry can fill. Judgment work is banked below for the record and to keep the watchlist current.
 
 ---
 
-## Finalists Considered
+## Finalists Considered (would-buy ideas, can't fill)
 
-**DOLE ($13.73, +0.07%, catalyst_age 2.5h) — BEST IDEA, not bought (no cash)**
-Dole plc announced it's acquiring Greenfood's fresh-produce unit in the Nordics (StreetInsider, bullish sentiment 0.40). Textbook stage: catalyst broke a few hours ago and the stock has **barely moved** — the market hasn't priced it in yet. Would size ~10 shares ($137.30) at market if cash existed. No clean resistance level to define a watchlist breakout trigger since it's flat/basing right at the news price, so this isn't a watchlist candidate — it's a "would buy now" idea that simply can't fill. Worth a fresh look next run if it's still flat.
+**LRMR ($3.235, +0.78%, catalyst_age 4.4h) — best stage of the three**
+HC Wainwright assumed coverage with a Buy rating this morning. Textbook early stage: fresh analyst catalyst, stock has barely moved on it yet — the market hasn't priced it in. Small cap ($336M). Would size ~46 shares (~$149) at market if cash existed.
 
-**FWDI ($4.70, +11.4%, catalyst_age 0.4h) — PASSED for now, note for next run**
-Forward Industries jumped on news its Solana treasury bet grew to 7.5M SOL — very fresh (24 min old at scan) but the stock has already made an 11%+ move on it, pushing toward the "deprioritize" zone of the stage rule even though the catalyst itself is brand new. Not clean enough to be the #1 idea over DOLE's flat basing entry; would reconsider on a pullback/base rather than chasing here.
+**JFB ($4.775, +2.9%, catalyst_age 5.4h)**
+XTEND (ticker JFB) advanced in a $1B U.S. drone-dominance program qualification — a real, verifiable government-program catalyst, not just chatter. $73M market cap, genuinely small and early. Up only modestly so far; room left if the story gets picked up more broadly.
 
-**UMAC ($23.22, +4.1%, catalyst_age 8.4h) — PASSED**
-Analyst piece targeting $35/share on drone-component/defense scaling — real narrative, name is a repeat theme in this space, but catalyst is now 8+ hours old and more analyst-note framing than a hard event. Passed in favor of DOLE/FWDI's fresher, event-driven catalysts.
+**DOLE ($13.96, +1.68%, catalyst_age 6.5h) — same story as last run, still barely moved**
+Dole's Greenfood (Nordic fresh-produce unit) acquisition is now ~6.5h old and the stock is still only up single digits of a percent on it — an unusually muted reaction to a real M&A catalyst, still not priced in. No clean resistance level to define a watchlist trigger (it's flat/basing right at the news price), so this stays a "would buy at market" idea, not a watchlist entry.
+
+**NAT ($5.875, +5.67%, catalyst_age 2.9h) — considered, passed**
+Nordic American Tankers up on a geopolitical/rate story (ships pulled from the Arabian Gulf, tightening tanker supply). Real and fresh, but already up 5.67% vs. the other three's much smaller moves — a later stage of the move. Would rank below LRMR/JFB/DOLE if cash existed.
 
 ---
 
 ## Notable Passes
 
-- **DRTS, CSIQ, CMPS, DC** — catalyst text was boilerplate (insider Form 144 sale, routine shareholder vote, employee grants, a "PE ratio" valuation blurb) — no real tradeable driver despite appearing in the news feed.
-- **YELP (+7.1%), COUR (+6.0%)** — moves look driven by something other than the attached headline (insider-sale note, a small holdings-report mention); can't underwrite the move with the catalyst given, so passed.
-- **ARCT (+13.9%, sec_8k)** — already extended intraday and the 8-K headline carries no content (generic filer notice); no way to judge the catalyst, and the stage argues against chasing regardless.
-- **BORR (+4.4%, Russell Growth inclusion)** — genuine idiosyncratic catalyst (index-fund flows) but sits in Energy, today's coldest-but-one sector; not strong enough to out-argue DOLE/FWDI.
-- **NVDA, TSLA** ($198, $425) — real, fresh 8-Ks but both blow the $150 per-position budget even at 1 share; out regardless of cash.
-- **SRFM** ($1.065) — below the $2 price floor; hard pass despite the sec_8k tag.
+- **FWDI (+1.6% shown, headline claims +11%)** — mismatch between the row's `pct_change` and the "shares rise 11%" headline suggests the move already happened and partially faded; can't underwrite the entry cleanly on stale/conflicting data. Passed.
+- **NOG** — genuine Canadian-asset-deal catalyst but sits in Energy, today's coldest sector (−2.03%); not strong enough to out-argue LRMR/JFB/DOLE.
+- **PLAB, CSIQ, POET, MRAM, LWLG, GBX** — all down on the day (−4% to −13%) despite "bullish"-tagged catalyst text; the catalysts read as generic valuation/analyst-note boilerplate, not a real bullish driver for the move actually seen. Passed.
+- **DRTS, CMPS** — catalyst text was boilerplate (insider Form 144 sale, routine employee-grant filing) — no real tradeable driver.
+- **RIVN (+8.3%), ELTX (−33.9%), SONM (−27.6%)** — mover+sec_8k rows, but the 8-K headlines carry no substantive content (generic filer notices); can't underwrite the move with what's given, and ELTX/SONM are already-blown-off losers, not entries.
+- **NVDA, TSLA** — real, fresh 8-Ks but both blow the $150 per-position budget even at 1 share; out regardless of cash.
+- **16 pure `sec_8k` rows with no price data** (EACO, INBP, UNCY, AVNS, SBR, RWAX, F-PD, VTIX, LCID, IDACU, NWTG, CRIS, ORBS, FUSEW, DAICW, CINGW) — mostly warrants/SPAC-adjacent tickers or names the screener doesn't cover; no way to size or judge budget fit without a price, and several (DAICW, CINGW, FUSEW) look like warrant-class tickers rather than tradeable common stock. Skipped.
 - **RIG, FMC** — carried on the watchlist from prior runs (see below), not re-picked as fresh finalists.
+
+---
+
+## Watchlist Check (1 search spent)
+
+Re-verified **RIG** via web search: still trading ~$4.92, below the $5.05 breakout trigger. The Transocean-Equinor rig deal catalyst is structural (contracts start 2027-2028) so it isn't stale — carried forward unchanged. **FMC** not re-verified this run (single search budget spent on RIG); carried forward unchanged per its own durable catalyst (Tessenderlo's $13.30/sh strategic stake).
 
 ---
 
 ## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
-Live quotes were only available for 2 of the 13 held names via today's funnel (the rest aren't in today's movers/news lists, so no fresh mark):
-- **CLLS**: $3.30 vs $3.19 avg → **+$4.84** (up 3.4% today)
-- **PLSE**: $28.33 vs $25.49 avg → **+$5.68** (up 2.2% today)
-- ABSI, APLD, ATHE, AVR, BNAI, EVTL, GASS, MNKD, RXRX, SLDB, TISI — no live quote in today's funnel; no mark, no unrealized estimate (see `signals/positions.md`).
-
-This brain does not size or manage exits — that's the SELL BRAIN's job. Anti-chase rule respected: none of the 13 held symbols were re-picked or re-priced this run.
+None of the 13 held names appear in today's funnel (movers/news/8-K lists), so no fresh intraday mark is available this run — see `signals/positions.md` and the sell brain's own review for the full-book price check. This brain does not size or manage exits — that's the SELL BRAIN's job. Anti-chase rule respected: none of the 13 held symbols were re-picked or re-priced this run.

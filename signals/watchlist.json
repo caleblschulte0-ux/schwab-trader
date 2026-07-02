@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-02T13:38:52Z",
+  "generated_utc": "2026-07-02T17:38:05Z",
   "watch": [
     {
       "symbol": "RIG",
@@ -10,7 +10,7 @@
       "take_profit": 5.75,
       "stop_loss": 4.60,
       "good_until": "2026-07-06",
-      "note": "Carried forward, re-checked via web search: trading ~$4.92 today, still below the $5.05 trigger -- hasn't broken out. Catalyst (>$1B Transocean-Equinor rig deal, 7 rig-years backlog) is durable since the contracts don't start until 2027-2028, so it's not stale. No cash to buy now; still waiting for a confirmed breakout."
+      "note": "Carried forward, re-checked via web search: still trading ~$4.92, below the $5.05 trigger -- hasn't broken out. Catalyst (>$1B Transocean-Equinor rig deal, 7 rig-years backlog) is durable since the contracts don't start until 2027-2028, so it's not stale. No cash to buy now regardless; still waiting for a confirmed breakout."
     },
     {
       "symbol": "FMC",
