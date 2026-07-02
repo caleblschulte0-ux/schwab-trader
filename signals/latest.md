@@ -1,50 +1,51 @@
-# Brain Run — 2026-07-01T17:38:41Z
+# Brain Run — 2026-07-02T13:38:52Z
 
-**Funnel:** scanned 324 → 40 shortlisted (all leading-tagged) → 27 with usable price data in budget (≤$150, ≥$2 floor) → 14 with a genuine (non-boilerplate) catalyst → 4 finalists → picked 0
+**Funnel:** scanned 284 → 40 shortlisted (all leading-tagged: mover/news_smallcap/sec_8k) → 37 in budget (≤$150, ≥$2 floor) → 40 with a catalyst field, ~10 genuinely tradeable (non-boilerplate) → 3 finalists → picked 0
 
 ---
 
 ## Market Tape
 
-**Neutral.** SPY +0.14%, VIX 16.24 (calm). Hot sectors: Financial Services (+2.86%), Basic Materials (+1.59%), Consumer Cyclical (+1.19%), Communication Services (+0.83%), Real Estate (+0.21%). Weak: Utilities (−3.18%), Industrials (−2.0%), Consumer Defensive (−1.09%), Technology (−1.0%), Healthcare (−0.38%), Energy (−0.33%). Normal discipline — nothing about the tape argues for being unusually picky or aggressive.
+**Risk-on, mildly.** SPY +0.41%, VIX 16.04 (calm). Hot sectors: Financial Services (+2.76%), Basic Materials (+1.19%), Consumer Cyclical (+0.86%), Communication Services (+0.81%). Cold: Industrials (−3.73%), Utilities (−2.79%), Energy (−1.64%), Technology (−1.46%), Consumer Defensive (−1.17%). Normal-to-slightly-generous discipline on setup quality; none of today's best idiosyncratic catalysts happen to sit in the hot sectors, which is fine — they're stock-specific news, not sector beta plays.
 
 ---
 
-## Decision: No New Order — Account Is Out of Cash, Not Out of Ideas
+## Decision: No New Order — Still Zero Deployable Cash
 
-`holdings.json` / `paper_account.json` are both still stuck at their **2026-06-12** snapshot (19 days stale — Schwab auth / the paper-book refresh appears to still be broken despite the #7 fix landing 2026-06-30; positions haven't visibly changed since). Per that snapshot: **13 open positions**, cost basis ~$949 of the ~$1,000 account, and `paper_account.json.cash = $2.50`. That's real spendable cash net of the −$40.82 realized losses — exactly the trap BRAIN.md warns about (naive "$1,000 minus cost basis" math would say ~$50 free; the truth is ~$2.50). $2.50 cannot fund even a 1-share position in anything on today's shortlist. Per BRAIN.md STEP 2, correct call is **no buy**; the account needs the **sell brain to free capital** before this brain can act again. 13 open positions is already ~2x the ~6-position guideline this account is sized for.
-
-Given zero deployable cash, this run's job was judgment for the record: bank the best genuinely fresh setups on the watchlist so the bot can act the instant capital frees up, and pass on everything else.
+`holdings.json` refreshed yesterday (2026-07-01T18:35:22Z) — 13 open positions, cost basis ~$957 of the ~$1,000 account. `holdings.json`'s top-level `cash` field (and `paper_account.json`) both show **$2.50** real spendable cash, net of realized losses. That can't fund even 1 share of anything above the $2 price floor at a meaningful size. Per BRAIN.md STEP 2, the correct call is **no buy** — this account needs the **sell brain to free capital** (13 open positions is already ~2x the ~6-position guideline this size account is built for). Judgment work below is banked on the watchlist / for the record so the bot can act the instant cash frees up.
 
 ---
 
 ## Finalists Considered
 
-**RIG ($4.905, +0.31%, catalyst_age 0.4h) — BEST IDEA, WATCHLISTED, not bought (no cash)**
-Fresh 8-K (24 min old at scan): Transocean announced a >$1B agreement with Equinor for three Cat D harsh-environment semisubmersible rigs on the Norwegian shelf (7 rig-years of backlog, day rate >$400k). Verified via web search against the SEC 8-K and independent trade press (Offshore Energy, Equinor's own release) — real and just broke. Stock hasn't reacted at all (+0.3%) since the contracts don't commence until 2027-2028, so there's no urgency-driven pop to chase — this is exactly the "catalyst ahead of the tape" setup the strategy wants. Energy is the one weak-ish sector today (−0.33%), so rather than buy the flat reaction I parked it on the watchlist at a $5.05 breakout to require actual confirmation before entering.
+**DOLE ($13.73, +0.07%, catalyst_age 2.5h) — BEST IDEA, not bought (no cash)**
+Dole plc announced it's acquiring Greenfood's fresh-produce unit in the Nordics (StreetInsider, bullish sentiment 0.40). Textbook stage: catalyst broke a few hours ago and the stock has **barely moved** — the market hasn't priced it in yet. Would size ~10 shares ($137.30) at market if cash existed. No clean resistance level to define a watchlist breakout trigger since it's flat/basing right at the news price, so this isn't a watchlist candidate — it's a "would buy now" idea that simply can't fill. Worth a fresh look next run if it's still flat.
 
-**FMC ($11.305, −1.7%, catalyst_age 6.4h) — WATCHLISTED, not bought (no cash)**
-Same name flagged this morning, still on the board: Tessenderlo agreed to pay $13.30/share (~18% premium to today's price) for a ~20% strategic stake, a $403M raise earmarked for debt paydown. A strategic investor paying above market is a real vote of confidence, but the stock is actually down slightly today (dilution/overhang reaction), so this is not "still cheap, keep chasing" — it's a fresh, real catalyst the market hasn't resolved yet. Kept on the watchlist at a tighter $11.55 breakout (below this morning's $11.75 level, reflecting today's slightly lower price) rather than bought blind.
+**FWDI ($4.70, +11.4%, catalyst_age 0.4h) — PASSED for now, note for next run**
+Forward Industries jumped on news its Solana treasury bet grew to 7.5M SOL — very fresh (24 min old at scan) but the stock has already made an 11%+ move on it, pushing toward the "deprioritize" zone of the stage rule even though the catalyst itself is brand new. Not clean enough to be the #1 idea over DOLE's flat basing entry; would reconsider on a pullback/base rather than chasing here.
 
-**NVCT ($19.22, +4.5%, catalyst_age 3.4h) — PASSED**
-Nuvectis raised $100M to fund an oncology pivot — real financing news, small-cap ($510M cap), early in the move. Passed on a watchlist slot only because Healthcare is today's second-weakest sector and RIG/FMC are stronger, more directly value-additive catalysts (financing-for-growth vs. financing that funds a pivot away from the current pipeline, which reads as a mixed signal). Worth another look if it shows up again with cleaner follow-through.
-
-**LAR ($8.33, +0.7%, catalyst_age 3.9h) — PASSED**
-Analyst PT raised to $13.52 (63% implied upside) on Lithium Argentina, barely moved, Basic Materials is today's #2 green sector — genuinely early-stage. Passed for a watchlist slot because a single analyst PT note is a thinner catalyst than RIG's contract or FMC's strategic-stake financing; keeping the watchlist to the two strongest ideas rather than diluting it.
+**UMAC ($23.22, +4.1%, catalyst_age 8.4h) — PASSED**
+Analyst piece targeting $35/share on drone-component/defense scaling — real narrative, name is a repeat theme in this space, but catalyst is now 8+ hours old and more analyst-note framing than a hard event. Passed in favor of DOLE/FWDI's fresher, event-driven catalysts.
 
 ---
 
 ## Notable Passes
 
-- **PRGS** (+19.6%, mover) — already blown off intraday; per the stage rule this needs to be clearly exceptional to earn a slot, and there's no fresh angle left once a name is up this much. Hard pass.
-- **NNBR** (+6.0%, $75M private placement) — tagged bullish but private placements skew dilutive; the framing didn't hold up to scrutiny as a clean long.
-- **JACK** (+6.4%, "5 best orders" listicle), **PCT** (book-value note), **MAN** (just an earnings-date announcement, up +9.8% on no real news) — no identifiable, tradeable catalyst behind the price/headline.
-- **KR** (Kroger/Giant Eagle 8-K), **XOM, FLUT, CHH, MLI, TYG, OSBC, GRNQ, NKSH, FSI, IAUX-WT, MDLK** — all generic "8-K — [Company] (Filer)" SEC-tracker rows with no headline content and no price/volume data returned by the funnel; can't size or judge these without a live quote, and several are mega-caps outside this strategy's lane anyway.
-- **AMZN** (+2.4%, mover) — real news read-through, but $244/share doesn't fit even a 1-share $150 budget cleanly at a meaningful size; over-budget, pass regardless of cash.
-- Below the $2 floor: none seen today.
+- **DRTS, CSIQ, CMPS, DC** — catalyst text was boilerplate (insider Form 144 sale, routine shareholder vote, employee grants, a "PE ratio" valuation blurb) — no real tradeable driver despite appearing in the news feed.
+- **YELP (+7.1%), COUR (+6.0%)** — moves look driven by something other than the attached headline (insider-sale note, a small holdings-report mention); can't underwrite the move with the catalyst given, so passed.
+- **ARCT (+13.9%, sec_8k)** — already extended intraday and the 8-K headline carries no content (generic filer notice); no way to judge the catalyst, and the stage argues against chasing regardless.
+- **BORR (+4.4%, Russell Growth inclusion)** — genuine idiosyncratic catalyst (index-fund flows) but sits in Energy, today's coldest-but-one sector; not strong enough to out-argue DOLE/FWDI.
+- **NVDA, TSLA** ($198, $425) — real, fresh 8-Ks but both blow the $150 per-position budget even at 1 share; out regardless of cash.
+- **SRFM** ($1.065) — below the $2 price floor; hard pass despite the sec_8k tag.
+- **RIG, FMC** — carried on the watchlist from prior runs (see below), not re-picked as fresh finalists.
 
 ---
 
-## Holdings Note
+## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
-13 positions per the stale (6/12) snapshot: **AVR −7.7% (−$11.40)**, **TISI −7.4% (−$4.02)**, **ABSI −8.4% (−$3.57)**, **CLLS −2.4% (−$3.30)**, **RXRX −4.0% (−$2.34)** are the laggards the sell brain should be evaluating. Winners holding well: **BNAI +5.0% (+$6.86)**, **APLD +6.2% (+$5.17)**, **SLDB +4.2% (+$2.61)**. Net unrealized at the June 12 snapshot: −$7.35. Realized P&L to date: −$40.82. Real cash on hand: **$2.50** — this brain cannot originate a new buy until the sell brain closes something out and/or the holdings/paper-book pipeline starts refreshing again.
+Live quotes were only available for 2 of the 13 held names via today's funnel (the rest aren't in today's movers/news lists, so no fresh mark):
+- **CLLS**: $3.30 vs $3.19 avg → **+$4.84** (up 3.4% today)
+- **PLSE**: $28.33 vs $25.49 avg → **+$5.68** (up 2.2% today)
+- ABSI, APLD, ATHE, AVR, BNAI, EVTL, GASS, MNKD, RXRX, SLDB, TISI — no live quote in today's funnel; no mark, no unrealized estimate (see `signals/positions.md`).
+
+This brain does not size or manage exits — that's the SELL BRAIN's job. Anti-chase rule respected: none of the 13 held symbols were re-picked or re-priced this run.
