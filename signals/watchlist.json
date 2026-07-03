@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-03T13:39:09Z",
+  "generated_utc": "2026-07-03T17:38:07Z",
   "watch": [
     {
       "symbol": "RIG",
@@ -10,7 +10,7 @@
       "take_profit": 5.75,
       "stop_loss": 4.60,
       "good_until": "2026-07-06",
-      "note": "Carried forward unchanged; not re-verified this run (1-search budget spent on OFIX instead). Catalyst (>$1B Transocean-Equinor rig deal, 7 rig-years backlog) is durable since contracts don't start until 2027-2028. No cash to buy regardless; still waiting for a confirmed breakout above $5.05."
+      "note": "Carried forward unchanged; no longer appearing in today's funnel (267 names) so not re-verified. Catalyst (>$1B Transocean-Equinor rig deal, 7 rig-years backlog) is durable since contracts don't start until 2027-2028. No cash to buy regardless; still waiting for a confirmed breakout above $5.05."
     },
     {
       "symbol": "FMC",
@@ -21,7 +21,7 @@
       "take_profit": 13.00,
       "stop_loss": 10.50,
       "good_until": "2026-07-06",
-      "note": "Carried forward unchanged; not re-verified this run. Tessenderlo's $13.30/sh strategic-stake deal is the catalyst -- structural, not time-sensitive intraday. Enter only on a confirmed reclaim above $11.55; no cash to buy regardless."
+      "note": "Carried forward unchanged; no longer appearing in today's funnel so not re-verified. Tessenderlo's $13.30/sh strategic-stake deal is the catalyst -- structural, not time-sensitive intraday. Enter only on a confirmed reclaim above $11.55; no cash to buy regardless."
     },
     {
       "symbol": "OFIX",
@@ -32,7 +32,7 @@
       "take_profit": 11.30,
       "stop_loss": 9.20,
       "good_until": "2026-07-06",
-      "note": "Verified via web search: CMS issued a genuine reversal on 2026-07-01, restoring pre-May-18 Medicare reimbursement rates for non-invasive bone growth stimulators after an FDA reclassification had forced a ~10% cut and a guidance withdrawal in May. Real, fresh, fundamental catalyst (not the same old May cut headline) -- stock +6.3% today on it, healthcare is today's strongest sector. Early stage, room left. No cash to buy now; enter on a confirmed hold above $10.05."
+      "note": "Still in today's funnel at the identical $9.94 / +6.3% (4h flat, still under the $10.05 trigger). Underlying thesis previously verified via web search: genuine 2026-07-01 CMS reversal restoring Medicare bone-growth-stimulator reimbursement after a May cut. Early stage, room left. No cash to buy now; enter on a confirmed hold above $10.05."
     },
     {
       "symbol": "CDNA",
@@ -43,18 +43,7 @@
       "take_profit": 33.00,
       "stop_loss": 26.80,
       "good_until": "2026-07-06",
-      "note": "CareDx acquired Naveris, extending into high-growth oncology diagnostics -- a real M&A catalyst (age 5.9h) the stock has barely reacted to yet (-0.2%), the ideal 'not priced in' stage per BRAIN.md freshness rules. Healthcare sector is today's strongest. No cash to buy now; enter on confirmation above $29.40."
-    },
-    {
-      "symbol": "DOLE",
-      "trigger": "breakout",
-      "trigger_price": 14.20,
-      "quantity": 10,
-      "limit_price": 14.30,
-      "take_profit": 16.00,
-      "stop_loss": 13.00,
-      "good_until": "2026-07-06",
-      "note": "Second run in a row this real M&A catalyst (completed Greenfood Nordic produce deal) shows up still barely priced in -- +2.1% today vs +1.7% last run, catalyst now ~10h old. Consumer Defensive is today's #2 sector. Getting close to the ~24h staleness window; drop if it shows up flat/unmoved again next run. No cash to buy now; enter on confirmation above $14.20."
+      "note": "Still in today's funnel at the identical $29.19 / -0.2% (4h flat, still under the $29.40 trigger). CareDx/Naveris oncology M&A remains barely priced in -- textbook 'not priced in yet' per BRAIN.md freshness rules. Healthcare sector is today's strongest. No cash to buy now; enter on confirmation above $29.40."
     }
   ]
 }
