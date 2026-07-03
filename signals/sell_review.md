@@ -1,30 +1,26 @@
-# Sell Review — 2026-07-02T18:36:47Z
+# Sell Review — 2026-07-03T12:36:56Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 Book is unchanged from the prior sell-brain run (same 13 symbols, same qty/avg_price/opened_utc
-in `holdings.json` — updated 2026-07-01T18:35:22Z, no fills since). `candidates.json` (updated
-2026-07-02T17:35:55Z, 282 candidates scanned) contains **one** mention of a held symbol today —
-MNKD, as a `mover`/gainer (+11.77%), no catalyst text attached in the funnel row. The other 12
-held names are silent in today's funnel, same as last run — silence is not a sell signal; each is
-judged against its last-verified thesis, which nothing today contradicts.
+in `holdings.json` — updated 2026-07-02T18:35:24Z, no fills since). `candidates.json` (updated
+2026-07-02T17:35:55Z, 282 candidates scanned) is the same snapshot the prior run saw — still only
+**one** held name appears in today's funnel: MNKD (mover/gainer, +11.77%, already verified last
+run as an FDA-approval-driven pop, thesis strengthening, not spent). The other 12 held names remain
+silent in the funnel — silence is not a sell signal; each is judged against its last-verified
+thesis, which nothing new contradicts.
 
-**Web search this run:** targeted **MNKD** given its fresh double-digit pop today. Confirmed the
-move is driven by a genuine positive regulatory catalyst — **FDA approved Afrezza (inhaled
-mealtime insulin) for pediatric use, ages 6+, type 1 and type 2 diabetes** — the first needle-free
-inhaled option for that age group, expanding the label. The Furoscix ReadyFlow Autoinjector PDUFA
-target date (July 26, 2026) remains pending and unresolved. Also noted: at least one analyst cut
-their price target from $15 to $10 following discontinuation of the unrelated MNKD-101/NTM
-program after a Phase 3 (ICoN-1) futility assessment — a narrowing of the pipeline, not a collapse
-of the core Afrezza/Furoscix thesis; consensus among covering analysts remains Buy. Net: thesis
-strengthened today, not broken. Textbook HOLD — the move is the catalyst working, not a reason to
-take profit on a still-live, multi-catalyst story.
+**Web search this run:** targeted **AVR** (Anteris Technologies) — the largest cost-basis position
+(~$148) and the one carrying real binary/trial risk, not re-verified with a live search in the
+prior cycle. Confirmed the PARADIGM pivotal trial (DurAVR THV vs. commercial TAVR, ~1,000-patient
+all-comers randomized cohort) is actively enrolling across the US and Europe, the company secured
+CMS Medicare reimbursement eligibility under the TAVR National Coverage Determination, and it just
+closed $320M in aggregate capital raises (including a $90M strategic investment from Medtronic) to
+fund the trial through completion. No adverse news, no funding risk, no trial setback. Thesis
+intact and, if anything, de-risked by the Medtronic strategic backing. Textbook HOLD.
 
-All other rulings carry forward unchanged from the prior run (no new information since):
-ABSI's drawdown remains attributable to a dilutive $100M offering against clean Phase 1/2a data
-and analyst PT hikes, not a broken thesis; AVR, TISI, RXRX, CLLS, GASS, APLD, ATHE, BNAI, EVTL,
-PLSE, and SLDB all have previously-verified structural/turnaround/catalyst theses with no adverse
-news since. Nothing today contradicts any of them.
+All other rulings carry forward unchanged from the prior run (no new information since, no funnel
+mentions, no adverse news):
 
 ---
 
@@ -42,8 +38,10 @@ news.
 No broken thesis, no adverse news. Default HOLD per mandate.
 
 **AVR — HOLD** | opened Jun 8 | red on cost basis
-Anteris Technologies TAVR play, pivotal trial progressing per prior verification. No new adverse
-information. Drawdown is price noise against an unweakened thesis.
+Re-verified this run via web search: PARADIGM pivotal trial actively enrolling, CMS Medicare
+reimbursement secured, $320M capital raise (incl. $90M Medtronic strategic investment) closed in
+January 2026 to fund the trial through completion. Thesis intact and de-risked, not weakened.
+Drawdown is price noise against a strengthening setup.
 
 **BNAI — HOLD** | opened Jun 10 | green
 Brand Engagement Network: Russell inclusion + acquisition close both previously confirmed. No
@@ -60,11 +58,11 @@ Vertical Aerospace certification milestones remain live, untriggered catalysts. 
 Fundamentals (Q1 net income growth, large unencumbered cash/vessel position) unchanged per prior
 verification. Zero funnel mentions again this run — silence, not a red flag.
 
-**MNKD — HOLD** | opened Jun 10 | green, up sharply today
-Verified this run: today's +11.77% pop is FDA approval of Afrezza for pediatric use (ages 6+,
-type 1/2 diabetes) — the catalyst story actively working, not spent. Furoscix PDUFA (Jul 26, 2026)
-still pending. One analyst PT cut ($15→$10) tied to an unrelated program (MNKD-101/NTM)
-discontinuation, not the core thesis; Buy consensus intact. Hold through the still-live binary.
+**MNKD — HOLD** | opened Jun 10 | green, up sharply on prior day's tape
+Prior run verified the +11.77% pop as FDA approval of Afrezza for pediatric use (ages 6+, type 1/2
+diabetes) — the catalyst story actively working, not spent. Furoscix PDUFA (Jul 26, 2026) still
+pending. One analyst PT cut ($15→$10) tied to an unrelated program (MNKD-101/NTM) discontinuation,
+not the core thesis; Buy consensus intact. Hold through the still-live binary.
 
 **PLSE — HOLD** | opened Jun 5 | green
 Ablation-platform thesis actively working per prior verification (recent 52-week high). No
@@ -93,12 +91,12 @@ strengthening fundamentals is the archetypal conviction hold.
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + 3 analyst PT hikes; pullback is a $100M offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | AI/HPC multi-quarter thesis intact |
 | ATHE   | Jun 9  | **HOLD** | No broken thesis; trivially small position |
-| AVR    | Jun 8  | **HOLD** | Anteris TAVR play + pivotal trial progressing; no new adverse info |
+| AVR    | Jun 8  | **HOLD** | Re-verified: PARADIGM trial enrolling, CMS reimbursement secured, $320M raise incl. Medtronic closed |
 | BNAI   | Jun 10 | **HOLD** | Russell inclusion + acquisition close confirmed |
 | CLLS   | Jun 10 | **HOLD** | RMAT designation + Phase 2 enrolling; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL |
 | GASS   | Jun 5  | **HOLD** | Fundamentals intact; zero funnel mentions again |
-| MNKD   | Jun 10 | **HOLD** | Verified: Afrezza pediatric FDA approval drove today's +11.77% pop; PDUFA Jul 26 still pending; thesis strengthening |
+| MNKD   | Jun 10 | **HOLD** | Afrezza pediatric FDA approval drove pop; PDUFA Jul 26 still pending; thesis strengthening |
 | PLSE   | Jun 5  | **HOLD** | Thesis actively performing per prior verification |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Russell leg spent; DMD conviction thesis intact |
