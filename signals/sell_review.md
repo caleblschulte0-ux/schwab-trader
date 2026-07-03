@@ -1,23 +1,23 @@
-# Sell Review — 2026-07-03T12:36:56Z
+# Sell Review — 2026-07-03T15:36:41Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-Book is unchanged from the prior sell-brain run (same 13 symbols, same qty/avg_price/opened_utc
-in `holdings.json` — updated 2026-07-02T18:35:24Z, no fills since). `candidates.json` (updated
-2026-07-02T17:35:55Z, 282 candidates scanned) is the same snapshot the prior run saw — still only
-**one** held name appears in today's funnel: MNKD (mover/gainer, +11.77%, already verified last
-run as an FDA-approval-driven pop, thesis strengthening, not spent). The other 12 held names remain
-silent in the funnel — silence is not a sell signal; each is judged against its last-verified
-thesis, which nothing new contradicts.
+Book is unchanged from the prior sell-brain run an hour earlier (same 13 symbols, same
+qty/avg_price/opened_utc in `holdings.json` — updated 2026-07-02T18:35:24Z, no fills since).
+`candidates.json` refreshed to a new snapshot (2026-07-03T13:35:44Z, 263 candidates scanned).
+Only **one** held name appears in today's funnel: **AVR**, up +3.0% on a "Net CDI Reduction of
+51,701 as Holders Shift to Nasdaq Common Stock" filing — neutral sentiment tag, and correctly so.
+The other 12 held names remain silent in the funnel — silence is not a sell signal; each is judged
+against its last-verified thesis, which nothing new contradicts today.
 
-**Web search this run:** targeted **AVR** (Anteris Technologies) — the largest cost-basis position
-(~$148) and the one carrying real binary/trial risk, not re-verified with a live search in the
-prior cycle. Confirmed the PARADIGM pivotal trial (DurAVR THV vs. commercial TAVR, ~1,000-patient
-all-comers randomized cohort) is actively enrolling across the US and Europe, the company secured
-CMS Medicare reimbursement eligibility under the TAVR National Coverage Determination, and it just
-closed $320M in aggregate capital raises (including a $90M strategic investment from Medtronic) to
-fund the trial through completion. No adverse news, no funding risk, no trial setback. Thesis
-intact and, if anything, de-risked by the Medtronic strategic backing. Textbook HOLD.
+**Web search this run:** targeted **AVR**'s new headline specifically, since any Anteris filing
+touching share structure is worth a second look given it's the largest cost-basis position
+(~$154) with real binary trial risk. Confirmed via Kalkine/TipRanks/SEC coverage: this is a
+routine administrative cross-market transfer report (Appendix 4A, filed 2026-07-03) — ASX-listed
+CDI holders continuing to convert into Nasdaq-listed common stock (CDIs on issue fell to
+15,193,455; Nasdaq-held common rose to 82,217,451). It's a mechanical mirror-transfer, not a
+capital raise, dilution event, or trial update — no bearing on the PARADIGM trial thesis verified
+last run. Thesis intact, unchanged.
 
 All other rulings carry forward unchanged from the prior run (no new information since, no funnel
 mentions, no adverse news):
@@ -37,11 +37,11 @@ news.
 **ATHE — HOLD** | opened Jun 9 | green, trivial size
 No broken thesis, no adverse news. Default HOLD per mandate.
 
-**AVR — HOLD** | opened Jun 8 | red on cost basis
-Re-verified this run via web search: PARADIGM pivotal trial actively enrolling, CMS Medicare
-reimbursement secured, $320M capital raise (incl. $90M Medtronic strategic investment) closed in
-January 2026 to fund the trial through completion. Thesis intact and de-risked, not weakened.
-Drawdown is price noise against a strengthening setup.
+**AVR — HOLD** | opened Jun 8 | green on cost basis today ($10.24 vs $9.87 avg)
+Re-checked this run: today's "CDI reduction" headline is a routine administrative cross-market
+share-transfer filing (ASX CDIs converting to Nasdaq common stock), not a fundamental event. The
+PARADIGM pivotal trial, CMS Medicare reimbursement, and the $320M capital raise (incl. Medtronic)
+verified last run stand uncontradicted. Thesis intact.
 
 **BNAI — HOLD** | opened Jun 10 | green
 Brand Engagement Network: Russell inclusion + acquisition close both previously confirmed. No
@@ -58,11 +58,10 @@ Vertical Aerospace certification milestones remain live, untriggered catalysts. 
 Fundamentals (Q1 net income growth, large unencumbered cash/vessel position) unchanged per prior
 verification. Zero funnel mentions again this run — silence, not a red flag.
 
-**MNKD — HOLD** | opened Jun 10 | green, up sharply on prior day's tape
-Prior run verified the +11.77% pop as FDA approval of Afrezza for pediatric use (ages 6+, type 1/2
-diabetes) — the catalyst story actively working, not spent. Furoscix PDUFA (Jul 26, 2026) still
-pending. One analyst PT cut ($15→$10) tied to an unrelated program (MNKD-101/NTM) discontinuation,
-not the core thesis; Buy consensus intact. Hold through the still-live binary.
+**MNKD — HOLD** | opened Jun 10 | green
+Afrezza pediatric FDA approval (verified two runs ago) remains the live thesis; Furoscix PDUFA
+(Jul 26, 2026) still pending. No new adverse news since the unrelated MNKD-101/NTM program PT cut
+already accounted for. Hold through the still-live binary.
 
 **PLSE — HOLD** | opened Jun 5 | green
 Ablation-platform thesis actively working per prior verification (recent 52-week high). No
@@ -91,12 +90,12 @@ strengthening fundamentals is the archetypal conviction hold.
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + 3 analyst PT hikes; pullback is a $100M offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | AI/HPC multi-quarter thesis intact |
 | ATHE   | Jun 9  | **HOLD** | No broken thesis; trivially small position |
-| AVR    | Jun 8  | **HOLD** | Re-verified: PARADIGM trial enrolling, CMS reimbursement secured, $320M raise incl. Medtronic closed |
+| AVR    | Jun 8  | **HOLD** | Today's CDI-reduction headline is a routine cross-market share transfer, not a catalyst change |
 | BNAI   | Jun 10 | **HOLD** | Russell inclusion + acquisition close confirmed |
 | CLLS   | Jun 10 | **HOLD** | RMAT designation + Phase 2 enrolling; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL |
 | GASS   | Jun 5  | **HOLD** | Fundamentals intact; zero funnel mentions again |
-| MNKD   | Jun 10 | **HOLD** | Afrezza pediatric FDA approval drove pop; PDUFA Jul 26 still pending; thesis strengthening |
+| MNKD   | Jun 10 | **HOLD** | Afrezza pediatric FDA approval driving thesis; PDUFA Jul 26 still pending |
 | PLSE   | Jun 5  | **HOLD** | Thesis actively performing per prior verification |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Russell leg spent; DMD conviction thesis intact |
