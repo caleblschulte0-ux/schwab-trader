@@ -1,49 +1,27 @@
 {
-  "generated_utc": "2026-07-03T17:38:07Z",
+  "generated_utc": "2026-07-06T13:38:09Z",
   "watch": [
     {
-      "symbol": "RIG",
+      "symbol": "AVTX",
       "trigger": "breakout",
-      "trigger_price": 5.05,
-      "quantity": 29,
-      "limit_price": 5.10,
-      "take_profit": 5.75,
-      "stop_loss": 4.60,
-      "good_until": "2026-07-06",
-      "note": "Carried forward unchanged; no longer appearing in today's funnel (267 names) so not re-verified. Catalyst (>$1B Transocean-Equinor rig deal, 7 rig-years backlog) is durable since contracts don't start until 2027-2028. No cash to buy regardless; still waiting for a confirmed breakout above $5.05."
+      "trigger_price": 19.00,
+      "quantity": 7,
+      "limit_price": 19.10,
+      "take_profit": 20.52,
+      "stop_loss": 18.05,
+      "good_until": "2026-07-10",
+      "note": "Leerink initiated Avalo Therapeutics with Outperform today (catalyst_age 2.4h), stock +8.97% to $18.84. Fresh sell-side catalyst, not yet blown off. No cash to buy now ($2.50 on hand) -- parked here so it fires the instant a confirmed push above $19.00 coincides with freed capital."
     },
     {
-      "symbol": "FMC",
+      "symbol": "DC",
       "trigger": "breakout",
-      "trigger_price": 11.55,
-      "quantity": 12,
-      "limit_price": 11.65,
-      "take_profit": 13.00,
-      "stop_loss": 10.50,
-      "good_until": "2026-07-06",
-      "note": "Carried forward unchanged; no longer appearing in today's funnel so not re-verified. Tessenderlo's $13.30/sh strategic-stake deal is the catalyst -- structural, not time-sensitive intraday. Enter only on a confirmed reclaim above $11.55; no cash to buy regardless."
-    },
-    {
-      "symbol": "OFIX",
-      "trigger": "breakout",
-      "trigger_price": 10.05,
-      "quantity": 14,
-      "limit_price": 10.15,
-      "take_profit": 11.30,
-      "stop_loss": 9.20,
-      "good_until": "2026-07-06",
-      "note": "Still in today's funnel at the identical $9.94 / +6.3% (4h flat, still under the $10.05 trigger). Underlying thesis previously verified via web search: genuine 2026-07-01 CMS reversal restoring Medicare bone-growth-stimulator reimbursement after a May cut. Early stage, room left. No cash to buy now; enter on a confirmed hold above $10.05."
-    },
-    {
-      "symbol": "CDNA",
-      "trigger": "breakout",
-      "trigger_price": 29.40,
-      "quantity": 5,
-      "limit_price": 29.60,
-      "take_profit": 33.00,
-      "stop_loss": 26.80,
-      "good_until": "2026-07-06",
-      "note": "Still in today's funnel at the identical $29.19 / -0.2% (4h flat, still under the $29.40 trigger). CareDx/Naveris oncology M&A remains barely priced in -- textbook 'not priced in yet' per BRAIN.md freshness rules. Healthcare sector is today's strongest. No cash to buy now; enter on confirmation above $29.40."
+      "trigger_price": 4.55,
+      "quantity": 32,
+      "limit_price": 4.60,
+      "take_profit": 4.97,
+      "stop_loss": 4.37,
+      "good_until": "2026-07-10",
+      "note": "Dakota Gold reported fresh drilling results at Richmond Hill today (catalyst_age 2.9h), stock +5.16% to $4.48 -- early-stage move, real news-driven catalyst, room left. No cash to buy now; watching for a hold above $4.55 once capital frees up."
     }
   ]
 }

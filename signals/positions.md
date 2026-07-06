@@ -1,17 +1,17 @@
-# Open Positions — updated 2026-07-03T17:38:07Z
-*(holdings.json refreshed 2026-07-02T18:35:24Z. Live quotes below only where today's funnel covered the symbol; the rest show avg cost with no mark.)*
+# Open Positions — updated 2026-07-06T13:38:09Z
+*(holdings.json refreshed 2026-07-03T18:35:16Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
 |--------|-----|---------|-------------|------|-------------------|--------------|
 | ABSI   |   6 | $7.12   | —           | —    | n/a (no quote)    | n/a          |
 | APLD   |   2 | $41.44  | —           | —    | n/a (no quote)    | n/a          |
 | ATHE   |   1 | $4.23   | —           | —    | n/a (no quote)    | n/a          |
-| AVR    |  15 | $9.87   | —           | —    | $10.24 (today)    | +$5.55       |
+| AVR    |  15 | $9.87   | —           | —    | n/a (no quote)    | n/a          |
 | BNAI   |   7 | $19.46  | —           | —    | n/a (no quote)    | n/a          |
 | CLLS   |  44 | $3.19   | —           | —    | n/a (no quote)    | n/a          |
 | EVTL   |  14 | $2.12   | —           | —    | n/a (no quote)    | n/a          |
 | GASS   |  15 | $9.51   | —           | —    | n/a (no quote)    | n/a          |
-| MNKD   |   1 | $3.68   | —           | —    | $4.52 (today)     | +$0.84       |
+| MNKD   |   1 | $3.68   | —           | —    | n/a (no quote)    | n/a          |
 | PLSE   |   2 | $25.49  | —           | —    | n/a (no quote)    | n/a          |
 | RXRX   |  18 | $3.29   | —           | —    | n/a (no quote)    | n/a          |
 | SLDB   |   9 | $6.86   | —           | —    | n/a (no quote)    | n/a          |
@@ -19,12 +19,10 @@
 
 **Open positions:** 13   **Cost basis:** ~$957   **Real cash (holdings.json):** $2.50   **Powder left:** ~$2.50 — effectively none
 
-**AVR and MNKD appeared in today's news_smallcap funnel.** AVR up 3.0% (Anteris CDI/Nasdaq-listing filing, same price as last run) and MNKD up 11.6% (Breakthrough T1D grant) — both marked with small unrealized gains. Both already held, so per the anti-chase rule neither was re-picked or re-priced. No other held names appear in today's funnel — see the sell brain's own review for a full-book price check.
+Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
 
 **Watchlist (bot-monitored, fires when triggered):**
-- RIG — breakout $5.05, 29 shares, limit $5.10; TP $5.75 / SL $4.60; good until 2026-07-06 (>$1B Transocean-Equinor rig contract; no longer in today's funnel, not re-verified)
-- FMC — breakout $11.55, 12 shares, limit $11.65; TP $13.00 / SL $10.50; good until 2026-07-06 (Tessenderlo $403M strategic stake at $13.30/sh; no longer in today's funnel, not re-verified)
-- OFIX — breakout $10.05, 14 shares, limit $10.15; TP $11.30 / SL $9.20; good until 2026-07-06 (verified CMS reversal restoring Medicare bone-growth-stimulator reimbursement; still flat at $9.94 today)
-- CDNA — breakout $29.40, 5 shares, limit $29.60; TP $33.00 / SL $26.80; good until 2026-07-06 (CareDx/Naveris oncology acquisition, still flat at $29.19 today)
+- AVTX — breakout $19.00, 7 shares, limit $19.10; TP $20.52 / SL $18.05; good until 2026-07-10 (Leerink initiated Avalo Therapeutics Outperform today, fresh catalyst, +8.97% to $18.84; no cash to buy now)
+- DC — breakout $4.55, 32 shares, limit $4.60; TP $4.97 / SL $4.37; good until 2026-07-10 (Dakota Gold fresh drilling results at Richmond Hill, +5.16% to $4.48, early-stage; no cash to buy now)
 
-DOLE dropped this run — no longer appearing anywhere in today's funnel and had already been flagged last run to drop if it stayed flat/unmoved.
+The four names carried over from 2026-07-03 (RIG, FMC, OFIX, CDNA) hit their `good_until` date today, none re-appeared in the last several days of funnels to re-verify, and cash has been stuck at ~$2.50 the whole time regardless — let them lapse rather than mechanically re-dating stale, unverified setups. Replaced with two fresh, verified setups from today's funnel above.
