@@ -1,4 +1,4 @@
-# Open Positions — updated 2026-07-06T13:38:09Z
+# Open Positions — updated 2026-07-06T17:38:04Z
 *(holdings.json refreshed 2026-07-03T18:35:16Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
@@ -22,7 +22,8 @@
 Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
 
 **Watchlist (bot-monitored, fires when triggered):**
-- AVTX — breakout $19.00, 7 shares, limit $19.10; TP $20.52 / SL $18.05; good until 2026-07-10 (Leerink initiated Avalo Therapeutics Outperform today, fresh catalyst, +8.97% to $18.84; no cash to buy now)
-- DC — breakout $4.55, 32 shares, limit $4.60; TP $4.97 / SL $4.37; good until 2026-07-10 (Dakota Gold fresh drilling results at Richmond Hill, +5.16% to $4.48, early-stage; no cash to buy now)
+- LAES — breakout $3.15, 47 shares, limit $3.18; TP $3.43 / SL $3.02; good until 2026-07-10 (SEALSQ PQC Readiness Strategy, verified ongoing initiative, barely moved +1.5% to $3.075; no cash to buy now)
+- KOS — breakout $2.15, 68 shares, limit $2.20; TP $2.38 / SL $2.09; good until 2026-07-10 (Kosmos Energy boosted output/cut debt, barely moved +0.5% to $2.08; no cash to buy now)
+- DC — breakout $4.55, 32 shares, limit $4.60; TP $4.97 / SL $4.37; good until 2026-07-10 (Dakota Gold Richmond Hill drilling results, now sitting right at trigger at $4.565; no cash to buy now)
 
-The four names carried over from 2026-07-03 (RIG, FMC, OFIX, CDNA) hit their `good_until` date today, none re-appeared in the last several days of funnels to re-verify, and cash has been stuck at ~$2.50 the whole time regardless — let them lapse rather than mechanically re-dating stale, unverified setups. Replaced with two fresh, verified setups from today's funnel above.
+AVTX dropped this run — it ran from $18.84 to $19.85 since this morning's setup, too far past its $19.00 trigger to re-enter without chasing; replaced with two fresher, less-extended, verified setups (LAES, KOS) above.

@@ -1,60 +1,65 @@
-# Brain Run — 2026-07-06T13:38:09Z
+# Brain Run — 2026-07-06T17:38:04Z
 
-**Funnel:** scanned 275 → 40 shortlisted (all leading-tagged: news_smallcap/sec_8k/mover/halt_resume/earnings_soon) → 40 in budget → 40 with a catalyst field → 3 finalists → **picked 0**
+**Funnel:** scanned 320 → 40 shortlisted (all leading-tagged: news_smallcap/sec_8k/mover/halt_resume) → 40 in budget → 40 with a catalyst field → 3 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Risk-on.** SPY +0.51%, VIX 16.33 (moderate/calm). Hot sectors: Healthcare (+2.62%), Consumer Defensive (+2.34%), Basic Materials (+1.75%), Utilities (+0.97%). Cold: Technology (−2.95%), Consumer Cyclical (−2.90%), Real Estate (−2.25%), Energy (−1.49%). Normal-to-slightly-generous aggressiveness on setup quality would be warranted — moot for actual execution this run (see below).
+**Risk-on.** SPY +0.75%, VIX 15.95 (calm). Hot sectors: Consumer Cyclical (+2.33%), Energy (+1.33%), Financial Services (+1.32%), Technology (+0.59%). Cold: Basic Materials (−1.65%), Real Estate (−1.43%), Industrials (−1.06%), Consumer Defensive (−0.74%). Tape supports normal-to-slightly-generous aggressiveness on setup quality — moot for actual execution this run (see below).
 
 ---
 
 ## Decision: No New Order — Still Zero Deployable Cash
 
-`holdings.json` cash is still **$2.50**, unchanged since 2026-07-03T18:35Z (the file itself hasn't been touched in 3 days — looks like the routine sat idle over the holiday weekend). Cost basis across 13 open positions is ~$957 of the ~$1,000 account. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50 cannot fund a real position at any price above the $2 floor — nothing in today's shortlist even prices low enough to spend it meaningfully (cheapest floor-legal name was CRON at $2.86, still over the $2.50 on hand). Correct call is **no buy**, full stop. This account needs the **sell brain to free capital** before any new entry can fill. Judgment work is banked below via the watchlist for whenever capital frees up.
+`holdings.json` cash is unchanged at **$2.50** (last refreshed 2026-07-03T18:35Z; the prior run four hours ago flagged the same constraint). Cost basis across 13 open positions is ~$957 of the ~$1,000 account. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50 cannot fund a real position at any price above the $2 floor with any margin for the live-ask buffer. Correct call is **no buy** again this run. This account needs the **sell brain to free capital** before any new entry can fill. Judgment work is banked below via the watchlist for whenever capital frees up.
 
 ---
 
 ## Finalists Considered (would-buy ideas, can't fill — held on watchlist)
 
-**AVTX — Avalo Therapeutics ($18.84, +8.97%, catalyst_age 2.4h)**
-Leerink initiated coverage today with an Outperform rating — a genuine, fresh sell-side catalyst, not a filler headline. Already up ~9%, at the edge of the "early enough" zone but not blown off (no near-vertical spike, no resistance test visible in the data available). Best single idea in today's funnel. Parked on watchlist at a slight breakout above current price.
+**LAES — SEALSQ Corp ($3.075, +1.5%, catalyst_age 3.9h)**
+"PQC Readiness Strategy" release today. Verified with one web search: this is part of a real, ongoing corporate push (automotive PQC roadmap announced Jul 1, ASIC design services buildout from the 2025 IC'Alps acquisition) — not a one-off filler headline. Stock has barely moved on today's release, which is the ideal early-stage entry per BRAIN.md's freshness rules. Best single idea in today's funnel. Parked on watchlist for a confirmed breakout.
 
-**DC — Dakota Gold ($4.48, +5.16%, catalyst_age 2.9h)**
-Fresh drilling results from the Richmond Hill project — a real, event-driven catalyst for a miner, early-stage move (+5%), small-cap, fits the strategy's sizing profile well. Parked on watchlist.
+**KOS — Kosmos Energy ($2.08, +0.5%, catalyst_age 4.9h)**
+Boosted output and cut debt in H1 2026 — a real operating-results catalyst, bullish sentiment, stock barely moved. Floor-compliant ($2.08, just above the $2 line) and cheap enough that even a small cash balance could someday take a real position. Parked on watchlist.
 
-**CEVA ($44.875, +11.02%, catalyst_age 2.4h) — considered, not carried forward**
-"Landmark AI licensing deal with a major U.S. software/AI platform company" is a real catalyst, but the stock is already up 11% intraday and pricier per share (would need 3 shares to matter within the $150 cap) — out-argued by AVTX/DC on stage-of-the-move grounds. Not added to watchlist to keep the list tight to genuine top ideas.
+**DC — Dakota Gold ($4.565, +1.9% today, catalyst_age 6.9h)** — carried over from this morning
+Richmond Hill drilling-results catalyst still intact; price has drifted up to essentially sit right at the $4.55 trigger already set this morning. Kept on watchlist unchanged (not chasing the trigger higher).
 
 ---
 
 ## Notable Passes
 
-- **CCRN** — highest score (10.3) in the funnel, but the "catalyst" is a scheduled July 16 shareholder vote on an already-announced merger — a proxy-mechanics event, not a fresh directional catalyst; merger arb spreads like this are typically already tight. Passed.
-- **CLVT** — sold its Life Sciences division for $600M, real news, but already up 16.7% intraday (deprioritize zone) and at $2.59/share would also blow through the $2.50 cash on hand regardless.
-- **ATRC, AURA, TENX** — headlines are generic "technical signals" / "quant signal sets" filler with no nameable event despite real price moves (+7% to +16%) — momentum without a story, passed per BRAIN.md's stale/no-catalyst screen.
-- **CVGI** — down −9.3% on a dilutive $25M ATM offering; a legitimate bearish catalyst (put candidate under a different cash regime), but not actionable this run either way.
-- **SOLS** — halted/resumed, down −12.7%, tied to an 8-K; too fresh and disorderly to size confidently even with cash.
-- **WULF** — up 17.1% on an 8-K, already extended into the deprioritize zone.
-- **BHC, XPRO, CRBP, CARS, BBNX, DQ, VELO, BLDP, AEVA, CRON, OLMA, SRTA, KEEL, MSS, CRML, WLTH, BLMN, ONDS, BTAI** — reviewed; each either lacked a concrete, fresh, directional catalyst (valuation-multiple writeups, routine Form 4/144 filings, vague "movement" pieces) or was a minor move with nothing that out-argued the two finalists above.
-- **DAL, COSM, TOON, LIMNW, ESI, MOG-B, NELR, TPC, CAPS, SOARW** — no price data available in the funnel (fresh 8-K filers, pre-market/illiquid); couldn't underwrite an entry without a quote regardless of cash.
+- **AVTX — dropped from watchlist.** This morning's Leerink-initiation setup (then $18.84, trigger $19.00) has run further to $19.85 (+5.4% just today, on top of this morning's +9%) — now well past the originally-flagged entry zone. Raising the trigger to chase it would be exactly the anti-chase behavior BRAIN.md bans; letting it lapse rather than re-anchoring higher.
+- **CLVT** — sold its Life Sciences division for $600M, real news, but the stock is actually down 2.3% on the print (market reading the terms as underwhelming) — not a clean bullish setup despite the high score.
+- **NCNO, VELO, BLDP, GBX** — headlines are routine Form 144/insider-filing notices, not directional catalysts. Passed.
+- **FATE** — Fate Therapeutics presenting clinical data, bullish and real, but already up ~3.9% vs. LAES/KOS which are both barely off flat — out-argued on stage-of-the-move grounds. Not added to keep the watchlist tight.
+- **INSP** — headline is an administrative earnings-date correction, not a real catalyst despite the +3.4% print. Passed.
+- **CEVA** — "landmark AI licensing deal," real catalyst, but already up 10.2% intraday and pricier per share — extended, passed again.
+- **WULF, ONDS, KEEL, BGDE** — mover + 8-K combos, but each already up double digits or lacking a directionally clear filing detail — extended or ambiguous. Passed.
+- **SOLS, BTAI, JTAI** — halted/resumed or 8-K movers to the downside (−12% to −15%); disorderly and not actionable long-side; nothing here clean enough for a put either given zero cash to spend on options premium regardless.
+- **AVGO, PTACU, RVRF, FGRS, SSB, COSM, TOON, LIMNW, ESI, MOG-B, NELR, TPC, CAPS, SOARW** — no price data available in the funnel (fresh 8-K filers, mega-cap/illiquid-quote gaps); couldn't underwrite an entry without a quote regardless of cash.
 - Checked all 40 shortlist symbols against `holdings.json` — **zero overlap**, so no anti-chase conflicts this run.
 
 ---
 
-## Web Search (0 used)
+## Web Search (1 used)
 
-No search spent. The AVTX and DC catalysts are already well-sourced directly from the shortlist's catalyst field (Leerink initiation; Dakota Gold drill results), and the outcome (no buy, cash-blocked) doesn't hinge on further verification. Per BRAIN.md, 0 searches is a fine outcome on a day where the funnel itself answers the judgment call.
+Spent the one search verifying LAES's catalyst was a genuine ongoing strategy rather than a recycled press release — confirmed via GlobeNewswire/StockTitan coverage of the automotive PQC roadmap (Jul 1) and today's PQC Readiness Strategy release. Real, multi-part corporate initiative, not filler.
+
+Sources:
+- [SEALSQ Advances PQC Readiness Strategy](https://www.globenewswire.com/news-release/2026/07/06/3322466/0/en/SEALSQ-Advances-PQC-Readiness-Strategy-to-Capture-Growing-Global-Demand-for-Post-Quantum-Cybersecurity-Infrastructure.html)
+- [SEALSQ to Bring Post Quantum Security to the Automotive Industry](https://www.globenewswire.com/news-release/2026/07/01/3320677/0/en/SEALSQ-to-Bring-Post-Quantum-Security-to-the-Automotive-Industry.html)
 
 ---
 
 ## Watchlist Update
 
-Replaced the four stale entries from 2026-07-03 (RIG, FMC, OFIX, CDNA — all hit `good_until` today, none re-appeared in several days of funnels to re-verify) with today's two fresh, verified finalists: **AVTX** (breakout $19.00) and **DC** (breakout $4.55), both `good_until` 2026-07-10. Both will fire automatically the instant their trigger is hit AND the account has cash — until then they're notes for the next run to re-check.
+Dropped **AVTX** (ran too far past its trigger to re-enter without chasing). Added **LAES** (breakout $3.15) and **KOS** (breakout $2.15), both fresh, barely-moved, verified catalysts. Kept **DC** (breakout $4.55) unchanged since it's still sitting right at its trigger with the same intact catalyst. All three `good_until` 2026-07-10; all will fire automatically the instant their trigger is hit AND the account has cash.
 
 ---
 
 ## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
-None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no fresh price/news read on the book. This brain does not manage exits or adds — that's the SELL BRAIN's job entirely. The binding constraint on this account right now is capital, not idea flow: two genuinely tradeable setups were found and cash still can't touch either one.
+None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no fresh price/news read on the book. This brain does not manage exits or adds — that's the SELL BRAIN's job entirely. The binding constraint on this account remains capital, not idea flow: three genuinely tradeable setups are queued on the watchlist and cash still can't touch any of them.

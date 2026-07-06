@@ -1,16 +1,27 @@
 {
-  "generated_utc": "2026-07-06T13:38:09Z",
+  "generated_utc": "2026-07-06T17:38:04Z",
   "watch": [
     {
-      "symbol": "AVTX",
+      "symbol": "LAES",
       "trigger": "breakout",
-      "trigger_price": 19.00,
-      "quantity": 7,
-      "limit_price": 19.10,
-      "take_profit": 20.52,
-      "stop_loss": 18.05,
+      "trigger_price": 3.15,
+      "quantity": 47,
+      "limit_price": 3.18,
+      "take_profit": 3.43,
+      "stop_loss": 3.02,
       "good_until": "2026-07-10",
-      "note": "Leerink initiated Avalo Therapeutics with Outperform today (catalyst_age 2.4h), stock +8.97% to $18.84. Fresh sell-side catalyst, not yet blown off. No cash to buy now ($2.50 on hand) -- parked here so it fires the instant a confirmed push above $19.00 coincides with freed capital."
+      "note": "SEALSQ (LAES) PQC Readiness Strategy release today (catalyst_age 3.9h) is part of a real, ongoing corporate push (confirmed via web search: automotive PQC roadmap Jul 1, ASIC design services buildout) -- not a one-off headline. Stock barely moved (+1.5% to $3.075), best early-stage setup in today's funnel. No cash to buy now ($2.50 on hand); parked for a confirmed push above $3.15 once capital frees up."
+    },
+    {
+      "symbol": "KOS",
+      "trigger": "breakout",
+      "trigger_price": 2.15,
+      "quantity": 68,
+      "limit_price": 2.20,
+      "take_profit": 2.38,
+      "stop_loss": 2.09,
+      "good_until": "2026-07-10",
+      "note": "Kosmos Energy reported boosted output and cut debt in H1 2026 (catalyst_age 4.9h), bullish and barely moved (+0.5% to $2.08) -- clean early-stage read-through on real operating results, floor-compliant. No cash to buy now; watching for a hold above $2.15 once capital frees up."
     },
     {
       "symbol": "DC",
@@ -21,7 +32,7 @@
       "take_profit": 4.97,
       "stop_loss": 4.37,
       "good_until": "2026-07-10",
-      "note": "Dakota Gold reported fresh drilling results at Richmond Hill today (catalyst_age 2.9h), stock +5.16% to $4.48 -- early-stage move, real news-driven catalyst, room left. No cash to buy now; watching for a hold above $4.55 once capital frees up."
+      "note": "Dakota Gold's Richmond Hill drilling-results catalyst is still intact this afternoon, stock now $4.565 (essentially at the $4.55 trigger already) -- early-stage, real news-driven catalyst, room left. No cash to buy now; watching for a confirmed hold above $4.55 once capital frees up."
     }
   ]
 }
