@@ -1,26 +1,27 @@
-# Sell Review — 2026-07-07T12:39:22Z
+# Sell Review — 2026-07-07T15:45:07Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` is still unchanged since 2026-07-03T18:35:16Z (same 13 symbols, same
-qty/avg_price/opened_utc; no fills). `candidates.json` refreshed 2026-07-06T17:35:38Z — checked
-all 13 held symbols against it directly and confirmed **zero overlap**, same as every prior run.
-Silence in the funnel is not a sell signal; it just means no fresh catalyst printed today for
-these names.
+`holdings.json` (updated_utc 2026-07-06T18:35:19Z) still shows the same 13 symbols with
+identical qty/avg_price/opened_utc as every prior run — no new fills, no closes. `candidates.json`
+refreshed 2026-07-07T13:35:38Z — checked all 13 held symbols against it directly: **12 of 13 have
+zero overlap** (silence, not a sell signal), but **ATHE printed a fresh, bullish, on-thesis
+catalyst today** — see below.
 
-**Web search this run:** targeted **AVR** (Anteris Technologies Global Corp.) since it's the
-largest single position by cost basis (~$148 of ~$957 book) and its ticker isn't a household
-name. Confirmed identity and no adverse news: it's a structural-heart medtech (DurAVR
-transcatheter heart valve), search turned up only routine clinical/regulatory-progress coverage
-— nothing contradicting the PARADIGM pivotal trial / CMS reimbursement / Medtronic capital-raise
-thesis verified in prior runs. Thesis intact, HOLD confirmed.
-
-All other rulings carry forward unchanged from the prior run (no new information, no funnel
-mentions, no adverse news found):
+**Web search this run:** targeted **BNAI** (Brand Engagement Network) to refresh its thesis check
+(last directly re-verified two runs ago). Confirmed: the Cataneo acquisition **closed June 30,
+2026** (adds >€8.6M 2025 revenue, recurring-revenue enterprise software, MYDAS platform managing
+€6B+ in annual ad inventory), and BNAI was added to the **Russell 3000/2000 Index** effective
+June 26, 2026 (institutional-visibility catalyst). Stock trades ~$17.14–17.23, below the $19.46
+cost basis, but that's a normal pullback off two now-*completed* catalysts, not a broken story —
+management delivered on both the M&A and the index-inclusion thesis. HOLD confirmed, no change.
 
 Sources:
-- [Anteris Technologies Global Corp. (AVR) Stock Price, News, Quote & History](https://finance.yahoo.com/quote/AVR/)
-- [Anteris Technologies Global Corp. (AVR) Stock Price, Quote, News & Analysis](https://seekingalpha.com/symbol/AVR)
+- [Brand Engagement Network, Inc. (BNAI) Stock Price, News, Quote & History](https://finance.yahoo.com/quote/BNAI/)
+- [Brand Engagement (BNAI) Stock News & Updates | StockTitan](https://www.stocktitan.net/news/BNAI/)
+
+All other rulings carry forward unchanged from prior runs (no new information, no funnel
+mentions, no adverse news found), except **ATHE**, updated below with today's catalyst.
 
 ---
 
@@ -35,17 +36,22 @@ Polaris Forge 1 second building / multi-campus AI-datacenter build-out and Stron
 consensus verified previously. Multi-quarter AI/HPC infrastructure thesis intact; pullback is off
 a prior large run, not a broken story.
 
-**ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
-No broken thesis, no adverse news found. Default HOLD per mandate.
+**ATHE — HOLD** | opened Jun 9 | trivial size (1 share) | **fresh catalyst today**
+`candidates.json` shows ATHE +9.9% today on: "FDA backs single Phase 3 trial for Alterity's MSA
+drug ATH434" (Bullish, sentiment 0.49) — this is a direct continuation/formalization of the
+original regulatory-pathway thesis (Acumen's MSA data + FDA nod for a Phase 3 plan). The catalyst
+is not spent — it's actively confirming and de-risking (single Phase 3 required instead of two).
+Thesis reinforced, not exhausted. Strong HOLD.
 
 **AVR — HOLD** | opened Jun 8 | largest position by cost basis
-Re-verified this run via web search: DurAVR transcatheter heart valve program, no adverse
-findings. PARADIGM pivotal trial, CMS reimbursement, and prior capital raise stand
-uncontradicted. Thesis intact.
+Re-verified via web search two runs ago: DurAVR transcatheter heart valve program, PARADIGM
+pivotal trial, CMS reimbursement, prior capital raise — all stand uncontradicted. No adverse news
+found this run either.
 
 **BNAI — HOLD** | opened Jun 10
-Brand Engagement Network: Russell inclusion + acquisition close previously confirmed. No adverse
-post-deal integration news surfaced.
+Re-verified this run via web search: Cataneo acquisition closed (Jun 30) and Russell 3000/2000
+inclusion effective (Jun 26) — both original catalysts delivered. No adverse post-deal
+integration news. Thesis intact and progressing.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified in prior runs; Phase 2 interim
@@ -86,9 +92,9 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | Multi-campus AI/HPC datacenter build-out progressing; pullback off a prior big run |
-| ATHE   | Jun 9  | **HOLD** | No broken thesis; trivially small position |
-| AVR    | Jun 8  | **HOLD** | Re-verified via web search: DurAVR/PARADIGM thesis intact, no adverse news |
-| BNAI   | Jun 10 | **HOLD** | Russell inclusion + acquisition close confirmed |
+| ATHE   | Jun 9  | **HOLD** | Fresh bullish catalyst today (FDA backs single Phase 3 for ATH434) — thesis confirming, not spent |
+| AVR    | Jun 8  | **HOLD** | DurAVR/PARADIGM thesis intact, no adverse news |
+| BNAI   | Jun 10 | **HOLD** | Re-verified: Cataneo acquisition closed + Russell 3000 inclusion delivered |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Q1 beat, debt-free, multi-year contracted revenue |
