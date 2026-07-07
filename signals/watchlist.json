@@ -1,38 +1,38 @@
 {
-  "generated_utc": "2026-07-06T17:38:04Z",
+  "generated_utc": "2026-07-07T13:37:40Z",
   "watch": [
     {
-      "symbol": "LAES",
+      "symbol": "ARLO",
       "trigger": "breakout",
-      "trigger_price": 3.15,
-      "quantity": 47,
-      "limit_price": 3.18,
-      "take_profit": 3.43,
-      "stop_loss": 3.02,
+      "trigger_price": 13.50,
+      "quantity": 11,
+      "limit_price": 13.55,
+      "take_profit": 14.63,
+      "stop_loss": 12.87,
       "good_until": "2026-07-10",
-      "note": "SEALSQ (LAES) PQC Readiness Strategy release today (catalyst_age 3.9h) is part of a real, ongoing corporate push (confirmed via web search: automotive PQC roadmap Jul 1, ASIC design services buildout) -- not a one-off headline. Stock barely moved (+1.5% to $3.075), best early-stage setup in today's funnel. No cash to buy now ($2.50 on hand); parked for a confirmed push above $3.15 once capital frees up."
+      "note": "Arlo Technologies: William Blair initiated Outperform today (catalyst_age 2.8h), stock barely moved (+1.6% to $13.19). Verified via web search: this stacks with Oppenheimer's Outperform/$20 PT and Raymond James raising its PT to $19 -- three-analyst bullish convergence on smart-home-security growth/margin story, not a one-off note. Best early-stage read in today's funnel. No cash to buy now ($2.50 on hand); parked for a confirmed hold above $13.50 once capital frees up."
     },
     {
-      "symbol": "KOS",
+      "symbol": "CERT",
       "trigger": "breakout",
-      "trigger_price": 2.15,
-      "quantity": 68,
-      "limit_price": 2.20,
-      "take_profit": 2.38,
-      "stop_loss": 2.09,
+      "trigger_price": 7.30,
+      "quantity": 20,
+      "limit_price": 7.35,
+      "take_profit": 7.94,
+      "stop_loss": 6.98,
       "good_until": "2026-07-10",
-      "note": "Kosmos Energy reported boosted output and cut debt in H1 2026 (catalyst_age 4.9h), bullish and barely moved (+0.5% to $2.08) -- clean early-stage read-through on real operating results, floor-compliant. No cash to buy now; watching for a hold above $2.15 once capital frees up."
+      "note": "Certara: fresh news (catalyst_age 1.5h) on accelerating drug discovery via an NVIDIA BioNeMo Agent Toolkit partnership, bullish sentiment, stock barely moved (+2.3% to $7.13). Real, concrete tie-up rather than a routine filing. No cash to buy now; watching for a hold above $7.30 once capital frees up."
     },
     {
-      "symbol": "DC",
+      "symbol": "BYRN",
       "trigger": "breakout",
-      "trigger_price": 4.55,
-      "quantity": 32,
-      "limit_price": 4.60,
-      "take_profit": 4.97,
-      "stop_loss": 4.37,
+      "trigger_price": 7.25,
+      "quantity": 20,
+      "limit_price": 7.30,
+      "take_profit": 7.88,
+      "stop_loss": 6.94,
       "good_until": "2026-07-10",
-      "note": "Dakota Gold's Richmond Hill drilling-results catalyst is still intact this afternoon, stock now $4.565 (essentially at the $4.55 trigger already) -- early-stage, real news-driven catalyst, room left. No cash to buy now; watching for a confirmed hold above $4.55 once capital frees up."
+      "note": "Byrna Technologies: distribution-expansion partnership with Acceleration Partners (catalyst_age 1.6h), bullish sentiment, barely moved (+1.6% to $7.08), small-cap ($160M). No cash to buy now; watching for a hold above $7.25 once capital frees up."
     }
   ]
 }
