@@ -1,27 +1,36 @@
-# Sell Review — 2026-07-07T15:45:07Z
+# Sell Review — 2026-07-07T18:37:03Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-06T18:35:19Z) still shows the same 13 symbols with
 identical qty/avg_price/opened_utc as every prior run — no new fills, no closes. `candidates.json`
-refreshed 2026-07-07T13:35:38Z — checked all 13 held symbols against it directly: **12 of 13 have
-zero overlap** (silence, not a sell signal), but **ATHE printed a fresh, bullish, on-thesis
-catalyst today** — see below.
+refreshed 2026-07-07T17:35:43Z — checked all 13 held symbols against it directly: **11 of 13 have
+zero overlap** (silence, not a sell signal), but **ATHE** and **GASS** both printed fresh news
+today — see below.
 
-**Web search this run:** targeted **BNAI** (Brand Engagement Network) to refresh its thesis check
-(last directly re-verified two runs ago). Confirmed: the Cataneo acquisition **closed June 30,
-2026** (adds >€8.6M 2025 revenue, recurring-revenue enterprise software, MYDAS platform managing
-€6B+ in annual ad inventory), and BNAI was added to the **Russell 3000/2000 Index** effective
-June 26, 2026 (institutional-visibility catalyst). Stock trades ~$17.14–17.23, below the $19.46
-cost basis, but that's a normal pullback off two now-*completed* catalysts, not a broken story —
-management delivered on both the M&A and the index-inclusion thesis. HOLD confirmed, no change.
+**Web search this run:** targeted **ATHE** (Alterity Therapeutics) because `candidates.json` now
+shows it **−4.5%** today even though the tagged catalyst is the same bullish "FDA backs single
+Phase 3 trial for ATH434" headline that showed the stock **+9.9%** earlier in the day (per the
+prior run) — a tag/price divergence worth checking directly rather than assuming either the news
+or the fade tells the real story. Confirmed via SEC 6-K filings and StockTitan/GlobeNewswire
+coverage: Alterity received the **official End-of-Phase-2 meeting minutes** from the FDA on
+2026-07-07, confirming the FDA agrees a **single pivotal Phase 3 trial plus confirmatory
+evidence** could support MSA approval, with the pivotal trial on track to start by **year-end
+2026**. This is a formal, substantive regulatory confirmation (not a rehash) — the intraday fade
+from +9.9% to −4.5% reads as ordinary profit-taking/volatility on a thin, 1-share position after
+an initial pop, not a rejection of the news. Thesis is confirmed and de-risking. HOLD.
 
 Sources:
-- [Brand Engagement Network, Inc. (BNAI) Stock Price, News, Quote & History](https://finance.yahoo.com/quote/BNAI/)
-- [Brand Engagement (BNAI) Stock News & Updates | StockTitan](https://www.stocktitan.net/news/BNAI/)
+- [Alterity gets FDA alignment on ATH434 Phase 3 in MSA | ATHE Stock News](https://www.stocktitan.net/news/ATHE/alterity-therapeutics-achieves-alignment-with-u-s-fda-on-pivotal-h5wl8vg5cf0i.html)
+- [Alterity Therapeutics Receives FDA End-of-Phase 2 Meeting Minutes Confirming Registrational Pathway for ATH434 in Multiple System Atrophy](https://www.manilatimes.net/2026/07/07/tmt-newswire/globenewswire/alterity-therapeutics-receives-fda-end-of-phase-2-meeting-minutes-confirming-registrational-pathway-for-ath434-in-multiple-system-atrophy/2379755)
+
+**GASS** also printed fresh news today (no search needed — headline is self-explanatory and
+directly on-thesis): "StealthGas (GASS) Resolves Insurance Issue for Eco Wizard and Sells Vessel"
+(Bullish, +1.2% today). Cleaning up a liability and monetizing a vessel reinforces the debt-free,
+disciplined-balance-sheet thesis already verified in prior runs. HOLD.
 
 All other rulings carry forward unchanged from prior runs (no new information, no funnel
-mentions, no adverse news found), except **ATHE**, updated below with today's catalyst.
+mentions, no adverse news found).
 
 ---
 
@@ -36,12 +45,11 @@ Polaris Forge 1 second building / multi-campus AI-datacenter build-out and Stron
 consensus verified previously. Multi-quarter AI/HPC infrastructure thesis intact; pullback is off
 a prior large run, not a broken story.
 
-**ATHE — HOLD** | opened Jun 9 | trivial size (1 share) | **fresh catalyst today**
-`candidates.json` shows ATHE +9.9% today on: "FDA backs single Phase 3 trial for Alterity's MSA
-drug ATH434" (Bullish, sentiment 0.49) — this is a direct continuation/formalization of the
-original regulatory-pathway thesis (Acumen's MSA data + FDA nod for a Phase 3 plan). The catalyst
-is not spent — it's actively confirming and de-risking (single Phase 3 required instead of two).
-Thesis reinforced, not exhausted. Strong HOLD.
+**ATHE — HOLD** | opened Jun 9 | trivial size (1 share) | **re-verified today**
+Official FDA End-of-Phase-2 meeting minutes confirm the single-pivotal-Phase-3 registrational
+pathway for ATH434 in MSA, trial on track for year-end 2026. Today's intraday fade (+9.9% →
+−4.5%) is ordinary volatility on a 1-share position, not a thesis break — the news itself is a
+substantive, formal regulatory confirmation. Strong HOLD.
 
 **AVR — HOLD** | opened Jun 8 | largest position by cost basis
 Re-verified via web search two runs ago: DurAVR transcatheter heart valve program, PARADIGM
@@ -49,9 +57,9 @@ pivotal trial, CMS reimbursement, prior capital raise — all stand uncontradict
 found this run either.
 
 **BNAI — HOLD** | opened Jun 10
-Re-verified this run via web search: Cataneo acquisition closed (Jun 30) and Russell 3000/2000
+Re-verified last run via web search: Cataneo acquisition closed (Jun 30) and Russell 3000/2000
 inclusion effective (Jun 26) — both original catalysts delivered. No adverse post-deal
-integration news. Thesis intact and progressing.
+integration news.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified in prior runs; Phase 2 interim
@@ -60,9 +68,10 @@ analysis guided for Q4 2026 — event hasn't arrived yet. Drawdown only, thesis 
 **EVTL — HOLD** | opened Jun 9 | tiny position
 Vertical Aerospace certification milestones remain live, untriggered catalysts. Nothing adverse.
 
-**GASS — HOLD** | opened Jun 5
-Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 — verified previously.
-Thesis intact and reinforced. No new adverse news this run.
+**GASS — HOLD** | opened Jun 5 | **fresh catalyst today**
+Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 verified previously; today
+added a resolved insurance issue on the Eco Wizard vessel plus a vessel sale (bullish, +1.2%) —
+incremental balance-sheet cleanup, reinforcing rather than changing the thesis.
 
 **MNKD — HOLD** | opened Jun 10
 Afrezza pediatric approval remains the live thesis; Furoscix PDUFA (Jul 26, 2026) still ~3 weeks
@@ -92,12 +101,12 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | Multi-campus AI/HPC datacenter build-out progressing; pullback off a prior big run |
-| ATHE   | Jun 9  | **HOLD** | Fresh bullish catalyst today (FDA backs single Phase 3 for ATH434) — thesis confirming, not spent |
+| ATHE   | Jun 9  | **HOLD** | Official FDA EOP2 minutes confirm single-Phase-3 MSA pathway; intraday fade is noise, not thesis break |
 | AVR    | Jun 8  | **HOLD** | DurAVR/PARADIGM thesis intact, no adverse news |
-| BNAI   | Jun 10 | **HOLD** | Re-verified: Cataneo acquisition closed + Russell 3000 inclusion delivered |
+| BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed + Russell 3000 inclusion delivered |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
-| GASS   | Jun 5  | **HOLD** | Q1 beat, debt-free, multi-year contracted revenue |
+| GASS   | Jun 5  | **HOLD** | Q1 beat, debt-free; today's insurance resolution + vessel sale reinforce balance-sheet thesis |
 | MNKD   | Jun 10 | **HOLD** | Afrezza thesis live; Furoscix PDUFA Jul 26 still pending |
 | PLSE   | Jun 5  | **HOLD** | Ablation-platform thesis actively working |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
