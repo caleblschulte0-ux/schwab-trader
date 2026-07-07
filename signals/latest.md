@@ -1,65 +1,62 @@
-# Brain Run — 2026-07-07T13:37:40Z
+# Brain Run — 2026-07-07T17:38:12Z
 
-**Funnel:** scanned 316 → 40 shortlisted (all leading-tagged: news_smallcap/sec_8k/mover) → 40 in budget → 40 with a catalyst field → 3 finalists → **picked 0**
+**Funnel:** scanned 320 → 40 shortlisted (all leading-tagged: news_smallcap/sec_8k/mover) → 40 in budget → 40 with a catalyst field → 3 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Neutral.** SPY −0.25%, VIX 16.02 (calm-ish). Hot sectors: Consumer Cyclical (+2.39%), Financial Services (+1.26%), Energy (+0.73%), Utilities (+0.60%). Cold: Industrials (−1.33%), Real Estate (−1.24%), Basic Materials (−0.46%), Healthcare (−0.40%), Technology essentially flat (−0.08%). Normal discipline tape — moot for execution this run (see below).
+**Neutral.** SPY −0.3%, VIX 15.62 (calm). Hot sectors: Real Estate (+2.45%), Technology (+0.69%), Communication Services (+0.04%). Cold: Industrials (−2.64%), Consumer Defensive (−1.74%), Basic Materials (−1.62%), Consumer Cyclical (−1.15%). Normal-discipline tape — moot for execution this run (see below).
 
 ---
 
 ## Decision: No New Order — Still Zero Deployable Cash
 
-`holdings.json` shows cash unchanged at **$2.50** (still dated 2026-07-06T18:35Z; multiple runs in a row have flagged the same constraint). Cost basis across 13 open positions is ~$957 of the ~$1,000 account. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50 cannot fund a real position at any price above the $2 floor with any margin for the live-ask buffer. Correct call is **no buy** again this run. This account needs the **sell brain to free capital** before any new entry can fill. Judgment work is banked below via the watchlist for whenever capital frees up.
+`holdings.json` is unchanged from the prior run: cash still **$2.50**, `updated_utc` still 2026-07-06T18:35Z. Cost basis across 13 open positions is ~$957 of the ~$1,000 account. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50 cannot fund a real position at any price above the $2 floor with room for the live-ask buffer. Correct call is **no buy** again this run. The account needs the **sell brain to free capital** before any new entry can fill. Judgment work is banked below via the watchlist for whenever capital frees up.
 
 ---
 
-## Finalists Considered (would-buy ideas, can't fill — held on watchlist)
+## Finalists Considered (would-buy ideas, can't fill — held/refreshed on watchlist)
 
-**ARLO — Arlo Technologies ($13.19, +1.6%, catalyst_age 2.8h)**
-William Blair initiated Outperform today. Spent this run's one web search verifying it: this stacks with Oppenheimer's fresh Outperform initiation ($20 PT, "market has mispriced the stock") and Raymond James raising its target to $19 — a genuine three-firm bullish convergence on smart-home-security growth/subscription-mix, not a recycled note. Stock has barely moved on it. Best idea in today's funnel. Parked on watchlist.
+**ARLO — Arlo Technologies ($13.11, −0.6%, catalyst_age 6.8h)**
+William Blair's Outperform initiation from earlier today, verified last run against Oppenheimer ($20 PT) and Raymond James ($19 PT) — a genuine three-firm bullish convergence, not a recycled note. Price is flat-to-slightly-down since flagged (not red on the thesis, just consolidating under the $13.50 breakout level). Kept on watchlist.
 
-**CERT — Certara ($7.13, +2.3%, catalyst_age 1.5h)**
-Fresh, concrete catalyst: an NVIDIA BioNeMo Agent Toolkit partnership to accelerate drug discovery/development. Bullish sentiment, barely moved, real named tie-up rather than a routine filing. Parked on watchlist.
+**CERT — Certara ($7.10, −0.5%, catalyst_age 5.5h)**
+NVIDIA BioNeMo Agent Toolkit partnership, still fresh, still holding roughly flat. Real named tie-up, not a routine filing. Kept on watchlist.
 
-**BYRN — Byrna Technologies ($7.08, +1.6%, catalyst_age 1.6h)**
-Selected Acceleration Partners to expand distribution — real, if modest, catalyst; small-cap ($160M), bullish sentiment, barely moved. Parked on watchlist as the third, more speculative leg.
+**BYRN — Byrna Technologies — DROPPED (was $7.08, now $6.02, −15.0% today)**
+Was parked last run on a distribution-partnership catalyst at $7.08. Since then it has broken down hard, now the day's biggest loser at −15%. Per the anti-chase rule ("a name that is RED since you first liked it is disqualified from re-entry"), this is pulled from the watchlist outright — not re-priced, not chased lower. Whatever moved it lower today invalidates the original thesis.
 
 ---
 
 ## Notable Passes
 
-- **CMPS** — highest raw score (9.8) on an 8-K with new COMP360 depression-drug data, tagged "Bullish" by the sentiment scorer, but the stock is actually **down 5.7%** on the print — the market's real reaction disagrees with the auto-tag, suggesting the data underwhelmed. Passed as a long; not clean enough (and no options data available) to structure as a put either.
-- **CSIQ** — up 4.8% news_smallcap, but the actual headline is a CEO departure (Recurrent Energy) with Neutral/slightly negative sentiment — not a bullish catalyst despite the tag category. Passed.
-- **AVTX** — up 5.9% today on a Leerink Partners forum-participation headline. This name was flagged and then dropped from the watchlist as extended two runs ago (ran from ~$18.84 to ~$19.85); today it's at $19.96 — still in the same extended zone, and re-entering now on a thinner "conference participation" catalyst would be exactly the anti-chase behavior BRAIN.md bans. Passed again.
-- **CURI** — sec_8k on a German-subsidiary buyout, tagged bullish, but stock down 3.3% — same bullish-tag/price-action mismatch as CMPS. Passed.
-- **AMPG** — buyback authorization + ATM termination is a real catalyst, but already up 15.2% intraday — deprioritized per the extension rule; didn't out-argue the earlier-stage names above.
-- **DOCN** — fresh 8-K (0.5h old) and up 7.4%, but the funnel only surfaced a generic "8-K filer" headline with no real content, and at $141/share there's no room to size meaningfully within the $150 cap even when cash exists. Passed.
-- **KOS** — was on the watchlist the last couple of runs on a real operating-results catalyst; today's KOS headline is just a CFO stock sale (mildly bearish optics, not a catalyst) — dropped in favor of fresher names.
-- **LAES, DC** — carried on the watchlist recently but no longer appear in today's shortlist (catalysts have aged past the funnel's freshness window); without a fresh quote/catalyst check this run, let them roll off rather than carry stale levels forward.
+- **KURA** — up 8.5% (score 7.7) on a "targeted cancer pipeline" headline. Spent this run's one web search checking it: found only a routine inducement-grant filing (Jul 1) and Q1 results already old news — no dated, fresh catalyst actually explains today's specific move. Headline reads like generic pipeline-summary content, not a hard event. Passed — not clean enough to add to the watchlist.
+- **CMPS** — highest raw score (9.8), COMP360 depression-drug 8-K data. Last run this was down 5.7% on the print (bullish tag vs. bearish price action mismatch); today it's recovered to +1.1%. Directionally better but still not a clear enough signal to act on without a full read of the data — passed again.
+- **GTM** — up 3.6% but the actual catalyst is a securities-fraud class-action lawsuit against the company — a bearish/legal-risk item mistagged as news_smallcap, not a long. Passed (and not a clean put candidate given no cash regardless).
+- **GILT, FCEL, CSIQ, DRTS** — all down on the day (−5% to −10%) despite nominally "bullish" tags (defense order, earnings-review article, exec change, CFO share sale) — tag/price-action mismatches or genuinely weak catalysts. Passed.
+- **ANVS** — real, specific catalyst (Phase 3 Alzheimer's enrollment completion), but already +7.9% intraday on a very thin ($73M cap) name barely above the $2 price floor ($2.13) — modest catalyst strength for the move size and float risk; passed on quality grounds.
 - Checked all 40 shortlist symbols against `holdings.json` (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) — **zero overlap**, so no anti-chase conflicts this run.
 
 ---
 
 ## Web Search (1 used)
 
-Spent the one search verifying ARLO's William Blair initiation was part of a genuine multi-analyst bullish convergence (Oppenheimer, Raymond James) rather than an isolated note — confirmed.
+Spent the one search checking whether KURA's +8.5% move today had a real, dated catalyst behind it — found only a routine July 1 inducement-grant filing and older Q1/clinical-data news, nothing specifically dated to today's move. Passed on KURA as a result.
 
 Sources:
-- [Oppenheimer initiates Arlo Technologies stock with outperform rating](https://www.investing.com/news/analyst-ratings/oppenheimer-initiates-arlo-technologies-stock-with-outperform-rating-93CH-4695611)
-- [Oppenheimer Initiates Coverage on Arlo Technologies (ARLO) and Says the Market Has Mispriced the Stock](https://finance.yahoo.com/markets/stocks/articles/oppenheimer-initiates-coverage-arlo-technologies-214803111.html)
-- [William Blair initie une couverture d'Arlo Technologies avec une note de surperformance](https://fr.investing.com/news/analyst-ratings/william-blair-initie-une-couverture-darlo-technologies-avec-une-note-de-surperformance-93CH-3487580)
+- [Kura Oncology, Inc. (KURA) Stock Price, News, Quote & History - Yahoo Finance](https://finance.yahoo.com/quote/KURA/)
+- [Kura Oncology Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)](https://www.globenewswire.com/news-release/2026/07/03/3321791/0/en/kura-oncology-reports-inducement-grants-under-nasdaq-listing-rule-5635-c-4.html)
+- [Kura Oncology (KURA) Stock News & Updates | StockTitan](https://www.stocktitan.net/news/KURA/)
 
 ---
 
 ## Watchlist Update
 
-Dropped **LAES**, **KOS**, and **DC** (aged out of today's shortlist / catalyst no longer clean — see Passes). Added three fresh finalists instead: **ARLO** (breakout $13.50), **CERT** (breakout $7.30), **BYRN** (breakout $7.25) — all fresh, barely-moved, verified/concrete catalysts. All `good_until` 2026-07-10; each will fire automatically the instant its trigger is hit AND the account has cash.
+Dropped **BYRN** (broke down −15% since flagged — disqualified by the anti-chase rule, not re-priced). Kept **ARLO** (breakout $13.50) and **CERT** (breakout $7.30), both still intact and roughly flat since being flagged. No fresh replacement added this run — KURA and ANVS were reviewed and passed on quality/freshness grounds rather than forced in. `good_until` remains 2026-07-10 on both; each fires automatically the instant its trigger is hit AND the account has cash.
 
 ---
 
 ## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
-None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no fresh price/news read on the book. This brain does not manage exits or adds — that's the SELL BRAIN's job entirely. The binding constraint on this account remains capital, not idea flow: three genuinely tradeable setups are queued on the watchlist and cash still can't touch any of them.
+None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no fresh price/news read on the book. This brain does not manage exits or adds — that's the SELL BRAIN's job entirely. The binding constraint on this account remains capital, not idea flow: two genuinely tradeable setups are queued on the watchlist and cash still can't touch either of them.

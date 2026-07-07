@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-07T13:37:40Z",
+  "generated_utc": "2026-07-07T17:38:12Z",
   "watch": [
     {
       "symbol": "ARLO",
@@ -10,7 +10,7 @@
       "take_profit": 14.63,
       "stop_loss": 12.87,
       "good_until": "2026-07-10",
-      "note": "Arlo Technologies: William Blair initiated Outperform today (catalyst_age 2.8h), stock barely moved (+1.6% to $13.19). Verified via web search: this stacks with Oppenheimer's Outperform/$20 PT and Raymond James raising its PT to $19 -- three-analyst bullish convergence on smart-home-security growth/margin story, not a one-off note. Best early-stage read in today's funnel. No cash to buy now ($2.50 on hand); parked for a confirmed hold above $13.50 once capital frees up."
+      "note": "Arlo Technologies: William Blair initiated Outperform (now catalyst_age 6.8h), stock holding flat/slightly down (-0.6% to $13.11) -- consolidating below the trigger, not breaking down. Multi-analyst bullish convergence (William Blair, Oppenheimer $20 PT, Raymond James $19 PT) still intact from prior verification. No cash to buy now ($2.50 on hand); parked for a confirmed hold above $13.50 once capital frees up."
     },
     {
       "symbol": "CERT",
@@ -21,18 +21,7 @@
       "take_profit": 7.94,
       "stop_loss": 6.98,
       "good_until": "2026-07-10",
-      "note": "Certara: fresh news (catalyst_age 1.5h) on accelerating drug discovery via an NVIDIA BioNeMo Agent Toolkit partnership, bullish sentiment, stock barely moved (+2.3% to $7.13). Real, concrete tie-up rather than a routine filing. No cash to buy now; watching for a hold above $7.30 once capital frees up."
-    },
-    {
-      "symbol": "BYRN",
-      "trigger": "breakout",
-      "trigger_price": 7.25,
-      "quantity": 20,
-      "limit_price": 7.30,
-      "take_profit": 7.88,
-      "stop_loss": 6.94,
-      "good_until": "2026-07-10",
-      "note": "Byrna Technologies: distribution-expansion partnership with Acceleration Partners (catalyst_age 1.6h), bullish sentiment, barely moved (+1.6% to $7.08), small-cap ($160M). No cash to buy now; watching for a hold above $7.25 once capital frees up."
+      "note": "Certara: NVIDIA BioNeMo Agent Toolkit partnership catalyst (now catalyst_age 5.5h), stock roughly flat (-0.5% to $7.10) -- holding, not breaking down. Real, concrete tie-up rather than a routine filing. No cash to buy now; watching for a hold above $7.30 once capital frees up."
     }
   ]
 }
