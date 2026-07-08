@@ -1,17 +1,6 @@
 {
-  "generated_utc": "2026-07-07T17:38:12Z",
+  "generated_utc": "2026-07-08T13:37:48Z",
   "watch": [
-    {
-      "symbol": "ARLO",
-      "trigger": "breakout",
-      "trigger_price": 13.50,
-      "quantity": 11,
-      "limit_price": 13.55,
-      "take_profit": 14.63,
-      "stop_loss": 12.87,
-      "good_until": "2026-07-10",
-      "note": "Arlo Technologies: William Blair initiated Outperform (now catalyst_age 6.8h), stock holding flat/slightly down (-0.6% to $13.11) -- consolidating below the trigger, not breaking down. Multi-analyst bullish convergence (William Blair, Oppenheimer $20 PT, Raymond James $19 PT) still intact from prior verification. No cash to buy now ($2.50 on hand); parked for a confirmed hold above $13.50 once capital frees up."
-    },
     {
       "symbol": "CERT",
       "trigger": "breakout",
@@ -21,7 +10,18 @@
       "take_profit": 7.94,
       "stop_loss": 6.98,
       "good_until": "2026-07-10",
-      "note": "Certara: NVIDIA BioNeMo Agent Toolkit partnership catalyst (now catalyst_age 5.5h), stock roughly flat (-0.5% to $7.10) -- holding, not breaking down. Real, concrete tie-up rather than a routine filing. No cash to buy now; watching for a hold above $7.30 once capital frees up."
+      "note": "Certara: NVIDIA BioNeMo Agent Toolkit / AI-drug-development partnership catalyst re-surfaced today (catalyst_age 2.4h via a fresh Simply Wall Street write-up), stock roughly flat again (+0.6% to $7.17). Same thesis holding for the third run running -- not breaking down, not yet triggered. No cash to buy now ($2.50 on hand); watching for a hold above $7.30 once capital frees up."
+    },
+    {
+      "symbol": "AMPG",
+      "trigger": "pullback",
+      "trigger_price": 5.95,
+      "quantity": 25,
+      "limit_price": 6.00,
+      "take_profit": 6.48,
+      "stop_loss": 5.70,
+      "good_until": "2026-07-11",
+      "note": "AmpliTech Group: verified via web search -- genuine, dated catalyst (announced 2026-07-07): $10M buyback authorization + termination of its Maxim Group ATM equity offering, i.e. removes a real dilution overhang. Up +5.6% today on heavy volume (11.1M sh, small $158M cap) confirming participation, not a thin pop. +5.6% intraday is still early-stage, not blown off, but chasing the pop right now would violate the stage/chase rule -- parked for a pullback toward $5.95 (near yesterday's close) instead of buying the spike. No cash to buy now; watching for capital to free up."
     }
   ]
 }

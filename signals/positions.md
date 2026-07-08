@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-07-07T17:38:12Z
-*(holdings.json refreshed 2026-07-06T18:35:19Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
+# Open Positions — updated 2026-07-08T13:37:48Z
+*(holdings.json refreshed 2026-07-07T18:35:17Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
 |--------|-----|---------|-------------|------|-------------------|--------------|
@@ -22,7 +22,7 @@
 Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
 
 **Watchlist (bot-monitored, fires when triggered):**
-- ARLO — breakout $13.50, 11 shares, limit $13.55; TP $14.63 / SL $12.87; good until 2026-07-10 (William Blair initiation, confirmed multi-analyst bullish convergence w/ Oppenheimer & Raymond James; roughly flat at $13.11; no cash to buy now)
-- CERT — breakout $7.30, 20 shares, limit $7.35; TP $7.94 / SL $6.98; good until 2026-07-10 (Certara/NVIDIA BioNeMo partnership, fresh and concrete; roughly flat at $7.10; no cash to buy now)
+- CERT — breakout $7.30, 20 shares, limit $7.35; TP $7.94 / SL $6.98; good until 2026-07-10 (Certara/NVIDIA BioNeMo AI-drug-development tie-up, catalyst re-confirmed fresh again today; roughly flat at $7.17; no cash to buy now)
+- AMPG — pullback $5.95, 25 shares, limit $6.00; TP $6.48 / SL $5.70; good until 2026-07-11 (AmpliTech Group: verified $10M buyback + Maxim ATM termination, real dilution-overhang removal, +5.6% today on heavy volume; waiting for a pullback rather than chasing the pop; no cash to buy now)
 
-BYRN dropped this run — broke down −15% since being flagged (now the day's biggest loser), disqualified by the anti-chase "red since flagged" rule. KURA and ANVS reviewed and passed on freshness/quality grounds, not added.
+ARLO dropped from the watchlist this run — it fell out of today's 40-name shortlist entirely (catalyst has aged past the funnel's freshness window with no fresh development), so the original edge can no longer be confirmed. Per the anti-chase/staleness discipline this brain applies to itself, an unconfirmed multi-day-old catalyst doesn't stay parked indefinitely.
