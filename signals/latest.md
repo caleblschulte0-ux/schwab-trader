@@ -1,98 +1,89 @@
-# Brain Run — 2026-07-08T17:37:46Z
+# Brain Run — 2026-07-09T13:37:20Z
 
-**Funnel:** scanned 281 → 40 shortlisted (leading-tagged: news_smallcap/sec_8k/mover/news_bullish/earnings_soon) → 39 fit the $150 budget (NVDA at $203/share is the lone exclusion) → 40 with a catalyst field → 1 finalist → **picked 0**
+**Funnel:** scanned 267 → 40 shortlisted (every row carried a LEADING tag today — heavy sec_8k/news_smallcap mix) → 27 confirmed via live price data in the $2–$150 tradeable band (13 more are calendar/sec-filer rows with no price field yet) → 40 with a catalyst field → 2 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Neutral.** SPY −0.27%, VIX 16.66 (down from 17.38 last run — vol easing back). Hot:
-Technology (+2.15%, the day's lone standout), Real Estate (+0.41%), Utilities (+0.09%).
-Cold: Industrials (−1.65%), Communication Services (−1.27%), Basic Materials (−1.1%).
-Normal discipline this run — nothing on the tape itself demands extra caution; the
-binding constraint below is capital, not risk regime.
+**Risk-on.** SPY +0.32%, VIX 16.71 (calm). Hot: Technology (+2.7%, clear standout), Energy
+(+0.88%), Utilities (+0.74%). Cold: Industrials (−1.65%), Basic Materials (−1.43%),
+Communication Services (−1.18%). Nothing on the tape demands extra caution — the binding
+constraint this run is capital, not risk regime (same as last run).
 
 ---
 
 ## Decision: No New Order — Still Zero Deployable Cash
 
-`holdings.json` cash is still **$2.50** (unchanged since 2026-07-07). Cost basis across
-13 open positions is ~$957 of the ~$1,000 account. Nothing in today's 40-name shortlist
-trades in the narrow $2.00–$2.50 window a single share would need (cheapest real-catalyst
-names were ESPR $3.17, FJET $4.40, CATX $3.38), and a long put is equally out of reach —
-even a maximally cheap real premium (~$0.05+/share = $5+/contract) exceeds $2.50. Per
-BRAIN.md STEP 2 ("size off real cash, not headroom"), the correct call is **no buy** again
-this run. The account needs the **sell brain to free capital** before any new entry can
-fill. Judgment work is banked on the watchlist for whenever capital frees up.
+`holdings.json` cash is **$2.50**, unchanged since the last run, against **13 open
+positions** (already more than double the ~6-position guideline) and ~$957 of the ~$1,000
+account already deployed. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50
+cannot fund any stock position that also clears the $2/share price floor, nor a put (even a
+maximally cheap ~$0.05/share premium × 100 = $5 exceeds $2.50). The correct call is **no
+buy** again this run. The account needs the **sell brain** to close some of the 13 held
+names and free capital before any new entry can fill.
 
 ---
 
-## Finalist Considered (would-buy idea, can't fill — added to watchlist)
+## Finalists Identified (for the record — not bought, no cash)
 
-**EOLS — Evolus ($7.045, +1.5%, catalyst_age 4.3h)**
-Fresh 8-K for an exclusive US licensing/distribution deal with IBSA (Swiss pharma) for
-Profhilo — Europe's market-leading skin-quality injectable, 4.8M+ treatments worldwide
-since 2015. Verified via this run's one web search: real, dated 2026-07-08, and genuinely
-exclusive to the US market — not a recycled or vague item. Sentiment bullish (0.455), and
-the stock has barely moved yet (+1.5%), so the move looks like it's still ahead rather than
-priced in — the textbook early-stage "news_smallcap, fresh catalyst" setup. Added to the
-watchlist on a breakout trigger since there's no cash to buy it outright.
+- **MARA** ($12.71, +5.74%) — mover backed by a fresh 8-K (1.4h old), reacting to a real
+  same-day filing, still early-stage (not extended). Would have been the top pick on a
+  clean tape with cash available.
+- **CEVA** ($44.56, +4.21%) — news_smallcap, bullish sentiment (0.51) on a real
+  product/design-win headline (~6.4h old), moderate move with room. Pricier per share
+  (only ~3 shares at the $150 cap), so ranked second.
+- Checked **FBRX** (highest score, 7.8: halt/resume + 8-K, catalyst_age 1.5h) via this
+  run's one web search — the halt code `LUDP` is a mechanical Nasdaq volatility
+  (limit-up/limit-down) pause, not a news-driven halt, and the search turned up no fresh,
+  specific bullish catalyst behind today's 8-K. Downgraded from top score to a pass.
+- Passed **SBEV** ($0.182) and **FTFT** ($0.4845) outright — both violate the $2 price
+  floor despite being "movers" with fresh 8-Ks.
+- **SMPL** (+10.9%, mover+8-K) already meaningfully extended intraday (upper end of the
+  5–20% deprioritize band) — passed in favor of earlier-stage names, independent of cash.
 
 ---
 
 ## Watchlist Update
 
-**Dropped CERT** (Certara) — the AI-drug-development partnership thesis anchored the
-prior two runs' watchlist entry, but the stock is now down −6.2% today (vs. roughly flat
-last run), moving further from the $7.30 breakout trigger rather than toward it. A name
-that's actively breaking down invalidates a "coil near highs" breakout thesis — dropped
-per the anti-chase/staleness discipline rather than carried forward on faith.
-
-**Kept AMPG** (AmpliTech Group, $6.62, +5.92% today) — pullback trigger unchanged at
-$5.95. Same verified catalyst (Maxim ATM termination + $10M buyback, removing a real
-dilution overhang) is still surfacing fresh in today's feed; stock remains extended above
-the pullback level rather than blown off, so the setup is still live. `good_until` 2026-07-11.
-
-**Added EOLS** (see Finalist above) — breakout trigger $7.30, `good_until` 2026-07-11.
+**Kept AMPG and EOLS unchanged.** Neither symbol appeared in today's 40-name shortlist, so
+there's no fresh quote to reassess them against; both catalysts were already verified via
+web search on prior runs and remain within their `good_until` window (2026-07-11). Carried
+forward as-is rather than fabricating an update with no new data.
 
 ---
 
 ## Other Names Scanned and Passed
 
-- **PRME** (Prime Medicine) +13.4% on an 8-K — already extended for the day (stage rule:
-  late to add, not a fresh-stage entry), and no cash regardless.
-- **ESPR** — merger-vote 8-K, sentiment neutral, a binary/idiosyncratic outcome rather than
-  a clean directional catalyst.
-- **AURA** — 8-K is a board appointment; a real filing but too weak a catalyst to lean on.
-- **NVDA** — bullish news but $203/share, exceeds the $150-per-trade cap for even 1 share;
-  also a mega-cap, off-strategy for this account size.
-- **GT, FMC, GLOB, IMMX, CERT, CRML** and other "news_smallcap" red movers today (−4% to
-  −9%) — bearish/mixed price action; several are potential PUT candidates on a future run
-  once premium is affordable, not today given the $2.50 cash floor.
-- The long run of bare `sec_8k` filer names (ZARE, PW-PA, CEPO, OSBC, ET-PI, BWMG, CHSCO,
-  BUKS, AXTI, UPLD, GTLB, STRL, HYPD, WAMFF, MXF, ONFOP, FUSEW) carry no price/volume data
-  and no read on the filing's actual content beyond the index page — not enough signal to
-  finalize any of them, and no cash to act on it anyway.
+- **RXT** (−20.2%) and **BYRN** (−17.2%) — both movers with fresh same-day 8-Ks and sharp
+  drawdowns; potential long-put candidates on thesis, but $2.50 cash rules out even a
+  minimal-premium put this run.
+- **NTIC** (−9.0%) and **FTFT** (−8.6%, also sub-$2) — same bearish-mover bucket, same
+  cash blocker.
+- The long run of bare `sec_8k` filer names with no price/volume data (FBLG, NIXXW, XAIR,
+  SUIG, CPBI, NWTG, WLYB, ORBS, YICCU) — no way to judge setup quality without a quote, and
+  no cash to act on it regardless.
+- **JNJ, WFC, BAC** — earnings_soon + news_bullish, but mega-caps, off-strategy for this
+  account size, and moot given no cash.
 - Checked all 40 shortlist symbols against `holdings.json` (ABSI, APLD, ATHE, AVR, BNAI,
-  CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) — **zero overlap**, no anti-chase conflicts.
+  CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) — **zero overlap**, no anti-chase
+  conflicts either way.
 
 ---
 
 ## Web Search (1 used)
 
-Verified the EOLS/Evolus–IBSA Profhilo licensing deal: real, dated 2026-07-08, exclusive
-US rights, confirming the 8-K catalyst is genuine and fresh rather than embellished.
-
-Sources:
-- [Evolus, Inc. — Form 8-K](https://www.sec.gov/Archives/edgar/data/0001570562/000157056226000079/a78268kex991.htm)
-- [Evolus Lands Licensing Rights for Profhilo — Orange County Business Journal](https://www.ocbj.com/healthcare/evolus-lands-licensing-rights-for-profhilo/)
+Checked the Nasdaq halt-reason code behind FBRX's fresh 8-K/halt-resume tag to see if it
+was a real news-driven halt or a mechanical volatility pause. Confirmed it's `LUDP`
+(Limit Up-Limit Down Pause) with no specific bullish catalyst surfacing in search — downgraded
+the pick from the funnel's top score to a pass.
 
 ---
 
 ## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
 None of the 13 held names appeared anywhere in today's 40-name shortlist, so this run has
-no fresh price/news read on the book. This brain does not manage exits or adds — that's the
-SELL BRAIN's job entirely. The binding constraint on this account remains capital, not idea
-flow: two genuinely tradeable setups (AMPG, EOLS) are now queued on the watchlist and cash
-still can't touch either of them.
+no fresh price/news read on the book. This brain does not manage exits — that's the SELL
+BRAIN's job entirely. The binding constraint on this account remains capital, not idea
+flow: two genuinely tradeable setups (AMPG, EOLS) are queued on the watchlist and still
+can't be touched by cash.

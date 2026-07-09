@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-07-08T17:37:46Z
-*(holdings.json refreshed 2026-07-07T18:35:17Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
+# Open Positions — updated 2026-07-09T13:37:20Z
+*(holdings.json refreshed 2026-07-08T18:35:17Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
 |--------|-----|---------|-------------|------|-------------------|--------------|
@@ -22,7 +22,7 @@
 Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
 
 **Watchlist (bot-monitored, fires when triggered):**
-- AMPG — pullback $5.95, 25 shares, limit $6.00; TP $6.48 / SL $5.70; good until 2026-07-11 (AmpliTech Group: verified Maxim ATM termination + $10M buyback catalyst still fresh, now +5.92% to $6.62 on volume; waiting for a pullback rather than chasing the pop; no cash to buy now)
-- EOLS — breakout $7.30, 20 shares, limit $7.35; TP $8.05 / SL $6.90; good until 2026-07-11 (Evolus: fresh 8-K, exclusive US Profhilo licensing deal with IBSA verified via web search; only +1.5% so far, move looks still ahead; no cash to buy now)
+- AMPG — pullback $5.95, 25 shares, limit $6.00; TP $6.48 / SL $5.70; good until 2026-07-11 (AmpliTech Group: verified Maxim ATM termination + $10M buyback catalyst; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
+- EOLS — breakout $7.30, 20 shares, limit $7.35; TP $8.05 / SL $6.90; good until 2026-07-11 (Evolus: fresh 8-K, exclusive US Profhilo licensing deal with IBSA verified via web search on a prior run; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
 
-CERT dropped from the watchlist this run — the stock fell −6.2% today, moving further from its $7.30 breakout trigger rather than toward it, invalidating the "coil near highs" thesis that anchored the pick for the last two runs.
+No new buys this run — top finalists were MARA and CEVA (see latest.md), but $2.50 cash blocks any fill. Account needs the sell brain to free capital.
