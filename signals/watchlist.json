@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-09T13:37:20Z",
+  "generated_utc": "2026-07-09T17:37:32Z",
   "watch": [
     {
       "symbol": "AMPG",
@@ -22,6 +22,17 @@
       "stop_loss": 6.90,
       "good_until": "2026-07-11",
       "note": "Evolus: fresh 8-K, exclusive US licensing/distribution deal with IBSA for Profhilo, verified real via web search on a prior run. Not in today's funnel so no fresh quote -- carried forward unchanged. Parked for a breakout above range to confirm continuation rather than buying the first tick. Still no cash to buy; watching for capital to free up."
+    },
+    {
+      "symbol": "ENVX",
+      "trigger": "pullback",
+      "trigger_price": 5.15,
+      "quantity": 29,
+      "limit_price": 5.20,
+      "take_profit": 5.65,
+      "stop_loss": 4.90,
+      "good_until": "2026-07-14",
+      "note": "Enovix: verified via web search across StockTitan/Yahoo/GlobeNewswire/Investing.com/TipRanks -- hired Michael Vyvoda, former Apple Director of Product Operations (AirPods manufacturing scale-up), as COO effective 2026-07-29 to lead the global manufacturing ramp. Real, material, fresh (4.4h old) 8-K catalyst; stock only +6% so far, not extended. Parked for a pullback toward $5.15 rather than chasing today's pop. No cash to buy now ($2.50 on hand); watching for capital to free up."
     }
   ]
 }

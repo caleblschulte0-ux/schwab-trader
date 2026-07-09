@@ -1,4 +1,4 @@
-# Open Positions — updated 2026-07-09T13:37:20Z
+# Open Positions — updated 2026-07-09T17:37:32Z
 *(holdings.json refreshed 2026-07-08T18:35:17Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
@@ -24,5 +24,6 @@ Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh 
 **Watchlist (bot-monitored, fires when triggered):**
 - AMPG — pullback $5.95, 25 shares, limit $6.00; TP $6.48 / SL $5.70; good until 2026-07-11 (AmpliTech Group: verified Maxim ATM termination + $10M buyback catalyst; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
 - EOLS — breakout $7.30, 20 shares, limit $7.35; TP $8.05 / SL $6.90; good until 2026-07-11 (Evolus: fresh 8-K, exclusive US Profhilo licensing deal with IBSA verified via web search on a prior run; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
+- ENVX — pullback $5.15, 29 shares, limit $5.20; TP $5.65 / SL $4.90; good until 2026-07-14 (Enovix: verified via web search — hired former Apple AirPods-manufacturing COO to lead global production ramp, real 8-K, fresh 4.4h catalyst, only +6% so far, not extended; no cash to buy now)
 
-No new buys this run — top finalists were MARA and CEVA (see latest.md), but $2.50 cash blocks any fill. Account needs the sell brain to free capital.
+No new buys this run — top finalists were ENVX and FATE (see latest.md), but $2.50 cash blocks any fill. Account needs the sell brain to free capital.
