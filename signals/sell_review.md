@@ -1,24 +1,20 @@
-# Sell Review — 2026-07-08T18:36:45Z
+# Sell Review — 2026-07-09T12:42:46Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-07T18:35:17Z) is unchanged since the prior review — same
+`holdings.json` (updated_utc 2026-07-08T18:35:17Z) is unchanged since the prior review — same
 13 symbols, same qty/avg_price/opened_utc, no new fills, no closes. Today's `candidates.json`
-(updated_utc 2026-07-08T17:35:45Z) has **zero overlap** with any of the 13 held symbols — the
-buy brain's own run confirms this independently in `latest.md` ("Checked all 40 shortlist
-symbols against holdings.json ... zero overlap"). So there is no fresh catalyst or adverse-news
-signal from today's funnel on any held name; today's rulings carry forward from the last review
-(~6 hours ago) unless re-verified below.
+funnel has **zero overlap** with any of the 13 held symbols (checked all 13 against the funnel
+directly), matching the buy brain's own independent confirmation in `latest.md`. So there is no
+fresh catalyst or adverse-news signal from today's funnel on any held name; the prior review's
+rulings carry forward unless re-verified below.
 
-**Web search this run:** targeted **AVR** (Anteris Technologies) — it's the single largest
-position by dollar cost basis (~$148) and hadn't been freshly re-verified this run. Confirmed:
-first U.S. patients have been treated in the global pivotal PARADIGM trial for the DurAVR
-transcatheter heart valve (Montefiore Medical Center), and Anteris has secured US Medicare
-reimbursement eligibility for the trial. No adverse news, no trial setback, no dilution
-announcement found. The pivotal-trial thesis is actively advancing, not stalled or broken. HOLD.
-
-All other rulings carry forward unchanged from the prior review (no new information, no funnel
-mentions, no adverse news found).
+**Web search this run:** targeted **MNKD** (MannKind) — it carries the nearest live binary
+catalyst in the book, the FUROSCIX ReadyFlow autoinjector PDUFA date of **2026-07-26** (~17 days
+out), and hadn't been freshly re-checked since that date was first noted. Confirmed via search:
+the sNDA is still under standard FDA review with the PDUFA target action date intact at July 26,
+2026 — no delay, no Complete Response Letter, no safety signal, no change. Thesis (hold through
+the binary rather than exit ahead of it) stands unchanged.
 
 ---
 
@@ -31,18 +27,19 @@ $100M dilutive offering priced at $7.41, not a broken thesis. No new information
 **APLD — HOLD** | opened Jun 9 | largest position by avg cost
 Polaris Forge 1 Building 2 Phase 1 hit Ready-for-Service on 2026-07-01 (175 MW live, 400 MW
 contracted full build-out); Series G funding capacity expanded to $2B; analyst median PT ($74.5)
-implies large upside despite a ~31% trailing-month pullback (re-verified last run). Thesis
-actively delivering, not broken — pullback is sector/market noise.
+implies large upside despite a trailing-month pullback (re-verified in prior run). Thesis actively
+delivering, not broken — pullback is sector/market noise.
 
 **ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
 Official FDA End-of-Phase-2 meeting minutes (confirmed in a prior run) support the
 single-pivotal-Phase-3 registrational pathway for ATH434 in MSA, trial on track for year-end
 2026. No new information this run; thesis stands.
 
-**AVR — HOLD** | opened Jun 8 | largest position by dollar cost | **re-verified today**
-First U.S. patients treated in the global pivotal PARADIGM trial for DurAVR at Montefiore
-Medical Center; US Medicare reimbursement eligibility secured for the trial. No adverse news —
-the pivotal program is actively progressing.
+**AVR — HOLD** | opened Jun 8 | largest position by dollar cost
+First U.S. patients treated in the global pivotal PARADIGM trial for the DurAVR transcatheter
+heart valve (Montefiore Medical Center), and US Medicare reimbursement eligibility secured for
+the trial (re-verified via web search in prior run). No adverse news since. Pivotal program
+actively progressing.
 
 **BNAI — HOLD** | opened Jun 10
 Cataneo acquisition closed (Jun 30) and Russell 3000/2000 inclusion effective (Jun 26) — both
@@ -60,9 +57,10 @@ Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 verified 
 insurance-resolution/vessel-sale news remains the latest read — incremental balance-sheet
 cleanup, reinforcing rather than changing the thesis.
 
-**MNKD — HOLD** | opened Jun 10
-Afrezza pediatric approval remains the live thesis; Furoscix PDUFA (Jul 26, 2026) is now ~18
-days out — hold through the binary rather than exit ahead of the catalyst.
+**MNKD — HOLD** | opened Jun 10 | **re-verified today**
+Afrezza pediatric approval remains the live underlying thesis; FUROSCIX ReadyFlow PDUFA date
+confirmed still set for 2026-07-26 (~17 days out) via today's web search — no delay, no CRL, no
+adverse signal. Hold through the binary rather than exit ahead of the catalyst.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform thesis actively working per prior verification. No adverse news found.
@@ -94,8 +92,8 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Q1 beat, debt-free; insurance resolution + vessel sale reinforce balance-sheet thesis |
-| MNKD   | Jun 10 | **HOLD** | Afrezza thesis live; Furoscix PDUFA Jul 26 still pending |
+| MNKD   | Jun 10 | **HOLD** | Afrezza thesis live; FUROSCIX PDUFA Jul 26 confirmed on track, re-verified today |
 | PLSE   | Jun 5  | **HOLD** | Ablation-platform thesis actively working |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD conviction thesis intact |
-| TISI   | Jun 4  | **HOLD** | Turnaround fundamentals hold; next checkpoint Aug 12 earnings |
+| TISI   | Jun 4  | **HOLD** | Turnaround thesis verified; next checkpoint (Q2 earnings) not due until Aug 12 |
