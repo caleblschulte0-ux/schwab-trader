@@ -1,23 +1,25 @@
-# Sell Review — 2026-07-09T17:41:00Z
+# Sell Review — 2026-07-10T12:36:33Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-08T18:35:17Z) is unchanged since the prior review — same
-13 symbols, same qty/avg_price/opened_utc, no new fills, no closes. Today's refreshed
-`candidates.json` funnel (294 scanned) has **only one overlap** with the held book: **ATHE**,
-which showed up with a fresh Form 6-K filing and a −6.09% intraday move (neutral sentiment,
-score 0.0, no negative headline detail). Every other held symbol (ABSI, APLD, AVR, BNAI, CLLS,
-EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) — zero overlap, no fresh catalyst or adverse signal
-from today's funnel; those rulings carry forward unchanged from the prior review.
+`holdings.json` (updated_utc 2026-07-09T18:35:24Z) is unchanged since the prior review — same
+13 symbols, same qty/avg_price/opened_utc, no new fills, no closes. `signals/candidates.json`
+is also unrefreshed since the prior run (updated_utc still 2026-07-09T17:35:49Z, news date
+still 2026-07-09) — no new funnel data landed for today. The only overlap with the held book
+is again **ATHE** (same stale −6.09% / neutral-sentiment 6-K row already checked last run, no
+new information). Every other held symbol (ABSI, APLD, AVR, BNAI, CLLS, EVTL, GASS, MNKD,
+PLSE, RXRX, SLDB, TISI) — zero overlap, no fresh catalyst or adverse signal in this snapshot.
 
-**Web search this run:** targeted **ATHE** (Alterity Therapeutics) to check whether today's 6-K
-and price drop signal a broken thesis. Confirmed via search: the 6-K is consistent with routine
-foreign-issuer filing activity (recent 6-Ks include a June 2026 corporate presentation, a
-registered-office-address change, and 2026 EGM results) — no bad news found. Most recently
-(2026-07-07), Alterity received official FDA End-of-Phase-2 meeting minutes for ATH434
-reaffirming the single pivotal Phase 3 plan in MSA. No clinical hold, no CRL, no safety signal,
-no accounting issue. The −6% move is unexplained noise on a name with no news catalyst behind it,
-not a thesis break — and per the ONE RULE, price alone is never a sell reason.
+**Web search this run:** targeted **AVR** (Anteris Technologies), the largest position by
+dollar cost, since it carries a binary pivotal-trial risk profile and hadn't been freshly
+re-verified in a couple of runs. Confirmed via search (RTTNews, Proactive Investors, MassDevice,
+Anteris IR): the PARADIGM pivotal trial (DurAVR transcatheter heart valve, ~1,000-patient
+head-to-head vs. an approved commercial THV) is actively enrolling — first US patients treated
+at Montefiore Medical Center, Medicare reimbursement eligibility secured. No trial pause, no
+adverse safety signal, no negative data readout found. Thesis intact and progressing.
+
+All other rulings below carry forward unchanged from the 2026-07-09T17:41:00Z review — no new
+data this run to contradict them.
 
 ---
 
@@ -30,21 +32,18 @@ $100M dilutive offering priced at $7.41, not a broken thesis. No new information
 **APLD — HOLD** | opened Jun 9 | largest position by avg cost
 Polaris Forge 1 Building 2 Phase 1 hit Ready-for-Service on 2026-07-01 (175 MW live, 400 MW
 contracted full build-out); Series G funding capacity expanded to $2B; analyst median PT ($74.5)
-implies large upside despite a trailing-month pullback (re-verified in prior run). Thesis actively
-delivering, not broken — pullback is sector/market noise.
+implies large upside despite a trailing-month pullback. Thesis actively delivering, not broken —
+pullback is sector/market noise. No new information this run.
 
-**ATHE — HOLD** | opened Jun 9 | trivial size (1 share) | **re-verified today**
-Today's 6-K + −6% move triggered a targeted web search: no adverse news found, filing activity is
-routine (corporate presentation, registered-office change, EGM results are the recent pattern).
-FDA End-of-Phase-2 minutes (2026-07-07) reaffirm the single-pivotal-Phase-3 registrational pathway
-for ATH434 in MSA, trial on track for year-end 2026. Thesis intact; drawdown is unexplained noise,
-not a reason to sell.
+**ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
+Prior run's targeted web search found the 6-K/−6% move to be routine filing activity with no
+adverse news; FDA End-of-Phase-2 minutes (2026-07-07) reaffirmed the single-pivotal-Phase-3
+registrational pathway for ATH434 in MSA. No new signal this run to revisit that call.
 
-**AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-First U.S. patients treated in the global pivotal PARADIGM trial for the DurAVR transcatheter
-heart valve (Montefiore Medical Center), and US Medicare reimbursement eligibility secured for
-the trial (re-verified via web search in prior run). No adverse news since. Pivotal program
-actively progressing.
+**AVR — HOLD** | opened Jun 8 | largest position by dollar cost | **re-verified today**
+Targeted web search this run confirms the PARADIGM pivotal trial is actively enrolling (first US
+patients dosed at Montefiore Medical Center) with US Medicare reimbursement secured. No adverse
+trial news, no safety signal, no pause. Pivotal program actively progressing — thesis intact.
 
 **BNAI — HOLD** | opened Jun 10
 Cataneo acquisition closed (Jun 30) and Russell 3000/2000 inclusion effective (Jun 26) — both
@@ -64,7 +63,7 @@ cleanup, reinforcing rather than changing the thesis.
 
 **MNKD — HOLD** | opened Jun 10
 Afrezza pediatric approval remains the live underlying thesis; FUROSCIX ReadyFlow PDUFA date
-confirmed set for 2026-07-26 — no delay, no CRL, no adverse signal reported since. Hold through
+confirmed set for 2026-07-26 — not yet due, no delay or adverse signal reported. Hold through
 the binary rather than exit ahead of the catalyst.
 
 **PLSE — HOLD** | opened Jun 5
@@ -76,7 +75,7 @@ multi-year structural thesis, not a smallcap pop trade. No adverse catalyst even
 
 **SLDB — HOLD** | opened Jun 4
 Original "quick" catalyst (Russell reconstitution) is spent, but the underlying DMD gene-therapy
-conviction thesis was reinforced in the prior review: FDA aligned on the Phase 3 IMPACT DUCHENNE
+conviction thesis was reinforced in a prior review: FDA aligned on the Phase 3 IMPACT DUCHENNE
 trial design for SGT-003, and positive Phase 1/2 interim data (60% mean microdystrophin
 expression, safety confirmed in 40 patients) reported. No adverse signal since.
 
@@ -92,8 +91,8 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | Polaris Forge 1 Building 2 RFS delivered Jul 1; $2B funding expansion; analysts still bullish through the pullback |
-| ATHE   | Jun 9  | **HOLD** | Today's 6-K/−6% move checked via web search — routine filing, no bad news; FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | First US patients dosed in PARADIGM pivotal trial + Medicare coverage secured — thesis advancing |
+| ATHE   | Jun 9  | **HOLD** | Routine 6-K, no bad news (verified prior run); FDA EOP2 minutes reaffirm Ph3 MSA pathway |
+| AVR    | Jun 8  | **HOLD** | Re-verified today — PARADIGM pivotal trial actively enrolling, Medicare coverage secured, no adverse signal |
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed + Russell 3000 inclusion delivered |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
