@@ -1,99 +1,111 @@
-# Brain Run — 2026-07-10T13:37:27Z
+# Brain Run — 2026-07-13T13:37:57Z
 
-**Funnel:** scanned 286 → 40 shortlisted (every row carried a LEADING tag today —
-heavy news_smallcap mix plus a handful of sec_8k filers) → 36 confirmed tradeable
-in the $2–$150 band (4 bare sec/calendar rows — JPM, UCB, GIPRW, AMIX — have no
-price field yet) → 40 with a catalyst field → 2 finalists → **picked 0**
+**Funnel:** scanned 275 → 40 shortlisted (every row carried a LEADING tag today —
+heavy news_smallcap + sec_8k mix, one earnings_soon) → 27 confirmed priced/tradeable
+in the ≤$150-per-share band (13 bare `sec` rows — TCMD, WMB, ALISU, FRMI, NORD, ESPR,
+KVYO, FERG, DARE, SSB, NWS, BMNP, plus C's calendar row — have no price/volume field,
+just boilerplate "8-K ... (Filer)" text with no substantive catalyst detail) → 40 with
+a catalyst field → 2 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Neutral.** SPY +0.14%, VIX 15.64 (calm). Hot: Communication Services (+3.77%),
-Consumer Cyclical (+2.73%), Financial Services (+1.41%). Cold: Consumer Defensive
-(−1.43%), Energy (−1.12%), Healthcare (−0.35%). Quiet, unremarkable tape — normal
-discipline. As with the last several runs, the binding constraint is capital, not
-regime.
+**Neutral.** SPY −0.17%, VIX 16.18 (calm-ish). Hot: Real Estate (+1.55%), Technology
+(+1.5%), Basic Materials (+0.84%). Cold: Healthcare (−1.67%), Industrials (−1.62%),
+Financial Services (−0.93%). Unremarkable, two-sided tape — normal discipline. As with
+recent runs, the binding constraint is capital, not regime.
 
 ---
 
 ## Decision: No New Order — Still Zero Deployable Cash
 
-`holdings.json` cash is **$2.50**, unchanged since the prior run, against **13 open
-positions** (already more than double the ~6-position guideline) and ~$957 of the
-~$1,000 account already deployed. Per BRAIN.md STEP 2 ("size off real cash, not
-headroom"), $2.50 cannot fund a meaningful stock position — even the single
-cheapest tradeable name in today's shortlist (CLNE, $2.15) would consume the
-entire remaining cash for exactly 1 share, and it's already red −4% today with a
-non-catalyst ("reports Q2 results Aug 6" is just an earnings-date announcement,
-not news). Forcing that trade would violate the "do not force trades" mandate for
-a non-meaningful position. The correct call is **no buy** again this run. The
-account needs the **sell brain** to close some of the 13 held names and free
-capital before any new entry can fill.
+`holdings.json` cash is **$2.50**, unchanged since the last several runs, against
+**13 open positions** (already more than double the ~6-position guideline) and ~$957
+of the ~$1,000 account already deployed. Per BRAIN.md STEP 2 ("size off real cash, not
+headroom"), $2.50 cannot fund a meaningful position — even the cheapest genuinely-priced
+name in today's shortlist above the $2 floor (TOP, $2.11) would burn 84% of remaining
+cash on a single share, and (see below) it's disqualified on quality anyway. The correct
+call is **no buy** again this run. The account needs the **sell brain** to close some of
+the 13 held names and free capital before any new entry can fill.
 
 ---
 
 ## Finalists Identified (for the record — not bought, no cash)
 
-- **CNMD** ($36.69, +9.23%) — score 7.7: news_smallcap, BMO Capital Markets
-  upgrade (real analyst catalyst, published 3.4h ago). Best-quality catalyst on
-  the sheet today, but already up ~9% intraday — inside the "deprioritize" band,
-  not yet blow-off territory. Would have ranked as today's top pick with cash
-  available.
-- **AZTA** ($25.42, +3.71%) — score 7.9: news_smallcap, completed sale of B
-  Medical Systems to Thelema S.a r.l. (real corporate action, portfolio
-  simplification), 2.4h old. Early-stage move (+3.7%), room left, genuine
-  catalyst though more of a balance-sheet event than a growth trigger. Solid #2.
-- Passed **ADTN** (+5.2%) — catalyst is a German WpHG Article 40 stake-disclosure
-  notice, ambiguous/thin without knowing who's disclosing and why; not compelling
-  enough to rank above CNMD/AZTA.
-- Passed **BIOA** (+5.3%) — Russell Growth Index inclusion speculation is a real
-  mechanical catalyst (index-fund flows) but the piece is speculative ("could
-  shape exposure") and catalyst_age is 11.4h, getting stale.
-- Passed **BRBR** (−7.8%) — headline (new CEO) is bullish but the stock is down
-  7.8%, a contradiction that signals something else (likely guidance) is driving
-  the tape; red flag, skip.
-- Passed the long run of thin/fluff catalysts (CCO's billboard press release,
-  ACHV/ENVX's bare stock-quote-page "headlines", ABEO's routine CFO tax-sale
-  filing, JACK's spicy-menu marketing piece, CLNE's earnings-date announcement,
-  NNE/SGML/ISOU/BVS/PSNL's valuation-metric pages) — none are real, fresh,
-  tradeable catalysts, just noise that scored on recency alone.
-- Passed **VYNE** ($0.6375, sec_8k) — below the $2 price floor, hard pass
-  regardless of catalyst quality.
-- All 4 no-price rows (JPM, UCB, GIPRW, AMIX) — can't size without a quote, moot
-  on cash regardless.
+- **WRAP** ($2.46, +4.24%) — score 8.9: news_smallcap, booked $1.2M in international
+  orders for Q3, catalyst 2.3h old. Small-cap, early-stage move, real (if modest)
+  revenue-related catalyst, fresh. Best-quality name on the sheet today. Would have
+  been the top pick with cash available.
+- **TRIP** ($13.98, +4.88%) — score 7.4: news_smallcap, Tripadvisor testing a paid
+  "Plus" subscription tier for frequent travelers, catalyst 8.4h old, bullish sentiment.
+  Larger-cap than the strategy's default lean but a genuine, durable product-strategy
+  catalyst with an early-stage move. Solid #2.
+- **Disqualified TOP** ($2.11, +1.44%, score 10.3 — highest-scored name today) —
+  spent the run's one web-search slot verifying its "$80M offshore private placement"
+  8-K, since a raise sized near the company's own market cap ($92M) needed a sanity
+  check despite the shortlist's "Bullish" sentiment tag. Confirmed via StockTitan/
+  GlobeNewswire/SEC: shares outstanding went from 27.1M → 248.0M (≈9x) at $0.37/unit
+  (60% of the prior close), plus warrants for another ~429M shares, and the stock
+  already dropped 31% on the news. Severe, real dilution — the opposite of bullish.
+  Hard pass; the funnel's sentiment tag was simply wrong on this one.
+- Passed **ANRO** (−4.2%) — also a stock offering (dilutive), priced at $26.48, stock
+  down on it; same pattern as TOP, skip.
+- Passed **TNXP** (−3.8%) — bullish-sounding drug-coverage 8-K but the stock is down
+  on it, a contradiction; skip.
+- Passed **TCBK** (+8.8%) — already extended into the "deprioritize" 15-20%+ band's
+  neighborhood on a bank-sector mover; not an early-stage entry.
+- Passed **STOK** (−4.4%) and **VIR** (−3.7%) — both carry bullish-sounding headlines
+  (Goldman buy initiation; institutional share purchase) while the stock itself is
+  red — same red-flag contradiction pattern as TOP/TNXP, skip both.
+- Passed the long run of thin/fluff catalysts (ASPN's generic "aerogel market" industry
+  report, YELP's local-restaurant-award piece, WWW's boot-marketing blurb, ASTL's
+  warrant-pricing metric page, ASM's book-value metric page, KREF's "trading floor"
+  roundup mention, ARHS's routine proxy filing, WTI's Zacks estimate tweak, VLRS's ETF-
+  holdings note, XHR's $870k insider buy, VENU's 0%-move puff piece, AMPH's vague
+  "material event" with neutral sentiment, ARRY's earnings-date-announcement) — none
+  are real, fresh, tradeable catalysts on their own, just noise that scored on recency.
+- Passed **ONCY** (+15.4%, real 8-K, freshest catalyst_age of the day at 0.5h) — price
+  $1.02, below the firm $2 price floor; disqualified on price alone regardless of the
+  strong move.
+- Passed **MTNB** (−28.5%, halt/resume) and **BNBX** (−51.6%, sec_8k) — both well under
+  $2, and both look like blown-up situations, not tradeable dips.
+- Passed **C**'s calendar row — the attached catalyst headline (an Old Dominion Freight
+  Line price-target note) doesn't even match the symbol, a clear data-pairing issue;
+  not trustworthy enough to act on, and no price field to size against anyway.
+- All 12 bare `sec` rows (TCMD, WMB, ALISU, FRMI, NORD, ESPR, KVYO, FERG, DARE, SSB,
+  NWS, BMNP) — boilerplate "8-K ... (Filer)" headlines with zero descriptive content
+  and no price/volume field; can't judge quality or size without more, and moot on
+  cash regardless.
 
 ---
 
 ## Watchlist Update
 
-**No changes.** AMPG, EOLS, and ENVX all carried forward unchanged — none
-appeared with a fresh, better-quality catalyst in today's shortlist to warrant
-re-pricing, and all three remain within their `good_until` windows. ENVX printed
-+5.4% intraday today on a stale/thin catalyst (bare stock-quote-page headline,
-12.7h old) — well above its $5.15 pullback trigger, so no fill expected; the
-original 8-K COO-hire thesis from the prior run still stands as the reason it's
-parked. No new watchlist adds this run: CNMD and AZTA are both already extended
-enough (or event-driven rather than level-driven) that I don't have a clean,
-defensible trigger price for either — better to leave them off than force a
-level I don't trust.
+Dropped **AMPG** and **EOLS** — both expired (`good_until` 2026-07-11, two days
+stale) with no fresh catalyst check available to justify renewing them; better to let
+a stale idea drop than keep monitoring it on inertia. Kept **ENVX** unchanged (pullback
+$5.15, good_until 2026-07-14 — its last valid day) since it didn't reappear in today's
+shortlist for a fresh read; the original 8-K COO-hire thesis from 2026-07-10 still
+stands as the reason it's parked. No new watchlist adds this run: WRAP and TRIP are
+both already moving (not coiling), so I don't have a clean, defensible trigger level
+for either — better to leave them off than force a level I don't trust.
 
 ---
 
-## Web Search (0 used)
+## Web Search (1 used)
 
-Skipped. No pick hinged on a fact needing verification, and no fresh
-sympathy/read-through setup stood out — the funnel's catalysts were legible
-enough to judge on their own text, and cash blocks any fill regardless.
+Spent the run's single search verifying TOP's private-placement 8-K (see Finalists
+above) — worth it, since it flipped the funnel's highest-scored, "Bullish"-tagged name
+into a hard pass on real dilution data.
 
 ---
 
 ## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
-None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD,
-PLSE, RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this
-run has no fresh price/news read on the book — see the sell brain's own pass for
-a full check on these names. The binding constraint on this account remains
-capital, not idea flow: three genuinely tradeable setups (AMPG, EOLS, ENVX) sit
-queued on the watchlist and still can't be touched until the sell brain frees
-cash.
+None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE,
+RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no
+fresh price/news read on the book — see the sell brain's own pass for a full check on
+these names. The binding constraint on this account remains capital, not idea flow:
+WRAP, TRIP, and the queued ENVX watchlist entry are all genuinely tradeable setups that
+still can't be touched until the sell brain frees cash.

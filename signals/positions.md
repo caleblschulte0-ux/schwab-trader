@@ -1,5 +1,5 @@
-# Open Positions — updated 2026-07-10T13:37:27Z
-*(holdings.json refreshed 2026-07-09T18:35:24Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
+# Open Positions — updated 2026-07-13T13:37:57Z
+*(holdings.json refreshed 2026-07-10T18:35:16Z — no fills since then. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
 |--------|-----|---------|-------------|------|-------------------|--------------|
@@ -22,8 +22,8 @@
 Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
 
 **Watchlist (bot-monitored, fires when triggered):**
-- AMPG — pullback $5.95, 25 shares, limit $6.00; TP $6.48 / SL $5.70; good until 2026-07-11 (AmpliTech Group: verified Maxim ATM termination + $10M buyback catalyst; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
-- EOLS — breakout $7.30, 20 shares, limit $7.35; TP $8.05 / SL $6.90; good until 2026-07-11 (Evolus: fresh 8-K, exclusive US Profhilo licensing deal with IBSA verified via web search on a prior run; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
-- ENVX — pullback $5.15, 29 shares, limit $5.20; TP $5.65 / SL $4.90; good until 2026-07-14 (Enovix: verified via web search — hired former Apple AirPods-manufacturing COO to lead global production ramp, real 8-K, catalyst still stands; today's shortlist shows it +5.4% on a thin/stale headline, well above the pullback trigger so no fill expected; no cash to buy now)
+- ENVX — pullback $5.15, 29 shares, limit $5.20; TP $5.65 / SL $4.90; good until 2026-07-14, last day of validity (Enovix: verified via web search on 2026-07-10 — hired former Apple AirPods-manufacturing COO to lead global production ramp, real 8-K catalyst; not in today's shortlist so no fresh quote — carried forward unchanged; no cash to buy now)
 
-No new buys this run — top finalists were CNMD and AZTA (see latest.md), but $2.50 cash blocks any fill. Account needs the sell brain to free capital.
+Dropped AMPG and EOLS from the watchlist this run — both expired (`good_until` 2026-07-11, two days stale) with no fresh catalyst check to justify renewing them.
+
+No new buys this run — top-scored candidate TOP was disqualified after verification showed its "$80M private placement" catalyst is actually severe dilution (shares outstanding 27M → 248M, plus 429M more via warrants; stock already down 31% on the news) despite the shortlist's "Bullish" sentiment tag. Next-best finalist WRAP passed the quality screen, but $2.50 cash blocks any fill regardless. Account needs the sell brain to free capital.
