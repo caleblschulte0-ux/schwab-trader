@@ -1,4 +1,4 @@
-# Open Positions — updated 2026-07-15T13:38:31Z
+# Open Positions — updated 2026-07-15T17:37:11Z
 *(holdings.json refreshed 2026-07-14T18:35:26Z. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
@@ -21,6 +21,6 @@
 
 Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
 
-**Watchlist (bot-monitored, fires when triggered):** none. Dropped ENVX this run (its 7/10 COO-hire thesis expired `good_until` 2026-07-14, and today's ENVX headline is unrelated boilerplate). No replacement added — today's finalists (WRAP, VENU, UNCY) are already moving intraday, not coiling at a defensible trigger level.
+**Watchlist (bot-monitored, fires when triggered):** none. BBAI, WRAP, and CRNT are today's genuine finalists (real, fresh, bullish catalysts) but none is coiling at a defensible trigger level, and the watchlist mechanism fires on price, not on capital becoming available — so nothing was added.
 
-No new buys this run — three genuine finalists (WRAP $2.19, VENU $2.81, UNCY $5.22, all real fresh catalysts, price/headline aligned) were identified but none can fill: $2.50 cash isn't enough to size even 1 share of the cheapest meaningfully. Account needs the sell brain to free capital.
+No new buys this run — three genuine finalists (BBAI $3.155, WRAP $2.23, CRNT $2.30, all real fresh catalysts, price/headline aligned) were identified but none can fill: $2.50 cash isn't enough to size even 1 share of the cheapest meaningfully. Account needs the sell brain to free capital.

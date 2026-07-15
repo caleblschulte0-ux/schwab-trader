@@ -1,117 +1,99 @@
-# Brain Run — 2026-07-15T13:38:31Z
+# Brain Run — 2026-07-15T17:37:11Z
 
-**Funnel:** scanned 276 → 40 shortlisted (every row carried a LEADING tag — heavy
-news_smallcap + sec_8k mix, one earnings_soon on JNJ) → 28 confirmed priced/tradeable
-above the $2 floor and within the ≤$150-per-share band (12 rows — SNTI $0.88, EOSER
-$0.041, GEVO $1.555, KAPA $0.3345 below the $2 floor; JNJ, NRG, CTAS, DFNSW, NTHI, IPW,
-PLBC bare `sec`/`calendar` rows with no price field; ELV $378.45 exceeds the $150-per-
-share ceiling) → 40 with a catalyst field → 3 finalists → **picked 0**
+**Funnel:** scanned 266 → 40 shortlisted (43 LEADING tags across them, all
+`news_smallcap` + a handful of `sec_8k`/`earnings_soon`) → 40 carried a priced,
+in-budget row with a real catalyst field → 3 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Risk_on.** SPY +0.41%, VIX 16.04 (calm). Hot: Communication Services (+1.86%),
-Consumer Cyclical (+0.18%). Cold: Real Estate (−1.44%), Utilities (−1.37%), Industrials
-(−1.33%), Healthcare (−1.15%). Green, low-vol tape — normal-to-slightly-generous
-discipline on setup quality would be fine today, but as with every recent run the
-binding constraint here is capital, not regime.
+**Neutral.** SPY +0.17%, VIX 15.9 (calm). Hot: Communication Services (+2.9%),
+Healthcare (+1.39%). Cold: Technology (−2.65%, weakest sector today), Industrials
+(−1.58%), Energy (−1.42%). Calm, mixed tape — normal discipline on setup quality.
+As with recent runs, the binding constraint here is capital, not the market.
 
 ---
 
-## Decision: No New Order — Still Zero Deployable Cash
+## Decision: No New Order — Cash Still Exhausted
 
-`holdings.json` cash is **$2.50**, unchanged since the last several runs, against
-**13 open positions** (already more than double the ~6-position guideline) and ~$957 of
-the ~$1,000 account already deployed. Per BRAIN.md STEP 2 ("size off real cash, not
-headroom"), $2.50 cannot fund a meaningful position — even 1 share of the cheapest
-genuinely-priced finalist today (WRAP, $2.19) would burn 88% of remaining cash on a
-single share that can't even be sized to a normal quantity. Per the explicit guidance
-("if cash is too small to take a meaningful position, issue NO buy"), the correct call
-is **no buy** again this run. The account needs the **sell brain** to close some of the
+`holdings.json` cash is **$2.50** against **13 open positions** (already more than
+double the ~6-position guideline) and ~$957 of the ~$1,000 account already
+deployed. Per BRAIN.md STEP 2 ("size off real cash, not headroom"), $2.50 cannot
+fund a meaningful position — even 1 share of today's cheapest genuine finalist
+(WRAP, $2.23) would burn 89% of remaining cash on a single share, leaving nothing
+and not constituting a real position. Per the explicit guidance ("if cash is too
+small to take a meaningful position, issue NO buy"), the correct call is **no
+buy** again this run. The account needs the **sell brain** to close some of the
 13 held names and free capital before any new entry can fill.
 
 ---
 
 ## Finalists Identified (for the record — not bought, no cash)
 
-- **WRAP** ($2.19, +3.79%, score 8.9) — news_smallcap, catalyst 1.3h old: "Expands
-  WrapShield Non-Lethal Response Layer with Wraptor MX Multi-Shot Platform; Selects
-  Law Enforcement Partners for Exclusive Early Adopter Program." Spent this run's one
-  web-search slot verifying it — confirmed real: first operational Wraptor MX
-  prototype completed, plus a July 2 ATF ruling classifying the BolaWrap 150 as an
-  instrument of restraint (not a firearm), part of an ongoing weekly product-rollout
-  cadence (also posted 7/7, 7/9, 7/10). Genuine underlying news, but distributed
-  heavily via paid IR wires (GlobeNewswire/InvestorWire/MissionIR/NewMediaWire) —
-  a promotional-microcap pattern worth discounting slightly, not disqualifying.
-  Small-cap ($122M), early-stage move, clears the $2 floor. Best-quality name on the
-  sheet today; would have been the top pick with cash available.
-- **VENU** ($2.81, +6.04%, score 6.9) — news_smallcap, catalyst 2.1h old, bullish
-  0.74: Ford Amphitheater booked Dwight Yoakam, The Commodores & The Spinners, Lynyrd
-  Skynyrd, Lauren Daigle. Real revenue-driving event bookings for a live-events
-  small-cap ($161M), fresh, early-to-mid stage. Solid #2.
-- **UNCY** ($5.22, +2.55%, score 6.4) — news_smallcap, catalyst 4.9h old: Maxim Group
-  initiates with a Buy. Price and headline agree (unlike several red-flag names
-  below), small-cap biotech ($143M), modest early move. Solid #3, slightly staler
-  catalyst than the top two.
-- Considered **CRML** (+6.44%, strategic-alternatives-review catalyst, real but
-  10.3h old and already extended into mid-stage) and **AIP** (+1.89%, fresh AI/HPC
-  partnership but $33/share and sitting in Technology, today's 5th-weakest sector)
-  — both fine, neither beat the top 3.
-- Passed **SWBI** (bullish "pursues growth" headline but stock −3.0%), **ALTO**
-  (bullish acquisition headline but stock −4.26%), **WNC** (bullish analyst-initiation
-  headline but stock −11.03%, a large loser), **ABOS** (bullish tag on a headline
-  about trial participants' "challenges," stock −4.17%), **WWW** (passive 13F-style
-  stake disclosure, stock −2.05%), **TNDM** (bullish-tagged analyst piece, stock
-  −4.37%), **GENI** (institutional stake disclosed, stock −2.87%) — all show the same
-  red-flag pattern of a bullish-tagged headline contradicted by red price action;
-  skip on the mismatch every time.
-- Passed the run of thin/noise catalysts: **AMPX** (just an earnings-date scheduling
-  note, barely moved), **VFF**/**PSEC**/**XRX** (generic Zacks/bond-metric filler
-  pages), **NCNO**/**NOMD**/**RZLV** ("is X undervalued/moat" opinion pieces, not
-  news), **GLOO** (boilerplate proxy-vote-results filing despite a +6.96% tape),
-  **ENVX** (trivial CAO tax-withholding filing — not the same catalyst that earned it
-  a watchlist slot back on 7/10), **TBLA**/**JACK** (earnings-date or rating-average
-  scheduling notes, not catalysts), **PRME**/**TCBK** (passive institutional-stake
-  filings), **CAG**/**MANE**/**GEVO**/**KAPA** (boilerplate "8-K ... (Filer)" text
-  with zero substance).
-- Passed the 4 sub-$2 names outright on the price floor: **SNTI** ($0.88, halt/
-  resume), **EOSER** ($0.041), **GEVO** ($1.555), **KAPA** ($0.3345).
-- Passed **ELV** ($378.45, −11.33% mover) — no substantive catalyst detail (bare
-  8-K filer text) and exceeds the $150-per-share ceiling regardless.
-- Passed **NRG** (real, fresh PJM capacity-auction win, bullish, but bare `sec` row
-  with no price field — can't size), **CTAS** (real, fresh Q4-beat, but same issue),
-  and the 4 bare-boilerplate `sec` rows **DFNSW/NTHI/IPW/PLBC** — no price/volume
-  field on any of them, can't judge or size.
-- Passed **JNJ** — mega-cap earnings-day row, no price/volume field, not this
-  strategy's lane regardless of cash.
+- **BBAI** ($3.155, +1.77%, score 7.4) — news_smallcap, catalyst 4.3h old:
+  "BigBear.ai Launches Expanded Generative AI Platform and Capabilities for
+  Department of War Missions." Real defense-AI contract news, bullish, barely
+  moved yet on huge volume (15.9M shares) — textbook early-stage entry if cash
+  allowed it. Market cap ~$1.5B, at the edge of the small-cap band but the
+  cleanest setup on the sheet.
+- **WRAP** ($2.23, +1.83%, score 7.4) — news_smallcap, catalyst 5.3h old:
+  "Expands WrapShield Non-Lethal Response Layer with Wraptor MX Multi-Shot
+  Platform; Selects Law Enforcement Partners for Exclusive Early Adopter
+  Program." Genuine small-cap ($124M) product news, bullish, early-stage move,
+  clears the $2 price floor. Would be the top pick on price/size fit alone if
+  cash were available.
+- **CRNT** ($2.30, 0.0%, score 5.4) — news_smallcap, catalyst 6.4h old: "Ceragon
+  Awarded $3.4 Million Two-Year Managed Services Contract with Major Mobile
+  Operator in Mexico." Real, bullish contract win that the stock hasn't even
+  reacted to yet (flat on the day) — the most "ahead of the move" of the three,
+  small-cap ($209M), clears the price floor.
+- Considered **DRTS** (Alpha Tau Medical, +2.55%, first ADMIRE trial patient
+  treated, real and bullish, but $1.1B cap and less clean than the top 3) and
+  **AMPX** (+0.54%, but catalyst is only a Q2-earnings-date scheduling note, no
+  real news) — neither beat the top 3.
+- Passed the run of thin/scheduling-note catalysts masquerading as news:
+  **CARS** ("biggest news of the week" roundup, not a catalyst), **BLMN**,
+  **EFC** (downgrade, not bullish), **BORR**, **CPRI**, **TBLA**, **CCOI**,
+  **FBRT** (all Q2-earnings-date or ratings-note scheduling filler).
+- Passed red-flag mismatches (bullish-tagged headline vs. red price action):
+  **CAPR** (−4.5%), **ALTO** (−8.6% despite a "shares acquired" tag), **USAS**
+  (−5.8%), **APEI** (−9.2%), **EOLS** (−5.5%), **FOSL** (−3.0%), **FWDI**
+  (−5.4%) — skip on the mismatch every time.
+- Passed the mega-cap/no-price rows regardless of setup quality (not this
+  strategy's lane, or unsizeable): **JNJ**, **GOOGL**, **CTAS**, **AXP**,
+  **GPI**, **WINA**, **NTRP**, **LIPO**, **PGR**, **DFNSW**, **NTHI**, **IPW**,
+  **AAPL** (+3.98%, mega-cap mover, no small-cap edge here), **AMZN** (same).
+- Passed extreme/illiquid movers: **MANE** (+14.8%, no catalyst detail, bare
+  8-K), **GUTS** (+19.6%, same), **SNTI** (−31.6%, sub-$1 collapse), **EOSER**
+  (sub-$1, boilerplate 8-K) — all fail the price floor or have zero catalyst
+  substance.
+
+---
+
+## Web Search (0 used)
+
+Skipped — no finalist's decision hinged on verifying a specific claim, and no
+buy could fill regardless of what a search turned up. Saving the slot for a run
+where cash is actually available to deploy.
 
 ---
 
 ## Watchlist Update
 
-Dropped **ENVX** — its `good_until` (2026-07-14) expired, and today's actual ENVX
-headline (a CAO tax-withholding filing) is unrelated boilerplate, not a fresh version
-of the 7/10 COO-hire thesis that justified the entry. No replacement added: WRAP and
-VENU are both already moving intraday, not coiling at a level, and I don't have a
-defensible support/resistance read to set a trigger I'd trust — forcing one would
-violate the "genuine, level-defined setups only" rule. Watchlist is empty this run.
-
----
-
-## Web Search (1 used)
-
-Spent the run's single search verifying WRAP's Wraptor MX / WrapShield catalyst (see
-Finalists above) — confirmed the news is real and part of a genuine product rollout,
-while also surfacing the paid-IR-wire distribution pattern worth discounting slightly.
+Left `watchlist.json` empty. BBAI, WRAP, and CRNT are all already reacting
+intraday rather than coiling at a defensible support/resistance level, and a
+cash-triggered "buy when you can afford it" isn't what the watchlist mechanism
+is for — it fires on price triggers, not capital availability. No defensible
+level to set on any of the three today.
 
 ---
 
 ## Holdings Note (13 positions, cost basis ~$957, cash $2.50)
 
-None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE,
-RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no
-fresh price/news read on the book — see the sell brain's own pass for a full check.
-The binding constraint on this account remains capital, not idea flow: WRAP, VENU, and
-UNCY are all genuinely tradeable setups that still can't be touched until the sell
-brain frees cash.
+None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD,
+PLSE, RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this
+run has no fresh price/news read on the book — see the sell brain's own pass for
+a full check. The binding constraint on this account remains capital, not idea
+flow: BBAI, WRAP, and CRNT are all genuinely tradeable setups that still can't be
+touched until the sell brain frees cash.
