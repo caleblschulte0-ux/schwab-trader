@@ -14,12 +14,13 @@ name: schwab-trader-brain
 # exactly ONE brain writing to main — no more random claude/* branches, no relay race.
 
 on:
+  # PAUSED: Brain quota exhausted. Re-enable when ready to resume.
   # Triggered EXTERNALLY via the GitHub API (workflow_dispatch) from a cloud cron
   # service (e.g. cron-job.org). GitHub's built-in `schedule:` cron is intentionally
   # NOT used — its scheduler queues/delays runs unpredictably, which is unacceptable
   # for time-sensitive trading. The external cron fires at :07/:27/:47 UTC, Mon-Fri,
   # 13:00-20:59 (US market hours). The Actions-tab "Run workflow" button also works.
-  workflow_dispatch: {}
+  # workflow_dispatch: {}
 
 concurrency:
   group: brain
