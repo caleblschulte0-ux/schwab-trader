@@ -1,103 +1,109 @@
-# Brain Run — 2026-07-13T13:37:57Z
+# Brain Run — 2026-07-15T13:38:31Z
 
-**Funnel:** scanned 275 → 40 shortlisted (every row carried a LEADING tag today —
-heavy news_smallcap + sec_8k mix, one earnings_soon) → 27 confirmed priced/tradeable
-in the ≤$150-per-share band (13 bare `sec` rows — TCMD, WMB, ALISU, FRMI, NORD, ESPR,
-KVYO, FERG, DARE, SSB, NWS, BMNP, plus C's calendar row — have no price/volume field,
-just boilerplate "8-K ... (Filer)" text with no substantive catalyst detail) → 40 with
-a catalyst field → 2 finalists → **picked 0**
+**Funnel:** scanned 276 → 40 shortlisted (every row carried a LEADING tag — heavy
+news_smallcap + sec_8k mix, one earnings_soon on JNJ) → 28 confirmed priced/tradeable
+above the $2 floor and within the ≤$150-per-share band (12 rows — SNTI $0.88, EOSER
+$0.041, GEVO $1.555, KAPA $0.3345 below the $2 floor; JNJ, NRG, CTAS, DFNSW, NTHI, IPW,
+PLBC bare `sec`/`calendar` rows with no price field; ELV $378.45 exceeds the $150-per-
+share ceiling) → 40 with a catalyst field → 3 finalists → **picked 0**
 
 ---
 
 ## Market Tape
 
-**Neutral.** SPY −0.17%, VIX 16.18 (calm-ish). Hot: Real Estate (+1.55%), Technology
-(+1.5%), Basic Materials (+0.84%). Cold: Healthcare (−1.67%), Industrials (−1.62%),
-Financial Services (−0.93%). Unremarkable, two-sided tape — normal discipline. As with
-recent runs, the binding constraint is capital, not regime.
+**Risk_on.** SPY +0.41%, VIX 16.04 (calm). Hot: Communication Services (+1.86%),
+Consumer Cyclical (+0.18%). Cold: Real Estate (−1.44%), Utilities (−1.37%), Industrials
+(−1.33%), Healthcare (−1.15%). Green, low-vol tape — normal-to-slightly-generous
+discipline on setup quality would be fine today, but as with every recent run the
+binding constraint here is capital, not regime.
 
 ---
 
 ## Decision: No New Order — Still Zero Deployable Cash
 
 `holdings.json` cash is **$2.50**, unchanged since the last several runs, against
-**13 open positions** (already more than double the ~6-position guideline) and ~$957
-of the ~$1,000 account already deployed. Per BRAIN.md STEP 2 ("size off real cash, not
-headroom"), $2.50 cannot fund a meaningful position — even the cheapest genuinely-priced
-name in today's shortlist above the $2 floor (TOP, $2.11) would burn 84% of remaining
-cash on a single share, and (see below) it's disqualified on quality anyway. The correct
-call is **no buy** again this run. The account needs the **sell brain** to close some of
-the 13 held names and free capital before any new entry can fill.
+**13 open positions** (already more than double the ~6-position guideline) and ~$957 of
+the ~$1,000 account already deployed. Per BRAIN.md STEP 2 ("size off real cash, not
+headroom"), $2.50 cannot fund a meaningful position — even 1 share of the cheapest
+genuinely-priced finalist today (WRAP, $2.19) would burn 88% of remaining cash on a
+single share that can't even be sized to a normal quantity. Per the explicit guidance
+("if cash is too small to take a meaningful position, issue NO buy"), the correct call
+is **no buy** again this run. The account needs the **sell brain** to close some of the
+13 held names and free capital before any new entry can fill.
 
 ---
 
 ## Finalists Identified (for the record — not bought, no cash)
 
-- **WRAP** ($2.46, +4.24%) — score 8.9: news_smallcap, booked $1.2M in international
-  orders for Q3, catalyst 2.3h old. Small-cap, early-stage move, real (if modest)
-  revenue-related catalyst, fresh. Best-quality name on the sheet today. Would have
-  been the top pick with cash available.
-- **TRIP** ($13.98, +4.88%) — score 7.4: news_smallcap, Tripadvisor testing a paid
-  "Plus" subscription tier for frequent travelers, catalyst 8.4h old, bullish sentiment.
-  Larger-cap than the strategy's default lean but a genuine, durable product-strategy
-  catalyst with an early-stage move. Solid #2.
-- **Disqualified TOP** ($2.11, +1.44%, score 10.3 — highest-scored name today) —
-  spent the run's one web-search slot verifying its "$80M offshore private placement"
-  8-K, since a raise sized near the company's own market cap ($92M) needed a sanity
-  check despite the shortlist's "Bullish" sentiment tag. Confirmed via StockTitan/
-  GlobeNewswire/SEC: shares outstanding went from 27.1M → 248.0M (≈9x) at $0.37/unit
-  (60% of the prior close), plus warrants for another ~429M shares, and the stock
-  already dropped 31% on the news. Severe, real dilution — the opposite of bullish.
-  Hard pass; the funnel's sentiment tag was simply wrong on this one.
-- Passed **ANRO** (−4.2%) — also a stock offering (dilutive), priced at $26.48, stock
-  down on it; same pattern as TOP, skip.
-- Passed **TNXP** (−3.8%) — bullish-sounding drug-coverage 8-K but the stock is down
-  on it, a contradiction; skip.
-- Passed **TCBK** (+8.8%) — already extended into the "deprioritize" 15-20%+ band's
-  neighborhood on a bank-sector mover; not an early-stage entry.
-- Passed **STOK** (−4.4%) and **VIR** (−3.7%) — both carry bullish-sounding headlines
-  (Goldman buy initiation; institutional share purchase) while the stock itself is
-  red — same red-flag contradiction pattern as TOP/TNXP, skip both.
-- Passed the long run of thin/fluff catalysts (ASPN's generic "aerogel market" industry
-  report, YELP's local-restaurant-award piece, WWW's boot-marketing blurb, ASTL's
-  warrant-pricing metric page, ASM's book-value metric page, KREF's "trading floor"
-  roundup mention, ARHS's routine proxy filing, WTI's Zacks estimate tweak, VLRS's ETF-
-  holdings note, XHR's $870k insider buy, VENU's 0%-move puff piece, AMPH's vague
-  "material event" with neutral sentiment, ARRY's earnings-date-announcement) — none
-  are real, fresh, tradeable catalysts on their own, just noise that scored on recency.
-- Passed **ONCY** (+15.4%, real 8-K, freshest catalyst_age of the day at 0.5h) — price
-  $1.02, below the firm $2 price floor; disqualified on price alone regardless of the
-  strong move.
-- Passed **MTNB** (−28.5%, halt/resume) and **BNBX** (−51.6%, sec_8k) — both well under
-  $2, and both look like blown-up situations, not tradeable dips.
-- Passed **C**'s calendar row — the attached catalyst headline (an Old Dominion Freight
-  Line price-target note) doesn't even match the symbol, a clear data-pairing issue;
-  not trustworthy enough to act on, and no price field to size against anyway.
-- All 12 bare `sec` rows (TCMD, WMB, ALISU, FRMI, NORD, ESPR, KVYO, FERG, DARE, SSB,
-  NWS, BMNP) — boilerplate "8-K ... (Filer)" headlines with zero descriptive content
-  and no price/volume field; can't judge quality or size without more, and moot on
-  cash regardless.
+- **WRAP** ($2.19, +3.79%, score 8.9) — news_smallcap, catalyst 1.3h old: "Expands
+  WrapShield Non-Lethal Response Layer with Wraptor MX Multi-Shot Platform; Selects
+  Law Enforcement Partners for Exclusive Early Adopter Program." Spent this run's one
+  web-search slot verifying it — confirmed real: first operational Wraptor MX
+  prototype completed, plus a July 2 ATF ruling classifying the BolaWrap 150 as an
+  instrument of restraint (not a firearm), part of an ongoing weekly product-rollout
+  cadence (also posted 7/7, 7/9, 7/10). Genuine underlying news, but distributed
+  heavily via paid IR wires (GlobeNewswire/InvestorWire/MissionIR/NewMediaWire) —
+  a promotional-microcap pattern worth discounting slightly, not disqualifying.
+  Small-cap ($122M), early-stage move, clears the $2 floor. Best-quality name on the
+  sheet today; would have been the top pick with cash available.
+- **VENU** ($2.81, +6.04%, score 6.9) — news_smallcap, catalyst 2.1h old, bullish
+  0.74: Ford Amphitheater booked Dwight Yoakam, The Commodores & The Spinners, Lynyrd
+  Skynyrd, Lauren Daigle. Real revenue-driving event bookings for a live-events
+  small-cap ($161M), fresh, early-to-mid stage. Solid #2.
+- **UNCY** ($5.22, +2.55%, score 6.4) — news_smallcap, catalyst 4.9h old: Maxim Group
+  initiates with a Buy. Price and headline agree (unlike several red-flag names
+  below), small-cap biotech ($143M), modest early move. Solid #3, slightly staler
+  catalyst than the top two.
+- Considered **CRML** (+6.44%, strategic-alternatives-review catalyst, real but
+  10.3h old and already extended into mid-stage) and **AIP** (+1.89%, fresh AI/HPC
+  partnership but $33/share and sitting in Technology, today's 5th-weakest sector)
+  — both fine, neither beat the top 3.
+- Passed **SWBI** (bullish "pursues growth" headline but stock −3.0%), **ALTO**
+  (bullish acquisition headline but stock −4.26%), **WNC** (bullish analyst-initiation
+  headline but stock −11.03%, a large loser), **ABOS** (bullish tag on a headline
+  about trial participants' "challenges," stock −4.17%), **WWW** (passive 13F-style
+  stake disclosure, stock −2.05%), **TNDM** (bullish-tagged analyst piece, stock
+  −4.37%), **GENI** (institutional stake disclosed, stock −2.87%) — all show the same
+  red-flag pattern of a bullish-tagged headline contradicted by red price action;
+  skip on the mismatch every time.
+- Passed the run of thin/noise catalysts: **AMPX** (just an earnings-date scheduling
+  note, barely moved), **VFF**/**PSEC**/**XRX** (generic Zacks/bond-metric filler
+  pages), **NCNO**/**NOMD**/**RZLV** ("is X undervalued/moat" opinion pieces, not
+  news), **GLOO** (boilerplate proxy-vote-results filing despite a +6.96% tape),
+  **ENVX** (trivial CAO tax-withholding filing — not the same catalyst that earned it
+  a watchlist slot back on 7/10), **TBLA**/**JACK** (earnings-date or rating-average
+  scheduling notes, not catalysts), **PRME**/**TCBK** (passive institutional-stake
+  filings), **CAG**/**MANE**/**GEVO**/**KAPA** (boilerplate "8-K ... (Filer)" text
+  with zero substance).
+- Passed the 4 sub-$2 names outright on the price floor: **SNTI** ($0.88, halt/
+  resume), **EOSER** ($0.041), **GEVO** ($1.555), **KAPA** ($0.3345).
+- Passed **ELV** ($378.45, −11.33% mover) — no substantive catalyst detail (bare
+  8-K filer text) and exceeds the $150-per-share ceiling regardless.
+- Passed **NRG** (real, fresh PJM capacity-auction win, bullish, but bare `sec` row
+  with no price field — can't size), **CTAS** (real, fresh Q4-beat, but same issue),
+  and the 4 bare-boilerplate `sec` rows **DFNSW/NTHI/IPW/PLBC** — no price/volume
+  field on any of them, can't judge or size.
+- Passed **JNJ** — mega-cap earnings-day row, no price/volume field, not this
+  strategy's lane regardless of cash.
 
 ---
 
 ## Watchlist Update
 
-Dropped **AMPG** and **EOLS** — both expired (`good_until` 2026-07-11, two days
-stale) with no fresh catalyst check available to justify renewing them; better to let
-a stale idea drop than keep monitoring it on inertia. Kept **ENVX** unchanged (pullback
-$5.15, good_until 2026-07-14 — its last valid day) since it didn't reappear in today's
-shortlist for a fresh read; the original 8-K COO-hire thesis from 2026-07-10 still
-stands as the reason it's parked. No new watchlist adds this run: WRAP and TRIP are
-both already moving (not coiling), so I don't have a clean, defensible trigger level
-for either — better to leave them off than force a level I don't trust.
+Dropped **ENVX** — its `good_until` (2026-07-14) expired, and today's actual ENVX
+headline (a CAO tax-withholding filing) is unrelated boilerplate, not a fresh version
+of the 7/10 COO-hire thesis that justified the entry. No replacement added: WRAP and
+VENU are both already moving intraday, not coiling at a level, and I don't have a
+defensible support/resistance read to set a trigger I'd trust — forcing one would
+violate the "genuine, level-defined setups only" rule. Watchlist is empty this run.
 
 ---
 
 ## Web Search (1 used)
 
-Spent the run's single search verifying TOP's private-placement 8-K (see Finalists
-above) — worth it, since it flipped the funnel's highest-scored, "Bullish"-tagged name
-into a hard pass on real dilution data.
+Spent the run's single search verifying WRAP's Wraptor MX / WrapShield catalyst (see
+Finalists above) — confirmed the news is real and part of a genuine product rollout,
+while also surfacing the paid-IR-wire distribution pattern worth discounting slightly.
 
 ---
 
@@ -105,7 +111,7 @@ into a hard pass on real dilution data.
 
 None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE,
 RXRX, SLDB, TISI) appeared anywhere in today's 40-name shortlist, so this run has no
-fresh price/news read on the book — see the sell brain's own pass for a full check on
-these names. The binding constraint on this account remains capital, not idea flow:
-WRAP, TRIP, and the queued ENVX watchlist entry are all genuinely tradeable setups that
-still can't be touched until the sell brain frees cash.
+fresh price/news read on the book — see the sell brain's own pass for a full check.
+The binding constraint on this account remains capital, not idea flow: WRAP, VENU, and
+UNCY are all genuinely tradeable setups that still can't be touched until the sell
+brain frees cash.
