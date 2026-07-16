@@ -1,25 +1,24 @@
-# Sell Review — 2026-07-16T15:36:43Z
+# Sell Review — 2026-07-16T18:36:24Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is byte-identical in composition to the prior
-review — same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes.
-`signals/candidates.json` is also unchanged (updated_utc 2026-07-15T17:35:43Z, 266 rows) — none of
-the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI)
-appear in it, so zero fresh catalyst or adverse signal from that source this run, consistent with
-every prior run.
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior review — same 13
+symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
+is also unchanged (updated_utc 2026-07-15T17:35:43Z, 266 rows) — none of the 13 held names (ABSI,
+APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appear in it, so zero fresh
+catalyst or adverse signal from that source this run.
 
-**Web search this run:** targeted **AVR** (Anteris Technologies) — the largest position by dollar
-cost, last independently re-verified 2026-07-13. Confirmed via search (StockTitan, ChartMill,
-Seeking Alpha, Public.com): the global pivotal PARADIGM trial (DurAVR transcatheter heart valve)
-expanded with French regulatory clearance in June 2026, following first U.S. patients enrolled and
-treated in May 2026; the $90M Medtronic strategic investment (part of a $320M January 2026 raise)
-remains in place funding the trial; no adverse trial news, no safety signal, no funding gap.
-Thesis intact and progressing — hold.
+**Web search this run:** targeted **MNKD** (MannKind) — the position with the nearest live binary
+catalyst, PDUFA date July 26, 2026 for the FUROSCIX ReadyFlow Autoinjector sNDA, now inside 10
+days out. Confirmed via search (StockTitan, GuruFocus, RTTNews, MannKind IR, SEC 8-Ks): the PDUFA
+date stands unchanged at July 26, 2026, application still under standard FDA review, no delay, no
+Complete Response Letter, no adverse signal. Bioavailability data (107.3%) and injection-site
+tolerability from the underlying study remain the basis for approval odds. Thesis intact — hold
+through the binary rather than exit ahead of it.
 
-All other rulings below carry forward unchanged from the 2026-07-16T12:36:50Z review — no new data
-this run to contradict any of them; each was already independently re-verified with a targeted
-search in a prior run (clinical data, deal status, financing, or filing checks as noted per name).
+All other rulings below carry forward unchanged from the prior review — no new data this run to
+contradict any of them; each was already independently re-verified with a targeted search in a
+prior run (clinical data, deal status, financing, or filing checks as noted per name).
 
 ---
 
@@ -40,10 +39,11 @@ Prior runs' targeted checks found the 6-K/−6% move to be routine filing activi
 news; FDA End-of-Phase-2 minutes (2026-07-07) reaffirmed the single-pivotal-Phase-3 registrational
 pathway for ATH434 in MSA. No new signal this run to revisit that call.
 
-**AVR — HOLD** | opened Jun 8 | largest position by dollar cost | **re-verified today**
-Targeted search confirmed the PARADIGM pivotal trial is actively expanding (French regulatory
-clearance June 2026, first US patients treated May 2026), Medtronic's $90M strategic investment
-still funds the program, no adverse trial or safety news. Thesis executing on schedule.
+**AVR — HOLD** | opened Jun 8 | largest position by dollar cost
+Re-verified 2026-07-15: the PARADIGM pivotal trial (DurAVR transcatheter heart valve) is actively
+expanding (French regulatory clearance June 2026, first US patients treated May 2026), Medtronic's
+$90M strategic investment still funds the program, no adverse trial or safety news. Thesis
+executing on schedule.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
 Re-verified 2026-07-15: the Cataneo acquisition (closed Jun 30) is actively being integrated — U.S.
@@ -63,11 +63,11 @@ Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 verified 
 insurance-resolution/vessel-sale news remains the latest read — incremental balance-sheet cleanup,
 reinforcing rather than changing the thesis.
 
-**MNKD — HOLD** | opened Jun 10
-Prior run confirmed the FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 stands,
-with no delay, no CRL, no adverse signal — the FDA accepted the application backed by positive
-bioavailability data. Now inside two weeks out. Afrezza pediatric approval remains the live
-underlying thesis alongside it. Hold through the binary rather than exit ahead of it.
+**MNKD — HOLD** | opened Jun 10 | **re-verified today**
+FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 confirmed still standing, now
+inside 10 days out — no delay, no CRL, no adverse signal found. FDA accepted the application on
+positive bioavailability data (107.3%). Afrezza pediatric approval remains the live underlying
+thesis alongside it. Hold through the binary rather than exit ahead of it.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform thesis actively working per prior verification. No adverse news found.
@@ -95,12 +95,12 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | No adverse news since Jul 1 RFS milestone; pullback is priced-in capex/burn concern, analysts still bullish |
 | ATHE   | Jun 9  | **HOLD** | Routine 6-K, no bad news; FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | Re-verified today — PARADIGM trial expanding (French clearance), Medtronic funding intact, no adverse signal |
+| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding (French clearance), Medtronic funding intact, no adverse signal |
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition actively integrating (US HQ, new CSO, board seat); deep drawdown but thesis executing |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Q1 beat, debt-free; insurance resolution + vessel sale reinforce balance-sheet thesis |
-| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 stands, no delay/CRL, inside 2 weeks out |
+| MNKD   | Jun 10 | **HOLD** | Re-verified today — FUROSCIX PDUFA Jul 26 stands, no delay/CRL, inside 10 days out |
 | PLSE   | Jun 5  | **HOLD** | Ablation-platform thesis actively working |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
