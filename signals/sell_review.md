@@ -1,22 +1,26 @@
-# Sell Review — 2026-07-17T12:36:56Z
+# Sell Review — 2026-07-17T15:36:51Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior review — same 13
-symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-is also unchanged (updated_utc 2026-07-15T17:35:43Z, 266 rows) — none of the 13 held names (ABSI,
-APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appear in it, so zero fresh
-catalyst or adverse signal from that source this run.
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior review earlier
+today (12:36:56Z) — same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no
+closes. `signals/candidates.json` is also unchanged (updated_utc 2026-07-15T17:35:43Z, 266 rows)
+— none of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX,
+SLDB, TISI) appear in it, so zero fresh catalyst or adverse signal from that source this run.
 
-**Web search this run:** re-checked **MNKD** (MannKind) — nearest live binary catalyst, PDUFA date
-July 26, 2026 for the FUROSCIX ReadyFlow Autoinjector sNDA, now just 9 days out. Confirmed via
-search (SEC 8-Ks, GuruFocus, StockTitan, RTTNews, Yahoo Finance, MannKind IR): PDUFA date stands
-unchanged at July 26, 2026, sNDA still under standard FDA review, no delay, no Complete Response
-Letter, no adverse signal. Thesis intact — hold through the binary rather than exit ahead of it.
+**Web search this run:** checked **GASS** (StealthGas) — largest-dollar position not explicitly
+re-verified in the last pass. Confirmed the Jul 7, 2026 commercial update (Eco Wizard insurance
+matter resolved, compensation received, vessel to be sold; the other Persian-Gulf-stranded vessel
+safely exited the Straits of Hormuz) is still the latest substantive news — same event already
+reflected in the prior review, no new adverse development. One new item surfaced: a short-interest
+increase noted by Daily Political (2026-07-14) — a sentiment/positioning data point, not a
+fundamental or thesis change, so it doesn't move the call. Debt-free balance sheet and contracted
+revenue through 2029 remain the live thesis.
 
 All other rulings below carry forward unchanged from the prior review — no new data this run to
 contradict any of them; each was already independently re-verified with a targeted search in a
-prior run (clinical data, deal status, financing, or filing checks as noted per name).
+prior run (clinical data, deal status, financing, or filing checks as noted per name), and MNKD's
+FUROSCIX PDUFA (Jul 26, 2026) was specifically re-confirmed standing earlier today.
 
 ---
 
@@ -26,7 +30,7 @@ prior run (clinical data, deal status, financing, or filing checks as noted per 
 Clean Phase 1/2a data (ABS-201) + analyst PT hikes verified in a prior run; drawdown traced to a
 $100M dilutive offering priced at $7.41, not a broken thesis. No new information this run.
 
-**APLD — HOLD** | opened Jun 9 | largest position by avg cost
+**APLD — HOLD** | opened Jun 9 | second-largest position by avg cost
 No adverse news found since the Jul 1 Ready-for-Service milestone (175 MW live, 400 MW contracted
 full build-out) in a prior run's targeted search; Series G funding capacity still up to $2B;
 analyst median PT ($74.5) implies large upside despite the trailing-month pullback, which is a
@@ -56,12 +60,13 @@ analysis guided for Q4 2026 — event hasn't arrived yet. Drawdown only, thesis 
 **EVTL — HOLD** | opened Jun 9 | tiny position
 Vertical Aerospace certification milestones remain live, untriggered catalysts. Nothing adverse.
 
-**GASS — HOLD** | opened Jun 5
-Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 verified previously; the
-insurance-resolution/vessel-sale news remains the latest read — incremental balance-sheet cleanup,
-reinforcing rather than changing the thesis.
+**GASS — HOLD** | opened Jun 5 | **re-verified today**
+Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 verified previously; Jul 7
+Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf confirmed as latest
+substantive news, no new adverse development. A short-interest uptick was noted (2026-07-14) but
+is a positioning signal, not a fundamental one — doesn't change the thesis.
 
-**MNKD — HOLD** | opened Jun 10 | **re-verified today**
+**MNKD — HOLD** | opened Jun 10 | re-verified earlier today
 FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 confirmed still standing, now
 just 9 days out — no delay, no CRL, no adverse signal found. FDA accepted the application on
 positive bioavailability data (107.3%). Afrezza pediatric approval remains the live underlying
@@ -97,8 +102,8 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition actively integrating (US HQ, new CSO, board seat); deep drawdown but thesis executing |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
-| GASS   | Jun 5  | **HOLD** | Q1 beat, debt-free; insurance resolution + vessel sale reinforce balance-sheet thesis |
-| MNKD   | Jun 10 | **HOLD** | Re-verified today — FUROSCIX PDUFA Jul 26 stands, no delay/CRL, now 9 days out |
+| GASS   | Jun 5  | **HOLD** | Re-verified today — insurance matter resolved as expected, debt-free thesis intact, short-interest uptick isn't fundamental |
+| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 stands, no delay/CRL, now 9 days out |
 | PLSE   | Jun 5  | **HOLD** | Ablation-platform thesis actively working |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
