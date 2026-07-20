@@ -1,21 +1,20 @@
-# Sell Review — 2026-07-17T18:36:27Z
+# Sell Review — 2026-07-20T12:38:54Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior review earlier
-today (15:36:51Z) — same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no
-closes. `signals/candidates.json` is also unchanged (updated_utc 2026-07-15T17:35:43Z, 266 rows)
-— none of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX,
-SLDB, TISI) appear in it, so zero fresh catalyst or adverse signal from that source this run.
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior review — same 13
+symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
+(updated_utc 2026-07-15T17:35:43Z, 266 rows) is also unchanged — none of the 13 held names (ABSI,
+APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appear in it, so zero fresh
+catalyst or adverse signal from that source this run. `signals/latest.md`'s current run (Jul 15)
+made no new buys (cash exhausted) and carries no fresh read on the held book either.
 
-**Web search this run:** checked **PLSE** (Pulse Biosciences) — the vaguest justification carried
-in the prior review, not independently re-verified in recent passes. Found only routine/positive
-items: staged 200% warrant redemption completed Jul 13, 2026 (raised $123M+, reduces dilution
-overhang, tightens capital structure — bullish, not adverse), inducement equity grants to three
-new hires Jul 15, 2026 (routine), and positive nsPFA (Nanosecond Pulsed Field Ablation) data
-presented at HRS 2026 confirming the ablation-platform thesis is still live and generating
-positive clinical readouts. No adverse news, no dilutive-offering-style event, no safety signal.
-Thesis intact.
+**Web search this run:** checked **AVR** (Anteris Technologies) — the largest position by dollar
+cost. Confirmed still trading well off cost ($8.45 vs. $9.87 avg, ~-14%) but with an intact,
+actively-covered thesis: Strong Buy consensus (3 analysts, 0 sells), average 12-month price target
+$15.33 (well above cost basis), a routine ASX CDI quotation filing (non-adverse, minor float
+increase), and next earnings not due until Aug 10, 2026. No trial, safety, or funding red flags
+found. Thesis intact — drawdown only.
 
 All other rulings below carry forward unchanged from the prior review — no new data this run to
 contradict any of them; each was already independently re-verified with a targeted search in a
@@ -29,28 +28,28 @@ prior run (clinical data, deal status, financing, or filing checks as noted per 
 Clean Phase 1/2a data (ABS-201) + analyst PT hikes verified in a prior run; drawdown traced to a
 $100M dilutive offering priced at $7.41, not a broken thesis. No new information this run.
 
-**APLD — HOLD** | opened Jun 9 | second-largest position by avg cost
+**APLD — HOLD** | opened Jun 9 | large position by avg cost
 No adverse news found since the Jul 1 Ready-for-Service milestone (175 MW live, 400 MW contracted
-full build-out) in a prior run's targeted search; Series G funding capacity still up to $2B;
-analyst median PT ($74.5) implies large upside despite the trailing-month pullback, which is a
-capital-burn/valuation concern already priced in, not a thesis break. No new signal this run.
+full build-out) verified in a prior run; Series G funding capacity still up to $2B; analyst median
+PT ($74.5) implies large upside despite the trailing-month pullback, which is a capital-burn/
+valuation concern already priced in, not a thesis break. No new signal this run.
 
 **ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
-Prior runs' targeted checks found the 6-K/−6% move to be routine filing activity with no adverse
+Prior runs' targeted checks found the 6-K/-6% move to be routine filing activity with no adverse
 news; FDA End-of-Phase-2 minutes (2026-07-07) reaffirmed the single-pivotal-Phase-3 registrational
 pathway for ATH434 in MSA. No new signal this run to revisit that call.
 
-**AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-Re-verified 2026-07-15: the PARADIGM pivotal trial (DurAVR transcatheter heart valve) is actively
-expanding (French regulatory clearance June 2026, first US patients treated May 2026), Medtronic's
-$90M strategic investment still funds the program, no adverse trial or safety news. Thesis
-executing on schedule.
+**AVR — HOLD** | opened Jun 8 | largest position by dollar cost | **re-verified today**
+PARADIGM pivotal trial (DurAVR transcatheter heart valve) remains on track; analyst consensus
+Strong Buy with $15.33 avg price target vs. $9.87 cost basis; only new item is a routine ASX CDI
+quotation filing (liquidity mechanics, not news). No adverse trial or safety signal. Thesis
+executing on schedule — a normal pullback in an intact story, not a reason to exit.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-verified 2026-07-15: the Cataneo acquisition (closed Jun 30) is actively being integrated — U.S.
-commercial HQ stood up, new Chief Sales Officer appointed, co-founder added to BEN's board. No
-adverse post-deal news despite the stock sitting well underwater on cost after its earlier
-parabolic run and pullback. Thesis executing, not broken — hold through the drawdown.
+Re-verified in a prior run: the Cataneo acquisition (closed Jun 30) was actively being integrated
+(U.S. commercial HQ stood up, new Chief Sales Officer appointed, co-founder added to the board). No
+adverse post-deal news found since despite the stock sitting well underwater on cost after its
+earlier parabolic run and pullback. Thesis executing, not broken — hold through the drawdown.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified in prior runs; Phase 2 interim
@@ -62,19 +61,20 @@ Vertical Aerospace certification milestones remain live, untriggered catalysts. 
 **GASS — HOLD** | opened Jun 5
 Q1 2026 beat, debt-free balance sheet, contracted revenue through 2029 verified previously; Jul 7
 Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf confirmed as latest
-substantive news in a prior run, no new adverse development since. A short-interest uptick was
-noted (2026-07-14) but is a positioning signal, not a fundamental one — doesn't change the thesis.
+substantive news in a prior run, no new adverse development since. An earlier short-interest uptick
+was noted but is a positioning signal, not a fundamental one — doesn't change the thesis.
 
-**MNKD — HOLD** | opened Jun 10
-FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 confirmed still standing as of the
-prior run, now within 9 days — no delay, no CRL, no adverse signal found. FDA accepted the
-application on positive bioavailability data (107.3%). Afrezza pediatric approval remains the live
-underlying thesis alongside it. Hold through the binary rather than exit ahead of it.
+**MNKD — HOLD** | opened Jun 10 | binary catalyst approaching
+FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 stands, now ~6 days out — no
+delay, no CRL, no adverse signal found in this run's pass. FDA accepted the application on positive
+bioavailability data (107.3%). Afrezza pediatric approval remains the live underlying thesis
+alongside it. Hold through the binary rather than exit ahead of it; a CRL or delay would be the
+trigger to revisit, not the wait itself.
 
-**PLSE — HOLD** | opened Jun 5 | **re-verified today**
-Ablation-platform (nsPFA) thesis actively working: positive PFA data presented at HRS 2026,
-warrant redemption completed Jul 13 (reduces dilution overhang, raises capital), routine inducement
-grants Jul 15. No adverse news found.
+**PLSE — HOLD** | opened Jun 5
+Ablation-platform (nsPFA) thesis verified as actively working in a prior run: positive PFA data
+presented at HRS 2026, warrant redemption completed Jul 13 (reduces dilution overhang, raises
+capital), routine inducement grants Jul 15. No adverse news found since.
 
 **RXRX — HOLD** | opened Jun 5 | red on cost basis
 Recursion Pharmaceuticals AI drug-discovery platform with Nvidia partnership and cash runway —
@@ -99,13 +99,13 @@ real checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news fou
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | No adverse news since Jul 1 RFS milestone; pullback is priced-in capex/burn concern, analysts still bullish |
 | ATHE   | Jun 9  | **HOLD** | Routine 6-K, no bad news; FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding (French clearance), Medtronic funding intact, no adverse signal |
+| AVR    | Jun 8  | **HOLD** | Re-verified today: PARADIGM trial on track, Strong Buy/$15.33 PT vs $9.87 cost, only news is a routine ASX filing |
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition actively integrating (US HQ, new CSO, board seat); deep drawdown but thesis executing |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved as expected, debt-free thesis intact, short-interest uptick isn't fundamental |
-| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 stands, no delay/CRL, now 9 days out |
-| PLSE   | Jun 5  | **HOLD** | Re-verified today — positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
+| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 stands, no delay/CRL, now ~6 days out — hold through the binary |
+| PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
 | TISI   | Jun 4  | **HOLD** | Turnaround thesis verified; next checkpoint (Q2 earnings) not due until Aug 12 |
