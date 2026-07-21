@@ -1,21 +1,20 @@
-# Sell Review — 2026-07-21T12:36:28Z
+# Sell Review — 2026-07-21T15:35:49Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior review — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-and `signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run). Confirmed again
-this run: none of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE,
-RXRX, SLDB, TISI) appear anywhere in `candidates.json` — zero fresh catalyst or adverse signal from
-that source.
+and `signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run). None of the 13
+held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI) appear
+anywhere in `candidates.json` — zero fresh catalyst or adverse signal from that source.
 
-**Web search this run:** one targeted search on MNKD, the position with the nearest binary
-catalyst (FUROSCIX ReadyFlow Autoinjector PDUFA date, now 5 days out). Confirmed the July 26, 2026
-PDUFA date still stands, sNDA remains under standard FDA review, no CRL, no delay, no adverse
-signal found. Thesis intact, holding through the binary as planned.
+**Web search this run:** one targeted re-check on MNKD, the position with the nearest binary
+catalyst (FUROSCIX ReadyFlow Autoinjector sNDA, PDUFA date July 26, 2026 — now 5 days out). Search
+turned up only the original acceptance/background coverage; no CRL, no delay, no adcomm surprise,
+no new adverse item since the prior review three hours ago. Date stands, thesis intact.
 
-All other rulings carry forward from the prior review — nothing in the inputs or the tape has
-moved for these names since.
+All other rulings carry forward unchanged from the prior review — nothing in the inputs or the
+tape has moved for these names since.
 
 ---
 
@@ -58,8 +57,8 @@ resolution + safe vessel exit from the Persian Gulf confirmed as latest substant
 adverse development since. Earlier short-interest uptick is a positioning signal, not fundamental.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst imminent
-FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 confirmed still standing as of
-this run's targeted web search — no delay, no CRL, application remains under standard FDA review.
+FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 reconfirmed this run via fresh
+web search — no delay, no CRL, no adcomm surprise, application remains under standard FDA review.
 Now ~5 days out. Afrezza pediatric approval remains the live underlying thesis alongside it. Hold
 through the binary rather than exit ahead of it; a CRL or delay would be the trigger to revisit,
 not the wait itself.
@@ -97,7 +96,7 @@ checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news found th
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved as expected, debt-free thesis intact, short-interest uptick isn't fundamental |
-| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 confirmed standing (fresh search this run), no delay/CRL, ~5 days out — hold through the binary |
+| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 reconfirmed (fresh search this run), no delay/CRL, ~5 days out — hold through the binary |
 | PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
