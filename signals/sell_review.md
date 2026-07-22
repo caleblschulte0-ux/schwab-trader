@@ -1,22 +1,23 @@
-# Sell Review — 2026-07-22T15:36:03Z
+# Sell Review — 2026-07-22T18:37:43Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior review — same 13
-symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-and `signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run, updated_utc
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged — same 13 symbols, quantities,
+avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json` and
+`signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run, updated_utc
 2026-07-15T17:35:43Z). None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS,
 MNKD, PLSE, RXRX, SLDB, TISI) appear anywhere in `candidates.json`'s 266-name scan — zero fresh
 catalyst or adverse signal from that source, same as every prior pass.
 
 **Web search this run:** one targeted re-check on MNKD, the position with the nearest binary
-catalyst (FUROSCIX ReadyFlow Autoinjector sNDA, PDUFA date July 26, 2026 — now 4 days out). Search
-turned up only the original background coverage (sNDA acceptance, 107.3% bioavailability data,
-ReadyFlow device overview); no CRL, no delay, no adcomm surprise, no decision yet. Date and thesis
-stand.
+catalyst (FUROSCIX ReadyFlow Autoinjector sNDA, PDUFA date July 26, 2026 — now 4 days out).
+Confirmed the PDUFA date still stands at July 26, 2026, sNDA remains under standard FDA review
+(107.3% bioavailability data, comparable urine output/electrolyte excretion to IV furosemide as
+submitted). No CRL, no delay, no adcomm surprise, no decision yet. Thesis stands unchanged.
 
-All other rulings carry forward unchanged from the prior review — nothing in the inputs or the tape
-has moved for these names since the last pass.
+All other rulings carry forward unchanged from the prior review (2026-07-22T15:36:03Z) — nothing
+in the inputs or the tape has moved for these names since that pass, and no holding shows a
+broken or spent thesis.
 
 ---
 
