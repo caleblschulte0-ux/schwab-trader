@@ -1,4 +1,4 @@
-# Sell Review — 2026-07-22T12:36:31Z
+# Sell Review — 2026-07-22T15:36:03Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -9,11 +9,11 @@ and `signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run
 MNKD, PLSE, RXRX, SLDB, TISI) appear anywhere in `candidates.json`'s 266-name scan — zero fresh
 catalyst or adverse signal from that source, same as every prior pass.
 
-**Web search this run:** one targeted re-check on MNKD, still the position with the nearest binary
+**Web search this run:** one targeted re-check on MNKD, the position with the nearest binary
 catalyst (FUROSCIX ReadyFlow Autoinjector sNDA, PDUFA date July 26, 2026 — now 4 days out). Search
-turned up only the same original background coverage (bioavailability data, device overview,
-"Q3 2026 FDA decisions to watch" previews); no CRL, no delay, no adcomm surprise, no decision yet.
-Date and thesis stand.
+turned up only the original background coverage (sNDA acceptance, 107.3% bioavailability data,
+ReadyFlow device overview); no CRL, no delay, no adcomm surprise, no decision yet. Date and thesis
+stand.
 
 All other rulings carry forward unchanged from the prior review — nothing in the inputs or the tape
 has moved for these names since the last pass.
