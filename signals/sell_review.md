@@ -1,21 +1,24 @@
-# Sell Review — 2026-07-24T12:36:16Z
+# Sell Review — 2026-07-24T15:37:50Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-and `signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run, updated_utc
-2026-07-15T17:35:43Z). None of the 13 held names (ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS,
-MNKD, PLSE, RXRX, SLDB, TISI) appear anywhere in `candidates.json`'s 266-name scan — zero fresh
-catalyst or adverse signal from that source, same as every prior pass.
+and `signals/latest.md` are also unchanged (still keyed to the Jul 15 funnel run). None of the 13
+held names appear anywhere in `candidates.json`'s 266-name scan — zero fresh catalyst or adverse
+signal from that source, same as every prior pass.
 
-**Web search this run:** one targeted re-check on MNKD, the position with the nearest binary
-catalyst (FUROSCIX ReadyFlow Autoinjector sNDA, PDUFA date July 26, 2026 — now 2 days out).
-Confirmed the PDUFA date still stands at July 26, 2026; sNDA remains under standard FDA review
-(107.3% bioavailability vs. IV furosemide, comparable urine output/electrolyte excretion). No
-CRL, no delay, no adcomm surprise, no decision yet. Thesis unchanged from yesterday's check.
+**Web search this run:** MNKD's FUROSCIX ReadyFlow Autoinjector PDUFA date (Jul 26, 2026) was the
+nearest binary catalyst in the book, so it got the check. Result: the **FDA approved FUROSCIX
+ReadyFlow today, July 24, 2026** — ahead of the PDUFA date, first-and-only autoinjector delivering
+IV-equivalent subcutaneous furosemide, commercial launch expected by August 2026. MannKind also
+announced a $50M private placement to fund a $45M CVR payment triggered by the approval. This is a
+clean, favorable resolution of the binary — not a reason to sell. The news is fresh (today) and,
+if anything, de-risks and strengthens the thesis (regulatory risk is now off the table, launch is
+ahead, Afrezza pediatric approval remains a separate live catalyst). Selling into day-one approval
+news would be exiting right as the setup starts working, not after it stalled — HOLD.
 
-All other rulings carry forward unchanged from the prior review (2026-07-23T18:36:15Z) — nothing
+All other rulings carry forward unchanged from the prior review (2026-07-24T12:36:16Z) — nothing
 in the inputs or the tape has moved for these names since that pass, and no holding shows a
 broken or spent thesis.
 
@@ -62,12 +65,12 @@ insurance resolution + safe vessel exit from the Persian Gulf confirmed as lates
 news, no new adverse development since. Earlier short-interest uptick is a positioning signal,
 not fundamental.
 
-**MNKD — HOLD** | opened Jun 10 | binary catalyst imminent
-FUROSCIX ReadyFlow Autoinjector sNDA PDUFA date of July 26, 2026 reconfirmed this run via a
-fresh web search — no delay, no CRL, no adcomm surprise, application remains under standard FDA
-review. Now 2 days out. Afrezza pediatric approval remains the live underlying thesis alongside
-it. Hold through the binary rather than exit ahead of it; a CRL or delay would be the trigger to
-revisit, not the wait itself.
+**MNKD — HOLD** | opened Jun 10 | binary catalyst resolved favorably today
+FDA approved the FUROSCIX ReadyFlow Autoinjector sNDA today (Jul 24, 2026), two days ahead of
+the Jul 26 PDUFA date — no CRL, no delay. Commercial launch expected by August 2026; a $50M
+private placement funds the $45M CVR payment tied to the approval. Regulatory risk removed,
+thesis strengthened; Afrezza pediatric approval remains a separate live catalyst. News is same-day
+fresh — hold, don't sell into day-one approval strength.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis verified as actively working: positive PFA data presented at
@@ -102,7 +105,7 @@ checkpoint is Q2 earnings Aug 12, 2026 — not yet due. No adverse news found th
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved as expected, debt-free thesis intact, short-interest uptick isn't fundamental |
-| MNKD   | Jun 10 | **HOLD** | FUROSCIX PDUFA Jul 26 reconfirmed (fresh search this run), no delay/CRL, 2 days out — hold through the binary |
+| MNKD   | Jun 10 | **HOLD** | FDA approved FUROSCIX ReadyFlow today (Jul 24), ahead of PDUFA — binary resolved favorably, thesis strengthened |
 | PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
