@@ -1,19 +1,21 @@
-# Sell Review — 2026-08-05T12:36:15Z
+# Sell Review — 2026-08-05T15:36:46Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass on
-2026-07-31 — same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes.
-`signals/candidates.json` is still the same stale Jul 15 funnel snapshot with zero overlap
-against any of the 13 held symbols (checked directly — none of ABSI, APLD, ATHE, AVR, BNAI,
-CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI appear in it), so no fresh local catalyst or
-adverse signal from that source since the last pass.
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass earlier
+today (12:36:15Z) — same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no
+closes. `signals/candidates.json` is still the same stale Jul 15 funnel snapshot with zero
+overlap against any of the 13 held symbols (checked directly — none of ABSI, APLD, ATHE, AVR,
+BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI appear in it), so no fresh local catalyst
+or adverse signal from that source since the last pass.
 
-**Web search this run:** targeted check on TISI (Team Inc), the book's turnaround/industrials
-name with a Q2 2026 earnings date (Aug 12) now inside two weeks out. Result: no adverse news.
-Found a routine CFO transition (Nelson Haight retiring, Clinton Roeder named EVP/CFO, announced
-Jun 18) and continued full-year guidance for growth (revenue, gross margin, and Adjusted EBITDA
-all guided higher). No red flags, no earnings pre-announcement, no guidance cut. Thesis intact.
+**Web search this run:** targeted check on BNAI (Brand Engagement Network), the book's deepest
+drawdown ($19.46 avg cost vs. ~$11.71 last, per Aug 1 2026 quote). Result: no adverse news.
+Cataneo integration is expanding, not stalling — BEN established a U.S. commercial headquarters
+on Madison Ave for Cataneo's MYDAS platform (manages >€6B in annual ad inventory) and is
+integrating AI capabilities with Cataneo's media tech. Short interest is elevated (12.5% of
+float) but that's a sentiment/positioning fact, not a thesis break. Next earnings Aug 19, 2026 —
+two weeks out, not yet due. Thesis intact; drawdown remains a momentum fade, not a broken story.
 
 ---
 
@@ -40,10 +42,10 @@ new this run. Analyst consensus Strong Buy, $15.33 avg PT vs. $9.87 cost basis. 
 in an intact story.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Cataneo acquisition integration continues to execute (H1 2026 revenue $5.3M from the acquired
-business, reported Jul 27); Russell 3000/2000 inclusion is old news. No adverse development
-since verified previously; reads as a momentum fade in a still-live integration story, not a
-sell signal.
+Verified fresh this run: Cataneo integration is actively expanding (new U.S. commercial HQ on
+Madison Ave, AI capabilities being layered onto Cataneo's MYDAS ad-tech platform). No adverse
+news. Earnings Aug 19 is the next real checkpoint, not yet due. Drawdown reads as a momentum
+fade in a still-live integration story, not a sell signal.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified previously; Phase 2 interim
@@ -76,10 +78,10 @@ conviction thesis was reinforced previously: FDA aligned on the Phase 3 IMPACT D
 design for SGT-003, positive Phase 1/2 interim data. No adverse signal since.
 
 **TISI — HOLD** | opened Jun 4
-Turnaround thesis intact. Web search this run found a routine CFO transition (announced Jun 18,
-new CFO Clinton Roeder) and reaffirmed full-year guidance for revenue/margin/EBITDA growth — no
-red flags. Q2 earnings land Aug 12, 2026 (about a week out) — the next real checkpoint, not yet
-due.
+Turnaround thesis intact. Prior run's web search found a routine CFO transition (announced Jun
+18, new CFO Clinton Roeder) and reaffirmed full-year guidance for revenue/margin/EBITDA growth —
+no red flags. Q2 earnings land Aug 12, 2026 (about a week out) — the next real checkpoint, still
+not yet due.
 
 ---
 
@@ -91,7 +93,7 @@ due.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial on track, Strong Buy/$15.33 PT vs $9.87 cost |
-| BNAI   | Jun 10 | **HOLD** | Cataneo integration executing ($5.3M H1 rev); drawdown is a momentum fade, not a break |
+| BNAI   | Jun 10 | **HOLD** | Cataneo integration expanding (new US HQ, AI+MYDAS); deepest drawdown but no thesis break; earnings Aug 19 |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, short interest falling, thesis intact |
