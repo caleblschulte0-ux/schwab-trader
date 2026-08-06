@@ -1,20 +1,23 @@
-# Sell Review — 2026-08-06T12:36:12Z
+# Sell Review — 2026-08-06T15:39:26Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since yesterday's pass — same 13
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
 is still the same stale Jul 15 funnel snapshot with zero overlap against any of the 13 held
 symbols (checked directly — none of ABSI, APLD, ATHE, AVR, BNAI, CLLS, EVTL, GASS, MNKD, PLSE,
-RXRX, SLDB, TISI appear in it), so no fresh local catalyst or adverse signal from that source.
+RXRX, SLDB, TISI appear in it), so there's no fresh local catalyst or adverse signal from that
+source this run either.
 
-**Web search this run:** targeted check on AVR (Anteris Technologies), the largest position in the
-book by dollar cost (~$148 of ~$957 total cost basis), given its thesis rests on a single ongoing
-pivotal trial (PARADIGM, DurAVR transcatheter heart valve). Result: trial is actively progressing
-and de-risking — US Medicare coverage secured for procedures under the trial, France regulatory
-clearance cleared as a new milestone, first US patients treated, ~80 centers enrolling across
-US/Canada/Europe toward the ~1,000-patient target. No adverse news, no enrollment halt, no safety
-signal. Thesis intact and, if anything, strengthening.
+**Web search this run:** targeted check on BNAI (Brand Engagement Network), the deepest-drawdown
+position in the book, given no new local data exists on it. Result: Cataneo GmbH integration
+continues on track — US commercial HQ live on Madison Ave, MYDAS platform manages >€6B in annual
+ad inventory across 1,000+ media brands, $5.3M revenue generated from the Cataneo acquisition in
+H1 2026, new Chief Sales Officer (Don Durand) appointed, Cataneo co-founder joined BEN's board.
+One item to flag as routine, not adverse: an "Equity funding tranche 3" event was scheduled for
+Aug 1, 2026 — a pre-arranged financing tranche under an existing facility, not a surprise dilutive
+raise or distress signal. No fraud, no going-concern language, no adverse earnings surprise. Story
+intact.
 
 ---
 
@@ -36,16 +39,17 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA, verified previously — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-Verified fresh this run: PARADIGM pivotal trial (DurAVR transcatheter heart valve) actively
-de-risking — Medicare coverage secured, France clearance milestone, first US patients treated,
-~80 sites enrolling toward 1,000 patients. Analyst consensus Strong Buy, $15.33 avg PT vs. $9.87
-cost basis. Normal pullback in an intact, strengthening story.
+PARADIGM pivotal trial (DurAVR transcatheter heart valve) verified de-risking in a recent pass —
+Medicare coverage secured, France clearance milestone, first US patients treated, ~80 sites
+enrolling toward 1,000 patients. Analyst consensus Strong Buy, $15.33 avg PT vs. $9.87 cost
+basis. No new adverse signal this run; normal pullback in an intact, strengthening story.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Cataneo integration verified expanding as of a prior pass (new U.S. commercial HQ on Madison
-Ave, AI capabilities layered onto Cataneo's MYDAS ad-tech platform). No adverse news. Earnings
-Aug 19 is the next real checkpoint, still not yet due. Drawdown reads as a momentum fade in a
-still-live integration story, not a sell signal.
+Verified fresh this run: Cataneo US expansion and MYDAS integration progressing (new US HQ,
+$5.3M H1 revenue from the acquisition, new Chief Sales Officer, co-founder joined BEN board).
+Scheduled "Equity funding tranche 3" (Aug 1) is a pre-arranged financing draw, not a distress
+signal. No adverse news. Earnings Aug 19 is the next real checkpoint, still not yet due.
+Drawdown reads as a momentum fade in a still-live integration story, not a sell signal.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified previously; Phase 2 interim
@@ -93,7 +97,7 @@ yet due.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking (Medicare coverage, France clearance, US enrollment); Strong Buy/$15.33 PT vs $9.87 cost |
-| BNAI   | Jun 10 | **HOLD** | Cataneo integration expanding (new US HQ, AI+MYDAS); deepest drawdown but no thesis break; earnings Aug 19 |
+| BNAI   | Jun 10 | **HOLD** | Cataneo integration expanding (US HQ, $5.3M H1 revenue, new CSO); scheduled funding tranche is routine, not distress; earnings Aug 19 |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, short interest falling, thesis intact |
