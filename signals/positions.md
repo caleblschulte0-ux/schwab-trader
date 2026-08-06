@@ -1,5 +1,7 @@
-# Open Positions — updated 2026-07-15T17:37:11Z
-*(holdings.json refreshed 2026-07-14T18:35:26Z. None of today's 40 shortlisted symbols overlap with the book, so no live marks are available; table shows avg cost only.)*
+# Open Positions — updated 2026-08-06T15:56:34Z
+*(holdings.json itself last refreshed 2026-07-15T18:35:19Z by the executor — `trader.yml`
+is currently paused, so this is the last known state, not a live re-check. No live quotes
+were pulled this run.)*
 
 | Symbol | Qty | Avg     | Take-profit | Stop | Last seen        | Unrealized $ |
 |--------|-----|---------|-------------|------|-------------------|--------------|
@@ -19,8 +21,9 @@
 
 **Open positions:** 13   **Cost basis:** ~$957 of ~$1,000   **Real cash (holdings.json):** $2.50   **Powder left:** ~$2.50 — effectively none
 
-Nothing in today's 40-name shortlist touches a held symbol, so there's no fresh read on the book from this run's funnel — see the sell brain's own pass for a full price/thesis check on these 13 names.
+No new buys this run: the funnel is 22 days stale (no fresh `candidates.py` scan since
+2026-07-15) and cash remains exhausted at $2.50. See `signals/latest.md` for the full
+reasoning, including a note that `brain.yml`/`trader.yml` appear paused in the repo.
 
-**Watchlist (bot-monitored, fires when triggered):** none. BBAI, WRAP, and CRNT are today's genuine finalists (real, fresh, bullish catalysts) but none is coiling at a defensible trigger level, and the watchlist mechanism fires on price, not on capital becoming available — so nothing was added.
-
-No new buys this run — three genuine finalists (BBAI $3.155, WRAP $2.23, CRNT $2.30, all real fresh catalysts, price/headline aligned) were identified but none can fill: $2.50 cash isn't enough to size even 1 share of the cheapest meaningfully. Account needs the sell brain to free capital.
+**Watchlist (bot-monitored, fires when triggered):** none — no fresh, level-defined setup
+was identified this run (see above).
