@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-07T12:35:57Z
+# Sell Review — 2026-08-07T15:36:17Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,13 +7,17 @@
 is still the same stale Jul 15 funnel snapshot with zero overlap against any of the 13 held
 symbols, so no fresh local catalyst or adverse signal from that source this run either.
 
-**Web search this run:** targeted check on TISI (Team Inc), whose Q2 2026 earnings — the next real
-checkpoint flagged in the prior review — is now imminent. Result: TISI scheduled its Q2 2026
-earnings release for Monday, Aug 10, 2026 after market close, with the call Aug 11 at 8:00am CT
-(slightly sooner than the "Aug 12" previously tracked, not a delay). No pre-announcement, no
-guidance withdrawal — FY2026 guidance from the Q1 print (revenue $920M–$945M, ~4% growth at
-midpoint; gross margin +8%; adj. EBITDA +16%) still stands unchanged. Turnaround thesis intact,
-event just hasn't landed yet.
+**Web search this run:** targeted check on AVR (Anteris Technologies), the largest position by
+dollar cost. Found: a brief ASX trading halt tied to a late-lodged "cleansing notice" (an
+administrative disclosure requirement under the Australian Corporations Act) — the Federal Court
+of Australia heard the matter Aug 3, 2026, granted relief, and the halt was lifted at market open
+Aug 4. Also, L1 Capital (an institutional holder) sold ~524K AVR shares Jul 31–Aug 3 at
+$8.09–$8.15. Neither is thesis-breaking: the halt was a paperwork/compliance timing issue
+resolved by court order (not a going-concern, fraud, or trial-failure event), and a single
+institutional holder trimming is routine, not a signal the clinical/commercial story broke. Stock
+last seen ~$8.29 vs. $9.87 cost basis — a normal pullback, and the PARADIGM trial de-risking
+(Medicare coverage, France clearance, expanding US enrollment) verified in the prior pass is
+unaffected. HOLD.
 
 ---
 
@@ -35,16 +39,18 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA, verified previously — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-PARADIGM pivotal trial (DurAVR transcatheter heart valve) de-risking verified in a recent pass —
+PARADIGM pivotal trial (DurAVR transcatheter heart valve) de-risking verified previously —
 Medicare coverage secured, France clearance milestone, first US patients treated, ~80 sites
-enrolling toward 1,000 patients. Analyst consensus Strong Buy, $15.33 avg PT vs. $9.87 cost
-basis. No new adverse signal this run; normal pullback in an intact, strengthening story.
+enrolling toward 1,000 patients. Verified fresh this run: a brief administrative trading halt
+(late cleansing-notice lodgement) was resolved by Federal Court order and lifted Aug 4; an
+institutional holder trimmed shares. Neither is thesis-breaking. No adverse clinical/commercial
+signal; normal pullback in an intact, strengthening story.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Cataneo US expansion and MYDAS integration verified fresh in the prior pass (new US HQ, $5.3M H1
-revenue from the acquisition, new Chief Sales Officer, co-founder joined BEN board). Scheduled
-"Equity funding tranche 3" (Aug 1) was a pre-arranged financing draw, not a distress signal. No
-adverse news since. Earnings Aug 19 remains the next real checkpoint, still not yet due.
+Cataneo US expansion and MYDAS integration verified in a prior pass (new US HQ, $5.3M H1 revenue
+from the acquisition, new Chief Sales Officer, co-founder joined BEN board). Scheduled "Equity
+funding tranche 3" (Aug 1) was a pre-arranged financing draw, not a distress signal. No adverse
+news since. Earnings Aug 19 remains the next real checkpoint, still not yet due.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified previously; Phase 2 interim
@@ -77,10 +83,10 @@ conviction thesis was reinforced previously: FDA aligned on the Phase 3 IMPACT D
 design for SGT-003, positive Phase 1/2 interim data. No adverse signal since.
 
 **TISI — HOLD** | opened Jun 4
-Turnaround thesis intact. Verified fresh this run: Q2 2026 earnings now formally scheduled for
-Aug 10 (release) / Aug 11 (call) — days out, not yet reported. FY2026 guidance (revenue growth,
-margin expansion, EBITDA growth) unchanged since Q1. Routine CFO transition (Jun 18, Clinton
-Roeder) still the only leadership news. No red flags.
+Turnaround thesis intact. Q2 2026 earnings formally scheduled for Aug 10 (release) / Aug 11
+(call), still 3 days out and not yet reported. FY2026 guidance (revenue growth, margin expansion,
+EBITDA growth) unchanged since Q1. Routine CFO transition (Jun 18, Clinton Roeder) still the only
+leadership news. No red flags.
 
 ---
 
@@ -91,7 +97,7 @@ Roeder) still the only leadership news. No red flags.
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking (Medicare coverage, France clearance, US enrollment); Strong Buy/$15.33 PT vs $9.87 cost |
+| AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; brief admin trading halt resolved by court order, not thesis-breaking |
 | BNAI   | Jun 10 | **HOLD** | Cataneo integration expanding (US HQ, $5.3M H1 revenue, new CSO); scheduled funding tranche is routine, not distress; earnings Aug 19 |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
@@ -100,4 +106,4 @@ Roeder) still the only leadership news. No red flags.
 | PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
-| TISI   | Jun 4  | **HOLD** | Turnaround thesis intact; Q2 earnings now confirmed for Aug 10/11, guidance unchanged, not yet reported |
+| TISI   | Jun 4  | **HOLD** | Turnaround thesis intact; Q2 earnings confirmed Aug 10/11, guidance unchanged, not yet reported |
