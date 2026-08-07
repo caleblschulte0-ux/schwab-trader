@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-07T15:36:17Z
+# Sell Review — 2026-08-07T18:36:10Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,17 +7,14 @@
 is still the same stale Jul 15 funnel snapshot with zero overlap against any of the 13 held
 symbols, so no fresh local catalyst or adverse signal from that source this run either.
 
-**Web search this run:** targeted check on AVR (Anteris Technologies), the largest position by
-dollar cost. Found: a brief ASX trading halt tied to a late-lodged "cleansing notice" (an
-administrative disclosure requirement under the Australian Corporations Act) — the Federal Court
-of Australia heard the matter Aug 3, 2026, granted relief, and the halt was lifted at market open
-Aug 4. Also, L1 Capital (an institutional holder) sold ~524K AVR shares Jul 31–Aug 3 at
-$8.09–$8.15. Neither is thesis-breaking: the halt was a paperwork/compliance timing issue
-resolved by court order (not a going-concern, fraud, or trial-failure event), and a single
-institutional holder trimming is routine, not a signal the clinical/commercial story broke. Stock
-last seen ~$8.29 vs. $9.87 cost basis — a normal pullback, and the PARADIGM trial de-risking
-(Medicare coverage, France clearance, expanding US enrollment) verified in the prior pass is
-unaffected. HOLD.
+**Web search this run:** targeted check on BNAI (Brand Engagement Network), the deepest drawdown
+in the book. Found: Q2 2026 earnings now confirmed for **Friday, Aug 14** (a firmer date than the
+prior pass's "Aug 19" placeholder — a scheduling clarification, not new risk). Cataneo GmbH's U.S.
+commercial expansion (Madison Avenue HQ) is confirmed and unchanged. Short interest continues
+climbing (663.4K shares, ~12.5% of float, +4.6% in the latest reporting period, +319.7% over 12
+months) and technical signals read "Strong Sell" — both are sentiment/positioning readings, not
+a broken thesis or an adverse fundamental event. No fraud, no going-concern flag, no failed
+catalyst. Earnings on Aug 14 is the next real checkpoint; nothing to act on pre-print. HOLD.
 
 ---
 
@@ -41,16 +38,15 @@ ATH434 in MSA, verified previously — no adverse news since.
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
 PARADIGM pivotal trial (DurAVR transcatheter heart valve) de-risking verified previously —
 Medicare coverage secured, France clearance milestone, first US patients treated, ~80 sites
-enrolling toward 1,000 patients. Verified fresh this run: a brief administrative trading halt
-(late cleansing-notice lodgement) was resolved by Federal Court order and lifted Aug 4; an
-institutional holder trimmed shares. Neither is thesis-breaking. No adverse clinical/commercial
-signal; normal pullback in an intact, strengthening story.
+enrolling toward 1,000 patients. The brief ASX administrative trading halt (resolved by Federal
+Court order, lifted Aug 4) and an institutional holder trimming shares, both verified in the
+prior pass, remain non-events. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Cataneo US expansion and MYDAS integration verified in a prior pass (new US HQ, $5.3M H1 revenue
-from the acquisition, new Chief Sales Officer, co-founder joined BEN board). Scheduled "Equity
-funding tranche 3" (Aug 1) was a pre-arranged financing draw, not a distress signal. No adverse
-news since. Earnings Aug 19 remains the next real checkpoint, still not yet due.
+Verified fresh this run: Q2 2026 earnings date firmed up to Aug 14. Cataneo US expansion
+(Madison Avenue HQ, MYDAS integration) unchanged. Rising short interest (~12.5% of float) and
+bearish technicals are sentiment, not a thesis break — no fraud, no going-concern signal, no
+failed catalyst. Earnings Aug 14 is the next real checkpoint.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation verified previously; Phase 2 interim
@@ -84,7 +80,7 @@ design for SGT-003, positive Phase 1/2 interim data. No adverse signal since.
 
 **TISI — HOLD** | opened Jun 4
 Turnaround thesis intact. Q2 2026 earnings formally scheduled for Aug 10 (release) / Aug 11
-(call), still 3 days out and not yet reported. FY2026 guidance (revenue growth, margin expansion,
+(call), now 3 days out and not yet reported. FY2026 guidance (revenue growth, margin expansion,
 EBITDA growth) unchanged since Q1. Routine CFO transition (Jun 18, Clinton Roeder) still the only
 leadership news. No red flags.
 
@@ -97,8 +93,8 @@ leadership news. No red flags.
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; brief admin trading halt resolved by court order, not thesis-breaking |
-| BNAI   | Jun 10 | **HOLD** | Cataneo integration expanding (US HQ, $5.3M H1 revenue, new CSO); scheduled funding tranche is routine, not distress; earnings Aug 19 |
+| AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; admin halt resolved, institutional trim routine — not thesis-breaking |
+| BNAI   | Jun 10 | **HOLD** | Earnings firmed to Aug 14; Cataneo expansion unchanged; rising short interest is sentiment, not a break |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, short interest falling, thesis intact |
