@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-10T12:36:09Z
+# Sell Review — 2026-08-10T15:35:37Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,15 +7,18 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 is still the same stale Jul 15 funnel snapshot (`updated_utc` unchanged) with zero overlap against
 any of the 13 held symbols, so no fresh local catalyst or adverse signal from that source this run.
 
-**Web search this run:** targeted check on TISI ahead of its Q2 2026 print. Confirmed: Team, Inc.
-released its Q2 2026 earnings after market close **today, Aug 10**, with the conference call
-tomorrow morning, Aug 11 at 9:00am ET — exactly as scheduled in the prior pass, no change in
-timing. As of this run the actual results have not yet posted (release is after-close today), so
-there is nothing new to judge the thesis against yet. Not a reason to act pre-print; earnings is
-the next real checkpoint and will be the focus of the next pass.
+**Web search this run:** re-checked TISI ahead of its Q2 2026 print, since the prior pass (this
+morning, 12:36 UTC) flagged the earnings release as pending after today's close. As of this run
+(11:35am ET / 15:35 UTC), the market is still open — Team, Inc.'s release remains scheduled for
+after close today, Aug 10, with the conference call tomorrow morning, Aug 11. Search results
+turned up figures attributed to a "Q2" report, but cross-checking the source (a Benzinga article
+originally dated 2024) shows those numbers are from a prior year's print, not today's — so there
+is still nothing genuine to judge the current thesis against. Treating that stale figure as
+today's result would be exactly the kind of stale-data mistake this brain is supposed to avoid.
+Next pass (after close) is the right time to read the actual numbers.
 
-All other holdings carry forward unchanged from the prior verified pass (2026-08-07): no adverse
-news, no broken theses, no fresh catalysts found in the stale funnel file.
+All other holdings carry forward unchanged from the prior verified pass: no adverse news, no
+broken theses, no fresh catalysts found in the stale funnel file.
 
 ---
 
@@ -74,12 +77,13 @@ Original "quick" catalyst (Russell reconstitution) is spent, but the underlying 
 conviction thesis holds: FDA aligned on the Phase 3 IMPACT DUCHENNE trial design for SGT-003,
 positive Phase 1/2 interim data. No adverse signal since.
 
-**TISI — HOLD** | opened Jun 4 | earnings released after close today, results not yet public
-Turnaround thesis intact. Q2 2026 earnings released after market close today (Aug 10), conference
-call tomorrow (Aug 11, 9am ET) — confirmed via web search, right on the previously scheduled
-date. Results not yet posted as of this run, so nothing to judge the print against yet; next pass
-will read the actual numbers. FY2026 guidance (revenue growth, margin expansion, EBITDA growth)
-and CFO transition remain unchanged. No red flags to act on pre-print.
+**TISI — HOLD** | opened Jun 4 | earnings still pending as of this run
+Turnaround thesis intact. Q2 2026 release remains scheduled for after market close today (Aug
+10), conference call tomorrow (Aug 11, 9am ET). Confirmed via web search that results are not
+yet public as of this run (market still open); a figure surfaced in search results traced back
+to a stale 2024 article, not this quarter's actual print — disregarded as unreliable. FY2026
+guidance (revenue growth, margin expansion, EBITDA growth) and CFO transition remain unchanged.
+No red flags to act on pre-print; next pass reads the real numbers.
 
 ---
 
@@ -99,4 +103,4 @@ and CFO transition remain unchanged. No red flags to act on pre-print.
 | PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
-| TISI   | Jun 4  | **HOLD** | Q2 earnings released after close today, results not yet public; guidance unchanged, no red flags |
+| TISI   | Jun 4  | **HOLD** | Q2 earnings release pending after close today; results not yet public, guidance/thesis unchanged |
