@@ -1,21 +1,25 @@
-# Sell Review — 2026-08-10T15:35:37Z
+# Sell Review — 2026-08-10T18:36:43Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass — same 13
-symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-is still the same stale Jul 15 funnel snapshot (`updated_utc` unchanged) with zero overlap against
-any of the 13 held symbols, so no fresh local catalyst or adverse signal from that source this run.
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is still unchanged since the prior pass —
+same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
+remains the same stale Jul 15 funnel snapshot (still zero overlap against any of the 13 held
+symbols), so no fresh local catalyst or adverse signal from that source this run either.
 
-**Web search this run:** re-checked TISI ahead of its Q2 2026 print, since the prior pass (this
-morning, 12:36 UTC) flagged the earnings release as pending after today's close. As of this run
-(11:35am ET / 15:35 UTC), the market is still open — Team, Inc.'s release remains scheduled for
-after close today, Aug 10, with the conference call tomorrow morning, Aug 11. Search results
-turned up figures attributed to a "Q2" report, but cross-checking the source (a Benzinga article
-originally dated 2024) shows those numbers are from a prior year's print, not today's — so there
-is still nothing genuine to judge the current thesis against. Treating that stale figure as
-today's result would be exactly the kind of stale-data mistake this brain is supposed to avoid.
-Next pass (after close) is the right time to read the actual numbers.
+**Web search this run:** re-verified BNAI (Brand Engagement Network), the deepest-drawdown
+position, ahead of its Aug 14 earnings. Confirmed the Cataneo acquisition (closed Jun 30, 2026,
+MYDAS platform, ~€8.6M 2025 revenue, €6B+ ad inventory managed) and the Madison Avenue US HQ
+expansion are accurate and unchanged — no adverse news, no restatement, no deal collapse. Thesis
+remains intact; earnings Aug 14 is still the next real checkpoint. (Note: search results also
+surfaced unrelated news about a similarly-tickered company, "Banzai International" (ticker BNZI,
+renaming to Parabolic/PARA) — confirmed this is a different company from our holding, Brand
+Engagement Network (ticker BNAI); not applicable to this position.)
+
+TISI's Q2 2026 print was still pending as of the prior pass (12:36 and 15:35 UTC today); as of
+this pass (18:36 UTC / ~2:36pm ET) the market has not yet closed (~20:00 UTC close), so the
+release still isn't out. Next pass after close is still the right time to read the actual
+numbers — nothing to act on pre-print.
 
 All other holdings carry forward unchanged from the prior verified pass: no adverse news, no
 broken theses, no fresh catalysts found in the stale funnel file.
@@ -44,10 +48,10 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Q2 2026 earnings confirmed for Fri Aug 14 — four days out, not yet reported. Cataneo US expansion
-(Madison Avenue HQ, MYDAS integration) unchanged. Rising short interest and bearish technicals
-remain sentiment/positioning, not a thesis break. No new information this run; earnings Aug 14 is
-the next real checkpoint.
+Re-verified this run: Cataneo acquisition and MYDAS platform details confirmed accurate, US
+expansion (Madison Avenue HQ) unchanged, no adverse news. Q2 2026 earnings still set for Fri Aug
+14 — four days out. Rising short interest and bearish technicals remain sentiment/positioning,
+not a thesis break.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -79,11 +83,10 @@ positive Phase 1/2 interim data. No adverse signal since.
 
 **TISI — HOLD** | opened Jun 4 | earnings still pending as of this run
 Turnaround thesis intact. Q2 2026 release remains scheduled for after market close today (Aug
-10), conference call tomorrow (Aug 11, 9am ET). Confirmed via web search that results are not
-yet public as of this run (market still open); a figure surfaced in search results traced back
-to a stale 2024 article, not this quarter's actual print — disregarded as unreliable. FY2026
-guidance (revenue growth, margin expansion, EBITDA growth) and CFO transition remain unchanged.
-No red flags to act on pre-print; next pass reads the real numbers.
+10), conference call tomorrow (Aug 11, 9am ET). Market has not closed as of this pass (~2:36pm
+ET) — nothing new to check yet. FY2026 guidance (revenue growth, margin expansion, EBITDA
+growth) and CFO transition remain unchanged. No red flags to act on pre-print; next pass reads
+the real numbers.
 
 ---
 
@@ -95,7 +98,7 @@ No red flags to act on pre-print; next pass reads the real numbers.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | Earnings Aug 14 (4 days out); Cataneo expansion unchanged; short interest is sentiment, not a break |
+| BNAI   | Jun 10 | **HOLD** | Re-verified Cataneo/MYDAS + US expansion accurate; earnings Aug 14 (4 days out); short interest is sentiment, not a break |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
@@ -103,4 +106,4 @@ No red flags to act on pre-print; next pass reads the real numbers.
 | PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
-| TISI   | Jun 4  | **HOLD** | Q2 earnings release pending after close today; results not yet public, guidance/thesis unchanged |
+| TISI   | Jun 4  | **HOLD** | Q2 earnings release pending after close today; market not yet closed, nothing new to check |
