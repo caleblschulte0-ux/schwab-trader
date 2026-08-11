@@ -1,28 +1,22 @@
-# Sell Review — 2026-08-10T18:36:43Z
+# Sell Review — 2026-08-11T12:35:53Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is still unchanged since the prior pass —
-same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass — same 13
+symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
 remains the same stale Jul 15 funnel snapshot (still zero overlap against any of the 13 held
-symbols), so no fresh local catalyst or adverse signal from that source this run either.
+symbols), so no fresh local catalyst or adverse signal from that source this run.
 
-**Web search this run:** re-verified BNAI (Brand Engagement Network), the deepest-drawdown
-position, ahead of its Aug 14 earnings. Confirmed the Cataneo acquisition (closed Jun 30, 2026,
-MYDAS platform, ~€8.6M 2025 revenue, €6B+ ad inventory managed) and the Madison Avenue US HQ
-expansion are accurate and unchanged — no adverse news, no restatement, no deal collapse. Thesis
-remains intact; earnings Aug 14 is still the next real checkpoint. (Note: search results also
-surfaced unrelated news about a similarly-tickered company, "Banzai International" (ticker BNZI,
-renaming to Parabolic/PARA) — confirmed this is a different company from our holding, Brand
-Engagement Network (ticker BNAI); not applicable to this position.)
-
-TISI's Q2 2026 print was still pending as of the prior pass (12:36 and 15:35 UTC today); as of
-this pass (18:36 UTC / ~2:36pm ET) the market has not yet closed (~20:00 UTC close), so the
-release still isn't out. Next pass after close is still the right time to read the actual
-numbers — nothing to act on pre-print.
+**Web search this run:** TISI's Q2 2026 print, which was still pending as of the prior pass, is
+now out. Team, Inc. reported EPS of ($1.73) vs. consensus of ($5.94) — a large beat — with 8.5%
+revenue growth, 7.1% higher gross margin, and 12.4% adjusted EBITDA growth year-over-year. This
+directly confirms the turnaround thesis (revenue growth, margin expansion, EBITDA growth) that
+the position was held for. No red flags; thesis is reinforced, not broken. (Conference call was
+this morning, Aug 11, 9am ET — no adverse commentary surfaced in search.)
 
 All other holdings carry forward unchanged from the prior verified pass: no adverse news, no
-broken theses, no fresh catalysts found in the stale funnel file.
+broken theses. BNAI's Q2 2026 earnings (the next real checkpoint for that position) remain
+scheduled for Fri Aug 14 — three days out, still unreached.
 
 ---
 
@@ -48,10 +42,10 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-verified this run: Cataneo acquisition and MYDAS platform details confirmed accurate, US
-expansion (Madison Avenue HQ) unchanged, no adverse news. Q2 2026 earnings still set for Fri Aug
-14 — four days out. Rising short interest and bearish technicals remain sentiment/positioning,
-not a thesis break.
+No new information this run. Cataneo/MYDAS and US expansion details remain accurate as of last
+verification. Q2 2026 earnings still set for Fri Aug 14 — three days out, the next real
+checkpoint. Rising short interest and bearish technicals remain sentiment/positioning, not a
+thesis break.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -81,12 +75,10 @@ Original "quick" catalyst (Russell reconstitution) is spent, but the underlying 
 conviction thesis holds: FDA aligned on the Phase 3 IMPACT DUCHENNE trial design for SGT-003,
 positive Phase 1/2 interim data. No adverse signal since.
 
-**TISI — HOLD** | opened Jun 4 | earnings still pending as of this run
-Turnaround thesis intact. Q2 2026 release remains scheduled for after market close today (Aug
-10), conference call tomorrow (Aug 11, 9am ET). Market has not closed as of this pass (~2:36pm
-ET) — nothing new to check yet. FY2026 guidance (revenue growth, margin expansion, EBITDA
-growth) and CFO transition remain unchanged. No red flags to act on pre-print; next pass reads
-the real numbers.
+**TISI — HOLD** | opened Jun 4 | Q2 2026 print landed, beat, thesis confirmed
+Reported EPS ($1.73) vs. consensus ($5.94) — a large beat — with 8.5% revenue growth, 7.1% higher
+gross margin, 12.4% adjusted EBITDA growth YoY. Directly validates the turnaround thesis (growth,
+margin expansion, EBITDA growth) the position was held for. No red flags.
 
 ---
 
@@ -98,7 +90,7 @@ the real numbers.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | Re-verified Cataneo/MYDAS + US expansion accurate; earnings Aug 14 (4 days out); short interest is sentiment, not a break |
+| BNAI   | Jun 10 | **HOLD** | Cataneo/MYDAS + US expansion accurate; earnings Aug 14 (3 days out); short interest is sentiment, not a break |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
@@ -106,4 +98,4 @@ the real numbers.
 | PLSE   | Jun 5  | **HOLD** | Positive HRS 2026 PFA data, warrant redemption reduces dilution, no adverse news |
 | RXRX   | Jun 5  | **HOLD** | Nvidia + AI platform; multi-year thesis; no adverse news |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent, but core DMD thesis reinforced — Ph3 FDA alignment + positive interim data |
-| TISI   | Jun 4  | **HOLD** | Q2 earnings release pending after close today; market not yet closed, nothing new to check |
+| TISI   | Jun 4  | **HOLD** | Q2 2026 beat (EPS -1.73 vs -5.94 est) confirms turnaround thesis: growth, margin, EBITDA all up YoY |
