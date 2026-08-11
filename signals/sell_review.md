@@ -1,22 +1,22 @@
-# Sell Review — 2026-08-11T12:35:53Z
+# Sell Review — 2026-08-11T15:36:03Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-remains the same stale Jul 15 funnel snapshot (still zero overlap against any of the 13 held
-symbols), so no fresh local catalyst or adverse signal from that source this run.
+remains the same stale Jul 15 funnel snapshot (zero overlap against any of the 13 held symbols),
+so no fresh local catalyst or adverse signal from that source this run.
 
-**Web search this run:** TISI's Q2 2026 print, which was still pending as of the prior pass, is
-now out. Team, Inc. reported EPS of ($1.73) vs. consensus of ($5.94) — a large beat — with 8.5%
-revenue growth, 7.1% higher gross margin, and 12.4% adjusted EBITDA growth year-over-year. This
-directly confirms the turnaround thesis (revenue growth, margin expansion, EBITDA growth) that
-the position was held for. No red flags; thesis is reinforced, not broken. (Conference call was
-this morning, Aug 11, 9am ET — no adverse commentary surfaced in search.)
+**Web search this run:** checked BNAI (deepest drawdown in the book, Q2 2026 earnings due Fri
+Aug 14 — three days out) for any breaking news on the Cataneo/MYDAS integration. Nothing adverse:
+Cataneo closed Jun 30, 2026, BEN opened a U.S. commercial HQ (Madison Avenue, NYC) to push MYDAS
+(managing >€6B in annual ad inventory across 1,000+ media brands) into the U.S. market, appointed
+a new Chief Sales Officer for Cataneo, and added Cataneo's co-founder to BEN's board. This is
+expansion/integration progress consistent with the original thesis, not new information that
+changes the risk profile — earnings on Aug 14 remains the real checkpoint, still unreached.
 
-All other holdings carry forward unchanged from the prior verified pass: no adverse news, no
-broken theses. BNAI's Q2 2026 earnings (the next real checkpoint for that position) remain
-scheduled for Fri Aug 14 — three days out, still unreached.
+All other holdings carry forward unchanged from the prior verified pass earlier today (which
+itself confirmed TISI's Q2 2026 beat): no adverse news, no broken theses.
 
 ---
 
@@ -42,10 +42,10 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-No new information this run. Cataneo/MYDAS and US expansion details remain accurate as of last
-verification. Q2 2026 earnings still set for Fri Aug 14 — three days out, the next real
-checkpoint. Rising short interest and bearish technicals remain sentiment/positioning, not a
-thesis break.
+Checked this run: Cataneo U.S. expansion (new commercial HQ, new Chief Sales Officer, co-founder
+joining BEN's board) is integration progress consistent with the thesis, not adverse. Q2 2026
+earnings still set for Fri Aug 14 — three days out, the next real checkpoint. Rising short
+interest and bearish technicals remain sentiment/positioning, not a thesis break.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -90,7 +90,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | Cataneo/MYDAS + US expansion accurate; earnings Aug 14 (3 days out); short interest is sentiment, not a break |
+| BNAI   | Jun 10 | **HOLD** | Cataneo U.S. expansion is integration progress, not adverse; earnings Aug 14 (3 days out) is the real checkpoint |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
