@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-12T12:35:53Z
+# Sell Review — 2026-08-12T15:36:48Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,15 +7,16 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 remains the same stale Jul 15 funnel snapshot (zero overlap against any of the 13 held symbols),
 so no fresh local catalyst or adverse signal from that source this run.
 
-**Web search this run:** checked BNAI (deepest drawdown in the book) for breaking news ahead of
-its Q2 2026 earnings, now just two days out (Fri Aug 14). Nothing adverse: confirms the earnings
-date, current price ~$14.07 (Aug 9), and recaps the Cataneo GmbH acquisition (closed Jun 30) —
-~$5.3M in preliminary unaudited H1 2026 revenue from the acquired operations, consistent with the
-integration-progress thesis already on file. No new negative information; earnings on Aug 14
-remains the live, unreached checkpoint.
+**Web search this run:** re-checked BNAI (Brand Engagement Network) ahead of its still-pending Q2
+2026 earnings print. Confirmed identity/context (Cataneo GmbH acquisition closed Jun 30, ~$5.3M
+H1 2026 revenue from acquired operations, Q1 2026 called the company's strongest quarter since
+going public) and scanned for anything new: a $1M strategic investment in HighTide Energy
+(Accelevate Solutions, ~10% stake, fleet-intelligence expansion), Skye Salud advancing to Phase 2
+clinical evaluation in Mexico, and Russell 3000A index inclusion in the 2026 reconstitution — all
+incremental positives, no adverse news. Earnings remains the live, unreached checkpoint.
 
-All other holdings carry forward unchanged from yesterday's verified pass (2026-08-11): no
-adverse news, no broken theses, no new catalysts triggered.
+All other holdings carry forward unchanged from the prior verified pass (2026-08-12T12:35:53Z):
+no adverse news, no broken theses, no new catalysts triggered.
 
 ---
 
@@ -41,10 +42,9 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Checked this run: no adverse news found ahead of Q2 2026 earnings, now two days out (Fri Aug 14).
-Cataneo GmbH acquisition (closed Jun 30) generated ~$5.3M in preliminary H1 2026 revenue —
-integration progress consistent with the thesis. Earnings remains the real checkpoint, still
-unreached.
+Checked this run: no adverse news found ahead of Q2 2026 earnings (still pending). New info is
+incrementally positive — HighTide Energy investment, Skye Salud Phase 2 advance, Russell 3000A
+inclusion — none of it changes the thesis. Earnings remains the real checkpoint, still unreached.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -89,7 +89,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | No adverse news; Cataneo integration progressing; earnings Aug 14 (2 days out) is the real checkpoint |
+| BNAI   | Jun 10 | **HOLD** | No adverse news; new incremental positives (HighTide stake, Skye Salud Ph2, Russell 3000A); earnings still pending |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
