@@ -1,24 +1,23 @@
-# Sell Review — 2026-08-13T12:36:20Z
+# Sell Review — 2026-08-13T15:36:04Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior pass — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-remains the same stale Jul 15 funnel snapshot (checked programmatically: zero of the 13 held
-symbols appear anywhere in it), so it offers no fresh catalyst or adverse signal either way this
-run.
+remains the same stale Jul 15 funnel snapshot (zero of the 13 held symbols appear anywhere in it),
+so it offers no fresh catalyst or adverse signal either way this run.
 
-**Web search this run:** re-checked BNAI (Brand Engagement Network) ahead of its Q2 2026 print.
-Confirmed earnings is still on for **Friday, August 14, 2026** — now 1 day out, not yet reported.
-No adverse news. Current price ~$14.07 (Aug 9), Cataneo GmbH acquisition context unchanged (~$5.3M
-H1 2026 revenue from acquired operations, new US commercial HQ on Madison Avenue to support
-Cataneo's US expansion). Nothing here breaks the thesis — earnings remains the live, unreached
-checkpoint; do not preempt it with a sell.
+**Web search this run:** re-checked BNAI (Brand Engagement Network) ahead of its Q2 2026 print,
+which is now the nearest live checkpoint in the book (earnings Friday, August 14 — 1 day out, not
+yet reported). No adverse news found; same facts as the prior pass (Cataneo GmbH acquisition
+generating ~$5.3M H1 2026 revenue, new US commercial HQ on Madison Avenue, ~$900K annualized cost
+synergies expected by mid-2027). Nothing here breaks the thesis — earnings remains the live,
+unreached checkpoint; do not preempt it with a sell.
 
-All other holdings carry forward unchanged from the prior verified pass (2026-08-12): no adverse
-news, no broken theses, no new catalysts triggered.
+All other holdings carry forward unchanged from the prior verified pass (2026-08-13T12:36:20Z): no
+adverse news, no broken theses, no new catalysts triggered since three hours ago.
 
-Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [BNAI Stock Price & Overview](https://stockanalysis.com/stocks/bnai/)
+Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [BNAI Stock News & Updates | StockTitan](https://www.stocktitan.net/news/BNAI/)
 
 ---
 
@@ -44,9 +43,9 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Checked this run: Q2 2026 earnings confirmed for Aug 14 (1 day out), no adverse news found. New
-info is neutral-to-positive (confirms prior H1 revenue disclosures, US expansion HQ); thesis
-unchanged. Earnings remains the real checkpoint, still unreached — do not preempt it with a sell.
+Re-checked this run: Q2 2026 earnings confirmed for Aug 14 (1 day out), no adverse news found.
+Thesis unchanged. Earnings remains the real checkpoint, still unreached — do not preempt it with
+a sell.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
