@@ -1,20 +1,24 @@
-# Sell Review — 2026-08-12T18:36:00Z
+# Sell Review — 2026-08-13T12:36:20Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged since the prior pass — same 13
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior pass — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
-remains the same stale Jul 15 funnel snapshot (zero overlap against any of the 13 held symbols),
-so no fresh local catalyst or adverse signal from that source this run.
+remains the same stale Jul 15 funnel snapshot (checked programmatically: zero of the 13 held
+symbols appear anywhere in it), so it offers no fresh catalyst or adverse signal either way this
+run.
 
-**Web search this run:** re-checked BNAI (Brand Engagement Network) Q2 2026 earnings status.
-Confirmed the print is now scheduled for **Friday, August 14, 2026** — still 2 days out, not yet
-reported. No adverse news found. Context unchanged: Cataneo GmbH acquisition (~$5.3M H1 2026
-revenue from acquired operations), Q1 2026 revenue $104,311 vs. prior-year comparable periods
-under $10,000. Earnings remains the live, unreached checkpoint — nothing here breaks the thesis.
+**Web search this run:** re-checked BNAI (Brand Engagement Network) ahead of its Q2 2026 print.
+Confirmed earnings is still on for **Friday, August 14, 2026** — now 1 day out, not yet reported.
+No adverse news. Current price ~$14.07 (Aug 9), Cataneo GmbH acquisition context unchanged (~$5.3M
+H1 2026 revenue from acquired operations, new US commercial HQ on Madison Avenue to support
+Cataneo's US expansion). Nothing here breaks the thesis — earnings remains the live, unreached
+checkpoint; do not preempt it with a sell.
 
-All other holdings carry forward unchanged from the prior verified pass: no adverse news, no
-broken theses, no new catalysts triggered.
+All other holdings carry forward unchanged from the prior verified pass (2026-08-12): no adverse
+news, no broken theses, no new catalysts triggered.
+
+Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [BNAI Stock Price & Overview](https://stockanalysis.com/stocks/bnai/)
 
 ---
 
@@ -40,9 +44,9 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Checked this run: Q2 2026 earnings now confirmed for Aug 14 (2 days out), no adverse news found.
-New info is neutral-to-positive (confirms prior H1 revenue disclosures); thesis unchanged.
-Earnings remains the real checkpoint, still unreached — do not preempt it with a sell.
+Checked this run: Q2 2026 earnings confirmed for Aug 14 (1 day out), no adverse news found. New
+info is neutral-to-positive (confirms prior H1 revenue disclosures, US expansion HQ); thesis
+unchanged. Earnings remains the real checkpoint, still unreached — do not preempt it with a sell.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -87,7 +91,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | No adverse news; Q2 2026 earnings confirmed for Aug 14, still unreached checkpoint |
+| BNAI   | Jun 10 | **HOLD** | Earnings now 1 day out (Aug 14); no adverse news; unreached checkpoint |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
