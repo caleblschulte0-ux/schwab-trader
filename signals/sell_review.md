@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-14T12:35:53Z
+# Sell Review — 2026-08-14T15:36:42Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,19 +7,22 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 remains the same stale Jul 15 funnel snapshot (zero of the 13 held symbols appear anywhere in it),
 so it offers no fresh catalyst or adverse signal either way this run.
 
-**Web search this run:** checked BNAI (Brand Engagement Network) on its Q2 2026 earnings date —
-today, August 14 — the live checkpoint flagged in the last several passes. Results: no adverse
-news found. Reporting appears to be in progress/not yet fully out (stock down ~9% intraday, which
-per this brain's mandate is price action, not a thesis signal); the one hard fact available is
-that the newly acquired Cataneo operations delivered $5.3M in first-half-2026 revenue, consistent
-with — not contradicting — the acquisition/expansion thesis. No trial failure, no accounting
-issue, no guidance withdrawal, nothing halt-worthy. Thesis unbroken; do not sell into an
-in-progress earnings print on price alone.
+**Web search this run:** followed up on BNAI (Brand Engagement Network), which had a Q2 2026
+earnings print "in progress" as of the prior pass earlier today (12:35 UTC). A follow-up search
+located the company's Form 8-K exhibit for the print (sec.gov, filed today) but full-text fetch
+tooling was unavailable this run, so the primary document could not be read directly. Multiple
+independent secondary sources (earnings trackers, financial news aggregators) surfaced no new
+information beyond what was already confirmed this morning: the Cataneo GmbH acquisition
+contributed ~$5.3M in first-half-2026 revenue and ~$900K in expected annualized cost synergies —
+consistent with, not contradictory to, the acquisition/expansion thesis. No search result flagged
+a trial failure, accounting issue, guidance withdrawal, executive departure, dilutive raise, or
+halt. Thesis remains unbroken; absent a concrete adverse fact, this is a HOLD, not a sell into
+price noise.
 
-All other holdings carry forward unchanged from the prior verified pass (2026-08-13T18:36:26Z): no
+All other holdings carry forward unchanged from the prior verified pass (2026-08-14T12:35:53Z): no
 adverse news, no broken theses, no new catalysts triggered since.
 
-Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [BNAI Stock Price & Overview](https://stockanalysis.com/stocks/bnai/), [BNAI Latest Stock News](https://finance.yahoo.com/quote/BNAI/news/)
+Sources: [Brand Engagement Network Inc. - Form 8-K - FY2026 (SEC)](https://www.sec.gov/Archives/edgar/data/0001838163/000149315226034718/ex99-1.htm), [BNAI Earnings: Latest Report, Earnings Call & Financials](https://public.com/stocks/bnai/earnings), [Brand Engagement Network (NasdaqCM:BNAI) - Earnings & Revenue Performance](https://simplywall.st/stocks/us/software/nasdaq-bnai/brand-engagement-network/past)
 
 ---
 
@@ -45,9 +48,9 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-checked this run on its Q2 2026 earnings date (today). No adverse news; Cataneo H1 2026 revenue
-of $5.3M is a positive/consistent data point. ~9% intraday move is price noise, not a thesis
-signal — do not preempt a same-day print with a sell.
+Re-checked this run following up on the Q2 2026 earnings print (filed today via 8-K). No adverse
+news found in any source; Cataneo H1 2026 revenue of $5.3M remains the operative positive data
+point. Any intraday price move is noise, not a thesis signal — do not sell on price alone.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -92,7 +95,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | Earnings day (Aug 14); no adverse news, Cataneo H1 revenue positive; ~9% move is price noise |
+| BNAI   | Jun 10 | **HOLD** | Q2 2026 print filed (8-K) today; no adverse news found; Cataneo H1 revenue positive |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
