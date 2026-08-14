@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-13T18:36:26Z
+# Sell Review — 2026-08-14T12:35:53Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,18 +7,19 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 remains the same stale Jul 15 funnel snapshot (zero of the 13 held symbols appear anywhere in it),
 so it offers no fresh catalyst or adverse signal either way this run.
 
-**Web search this run:** re-checked BNAI (Brand Engagement Network) ahead of its Q2 2026 print,
-now the nearest live checkpoint in the book (earnings Friday, August 14 — under a day out, not yet
-reported). No adverse news found; same facts as the prior pass (Cataneo GmbH acquisition U.S.
-expansion with a new Madison Avenue commercial HQ, ELM™ AI integration into Cataneo's media
-tech, Don Durand appointed Chief Sales Officer of Cataneo, Christian Unterseer joining BEN's
-board). Nothing here breaks the thesis — earnings remains the live, unreached checkpoint; do not
-preempt it with a sell.
+**Web search this run:** checked BNAI (Brand Engagement Network) on its Q2 2026 earnings date —
+today, August 14 — the live checkpoint flagged in the last several passes. Results: no adverse
+news found. Reporting appears to be in progress/not yet fully out (stock down ~9% intraday, which
+per this brain's mandate is price action, not a thesis signal); the one hard fact available is
+that the newly acquired Cataneo operations delivered $5.3M in first-half-2026 revenue, consistent
+with — not contradicting — the acquisition/expansion thesis. No trial failure, no accounting
+issue, no guidance withdrawal, nothing halt-worthy. Thesis unbroken; do not sell into an
+in-progress earnings print on price alone.
 
-All other holdings carry forward unchanged from the prior verified pass (2026-08-13T15:36:04Z): no
-adverse news, no broken theses, no new catalysts triggered in the last three hours.
+All other holdings carry forward unchanged from the prior verified pass (2026-08-13T18:36:26Z): no
+adverse news, no broken theses, no new catalysts triggered since.
 
-Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [BNAI Stock Price, News & Analysis | StockTitan](https://www.stocktitan.net/overview/BNAI/)
+Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [BNAI Stock Price & Overview](https://stockanalysis.com/stocks/bnai/), [BNAI Latest Stock News](https://finance.yahoo.com/quote/BNAI/news/)
 
 ---
 
@@ -44,9 +45,9 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-checked this run: Q2 2026 earnings confirmed for Aug 14 (under 1 day out), no adverse news
-found. Thesis unchanged. Earnings remains the real checkpoint, still unreached — do not preempt
-it with a sell.
+Re-checked this run on its Q2 2026 earnings date (today). No adverse news; Cataneo H1 2026 revenue
+of $5.3M is a positive/consistent data point. ~9% intraday move is price noise, not a thesis
+signal — do not preempt a same-day print with a sell.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -60,8 +61,8 @@ Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf remains
 substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst resolved favorably (Jul 24)
-FUROSCIX ReadyFlow commercial launch remains on track for end of August 2026 (now ~2.5 weeks
-out); $50M PIPE closed around the FDA approval. Hold through the launch, don't sell into strength.
+FUROSCIX ReadyFlow commercial launch remains on track for end of August 2026 (now ~2 weeks out);
+$50M PIPE closed around the FDA approval. Hold through the launch, don't sell into strength.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -91,7 +92,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | Earnings under 1 day out (Aug 14); no adverse news; unreached checkpoint |
+| BNAI   | Jun 10 | **HOLD** | Earnings day (Aug 14); no adverse news, Cataneo H1 revenue positive; ~9% move is price noise |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
