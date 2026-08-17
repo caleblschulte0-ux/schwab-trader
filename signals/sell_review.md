@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-17T15:35:56Z
+# Sell Review — 2026-08-17T18:36:20Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,20 +7,22 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 remains the same stale Jul 15 funnel snapshot (zero of the 13 held symbols appear anywhere in it),
 so it offers no fresh catalyst or adverse signal either way this run.
 
-**Web search this run:** checked Anteris Technologies (AVR), the largest position by dollar cost
-and not independently re-verified in the last several passes. Confirmed the PARADIGM pivotal trial
-(DurAVR transcatheter heart valve) continues to advance: Q2 2026 results reported Aug 11 showing
-active U.S./Denmark/Netherlands recruitment plus Canada and France regulatory clearance, DurAVR
-clinical data presented at New York Valves 2026, and two board appointments (Susan Knight, Stephen
-Denaro) strengthening governance ahead of commercialization. No adverse news, no trial delay, no
-enrollment problem. Thesis intact and reinforced.
+**Web search this run:** checked Applied Digital (APLD), which has an earnings print flagged as
+imminent by the prior pass. Confirmed FY2026 Q4 results (reported late July) beat badly — adjusted
+EPS $0.04 vs. a expected $0.19 loss, revenue $258.7M vs. $95.3M expected (+407% YoY), full-year
+revenue +167% to $611.3M. Since then the company signed three 15-year take-or-pay leases with a
+high-investment-grade hyperscaler totaling 810MW and ~$20.2B in base-term contracted revenue,
+bringing total contracted critical IT load to 1.4GW and ~$36B in base-term lease revenue. Shares
+up >20% YTD. No adverse news, no guidance cut, no lease cancellation. Thesis intact and materially
+reinforced by the new hyperscaler contracts.
 
-All other holdings carry forward unchanged from the prior verified passes (APLD re-verified
-2026-08-17 prior run — FY2026 earnings beat, next print Aug 20; MNKD FUROSCIX ReadyFlow launch
-re-verified 2026-08-14; BNAI re-verified post-earnings 2026-08-14). No adverse news, no broken
-theses, no new catalysts triggered on any name since.
+All other holdings carry forward unchanged from the prior verified passes (AVR re-verified
+2026-08-17 earlier run — PARADIGM trial recruitment expanding, no adverse news; MNKD re-verified
+2026-08-14 — FUROSCIX ReadyFlow launch on track for end of August; BNAI re-verified 2026-08-14 —
+post-earnings, no adverse news). No adverse news, no broken theses, no new catalysts triggered on
+any name since the last pass three hours ago.
 
-Sources: [Anteris Advances DurAVR Toward Commercialization; PARADIGM Trial Expands U.S. Recruitment](https://www.rttnews.com/3679469/anteris-advances-duravr-toward-commercialization-paradigm-trial-expands-u-s-recruitment.aspx), [Anteris Technologies Announces Results for the Second Quarter of 2026](https://www.globenewswire.com/news-release/2026/08/11/3343309/0/en/anteris-technologies-announces-results-for-the-second-quarter-of-2026.html), [Anteris secures US Medicare coverage for PARADIGM Trial as DurAVR study advances](https://www.proactiveinvestors.com/companies/news/1091304/anteris-secures-us-medicare-coverage-for-paradigm-trial-as-duravr-study-advances-1091304.html)
+Sources: [Earnings call transcript: Applied Digital tops Q4 2026 forecasts, shares rise](https://www.investing.com/news/transcripts/earnings-call-transcript-applied-digital-tops-q4-2026-forecasts-shares-rise-93CH-4815224), [Applied Digital FY2026 Earnings: Revenue Up 167%](https://www.stocktitan.net/news/APLD/applied-digital-reports-fiscal-fourth-quarter-and-full-year-2026-9stnn7old66z.html), [Applied Digital Stock Climbs on Q4 Double Beat](https://www.benzinga.com/markets/earnings/26/07/60711412/applied-digital-stock-climbs-on-q4-double-beat)
 
 ---
 
@@ -31,18 +33,19 @@ Clean Phase 1/2a data (ABS-201) + analyst PT hikes; drawdown traced to a $100M d
 priced at $7.41, not a broken thesis. No new information this run.
 
 **APLD — HOLD** | opened Jun 9 | large position by avg cost
-FY2026 earnings beat (revenue +400%+ YoY) and neocloud rally (CoreWeave, Nebius, SMCI) drove the
-stock up ~5.4% (verified prior run). Next print (Q4 2026) lands Aug 20 — thesis intact and
-reinforced. Hold through the print.
+Re-verified this run: FY2026 Q4 results (reported late July) badly beat — revenue +407% YoY — and
+the company since signed 15-year take-or-pay hyperscaler leases worth ~$20.2B in base-term
+contracted revenue (1.4GW total contracted load, ~$36B base-term lease revenue). Thesis intact and
+materially reinforced, not spent.
 
 **ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
 FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational pathway for
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-Re-checked this run: PARADIGM pivotal trial for DurAVR continues to advance — Q2 2026 results
-(Aug 11) show active recruitment across US/Denmark/Netherlands, Canada + France clearance, new
-board appointments ahead of commercialization. Thesis intact and reinforced, not broken.
+Re-verified earlier today: PARADIGM pivotal trial for DurAVR continues to advance — Q2 2026
+results (Aug 11) show active recruitment across US/Denmark/Netherlands, Canada + France clearance,
+new board appointments ahead of commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
 Verified 2026-08-14 against the Q2 2026 earnings 8-K; no adverse news found. Cataneo H1 2026
@@ -90,9 +93,9 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | Symbol | Opened | Decision | One-line reason |
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
-| APLD   | Jun 9  | **HOLD** | FY2026 earnings beat +400% YoY revenue, neocloud rally; next print Aug 20 |
+| APLD   | Jun 9  | **HOLD** | Re-verified: FY2026 Q4 beat +407% YoY revenue, new $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | Re-verified: PARADIGM trial expanding recruitment + new clearances + board additions |
+| AVR    | Jun 8  | **HOLD** | Re-verified earlier today: PARADIGM trial expanding recruitment + new clearances + board additions |
 | BNAI   | Jun 10 | **HOLD** | Q2 2026 print filed (8-K), verified 2026-08-14; no adverse news found; Cataneo H1 revenue positive |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
