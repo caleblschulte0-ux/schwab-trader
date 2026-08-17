@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-14T18:35:52Z
+# Sell Review — 2026-08-17T12:36:11Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,17 +7,19 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 remains the same stale Jul 15 funnel snapshot (zero of the 13 held symbols appear anywhere in it),
 so it offers no fresh catalyst or adverse signal either way this run.
 
-**Web search this run:** checked MNKD's FUROSCIX ReadyFlow commercial launch, the nearest live
-catalyst in the book (targeted for end of August 2026, now ~2 weeks out). Search confirmed the
-FDA-approval and $50M private-placement facts already on file, and surfaced no delay, no
-manufacturing/supply issue, no adverse regulatory action, and no launch-date change. Nothing new
-enough to act on — thesis remains intact, hold through the launch window.
+**Web search this run:** checked Applied Digital (APLD), the largest position by avg cost and not
+re-verified in the last couple of passes. Confirmed the stock jumped ~5.4% on a strong FY2026
+earnings beat (revenue +400%+ YoY) amid an industry-wide "neocloud" rally alongside CoreWeave,
+Nebius, and Super Micro. Next print (Q4 2026) is scheduled for Thu Aug 20, after the market close —
+an upcoming but not-yet-resolved catalyst. No adverse news, no delay, no dilution/going-concern
+signal. Thesis intact and reinforced; hold through the Aug 20 print.
 
-All other holdings carry forward unchanged from the prior verified pass (2026-08-14T15:36:42Z,
-which itself re-verified BNAI post-earnings with no adverse findings): no adverse news, no broken
-theses, no new catalysts triggered since.
+All other holdings carry forward unchanged from the prior verified passes: MNKD's FUROSCIX
+ReadyFlow launch re-verified 2026-08-14 (on track for end of August, no delay/adverse news), BNAI
+re-verified post-earnings 2026-08-14 (no adverse findings). No adverse news, no broken theses, no
+new catalysts triggered on any name since.
 
-Sources: [Mannkind Wins FDA Nod For Furoscix ReadyFlow, Announces $50 Mln Private Placement](https://www.rttnews.com/3670514/mannkind-wins-fda-nod-for-furoscix-readyflow-announces-50-mln-private-placement.aspx), [MannKind Announces FDA Approval of Furoscix ReadyFlow (BioSpace)](https://www.biospace.com/press-releases/mannkind-announces-fda-approval-of-furoscix-readyflow-the-first-and-only-autoinjector-delivering-iv-equivalent-diuretic-therapy-for-the-treatment-of-edema-in-adults-with-heart-failure-or-chronic-kidney-disease), [MannKind Corp - Form 8-K - FY2026 (SEC)](https://www.sec.gov/Archives/edgar/data/899460/000119312526073509/mnkd-ex99_1.htm)
+Sources: [Applied Digital (APLD) to Release Quarterly Earnings on Thursday](https://www.marketbeat.com/instant-alerts/applied-digital-apld-to-release-quarterly-earnings-on-thursday-2026-08-13/), [Applied Digital (APLD) Stock Trades Up, Here Is Why](https://stockstory.org/us/stocks/nasdaq/apld/news/why-up-down/applied-digital-apld-stock-trades-up-here-is-why-7), [Applied Digital (APLD), What Is Behind The Fresh Attention On The Stock?](https://finance.yahoo.com/markets/stocks/articles/applied-digital-apld-behind-fresh-211057009.html)
 
 ---
 
@@ -28,10 +30,9 @@ Clean Phase 1/2a data (ABS-201) + analyst PT hikes; drawdown traced to a $100M d
 priced at $7.41, not a broken thesis. No new information this run.
 
 **APLD — HOLD** | opened Jun 9 | large position by avg cost
-Jul 27 FY2026 earnings (revenue +407% YoY, still GAAP loss-making) and the Cloud Services spinoff
-into ChronoScale (CHRN) leave APLD a pure-play AI infrastructure/data-center developer with large
-hyperscaler leases (CoreWeave). No new information this run; drawdown remains a burn-rate
-reaction, not a broken thesis.
+Re-checked this run: strong FY2026 earnings beat (revenue +400%+ YoY) and a broader neocloud rally
+(CoreWeave, Nebius, SMCI) drove the stock up ~5.4%. Next print (Q4 2026) lands Aug 20 — thesis
+intact and reinforced, not broken. Hold through the print.
 
 **ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
 FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational pathway for
@@ -43,9 +44,9 @@ secured, France clearance milestone, first US patients treated, ~80 sites enroll
 patients. No new information this run; normal pullback, story intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Verified last run against the Q2 2026 earnings 8-K; no adverse news found. Cataneo H1 2026 revenue
-of $5.3M remains the operative positive data point. Not re-searched this run (no new trigger since
-yesterday's check) — any intraday price move is noise, not a thesis signal.
+Verified 2026-08-14 against the Q2 2026 earnings 8-K; no adverse news found. Cataneo H1 2026
+revenue of $5.3M remains the operative positive data point. Not re-searched this run (no new
+trigger since) — any intraday price move is noise, not a thesis signal.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -59,9 +60,9 @@ Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf remains
 substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst resolved favorably (Jul 24)
-Re-checked this run: FUROSCIX ReadyFlow commercial launch remains on track for end of August 2026
-(now ~2 weeks out), no delay or adverse regulatory news found; $50M PIPE closed around the FDA
-approval. Hold through the launch, don't sell into strength.
+Verified 2026-08-14: FUROSCIX ReadyFlow commercial launch remains on track for end of August
+2026, no delay or adverse regulatory news found; $50M PIPE closed around the FDA approval. Hold
+through the launch, don't sell into strength.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -88,10 +89,10 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | Symbol | Opened | Decision | One-line reason |
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
-| APLD   | Jun 9  | **HOLD** | Jul 27 earnings + ChronoScale spinoff sharpens pure-play data-center thesis; loss-print pullback, not a break |
+| APLD   | Jun 9  | **HOLD** | Re-verified: FY2026 earnings beat +400% YoY revenue, neocloud rally; next print Aug 20 |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial de-risking intact; normal pullback, story intact |
-| BNAI   | Jun 10 | **HOLD** | Q2 2026 print filed (8-K), verified prior run; no adverse news found; Cataneo H1 revenue positive |
+| BNAI   | Jun 10 | **HOLD** | Q2 2026 print filed (8-K), verified 2026-08-14; no adverse news found; Cataneo H1 revenue positive |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones ahead; long-duration eVTOL story |
 | GASS   | Jun 5  | **HOLD** | Insurance matter resolved, thesis intact |
