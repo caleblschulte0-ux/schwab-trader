@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-20T12:36:10Z
+# Sell Review — 2026-08-20T15:36:38Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,20 +7,26 @@ symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signal
 remains the same stale Jul 15 funnel snapshot (36 days old); none of the 13 held symbols appear in
 it, so it offers no fresh catalyst or adverse signal either way.
 
-**Web search this run:** checked MannKind (MNKD) — the book's imminent binary catalyst, with the
-Furoscix ReadyFlow commercial launch expected "by end of August 2026" per the prior review, and
-today (Aug 20) is inside that window. Confirmed via FDA approval coverage and company release: the
-$50M private placement financing (funding the $45M CVR payment tied to the approval) closed as
-planned, and all public guidance still points to a U.S. commercial launch by end of August 2026 —
-no delay, no adverse regulatory news. Thesis intact; do not sell into anticipation of an
-imminent positive catalyst.
+**Web search this run:** re-checked Brand Engagement Network (BNAI) — the deepest-drawdown
+position, with the Aug 27 earnings conference call flagged in prior reviews as still ahead. One
+source surfaced a conflicting "August 20" call date, but cross-checking against the primary press
+release confirms the call is Thursday, August 27, 2026, 1:00pm ET — the original date stands, not
+moved up, not delayed. Q2 2026 results (10-Q) were already released Aug 14 and remain positive:
+total assets rose from $15.3M to $30.7M and shareholders' equity from $3.5M to $19.4M
+(June 30, 2026 vs. Dec 31, 2025), driven by the Cataneo GmbH acquisition (~$5.3M H1 revenue,
+~$10.8M goodwill/intangibles added). No adverse news, no restatement, no going-concern signal.
+Thesis intact; still holding through the Aug 27 call, not selling on drawdown ahead of it.
+
+Note: an initial search on "BNAI" pulled up an unrelated company (Banzai International / ticker
+BNZI, proposing a rename to Parabolic Technologies) due to a ticker/name mix-up in search results —
+that news does NOT apply to this holding (Brand Engagement Network, ticker BNAI) and was discarded.
 
 All other holdings carry forward unchanged from the prior verified passes (dedicated checks
-2026-08-14 through 2026-08-19, see prior sell_review.md history): no thesis has broken, no
+2026-08-14 through 2026-08-20, see prior sell_review.md history): no thesis has broken, no
 catalyst has gone stale, and no drawdown alone is being treated as a sell signal per
 SELL_BRAIN.md's one rule.
 
-Sources: [MannKind Announces FDA Approval of Furoscix ReadyFlow™](https://investors.mannkindcorp.com/news-releases/news-release-details/mannkind-announces-fda-approval-furoscix-readyflowtm-first-and), [MNKD Stock Rises 8% On Furoscix ReadyFlow Approval And $50M Funding Boost](https://finance.yahoo.com/healthcare/articles/mnkd-stock-rises-8-furoscix-172056626.html)
+Sources: [Brand Engagement Network Provides Second Quarter Update](https://www.prnewswire.com/news-releases/brand-engagement-network-provides-second-quarter-update-302852167.html), [BNAI Stock Price, News & Analysis | Brand Engagement](https://www.stocktitan.net/overview/BNAI/)
 
 ---
 
@@ -46,9 +52,10 @@ across US/Denmark/Netherlands, Canada + France clearance, new board appointments
 commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Q2 2026 results already reported (Cataneo contributing ~$5.3M H1 revenue); earnings conference
-call scheduled Aug 27, 2026 — still ahead, not yet arrived. Russell 3000/2000 inclusion and
-continued U.S. expansion (Cataneo HQ, new ventures) stand. No adverse news this run.
+Re-verified this run: Q2 2026 10-Q (filed Aug 14) shows total assets up to $30.7M and equity up to
+$19.4M on the Cataneo GmbH acquisition (~$5.3M H1 revenue contribution); earnings conference call
+confirmed for Aug 27, 2026 — still ahead, not yet arrived, no reschedule. Russell 3000/2000
+inclusion and continued U.S. expansion stand. No adverse news this run.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -62,9 +69,9 @@ Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf remains
 substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst now imminent (launch expected end of Aug)
-Re-verified this run: Furoscix ReadyFlow commercial launch remains on track for end of August
-2026, $50M financing closed as planned funding the CVR payment; no delay or adverse regulatory
-news. Hold through the launch, don't sell into anticipation or on drawdown ahead of the event.
+Furoscix ReadyFlow commercial launch remains on track for end of August 2026, $50M financing
+closed as planned funding the CVR payment; no delay or adverse regulatory news found in prior
+passes. Hold through the launch, don't sell into anticipation or on drawdown ahead of the event.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -94,7 +101,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions |
-| BNAI   | Jun 10 | **HOLD** | Q2 results already out (Cataneo $5.3M H1 rev); Aug 27 call still ahead, no adverse news |
+| BNAI   | Jun 10 | **HOLD** | Q2 10-Q shows assets/equity up on Cataneo deal; Aug 27 call confirmed, still ahead |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
