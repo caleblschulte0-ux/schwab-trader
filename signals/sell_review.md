@@ -1,23 +1,21 @@
-# Sell Review — 2026-08-20T18:35:57Z
+# Sell Review — 2026-08-21T12:35:46Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior pass (15:36:38Z,
-same day) — same 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes.
-`signals/candidates.json` remains the same stale Jul 15 funnel snapshot (36 days old); none of
-the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal either way.
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior pass — same 13
+symbols, quantities, avg_price, and opened_utc; no new fills, no closes. `signals/candidates.json`
+remains the same stale Jul 15 funnel snapshot (37 days old); none of the 13 held symbols appear in
+it, so it offers no fresh catalyst or adverse signal either way.
 
 **Web search this run:** re-checked MannKind (MNKD) — the position with the nearest live binary
-catalyst, the Furoscix ReadyFlow autoinjector commercial launch flagged in prior reviews as
-expected "end of August 2026." Search confirms the FDA-approved launch timeline is unchanged and
-on track for end of August 2026; the $50M private placement financing the CVR payment closed as
-planned (on/about Jul 24, 2026). No delay, no new regulatory setback, no adverse news. Thesis
+catalyst, the Furoscix ReadyFlow autoinjector commercial launch, expected "by the end of August
+2026" (now just days away). Search confirms the FDA-approved launch timeline is still tracking for
+end of August 2026, with no delay, no new regulatory setback, and no adverse news found. Thesis
 intact — holding through the imminent launch, not selling on drawdown ahead of the event.
 
 All other holdings carry forward unchanged from the prior verified passes (dedicated checks
-2026-08-14 through 2026-08-20, including this morning's BNAI re-verification): no thesis has
-broken, no catalyst has gone stale, and no drawdown alone is being treated as a sell signal per
-SELL_BRAIN.md's one rule.
+2026-08-14 through 2026-08-20): no thesis has broken, no catalyst has gone stale, and no drawdown
+alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
 
 Sources: [Mannkind Wins FDA Nod For Furoscix ReadyFlow, Announces $50 Mln Private Placement](https://www.rttnews.com/3670514/mannkind-wins-fda-nod-for-furoscix-readyflow-announces-50-mln-private-placement.aspx), [MannKind Announces FDA Approval of Furoscix ReadyFlow](https://investors.mannkindcorp.com/news-releases/news-release-details/mannkind-announces-fda-approval-furoscix-readyflowtm-first-and)
 
@@ -45,9 +43,9 @@ across US/Denmark/Netherlands, Canada + France clearance, new board appointments
 commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-verified this morning (15:36Z run): Q2 2026 10-Q (filed Aug 14) shows total assets up to
-$30.7M and equity up to $19.4M on the Cataneo GmbH acquisition; earnings conference call
-confirmed for Aug 27, 2026 — still ahead, no reschedule. No adverse news this run.
+Carried forward: Q2 2026 10-Q (filed Aug 14) showed total assets up to $30.7M and equity up to
+$19.4M on the Cataneo GmbH acquisition; earnings conference call confirmed for Aug 27, 2026 —
+still ahead, no reschedule. No adverse news this run.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -60,7 +58,7 @@ Vertical Aerospace certification milestones remain live, untriggered catalysts. 
 Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf remains the latest
 substantive news. No new adverse development found this run.
 
-**MNKD — HOLD** | opened Jun 10 | binary catalyst now imminent (launch expected end of Aug)
+**MNKD — HOLD** | opened Jun 10 | binary catalyst now days away (launch expected end of Aug)
 Re-verified this run: Furoscix ReadyFlow commercial launch remains on track for end of August
 2026, $50M financing closed as planned funding the CVR payment; no delay or adverse regulatory
 news found. Hold through the launch, don't sell into anticipation or on drawdown ahead of the
@@ -98,8 +96,9 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
-| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch still on track for end of Aug, $50M financing closed, no delay/adverse news |
+| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch still on track for end of Aug (days away), $50M financing closed, no delay/adverse news |
 | PLSE   | Jun 5  | **HOLD** | nsPFA data working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery + Nvidia partnership thesis, structural not momentum |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent but conviction DMD gene-therapy thesis intact, no adverse signal |
 | TISI   | Jun 4  | **HOLD** | Q2 2026 beat confirms turnaround thesis (growth, margin, EBITDA all up) |
+</content>
