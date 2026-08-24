@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-24T15:36:21Z
+# Sell Review — 2026-08-24T18:36:00Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -8,18 +8,19 @@ paused per prior notes). `signals/candidates.json` remains the same stale Jul 15
 (40 days old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse
 signal either way.
 
-**Web search this run:** checked BNAI (Brand Engagement Network) ahead of its Aug 27, 2026 Q2
-earnings call (3 days out — the nearest binary event in the book). Found the Cataneo GmbH
-acquisition (closed June 30, 2026) contributed ~$5.3M in H1 2026 revenue versus BNAI's own prior
-quarterly run-rate of ~$104K, plus ~$900K in expected annualized cost synergies through mid-2027.
-No pre-announcement, guidance cut, or adverse news — the call remains on schedule and the
-acquisition is reinforcing the revenue story, not undermining it. Holding through the print.
+**Web search this run:** checked MNKD (MannKind) ahead of the guided "end of August 2026"
+commercial launch window for Furoscix ReadyFlow — now only ~1 week out, the nearest binary event
+in the book. Confirmed the FDA approval and $50M private placement remain as previously reported;
+found no new press release announcing the commercial launch has begun, and no delay, recall, or
+adverse regulatory news. The launch window is current and untriggered, not broken. Holding through
+it.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks
-2026-08-14 through 2026-08-24): no thesis has broken, no catalyst has gone stale, and no drawdown
-alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
+2026-08-14 through 2026-08-24, most recently 2026-08-24T15:37Z, which itself re-verified BNAI
+ahead of its Aug 27 earnings call): no thesis has broken, no catalyst has gone stale, and no
+drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
 
-Sources: [Brand Engagement Network Inc. - Form 8-K](https://www.sec.gov/Archives/edgar/data/0001838163/000149315226034718/ex99-1.htm), [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings on Friday](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/)
+Sources: [MannKind Announces FDA Approval of Furoscix ReadyFlow](https://investors.mannkindcorp.com/news-releases/news-release-details/mannkind-announces-fda-approval-furoscix-readyflowtm-first-and), [MANNKIND CORP - Form 8-K - FY2026](https://www.sec.gov/Archives/edgar/data/0000899460/000119312526316041/d63182dex991.htm)
 
 ---
 
@@ -44,10 +45,10 @@ US/Denmark/Netherlands, Canada + France clearance, new board appointments ahead 
 commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-verified this run: Q2 2026 earnings call remains scheduled for Aug 27, 2026 (3 days out), no
-reschedule, no adverse pre-announcement. Cataneo GmbH acquisition contributed ~$5.3M H1 2026
-revenue on top of ~$900K expected annualized cost synergies — reinforcing, not undermining, the
-growth story. Holding through the print.
+Q2 2026 earnings call remains scheduled for Aug 27, 2026 (3 days out), no reschedule, no adverse
+pre-announcement found in prior dedicated check. Cataneo GmbH acquisition contributed ~$5.3M H1
+2026 revenue on top of ~$900K expected annualized cost synergies — reinforcing, not undermining,
+the growth story. Holding through the print.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -61,9 +62,9 @@ Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf remains
 substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst inside its guided launch window (end of Aug)
-Furoscix ReadyFlow commercial launch guidance ("end of August 2026") remains current; no launch
-announcement yet, but also no delay or adverse regulatory news as of the last dedicated check.
-$50M financing closed as planned, FDA approval in hand. Hold through the launch window.
+Re-verified this run: Furoscix ReadyFlow commercial launch guidance ("end of August 2026")
+remains current; no launch announcement yet, but also no delay or adverse regulatory news. $50M
+financing closed as planned, FDA approval in hand. Hold through the launch window.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -97,7 +98,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
-| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch window now current (end of Aug), no delay/adverse news, no launch news yet either |
+| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch window ~1 week out, no delay/adverse news, no launch news yet either |
 | PLSE   | Jun 5  | **HOLD** | nsPFA data working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery + Nvidia partnership thesis, structural not momentum |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent but conviction DMD gene-therapy thesis intact, no adverse signal |
