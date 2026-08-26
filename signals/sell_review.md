@@ -1,4 +1,4 @@
-# Sell Review — 2026-08-26T12:36:00Z
+# Sell Review — 2026-08-26T18:36:37Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -8,13 +8,19 @@ paused per prior notes, no live quotes available). `signals/candidates.json` rem
 stale Jul 15 funnel snapshot (42 days old); none of the 13 held symbols appear in it, so it
 offers no fresh catalyst or adverse signal either way.
 
-**Web search this run:** checked Brand Engagement Network (BNAI) ahead of its Aug 27 earnings
-call, now 1 day out. Confirmed Q2 2026 results already released Aug 14 with the Cataneo GmbH
-acquisition details previously noted (~$5.3M H1 2026 revenue contribution, ~$900K annualized
-cost synergies) plus a new detail: BEN opened a U.S. commercial headquarters on Madison Avenue
-in NYC to support Cataneo's U.S. expansion. No delay, restatement, or adverse news found —
-the Aug 27 date appears to be a follow-up call, not a surprise re-report. Thesis reinforced,
-not broken; holding through it.
+**Web search this run:** BNAI's Q2 2026 earnings call actually landed — reported a loss of
+$0.49/share on revenue of $160,080, with shares sliding ~7.6% on the print. Management gave
+no formal financial guidance. Total assets rose to $30.7M (from $15.3M at year-end 2025),
+driven mainly by ~$10.8M of goodwill/intangibles from the Cataneo GmbH acquisition, and
+management pointed to new healthcare, mobility, and transportation-media efforts plus
+AI-assisted productivity gains at Cataneo (>30%). The tiny GAAP revenue line looks like it
+reflects only a stub period of Cataneo consolidation post-close rather than a reversal of the
+~$5.3M H1 contribution flagged in the prior acquisition disclosures — but that reconciliation
+isn't fully confirmed from this search alone. Net: a soft, guidance-free print with a negative
+stock reaction, not a clear thesis break (no fraud, no going-concern flag, no deal collapse,
+no restatement). Per SELL_BRAIN.md, a negative price/earnings reaction alone is not a sell
+signal — holding, but flagging this print for extra scrutiny next run given it's the deepest
+drawdown in the book.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks
 2026-08-14 through 2026-08-25): no thesis has broken, no catalyst has gone stale, and no
@@ -22,7 +28,7 @@ drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule. M
 ReadyFlow launch window ("end of August 2026") is now essentially at hand — no adverse news has
 surfaced since the dedicated check on 2026-08-25.
 
-Sources: [Brand Engagement Network (BNAI) Projected to Announce Quarterly Earnings (MarketBeat)](https://www.marketbeat.com/instant-alerts/brand-engagement-network-bnai-projected-to-announce-quarterly-earnings-on-friday-2026-08-07/), [Brand Engagement Network Completes $19.5M Acquisition (StockTitan)](https://www.stocktitan.net/news/BNAI/brand-engagement-network-provides-second-quarter-m3fjh7nqqj4j.html)
+Sources: [Earnings call transcript: Brand Engagement Network posts Q2 2026 loss as shares slide (Investing.com)](https://www.investing.com/news/transcripts/earnings-call-transcript-brand-engagement-network-posts-q2-2026-loss-as-shares-slide-93CH-4870286), [Brand Engagement Network Q2 Earnings Call Highlights (TradingView/MarketBeat)](https://www.tradingview.com/news/marketbeat:976c11901094b:0-brand-engagement-network-q2-earnings-call-highlights/)
 
 ---
 
@@ -47,10 +53,12 @@ US/Denmark/Netherlands, Canada + France clearance, new board appointments ahead 
 commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Re-verified this run: Q2 2026 results (released Aug 14) already reflect the Cataneo GmbH
-acquisition contributing ~$5.3M H1 2026 revenue; BEN has now opened a U.S. HQ on Madison Avenue
-to support Cataneo's US expansion. Aug 27 call is 1 day out with no adverse pre-announcement.
-Growth story reinforcing, not undermining.
+Q2 2026 call landed this run: $0.49/share loss on $160,080 revenue, shares down ~7.6%, no
+formal guidance given. Soft, guidance-free print with a negative reaction — but no fraud,
+restatement, or deal-collapse signal, and the Cataneo integration/asset-base expansion story
+is still being executed on. A bad print with a stock-price reaction is not itself a sell
+trigger per SELL_BRAIN.md's one rule; holding, watching closely next run for confirmation of
+whether the Cataneo revenue contribution is tracking or has genuinely stalled.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -96,7 +104,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions |
-| BNAI   | Jun 10 | **HOLD** | Aug 27 call 1 day out; Cataneo integration + new US HQ reinforce growth story |
+| BNAI   | Jun 10 | **HOLD** | Q2 print soft (loss, no guidance) but no fraud/restatement/deal-collapse; watching closely |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
