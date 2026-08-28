@@ -1,28 +1,28 @@
-# Sell Review — 2026-08-28T15:35:49Z
+# Sell Review — 2026-08-28T18:35:38Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from every prior pass — same
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the last pass — same
 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes (executor remains
-paused per prior notes, no live quotes available). `signals/candidates.json` remains the same
-stale Jul 15 funnel snapshot (44+ days old); none of the 13 held symbols appear in it, so it
-offers no fresh catalyst or adverse signal either way.
+paused, no live quotes available). `signals/candidates.json` remains the same stale Jul 15
+funnel snapshot (44+ days old); none of the 13 held symbols appear in it, so it offers no fresh
+catalyst or adverse signal either way.
 
-**Web search this run:** followed up on the priority flag from the prior pass — MNKD's Furoscix
-ReadyFlow autoinjector was guided for US commercial availability "by the end of August 2026,"
-which is now essentially this week. Search turned up the same FDA-approval coverage (approved
-Jul 24, 2026) and the same "expected commercially available by end of August 2026" guidance
-already on record — no delay announcement, no adverse update, but also no confirmed launch date
-yet. Status quo: catalyst still live and untriggered, nothing broken. Continues to be the name
-to watch closest — worth a dedicated re-check next run in case the launch (or a delay) is
-announced in the coming days.
+**Web search this run:** re-checked MNKD's Furoscix ReadyFlow launch window (guided for "by the
+end of August 2026," now essentially days away). Turned up incremental new detail beyond the
+prior pass: MannKind has since outlined a **$110M-$120M 2026 Furoscix revenue target** and
+reported ReadyFlow "ships in weeks" (Seeking Alpha), alongside an 8-K disclosing a **$50M private
+placement**. No delay announcement, no adverse update, and still no confirmed hard launch date —
+but the revenue guidance is new and reinforces the commercial thesis rather than undermining it.
+The private placement is routine financing, not a red flag. Catalyst remains live and untriggered;
+still the name to watch closest next run in case the launch (or a delay) is confirmed.
 
-All other holdings carry forward unchanged from prior verified passes (dedicated checks
-2026-08-14 through 2026-08-27, including BNAI's Q2 print closed out last run): no thesis has
+All other holdings carry forward unchanged from prior verified passes (dedicated checks through
+2026-08-27, including BNAI's Q2 print and TISI's Q2 beat already closed out): no thesis has
 broken, no catalyst has gone stale, and no drawdown alone is being treated as a sell signal per
 SELL_BRAIN.md's one rule.
 
-Sources: [MannKind Announces FDA Approval of Furoscix ReadyFlow](https://investors.mannkindcorp.com/news-releases/news-release-details/mannkind-announces-fda-approval-furoscix-readyflowtm-first-and), [FDA Approves Furosemide Injection (Furoscix ReadyFlow) for Edema in HF, CKD — HCPLive](https://www.hcplive.com/view/fda-approves-furosemide-injection-furoscix-readyflow-for-edema-in-hf-ckd)
+Sources: [MannKind outlines $110M-$120M 2026 Furoscix revenue target as ReadyFlow ships in weeks — Seeking Alpha](https://seekingalpha.com/news/4627187-mannkind-outlines-110m-120m-2026-furoscix-revenue-target-as-readyflow-ships-in-weeks), [Mannkind Wins FDA Nod For Furoscix ReadyFlow, Announces $50 Mln Private Placement — RTTNews](https://www.rttnews.com/3670514/mannkind-wins-fda-nod-for-furoscix-readyflow-announces-50-mln-private-placement.aspx)
 
 ---
 
@@ -65,8 +65,9 @@ substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst inside its guided launch window (end of Aug)
 FDA-approved Furoscix ReadyFlow remains guided for US commercial availability "by the end of
-August 2026" — checked this run, no change: no delay, no confirmed launch date yet, guidance
-unchanged. Window is closing; flagged again as the priority check next run.
+August 2026." New this run: $110M-$120M 2026 revenue target disclosed and "ships in weeks"
+language — incrementally positive, no delay, no confirmed launch date yet. Window is closing;
+still the priority check next run.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -100,7 +101,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
-| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch window (end of Aug) closing this week; re-checked, no delay or confirmation yet — watch closest next run |
+| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch window (end of Aug) closing; new $110-120M revenue target, ships in weeks, no delay |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery thesis w/ Nvidia partnership, not a pop trade |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent but durable DMD gene-therapy thesis intact, FDA-aligned Ph3 design |
