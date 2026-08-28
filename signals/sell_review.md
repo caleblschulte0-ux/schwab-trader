@@ -1,27 +1,32 @@
-# Sell Review — 2026-08-27T18:36:13Z
+# Sell Review — 2026-08-28T12:36:16Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from every prior pass — same
 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes (executor remains
 paused per prior notes, no live quotes available). `signals/candidates.json` remains the same
-stale Jul 15 funnel snapshot (43 days old); none of the 13 held symbols appear in it, so it
+stale Jul 15 funnel snapshot (44 days old); none of the 13 held symbols appear in it, so it
 offers no fresh catalyst or adverse signal either way.
 
-**Web search this run:** re-checked BNAI, the deepest-drawdown position flagged "watching
-closely" after its soft Q2 print. Found: BNAI has an earnings call scheduled for today,
-Aug 27, 2026 (1:00pm ET) to discuss Q2 2026 results, and the stock is trading up ~10% today
-on continued Cataneo GmbH integration news (completed $19.5M acquisition, new US commercial
-HQ on Madison Avenue for Cataneo's expansion). No adverse news, no fraud/restatement/deal-
-collapse signal — if anything, sentiment and price action are constructive today. Full
-post-call results weren't yet indexed at search time; will re-check next run for the actual
-print. Story (Cataneo integration / asset-base expansion) still being executed on.
+**Web search this run:** closed the loop on BNAI's Q2 2026 print (earnings call was Aug 27,
+result was pending as of last run). Results: revenue $160.1K, EPS $(0.49), net loss $3.36M —
+the core AI-agent product is still pre-commercial-scale, as expected. The bigger story is the
+Cataneo acquisition consolidation: total assets rose to $30.7M (from $15M at YE2025) and
+shareholders' equity rose to $19.4M (from $3.5M), with Cataneo contributing ~$5.3M of H1 revenue
+and $409K net income. Shares dipped slightly (~-0.6%) on the print itself. No formal forward
+guidance was given, no fraud/restatement/going-concern flag, no deal collapse — the balance
+sheet materially strengthened and the integration thesis (Cataneo as a real, profitable revenue
+base layered under the AI platform) is progressing as advertised, not broken. Holding through a
+soft top-line quarter with a strengthening balance sheet is exactly the "story intact, ignore the
+print's optics" case SELL_BRAIN.md asks for — not a reason to exit.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks
 2026-08-14 through 2026-08-27): no thesis has broken, no catalyst has gone stale, and no
-drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
+drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule. Flagging MNKD as
+the one to watch closest next run — its ReadyFlow launch was guided "by the end of August 2026,"
+which is now essentially this week; worth a dedicated check once there's room for another search.
 
-Sources: [BNAI Stock Price and Chart — TradingView](https://www.tradingview.com/symbols/NASDAQ-BNAI/), [Brand Engagement Network Provides Second Quarter Update (PR Newswire)](https://www.prnewswire.com/news-releases/brand-engagement-network-provides-second-quarter-update-302852167.html), [Brand Engagement (BNAI) Stock News & Updates (StockTitan)](https://www.stocktitan.net/news/BNAI/)
+Sources: [Earnings call transcript: Brand Engagement Network posts Q2 2026 loss as shares slide (Investing.com)](https://www.investing.com/news/transcripts/earnings-call-transcript-brand-engagement-network-posts-q2-2026-loss-as-shares-slide-93CH-4870286), [Brand Engagement Network Inc. Q2 2026: Revenue $160.1K, EPS $(0.49) — 10-Q Summary (TradingView)](https://www.tradingview.com/news/tradingview:d52dd855eeedd:0-brand-engagement-network-inc-q2-2026-revenue-160-1k-eps-0-49-10-q-summary/), [Brand Engagement Network Completes $19.5M Acquisition (StockTitan)](https://www.stocktitan.net/news/BNAI/brand-engagement-network-provides-second-quarter-m3fjh7nqqj4j.html)
 
 ---
 
@@ -46,9 +51,10 @@ US/Denmark/Netherlands, Canada + France clearance, new board appointments ahead 
 commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-This run's search found no adverse news — stock up ~10% today, Cataneo integration progressing
-(US commercial HQ established), Q2 earnings call scheduled for today with results not yet
-public. No fraud, restatement, or deal-collapse signal. Still watching for the actual print.
+Q2 print landed: thin core revenue ($160.1K) and a net loss, as expected pre-scale, but the
+Cataneo consolidation strengthened the balance sheet materially (assets $15M→$30.7M, equity
+$3.5M→$19.4M) with a real, profitable revenue base ($5.3M H1, $409K net income). No fraud,
+restatement, or deal-collapse signal. Story is progressing, not broken — hold.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -63,8 +69,10 @@ substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | binary catalyst inside its guided launch window (end of Aug)
 FDA-approved Furoscix ReadyFlow remains guided for US commercial availability "by the end of
-August 2026." Last run's check found firmer guidance ($110M-$120M 2026 revenue target, "ships
-in weeks") reinforcing the thesis. No delay, no adverse news. Hold through the launch.
+August 2026" — that window is now essentially this week. Last verified guidance ($110M-$120M
+2026 revenue target, "ships in weeks") reinforced the thesis with no delay signal. No search
+budget left this run to re-verify; flagged as the priority check next run given the window is
+closing.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -94,11 +102,11 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions |
-| BNAI   | Jun 10 | **HOLD** | Up ~10% today, Cataneo integration progressing; Q2 print due today, no adverse news yet |
+| BNAI   | Jun 10 | **HOLD** | Q2 print soft on core revenue but Cataneo consolidation tripled equity to $19.4M; no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
-| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch guided end-of-Aug; new $110-120M revenue guidance reinforces thesis |
+| MNKD   | Jun 10 | **HOLD** | ReadyFlow launch window (end of Aug) closing this week; last check showed no delay — re-verify next run |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery thesis w/ Nvidia partnership, not a pop trade |
 | SLDB   | Jun 4  | **HOLD** | Quick catalyst spent but durable DMD gene-therapy thesis intact, FDA-aligned Ph3 design |
