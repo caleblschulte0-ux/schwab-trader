@@ -1,24 +1,27 @@
-# Sell Review — 2026-09-02T12:35:59Z
+# Sell Review — 2026-09-02T15:36:42Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the last pass — same
 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes (executor remains
 paused, no live quotes available). `signals/candidates.json` remains the same stale Jul 15
-funnel snapshot (49+ days old); none of the 13 held symbols appear in it, so it offers no fresh
+funnel snapshot (~49 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked BNAI (deepest drawdown in the book) for anything new since the
-Aug 27 Q2 print / Cataneo consolidation reviewed in prior passes. Found a fresh, positive
-development: BNAI signed a **$2.05M AI licensing deal in Africa** (via the Valio
-Technologies/Skye Africa Intelligence partnership), adding incremental commercial revenue on top
-of the Cataneo base. No adverse news found. Story is progressing, not broken — reinforces HOLD.
+**Web search this run:** checked AVR (Anteris Technologies, DurAVR transcatheter valve —
+largest position by dollar cost) for anything new since the last dedicated check. Found only
+routine, neutral-to-positive news: management is presenting at three healthcare investor
+conferences in September 2026 (Cantor, Wells Fargo, Morgan Stanley), including a fireside chat
+on Sep 14. No adverse news, no trial setback, no going-concern signal — a company still actively
+engaging institutional investors ahead of commercialization is consistent with an intact thesis.
+Reinforces HOLD.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks through
-2026-09-01): no thesis has broken, no catalyst has gone stale, and no drawdown alone is being
-treated as a sell signal per SELL_BRAIN.md's one rule.
+2026-09-02, including BNAI's Africa AI licensing deal reviewed last run): no thesis has broken,
+no catalyst has gone stale, and no drawdown alone is being treated as a sell signal per
+SELL_BRAIN.md's one rule.
 
-Sources: [Brand Engagement Network inks $2.05M Africa AI deal — StockTitan](https://www.stocktitan.net/news/BNAI/brand-engagement-network-secures-2-050-million-ai-licensing-xylng72z2ko9.html), [BNAI Stock News & Updates — StockTitan](https://www.stocktitan.net/news/BNAI/)
+Sources: [Anteris to Present at September Healthcare Investor Conferences — GlobeNewswire](https://www.globenewswire.com/news-release/2026/08/31/3353649/0/en/anteris-to-present-at-september-healthcare-investor-conferences.html), [Anteris to Present at 3 Healthcare Conferences — StockTitan](https://www.stocktitan.net/news/AVR/anteris-to-present-at-september-healthcare-investor-zzc3og6maa4u.html)
 
 ---
 
@@ -40,12 +43,14 @@ ATH434 in MSA — no adverse news since.
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
 PARADIGM pivotal trial for DurAVR continues to advance — active recruitment across
 US/Denmark/Netherlands, Canada + France clearance, new board appointments ahead of
-commercialization. Thesis intact and reinforced, not broken.
+commercialization. New this run: management presenting at three September investor conferences
+(Cantor, Wells Fargo, Morgan Stanley) — routine, positive engagement, no adverse signal. Thesis
+intact and reinforced.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
 Q2 print (Aug 27): thin core revenue but Cataneo consolidation strengthened the balance sheet
-materially. New this run: a $2.05M Africa AI licensing deal adds incremental commercial revenue.
-No fraud, restatement, or deal-collapse signal. Story is progressing, not broken — hold.
+materially. Prior run found a $2.05M Africa AI licensing deal adding incremental commercial
+revenue. No fraud, restatement, or deal-collapse signal. Story is progressing, not broken — hold.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -90,13 +95,13 @@ No red flags.
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions |
-| BNAI   | Jun 10 | **HOLD** | New $2.05M Africa AI licensing deal adds to Cataneo revenue base; no adverse flag |
+| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions; Sep investor conferences booked |
+| BNAI   | Jun 10 | **HOLD** | Africa AI licensing deal adds to Cataneo revenue base; no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched commercially in late Aug, on schedule; story rolls into revenue-ramp thesis |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery thesis w/ Nvidia partnership, not a pop trade |
-| SLDB   | Jun 4  | **HOLD** | Quick catalyst spent but durable DMD gene-therapy thesis intact, FDA-aligned Ph3 design |
-| TISI   | Jun 4  | **HOLD** | Q2 print beat on EPS/revenue/margin/EBITDA — turnaround thesis confirmed |
+| SLDB   | Jun 4  | **HOLD** | Quick catalyst spent but durable gene-therapy conviction thesis (Ph3 trial design aligned) intact |
+| TISI   | Jun 4  | **HOLD** | Q2 print beat across revenue, margin, EBITDA — turnaround thesis confirmed |
