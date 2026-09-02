@@ -1,26 +1,24 @@
-# Sell Review — 2026-09-01T18:35:59Z
+# Sell Review — 2026-09-02T12:35:59Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the last pass — same
 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes (executor remains
 paused, no live quotes available). `signals/candidates.json` remains the same stale Jul 15
-funnel snapshot (48+ days old); none of the 13 held symbols appear in it, so it offers no fresh
+funnel snapshot (49+ days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** re-checked MNKD's Furoscix ReadyFlow launch, since the "by end of
-August 2026" window flagged in the prior two passes has now passed (today is Sep 1). Confirmed:
-FDA approved Furoscix ReadyFlow Jul 23, 2026, and the autoinjector reached **commercial
-availability in the US in late August 2026 as guided — no delay**. This resolves the binary
-launch-timing risk that was the top thing to watch. The forward catalyst now shifts from
-"will it launch on time" to "will it hit the disclosed $110M-$120M 2026 revenue target" (tracked
-at the Q3/Q4 prints). No adverse news found. Thesis reinforced, not spent — HOLD.
+**Web search this run:** checked BNAI (deepest drawdown in the book) for anything new since the
+Aug 27 Q2 print / Cataneo consolidation reviewed in prior passes. Found a fresh, positive
+development: BNAI signed a **$2.05M AI licensing deal in Africa** (via the Valio
+Technologies/Skye Africa Intelligence partnership), adding incremental commercial revenue on top
+of the Cataneo base. No adverse news found. Story is progressing, not broken — reinforces HOLD.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks through
-2026-08-28): no thesis has broken, no catalyst has gone stale, and no drawdown alone is being
+2026-09-01): no thesis has broken, no catalyst has gone stale, and no drawdown alone is being
 treated as a sell signal per SELL_BRAIN.md's one rule.
 
-Sources: [MannKind Announces FDA Approval of Furoscix ReadyFlow](https://investors.mannkindcorp.com/news-releases/news-release-details/mannkind-announces-fda-approval-furoscix-readyflowtm-first-and), [MannKind outlines $110M-$120M 2026 Furoscix revenue target as ReadyFlow ships in weeks — Seeking Alpha](https://seekingalpha.com/news/4627187-mannkind-outlines-110m-120m-2026-furoscix-revenue-target-as-readyflow-ships-in-weeks)
+Sources: [Brand Engagement Network inks $2.05M Africa AI deal — StockTitan](https://www.stocktitan.net/news/BNAI/brand-engagement-network-secures-2-050-million-ai-licensing-xylng72z2ko9.html), [BNAI Stock News & Updates — StockTitan](https://www.stocktitan.net/news/BNAI/)
 
 ---
 
@@ -45,10 +43,9 @@ US/Denmark/Netherlands, Canada + France clearance, new board appointments ahead 
 commercialization. Thesis intact and reinforced, not broken.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Q2 print (reported Aug 27): thin core revenue ($160.1K) and a net loss, as expected pre-scale,
-but the Cataneo consolidation strengthened the balance sheet materially (assets $15M→$30.7M,
-equity $3.5M→$19.4M) with a real, profitable revenue base ($5.3M H1, $409K net income). No
-fraud, restatement, or deal-collapse signal. Story is progressing, not broken — hold.
+Q2 print (Aug 27): thin core revenue but Cataneo consolidation strengthened the balance sheet
+materially. New this run: a $2.05M Africa AI licensing deal adds incremental commercial revenue.
+No fraud, restatement, or deal-collapse signal. Story is progressing, not broken — hold.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -63,8 +60,8 @@ substantive news. No new adverse development found this run.
 
 **MNKD — HOLD** | opened Jun 10 | launch catalyst resolved on schedule
 Furoscix ReadyFlow reached US commercial availability in late August 2026, as guided, with no
-delay. Binary launch-timing risk is now off the table; the story rolls forward into a revenue-ramp
-thesis ($110M-$120M 2026 target) tracked at upcoming quarterly prints. Reinforced, not spent.
+delay. Binary launch-timing risk is off the table; story rolls into a revenue-ramp thesis
+($110M-$120M 2026 target) tracked at upcoming quarterly prints. Reinforced, not spent.
 
 **PLSE — HOLD** | opened Jun 5
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
@@ -80,9 +77,9 @@ conviction thesis holds: FDA aligned on the Phase 3 IMPACT DUCHENNE trial design
 positive Phase 1/2 interim data. No adverse signal since.
 
 **TISI — HOLD** | opened Jun 4 | Q2 2026 print landed, beat, thesis confirmed
-Reported EPS ($1.73) vs. consensus ($5.94) — a large beat — with 8.5% revenue growth, 7.1% higher
-gross margin, 12.4% adjusted EBITDA growth YoY. Directly validates the turnaround thesis (growth,
-margin expansion, EBITDA growth) the position was held for. No red flags.
+Reported EPS beat vs. consensus with 8.5% revenue growth, 7.1% higher gross margin, 12.4%
+adjusted EBITDA growth YoY. Directly validates the turnaround thesis the position was held for.
+No red flags.
 
 ---
 
@@ -94,7 +91,7 @@ margin expansion, EBITDA growth) the position was held for. No red flags.
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions |
-| BNAI   | Jun 10 | **HOLD** | Q2 print soft on core revenue but Cataneo consolidation tripled equity to $19.4M; no adverse flag |
+| BNAI   | Jun 10 | **HOLD** | New $2.05M Africa AI licensing deal adds to Cataneo revenue base; no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
