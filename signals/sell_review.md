@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-03T12:39:47Z
+# Sell Review — 2026-09-03T15:36:16Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -8,19 +8,21 @@ paused, no live quotes available). `signals/candidates.json` remains the same st
 funnel snapshot (~50 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked AVR (Anteris Technologies — largest position by dollar cost)
-for anything new on the DurAVR PARADIGM pivotal trial since the last dedicated check. Found only
-previously-known, routine progress: global recruitment continuing across US/Denmark/Netherlands
-with Canada + France clearance, and the September healthcare-investor-conference schedule
-(Cantor, Wells Fargo, Morgan Stanley) confirmed. No trial failure, safety signal, halt, or
-adverse regulatory action turned up. Story is progressing on the same terms as the prior
-verified pass, not broken. Reinforces HOLD.
+**Web search this run:** checked GASS (StealthGas — LPG shipping, one of the largest positions
+by cost) for anything new since the last dedicated check. Found a fresh, favorable data point:
+Q2 2026 earnings landed Sept 2 — profit $17.3M (up from $15.9M in Q1), EPS $0.46 for the quarter
+/ $0.89 for H1, and the balance sheet is now fully debt-free (>$350M prepaid since 2023) with a
+record $250M+ cash position. ~60% of remaining-2026 fee days are already booked (~$50M revenue)
+plus ~$30M booked for 2027. Freight rates are holding up despite an 8% drop in global LPG export
+volumes tied to the Iran/Strait of Hormuz disruption, because ton-mile demand rose as more cargo
+sourced from the US. No adverse development — thesis reinforced, not spent.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks through
-2026-09-02, including yesterday's BNAI deep-check): no thesis has broken, no catalyst has gone
-stale, and no drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
+2026-09-03, including today's AVR deep-check and yesterday's BNAI check): no thesis has broken,
+no catalyst has gone stale, and no drawdown alone is being treated as a sell signal per
+SELL_BRAIN.md's one rule.
 
-Sources: [Anteris to Present at 3 Healthcare Conferences — StockTitan](https://www.stocktitan.net/news/AVR/anteris-to-present-at-september-healthcare-investor-zzc3og6maa4u.html), [Anteris Advances DurAVR Toward Commercialization; PARADIGM Trial Expands U.S. Recruitment — RTTNews](https://www.rttnews.com/3679469/anteris-advances-duravr-toward-commercialization-paradigm-trial-expands-u-s-recruitment.aspx)
+Sources: [StealthGas Inc (GASS) Q2 2026 Earnings Call Highlights — Yahoo Finance](https://ca.finance.yahoo.com/news/stealthgas-inc-gass-q2-2026-210050674.html), [StealthGas (GASS) Q2 2026 Earnings Call Transcript — The Motley Fool](https://www.fool.com/earnings/call-transcripts/2026/09/02/stealthgas-gass-q2-2026-earnings-call-transcript/)
 
 ---
 
@@ -40,7 +42,7 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-This run's dedicated web search confirmed the PARADIGM pivotal trial for DurAVR continues to
+Today's dedicated web search confirmed the PARADIGM pivotal trial for DurAVR continues to
 advance — active recruitment across US/Denmark/Netherlands, Canada + France clearance, and a
 confirmed September investor-conference schedule (Cantor, Wells Fargo, Morgan Stanley) ahead of
 commercialization. No adverse signal found. Thesis intact.
@@ -58,8 +60,10 @@ for Q4 2026 — event still hasn't arrived. No new adverse signal this run.
 Vertical Aerospace certification milestones remain live, untriggered catalysts. Nothing adverse.
 
 **GASS — HOLD** | opened Jun 5
-Eco Wizard insurance resolution + safe vessel exit from the Persian Gulf remains the latest
-substantive news. No new adverse development found this run.
+This run's dedicated web search: Q2 2026 results (Sept 2) beat sequentially, balance sheet now
+debt-free with record $250M+ cash, and ~$50M of 2026 revenue plus ~$30M of 2027 revenue already
+booked via fee days. Freight rates resilient despite Strait of Hormuz disruption. Thesis
+reinforced, not spent.
 
 **MNKD — HOLD** | opened Jun 10 | launch catalyst resolved on schedule
 Furoscix ReadyFlow reached US commercial availability in late August 2026, as guided, with no
@@ -97,7 +101,7 @@ No red flags.
 | BNAI   | Jun 10 | **HOLD** | Cataneo close, Russell 3000A, Africa MOU carried forward — no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
-| GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
+| GASS   | Jun 5  | **HOLD** | Fresh check: Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched commercially in late Aug, on schedule; story rolls into revenue-ramp thesis |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery thesis w/ Nvidia partnership, not a pop trade |
