@@ -1,26 +1,26 @@
-# Sell Review — 2026-09-02T18:35:36Z
+# Sell Review — 2026-09-03T12:39:47Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the last pass — same
 13 symbols, quantities, avg_price, and opened_utc; no new fills, no closes (executor remains
 paused, no live quotes available). `signals/candidates.json` remains the same stale Jul 15
-funnel snapshot (~49 days old); none of the 13 held symbols appear in it, so it offers no fresh
+funnel snapshot (~50 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked BNAI (Brand Engagement Network — deepest drawdown in the
-book) for anything new since the last dedicated check. Found only previously-known, routine
-items: the completed Cataneo GmbH acquisition ($19.5M, closed Jun 30, total assets up to $30.7M
-from $15.3M), the Russell 3000A inclusion, and the Skye Africa Intelligence health-AI MOU. No
-fraud, restatement, going-concern signal, or deal collapse — nothing new and adverse turned up.
-Story is progressing on the same terms as the prior verified pass, not broken. Reinforces HOLD.
+**Web search this run:** checked AVR (Anteris Technologies — largest position by dollar cost)
+for anything new on the DurAVR PARADIGM pivotal trial since the last dedicated check. Found only
+previously-known, routine progress: global recruitment continuing across US/Denmark/Netherlands
+with Canada + France clearance, and the September healthcare-investor-conference schedule
+(Cantor, Wells Fargo, Morgan Stanley) confirmed. No trial failure, safety signal, halt, or
+adverse regulatory action turned up. Story is progressing on the same terms as the prior
+verified pass, not broken. Reinforces HOLD.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks through
-2026-09-02, including AVR's September investor-conference schedule reviewed last run): no
-thesis has broken, no catalyst has gone stale, and no drawdown alone is being treated as a sell
-signal per SELL_BRAIN.md's one rule.
+2026-09-02, including yesterday's BNAI deep-check): no thesis has broken, no catalyst has gone
+stale, and no drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
 
-Sources: [Brand Engagement Network — StockTitan news](https://www.stocktitan.net/news/BNAI/), [Brand Engagement Network Completes $19.5M Acquisition — StockTitan](https://www.stocktitan.net/news/BNAI/brand-engagement-network-provides-second-quarter-m3fjh7nqqj4j.html), [BNAI — CNBC quote/news](https://www.cnbc.com/quotes/BNAI)
+Sources: [Anteris to Present at 3 Healthcare Conferences — StockTitan](https://www.stocktitan.net/news/AVR/anteris-to-present-at-september-healthcare-investor-zzc3og6maa4u.html), [Anteris Advances DurAVR Toward Commercialization; PARADIGM Trial Expands U.S. Recruitment — RTTNews](https://www.rttnews.com/3679469/anteris-advances-duravr-toward-commercialization-paradigm-trial-expands-u-s-recruitment.aspx)
 
 ---
 
@@ -40,13 +40,13 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-PARADIGM pivotal trial for DurAVR continues to advance — active recruitment across
-US/Denmark/Netherlands, Canada + France clearance, new board appointments, and a September
-investor-conference schedule (Cantor, Wells Fargo, Morgan Stanley) booked ahead of
-commercialization. No adverse signal this run. Thesis intact.
+This run's dedicated web search confirmed the PARADIGM pivotal trial for DurAVR continues to
+advance — active recruitment across US/Denmark/Netherlands, Canada + France clearance, and a
+confirmed September investor-conference schedule (Cantor, Wells Fargo, Morgan Stanley) ahead of
+commercialization. No adverse signal found. Thesis intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-This run's dedicated web search confirmed the Cataneo acquisition close, Russell 3000A
+Carried forward from yesterday's dedicated web search: Cataneo acquisition close, Russell 3000A
 inclusion, and Africa health-AI MOU remain the operative story with no new adverse development —
 no fraud, restatement, or deal-collapse signal. Story is progressing, not broken — hold.
 
@@ -93,8 +93,8 @@ No red flags.
 | ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + new clearances + board additions; Sep investor conferences booked |
-| BNAI   | Jun 10 | **HOLD** | Fresh check confirms Cataneo close, Russell 3000A, Africa MOU — no adverse flag |
+| AVR    | Jun 8  | **HOLD** | Fresh check: PARADIGM trial expanding recruitment + clearances; Sep investor conferences confirmed |
+| BNAI   | Jun 10 | **HOLD** | Cataneo close, Russell 3000A, Africa MOU carried forward — no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Eco Wizard insurance resolved, safe Persian Gulf exit; no adverse news |
