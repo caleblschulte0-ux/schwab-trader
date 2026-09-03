@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-03T15:36:16Z
+# Sell Review — 2026-09-03T18:36:34Z
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -8,29 +8,33 @@ paused, no live quotes available). `signals/candidates.json` remains the same st
 funnel snapshot (~50 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked GASS (StealthGas — LPG shipping, one of the largest positions
-by cost) for anything new since the last dedicated check. Found a fresh, favorable data point:
-Q2 2026 earnings landed Sept 2 — profit $17.3M (up from $15.9M in Q1), EPS $0.46 for the quarter
-/ $0.89 for H1, and the balance sheet is now fully debt-free (>$350M prepaid since 2023) with a
-record $250M+ cash position. ~60% of remaining-2026 fee days are already booked (~$50M revenue)
-plus ~$30M booked for 2027. Freight rates are holding up despite an 8% drop in global LPG export
-volumes tied to the Iran/Strait of Hormuz disruption, because ton-mile demand rose as more cargo
-sourced from the US. No adverse development — thesis reinforced, not spent.
+**Web search this run:** checked ABSI (Absci — a dilutive-offering name with a live clinical
+catalyst) for anything new since the last dedicated check. Absci confirmed participation in two
+investor conferences this month — H.C. Wainwright (Sept 15) and Morgan Stanley Global Healthcare
+(Sept 16) — keeping visibility live. The only negative datapoint found was old and already
+priced-in: Morgan Stanley's January 2026 downgrade after disappointing ABS-101 (IBD) half-life
+data, which predates this position (opened Jun 10) and predates the pivot to ABS-201
+(androgenetic alopecia) as the operative thesis. Since then, sentiment has moved the other way —
+Guggenheim raised its target from $10 to $15 on the AI-native pipeline and ABS-201
+proof-of-concept data, and the $100M offering that caused the drawdown included a $40M strategic
+investment from Eli Lilly. No adverse development this run — thesis reinforced, not spent.
 
 All other holdings carry forward unchanged from prior verified passes (dedicated checks through
-2026-09-03, including today's AVR deep-check and yesterday's BNAI check): no thesis has broken,
-no catalyst has gone stale, and no drawdown alone is being treated as a sell signal per
-SELL_BRAIN.md's one rule.
+2026-09-03, including AVR, BNAI, and GASS): no thesis has broken, no catalyst has gone stale, and
+no drawdown alone is being treated as a sell signal per SELL_BRAIN.md's one rule.
 
-Sources: [StealthGas Inc (GASS) Q2 2026 Earnings Call Highlights — Yahoo Finance](https://ca.finance.yahoo.com/news/stealthgas-inc-gass-q2-2026-210050674.html), [StealthGas (GASS) Q2 2026 Earnings Call Transcript — The Motley Fool](https://www.fool.com/earnings/call-transcripts/2026/09/02/stealthgas-gass-q2-2026-earnings-call-transcript/)
+Sources: [Absci to Participate in Upcoming Investor Conferences — GlobeNewswire](https://www.globenewswire.com/news-release/2026/09/01/3354064/0/en/absci-to-participate-in-upcoming-investor-conferences.html), [Analysts Cut Absci (ABSI) Target, Spotlight New Alopecia Therapy in Early Trials — Insider Monkey](https://www.insidermonkey.com/blog/analysts-cut-absci-absi-target-spotlight-new-alopecia-therapy-in-early-trials-1674053/)
 
 ---
 
 ## Per-Position Rulings
 
 **ABSI — HOLD** | opened Jun 10 | red on cost basis
-Clean Phase 1/2a data (ABS-201) + analyst PT hikes; drawdown traced to a $100M dilutive offering
-priced at $7.41, not a broken thesis. No new information this run.
+This run's dedicated check: no new adverse news. The Jan 2026 downgrade (ABS-101 IBD data) is
+old and already reflected in the pullback; the operative thesis has since shifted to ABS-201
+(alopecia), reinforced by a Guggenheim target hike to $15 and a $40M Eli Lilly strategic
+investment in the July offering. Two investor conferences confirmed this month keep the story
+live.
 
 **APLD — HOLD** | opened Jun 9 | large position by avg cost
 FY2026 Q4 results badly beat (revenue +407% YoY) and the company signed 15-year take-or-pay
@@ -42,15 +46,15 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-Today's dedicated web search confirmed the PARADIGM pivotal trial for DurAVR continues to
-advance — active recruitment across US/Denmark/Netherlands, Canada + France clearance, and a
-confirmed September investor-conference schedule (Cantor, Wells Fargo, Morgan Stanley) ahead of
+Prior dedicated web search confirmed the PARADIGM pivotal trial for DurAVR continues to advance —
+active recruitment across US/Denmark/Netherlands, Canada + France clearance, and a confirmed
+September investor-conference schedule (Cantor, Wells Fargo, Morgan Stanley) ahead of
 commercialization. No adverse signal found. Thesis intact.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Carried forward from yesterday's dedicated web search: Cataneo acquisition close, Russell 3000A
-inclusion, and Africa health-AI MOU remain the operative story with no new adverse development —
-no fraud, restatement, or deal-collapse signal. Story is progressing, not broken — hold.
+Carried forward: Cataneo acquisition close, Russell 3000A inclusion, and Africa health-AI MOU
+remain the operative story with no new adverse development — no fraud, restatement, or
+deal-collapse signal. Story is progressing, not broken — hold.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -60,7 +64,7 @@ for Q4 2026 — event still hasn't arrived. No new adverse signal this run.
 Vertical Aerospace certification milestones remain live, untriggered catalysts. Nothing adverse.
 
 **GASS — HOLD** | opened Jun 5
-This run's dedicated web search: Q2 2026 results (Sept 2) beat sequentially, balance sheet now
+Prior dedicated web search: Q2 2026 results (Sept 2) beat sequentially, balance sheet now
 debt-free with record $250M+ cash, and ~$50M of 2026 revenue plus ~$30M of 2027 revenue already
 booked via fee days. Freight rates resilient despite Strait of Hormuz disruption. Thesis
 reinforced, not spent.
@@ -94,14 +98,14 @@ No red flags.
 
 | Symbol | Opened | Decision | One-line reason |
 |--------|--------|----------|-----------------|
-| ABSI   | Jun 10 | **HOLD** | Clean Ph1/2a data + analyst PT hikes; pullback is a dilutive offering, not a broken thesis |
+| ABSI   | Jun 10 | **HOLD** | Fresh check: Jan downgrade was old/priced-in ABS-101 news; ABS-201 pivot reinforced by Guggenheim target hike + $40M Lilly stake |
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | Fresh check: PARADIGM trial expanding recruitment + clearances; Sep investor conferences confirmed |
+| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + clearances; Sep investor conferences confirmed |
 | BNAI   | Jun 10 | **HOLD** | Cataneo close, Russell 3000A, Africa MOU carried forward — no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
-| GASS   | Jun 5  | **HOLD** | Fresh check: Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
+| GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched commercially in late Aug, on schedule; story rolls into revenue-ramp thesis |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery thesis w/ Nvidia partnership, not a pop trade |
