@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-04T12:38:55Z
+# Sell Review — 2026-09-04T15:36:04+00:00
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -8,28 +8,27 @@ paused, no live quotes available). `signals/candidates.json` remains the same st
 funnel snapshot (~51 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked BNAI (Brand Engagement Network — the deepest drawdown in the
-book, so highest bar for "is the story still alive"). Confirmed the Cataneo AI Software
-acquisition closed as previously known, with the acquired operations delivering $5.3M in 1H26
-revenue. No new adverse development found (no fraud, restatement, deal-collapse, or guidance
-cut). Stock remains far below cost basis, but per SELL_BRAIN.md a drawdown alone is not a sell
-signal — the acquisition/Russell-inclusion/Africa-MOU story is still intact.
+**Web search this run:** checked AVR (Anteris Technologies, largest position by dollar cost) —
+confirmed CEO Wayne Paterson is presenting at three September 2026 healthcare investor
+conferences (Cantor Global Healthcare, Wells Fargo 21st Annual Healthcare, Morgan Stanley), as
+previously flagged as an upcoming catalyst. No adverse news (no trial failure, no safety signal,
+no financing distress) found on DurAVR or the PARADIGM pivotal trial. Thesis intact.
 
-All other holdings carry forward unchanged from prior dedicated checks (through 2026-09-03,
-covering ABSI, APLD, ATHE, AVR, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI): no thesis has
-broken, no catalyst has gone stale, and no drawdown alone is being treated as a sell signal.
+All other holdings carry forward unchanged from the prior dedicated checks (through
+2026-09-04T12:38Z, covering ABSI, APLD, ATHE, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB,
+TISI): no thesis has broken, no catalyst has gone stale, and no drawdown alone is being treated
+as a sell signal.
 
-Sources: [Brand Engagement Network, Inc. (BNAI) Stock Price, News, Quote & History — Yahoo Finance](https://finance.yahoo.com/quote/BNAI/), [Brand Engagement Network Inc. Common Stock (BNAI) Latest Press Releases and Corporate News — Nasdaq](https://www.nasdaq.com/market-activity/stocks/bnai/press-releases)
+Sources: [Anteris to Present at September 2026 Healthcare Investor Conferences — BioSpace](https://www.biospace.com/press-releases/anteris-to-present-at-september-2026-healthcare-investor-conferences), [Anteris to Present at September Healthcare Investor Conferences — GlobeNewswire](https://www.globenewswire.com/news-release/2026/08/31/3353649/0/en/anteris-to-present-at-september-healthcare-investor-conferences.html)
 
 ---
 
 ## Per-Position Rulings
 
 **ABSI — HOLD** | opened Jun 10 | red on cost basis
-Carried forward from 2026-09-03 dedicated check: Jan 2026 downgrade (ABS-101 IBD data) is old
-and already priced in; operative thesis has shifted to ABS-201 (alopecia), reinforced by a
-Guggenheim target hike to $15 and a $40M Eli Lilly strategic investment. Two investor
-conferences (Sept 15, 16) still ahead. No new adverse signal.
+Operative thesis is ABS-201 (alopecia), reinforced by a Guggenheim target hike to $15 and a
+$40M Eli Lilly strategic investment. Two investor conferences (Sept 15, 16) still ahead. No new
+adverse signal.
 
 **APLD — HOLD** | opened Jun 9 | large position by avg cost
 FY2026 Q4 results badly beat (revenue +407% YoY) and the company signed 15-year take-or-pay
@@ -40,14 +39,13 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-PARADIGM pivotal trial for DurAVR continues to advance — active recruitment, Canada + France
-clearance, and a confirmed September investor-conference schedule (Cantor, Wells Fargo, Morgan
-Stanley) ahead of commercialization. No adverse signal.
+This run's dedicated check: PARADIGM pivotal trial for DurAVR continues to advance; CEO
+confirmed to present at three September investor conferences (Cantor, Wells Fargo, Morgan
+Stanley). No adverse signal.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-This run's dedicated check: Cataneo acquisition closed, $5.3M 1H26 revenue from the acquired
-operations confirmed, no fraud/restatement/deal-collapse signal found. Story progressing, not
-broken.
+Cataneo acquisition closed, $5.3M 1H26 revenue from the acquired operations confirmed, no
+fraud/restatement/deal-collapse signal found. Story progressing, not broken.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -87,11 +85,11 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 
 | Symbol | Opened | Decision | One-line reason |
 |--------|--------|----------|-----------------|
-| ABSI   | Jun 10 | **HOLD** | ABS-201 pivot reinforced by Guggenheim target hike + $40M Lilly stake; Jan downgrade old/priced-in |
+| ABSI   | Jun 10 | **HOLD** | ABS-201 pivot reinforced by Guggenheim target hike + $40M Lilly stake; Sept investor conferences ahead |
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | PARADIGM trial expanding recruitment + clearances; Sep investor conferences confirmed |
-| BNAI   | Jun 10 | **HOLD** | Fresh check: Cataneo close confirmed, $5.3M 1H26 revenue, no adverse flag |
+| AVR    | Jun 8  | **HOLD** | Fresh check: PARADIGM trial advancing, Sept investor conferences confirmed, no adverse signal |
+| BNAI   | Jun 10 | **HOLD** | Cataneo close confirmed, $5.3M 1H26 revenue, no adverse flag |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
