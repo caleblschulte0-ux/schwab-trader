@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-07T12:35:50+00:00
+# Sell Review — 2026-09-07T15:35:46+00:00
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -8,18 +8,20 @@ paused, no live quotes available). `signals/candidates.json` remains the same st
 funnel snapshot (~54 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked AVR (Anteris Technologies, largest position by dollar cost) —
-confirmed CEO Wayne Paterson is still slated to present at the Cantor Global Healthcare
-Conference and the Wells Fargo 21st Annual Healthcare Conference in September 2026, consistent
-with prior checks. No fraud, restatement, going-concern, or trial-failure news found. DurAVR
-THV program remains on track. Thesis unchanged and intact.
+**Web search this run:** checked BNAI (Brand Engagement Network — deepest drawdown in the book).
+Confirmed the Cataneo GmbH acquisition closed on schedule (June 30, 2026) and the ~$5.3M 1H26
+Cataneo revenue contribution is corroborated by the company's own 8-K/press materials. No fraud,
+restatement, active going-concern warning, or current delisting notice found (an older Nasdaq
+minimum-bid-price notice predates the Cataneo close and appears resolved via a compliance
+extension). No executive departures or failed-deal news since early September. Thesis intact
+despite the large drawdown — this is a deep red mark on an unbroken story, not a broken one.
 
-All other holdings carry forward unchanged from the prior dedicated checks (through
-2026-09-04T18:36Z, covering ABSI, APLD, ATHE, BNAI, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB,
-TISI): no thesis has broken, no catalyst has gone stale, and no drawdown alone is being treated
-as a sell signal.
+All other holdings carry forward unchanged from the prior dedicated checks (AVR checked this
+morning at 2026-09-07T12:35Z; ABSI, APLD, ATHE, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI
+checked through 2026-09-04T18:36Z): no thesis has broken, no catalyst has gone stale, and no
+drawdown alone is being treated as a sell signal.
 
-Sources: [Anteris to Present at September 2026 Healthcare Investor Conferences – BioSpace](https://www.biospace.com/press-releases/anteris-to-present-at-september-2026-healthcare-investor-conferences), [Anteris Technologies Global Corp. (AVR) – Yahoo Finance](https://finance.yahoo.com/quote/AVR/)
+Sources: [Brand Engagement Network completes Cataneo acquisition (PRNewswire)](https://www.prnewswire.com/news-releases/brand-engagement-network-completes-acquisition-of-cataneo-302814731.html), [BNAI Form 8-K FY2026 (SEC)](https://www.sec.gov/Archives/edgar/data/0001838163/000149315226038510/ex99-1.htm), [Brand Engagement Network Nasdaq compliance extension (Investing.com)](https://www.investing.com/news/sec-filings/brand-engagement-network-receives-extension-from-nasdaq-to-regain-compliance-93CH-4120856)
 
 ---
 
@@ -27,7 +29,7 @@ Sources: [Anteris to Present at September 2026 Healthcare Investor Conferences �
 
 **ABSI — HOLD** | opened Jun 10 | red on cost basis
 Operative thesis is ABS-201 (alopecia), reinforced by a Guggenheim target hike to $15 and a
-$40M Eli Lilly strategic investment. Two investor conferences (Sept 15, 16) still ahead. No new
+$40M Eli Lilly strategic investment. Investor conferences (Sept 15, 16) still ahead. No new
 adverse signal.
 
 **APLD — HOLD** | opened Jun 9 | large position by avg cost
@@ -39,14 +41,14 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-This run's dedicated check: CEO confirmed presenting at Cantor and Wells Fargo healthcare
-conferences in September, DurAVR THV program on track. PARADIGM pivotal trial thesis intact, no
-adverse signal.
+Last dedicated check (this morning): CEO confirmed presenting at Cantor and Wells Fargo
+healthcare conferences in September, DurAVR THV program on track. PARADIGM pivotal trial thesis
+intact, no adverse signal.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Cataneo acquisition and its $5.3M 1H26 revenue contribution confirmed current as of the last
-dedicated check (Sept 4); no fraud/restatement/deal-collapse signal found since. Large drawdown,
-story still progressing, not broken.
+This run's dedicated check: Cataneo GmbH acquisition closed on schedule, ~$5.3M 1H26 revenue
+confirmed, no fraud/restatement/active delisting/failed-deal signal found. Large drawdown, story
+still progressing, not broken.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -89,8 +91,8 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 | ABSI   | Jun 10 | **HOLD** | ABS-201 pivot reinforced by Guggenheim target hike + $40M Lilly stake; Sept investor conferences ahead |
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
-| AVR    | Jun 8  | **HOLD** | Fresh check: Cantor/Wells Fargo conference slots confirmed, DurAVR program on track, no adverse signal |
-| BNAI   | Jun 10 | **HOLD** | Cataneo integration + $5.3M 1H26 revenue confirmed as of last check, no adverse flag despite deep drawdown |
+| AVR    | Jun 8  | **HOLD** | Cantor/Wells Fargo conference slots confirmed, DurAVR program on track, no adverse signal |
+| BNAI   | Jun 10 | **HOLD** | Fresh check: Cataneo acquisition closed on schedule, $5.3M 1H26 revenue confirmed, no fraud/delisting flag despite deep drawdown |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
