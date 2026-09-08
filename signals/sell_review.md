@@ -1,36 +1,38 @@
-# Sell Review — 2026-09-07T15:35:46+00:00
+# Sell Review — 2026-09-08T12:36:02+00:00
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged from the prior pass — same 13
 symbols, quantities, avg_price, and opened_utc; no new fills, no closes (executor remains
 paused, no live quotes available). `signals/candidates.json` remains the same stale Jul 15
-funnel snapshot (~54 days old); none of the 13 held symbols appear in it, so it offers no fresh
+funnel snapshot (~55 days old); none of the 13 held symbols appear in it, so it offers no fresh
 catalyst or adverse signal either way.
 
-**Web search this run:** checked BNAI (Brand Engagement Network — deepest drawdown in the book).
-Confirmed the Cataneo GmbH acquisition closed on schedule (June 30, 2026) and the ~$5.3M 1H26
-Cataneo revenue contribution is corroborated by the company's own 8-K/press materials. No fraud,
-restatement, active going-concern warning, or current delisting notice found (an older Nasdaq
-minimum-bid-price notice predates the Cataneo close and appears resolved via a compliance
-extension). No executive departures or failed-deal news since early September. Thesis intact
-despite the large drawdown — this is a deep red mark on an unbroken story, not a broken one.
+**Web search this run:** checked ABSI (upcoming Sept 15–16 investor conferences were flagged
+last pass as a near-term catalyst window). Confirmed Absci is still slated to present a fireside
+chat at the H.C. Wainwright conference Sept 15 and the Morgan Stanley healthcare conference Sept
+16, 2026. Stock has run to ~$8.76 (well above the $7.12 cost basis, +60% 30-day / +150% 90-day)
+on positive interim Phase 1 HEADLINE data for ABS-201 and the completed $100M raise (incl. the
+$40M Lilly strategic investment). One analyst trimmed a price target while highlighting a newer
+early-stage alopecia therapy in the pipeline — a minor rebalancing note, not an adverse signal.
+Next binary catalyst (ABS-201 Phase 2 expansion) is dated Oct 1, 2026, still ahead. Thesis
+intact and strengthening, not broken.
 
-All other holdings carry forward unchanged from the prior dedicated checks (AVR checked this
-morning at 2026-09-07T12:35Z; ABSI, APLD, ATHE, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI
-checked through 2026-09-04T18:36Z): no thesis has broken, no catalyst has gone stale, and no
-drawdown alone is being treated as a sell signal.
+All other holdings carry forward unchanged from the prior dedicated checks (AVR and BNAI checked
+2026-09-07; APLD, ATHE, CLLS, EVTL, GASS, MNKD, PLSE, RXRX, SLDB, TISI checked through
+2026-09-04T18:36Z): no thesis has broken, no catalyst has gone stale, and no drawdown alone is
+being treated as a sell signal.
 
-Sources: [Brand Engagement Network completes Cataneo acquisition (PRNewswire)](https://www.prnewswire.com/news-releases/brand-engagement-network-completes-acquisition-of-cataneo-302814731.html), [BNAI Form 8-K FY2026 (SEC)](https://www.sec.gov/Archives/edgar/data/0001838163/000149315226038510/ex99-1.htm), [Brand Engagement Network Nasdaq compliance extension (Investing.com)](https://www.investing.com/news/sec-filings/brand-engagement-network-receives-extension-from-nasdaq-to-regain-compliance-93CH-4120856)
+Sources: [Absci to Join Two Investor Conferences Sept. 15-16 (StockTitan)](https://www.stocktitan.net/news/ABSI/absci-to-participate-in-upcoming-investor-vmguahfxz7ql.html), [Analysts Cut Absci (ABSI) Target, Spotlight New Alopecia Therapy in Early Trials (Yahoo Finance)](https://finance.yahoo.com/news/analysts-cut-absci-absi-target-191349776.html), [Absci (Nasdaq:ABSI) - Stock Analysis (Simply Wall St)](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-absi/absci)
 
 ---
 
 ## Per-Position Rulings
 
-**ABSI — HOLD** | opened Jun 10 | red on cost basis
-Operative thesis is ABS-201 (alopecia), reinforced by a Guggenheim target hike to $15 and a
-$40M Eli Lilly strategic investment. Investor conferences (Sept 15, 16) still ahead. No new
-adverse signal.
+**ABSI — HOLD** | opened Jun 10 | up on cost basis
+This run's dedicated check: Sept 15–16 investor conference slots confirmed, thesis strengthened
+by positive ABS-201 Phase 1 interim data and the $100M raise/Lilly investment. Stock now well
+above cost basis. Next catalyst (Ph2 expansion) is Oct 1. No adverse signal.
 
 **APLD — HOLD** | opened Jun 9 | large position by avg cost
 FY2026 Q4 results badly beat (revenue +407% YoY) and the company signed 15-year take-or-pay
@@ -41,14 +43,14 @@ FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational
 ATH434 in MSA — no adverse news since.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-Last dedicated check (this morning): CEO confirmed presenting at Cantor and Wells Fargo
+Last dedicated check (2026-09-07): CEO confirmed presenting at Cantor and Wells Fargo
 healthcare conferences in September, DurAVR THV program on track. PARADIGM pivotal trial thesis
 intact, no adverse signal.
 
 **BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-This run's dedicated check: Cataneo GmbH acquisition closed on schedule, ~$5.3M 1H26 revenue
-confirmed, no fraud/restatement/active delisting/failed-deal signal found. Large drawdown, story
-still progressing, not broken.
+Last dedicated check (2026-09-07): Cataneo GmbH acquisition closed on schedule, ~$5.3M 1H26
+revenue confirmed, no fraud/restatement/active delisting/failed-deal signal found. Large
+drawdown, story still progressing, not broken.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 NATHALI-01 / BALLI-01 clinical data and RMAT designation intact; Phase 2 interim analysis guided
@@ -88,11 +90,11 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 
 | Symbol | Opened | Decision | One-line reason |
 |--------|--------|----------|-----------------|
-| ABSI   | Jun 10 | **HOLD** | ABS-201 pivot reinforced by Guggenheim target hike + $40M Lilly stake; Sept investor conferences ahead |
+| ABSI   | Jun 10 | **HOLD** | Fresh check: Sept 15-16 conferences confirmed, Ph1 data + $100M raise/Lilly stake strengthen thesis, stock now above cost basis |
 | APLD   | Jun 9  | **HOLD** | FY2026 Q4 beat +407% YoY revenue, $20.2B hyperscaler lease contracts |
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | Cantor/Wells Fargo conference slots confirmed, DurAVR program on track, no adverse signal |
-| BNAI   | Jun 10 | **HOLD** | Fresh check: Cataneo acquisition closed on schedule, $5.3M 1H26 revenue confirmed, no fraud/delisting flag despite deep drawdown |
+| BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed on schedule, $5.3M 1H26 revenue confirmed, no fraud/delisting flag despite deep drawdown |
 | CLLS   | Jun 10 | **HOLD** | Strong clinical data, RMAT intact; drawdown only, Q4 interim data not due yet |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
