@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-10T12:35:54+00:00
+# Sell Review — 2026-09-10T18:36:02+00:00
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
@@ -7,31 +7,36 @@ avg_price, and opened_utc as every prior pass (executor remains paused, no new f
 `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~57 days old); none of
 the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal either way.
 
-**Web search this run:** checked CLLS (Cellectis) — part of the batch last dedicated-checked
+**Web search this run:** checked RXRX (Recursion Pharmaceuticals) — last dedicated-checked
 2026-09-04, most overdue for a recheck. Findings:
-- Company confirmed participation in five investor conferences: Wells Fargo 21st Annual
-  Healthcare Conference (Boston, today, Sept 10), Baird 2026 Global Healthcare Conference
-  (NYC, Sept 15), Barclays Biotech 1x1 Day (Oct 6), Stifel Healthcare Conference (Nov 10-12),
-  and Jefferies Global Healthcare Conference (Nov 16-19) — active, expanding conference
-  circuit, consistent with an intact story being actively presented to investors.
-- Routine monthly share-capital disclosure (100.7M shares / 105.6M voting rights as of Aug 31)
-  — no unusual dilution event.
-- No adverse news: no trial halt, no safety signal, no restatement, no delisting risk.
-NATHALI-01/BALLI-01 clinical program and RMAT designation remain the standing thesis; Q4 2026
-Phase 2 interim analysis still hasn't arrived. Thesis intact — HOLD confirmed.
+- Q2 2026 results (reported Aug 5) showed a wider loss and a revenue decline tied to lower
+  Roche collaboration contributions — a softer print, but not a thesis break.
+- Genentech collaboration advanced its first neuroscience target into a joint early discovery
+  program — partnership actively progressing, not stalled.
+- REC-4881 (MEK1/2, FAP) additional Phase 2 data scheduled for a hereditary GI meeting in
+  November 2026 — live, dated catalyst ahead.
+- REC-7735 (PI3Kα H1047R) received IND clearance, Phase 1/2 start expected 2H26 — pipeline
+  still advancing.
+- 2026 cash opex guidance was *reduced* (to <$375M from <$390M) — tighter spending discipline,
+  not a distress signal.
+- No fraud, restatement, trial failure, or delisting risk found.
+The AI drug-discovery platform thesis (Nvidia + pharma partnerships, deep pipeline) remains
+intact; the Roche revenue softness is a known, disclosed headwind, not a broken story.
+Thesis intact — HOLD confirmed.
 
-All other holdings carry forward from dedicated checks in recent passes: MNKD checked
-2026-09-09 (Furoscix ReadyFlow launched on schedule, Q2 revenue +43% YoY, 2026 target
-reaffirmed); APLD checked 2026-09-09 (drawdown to ~$28 vs $41.44 cost, but B. Riley $75 PT
-reaffirmed, $20.2B hyperscaler lease thesis unchallenged, one routine insider sale noted); SLDB
-checked 2026-09-08 (INSPIRE DUCHENNE dosing progressing, FDA meeting still ahead in Q4 2026);
-ABSI checked 2026-09-08 (Sept 15-16 conference slots + Ph1 data + $100M raise/Lilly stake —
-thesis strengthening); AVR and BNAI checked 2026-09-07 (conference slots confirmed / Cataneo
-acquisition closed, no fraud signal); ATHE, EVTL, GASS, PLSE, RXRX, TISI checked through
-2026-09-04T18:36Z — no thesis has broken, no catalyst has gone stale, and no drawdown alone is
-being treated as a sell signal.
+All other holdings carry forward from dedicated checks in recent passes: CLLS checked
+2026-09-10 (five-conference circuit confirmed through mid-Nov, routine share-capital update
+only, NATHALI-01/BALLI-01 thesis intact); MNKD checked 2026-09-09 (Furoscix ReadyFlow launched
+on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed); APLD checked 2026-09-09 (drawdown to
+~$28 vs $41.44 cost, but B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis
+unchallenged, one routine insider sale noted); SLDB checked 2026-09-08 (INSPIRE DUCHENNE dosing
+progressing, FDA meeting still ahead in Q4 2026); ABSI checked 2026-09-08 (Sept 15-16 conference
+slots + Ph1 data + $100M raise/Lilly stake — thesis strengthening); AVR and BNAI checked
+2026-09-07 (conference slots confirmed / Cataneo acquisition closed, no fraud signal); ATHE,
+EVTL, GASS, PLSE, TISI checked through 2026-09-04T18:36Z — no thesis has broken, no catalyst has
+gone stale, and no drawdown alone is being treated as a sell signal.
 
-Sources: [Cellectis Announces Participation in Upcoming Investor Conferences — BioSpace](https://www.biospace.com/press-releases/cellectis-announces-participation-in-upcoming-investor-conferences-september-1-2026), [Cellectis to Attend Five Investor Conferences — StockTitan](https://www.stocktitan.net/news/CLLS/cellectis-announces-participation-in-upcoming-investor-gwk5o17belw0.html), [Cellectis Reports Monthly Share Capital — StockTitan](https://www.stocktitan.net/news/CLLS/monthly-information-on-share-capital-and-company-voting-svwh5qhgvgvq.html)
+Sources: [Recursion Pharmaceuticals Press Releases](https://ir.recursion.com/news-events/press-releases), [Recursion Pharmaceuticals (RXRX) Reports Weaker Q2 Results — Simply Wall St News](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-rxrx/recursion-pharmaceuticals/news/recursion-pharmaceuticals-rxrx-reports-weaker-q2-results-is), [RECURSION PHARMACEUTICALS 8-K Q2 2026](https://www.sec.gov/Archives/edgar/data/0001601830/000160183026000097/exhibit991-q0226.htm)
 
 ---
 
@@ -61,11 +66,11 @@ Last dedicated check (2026-09-07): Cataneo GmbH acquisition closed on schedule, 
 revenue confirmed, no fraud/restatement/active delisting/failed-deal signal found. Large
 drawdown, story still progressing, not broken.
 
-**CLLS — HOLD** | opened Jun 10 | red on cost basis | this run's dedicated check
-Confirmed presenting at Wells Fargo (today) and four more investor conferences through
-mid-November — active, expanding circuit. Routine share-capital disclosure only, no dilution
-event. NATHALI-01/BALLI-01 and RMAT designation intact; Q4 2026 Phase 2 interim analysis not
-yet due. No adverse signal.
+**CLLS — HOLD** | opened Jun 10 | red on cost basis | dedicated check 2026-09-10
+Confirmed presenting at Wells Fargo and four more investor conferences through mid-November —
+active, expanding circuit. Routine share-capital disclosure only, no dilution event.
+NATHALI-01/BALLI-01 and RMAT designation intact; Q4 2026 Phase 2 interim analysis not yet due.
+No adverse signal.
 
 **EVTL — HOLD** | opened Jun 9 | tiny position
 Vertical Aerospace certification milestones remain live, untriggered catalysts. Nothing adverse.
@@ -83,9 +88,11 @@ as guided, no adverse signal.
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
 redemption completed Jul 13 (reduces dilution overhang). No adverse news.
 
-**RXRX — HOLD** | opened Jun 5 | red on cost basis
-Recursion Pharmaceuticals AI drug-discovery platform with Nvidia partnership and cash runway —
-multi-year structural thesis, not a smallcap pop trade. No adverse catalyst event.
+**RXRX — HOLD** | opened Jun 5 | red on cost basis | this run's dedicated check
+Q2 print was soft (Roche collaboration revenue declined, wider loss), but Genentech partnership
+advanced a new neuroscience target, REC-4881 Phase 2 data due Nov 2026, REC-7735 cleared IND, and
+2026 opex guidance was cut (spending discipline). Multi-year AI drug-discovery platform thesis
+intact — a soft quarter is not a broken thesis.
 
 **SLDB — HOLD** | opened Jun 4 | dedicated check 2026-09-08
 Original "quick" catalyst (Russell reconstitution) is spent, but the underlying DMD gene-therapy
@@ -108,11 +115,11 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 | ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
 | AVR    | Jun 8  | **HOLD** | Cantor/Wells Fargo conference slots confirmed, DurAVR program on track, no adverse signal |
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed on schedule, $5.3M 1H26 revenue confirmed, no fraud/delisting flag despite deep drawdown |
-| CLLS   | Jun 10 | **HOLD** | This run's check: five-conference circuit confirmed through Nov, routine share update only, no adverse signal |
+| CLLS   | Jun 10 | **HOLD** | Five-conference circuit confirmed through Nov, routine share update only, no adverse signal |
 | EVTL   | Jun 9  | **HOLD** | Certification milestones live and untriggered; nothing adverse |
 | GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
-| RXRX   | Jun 5  | **HOLD** | Multi-year AI drug-discovery thesis w/ Nvidia partnership, not a pop trade |
+| RXRX   | Jun 5  | **HOLD** | This run's check: soft Q2 print but Genentech program advancing, REC-4881 data due Nov, opex guidance cut — thesis intact |
 | SLDB   | Jun 4  | **HOLD** | INSPIRE DUCHENNE dosing 53 patients, well tolerated, FDA data-package meeting expected late Q4 2026 |
 | TISI   | Jun 4  | **HOLD** | Q2 print beat across revenue, margin, EBITDA — turnaround thesis confirmed |
