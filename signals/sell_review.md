@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-11T15:37:26+00:00
+# Sell Review — 2026-09-11T18:36:26+00:00
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
@@ -7,25 +7,19 @@ avg_price, and opened_utc as every prior pass (executor remains paused, no new f
 `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~58 days old); none of
 the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal either way.
 
-**Web search this run:** EVTL (Vertical Aerospace) — every prior sell-brain pass has carried this
-name forward with generic boilerplate ("certification milestones remain live, untriggered
-catalysts") without a dedicated check. Today's dedicated check found:
-- Certification of the Valo/VX4 aircraft has slipped from ~2026 (roughly the timeline in play
-  when this position was opened, Jun 9) to 2028, and now to **2029** — confirmed via a 6-K filed
-  2026-07-12. That is a 3-year push-out of the catalyst this small, quick-trade-style position
-  was built around.
-- Stock closed at **$0.5788 on 2026-09-09**, down 88.3% over the trailing 12 months — well below
-  the $2.12 average cost.
-- The company's Sept 11, 2026 AGM includes repricing employee stock options down to **$1.30**
-  (an underwater-option reset, a demoralization/distress signal) and adopting new governance
-  documents that **expand nomination and consent rights for Mudrick Capital** — a distressed-debt
-  focused investor gaining more control, consistent with balance-sheet strain even after the
-  recent financing that extended runway to Q3 2027.
-- No fraud, halt, or single catastrophic event — this is a stalled/broken setup, not a
-  thesis-shattering one. **SELL, not urgent.**
-
-All other holdings carry forward from dedicated checks in recent passes with no new adverse
-signal found and no change to underlying data: RXRX checked 2026-09-10 (soft Q2 print but
+**Web search this run:** TISI (Team, Inc.) — least-recently dedicated-checked name in the book
+(last individual check ~2026-09-04). Findings: ABL credit facility renegotiated with extended
+maturity (to Sept 2027) and a reduced interest-rate spread (a balance-sheet positive); an insider
+bought stock on 2026-09-08 (confidence signal); Stellex Capital Management acquired the block of
+shares previously held by Corre Partners (an ownership consolidation, not a red flag). One search
+snippet cited Q2 revenue of $228.7M vs. $248M a year ago, which reads as a YoY decline and sits in
+tension with the prior pass's "8.5% revenue growth" note — likely a different comparison window or
+metric, and search-summary figures for this period are not fully reliable. Nothing here rises to a
+broken thesis (no fraud, no halted trading, no failed binary event, no guidance cut) — per
+SELL_BRAIN.md, ambiguous/unsure means HOLD, not sell. Everything else carries forward from
+dedicated checks in recent passes with no new adverse signal and no change to underlying data:
+EVTL re-confirmed this run — no new facts since the 2026-09-11T15:37Z check that first identified
+the 2029 certification push-out and distress signals; RXRX checked 2026-09-10 (soft Q2 print but
 Genentech program advancing, REC-4881 data due Nov, opex guidance cut — thesis intact); CLLS
 checked 2026-09-10 (five-conference circuit confirmed through mid-Nov, routine share-capital
 update only, NATHALI-01/BALLI-01 thesis intact); MNKD checked 2026-09-09 (Furoscix ReadyFlow
@@ -36,10 +30,10 @@ ahead in Q4 2026); ABSI checked 2026-09-08 (Sept 15-16 conference slots + Ph1 da
 raise/Lilly stake — thesis strengthening); AVR and BNAI checked 2026-09-07 (conference slots
 confirmed / Cataneo acquisition closed, no fraud signal); ATHE checked 2026-09-11 (FDA agreed on
 Ph3 pivotal design details, trial on track for year-end 2026, CEO on the conference circuit);
-GASS, PLSE, TISI checked through 2026-09-04T18:36Z / prior Q2 prints — no thesis has broken, no
+GASS and PLSE checked through 2026-09-04T18:36Z / prior Q2 prints — no thesis has broken, no
 catalyst has gone stale, and no drawdown alone is being treated as a sell signal.
 
-Sources: [Vertical Aerospace delays aircraft certification to 2029 - Investing.com](https://www.investing.com/news/company-news/vertical-aerospace-delays-aircraft-certification-to-2029-93CH-4787779), [Vertical Aerospace Secures Expanded UK Flight Permit and Pushes Valo Certification Target to 2029 - TipRanks](https://www.tipranks.com/news/company-announcements/vertical-aerospace-secures-expanded-uk-flight-permit-and-pushes-valo-certification-target-to-2029), [Vertical Aerospace Sets September 11 AGM to Reshape Incentives and Governance - TipRanks](https://www.tipranks.com/news/company-announcements/vertical-aerospace-sets-september-11-agm-to-reshape-incentives-and-governance), [Vertical Aerospace (EVTL) Stock Price & Overview - stockanalysis.com](https://stockanalysis.com/stocks/evtl/)
+Sources: [Team, Inc. (TISI) Stock Price & Overview](https://stockanalysis.com/stocks/tisi/), [Team Inc secures improved credit facility terms](https://www.tipranks.com/news/company-announcements/team-inc-secures-improved-credit-facility-terms), [TISI: Team Inc - Stock Price, Quote and News - CNBC](https://www.cnbc.com/quotes/TISI)
 
 ---
 
@@ -72,12 +66,11 @@ Routine share-capital disclosure only, no dilution event. NATHALI-01/BALLI-01 an
 designation intact.
 
 **EVTL — SELL (routine, not urgent)** | opened Jun 9 | tiny position (14 sh, ~$30 cost)
-First dedicated check on this name found the near-term catalyst it was bought on has been pushed
-out three years: Valo/VX4 certification target slipped from ~2026 to 2028 to now **2029**
-(confirmed via 2026-07-12 6-K). Stock down 88% over the trailing year ($0.5788 on 2026-09-09),
-employee options being repriced to $1.30, and Mudrick Capital (distressed-debt investor) gaining
-expanded consent rights at the Sept 11 AGM. The setup this position was riding is dead with no
-near-term follow-through — not a drawdown call, a broken timeline.
+Valo/VX4 certification target slipped from ~2026 to 2028 to now **2029** (confirmed via
+2026-07-12 6-K). Stock down 88% over the trailing year ($0.5788 on 2026-09-09), employee options
+being repriced to $1.30, and Mudrick Capital (distressed-debt investor) gaining expanded consent
+rights at the Sept 11 AGM. The setup this position was riding is dead with no near-term
+follow-through — not a drawdown call, a broken timeline. No new facts this run; carried forward.
 
 **GASS — HOLD** | opened Jun 5
 Q2 2026 results beat sequentially, balance sheet debt-free with record $250M+ cash, ~$80M of
@@ -101,9 +94,12 @@ Original "quick" catalyst (Russell reconstitution) is spent, but the underlying 
 conviction thesis holds: INSPIRE DUCHENNE trial dosed 53 patients and remains generally well
 tolerated, FDA meeting on the data package expected late Q4 2026. No adverse signal.
 
-**TISI — HOLD** | opened Jun 4 | Q2 2026 print landed, beat, thesis confirmed
-Q2 EPS beat vs. consensus with 8.5% revenue growth, 7.1% higher gross margin, 12.4% adjusted
-EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
+**TISI — HOLD** | opened Jun 4 | dedicated check this run
+Balance sheet strengthened (ABL facility maturity extended to Sept 2027, lower rate spread),
+insider bought stock 2026-09-08, Stellex Capital consolidated the Corre Partners block. One
+search snippet suggested a YoY revenue decline that conflicts with the prior pass's growth
+figure — ambiguous, not corroborated as a broken thesis, and SELL_BRAIN.md says unsure means
+HOLD. No fraud/halt/failed-binary-event found. Turnaround thesis stands.
 
 ---
 
@@ -123,4 +119,4 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
 | RXRX   | Jun 5  | **HOLD** | Soft Q2 print but Genentech program advancing, REC-4881 data due Nov — thesis intact |
 | SLDB   | Jun 4  | **HOLD** | INSPIRE DUCHENNE dosing 53 patients, well tolerated, FDA data-package meeting expected late Q4 2026 |
-| TISI   | Jun 4  | **HOLD** | Q2 print beat across revenue, margin, EBITDA — turnaround thesis confirmed |
+| TISI   | Jun 4  | **HOLD** | ABL facility improved, insider buy, ownership consolidation — turnaround thesis stands despite ambiguous revenue snippet |
