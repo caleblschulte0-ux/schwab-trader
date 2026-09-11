@@ -1,42 +1,39 @@
-# Sell Review — 2026-09-10T18:36:02+00:00
+# Sell Review — 2026-09-11T12:36:06+00:00
 
 **No sells. 13 positions evaluated. All HOLD. Nothing urgent.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged — same 13 symbols, quantities,
 avg_price, and opened_utc as every prior pass (executor remains paused, no new fills/closes).
-`signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~57 days old); none of
+`signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~58 days old); none of
 the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal either way.
 
-**Web search this run:** checked RXRX (Recursion Pharmaceuticals) — last dedicated-checked
-2026-09-04, most overdue for a recheck. Findings:
-- Q2 2026 results (reported Aug 5) showed a wider loss and a revenue decline tied to lower
-  Roche collaboration contributions — a softer print, but not a thesis break.
-- Genentech collaboration advanced its first neuroscience target into a joint early discovery
-  program — partnership actively progressing, not stalled.
-- REC-4881 (MEK1/2, FAP) additional Phase 2 data scheduled for a hereditary GI meeting in
-  November 2026 — live, dated catalyst ahead.
-- REC-7735 (PI3Kα H1047R) received IND clearance, Phase 1/2 start expected 2H26 — pipeline
-  still advancing.
-- 2026 cash opex guidance was *reduced* (to <$375M from <$390M) — tighter spending discipline,
-  not a distress signal.
-- No fraud, restatement, trial failure, or delisting risk found.
-The AI drug-discovery platform thesis (Nvidia + pharma partnerships, deep pipeline) remains
-intact; the Roche revenue softness is a known, disclosed headwind, not a broken story.
-Thesis intact — HOLD confirmed.
+**Web search this run:** checked ATHE (Alterity Therapeutics) — last dedicated-checked
+2026-09-04, tied for most overdue for a recheck (along with EVTL, GASS, PLSE, TISI). Findings:
+- CEO David Stamler is presenting at the Cantor Global Healthcare Conference 2026 fireside chat
+  *today*, Sept 11, 2026 — an active, live conference circuit, not a stale IR calendar.
+- FDA End-of-Phase-2 alignment on the ATH434 pivotal Phase 3 design is confirmed: FDA agreed on
+  study population, 50 mg twice-daily dosing, treatment duration, and the primary endpoint
+  (UMSARS Part I), following Phase 2 data showing 48% slowing of disease progression vs. placebo.
+- Phase 3 pivotal trial initiation is still on track to begin by year-end 2026.
+- No fraud, halt, failed-trial, or adverse regulatory signal found.
+The single-pivotal-Phase-3 MSA thesis is not just intact but has been reinforced with concrete
+FDA-agreed trial design detail since the last check. Thesis intact — HOLD confirmed.
 
-All other holdings carry forward from dedicated checks in recent passes: CLLS checked
-2026-09-10 (five-conference circuit confirmed through mid-Nov, routine share-capital update
-only, NATHALI-01/BALLI-01 thesis intact); MNKD checked 2026-09-09 (Furoscix ReadyFlow launched
-on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed); APLD checked 2026-09-09 (drawdown to
-~$28 vs $41.44 cost, but B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis
-unchallenged, one routine insider sale noted); SLDB checked 2026-09-08 (INSPIRE DUCHENNE dosing
-progressing, FDA meeting still ahead in Q4 2026); ABSI checked 2026-09-08 (Sept 15-16 conference
-slots + Ph1 data + $100M raise/Lilly stake — thesis strengthening); AVR and BNAI checked
-2026-09-07 (conference slots confirmed / Cataneo acquisition closed, no fraud signal); ATHE,
-EVTL, GASS, PLSE, TISI checked through 2026-09-04T18:36Z — no thesis has broken, no catalyst has
-gone stale, and no drawdown alone is being treated as a sell signal.
+All other holdings carry forward from dedicated checks in recent passes: RXRX checked 2026-09-10
+(soft Q2 print but Genentech program advancing, REC-4881 data due Nov, opex guidance cut —
+thesis intact); CLLS checked 2026-09-10 (five-conference circuit confirmed through mid-Nov,
+routine share-capital update only, NATHALI-01/BALLI-01 thesis intact); MNKD checked 2026-09-09
+(Furoscix ReadyFlow launched on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed); APLD
+checked 2026-09-09 (drawdown to ~$28 vs $41.44 cost, but B. Riley $75 PT reaffirmed, $20.2B
+hyperscaler lease thesis unchallenged, one routine insider sale noted); SLDB checked 2026-09-08
+(INSPIRE DUCHENNE dosing progressing, FDA meeting still ahead in Q4 2026); ABSI checked
+2026-09-08 (Sept 15-16 conference slots + Ph1 data + $100M raise/Lilly stake — thesis
+strengthening); AVR and BNAI checked 2026-09-07 (conference slots confirmed / Cataneo
+acquisition closed, no fraud signal); EVTL, GASS, PLSE, TISI checked through
+2026-09-04T18:36Z — no thesis has broken, no catalyst has gone stale, and no drawdown alone is
+being treated as a sell signal.
 
-Sources: [Recursion Pharmaceuticals Press Releases](https://ir.recursion.com/news-events/press-releases), [Recursion Pharmaceuticals (RXRX) Reports Weaker Q2 Results — Simply Wall St News](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-rxrx/recursion-pharmaceuticals/news/recursion-pharmaceuticals-rxrx-reports-weaker-q2-results-is), [RECURSION PHARMACEUTICALS 8-K Q2 2026](https://www.sec.gov/Archives/edgar/data/0001601830/000160183026000097/exhibit991-q0226.htm)
+Sources: [Alterity Therapeutics to Participate in a Fireside Chat at the Cantor Global Healthcare Conference 2026 - BioSpace](https://www.biospace.com/press-releases/alterity-therapeutics-to-participate-in-a-fireside-chat-at-the-cantor-global-healthcare-conference-2026), [Alterity Therapeutics to Participate in a Fireside Chat at the Cantor Global Healthcare Conference 2026 - GlobeNewswire](https://www.globenewswire.com/news-release/2026/09/03/3355774/0/en/alterity-therapeutics-to-participate-in-a-fireside-chat-at-the-cantor-global-healthcare-conference-2026.html), [Alterity gets FDA alignment on ATH434 Phase 3 in MSA — StockTitan](https://www.stocktitan.net/news/ATHE/alterity-therapeutics-achieves-alignment-with-u-s-fda-on-pivotal-h5wl8vg5cf0i.html)
 
 ---
 
@@ -52,9 +49,10 @@ Stock down to ~$28.34 from ~$41.44 avg cost — a drawdown, not a thesis break. 
 a $75 price target; the $20.2B hyperscaler take-or-pay lease thesis stands unchallenged. One
 insider sale (~400k shares, Sept 3) noted but routine, no accompanying red flag. Earnings Oct 7.
 
-**ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
-FDA End-of-Phase-2 minutes reaffirming the single-pivotal-Phase-3 registrational pathway for
-ATH434 in MSA — no adverse news since.
+**ATHE — HOLD** | opened Jun 9 | trivial size (1 share) | this run's dedicated check
+FDA has now agreed on the specific Phase 3 pivotal design (population, dosing, duration, UMSARS
+Part I endpoint) for ATH434 in MSA; trial initiation still on track for year-end 2026. CEO
+presenting at Cantor conference today. Thesis strengthened, not just intact.
 
 **AVR — HOLD** | opened Jun 8 | largest position by dollar cost
 Last dedicated check (2026-09-07): CEO confirmed presenting at Cantor and Wells Fargo healthcare
@@ -88,7 +86,7 @@ as guided, no adverse signal.
 Ablation-platform (nsPFA) thesis actively working: positive PFA data at HRS 2026, warrant
 redemption completed Jul 13 (reduces dilution overhang). No adverse news.
 
-**RXRX — HOLD** | opened Jun 5 | red on cost basis | this run's dedicated check
+**RXRX — HOLD** | opened Jun 5 | red on cost basis | dedicated check 2026-09-10
 Q2 print was soft (Roche collaboration revenue declined, wider loss), but Genentech partnership
 advanced a new neuroscience target, REC-4881 Phase 2 data due Nov 2026, REC-7735 cleared IND, and
 2026 opex guidance was cut (spending discipline). Multi-year AI drug-discovery platform thesis
@@ -112,7 +110,7 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | Sept 15-16 conferences confirmed, Ph1 data + $100M raise/Lilly stake strengthen thesis, stock above cost basis |
 | APLD   | Jun 9  | **HOLD** | Drawdown to ~$28 vs $41 cost, but $20.2B hyperscaler lease thesis unchallenged, B. Riley $75 PT reaffirmed |
-| ATHE   | Jun 9  | **HOLD** | FDA EOP2 minutes reaffirm Ph3 MSA pathway |
+| ATHE   | Jun 9  | **HOLD** | This run's check: FDA agreed on Ph3 pivotal design details (dosing, endpoint), trial on track for year-end 2026 |
 | AVR    | Jun 8  | **HOLD** | Cantor/Wells Fargo conference slots confirmed, DurAVR program on track, no adverse signal |
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed on schedule, $5.3M 1H26 revenue confirmed, no fraud/delisting flag despite deep drawdown |
 | CLLS   | Jun 10 | **HOLD** | Five-conference circuit confirmed through Nov, routine share update only, no adverse signal |
@@ -120,6 +118,6 @@ EBITDA growth YoY. Directly validates the turnaround thesis. No red flags.
 | GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed |
 | PLSE   | Jun 5  | **HOLD** | nsPFA platform working, warrant redemption cut dilution overhang |
-| RXRX   | Jun 5  | **HOLD** | This run's check: soft Q2 print but Genentech program advancing, REC-4881 data due Nov, opex guidance cut — thesis intact |
+| RXRX   | Jun 5  | **HOLD** | Soft Q2 print but Genentech program advancing, REC-4881 data due Nov, opex guidance cut — thesis intact |
 | SLDB   | Jun 4  | **HOLD** | INSPIRE DUCHENNE dosing 53 patients, well tolerated, FDA data-package meeting expected late Q4 2026 |
 | TISI   | Jun 4  | **HOLD** | Q2 print beat across revenue, margin, EBITDA — turnaround thesis confirmed |
