@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-16T12:36:04+00:00
+# Sell Review — 2026-09-16T15:41:00+00:00
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
@@ -8,17 +8,19 @@ fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel sn
 old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal
 either way this run.
 
-**Web search this run:** PLSE (Pulse Biosciences) -- oldest dedicated-checked name in the book
-(last individual check ~2026-09-04). Findings: PRECISE-BTN thyroid-nodule trial completed
-enrollment on 2026-09-15 (expanded from 50 to 100 patients across 3 sites, first patient already
-past the 12-month follow-up mark), with preliminary data expected at an upcoming medical
-conference. Routine inducement-grant filing (2,200 options to 2 new hires) on 2026-09-04 --
-immaterial. No fraud, halt, failed trial, or guidance cut. Thesis strengthened, not broken.
+**Web search this run:** GASS (StealthGas Inc.) -- oldest dedicated-checked name in the book
+(last individual check ~2026-09-04, prior to the Q2 print). Findings: no new material news since
+09-04 -- both searches surface the same Q2 2026 results already reflected in the prior thesis
+check (net income $17.3M, EPS $0.46, liquidity above $250M, no debt, revenue booked via fee
+days). Only new item is StealthGas setting its annual meeting for October 9, 2026 (routine,
+non-material). No fraud, accounting, going-concern, delisting, halt, fleet sale/acquisition,
+dividend, or buyback news. Thesis intact and unchanged; nothing to act on.
 
 Everything else carries forward from dedicated checks in recent passes with no new adverse
 signal and no change to underlying data: EVTL re-confirmed -- no new facts since the certification
 push-out to 2029, options repricing, and Mudrick Capital consent-rights findings that first
-established the broken thesis; RXRX (checked 2026-09-10, soft Q2 print but Genentech program
+established the broken thesis; PLSE (checked 2026-09-16, PRECISE-BTN trial completed enrollment,
+100 patients, thesis strengthening); RXRX (checked 2026-09-10, soft Q2 print but Genentech program
 advancing, REC-4881 data due Nov); CLLS (checked 2026-09-10, five-conference circuit through
 mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked 2026-09-09, ReadyFlow launched on schedule,
 Q2 revenue +43% YoY); APLD (checked 2026-09-09, drawdown to ~$28 vs $41.44 cost, but B. Riley $75
@@ -27,12 +29,11 @@ DUCHENNE dosing progressing, FDA meeting still ahead in Q4 2026); ABSI (checked 
 15-16 conference slots + Ph1 data + $100M raise/Lilly stake -- thesis strengthening); AVR and
 BNAI (checked 2026-09-07, conference slots confirmed / Cataneo acquisition closed, no fraud
 signal); ATHE (checked 2026-09-11, FDA agreed on Ph3 pivotal design details, trial on track for
-year-end 2026); GASS (checked through 2026-09-04, Q2 beat, debt-free, record cash); TISI (checked
-2026-09-11, ABL facility improved, insider buy, ownership consolidation -- turnaround thesis
-stands). No holding shows a broken thesis, and no drawdown alone is being treated as a sell
-signal.
+year-end 2026); TISI (checked 2026-09-11, ABL facility improved, insider buy, ownership
+consolidation -- turnaround thesis stands). No holding shows a broken thesis, and no drawdown
+alone is being treated as a sell signal.
 
-Sources: [Pulse Biosciences Closes PRECISE-BTN Thyroid Nodule Trial Enrollment](https://www.clinicaltrialvanguard.com/news/pulse-biosciences-closes-precise-btn-thyroid-nodule-trial-enrollment/), [Pulse Biosciences (PLSE) updates investor deck with 2026 clinical goals](https://www.stocktitan.net/sec-filings/PLSE/8-k-pulse-biosciences-inc-reports-material-event-cf5e38b52682.html), [Pulse Biosciences Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)](https://www.biospace.com/press-releases/pulse-biosciences-announces-inducement-grants-under-nasdaq-listing-rule-5635c4-september-4-2026)
+Sources: [StealthGas Inc. Reports Second Quarter and First Half 2026 Financial Results, Raises Liquidity Above $250 Million](https://www.quiverquant.com/news/StealthGas+Inc.+Reports+Second+Quarter+and+First+Half+2026+Financial+Results,+Raises+Liquidity+Above+$250+Million), [StealthGas (GASS): Shrinking Fleet Just Delivered This Shipper's Best Profits Yet](https://finance.yahoo.com/markets/stocks/articles/stealthgas-gass-shrinking-fleet-just-091531725.html), [StealthGas (GASS) Q2 2026 Earnings Call Transcript](https://finance.yahoo.com/markets/stocks/articles/stealthgas-gass-q2-2026-earnings-004254635.html)
 
 ---
 
@@ -69,15 +70,16 @@ Mudrick Capital (distressed-debt investor) gaining expanded consent rights at th
 The setup this position was riding is dead with no near-term follow-through -- not a drawdown
 call, a broken timeline. No new facts this run; carried forward.
 
-**GASS — HOLD** | opened Jun 5
-Q2 2026 results beat sequentially, balance sheet debt-free with record $250M+ cash, ~$80M of
-2026-2027 revenue already booked via fee days. Thesis reinforced.
+**GASS — HOLD** | opened Jun 5 | dedicated check this run
+No new material news since the 09-04 Q2 print (net income $17.3M, EPS $0.46, liquidity above
+$250M, no debt). Only new item is a routine Oct 9 annual meeting notice. Debt-free, cash-rich
+thesis fully intact.
 
 **MNKD — HOLD** | opened Jun 10
 Furoscix ReadyFlow reached US commercial availability on schedule (late August 2026); Q2 revenue
 +43% YoY to $109.4M; 2026 revenue target reaffirmed. No adverse signal.
 
-**PLSE — HOLD** | opened Jun 5 | dedicated check this run
+**PLSE — HOLD** | opened Jun 5
 PRECISE-BTN thyroid-nodule trial completed enrollment 2026-09-15 (expanded 50→100 patients),
 first patient already past 12-month follow-up, preliminary data expected at an upcoming medical
 conference. nsPFA platform actively progressing. No adverse news.
@@ -110,7 +112,7 @@ fraud/halt/failed-binary-event found. Turnaround thesis stands.
 | BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed on schedule, no fraud/delisting flag despite deep drawdown |
 | CLLS   | Jun 10 | **HOLD** | Five-conference circuit confirmed through Nov, no adverse signal |
 | EVTL   | Jun 9  | **SELL** | Certification pushed 2026→2028→2029, stock -88% YoY, options repriced, Mudrick gaining control -- dead setup |
-| GASS   | Jun 5  | **HOLD** | Q2 beat, debt-free, record cash, ~$80M revenue already booked through 2027 |
+| GASS   | Jun 5  | **HOLD** | No new news since Q2 beat; debt-free, $250M+ liquidity confirmed again |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed |
 | PLSE   | Jun 5  | **HOLD** | PRECISE-BTN trial completed enrollment (100 pts), no adverse news, platform progressing |
 | RXRX   | Jun 5  | **HOLD** | Soft Q2 print but Genentech program advancing, REC-4881 data due Nov -- thesis intact |
