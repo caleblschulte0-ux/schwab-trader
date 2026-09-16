@@ -18,6 +18,16 @@ market is open, we flag a stall and the workflow opens a GitHub issue. This also
 catches the OTHER failure mode — bot.py erroring on every run — because a crashing
 executor never writes a fresh heartbeat either.
 
+DIAGNOSIS, not just detection: a stall has exactly two likely causes (the trigger
+stopped firing at all, e.g. cron-job.org or a paused workflow_dispatch — or it IS
+firing but bot.py errors out before finishing) and a bare heartbeat age can't tell
+them apart. bot.py also stamps `attempted_utc` the moment a real run starts, before
+anything that can fail (see bot.py's `_record_attempt`); `updated_utc` only advances
+on a full successful run. Comparing the two ages: attempted_utc fresh + updated_utc
+stale means the executor IS being triggered and IS failing every time; both stale
+means it isn't being triggered at all. That diagnosis is folded into `detail` (and
+the `cause` output) so the alert names the likely cause instead of listing both.
+
 Pure stdlib (zoneinfo gives correct US market hours incl. DST). Prints a human-
 readable status and, in CI, writes `stalled` / `market_open` / `detail` to
 $GITHUB_OUTPUT for the workflow to act on. Exit code is always 0 — the workflow
@@ -72,21 +82,53 @@ def in_alarm_window(now_utc: datetime) -> bool:
     return minutes_since_open >= OPEN_GRACE_MIN
 
 
-def heartbeat_age_min(now_utc: datetime) -> float | None:
-    """Minutes since the executor last wrote holdings.json. None if the file is
-    missing/corrupt (treated as a stall — better a false alarm than silent death)."""
+def _age_min(now_utc: datetime, key: str) -> float | None:
+    """Minutes since holdings.json's `key` timestamp. None if the file or that key is
+    missing/corrupt (treated as "no evidence of one" by callers)."""
     try:
         with open(HOLDINGS_FILE, encoding="utf-8") as fh:
-            ts = json.load(fh).get("updated_utc")
+            ts = json.load(fh).get(key)
         dt = datetime.fromisoformat(str(ts).replace("Z", "+00:00"))
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=timezone.utc)
         return (now_utc - dt).total_seconds() / 60
-    except Exception:  # noqa: BLE001 - missing/corrupt/unparseable -> stall
+    except Exception:  # noqa: BLE001 - missing/corrupt/unparseable -> no evidence
         return None
 
 
-def _emit(stalled: bool, market_open: bool, detail: str) -> None:
+def heartbeat_age_min(now_utc: datetime) -> float | None:
+    """Minutes since the executor last completed a full holdings write (a SUCCESSFUL
+    run). None if the file is missing/corrupt (treated as a stall — better a false
+    alarm than silent death)."""
+    return _age_min(now_utc, "updated_utc")
+
+
+def attempt_age_min(now_utc: datetime) -> float | None:
+    """Minutes since the executor last STARTED a run (bot.py's `_record_attempt`,
+    stamped before anything that can fail). None if never recorded — an older
+    holdings.json from before this field existed, or the executor has never run."""
+    return _age_min(now_utc, "attempted_utc")
+
+
+def diagnose_cause(now_utc: datetime, heartbeat_age: float | None) -> str:
+    """Which of the two likely causes a stall is, per the watchdog's own docstring:
+    the trigger isn't firing at all, or it's firing and bot.py is failing before it
+    can write a fresh heartbeat. `attempted_utc` is stamped before any failure-prone
+    code runs, so a fresh attempt with a stale heartbeat can only mean the run started
+    and then didn't finish; no fresher attempt than the stale heartbeat itself means
+    nothing has started recently."""
+    attempt_age = attempt_age_min(now_utc)
+    if attempt_age is not None and (heartbeat_age is None or attempt_age < heartbeat_age - 0.01):
+        return (f"RUNS FAILING — a run started {attempt_age:.1f} min ago but never finished a "
+                "holdings write. Check schwab-trader-bot's most recent run logs (a common cause: "
+                "an expired SCHWAB_REFRESH_TOKEN in live mode, or an unhandled error before "
+                "write_holdings()).")
+    return ("NOT BEING TRIGGERED — no run has started more recently than the stale heartbeat "
+            "itself. Check whether cron-job.org is still calling schwab-trader-bot, and whether "
+            "trader.yml's workflow_dispatch trigger is enabled (not commented out/paused).")
+
+
+def _emit(stalled: bool, market_open: bool, detail: str, cause: str = "") -> None:
     print(detail)
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
@@ -94,6 +136,7 @@ def _emit(stalled: bool, market_open: bool, detail: str) -> None:
             fh.write(f"stalled={'true' if stalled else 'false'}\n")
             fh.write(f"market_open={'true' if market_open else 'false'}\n")
             fh.write(f"detail={detail}\n")
+            fh.write(f"cause={cause}\n")
 
 
 def main() -> int:
@@ -109,8 +152,11 @@ def main() -> int:
 
     stalled = age is None or age > STALL_MIN
     if stalled:
+        cause = diagnose_cause(now, age)
         _emit(True, market_open,
-              f"STALL — executor last ran {age_txt} ago (threshold {STALL_MIN} min) during market hours.")
+              f"STALL — executor last ran {age_txt} ago (threshold {STALL_MIN} min) during "
+              f"market hours. Likely cause: {cause}",
+              cause=cause)
     else:
         _emit(False, market_open,
               f"OK — executor heartbeat {age_txt} ago (within {STALL_MIN} min).")
