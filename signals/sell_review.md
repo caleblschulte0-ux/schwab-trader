@@ -1,39 +1,39 @@
-# Sell Review — 2026-09-16T15:41:00+00:00
+# Sell Review — 2026-09-17T12:35:57Z
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is still unchanged -- same 13 symbols,
 quantities, avg_price, and opened_utc as every prior pass (executor remains paused, no new
-fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~63 days
+fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~64 days
 old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal
 either way this run.
 
-**Web search this run:** GASS (StealthGas Inc.) -- oldest dedicated-checked name in the book
-(last individual check ~2026-09-04, prior to the Q2 print). Findings: no new material news since
-09-04 -- both searches surface the same Q2 2026 results already reflected in the prior thesis
-check (net income $17.3M, EPS $0.46, liquidity above $250M, no debt, revenue booked via fee
-days). Only new item is StealthGas setting its annual meeting for October 9, 2026 (routine,
-non-material). No fraud, accounting, going-concern, delisting, halt, fleet sale/acquisition,
-dividend, or buyback news. Thesis intact and unchanged; nothing to act on.
+**Web search this run:** BNAI (Brand Engagement Network) -- tied for oldest dedicated-checked name
+in the book (last individual check 2026-09-07, prior to IBC2026). Findings: Cataneo (acquired
+debt-free, closed 2026-06-30) showcased its conversational AI advertising technology at IBC2026
+(Sept 11-14, Amsterdam RAI) -- the MYDAS platform managing >€6B in annual ad inventory across
+1,000+ media brands. No fraud, restatement, delisting, halt, or going-concern signal found despite
+this being the deepest drawdown in the book. Story is progressing on schedule, not stalling.
+Thesis intact; nothing to act on.
 
 Everything else carries forward from dedicated checks in recent passes with no new adverse
 signal and no change to underlying data: EVTL re-confirmed -- no new facts since the certification
 push-out to 2029, options repricing, and Mudrick Capital consent-rights findings that first
-established the broken thesis; PLSE (checked 2026-09-16, PRECISE-BTN trial completed enrollment,
-100 patients, thesis strengthening); RXRX (checked 2026-09-10, soft Q2 print but Genentech program
-advancing, REC-4881 data due Nov); CLLS (checked 2026-09-10, five-conference circuit through
-mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked 2026-09-09, ReadyFlow launched on schedule,
-Q2 revenue +43% YoY); APLD (checked 2026-09-09, drawdown to ~$28 vs $41.44 cost, but B. Riley $75
-PT reaffirmed, $20.2B hyperscaler lease thesis unchallenged); SLDB (checked 2026-09-08, INSPIRE
-DUCHENNE dosing progressing, FDA meeting still ahead in Q4 2026); ABSI (checked 2026-09-08, Sept
-15-16 conference slots + Ph1 data + $100M raise/Lilly stake -- thesis strengthening); AVR and
-BNAI (checked 2026-09-07, conference slots confirmed / Cataneo acquisition closed, no fraud
-signal); ATHE (checked 2026-09-11, FDA agreed on Ph3 pivotal design details, trial on track for
-year-end 2026); TISI (checked 2026-09-11, ABL facility improved, insider buy, ownership
-consolidation -- turnaround thesis stands). No holding shows a broken thesis, and no drawdown
-alone is being treated as a sell signal.
+established the broken thesis; GASS (checked 2026-09-16, Q2 print reconfirmed, no new material
+news, debt-free/$250M+ liquidity); PLSE (checked 2026-09-16, PRECISE-BTN trial completed
+enrollment, 100 patients, thesis strengthening); RXRX (checked 2026-09-10, soft Q2 print but
+Genentech program advancing, REC-4881 data due Nov); CLLS (checked 2026-09-10, five-conference
+circuit through mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked 2026-09-09, ReadyFlow launched
+on schedule, Q2 revenue +43% YoY); APLD (checked 2026-09-09, drawdown to ~$28 vs $41.44 cost, but
+B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis unchallenged); SLDB (checked 2026-09-08,
+INSPIRE DUCHENNE dosing progressing, FDA meeting still ahead in Q4 2026); ABSI (checked 2026-09-08,
+Sept 15-16 conference slots + Ph1 data + $100M raise/Lilly stake -- thesis strengthening); AVR
+(checked 2026-09-07, conference slots confirmed, no fraud signal); ATHE (checked 2026-09-11, FDA
+agreed on Ph3 pivotal design details, trial on track for year-end 2026); TISI (checked 2026-09-11,
+ABL facility improved, insider buy, ownership consolidation -- turnaround thesis stands). No
+holding shows a broken thesis, and no drawdown alone is being treated as a sell signal.
 
-Sources: [StealthGas Inc. Reports Second Quarter and First Half 2026 Financial Results, Raises Liquidity Above $250 Million](https://www.quiverquant.com/news/StealthGas+Inc.+Reports+Second+Quarter+and+First+Half+2026+Financial+Results,+Raises+Liquidity+Above+$250+Million), [StealthGas (GASS): Shrinking Fleet Just Delivered This Shipper's Best Profits Yet](https://finance.yahoo.com/markets/stocks/articles/stealthgas-gass-shrinking-fleet-just-091531725.html), [StealthGas (GASS) Q2 2026 Earnings Call Transcript](https://finance.yahoo.com/markets/stocks/articles/stealthgas-gass-q2-2026-earnings-004254635.html)
+Sources: [Brand Engagement Network Completes Cataneo AI Software Acquisition](https://www.tipranks.com/news/company-announcements/brand-engagement-network-completes-cataneo-ai-software-acquisition), [Cataneo Set to Unveil the Future of AI Engagement at IBC2026 in Amsterdam](http://www.prnewswire.com/news-releases/cataneo-set-to-unveil-the-future-of-ai-engagement-at-ibc2026-in-amsterdam-302872792.html), [Brand Engagement Network Unveils Conversational AI Ads](https://www.stocktitan.net/news/BNAI/conversational-ai-technology-transforms-commercial-breaks-into-real-52dcpgdvlxws.html)
 
 ---
 
@@ -55,9 +55,10 @@ track for year-end 2026. Thesis strengthened, not just intact.
 Cantor/Wells Fargo conference slots confirmed, DurAVR THV program on track. PARADIGM pivotal
 trial thesis intact, no adverse signal.
 
-**BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
-Cataneo GmbH acquisition closed on schedule, ~$5.3M 1H26 revenue confirmed, no
-fraud/restatement/delisting signal found. Large drawdown, story still progressing, not broken.
+**BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book | dedicated check this run
+Cataneo showcased its conversational AI advertising platform at IBC2026 (Sept 11-14), on schedule
+post-acquisition. No fraud/restatement/delisting signal found. Large drawdown, story still
+progressing, not broken.
 
 **CLLS — HOLD** | opened Jun 10 | red on cost basis
 Confirmed presenting at Wells Fargo and four more investor conferences through mid-November.
@@ -70,10 +71,9 @@ Mudrick Capital (distressed-debt investor) gaining expanded consent rights at th
 The setup this position was riding is dead with no near-term follow-through -- not a drawdown
 call, a broken timeline. No new facts this run; carried forward.
 
-**GASS — HOLD** | opened Jun 5 | dedicated check this run
+**GASS — HOLD** | opened Jun 5
 No new material news since the 09-04 Q2 print (net income $17.3M, EPS $0.46, liquidity above
-$250M, no debt). Only new item is a routine Oct 9 annual meeting notice. Debt-free, cash-rich
-thesis fully intact.
+$250M, no debt). Debt-free, cash-rich thesis fully intact.
 
 **MNKD — HOLD** | opened Jun 10
 Furoscix ReadyFlow reached US commercial availability on schedule (late August 2026); Q2 revenue
@@ -109,7 +109,7 @@ fraud/halt/failed-binary-event found. Turnaround thesis stands.
 | APLD   | Jun 9  | **HOLD** | Drawdown to ~$28 vs $41 cost, but $20.2B hyperscaler lease thesis unchallenged, B. Riley $75 PT reaffirmed |
 | ATHE   | Jun 9  | **HOLD** | FDA agreed on Ph3 pivotal design details, trial on track for year-end 2026 |
 | AVR    | Jun 8  | **HOLD** | Cantor/Wells Fargo conference slots confirmed, DurAVR program on track |
-| BNAI   | Jun 10 | **HOLD** | Cataneo acquisition closed on schedule, no fraud/delisting flag despite deep drawdown |
+| BNAI   | Jun 10 | **HOLD** | Cataneo showcased at IBC2026 on schedule, no fraud/delisting flag despite deepest drawdown |
 | CLLS   | Jun 10 | **HOLD** | Five-conference circuit confirmed through Nov, no adverse signal |
 | EVTL   | Jun 9  | **SELL** | Certification pushed 2026→2028→2029, stock -88% YoY, options repriced, Mudrick gaining control -- dead setup |
 | GASS   | Jun 5  | **HOLD** | No new news since Q2 beat; debt-free, $250M+ liquidity confirmed again |
