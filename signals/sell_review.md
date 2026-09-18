@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-18T12:35:54Z
+# Sell Review — 2026-09-18T18:35:38Z
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
@@ -8,18 +8,20 @@ fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel sn
 old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal
 either way this run.
 
-**Web search this run:** AVR (Anteris Technologies) -- oldest dedicated-checked name in the book
-(last individual check 2026-09-07). Findings: Anteris treated its first US patients in the DurAVR
-pivotal trial (randomized TAVR study supporting FDA PMA + parallel CE Mark), cash position boosted
-to $260.9M, and management confirmed slots at the Cantor Global Healthcare and Wells Fargo 21st
-Annual Healthcare conferences in September 2026. No fraud, halt, or going-concern signal. Thesis is
-strengthening (trial actively enrolling in the US, Europe, and France with a well-funded balance
-sheet), not stalling.
+**Web search this run:** SLDB (Solid Biosciences) -- oldest dedicated-checked name in the book
+tied with ABSI (last individual check 2026-09-08). Findings: management presented at the Cantor
+Fitzgerald Global Healthcare Conference (Sept 9) and the H.C. Wainwright 28th Annual Global
+Investment Conference (Sept 14), reiterating a busy stretch of regulatory meetings, trial
+readouts, and fresh data over the next several quarters. INSPIRE DUCHENNE (SGT-003) remains fully
+enrolled at 53 patients dosed, generally well tolerated, with a Q4 2026 FDA meeting on accelerated
+approval and Phase III plans still on track. No fraud, halt, safety signal, or delay found --
+thesis reaffirmed, not weakened.
 
 Everything else carries forward from dedicated checks in recent passes with no new adverse signal
 and no change to underlying data: EVTL re-confirmed -- no new facts since the certification
 push-out to 2029, options repricing, and Mudrick Capital consent-rights findings that first
-established the broken thesis; BNAI (checked 2026-09-17, Cataneo showcased conversational AI
+established the broken thesis; AVR (checked 2026-09-18, first US patients dosed in DurAVR pivotal
+trial, cash boosted to $260.9M); BNAI (checked 2026-09-17, Cataneo showcased conversational AI
 platform at IBC2026, no fraud/delisting signal despite deepest drawdown); GASS (checked
 2026-09-16, Q2 print reconfirmed, debt-free/$250M+ liquidity); PLSE (checked 2026-09-16,
 PRECISE-BTN trial completed enrollment, 100 patients, thesis strengthening); RXRX (checked
@@ -27,14 +29,13 @@ PRECISE-BTN trial completed enrollment, 100 patients, thesis strengthening); RXR
 2026-09-10, five-conference circuit through mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked
 2026-09-09, ReadyFlow launched on schedule, Q2 revenue +43% YoY); APLD (checked 2026-09-09,
 drawdown to ~$28 vs $41.44 cost, but B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis
-unchallenged); SLDB (checked 2026-09-08, INSPIRE DUCHENNE dosing progressing, FDA meeting still
-ahead in Q4 2026); ABSI (checked 2026-09-08, Sept 15-16 conference slots + Ph1 data + $100M
+unchallenged); ABSI (checked 2026-09-08, Sept 15-16 conference slots + Ph1 data + $100M
 raise/Lilly stake -- thesis strengthening); ATHE (checked 2026-09-11, FDA agreed on Ph3 pivotal
 design details, trial on track for year-end 2026); TISI (checked 2026-09-11, ABL facility
 improved, insider buy, ownership consolidation -- turnaround thesis stands). No holding shows a
 broken thesis, and no drawdown alone is being treated as a sell signal.
 
-Sources: [Anteris to Present at September 2026 Healthcare Investor Conferences](https://www.biospace.com/press-releases/anteris-to-present-at-september-2026-healthcare-investor-conferences), [Anteris treats first US patients in DurAVR pivotal trial](https://www.proactiveinvestors.com/companies/news/1091762/anteris-treats-first-us-patients-in-duravr-pivotal-trial-1091762.html), [Anteris Technologies (AVR) boosts cash to $260.9M while advancing DurAVR trial](https://www.stocktitan.net/sec-filings/AVR/424b3-anteris-technologies-global-corp-prospectus-filed-pursuant-to-r-b80e5f0ead3a.html)
+Sources: [Solid Biosciences Provides 2026 Outlook](https://investors.solidbio.com/news-releases/news-release-details/solid-biosciences-provides-2026-outlook-underscoring), [Solid Biosciences at H.C. Wainwright conference: FDA milestones loom](https://www.investing.com/news/transcripts/solid-biosciences-at-hc-wainwright-conference-fda-milestones-loom-93CH-4900246), [Solid Biosciences Provides Interim Positive Clinical Update on Phase 1/2 INSPIRE DUCHENNE Trial](https://investors.solidbio.com/news-releases/news-release-details/solid-biosciences-provides-interim-positive-clinical-update)
 
 ---
 
@@ -52,7 +53,7 @@ $75 price target; the $20.2B hyperscaler take-or-pay lease thesis stands unchall
 FDA has agreed on the specific Phase 3 pivotal design for ATH434 in MSA; trial initiation still on
 track for year-end 2026. Thesis strengthened, not just intact.
 
-**AVR — HOLD** | opened Jun 8 | largest position by dollar cost | dedicated check this run
+**AVR — HOLD** | opened Jun 8 | largest position by dollar cost
 First US patients dosed in the DurAVR pivotal trial (randomized TAVR study for FDA PMA + CE Mark),
 cash boosted to $260.9M, Cantor/Wells Fargo conference slots confirmed for September. Thesis
 strengthening, no adverse signal.
@@ -91,10 +92,12 @@ Q2 print was soft (Roche collaboration revenue declined, wider loss), but Genent
 advanced a new neuroscience target, REC-4881 Phase 2 data due Nov 2026. Multi-year AI
 drug-discovery platform thesis intact -- a soft quarter is not a broken thesis.
 
-**SLDB — HOLD** | opened Jun 4
+**SLDB — HOLD** | opened Jun 4 | dedicated check this run
 Original "quick" catalyst (Russell reconstitution) is spent, but the underlying DMD gene-therapy
-conviction thesis holds: INSPIRE DUCHENNE trial dosed 53 patients and remains generally well
-tolerated, FDA meeting on the data package expected late Q4 2026. No adverse signal.
+conviction thesis holds: presented at two September investor conferences (Cantor Fitzgerald,
+H.C. Wainwright), INSPIRE DUCHENNE fully enrolled at 53 patients dosed and generally well
+tolerated, FDA meeting on accelerated approval and Phase III plans still expected Q4 2026. No
+adverse signal.
 
 **TISI — HOLD** | opened Jun 4
 Balance sheet strengthened (ABL facility maturity extended to Sept 2027, lower rate spread),
@@ -118,5 +121,5 @@ fraud/halt/failed-binary-event found. Turnaround thesis stands.
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow launched on schedule, Q2 revenue +43% YoY, 2026 target reaffirmed |
 | PLSE   | Jun 5  | **HOLD** | PRECISE-BTN trial completed enrollment (100 pts), no adverse news, platform progressing |
 | RXRX   | Jun 5  | **HOLD** | Soft Q2 print but Genentech program advancing, REC-4881 data due Nov -- thesis intact |
-| SLDB   | Jun 4  | **HOLD** | INSPIRE DUCHENNE dosing 53 patients, well tolerated, FDA data-package meeting expected late Q4 2026 |
+| SLDB   | Jun 4  | **HOLD** | Two Sept investor conferences, INSPIRE DUCHENNE fully enrolled/well tolerated, FDA meeting still expected Q4 2026 |
 | TISI   | Jun 4  | **HOLD** | ABL facility improved, insider buy, ownership consolidation -- turnaround thesis stands |
