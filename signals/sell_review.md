@@ -1,39 +1,40 @@
-# Sell Review — 2026-09-17T12:35:57Z
+# Sell Review — 2026-09-18T12:35:54Z
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
 `holdings.json` (updated_utc 2026-07-15T18:35:19Z) is still unchanged -- same 13 symbols,
 quantities, avg_price, and opened_utc as every prior pass (executor remains paused, no new
-fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~64 days
+fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~65 days
 old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal
 either way this run.
 
-**Web search this run:** BNAI (Brand Engagement Network) -- tied for oldest dedicated-checked name
-in the book (last individual check 2026-09-07, prior to IBC2026). Findings: Cataneo (acquired
-debt-free, closed 2026-06-30) showcased its conversational AI advertising technology at IBC2026
-(Sept 11-14, Amsterdam RAI) -- the MYDAS platform managing >€6B in annual ad inventory across
-1,000+ media brands. No fraud, restatement, delisting, halt, or going-concern signal found despite
-this being the deepest drawdown in the book. Story is progressing on schedule, not stalling.
-Thesis intact; nothing to act on.
+**Web search this run:** AVR (Anteris Technologies) -- oldest dedicated-checked name in the book
+(last individual check 2026-09-07). Findings: Anteris treated its first US patients in the DurAVR
+pivotal trial (randomized TAVR study supporting FDA PMA + parallel CE Mark), cash position boosted
+to $260.9M, and management confirmed slots at the Cantor Global Healthcare and Wells Fargo 21st
+Annual Healthcare conferences in September 2026. No fraud, halt, or going-concern signal. Thesis is
+strengthening (trial actively enrolling in the US, Europe, and France with a well-funded balance
+sheet), not stalling.
 
-Everything else carries forward from dedicated checks in recent passes with no new adverse
-signal and no change to underlying data: EVTL re-confirmed -- no new facts since the certification
+Everything else carries forward from dedicated checks in recent passes with no new adverse signal
+and no change to underlying data: EVTL re-confirmed -- no new facts since the certification
 push-out to 2029, options repricing, and Mudrick Capital consent-rights findings that first
-established the broken thesis; GASS (checked 2026-09-16, Q2 print reconfirmed, no new material
-news, debt-free/$250M+ liquidity); PLSE (checked 2026-09-16, PRECISE-BTN trial completed
-enrollment, 100 patients, thesis strengthening); RXRX (checked 2026-09-10, soft Q2 print but
-Genentech program advancing, REC-4881 data due Nov); CLLS (checked 2026-09-10, five-conference
-circuit through mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked 2026-09-09, ReadyFlow launched
-on schedule, Q2 revenue +43% YoY); APLD (checked 2026-09-09, drawdown to ~$28 vs $41.44 cost, but
-B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis unchallenged); SLDB (checked 2026-09-08,
-INSPIRE DUCHENNE dosing progressing, FDA meeting still ahead in Q4 2026); ABSI (checked 2026-09-08,
-Sept 15-16 conference slots + Ph1 data + $100M raise/Lilly stake -- thesis strengthening); AVR
-(checked 2026-09-07, conference slots confirmed, no fraud signal); ATHE (checked 2026-09-11, FDA
-agreed on Ph3 pivotal design details, trial on track for year-end 2026); TISI (checked 2026-09-11,
-ABL facility improved, insider buy, ownership consolidation -- turnaround thesis stands). No
-holding shows a broken thesis, and no drawdown alone is being treated as a sell signal.
+established the broken thesis; BNAI (checked 2026-09-17, Cataneo showcased conversational AI
+platform at IBC2026, no fraud/delisting signal despite deepest drawdown); GASS (checked
+2026-09-16, Q2 print reconfirmed, debt-free/$250M+ liquidity); PLSE (checked 2026-09-16,
+PRECISE-BTN trial completed enrollment, 100 patients, thesis strengthening); RXRX (checked
+2026-09-10, soft Q2 print but Genentech program advancing, REC-4881 data due Nov); CLLS (checked
+2026-09-10, five-conference circuit through mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked
+2026-09-09, ReadyFlow launched on schedule, Q2 revenue +43% YoY); APLD (checked 2026-09-09,
+drawdown to ~$28 vs $41.44 cost, but B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis
+unchallenged); SLDB (checked 2026-09-08, INSPIRE DUCHENNE dosing progressing, FDA meeting still
+ahead in Q4 2026); ABSI (checked 2026-09-08, Sept 15-16 conference slots + Ph1 data + $100M
+raise/Lilly stake -- thesis strengthening); ATHE (checked 2026-09-11, FDA agreed on Ph3 pivotal
+design details, trial on track for year-end 2026); TISI (checked 2026-09-11, ABL facility
+improved, insider buy, ownership consolidation -- turnaround thesis stands). No holding shows a
+broken thesis, and no drawdown alone is being treated as a sell signal.
 
-Sources: [Brand Engagement Network Completes Cataneo AI Software Acquisition](https://www.tipranks.com/news/company-announcements/brand-engagement-network-completes-cataneo-ai-software-acquisition), [Cataneo Set to Unveil the Future of AI Engagement at IBC2026 in Amsterdam](http://www.prnewswire.com/news-releases/cataneo-set-to-unveil-the-future-of-ai-engagement-at-ibc2026-in-amsterdam-302872792.html), [Brand Engagement Network Unveils Conversational AI Ads](https://www.stocktitan.net/news/BNAI/conversational-ai-technology-transforms-commercial-breaks-into-real-52dcpgdvlxws.html)
+Sources: [Anteris to Present at September 2026 Healthcare Investor Conferences](https://www.biospace.com/press-releases/anteris-to-present-at-september-2026-healthcare-investor-conferences), [Anteris treats first US patients in DurAVR pivotal trial](https://www.proactiveinvestors.com/companies/news/1091762/anteris-treats-first-us-patients-in-duravr-pivotal-trial-1091762.html), [Anteris Technologies (AVR) boosts cash to $260.9M while advancing DurAVR trial](https://www.stocktitan.net/sec-filings/AVR/424b3-anteris-technologies-global-corp-prospectus-filed-pursuant-to-r-b80e5f0ead3a.html)
 
 ---
 
@@ -51,11 +52,12 @@ $75 price target; the $20.2B hyperscaler take-or-pay lease thesis stands unchall
 FDA has agreed on the specific Phase 3 pivotal design for ATH434 in MSA; trial initiation still on
 track for year-end 2026. Thesis strengthened, not just intact.
 
-**AVR — HOLD** | opened Jun 8 | largest position by dollar cost
-Cantor/Wells Fargo conference slots confirmed, DurAVR THV program on track. PARADIGM pivotal
-trial thesis intact, no adverse signal.
+**AVR — HOLD** | opened Jun 8 | largest position by dollar cost | dedicated check this run
+First US patients dosed in the DurAVR pivotal trial (randomized TAVR study for FDA PMA + CE Mark),
+cash boosted to $260.9M, Cantor/Wells Fargo conference slots confirmed for September. Thesis
+strengthening, no adverse signal.
 
-**BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book | dedicated check this run
+**BNAI — HOLD** | opened Jun 10 | deepest drawdown in the book
 Cataneo showcased its conversational AI advertising platform at IBC2026 (Sept 11-14), on schedule
 post-acquisition. No fraud/restatement/delisting signal found. Large drawdown, story still
 progressing, not broken.
@@ -108,7 +110,7 @@ fraud/halt/failed-binary-event found. Turnaround thesis stands.
 | ABSI   | Jun 10 | **HOLD** | Sept 15-16 conferences confirmed, Ph1 data + $100M raise/Lilly stake strengthen thesis |
 | APLD   | Jun 9  | **HOLD** | Drawdown to ~$28 vs $41 cost, but $20.2B hyperscaler lease thesis unchallenged, B. Riley $75 PT reaffirmed |
 | ATHE   | Jun 9  | **HOLD** | FDA agreed on Ph3 pivotal design details, trial on track for year-end 2026 |
-| AVR    | Jun 8  | **HOLD** | Cantor/Wells Fargo conference slots confirmed, DurAVR program on track |
+| AVR    | Jun 8  | **HOLD** | First US patients dosed in DurAVR pivotal trial, cash boosted to $260.9M -- thesis strengthening |
 | BNAI   | Jun 10 | **HOLD** | Cataneo showcased at IBC2026 on schedule, no fraud/delisting flag despite deepest drawdown |
 | CLLS   | Jun 10 | **HOLD** | Five-conference circuit confirmed through Nov, no adverse signal |
 | EVTL   | Jun 9  | **SELL** | Certification pushed 2026→2028→2029, stock -88% YoY, options repriced, Mudrick gaining control -- dead setup |
