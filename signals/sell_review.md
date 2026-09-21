@@ -1,4 +1,4 @@
-# Sell Review — 2026-09-21T15:36:04Z
+# Sell Review — 2026-09-21T18:35:58Z
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
@@ -8,45 +8,49 @@ fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel sn
 old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal
 either way this run.
 
-**Web search this run:** ABSI (Absci Corp) -- oldest dedicated-checked name in the book (last
-individual check 2026-09-08). Findings: BTIG raised its price target to $15 (from $13) on Sept 8,
-and LifeSci Capital initiated coverage with an "Outperform" rating on Sept 9. A director purchased
-~95,785 shares in an open-market buy. An "ABS-201 Phase 2 expansion" catalyst is scheduled for
-Oct 1, 2026. No fraud, halt, safety signal, or delay found -- thesis reaffirmed and strengthening,
-consistent with the prior pass.
+**Web search this run:** APLD (Applied Digital) -- oldest dedicated-checked name in the book
+(last individual check 2026-09-09). Findings: Wells Fargo initiated coverage Sept 17 with an
+Overweight rating and named it a "top idea," citing 1.4 GW of contracted capacity and a
+power-advantaged footprint; Morgan Stanley set a Hold rating the same day. Contracted lease value
+more than doubled quarter-over-quarter (fiscal Q3 -> Q4 2026: $16B -> $36B). Stock is down ~47%
+over the trailing three months (~$27 vs $41.44 avg cost) but that is a drawdown, not a thesis
+break -- next earnings Oct 7, 2026. No fraud, halt, or safety signal found. Thesis reaffirmed and
+strengthening (contracted backlog growing, bullish new institutional coverage), consistent with
+the prior pass.
 
 Everything else carries forward from dedicated checks in recent passes with no new adverse signal
 and no change to underlying data: EVTL re-confirmed broken -- no new facts since the certification
 push-out to 2029, options repricing, and Mudrick Capital consent-rights findings that first
-established the broken thesis; AVR (checked 2026-09-18, first US patients dosed in DurAVR pivotal
-trial, cash boosted to $260.9M); BNAI (checked 2026-09-17, Cataneo showcased conversational AI
-platform at IBC2026, no fraud/delisting signal despite deepest drawdown); GASS (checked
-2026-09-16, Q2 print reconfirmed, debt-free/$250M+ liquidity); PLSE (checked 2026-09-16,
-PRECISE-BTN trial completed enrollment, 100 patients, thesis strengthening); RXRX (checked
-2026-09-10, soft Q2 print but Genentech program advancing, REC-4881 data due Nov); CLLS (checked
-2026-09-10, five-conference circuit through mid-Nov, NATHALI-01/BALLI-01 intact); MNKD (checked
-2026-09-09, ReadyFlow launched on schedule, Q2 revenue +43% YoY); APLD (checked 2026-09-09,
-drawdown to ~$28 vs $41.44 cost, but B. Riley $75 PT reaffirmed, $20.2B hyperscaler lease thesis
-unchallenged); SLDB (checked 2026-09-18, INSPIRE DUCHENNE fully enrolled at 53 patients, FDA
-meeting on accelerated approval still expected Q4 2026); ATHE (checked 2026-09-11, FDA agreed on
-Ph3 pivotal design details, trial on track for year-end 2026); TISI (checked 2026-09-11, ABL
-facility improved, insider buy, ownership consolidation -- turnaround thesis stands). No holding
-shows a broken thesis, and no drawdown alone is being treated as a sell signal.
+established the broken thesis; ABSI (checked 2026-09-21, BTIG PT raised to $15, LifeSci Capital
+"Outperform" initiation, director open-market buy, Oct 1 Ph2 expansion catalyst); AVR (checked
+2026-09-18, first US patients dosed in DurAVR pivotal trial, cash boosted to $260.9M); BNAI
+(checked 2026-09-17, Cataneo showcased conversational AI platform at IBC2026, no fraud/delisting
+signal despite deepest drawdown); GASS (checked 2026-09-16, Q2 print reconfirmed, debt-free/$250M+
+liquidity); PLSE (checked 2026-09-16, PRECISE-BTN trial completed enrollment, 100 patients, thesis
+strengthening); RXRX (checked 2026-09-10, soft Q2 print but Genentech program advancing, REC-4881
+data due Nov); CLLS (checked 2026-09-10, five-conference circuit through mid-Nov, NATHALI-01/
+BALLI-01 intact); MNKD (checked 2026-09-09, ReadyFlow launched on schedule, Q2 revenue +43% YoY);
+SLDB (checked 2026-09-18, INSPIRE DUCHENNE fully enrolled at 53 patients, FDA meeting on
+accelerated approval still expected Q4 2026); ATHE (checked 2026-09-11, FDA agreed on Ph3 pivotal
+design details, trial on track for year-end 2026); TISI (checked 2026-09-11, ABL facility
+improved, insider buy, ownership consolidation -- turnaround thesis stands). No holding shows a
+broken thesis, and no drawdown alone is being treated as a sell signal.
 
-Sources: [Absci (ABSI) news](https://www.stocktitan.net/overview/ABSI/), [Analysts Cut/Raise Absci (ABSI) Target coverage](https://finance.yahoo.com/news/analysts-cut-absci-absi-target-191349776.html), [Absci Investor Relations](https://investors.absci.com/news-and-events/news-releases)
+Sources: [Trefis: Can Applied Digital Stock Recover On Leases It Has Already Signed?](https://www.trefis.com/stock/apld/articles/615734/can-applied-digital-stock-recover-on-leases-it-has-already-signed/2026-09-17), [FinancialContent: Why Is Applied Digital (APLD) Stock Soaring Today](https://markets.financialcontent.com/stocks/article/stockstory-2026-9-17-why-is-applied-digital-apld-stock-soaring-today), [Applied Digital Press Releases](https://ir.applieddigital.com/news-events/press-releases)
 
 ---
 
 ## Per-Position Rulings
 
-**ABSI — HOLD** | opened Jun 10 | up on cost basis | dedicated check this run
+**ABSI — HOLD** | opened Jun 10 | up on cost basis
 BTIG raised its PT to $15 (from $13), LifeSci Capital initiated "Outperform," a director bought
 ~95,785 shares in the open market, and an ABS-201 Phase 2 expansion catalyst is set for Oct 1,
 2026. Thesis strengthening, no adverse signal.
 
-**APLD — HOLD** | opened Jun 9 | large position by dollar cost
-Stock down to ~$28 from ~$41.44 avg cost -- a drawdown, not a thesis break. B. Riley reaffirmed a
-$75 price target; the $20.2B hyperscaler take-or-pay lease thesis stands unchallenged.
+**APLD — HOLD** | opened Jun 9 | large position by dollar cost | dedicated check this run
+Stock down ~47% over three months (~$27 vs $41.44 avg cost) -- a drawdown, not a thesis break.
+Wells Fargo initiated Overweight Sept 17, naming it a "top idea" on 1.4 GW contracted capacity;
+contracted lease value doubled Q3->Q4 to $36B. Thesis strengthening, not broken.
 
 **ATHE — HOLD** | opened Jun 9 | trivial size (1 share)
 FDA has agreed on the specific Phase 3 pivotal design for ATH434 in MSA; trial initiation still on
@@ -108,7 +112,7 @@ fraud/halt/failed-binary-event found. Turnaround thesis stands.
 | Symbol | Opened | Decision | One-line reason |
 |--------|--------|----------|-----------------|
 | ABSI   | Jun 10 | **HOLD** | BTIG PT raised to $15, new Outperform coverage, insider buy, Oct 1 Ph2 expansion catalyst |
-| APLD   | Jun 9  | **HOLD** | Drawdown to ~$28 vs $41 cost, but $20.2B hyperscaler lease thesis unchallenged, B. Riley $75 PT reaffirmed |
+| APLD   | Jun 9  | **HOLD** | Wells Fargo Overweight "top idea" Sept 17, contracted lease value doubled to $36B -- thesis strengthening despite drawdown |
 | ATHE   | Jun 9  | **HOLD** | FDA agreed on Ph3 pivotal design details, trial on track for year-end 2026 |
 | AVR    | Jun 8  | **HOLD** | First US patients dosed in DurAVR pivotal trial, cash boosted to $260.9M -- thesis strengthening |
 | BNAI   | Jun 10 | **HOLD** | Cataneo showcased at IBC2026 on schedule, no fraud/delisting flag despite deepest drawdown |
