@@ -236,7 +236,10 @@ def write_holdings(positions: dict, marks: dict | None = None) -> None:
             row["unrealized_pct"] = round((last / avg - 1) * 100, 2) if avg else None
             row["value"] = round(qty * last * mult, 2)
         rows.append(row)
-    data = {"updated_utc": datetime.now(timezone.utc).isoformat(), "holdings": rows}
+    now_iso = datetime.now(timezone.utc).isoformat()
+    # attempted_utc mirrors updated_utc here: a completed write IS a completed attempt.
+    # See _record_attempt() below for why the two can diverge.
+    data = {"updated_utc": now_iso, "attempted_utc": now_iso, "holdings": rows}
     # Tell the brain its REAL spendable cash so it sizes new buys off actual buying
     # power — not a "$1,000 − cost basis" guess that ignores realized losses. In paper
     # mode this is the simulated book's cash; live mode omits it (Schwab is the truth).
@@ -249,6 +252,29 @@ def write_holdings(positions: dict, marks: dict | None = None) -> None:
         print(f"Wrote {HOLDINGS_FILE}: {len(rows)} holding(s)")
     except Exception as exc:  # noqa: BLE001
         print(f"(warn) could not write holdings file: {exc}")
+
+
+def _record_attempt() -> None:
+    """Stamp `attempted_utc` onto signals/holdings.json the moment a real run begins
+    (past the market-hours no-op guard) — BEFORE any Schwab/network call that could
+    throw. write_holdings() only advances `updated_utc` on a full successful write, so
+    the watchdog can tell "not being triggered" from "triggered but crashing every run"
+    by comparing the two: if attempted_utc keeps advancing while updated_utc doesn't,
+    something between here and write_holdings() is failing every time (e.g. an expired
+    SCHWAB_REFRESH_TOKEN in live mode); if neither advances, the executor simply isn't
+    being invoked (the external cron, or workflow_dispatch itself, stopped firing)."""
+    try:
+        with open(HOLDINGS_FILE, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception:  # noqa: BLE001 - missing/corrupt: start fresh, never block the run
+        data = {"updated_utc": None, "holdings": []}
+    data["attempted_utc"] = datetime.now(timezone.utc).isoformat()
+    try:
+        os.makedirs(os.path.dirname(HOLDINGS_FILE), exist_ok=True)
+        with open(HOLDINGS_FILE, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, indent=2)
+    except Exception as exc:  # noqa: BLE001
+        print(f"(warn) could not stamp attempt heartbeat: {exc}")
 
 
 # ============================ PAPER-TRADING ENGINE ============================
@@ -922,6 +948,7 @@ def main() -> int:
               "executor no-op. (Set IGNORE_MARKET_HOURS=true to force a run.)")
         print("=== done ===")
         return 0
+    _record_attempt()  # heartbeat that a real run started, before anything that can fail
     if DRY_RUN:  # load the simulated book BEFORE get_positions() reads from it
         _PAPER = load_paper_account()
         print(f"Paper book: cash ${_PAPER['cash']:.2f}, "
