@@ -235,9 +235,29 @@ def summarize(curve, trades, turnover, start_equity, series, calendar) -> dict:
         base = pe if pe is not None else fy[y]
         spy_yearly[y] = ly[y] / base - 1; pe = ly[y]
 
+    # ---- loss-frequency metrics (what "loses money less often" means, measured)
+    month_end: Dict[str, float] = {}
+    for d, e in zip(dates, eq):
+        month_end[d[:7]] = e
+    mkeys = sorted(month_end)
+    mrets = [month_end[mkeys[i]] / month_end[mkeys[i - 1]] - 1 for i in range(1, len(mkeys))]
+    losing_months = sum(1 for x in mrets if x < 0) / len(mrets) if mrets else 0.0
+    r12 = [eq[i] / eq[i - 252] - 1 for i in range(252, len(eq), 5)]
+    losing_12m = sum(1 for x in r12 if x < 0) / len(r12) if r12 else 0.0
+    worst_12m = min(r12) if r12 else 0.0
+    peak = eq[0]; under = 0; longest = 0; days_under = 0
+    for e in eq:
+        if e >= peak:
+            peak = e; under = 0
+        else:
+            under += 1; days_under += 1; longest = max(longest, under)
+    losing_years = sum(1 for v in yearly.values() if v < 0) / len(yearly) if yearly else 0.0
+
     mr = [t for t in trades if t["sleeve"] == "MR"]
     wins = [t for t in mr if t["ret"] > 0]
     return {
+        "losing_months": losing_months, "losing_12m": losing_12m, "worst_12m": worst_12m,
+        "longest_underwater_days": longest, "time_underwater": days_under / len(eq), "losing_years": losing_years,
         "start": dates[0], "end": dates[-1], "years": round(years, 2),
         "start_equity": start_equity, "end_equity": round(eq[-1], 2),
         "cagr": cagr, "vol": sd * math.sqrt(252), "sharpe": sharpe, "sortino": sortino,
@@ -264,6 +284,10 @@ def fmt_report(r: dict, title: str = "Backtest") -> str:
          f"| Sortino | {r['sortino']:.2f} | - |",
          f"| Max drawdown | {r['max_drawdown']:.1%} ({r['max_drawdown_date']}) | {r['spy']['max_drawdown']:.1%} |",
          f"| Calmar | {r['calmar']:.2f} | - |",
+         f"| Losing months | {r['losing_months']:.0%} | - |",
+         f"| Losing 12-month stretches | {r['losing_12m']:.0%} (worst {r['worst_12m']:+.1%}) | - |",
+         f"| Losing calendar years | {r['losing_years']:.0%} | - |",
+         f"| Longest time below a previous high | {r['longest_underwater_days'] / 21:.0f} months | - |",
          f"| MR round-trips | {r['mr_trades']} (win {r['mr_win_rate']:.0%}, avg {r['mr_avg_ret']:+.2%}, {r['mr_avg_days']:.1f}d) | - |",
          "", "| Year | Strategy | SPY |", "|---|---:|---:|"]
     for y in sorted(r["yearly"]):
@@ -282,6 +306,7 @@ def main() -> int:
     ap.add_argument("--grid4", action="store_true", help="candidate defaults confirmation")
     ap.add_argument("--grid5", action="store_true", help="tranches + adaptive core")
     ap.add_argument("--grid6", action="store_true", help="leveraged core")
+    ap.add_argument("--grid7", action="store_true", help="loss-frequency search")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--out", default="reports/backtest.md")
     ap.add_argument("--curve", default=None, help="write equity curve CSV here")
@@ -314,6 +339,32 @@ def main() -> int:
         for name, prm in grid:
             r = run(hist, prm, args.start, args.end)
             print(f"{name:<22}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['mr_trades']:>7}{r['mr_win_rate']:>8.0%}")
+        return 0
+
+    if args.grid7:
+        base = Params()
+        agg = replace(base, core_leveraged=True, core_weight=0.5, core_candidates=("SPY", "QQQ"))
+        grid = [
+            ("balanced", base),
+            ("aggressive", agg),
+            ("bal + MR 25%", replace(base, mr_weight=0.25, mom_weight=0.75)),
+            ("bal + vol 10%", replace(base, vol_target=0.10)),
+            ("bal + vol 12%", replace(base, vol_target=0.12)),
+            ("bal + def-mom", replace(base, defensive_mode="momentum")),
+            ("bal + breadth .4", replace(base, breadth_min=0.4)),
+            ("bal top8", replace(base, mom_top_n=8, mom_hysteresis=3)),
+            ("bal top10", replace(base, mom_top_n=10, mom_hysteresis=4)),
+            ("bal core 50% 1x", replace(base, core_weight=0.5)),
+            ("core 1x 100%", replace(base, core_weight=1.0, core_candidates=("SPY", "QQQ"))),
+            ("bal sma150", replace(base, trend_sma=150)),
+            ("bal sma100", replace(base, trend_sma=100)),
+        ]
+        for start, label in ((args.start, "from " + args.start), ("2017-01-01", "OOS 2017+")):
+            print(f"--- {label} ---")
+            print(f"{'variant':<20}{'CAGR':>7}{'MaxDD':>7}{'LoseMo':>8}{'Lose12m':>8}{'Worst12m':>9}{'LoseYr':>7}{'UndrwtrMo':>10}")
+            for name, prm in grid:
+                r = run(hist, prm, start, args.end)
+                print(f"{name:<20}{r['cagr']:>7.1%}{r['max_drawdown']:>7.0%}{r['losing_months']:>8.0%}{r['losing_12m']:>8.0%}{r['worst_12m']:>9.1%}{r['losing_years']:>7.0%}{r['longest_underwater_days']/21:>10.0f}")
         return 0
 
     if args.grid6:

@@ -71,11 +71,11 @@ CLUSTERS: Dict[str, str] = {
 class Params:
     # Momentum sleeve
     mom_weight: float = 1.00
-    mom_top_n: int = 6                               # walk-forward pick (validate.py)
-    mom_hysteresis: int = 2
+    mom_top_n: int = 8                               # 8 names: fewer losing months than 6 (grid7)
+    mom_hysteresis: int = 3
     mom_lookbacks: Sequence[int] = (63, 126, 252)   # 3/6/12 months; the last month is excluded on
                                                      # purpose (1-month returns mean-revert)
-    trend_sma: int = 200
+    trend_sma: int = 150                             # 150d: smaller drawdowns than 200d (grid7)
     vol_lookback: int = 63
     mom_rebalance_days: int = 10                     # every 2 weeks (walk-forward pick); 1 = daily
     mom_weighting: str = "inverse_vol"               # or "equal"
@@ -83,7 +83,7 @@ class Params:
     mom_tranches: int = 5                            # split the sleeve into N staggered rebalance
                                                      # cycles to average out rebalance-timing luck
     # Optional core sleeve: fixed slice in `core_symbol` while it is above its 200-day SMA
-    core_weight: float = 0.30                        # 0 = off. 'growth' preset uses QQQ
+    core_weight: float = 0.50                        # 0 = off. Trend-timed index core
     core_symbol: str = "auto"                        # "auto": strongest of core_candidates by momentum, or a ticker
     core_candidates: Sequence[str] = ("SPY", "QQQ", "EFA")
     core_leveraged: bool = False                     # hold the 2x ETF (LEVERAGED map) instead
@@ -482,7 +482,7 @@ def compute_targets(
                 notes.append(f"defensive {idle:.0%} -> {picks}")
 
     return Decision(
-        weights={s: round(w, 6) for s, w in weights.items() if w > 1e-6},
+        weights={s: math.floor(w * 1e6) / 1e6 for s, w in weights.items() if w > 1e-6},  # round DOWN: sum never > 1
         state=st,
         notes=notes,
         mom_selected=list(st.mom_holdings),

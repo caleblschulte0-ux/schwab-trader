@@ -4,12 +4,12 @@ _Same engine as `backtest.py`: close fills, 5 bps slippage/side, $0 commissions,
 
 ## 1. Walk-forward (out-of-sample) test
 
-Parameters chosen on **2008-01-01 → 2016-12-31** only (best Sharpe among 60 combinations), then run untouched on **2017-01-01 → today**.
+Parameters chosen on **2008-01-01 → 2016-12-31** only (best Sharpe among 48 combinations), then run untouched on **2017-01-01 → today**.
 
 | Parameter set | In-sample CAGR | In-sample Sharpe | **Out-of-sample CAGR** | **Out-of-sample Sharpe** | OOS Max DD | OOS SPY CAGR |
 |---|---:|---:|---:|---:|---:|---:|
-| Best in-sample: top 6, lookbacks [63, 126, 252], rebalance 10d | +6.8% | 0.61 | +12.6% | 0.96 | -15.8% | +15.4% |
-| Shipped defaults: top 6, lookbacks [63, 126, 252], rebalance 10d | +6.8% | 0.61 | +12.6% | 0.96 | -15.8% | +15.4% |
+| Best in-sample: top 6, lookbacks [21, 63, 126, 252], rebalance 10d | +7.0% | 0.70 | +11.3% | 0.98 | -14.0% | +15.4% |
+| Shipped defaults: top 8, lookbacks [63, 126, 252], rebalance 10d | +5.5% | 0.60 | +11.8% | 1.09 | -13.6% | +15.4% |
 
 If the out-of-sample Sharpe collapsed relative to in-sample, the edge was fitted. A modest decay is normal; a similar number means the rules generalise.
 
@@ -17,12 +17,12 @@ If the out-of-sample Sharpe collapsed relative to in-sample, the edge was fitted
 
 | top_n \ lookbacks | [63, 126, 252] | [21, 63, 126, 252] | [126, 252] | [63, 126] | [252] |
 |---|---:|---:|---:|---:|---:|
-| **3** | 0.72 | 0.71 | 0.74 | 0.56 | 0.75 |
-| **4** | 0.75 | 0.71 | 0.77 | 0.59 | 0.79 |
-| **5** | 0.78 | 0.73 | 0.79 | 0.60 | 0.78 |
-| **6** | **0.81** | 0.78 | 0.79 | 0.63 | 0.75 |
-| **7** | 0.82 | 0.80 | 0.79 | 0.67 | 0.77 |
-| **8** | 0.81 | 0.80 | 0.77 | 0.71 | 0.76 |
+| **3** | 0.84 | 0.77 | 0.82 | 0.62 | 0.83 |
+| **4** | 0.81 | 0.77 | 0.83 | 0.65 | 0.82 |
+| **5** | 0.82 | 0.82 | 0.81 | 0.63 | 0.76 |
+| **6** | 0.84 | 0.85 | 0.78 | 0.66 | 0.74 |
+| **7** | 0.86 | 0.88 | 0.79 | 0.71 | 0.77 |
+| **8** | **0.86** | 0.86 | 0.82 | 0.73 | 0.82 |
 
 A robust strategy shows a plateau, not a single spike. The shipped cell is bold.
 
@@ -32,13 +32,13 @@ Same rules, weekly cycle started on five different days:
 
 | Start | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|
-| 2008-01-02 | +9.9% | 0.81 | -17.8% |
-| 2008-01-03 | +9.6% | 0.78 | -17.6% |
-| 2008-01-04 | +10.0% | 0.82 | -17.8% |
-| 2008-01-07 | +9.7% | 0.80 | -17.6% |
-| 2008-01-08 | +10.0% | 0.82 | -17.8% |
+| 2008-01-02 | +8.6% | 0.86 | -14.5% |
+| 2008-01-03 | +8.6% | 0.86 | -14.7% |
+| 2008-01-04 | +8.8% | 0.87 | -14.5% |
+| 2008-01-07 | +8.8% | 0.88 | -14.7% |
+| 2008-01-08 | +8.7% | 0.87 | -14.4% |
 
-Sharpe spread across start days: 0.78 – 0.82.
+Sharpe spread across start days: 0.86 – 0.88.
 
 ## 4. Block-bootstrap: what a random 5-year stretch could look like
 
@@ -46,17 +46,17 @@ Sharpe spread across start days: 0.78 – 0.82.
 
 | Percentile | 5-yr CAGR | Max drawdown |
 |---|---:|---:|
-| 5th (bad luck) | +1.3% | -26.4% |
-| 25th | +6.5% | -19.3% |
-| median | +9.9% | -15.8% |
-| 75th | +13.7% | -13.0% |
-| 95th (good luck) | +18.5% | -10.3% |
+| 5th (bad luck) | +1.3% | -22.1% |
+| 25th | +5.7% | -16.3% |
+| median | +8.6% | -13.2% |
+| 75th | +11.8% | -10.7% |
+| 95th (good luck) | +15.3% | -8.2% |
 
-Probability a 5-year stretch would trip a 20% kill switch: **21%** of paths; a 30% kill switch: **2%**. That is why the executor's default `MAX_DRAWDOWN_HALT` is 0.30: a halt at 20% would fire inside the strategy's normal drawdown range and sell the bottom. Probability of a negative 5-year CAGR: **3%**.
+Probability a 5-year stretch would trip a 20% kill switch: **9%** of paths; a 30% kill switch: **1%**. That is why the executor's default `MAX_DRAWDOWN_HALT` is 0.30: a halt at 20% would fire inside the strategy's normal drawdown range and sell the bottom. Probability of a negative 5-year CAGR: **3%**.
 
 ## 5. Rolling 3-year windows vs SPY
 
-Across 189 overlapping 3-year windows the strategy beat SPY buy-and-hold in **8%** of them. Median annualised gap -4.2%; worst -19.5%; best +9.9%.
+Across 189 overlapping 3-year windows the strategy beat SPY buy-and-hold in **6%** of them. Median annualised gap -4.5%; worst -20.6%; best +6.4%.
 
 This is the number to internalise: it will trail SPY in most straight-up 3-year stretches, and win by a lot in the stretches that include a bear market.
 
@@ -66,21 +66,22 @@ Everything below is implemented in `strategy.py`; the shipped default is the row
 
 | Variant | 2008→ CAGR / Sharpe / MaxDD | 2015→ CAGR / Sharpe / MaxDD | OOS 2017→ CAGR / Sharpe / MaxDD |
 |---|---|---|---|
-| ✅ Shipped defaults | +9.9% / 0.81 / -18% | +10.6% / 0.85 / -16% | +12.6% / 0.96 / -16% |
-| no core sleeve (100% rotation) | +9.5% / 0.74 / -18% | +9.2% / 0.72 / -17% | +11.4% / 0.83 / -17% |
-| fixed SPY core instead of adaptive | +9.7% / 0.81 / -19% | +9.7% / 0.82 / -15% | +11.7% / 0.94 / -15% |
-| 'growth' preset: fixed QQQ core | +10.2% / 0.84 / -18% | +10.9% / 0.87 / -16% | +13.2% / 1.00 / -16% |
-| 'aggressive' preset: 50% in 2x SPY/QQQ (SSO/QLD), trend-timed | +15.7% / 0.81 / -31% | +16.9% / 0.84 / -29% | +20.1% / 0.93 / -29% |
-| aggressive + 15% vol cap (rejected) | +10.5% / 0.77 / -23% | +10.8% / 0.78 / -23% | +12.6% / 0.88 / -23% |
-| single rebalance tranche (no stagger) | +9.8% / 0.80 / -20% | +10.3% / 0.83 / -17% | +13.3% / 1.01 / -15% |
-| no cluster cap | +10.0% / 0.80 / -20% | +10.6% / 0.83 / -17% | +12.7% / 0.94 / -17% |
-| top 5 / weekly (previous defaults) | +10.0% / 0.78 / -21% | +11.1% / 0.85 / -15% | +13.4% / 0.97 / -15% |
-| defensive asset by momentum (TLT/IEF/GLD) | +10.0% / 0.77 / -22% | +10.6% / 0.81 / -22% | +13.2% / 0.95 / -22% |
-| breadth regime switch (<40% → all defensive) | +9.5% / 0.82 / -19% | +11.0% / 0.92 / -13% | +13.1% / 1.04 / -13% |
-| portfolio vol target 12% | +8.5% / 0.80 / -15% | +8.3% / 0.77 / -16% | +9.9% / 0.89 / -16% |
-| daily rebalance + hysteresis | +9.2% / 0.76 / -21% | +9.8% / 0.79 / -17% | +11.2% / 0.86 / -17% |
-| + mean-reversion sleeve 25% | +9.3% / 0.77 / -17% | +10.0% / 0.81 / -17% | +12.1% / 0.93 / -17% |
-| include 1-month lookback | +9.5% / 0.78 / -18% | +10.2% / 0.82 / -15% | +12.2% / 0.93 / -15% |
-| equal weights instead of inverse-vol | +10.4% / 0.78 / -18% | +11.0% / 0.82 / -18% | +13.2% / 0.92 / -18% |
+| ✅ Shipped defaults | +8.6% / 0.86 / -14% | +10.2% / 0.99 / -14% | +11.8% / 1.09 / -14% |
+| previous defaults (core 30%, top 6, 200-day) | +9.9% / 0.81 / -18% | +10.6% / 0.85 / -16% | +12.6% / 0.96 / -16% |
+| no core sleeve (100% rotation) | +8.5% / 0.74 / -14% | +8.7% / 0.75 / -15% | +10.7% / 0.87 / -15% |
+| fixed SPY core instead of adaptive | +9.0% / 0.86 / -17% | +9.1% / 0.87 / -14% | +11.0% / 1.01 / -14% |
+| 'growth' preset: fixed QQQ core | +9.7% / 0.95 / -14% | +11.2% / 1.08 / -14% | +13.3% / 1.21 / -14% |
+| 'aggressive' preset: 50% in 2x SPY/QQQ (SSO/QLD), trend-timed | +15.6% / 0.83 / -28% | +17.4% / 0.89 / -28% | +20.0% / 0.96 / -28% |
+| aggressive + 15% vol cap (rejected) | +10.7% / 0.80 / -23% | +11.3% / 0.82 / -23% | +12.7% / 0.90 / -23% |
+| single rebalance tranche (no stagger) | +8.9% / 0.87 / -15% | +10.1% / 0.97 / -15% | +12.6% / 1.13 / -13% |
+| no cluster cap | +8.7% / 0.85 / -14% | +10.3% / 0.98 / -14% | +11.9% / 1.08 / -14% |
+| top 5 / weekly (previous defaults) | +9.5% / 0.83 / -19% | +11.0% / 0.93 / -13% | +12.4% / 1.00 / -13% |
+| defensive asset by momentum (TLT/IEF/GLD) | +10.5% / 0.86 / -21% | +12.1% / 0.99 / -21% | +15.0% / 1.15 / -21% |
+| breadth regime switch (<40% → all defensive) | +8.0% / 0.83 / -17% | +9.7% / 0.99 / -13% | +11.0% / 1.07 / -13% |
+| portfolio vol target 12% | +8.0% / 0.87 / -14% | +9.0% / 0.94 / -14% | +10.2% / 1.03 / -14% |
+| daily rebalance + hysteresis | +8.8% / 0.86 / -16% | +10.3% / 0.98 / -14% | +11.8% / 1.07 / -14% |
+| + mean-reversion sleeve 25% | +8.2% / 0.81 / -17% | +10.0% / 0.96 / -14% | +11.6% / 1.07 / -14% |
+| include 1-month lookback | +8.8% / 0.86 / -15% | +9.8% / 0.95 / -13% | +11.2% / 1.04 / -13% |
+| equal weights instead of inverse-vol | +9.2% / 0.86 / -15% | +10.8% / 0.98 / -15% | +12.3% / 1.07 / -15% |
 
 _Past performance is not a promise of future results._

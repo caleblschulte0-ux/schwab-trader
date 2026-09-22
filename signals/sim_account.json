@@ -1,6 +1,6 @@
 {
-  "cash": 2.010000000000005,
-  "created_utc": "2026-09-22T20:53:44Z",
+  "cash": 2.0000000000000036,
+  "created_utc": "2026-09-22T23:07:02Z",
   "equity_curve": [
     [
       "2026-09-22",
@@ -11,89 +11,113 @@
     {
       "id": "sim-1",
       "price": "747.8338",
-      "qty": "0.401159",
+      "qty": "0.468018",
       "side": "buy",
       "symbol": "QQQ",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "transaction_time": "2026-09-22T23:07:24Z"
     },
     {
       "id": "sim-2",
-      "price": "61.8109",
-      "qty": "2.562493",
+      "price": "91.6158",
+      "qty": "2.542466",
       "side": "buy",
-      "symbol": "XLE",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "symbol": "BIL",
+      "transaction_time": "2026-09-22T23:07:24Z"
     },
     {
       "id": "sim-3",
-      "price": "32.4562",
-      "qty": "4.798464",
+      "price": "61.8109",
+      "qty": "1.275342",
       "side": "buy",
-      "symbol": "DBC",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "symbol": "XLE",
+      "transaction_time": "2026-09-22T23:07:24Z"
     },
     {
       "id": "sim-4",
-      "price": "196.3681",
-      "qty": "0.619398",
+      "price": "32.4562",
+      "qty": "2.388140",
       "side": "buy",
-      "symbol": "XLK",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "symbol": "DBC",
+      "transaction_time": "2026-09-22T23:07:24Z"
     },
     {
       "id": "sim-5",
-      "price": "161.9509",
-      "qty": "0.741397",
+      "price": "69.1345",
+      "qty": "0.993281",
       "side": "buy",
-      "symbol": "XBI",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "symbol": "EEM",
+      "transaction_time": "2026-09-22T23:07:24Z"
     },
     {
       "id": "sim-6",
-      "price": "607.7638",
-      "qty": "0.129080",
+      "price": "196.3681",
+      "qty": "0.308248",
       "side": "buy",
-      "symbol": "SMH",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "symbol": "XLK",
+      "transaction_time": "2026-09-22T23:07:24Z"
     },
     {
       "id": "sim-7",
+      "price": "161.9509",
+      "qty": "0.368939",
+      "side": "buy",
+      "symbol": "XBI",
+      "transaction_time": "2026-09-22T23:07:24Z"
+    },
+    {
+      "id": "sim-8",
+      "price": "607.7638",
+      "qty": "0.064235",
+      "side": "buy",
+      "symbol": "SMH",
+      "transaction_time": "2026-09-22T23:07:24Z"
+    },
+    {
+      "id": "sim-9",
       "price": "144.1520",
-      "qty": "0.441964",
+      "qty": "0.213247",
       "side": "buy",
       "symbol": "USO",
-      "transaction_time": "2026-09-22T20:54:06Z"
+      "transaction_time": "2026-09-22T23:07:24Z"
     }
   ],
-  "n": 7,
+  "n": 9,
   "positions": {
+    "BIL": {
+      "avg_entry": 91.61578469467163,
+      "qty": 2.5424658073528152
+    },
     "DBC": {
       "avg_entry": 32.456218626022334,
-      "qty": 4.798464103120527
+      "qty": 2.3881401864188523
+    },
+    "EEM": {
+      "avg_entry": 69.13454847335815,
+      "qty": 0.9932805162741871
     },
     "QQQ": {
       "avg_entry": 747.8337519836425,
-      "qty": 0.4011586789232829
+      "qty": 0.46801845874383
     },
     "SMH": {
       "avg_entry": 607.7637519836426,
-      "qty": 0.12907976124596424
+      "qty": 0.06423548602985905
     },
     "USO": {
       "avg_entry": 144.1520418319702,
-      "qty": 0.44196390970488725
+      "qty": 0.21324706614861455
     },
     "XBI": {
       "avg_entry": 161.9509301147461,
-      "qty": 0.7413974091715777
+      "qty": 0.3689389122845155
     },
     "XLE": {
-      "avg_entry": 61.81088877868652,
-      "qty": 2.5624934882770307
+      "avg_entry": 61.81088877868651,
+      "qty": 1.2753416357148706
     },
     "XLK": {
       "avg_entry": 196.36813927459716,
-      "qty": 0.6193978333211942
+      "qty": 0.3082475610534563
     }
   },
   "start_cash": 1000.0

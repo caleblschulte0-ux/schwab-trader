@@ -1,15 +1,27 @@
 {
-  "bought_today": [],
+  "bought_today": [
+    "BIL",
+    "DBC",
+    "EEM",
+    "QQQ",
+    "SMH",
+    "USO",
+    "XBI",
+    "XLE",
+    "XLK"
+  ],
   "hwm": 1000.0,
   "last_decision_date": "2026-09-22",
   "last_mode": "SIM",
-  "last_run_utc": "2026-09-22T21:12:22Z",
+  "last_run_utc": "2026-09-22T23:07:02Z",
   "last_seen_date": "2026-09-22",
   "last_trade_date": "2026-09-22",
   "strategy": {
     "mom_days_since_rebalance": 0,
     "mom_holdings": [
       "DBC",
+      "EEM",
+      "QQQ",
       "SMH",
       "USO",
       "XBI",
@@ -26,7 +38,9 @@
           "XBI",
           "XLK",
           "DBC",
-          "XLE"
+          "XLE",
+          "QQQ",
+          "EEM"
         ],
         "next_offset": 0
       },
@@ -38,7 +52,9 @@
           "XBI",
           "XLK",
           "DBC",
-          "XLE"
+          "XLE",
+          "QQQ",
+          "EEM"
         ],
         "next_offset": 0
       },
@@ -50,7 +66,9 @@
           "XBI",
           "XLK",
           "DBC",
-          "XLE"
+          "XLE",
+          "QQQ",
+          "EEM"
         ],
         "next_offset": 0
       },
@@ -62,7 +80,9 @@
           "XBI",
           "XLK",
           "DBC",
-          "XLE"
+          "XLE",
+          "QQQ",
+          "EEM"
         ],
         "next_offset": 0
       },
@@ -74,7 +94,9 @@
           "XBI",
           "XLK",
           "DBC",
-          "XLE"
+          "XLE",
+          "QQQ",
+          "EEM"
         ],
         "next_offset": 0
       }

@@ -59,7 +59,7 @@ def main() -> int:
 
     # ---------------------------------------------------------------- 1. walk-forward
     grid = []
-    for top_n in (3, 4, 5, 6, 7):
+    for top_n in (4, 6, 8, 10):
         for lbs in ((63, 126, 252), (21, 63, 126, 252), (126, 252), (63, 126)):
             for reb in (5, 10, 21):
                 grid.append(replace(base, mom_top_n=top_n, mom_lookbacks=lbs, mom_rebalance_days=reb))
@@ -171,6 +171,7 @@ def main() -> int:
           "Each row flips ONE thing relative to the shipped defaults (`python backtest.py --grid3` for more).", "",
           "| Variant | 2008→ CAGR / Sharpe / MaxDD | 2015→ CAGR / Sharpe / MaxDD | OOS 2017→ CAGR / Sharpe / MaxDD |", "|---|---|---|---|"]
     variants = [("✅ Shipped defaults", base),
+                ("previous defaults (core 30%, top 6, 200-day)", replace(base, core_weight=0.3, mom_top_n=6, mom_hysteresis=2, trend_sma=200)),
                 ("no core sleeve (100% rotation)", replace(base, core_weight=0.0)),
                 ("fixed SPY core instead of adaptive", replace(base, core_symbol="SPY")),
                 ("'growth' preset: fixed QQQ core", replace(base, core_symbol="QQQ")),

@@ -59,7 +59,7 @@ class TargetTests(unittest.TestCase):
         total = sum(dec.weights.values())
         self.assertLessEqual(total, 1.0 + 1e-9)
         for s, w in dec.weights.items():
-            if s != p.cash_proxy:  # the cash proxy IS cash; it may hold the whole book
+            if s != p.cash_proxy and s != dec.regime.get("core"):  # cash proxy and core sleeve are sized on purpose
                 self.assertLessEqual(w, p.max_position_weight + 1e-9)
             self.assertGreater(w, 0)
 

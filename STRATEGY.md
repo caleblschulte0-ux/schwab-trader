@@ -6,71 +6,56 @@ leveraged, never options. The bot can only buy ETFs with settled cash and sell E
 
 ## The portfolio (preset `balanced`)
 Universe: 34 liquid, commission-free, fractional ETFs (US indices and sectors,
-international, bonds, gold/silver/commodities/dollar). No single stocks.
+international, bonds, gold/silver/commodities/dollar), plus the 2x index funds SSO/QLD
+for the `aggressive` preset. No single stocks.
 
-1. **Core (30%)**: the strongest of SPY / QQQ / EFA by 3-6-12-month momentum, held while
-   it is above its 200-day moving average, otherwise T-bills. Trend-timed market beta
-   with a relative-momentum tilt. (`growth` preset: always QQQ. `us_only`: SPY/QQQ.)
-2. **Momentum rotation (70%)**: score each ETF by the average of its 3-, 6- and 12-month
+1. **Core (50%)**: the strongest of SPY / QQQ / EFA by 3-6-12-month momentum, held while
+   it is above its 150-day moving average, otherwise T-bills.
+2. **Momentum rotation (50%)**: score each ETF by the average of its 3-, 6- and 12-month
    total returns (the last month is excluded: 1-month returns mean-revert). Eligible =
-   positive score **and** price above its 200-day average. Hold the top 6, inverse-volatility
-   weighted; a holding keeps its slot while it ranks in the top 8. The sleeve is split into
-   **five tranches** on a 10-day cycle, staggered two days apart, so one fifth of the book
-   rebalances every other day: same rules, far less dependence on which day you started
-   (validation §3). Between rebalances a holding is dropped the day it breaks its 200-day average.
-3. **Caps**: 35% per ETF, 40% per economic cluster (energy, tech, treasuries, ...).
-4. **Defensive**: any unfilled slot sits in `BIL` (1–3 month T-bills). In a bear market the
-   book drifts to mostly T-bills by itself.
+   positive score **and** price above its 150-day average. Hold the top 8,
+   inverse-volatility weighted; a holding keeps its slot while it ranks in the top 11.
+   Five staggered tranches on a 10-day cycle, so a fifth of the sleeve rebalances every
+   other day. A holding is dropped the day it breaks its 150-day average.
+3. **Caps**: 35% per ETF and 40% per economic cluster in the rotation.
+4. **Defensive**: anything not invested sits in `BIL` (T-bills).
 
-Implemented and switchable but OFF (the backtest says so; see `validation.md` §6):
-mean-reversion sleeve, portfolio vol targeting, breadth regime switch, defensive asset
-picked by momentum, daily rebalance.
+These settings were chosen for the goal "lose money less often" (`python backtest.py
+--grid7`): 50% core, 8 names and a 150-day filter improved losing-month and
+losing-12-month frequency in all three windows tested, versus the earlier 30% / 6 / 200-day.
 
 ## The evidence (`reports/backtest.md`, `reports/validation.md`)
 Daily bars 2008–2026, fills at the close, 5 bps slippage per side, $0 commissions,
-dividends reinvested, cash earns the T-bill ETF's return.
+dividends reinvested; SSO/QLD use their real price histories (fees and decay included).
 
-| | Strategy | SPY buy & hold |
-|---|---:|---:|
-| CAGR | +9.8% | +11.4% |
-| Sharpe | **0.81** | 0.65 |
-| Max drawdown | **-17%** | -52% |
-| Worst year | -8% (2022) | -36% (2008) |
-| 2008 | -0.3% | -36% |
-
-- **Walk-forward**: parameters selected on 2008–2016 alone, then run untouched on 2017–2026:
-  Sharpe 0.95 out-of-sample vs 0.61 in-sample. Not overfit.
-- **Sensitivity**: Sharpe stays in a 0.6–0.85 plateau across top-N 3–8 and every lookback set.
-- **Timing luck**: starting the cycle on five different days moves Sharpe only 0.78–0.81
-  (it was 0.63–0.74 before tranching).
-- **Bootstrap** (1,000 synthetic 5-year paths): median CAGR +9.6%, 5th percentile +1%;
-  3% chance of a negative 5-year stretch; 2% chance of a -30% drawdown.
-- **The catch**: it beats SPY in only ~8% of rolling 3-year windows. It is built to compound
-  through bear markets with a third of the drawdown, not to beat the index in a bull run.
-  More upside with more concentration: the `growth` preset (+10.1% CAGR, Sharpe 0.84).
-
-## Want more return? The `aggressive` preset
-Set `"preset": "aggressive"` in `config.json`. Half the book goes into a **2x daily
-index fund** (SSO for the S&P 500, QLD for the Nasdaq-100, whichever index has stronger
-momentum), held **only while that index is above its 200-day average**; the other half
-runs the same momentum rotation. Still long-only with no margin: you cannot lose more
-than you put in.
-
-| 2008 → 2026 | balanced | **aggressive** | SPY |
+| 2008 → 2026 | **balanced** | **aggressive** | SPY |
 |---|---:|---:|---:|
-| CAGR | +9.9% | **+15.7%** | +11.4% |
-| $1,000 became | $5,900 | **$15,200** | $7,500 |
-| Sharpe | 0.81 | 0.81 | 0.65 |
-| Max drawdown | -18% | **-31%** | -52% |
-| Worst year | -8% | -15% | -36% |
-| Out-of-sample 2017+ CAGR | +12.6% | **+20.1%** | +15.4% |
+| Yearly return | +8.6% | +15.6% | +11.4% |
+| $1,000 became | $4,700 | $15,000 | $7,500 |
+| Sharpe | 0.86 | 0.83 | 0.65 |
+| Max drawdown | -14% | -28% | -52% |
+| Losing months | 36% | 37% | – |
+| Losing 12-month stretches | 20% | 22% | – |
+| Losing calendar years | 5 of 19 | 4 of 19 | 4 of 19 |
+| Worst year | -11% (2022) | -17% (2022) | -36% (2008) |
+| Out-of-sample 2017+ | +11.8% | +20.0% | +15.4% |
 
-The Sharpe is identical: this is not a smarter strategy, it is the same one with the
-risk dial turned up. Expect a 25–30% drawdown in a typical 5-year stretch (bootstrap
-median -27%; 10% chance of -40%). The preset raises the kill switch to 45% for that
-reason; at 30% it would fire in 37% of normal 5-year stretches. Numbers use the real
-SSO/QLD price histories since 2008, so the funds' fees and daily-reset decay are included.
-A volatility cap on top was tested and rejected: it cut returns to below SPY.
+Versus the previous defaults, `balanced` loses a little less often (38% → 36% losing months,
+21% → 20% losing 12-month stretches; 34% → 31% and 23% → 18% since 2017) and its worst
+drawdown shrinks from -18% to -14%. The costs: about 1.3 points a year less return, and a
+worse 2022 (-11% instead of -8%). `aggressive` gets the same settings: same return as
+before, fewer losing years (5 → 4) and 12-month stretches (26% → 22%), drawdown -31% → -28%.
+
+What no setting can do: make losing months rare. About a third of months are down for
+anything that earns stock-like returns, SPY included. What the strategy controls is how
+deep and how long the losses are.
+
+- **Walk-forward**: parameters picked on 2008–2016 alone hold up on 2017–2026 (Sharpe
+  1.09 out-of-sample for the shipped settings).
+- **Bootstrap** (1,000 synthetic 5-year paths): 3% chance of a negative 5-year stretch;
+  1% chance of a -30% drawdown for `balanced`.
+- **The catch**: `balanced` trails SPY in most bull markets. `aggressive` is the preset
+  that beats it, with bigger swings. The `aggressive` kill switch sits at 45%.
 
 ## Hard guardrails (in `bot.py`)
 - Weights sum to ≤ 100%; buys capped to settled cash; sells before buys.
