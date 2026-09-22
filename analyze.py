@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from typing import Dict, List
 
 from alpaca import Alpaca
+from broker_sim import SimBroker
 
 PERIOD = os.environ.get("TRACK_PERIOD", "1A")
 
@@ -103,11 +104,15 @@ def trade_stats(trades: List[dict]) -> dict:
 def main() -> int:
     key = os.environ.get("ALPACA_API_KEY", "").strip()
     secret = os.environ.get("ALPACA_SECRET_KEY", "").strip()
-    if not key or not secret:
-        print("(analyze) no Alpaca credentials; skipping")
-        return 0
-    api = Alpaca(key, secret, paper=env_bool("DRY_RUN", True))
-    mode = "paper" if api.paper else "LIVE"
+    if key and secret:
+        api = Alpaca(key, secret, paper=env_bool("DRY_RUN", True))
+        mode = "paper" if api.paper else "LIVE"
+    else:
+        api = SimBroker()
+        mode = "sim"
+        if not api.book["equity_curve"]:
+            print("(analyze) simulator has no history yet; skipping")
+            return 0
 
     hist = api.portfolio_history(period=PERIOD, timeframe="1D")
     es = equity_stats(hist.get("timestamp") or [], hist.get("equity") or [])
@@ -160,7 +165,10 @@ def main() -> int:
     with open("reports/paper_ledger.md", "w") as f:
         f.write("\n".join(P) + "\n")
 
-    perf = {"updated_utc": now, "mode": mode, "equity": {k: v for k, v in es.items() if k != "curve"}, "trades": ts}
+    perf = {"updated_utc": now, "mode": mode, "equity": {k: v for k, v in es.items() if k != "curve"}, "trades": ts,
+            "equity_curve": es.get("curve", [])[-500:], "account": {"equity": float(acct.get("equity", 0)), "cash": float(acct.get("cash", 0))},
+            "positions": [{"symbol": p["symbol"], "qty": float(p["qty"]), "market_value": float(p.get("market_value") or 0),
+                           "unrealized_plpc": float(p.get("unrealized_plpc") or 0)} for p in positions]}
     with open("signals/performance.json", "w") as f:
         json.dump(perf, f, indent=2, sort_keys=True)
         f.write("\n")

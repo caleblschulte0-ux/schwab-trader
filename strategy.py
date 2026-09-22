@@ -1,89 +1,105 @@
 """Systematic strategy: pure functions, no I/O, no broker.
 
-Two sleeves on a fixed universe of liquid, commission-free ETFs (tight spreads,
-no earnings gaps, fractional-share eligible):
+MOMENTUM ROTATION over a fixed universe of liquid, commission-free ETFs, with layered
+risk controls. Daily bars in, target weights out. The same code runs inside the
+backtester and the live executor.
 
-  A) MOMENTUM ROTATION (default 100% of capital, rebalanced weekly)
-     Rank the universe by average 3/6/12-month total return. Hold the top N
-     that are ALSO in an uptrend (price > 200-day SMA) with positive momentum
-     (absolute-momentum filter). Slots with no eligible candidate sit in cash,
-     so exposure falls automatically in bear markets. Weights are inverse-vol
-     tilted so a calm bond ETF and a wild semiconductor ETF contribute similar
-     risk. A held name keeps its slot while it stays inside the top N+2
-     (hysteresis) to cut churn.
+  1. Score each ETF by the average of its 3/6/12-month total returns.
+  2. Eligible = positive score AND price above its 200-day SMA (absolute momentum).
+  3. Regime: if market breadth (% of the risk universe above its 200-day SMA) is below
+     `breadth_min`, go fully defensive.
+  4. Hold the top N eligible; a holding keeps its slot while it stays inside the top
+     N + hysteresis. Weights inverse to volatility, capped per symbol and per cluster
+     (so five oil-flavoured ETFs cannot become one bet).
+  5. Unfilled slots -> the best DEFENSIVE asset by momentum (T-bills, treasuries, gold),
+     floor = T-bills. In 2008 that meant long treasuries, not 0% cash.
+  6. Portfolio volatility targeting: if the target book's realised vol exceeds
+     `vol_target`, scale exposure down (never up: no leverage). The remainder sits in
+     the defensive asset.
 
-  B) SHORT-TERM MEAN REVERSION (OPTIONAL, off by default; evaluated daily)
-     Buy an equity ETF that is in an uptrend (price > 200-day SMA) but
-     short-term washed out (2-period RSI <= 10). Exit when it snaps back
-     (close > 5-day SMA or RSI(2) > 65), after a time stop, or on a hard
-     catastrophe stop. Classic "buy the dip in an uptrend".
-
-Everything here takes plain lists/dicts so it runs identically inside the
-backtester and the live executor. Daily bars in, target weights out.
+An optional short-term mean-reversion sleeve is kept (off by default).
 """
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass, field, asdict
-from datetime import date as _date
+from dataclasses import asdict, dataclass, field
 from typing import Dict, List, Optional, Sequence
 
 # --------------------------------------------------------------------------- #
 # Universe                                                                    #
 # --------------------------------------------------------------------------- #
-# Liquid ETFs only. Adding single stocks re-introduces earnings gaps and wide
-# spreads: the exact failure mode of the old small-cap-news strategy.
 UNIVERSE: List[str] = [
-    # US broad
-    "SPY", "QQQ", "IWM", "DIA", "MDY",
-    # US sectors / industries
-    "XLK", "XLF", "XLE", "XLV", "XLI", "XLY", "XLP", "XLU", "XLB", "XLRE", "XLC",
-    "SMH", "XBI", "VNQ",
-    # International
-    "EFA", "EEM", "VGK", "EWJ", "FXI",
-    # Bonds
-    "TLT", "IEF", "LQD", "HYG", "SHY",
-    # Commodities / currency
-    "GLD", "SLV", "DBC", "USO", "UUP",
+    "SPY", "QQQ", "IWM", "DIA", "MDY",                                             # US broad
+    "XLK", "XLF", "XLE", "XLV", "XLI", "XLY", "XLP", "XLU", "XLB", "XLRE", "XLC",  # US sectors
+    "SMH", "XBI", "VNQ",                                                           # industries
+    "EFA", "EEM", "VGK", "EWJ", "FXI",                                             # international
+    "TLT", "IEF", "LQD", "HYG", "SHY",                                             # bonds
+    "GLD", "SLV", "DBC", "USO", "UUP",                                             # commodities / FX
 ]
 
-# Mean reversion only on equity-like ETFs; bonds/currency don't "snap back" the same way.
+# Assets the strategy may hold when it is being defensive (chosen by momentum, floor BIL).
+DEFENSIVE: List[str] = ["BIL", "SHY", "IEF", "TLT", "GLD"]
+
+# Breadth is measured on the RISK part of the universe only.
+RISK_UNIVERSE: List[str] = [s for s in UNIVERSE if s not in ("TLT", "IEF", "LQD", "SHY", "UUP")]
+
 MR_UNIVERSE: List[str] = [
-    "SPY", "QQQ", "IWM", "DIA", "MDY",
-    "XLK", "XLF", "XLE", "XLV", "XLI", "XLY", "XLP", "XLU", "XLB", "XLRE", "XLC",
-    "SMH", "XBI", "VNQ", "EFA", "EEM", "VGK", "EWJ", "FXI",
+    "SPY", "QQQ", "IWM", "DIA", "MDY", "XLK", "XLF", "XLE", "XLV", "XLI", "XLY", "XLP", "XLU",
+    "XLB", "XLRE", "XLC", "SMH", "XBI", "VNQ", "EFA", "EEM", "VGK", "EWJ", "FXI",
 ]
+
+# Economic clusters for the per-cluster cap.
+CLUSTERS: Dict[str, str] = {
+    "SPY": "us_equity", "QQQ": "us_equity", "IWM": "us_equity", "DIA": "us_equity", "MDY": "us_equity",
+    "XLK": "tech", "SMH": "tech", "XLC": "tech",
+    "XLF": "cyclical", "XLI": "cyclical", "XLY": "cyclical", "XLB": "cyclical",
+    "XLV": "defensive_eq", "XLP": "defensive_eq", "XLU": "defensive_eq", "XBI": "health",
+    "XLRE": "real_estate", "VNQ": "real_estate",
+    "EFA": "intl", "VGK": "intl", "EWJ": "intl", "EEM": "em", "FXI": "em",
+    "TLT": "treasuries", "IEF": "treasuries", "SHY": "treasuries", "BIL": "treasuries",
+    "LQD": "credit", "HYG": "credit",
+    "GLD": "metals", "SLV": "metals", "DBC": "energy", "USO": "energy", "XLE": "energy", "UUP": "fx",
+}
 
 
 @dataclass
 class Params:
-    # Sleeve A: momentum rotation
-    mom_weight: float = 1.00          # fraction of capital for the momentum sleeve
-    mom_top_n: int = 5                # how many names to hold
-    mom_hysteresis: int = 2           # keep a holding while it ranks within top_n + this
-    mom_lookbacks: Sequence[int] = (63, 126, 252)  # trading days: 3m/6m/12m (the most recent
-                                                   # month is excluded on purpose: 1-month returns
-                                                   # mean-revert; see backtest grid)
-    trend_sma: int = 200              # uptrend filter
-    vol_lookback: int = 63            # for inverse-vol tilt
-    mom_rebalance_days: int = 5       # rebalance every N trading days (weekly)
-    mom_weighting: str = "inverse_vol"  # or "equal"
-    mom_universe: Optional[Sequence[str]] = None  # None = strategy.UNIVERSE
-    cash_proxy: Optional[str] = "BIL"  # park idle capital in T-bills (None = raw cash)
-    # Sleeve B: mean reversion
-    mr_weight: float = 0.00           # OFF by default: the backtest shows it dilutes the
-                                      # momentum sleeve in every window tested. Kept as an
-                                      # optional, tested sleeve for experimentation.
+    # Momentum sleeve
+    mom_weight: float = 1.00
+    mom_top_n: int = 6                               # walk-forward pick (validate.py)
+    mom_hysteresis: int = 2
+    mom_lookbacks: Sequence[int] = (63, 126, 252)   # 3/6/12 months; the last month is excluded on
+                                                     # purpose (1-month returns mean-revert)
+    trend_sma: int = 200
+    vol_lookback: int = 63
+    mom_rebalance_days: int = 10                     # every 2 weeks (walk-forward pick); 1 = daily
+    mom_weighting: str = "inverse_vol"               # or "equal"
+    mom_universe: Optional[Sequence[str]] = None     # None = UNIVERSE
+    # Optional core sleeve: fixed slice in `core_symbol` while it is above its 200-day SMA
+    core_weight: float = 0.30                        # 0 = off. 'growth' preset uses QQQ
+    core_symbol: str = "SPY"
+    # Regime / defensive
+    breadth_min: float = 0.0                         # 0 = off. e.g. 0.4 -> fully defensive when <40% of
+                                                     # the risk universe is above its 200-day SMA
+    defensive_mode: str = "fixed"                    # "fixed" (cash_proxy) or "momentum" (best of DEFENSIVE)
+                                                     # -- backtest: momentum picks TLT into 2022, worse DD
+    cash_proxy: Optional[str] = "BIL"                # floor / fixed defensive asset (None = raw cash)
+    defensive_top_n: int = 1
+    # Risk overlays
+    vol_target: Optional[float] = None               # e.g. 0.12 -> scale exposure down above 12% vol
+    max_position_weight: float = 0.35
+    cluster_cap: float = 0.40                        # max 40% of capital per economic cluster (1.0 = off)
+    # Optional mean-reversion sleeve (off by default)
+    mr_weight: float = 0.00
     mr_max_positions: int = 4
     mr_rsi_period: int = 2
     mr_rsi_entry: float = 10.0
     mr_rsi_exit: float = 65.0
     mr_exit_sma: int = 5
     mr_time_stop_days: int = 10
-    mr_hard_stop_pct: float = -0.10   # catastrophe stop on a single MR position
-    # Portfolio-level
-    max_position_weight: float = 0.35 # cap on any one symbol across sleeves
-    min_history: int = 260            # bars needed before a symbol is tradeable
+    mr_hard_stop_pct: float = -0.10
+    # General
+    min_history: int = 260
 
 
 @dataclass
@@ -96,29 +112,23 @@ class MRPosition:
 
 @dataclass
 class State:
-    """Carried between runs (persisted by the executor, kept in-memory by the backtester)."""
     mom_holdings: List[str] = field(default_factory=list)
-    mom_days_since_rebalance: int = 9999  # force a rebalance on first run
+    mom_days_since_rebalance: int = 9999
     mr_positions: Dict[str, MRPosition] = field(default_factory=dict)
 
     def to_dict(self) -> dict:
-        d = asdict(self)
-        return d
+        return asdict(self)
 
     @classmethod
     def from_dict(cls, d: Optional[dict]) -> "State":
-        if not d:
-            return cls()
         s = cls()
+        if not d:
+            return s
         s.mom_holdings = list(d.get("mom_holdings", []))
         s.mom_days_since_rebalance = int(d.get("mom_days_since_rebalance", 9999))
         for sym, p in (d.get("mr_positions") or {}).items():
-            s.mr_positions[sym] = MRPosition(
-                symbol=sym,
-                entry_date=str(p.get("entry_date", "")),
-                entry_price=float(p.get("entry_price", 0.0)),
-                days_held=int(p.get("days_held", 0)),
-            )
+            s.mr_positions[sym] = MRPosition(sym, str(p.get("entry_date", "")), float(p.get("entry_price", 0.0)),
+                                             int(p.get("days_held", 0)))
         return s
 
 
@@ -131,6 +141,7 @@ class Signals:
     mom_score: Optional[float]
     vol: Optional[float]
     n_bars: int
+    rets: Sequence[float] = ()   # last `vol_lookback` daily returns (for portfolio vol)
 
     @property
     def uptrend(self) -> bool:
@@ -138,40 +149,30 @@ class Signals:
 
 
 # --------------------------------------------------------------------------- #
-# Indicator helpers (closes are oldest -> newest)                             #
+# Indicators                                                                  #
 # --------------------------------------------------------------------------- #
 def sma(closes: Sequence[float], n: int) -> Optional[float]:
-    if len(closes) < n or n <= 0:
+    if n <= 0 or len(closes) < n:
         return None
     return sum(closes[-n:]) / n
 
 
 def rsi(closes: Sequence[float], n: int) -> Optional[float]:
-    """Wilder RSI over the last n changes (needs n+1 closes; uses Wilder smoothing over
-    the whole series for stability, like every charting package)."""
     if len(closes) < n + 1:
         return None
-    gains = 0.0
-    losses = 0.0
-    # seed with simple average of first n changes
+    gains = losses = 0.0
     for i in range(1, n + 1):
         ch = closes[i] - closes[i - 1]
-        if ch > 0:
-            gains += ch
-        else:
-            losses -= ch
-    avg_gain = gains / n
-    avg_loss = losses / n
+        gains += max(ch, 0.0)
+        losses += max(-ch, 0.0)
+    ag, al = gains / n, losses / n
     for i in range(n + 1, len(closes)):
         ch = closes[i] - closes[i - 1]
-        g = ch if ch > 0 else 0.0
-        l = -ch if ch < 0 else 0.0
-        avg_gain = (avg_gain * (n - 1) + g) / n
-        avg_loss = (avg_loss * (n - 1) + l) / n
-    if avg_loss == 0:
+        ag = (ag * (n - 1) + max(ch, 0.0)) / n
+        al = (al * (n - 1) + max(-ch, 0.0)) / n
+    if al == 0:
         return 100.0
-    rs = avg_gain / avg_loss
-    return 100.0 - 100.0 / (1.0 + rs)
+    return 100.0 - 100.0 / (1.0 + ag / al)
 
 
 def momentum_score(closes: Sequence[float], lookbacks: Sequence[int]) -> Optional[float]:
@@ -187,28 +188,48 @@ def momentum_score(closes: Sequence[float], lookbacks: Sequence[int]) -> Optiona
     return sum(rets) / len(rets)
 
 
+def daily_returns(closes: Sequence[float], n: int) -> List[float]:
+    w = closes[-(n + 1):]
+    return [w[i] / w[i - 1] - 1.0 for i in range(1, len(w)) if w[i - 1] > 0]
+
+
 def annual_vol(closes: Sequence[float], n: int) -> Optional[float]:
     if len(closes) < n + 1:
         return None
-    window = closes[-(n + 1):]
-    lr = [math.log(window[i] / window[i - 1]) for i in range(1, len(window)) if window[i - 1] > 0 and window[i] > 0]
+    w = closes[-(n + 1):]
+    lr = [math.log(w[i] / w[i - 1]) for i in range(1, len(w)) if w[i - 1] > 0 and w[i] > 0]
     if len(lr) < 2:
         return None
     m = sum(lr) / len(lr)
-    var = sum((x - m) ** 2 for x in lr) / (len(lr) - 1)
-    return math.sqrt(var) * math.sqrt(252)
+    return math.sqrt(sum((x - m) ** 2 for x in lr) / (len(lr) - 1)) * math.sqrt(252)
 
 
 def compute_signals(closes: Sequence[float], p: Params) -> Signals:
+    tail = closes[-(p.mr_rsi_period * 60 + 1):] if len(closes) > p.mr_rsi_period * 60 else closes
     return Signals(
         close=closes[-1],
         sma_trend=sma(closes, p.trend_sma),
         sma_exit=sma(closes, p.mr_exit_sma),
-        rsi=rsi(closes[-(p.mr_rsi_period * 60 + 1):] if len(closes) > p.mr_rsi_period * 60 else closes, p.mr_rsi_period),
+        rsi=rsi(tail, p.mr_rsi_period),
         mom_score=momentum_score(closes, p.mom_lookbacks),
         vol=annual_vol(closes, p.vol_lookback),
         n_bars=len(closes),
+        rets=daily_returns(closes, p.vol_lookback) if len(closes) > p.vol_lookback else (),
     )
+
+
+def portfolio_vol(weights: Dict[str, float], sig: Dict[str, Signals]) -> Optional[float]:
+    """Annualised vol of the weighted book from its constituents' recent daily returns."""
+    syms = [s for s, w in weights.items() if w > 0 and s in sig and sig[s].rets]
+    if not syms:
+        return None
+    n = min(len(sig[s].rets) for s in syms)
+    if n < 20:
+        return None
+    series = [sum(weights[s] * sig[s].rets[-n:][i] for s in syms) for i in range(n)]
+    m = sum(series) / n
+    var = sum((x - m) ** 2 for x in series) / (n - 1)
+    return math.sqrt(var) * math.sqrt(252)
 
 
 # --------------------------------------------------------------------------- #
@@ -216,12 +237,45 @@ def compute_signals(closes: Sequence[float], p: Params) -> Signals:
 # --------------------------------------------------------------------------- #
 @dataclass
 class Decision:
-    weights: Dict[str, float]            # symbol -> target fraction of capital (sum <= 1)
-    state: State                         # updated state to persist
-    notes: List[str]                     # human-readable reasons
+    weights: Dict[str, float]
+    state: State
+    notes: List[str]
     mom_selected: List[str]
     mr_open: List[str]
     rebalanced_momentum: bool
+    regime: Dict[str, object] = field(default_factory=dict)
+
+
+def _apply_caps(weights: Dict[str, float], p: Params) -> float:
+    """Per-symbol and per-cluster caps. Returns the freed weight (to send to defensive)."""
+    freed = 0.0
+    for s in list(weights):
+        if weights[s] > p.max_position_weight:
+            freed += weights[s] - p.max_position_weight
+            weights[s] = p.max_position_weight
+    if p.cluster_cap < 1.0:
+        totals: Dict[str, float] = {}
+        for s, w in weights.items():
+            totals[CLUSTERS.get(s, s)] = totals.get(CLUSTERS.get(s, s), 0.0) + w
+        for c, tot in totals.items():
+            if tot > p.cluster_cap + 1e-12:
+                scale = p.cluster_cap / tot
+                for s in weights:
+                    if CLUSTERS.get(s, s) == c:
+                        freed += weights[s] * (1 - scale)
+                        weights[s] *= scale
+    return freed
+
+
+def _defensive_picks(sig: Dict[str, Signals], p: Params) -> List[str]:
+    if p.defensive_mode != "momentum":
+        return [p.cash_proxy] if p.cash_proxy else []
+    cands = [s for s in DEFENSIVE if s in sig and sig[s].mom_score is not None]
+    cands.sort(key=lambda s: sig[s].mom_score, reverse=True)
+    picks = [s for s in cands if sig[s].mom_score > 0 and sig[s].uptrend][: p.defensive_top_n]
+    if not picks:
+        picks = [p.cash_proxy] if p.cash_proxy and p.cash_proxy in sig else []
+    return picks
 
 
 def compute_targets(
@@ -231,32 +285,36 @@ def compute_targets(
     today: Optional[str] = None,
     signals: Optional[Dict[str, Signals]] = None,
 ) -> Decision:
-    """history: symbol -> closes (oldest..newest, the LAST value is today's price).
-    `signals` may be passed instead (the backtester precomputes them incrementally;
-    same formulas, see tests). Returns target weights + the state to carry forward.
-    Pure: no side effects."""
+    """history: symbol -> closes (oldest..newest; the LAST value is today's price)."""
     notes: List[str] = []
-    sig: Dict[str, Signals] = {}
     if signals is not None:
         sig = {s: g for s, g in signals.items() if g.n_bars >= p.min_history}
     else:
-        for sym, closes in (history or {}).items():
-            if closes and len(closes) >= p.min_history:
-                sig[sym] = compute_signals(closes, p)
+        sig = {s: compute_signals(c, p) for s, c in (history or {}).items() if c and len(c) >= p.min_history}
 
-    # ------------------------- Sleeve A: momentum rotation -------------------
-    st = State.from_dict(state.to_dict())  # deep copy
+    st = State.from_dict(state.to_dict())
     st.mom_days_since_rebalance += 1
     rebalance = st.mom_days_since_rebalance >= p.mom_rebalance_days
 
+    # ------------------------------------------------ regime / breadth
+    risk = [s for s in RISK_UNIVERSE if s in sig]
+    breadth = (sum(1 for s in risk if sig[s].uptrend) / len(risk)) if risk else 0.0
+    risk_off = p.breadth_min > 0 and breadth < p.breadth_min
+    regime = {"breadth": round(breadth, 3), "risk_off": risk_off}
+
+    # ------------------------------------------------ momentum selection
     mom_univ = set(p.mom_universe) if p.mom_universe else set(UNIVERSE)
-    eligible = {
-        s: sg for s, sg in sig.items()
-        if s in mom_univ and sg.mom_score is not None and sg.mom_score > 0 and sg.uptrend and sg.vol
-    }
+    eligible = {s: g for s, g in sig.items()
+                if s in mom_univ and g.mom_score is not None and g.mom_score > 0 and g.uptrend and g.vol}
     ranked = sorted(eligible, key=lambda s: eligible[s].mom_score, reverse=True)
 
-    if rebalance:
+    if risk_off:
+        if st.mom_holdings:
+            notes.append(f"regime risk-off (breadth {breadth:.0%} < {p.breadth_min:.0%}): exiting {st.mom_holdings}")
+        st.mom_holdings = []
+        if rebalance:
+            st.mom_days_since_rebalance = 0
+    elif rebalance:
         keep_zone = set(ranked[: p.mom_top_n + p.mom_hysteresis])
         selected = [s for s in st.mom_holdings if s in keep_zone]
         for s in ranked:
@@ -264,16 +322,13 @@ def compute_targets(
                 break
             if s not in selected:
                 selected.append(s)
-        dropped = [s for s in st.mom_holdings if s not in selected]
         added = [s for s in selected if s not in st.mom_holdings]
-        if dropped or added:
+        dropped = [s for s in st.mom_holdings if s not in selected]
+        if added or dropped:
             notes.append(f"momentum rebalance: +{added or '-'} -{dropped or '-'}")
-        else:
-            notes.append("momentum rebalance: no changes")
         st.mom_holdings = selected
         st.mom_days_since_rebalance = 0
     else:
-        # Between rebalances only drop a holding that has broken its uptrend.
         still = [s for s in st.mom_holdings if s in sig and sig[s].uptrend]
         broke = [s for s in st.mom_holdings if s not in still]
         if broke:
@@ -282,79 +337,95 @@ def compute_targets(
 
     weights: Dict[str, float] = {}
 
-    # ----------------------- Sleeve B: mean reversion ------------------------
-    # (evaluated first so idle MR capital can be handed to the momentum sleeve)
-    slot = (p.mr_weight / p.mr_max_positions) if p.mr_weight > 0 else 0.0
+    # ------------------------------------------------ optional mean-reversion sleeve
     mr_enabled = p.mr_weight > 0
-    closed: List[str] = []
+    slot = (p.mr_weight / p.mr_max_positions) if mr_enabled else 0.0
     for sym, pos in list(st.mr_positions.items()):
-        sg = sig.get(sym)
+        g = sig.get(sym)
         pos.days_held += 1
-        if sg is None:
-            closed.append(sym); notes.append(f"MR exit {sym}: no data"); continue
-        ret = sg.close / pos.entry_price - 1.0
         reason = None
-        if sg.sma_exit is not None and sg.close > sg.sma_exit:
-            reason = f"close>SMA{p.mr_exit_sma}"
-        elif sg.rsi is not None and sg.rsi > p.mr_rsi_exit:
-            reason = f"RSI{p.mr_rsi_period}>{p.mr_rsi_exit:.0f}"
-        elif pos.days_held >= p.mr_time_stop_days:
-            reason = f"time stop {p.mr_time_stop_days}d"
-        elif ret <= p.mr_hard_stop_pct:
-            reason = f"hard stop {ret:+.1%}"
+        if not mr_enabled:
+            reason = "sleeve disabled"
+        elif g is None:
+            reason = "no data"
+        else:
+            ret = g.close / pos.entry_price - 1.0
+            if g.sma_exit is not None and g.close > g.sma_exit:
+                reason = f"close>SMA{p.mr_exit_sma}"
+            elif g.rsi is not None and g.rsi > p.mr_rsi_exit:
+                reason = f"RSI{p.mr_rsi_period}>{p.mr_rsi_exit:.0f}"
+            elif pos.days_held >= p.mr_time_stop_days:
+                reason = f"time stop {p.mr_time_stop_days}d"
+            elif ret <= p.mr_hard_stop_pct:
+                reason = f"hard stop {ret:+.1%}"
+            if reason:
+                reason = f"{ret:+.2%} ({reason})"
         if reason:
-            closed.append(sym)
-            notes.append(f"MR exit {sym} {ret:+.2%} ({reason})")
-    for sym in closed:
-        del st.mr_positions[sym]
-
-    free = (p.mr_max_positions - len(st.mr_positions)) if mr_enabled else 0
-    if not mr_enabled and st.mr_positions:
-        notes.append(f"MR sleeve disabled: releasing {list(st.mr_positions)}")
-        st.mr_positions.clear()
+            notes.append(f"MR exit {sym} {reason}")
+            del st.mr_positions[sym]
+    free = (p.mr_max_positions - len(st.mr_positions)) if mr_enabled and not risk_off else 0
     if free > 0:
-        cands = [
-            s for s in MR_UNIVERSE
-            if s in sig and s not in st.mr_positions
-            and sig[s].uptrend and sig[s].rsi is not None and sig[s].rsi <= p.mr_rsi_entry
-        ]
-        cands.sort(key=lambda s: sig[s].rsi)  # most oversold first
+        cands = [s for s in MR_UNIVERSE if s in sig and s not in st.mr_positions
+                 and sig[s].uptrend and sig[s].rsi is not None and sig[s].rsi <= p.mr_rsi_entry]
+        cands.sort(key=lambda s: sig[s].rsi)
         for s in cands[:free]:
-            st.mr_positions[s] = MRPosition(symbol=s, entry_date=today or "", entry_price=sig[s].close, days_held=0)
+            st.mr_positions[s] = MRPosition(s, today or "", sig[s].close, 0)
             notes.append(f"MR entry {s} @ {sig[s].close:.2f} (RSI{p.mr_rsi_period}={sig[s].rsi:.1f})")
     for sym in st.mr_positions:
         weights[sym] = weights.get(sym, 0.0) + slot
 
-    # ----------------------- Sleeve A weights ---------------------------------
-    # Momentum gets its own budget PLUS whatever the MR sleeve is not using.
+    # ------------------------------------------------ core sleeve
+    core_used = 0.0
+    if p.core_weight > 0 and p.core_symbol in sig and not risk_off:
+        g = sig[p.core_symbol]
+        if g.uptrend:
+            weights[p.core_symbol] = weights.get(p.core_symbol, 0.0) + p.core_weight
+            core_used = p.core_weight
+    # ------------------------------------------------ momentum weights
     mr_used = slot * len(st.mr_positions)
-    mom_budget = max(0.0, 1.0 - mr_used) if p.mr_weight + p.mom_weight >= 0.999 else p.mom_weight + (p.mr_weight - mr_used)
+    mom_budget = max(0.0, 1.0 - mr_used - p.core_weight) if p.mr_weight + p.mom_weight >= 0.999 else p.mom_weight + (p.mr_weight - mr_used) - p.core_weight
+    mom_budget = max(0.0, mom_budget)
     if st.mom_holdings:
-        if p.mom_weighting == "equal":
-            raw = {s: 1.0 for s in st.mom_holdings}
-        else:
-            raw = {s: 1.0 / max(sig[s].vol, 0.02) for s in st.mom_holdings}
+        raw = {s: (1.0 if p.mom_weighting == "equal" else 1.0 / max(sig[s].vol, 0.02)) for s in st.mom_holdings}
         tot = sum(raw.values())
         sleeve_cap = mom_budget * len(st.mom_holdings) / p.mom_top_n
         for s, v in raw.items():
             weights[s] = weights.get(s, 0.0) + sleeve_cap * v / tot
 
-    # ----------------------------- caps ----------------------------------------
-    for s in list(weights):
-        weights[s] = min(weights[s], p.max_position_weight)
+    # ------------------------------------------------ caps, vol targeting, defensive fill
+    freed = _apply_caps(weights, p)
     total = sum(weights.values())
-    if total > 1.0:  # never leveraged
+    if total > 1.0:
         weights = {s: w / total for s, w in weights.items()}
         total = 1.0
-    # Idle capital -> T-bill ETF (earns the risk-free rate instead of 0%).
-    if p.cash_proxy and p.cash_proxy in sig and total < 0.999:
-        weights[p.cash_proxy] = weights.get(p.cash_proxy, 0.0) + (1.0 - total)
+    scale = 1.0
+    if p.vol_target and weights:
+        pv = portfolio_vol(weights, sig)
+        if pv and pv > p.vol_target:
+            scale = p.vol_target / pv
+            weights = {s: w * scale for s, w in weights.items()}
+            total = sum(weights.values())
+            notes.append(f"vol targeting: book vol {pv:.0%} > {p.vol_target:.0%}, exposure x{scale:.2f}")
+        regime["book_vol"] = round(pv, 3) if pv else None
+    regime["exposure"] = round(total, 3)
+
+    idle = max(0.0, 1.0 - total)
+    if idle > 1e-6:
+        picks = _defensive_picks(sig, p)
+        if picks:
+            each = idle / len(picks)
+            for s in picks:
+                weights[s] = weights.get(s, 0.0) + each
+            regime["defensive"] = picks
+            if idle > 0.05:
+                notes.append(f"defensive {idle:.0%} -> {picks}")
 
     return Decision(
-        weights={s: round(w, 6) for s, w in weights.items() if w > 0},
+        weights={s: round(w, 6) for s, w in weights.items() if w > 1e-6},
         state=st,
         notes=notes,
         mom_selected=list(st.mom_holdings),
         mr_open=list(st.mr_positions),
         rebalanced_momentum=rebalance,
+        regime=regime,
     )

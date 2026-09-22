@@ -1,0 +1,100 @@
+{
+  "cash": 2.0099999999999696,
+  "created_utc": "2026-09-22T19:41:35Z",
+  "equity_curve": [
+    [
+      "2026-09-22",
+      999.5
+    ]
+  ],
+  "fills": [
+    {
+      "id": "sim-1",
+      "price": "774.8872",
+      "qty": "0.387153",
+      "side": "buy",
+      "symbol": "SPY",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    },
+    {
+      "id": "sim-2",
+      "price": "61.8359",
+      "qty": "2.565176",
+      "side": "buy",
+      "symbol": "XLE",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    },
+    {
+      "id": "sim-3",
+      "price": "32.3662",
+      "qty": "4.806870",
+      "side": "buy",
+      "symbol": "DBC",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    },
+    {
+      "id": "sim-4",
+      "price": "196.3031",
+      "qty": "0.620316",
+      "side": "buy",
+      "symbol": "XLK",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    },
+    {
+      "id": "sim-5",
+      "price": "162.2911",
+      "qty": "0.738857",
+      "side": "buy",
+      "symbol": "XBI",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    },
+    {
+      "id": "sim-6",
+      "price": "607.3836",
+      "qty": "0.129309",
+      "side": "buy",
+      "symbol": "SMH",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    },
+    {
+      "id": "sim-7",
+      "price": "143.2416",
+      "qty": "0.443796",
+      "side": "buy",
+      "symbol": "USO",
+      "transaction_time": "2026-09-22T19:41:57Z"
+    }
+  ],
+  "n": 7,
+  "positions": {
+    "DBC": {
+      "avg_entry": 32.36617347335815,
+      "qty": 4.806870361986532
+    },
+    "SMH": {
+      "avg_entry": 607.3835570983887,
+      "qty": 0.1293087359414267
+    },
+    "SPY": {
+      "avg_entry": 774.88725,
+      "qty": 0.3871530987250081
+    },
+    "USO": {
+      "avg_entry": 143.2415831680298,
+      "qty": 0.44379570927688716
+    },
+    "XBI": {
+      "avg_entry": 162.2911117172241,
+      "qty": 0.738857468725281
+    },
+    "XLE": {
+      "avg_entry": 61.83590280532837,
+      "qty": 2.5651764234665917
+    },
+    "XLK": {
+      "avg_entry": 196.30310433197022,
+      "qty": 0.620316221765263
+    }
+  },
+  "start_cash": 1000.0
+}

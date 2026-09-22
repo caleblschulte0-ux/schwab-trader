@@ -1,0 +1,33 @@
+{
+  "capital": 1000.0,
+  "date": "2026-09-22",
+  "mean_reversion": [],
+  "mode": "SIM",
+  "momentum": [
+    "USO",
+    "SMH",
+    "XBI",
+    "XLK",
+    "DBC",
+    "XLE"
+  ],
+  "notes": [
+    "momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --"
+  ],
+  "preset": "balanced",
+  "rebalanced": true,
+  "regime": {
+    "breadth": 0.793,
+    "exposure": 1.0,
+    "risk_off": false
+  },
+  "weights": {
+    "DBC": 0.155589,
+    "SMH": 0.078549,
+    "SPY": 0.3,
+    "USO": 0.065552,
+    "XBI": 0.119911,
+    "XLE": 0.158629,
+    "XLK": 0.12177
+  }
+}

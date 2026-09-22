@@ -23,7 +23,7 @@ from dataclasses import replace
 from typing import Dict, List, Optional, Tuple
 
 import data as datamod
-from strategy import (MR_UNIVERSE, UNIVERSE, Params, Signals, State, compute_targets)
+from strategy import (DEFENSIVE, MR_UNIVERSE, UNIVERSE, Params, Signals, State, compute_targets)
 
 SLIPPAGE_BPS = 5.0
 
@@ -44,6 +44,9 @@ class SymbolSeries:
         for i, c in enumerate(self.closes):
             pref[i + 1] = pref[i] + c
         self.pref = pref
+        self.rets = [0.0] * n
+        for i in range(1, n):
+            self.rets[i] = self.closes[i] / self.closes[i - 1] - 1.0 if self.closes[i - 1] > 0 else 0.0
         # log returns prefix sums for vol
         lr = [0.0] * n
         for i in range(1, n):
@@ -98,6 +101,7 @@ class SymbolSeries:
             mom_score=mom,
             vol=vol,
             n_bars=i + 1,
+            rets=self.rets[i + 1 - n:i + 1] if i >= n else (),
         )
 
 
@@ -274,12 +278,14 @@ def main() -> int:
     ap.add_argument("--refresh", action="store_true")
     ap.add_argument("--grid", action="store_true")
     ap.add_argument("--grid2", action="store_true", help="structural variants")
+    ap.add_argument("--grid3", action="store_true", help="risk-overlay variants")
+    ap.add_argument("--grid4", action="store_true", help="candidate defaults confirmation")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--out", default="reports/backtest.md")
     ap.add_argument("--curve", default=None, help="write equity curve CSV here")
     args = ap.parse_args()
 
-    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | {"BIL"}), refresh=args.refresh, max_age_hours=None)
+    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | set(DEFENSIVE)), refresh=args.refresh, max_age_hours=None)
     if "SPY" not in hist:
         print("need SPY history"); return 1
 
@@ -306,6 +312,57 @@ def main() -> int:
         for name, prm in grid:
             r = run(hist, prm, args.start, args.end)
             print(f"{name:<22}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['mr_trades']:>7}{r['mr_win_rate']:>8.0%}")
+        return 0
+
+    if args.grid4:
+        base = Params()
+        c6 = replace(base, mom_top_n=6, mom_rebalance_days=10)
+        grid = [
+            ("top5 5d (old default)", base),
+            ("top6 10d (walk-fwd pick)", c6),
+            ("top6 10d + cc.40", replace(c6, cluster_cap=0.40)),
+            ("top6 10d + cc.50", replace(c6, cluster_cap=0.50)),
+            ("top6 10d + cc.40 + b.40", replace(c6, cluster_cap=0.40, breadth_min=0.4)),
+            ("top6 5d + cc.40", replace(c6, mom_rebalance_days=5, cluster_cap=0.40)),
+            ("top5 5d + cc.40", replace(base, cluster_cap=0.40)),
+            ("top6 10d cc.40 core SPY .3", replace(c6, cluster_cap=0.40, core_weight=0.3)),
+            ("top6 10d cc.40 core SPY .5", replace(c6, cluster_cap=0.40, core_weight=0.5)),
+            ("top6 10d cc.40 core QQQ .3", replace(c6, cluster_cap=0.40, core_weight=0.3, core_symbol="QQQ")),
+            ("core SPY 1.0 (Faber timing)", replace(base, core_weight=1.0, mom_weight=0.0)),
+        ]
+        for start, label in ((args.start, "from " + args.start), ("2015-01-01", "from 2015"), ("2017-01-01", "OOS 2017+")):
+            print(f"--- {label} ---")
+            print(f"{'variant':<30}{'CAGR':>8}{'Sharpe':>8}{'MaxDD':>8}{'Calmar':>8}{'SPY CAGR':>10}")
+            for name, prm in grid:
+                r = run(hist, prm, start, args.end)
+                print(f"{name:<30}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['calmar']:>8.2f}{r['spy']['cagr']:>10.1%}")
+        return 0
+
+    if args.grid3:
+        base = Params()
+        grid = [
+            ("base (fixed BIL)", replace(base, defensive_mode="fixed")),
+            ("defensive momentum", base),
+            ("def-mom top2", replace(base, defensive_top_n=2)),
+            ("breadth 0.3", replace(base, breadth_min=0.3)),
+            ("breadth 0.4", replace(base, breadth_min=0.4)),
+            ("breadth 0.5", replace(base, breadth_min=0.5)),
+            ("cluster cap 0.40", replace(base, cluster_cap=0.40)),
+            ("cluster cap 0.50", replace(base, cluster_cap=0.50)),
+            ("vol target 10%", replace(base, vol_target=0.10)),
+            ("vol target 12%", replace(base, vol_target=0.12)),
+            ("vol target 15%", replace(base, vol_target=0.15)),
+            ("daily+hyst2", replace(base, mom_rebalance_days=1)),
+            ("daily+hyst3", replace(base, mom_rebalance_days=1, mom_hysteresis=3)),
+            ("combo: cc.4 vt12", replace(base, cluster_cap=0.40, vol_target=0.12)),
+            ("combo: cc.4 vt12 b.4", replace(base, cluster_cap=0.40, vol_target=0.12, breadth_min=0.4)),
+            ("combo: cc.4 vt12 daily", replace(base, cluster_cap=0.40, vol_target=0.12, mom_rebalance_days=1)),
+            ("combo: cc.5 vt15 daily", replace(base, cluster_cap=0.50, vol_target=0.15, mom_rebalance_days=1)),
+        ]
+        print(f"{'variant':<26}{'CAGR':>8}{'Sharpe':>8}{'MaxDD':>8}{'Calmar':>8}{'Vol':>7}{'Turn/yr':>9}")
+        for name, prm in grid:
+            r = run(hist, prm, args.start, args.end)
+            print(f"{name:<26}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['calmar']:>8.2f}{r['vol']:>7.1%}{r['annual_turnover']:>9.1f}")
         return 0
 
     if args.grid2:

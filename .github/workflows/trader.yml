@@ -32,6 +32,7 @@ concurrency:
 
 permissions:
   contents: write   # commit state/holdings/report snapshots back to the repo
+  issues: write     # append each day's run log to the "Trading log" issue
 
 jobs:
   trade:
@@ -65,12 +66,27 @@ jobs:
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python analyze.py || true
 
+      # One rolling issue holds the daily log, so the whole history is readable in one thread
+      # and you get a GitHub notification per run if you subscribe to it.
+      - name: Append run log to the Trading log issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f reports/today.md ] || exit 0
+          NUM=$(gh issue list --state open --search "Trading log in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$NUM" ]; then
+            NUM=$(gh issue create --title "📈 Trading log" --body "One comment per executor run. Latest state: see index.html / reports/today.md." | grep -o '[0-9]*$')
+          fi
+          head -c 6000 reports/today.md > /tmp/body.md
+          gh issue comment "$NUM" --body-file /tmp/body.md || echo "could not comment (non-fatal)"
+
       - name: Commit snapshots
         if: always()
         run: |
           git config user.name "trader-bot"
           git config user.email "bot@users.noreply.github.com"
-          FILES="signals/state.json signals/targets.json signals/holdings.json signals/performance.json reports/today.md reports/track_record.md reports/paper_ledger.md"
+          FILES="signals/state.json signals/targets.json signals/holdings.json signals/performance.json signals/sim_account.json reports/today.md reports/track_record.md reports/paper_ledger.md"
           git add $FILES 2>/dev/null || true
           if git diff --cached --quiet; then echo "No data changes."; exit 0; fi
           git commit -m "bot: daily snapshot [skip ci]"

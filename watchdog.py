@@ -47,8 +47,6 @@ def main() -> int:
         detail = f"{today} is not a trading day; nothing expected."
     elif st.get("halted"):
         detail = f"Executor is intentionally HALTED ({st.get('halt_reason')}). Not a stall."
-    elif not key:
-        detail = "No Alpaca credentials configured yet; bot is a no-op by design."
     elif st.get("last_trade_date") == today:
         detail = f"OK: executor completed its trading-window run today ({st.get('last_run_utc')})."
     else:

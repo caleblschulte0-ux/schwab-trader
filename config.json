@@ -1,0 +1,18 @@
+{
+  "_comment": "Knobs live here. 'preset' picks a named bundle; 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits (env vars of the same name in UPPER_CASE win). Re-run `python backtest.py` after changing anything.",
+  "preset": "balanced",
+  "presets": {
+    "balanced":      {"core_symbol": "SPY"},
+    "growth":        {"core_symbol": "QQQ"},
+    "rotation_only": {"core_weight": 0.0},
+    "conservative":  {"core_symbol": "SPY", "vol_target": 0.12}
+  },
+  "strategy": {},
+  "executor": {
+    "max_capital": null,
+    "max_drawdown_halt": 0.30,
+    "trade_window_min": 120,
+    "min_trade_dollars": 5,
+    "sim_start_cash": 1000
+  }
+}

@@ -1,61 +1,42 @@
-# SETUP — run your own copy
+# SETUP
 
-Time: ~15 minutes. Cost: $0 (Alpaca paper trading and its basic data feed are free).
+## 0. It already runs
+Merge to `main` and the `trader` workflow runs every weekday at 15:35 ET on the built-in
+**simulator** (real prices, no accounts). Watch it in:
+- the **📈 Trading log** issue (one comment per run),
+- `reports/today.md`, `signals/targets.json`, `reports/track_record.md`,
+- the dashboard: Settings → Pages → *Deploy from branch* → `main` / `/ (root)`, then open
+  the Pages URL.
 
-## 1. Alpaca account **[HUMAN]**
-1. Sign up at https://app.alpaca.markets. You get a **paper** account immediately; a live
-   account needs the usual brokerage KYC and funding.
-2. In the dashboard, switch to **Paper** (top-left) → *Reset* the paper balance to
-   **$1,000** so paper results match what you would fund live (or leave $100k and set
-   `MAX_CAPITAL=1000` in step 3).
-3. **API Keys** → *Generate*. Copy the key and secret. These do **not** expire.
-   (Live trading later uses a separate pair generated while the dashboard is in *Live* mode.)
+Optional repo **variables** (Settings → Secrets and variables → Actions → Variables):
+`MAX_CAPITAL`, `MAX_DRAWDOWN_HALT`, `TRADE_WINDOW_MIN`. Everything else is in `config.json`.
 
-## 2. GitHub secrets **[HUMAN]**
-Repo → Settings → Secrets and variables → Actions:
+## 1. Alpaca (when you're ready for a real paper or live account) **[HUMAN]**
+1. Sign up at https://app.alpaca.markets. The paper account is instant and free.
+2. Dashboard → **Paper** → *Reset* the balance to $1,000 (or set `MAX_CAPITAL=1000`).
+3. **API Keys** → *Generate*. They do not expire.
+4. Repo → Settings → Secrets → add `ALPACA_API_KEY` and `ALPACA_SECRET_KEY`.
+   The next run switches from the simulator to the paper account automatically.
+   (Delete the old `SCHWAB_*`, `FMP_API_KEY`, `ALPHA_API_KEY` secrets; nothing reads them.)
 
-**Secrets**
-```
-ALPACA_API_KEY        ALPACA_SECRET_KEY
-CLAUDE_CODE_OAUTH_TOKEN   (optional: enables the weekly analyst note only; not needed to trade)
-```
-**Variables**
-```
-DRY_RUN            = true     # paper. Set to false for the live account (with LIVE keys).
-MAX_CAPITAL        = 1000     # optional cap on the dollars the bot manages
-MAX_DRAWDOWN_HALT  = 0.20     # optional; kill switch threshold
-TRADE_WINDOW_MIN   = 120      # optional; minutes before close the bot may trade
-```
-The old `SCHWAB_*`, `FMP_API_KEY`, `ALPHA_API_KEY` secrets are no longer used and can be deleted.
+## 2. Verify
+- Actions → **trader** → *Run workflow* with **no_trade** ticked: logs the targets, no orders.
+- `python doctor.py` locally (or read its output in the workflow) for a preflight checklist.
+- The **watchdog** workflow opens an issue if a trading day passes without a run.
 
-## 3. Turn it on **[HUMAN]**
-The `trader` workflow runs itself on GitHub's schedule at 15:35 ET every weekday
-(no cron-job.org needed; if you still have cron-job.org jobs pointed at the old
-workflows, delete them). To see it work right now:
+## 3. Going live **[HUMAN]**
+1. Fund the live account; generate **Live** keys; replace the two secrets.
+2. Set repo variable `DRY_RUN=false`.
+3. Keep `MAX_CAPITAL` at what you can watch fall 30% without touching the keyboard.
 
-- Actions → **trader** → *Run workflow* → tick **no_trade** → Run.
-  It logs the target portfolio it would buy and writes `reports/today.md` + `signals/targets.json`.
-- During market hours (any time, with **force_run** ticked; or in the last two hours without),
-  run it again without `no_trade`: it buys the targets in the paper account.
+## Optional: weekly Claude review
+Add `CLAUDE_CODE_OAUTH_TOKEN` and `analyst.yml` writes `reports/analyst.md` every Friday.
+It cannot trade and the bot never waits for it.
 
-## 4. Verify
-- `reports/today.md` — the run log (targets, orders, fills).
-- `signals/holdings.json` — the account snapshot.
-- Alpaca dashboard → Paper → Positions should match `signals/targets.json` weights.
-- `reports/track_record.md` fills in from the broker's books after the first fills.
-- The **watchdog** workflow opens an issue titled "Executor stalled" if a trading day
-  passes without a run; it closes it when the bot is back.
-
-## 5. Going live (deliberately) **[HUMAN]**
-1. Fund the live account. Generate **Live** API keys and replace the two secrets.
-2. Set `DRY_RUN=false`.
-3. Keep `MAX_CAPITAL` at what you are comfortable losing 20% of. The kill switch is a
-   backstop, not a promise.
-
-## Local use
+## Local
 ```bash
 python -m unittest discover -s tests -v
-python backtest.py --grid
-ALPACA_API_KEY=... ALPACA_SECRET_KEY=... NO_TRADE=true FORCE_RUN=true python bot.py
+python doctor.py
+NO_TRADE=true FORCE_RUN=true python bot.py
 ```
-No dependencies beyond Python 3.11 (stdlib only).
+Python 3.11, stdlib only. `.env.example` lists every variable.

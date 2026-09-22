@@ -7,13 +7,16 @@ strategy's target portfolio, and reconciles the Alpaca account to it.
     FORCE_RUN=true python bot.py  # ignore the market-hours / trade-window guard
 
 Environment
-  ALPACA_API_KEY, ALPACA_SECRET_KEY   required (paper keys for paper, live keys for live)
+  ALPACA_API_KEY, ALPACA_SECRET_KEY   Alpaca keys. WITHOUT them the bot trades the built-in
+                     simulator (broker_sim.py) at Yahoo prices, so the system runs end to end
+                     and builds a track record before any brokerage exists.
   DRY_RUN            "true" (default) -> paper-api.alpaca.markets; "false" -> real money
   MAX_CAPITAL        cap on the dollars this bot manages (default: whole account equity)
   TRADE_WINDOW_MIN   only trade within this many minutes of the close (default 120)
   MAX_DRAWDOWN_HALT  kill switch: liquidate + halt if equity falls this far below its
-                     high-water mark (default 0.20 = 20%). Reset by deleting "halted"
-                     from signals/state.json.
+                     high-water mark (default 0.30; see reports/validation.md for why not
+                     0.20). Reset by deleting "halted" from signals/state.json.
+  Knobs also live in config.json (preset, strategy overrides, executor limits); env wins.
   MIN_TRADE_DOLLARS  ignore rebalance deltas smaller than this (default 5)
   NO_TRADE / FORCE_RUN   see above
 
@@ -30,14 +33,17 @@ buys, buys capped to settled cash, one strategy step per trading day, drawdown k
 from __future__ import annotations
 
 import json
+import math
 import os
 import sys
 import traceback
 from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
 
+import config as cfgmod
 import data as datamod
 from alpaca import Alpaca, AlpacaError
+from broker_sim import SimBroker
 from strategy import UNIVERSE, Params, State, compute_targets
 
 SIGNALS_DIR = "signals"
@@ -119,11 +125,11 @@ def load_market_history(api: Alpaca, symbols: List[str], today_et: str, log: Log
     try:
         bars = api.daily_bars(symbols, start=start, end=yesterday, adjustment="all")
         n_ok = sum(1 for s in symbols if len(bars.get(s, [])) >= 200)
-        log(f"(data) Alpaca bars: {n_ok}/{len(symbols)} symbols with >=200 bars")
+        log(f"(data) broker bars: {n_ok}/{len(symbols)} symbols with >=200 bars")
         if n_ok < len(symbols) // 2:
-            raise RuntimeError("too few symbols from Alpaca bars")
+            raise RuntimeError("too few symbols from broker bars")
     except Exception as exc:  # noqa: BLE001
-        log(f"(data) Alpaca bars unavailable ({exc}); falling back to Yahoo")
+        log(f"(data) broker bars unavailable ({exc}); falling back to Yahoo")
         yh = datamod.load_history(symbols, refresh=True, max_age_hours=None)
         bars = {s: [(d, c) for d, c in v if d <= yesterday] for s, v in yh.items()}
 
@@ -195,9 +201,9 @@ def execute(api: Alpaca, plan: List[Tuple[str, str, float]], prices: Dict[str, f
         return fills
     acct = api.account()
     cash = max(0.0, float(acct.get("cash", 0.0)))
-    spendable = cash * 0.995  # leave a sliver for price drift between quote and fill
+    spendable = cash * 0.998  # leave a sliver for price drift between quote and fill
     for sym, _, dollars in buys:
-        amt = min(dollars, spendable)
+        amt = math.floor(min(dollars, spendable) * 100) / 100.0
         if amt < 1.0:
             log(f"  BUY {sym} skipped: out of cash (${spendable:,.2f} left)")
             continue
@@ -247,7 +253,7 @@ def write_holdings(api: Alpaca, managed: set, now_utc: str, log: Log) -> dict:
         })
     snap = {
         "updated_utc": now_utc,
-        "mode": "paper" if api.paper else "LIVE",
+        "mode": getattr(api, "mode", "paper" if getattr(api, "paper", True) else "LIVE"),
         "equity": float(acct.get("equity", 0)),
         "cash": float(acct.get("cash", 0)),
         "buying_power": float(acct.get("buying_power", 0)),
@@ -273,19 +279,25 @@ def main() -> int:
     dry_run = env_bool("DRY_RUN", True)
     no_trade = env_bool("NO_TRADE", False)
     force = env_bool("FORCE_RUN", False)
-    window_min = env_float("TRADE_WINDOW_MIN", 120.0) or 120.0
-    max_capital = env_float("MAX_CAPITAL", None)
-    dd_halt = env_float("MAX_DRAWDOWN_HALT", 0.20) or 0.20
-    min_trade = env_float("MIN_TRADE_DOLLARS", 5.0) or 5.0
-    params = Params()
+    cfg = cfgmod.load_config()
+    params, preset = cfgmod.build_params(cfg)
+    ex = cfgmod.executor_settings(cfg)
+    window_min = ex["trade_window_min"]
+    max_capital = ex["max_capital"]
+    dd_halt = ex["max_drawdown_halt"]
+    min_trade = ex["min_trade_dollars"]
 
-    log(f"=== Executor | {'PAPER' if dry_run else 'LIVE'}{' | NO_TRADE' if no_trade else ''} | {datetime.now(timezone.utc):%Y-%m-%d %H:%M}Z ===")
-    if not key or not secret:
-        log("ALPACA_API_KEY / ALPACA_SECRET_KEY not set -- nothing to do. See SETUP.md.")
-        write_today(log, "no credentials")
-        return 0
-
-    api = Alpaca(key, secret, paper=dry_run)
+    if key and secret:
+        api = Alpaca(key, secret, paper=dry_run)
+        mode = "PAPER" if dry_run else "LIVE"
+        api.mode = mode.lower()
+    else:
+        api = SimBroker(start_cash=ex["sim_start_cash"])
+        mode = "SIM"
+    log(f"=== Executor | {mode}{' | NO_TRADE' if no_trade else ''} | preset={preset} | {datetime.now(timezone.utc):%Y-%m-%d %H:%M}Z ===")
+    if mode == "SIM":
+        log("no ALPACA_API_KEY/SECRET: trading the built-in simulator (signals/sim_account.json) at Yahoo prices. "
+            "Add Alpaca keys (SETUP.md) to trade a real paper/live account.")
     clock = api.clock()
     now = parse_ts(clock["timestamp"])
     now_utc = now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -311,6 +323,8 @@ def main() -> int:
     if not (in_window or force):
         why = "market closed" if not is_open else f"{minutes_to_close:.0f} min to close (> {window_min:.0f}-min trade window)"
         log(f"Outside trade window ({why}) -- refreshing snapshot only. next_close={clock['next_close']}")
+        if hasattr(api, "snapshot"):
+            api.snapshot()
         snap = write_holdings(api, managed, now_utc, log)
         log(f"equity=${snap['equity']:,.2f} cash=${snap['cash']:,.2f} positions={len(snap['positions'])}")
         st_raw["last_run_utc"] = now_utc
@@ -370,10 +384,13 @@ def main() -> int:
         for n in dec.notes:
             log(f"  strategy: {n}")
         log(f"  momentum holdings: {dec.mom_selected or '(none - defensive)'}")
+        for k, v in dec.regime.items():
+            log(f"  regime: {k}={v}")
         save_json(TARGETS_FILE, {
             "date": today_et, "weights": weights, "notes": dec.notes,
             "momentum": dec.mom_selected, "mean_reversion": dec.mr_open,
             "rebalanced": dec.rebalanced_momentum, "capital": capital,
+            "regime": dec.regime, "preset": preset, "mode": mode,
         })
         st_raw["strategy"] = dec.state.to_dict()
         st_raw["last_decision_date"] = today_et
@@ -397,9 +414,14 @@ def main() -> int:
     st_raw["last_run_utc"] = now_utc
     st_raw["hwm"] = hwm
     save_json(STATE_FILE, st_raw)
+    if hasattr(api, "snapshot"):
+        api.snapshot()
     snap = write_holdings(api, managed, now_utc, log)
-    log(f"done: equity=${snap['equity']:,.2f} cash=${snap['cash']:,.2f} positions={[r['symbol'] for r in snap['positions']]}")
-    write_today(log, f"{today_et} {'paper' if dry_run else 'LIVE'}")
+    drift = max((abs(targets.get(s, 0.0) - float(r["market_value"])) for s, r in
+                 ((r["symbol"], r) for r in snap["positions"] if r["managed"])), default=0.0)
+    log(f"done: equity=${snap['equity']:,.2f} cash=${snap['cash']:,.2f} positions={[r['symbol'] for r in snap['positions']]} "
+        f"max drift vs target=${drift:,.2f}")
+    write_today(log, f"{today_et} {mode}")
     return 0
 
 

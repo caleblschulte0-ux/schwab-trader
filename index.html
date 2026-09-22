@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading Bot Dashboard</title>
+<style>
+:root{--bg:#f7f7f5;--fg:#1a1a1a;--muted:#666;--card:#fff;--line:#e3e3df;--up:#1b7f3b;--down:#b3261e;--accent:#2b5fd9}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#111214;--fg:#ececec;--muted:#9a9a9a;--card:#1b1c1f;--line:#2b2c30;--up:#4cc774;--down:#f26b62;--accent:#7aa2ff}}
+:root[data-theme=dark]{--bg:#111214;--fg:#ececec;--muted:#9a9a9a;--card:#1b1c1f;--line:#2b2c30;--up:#4cc774;--down:#f26b62;--accent:#7aa2ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px}h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.sub{color:var(--muted);margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}.big{font-size:26px;font-weight:700}.pos{color:var(--up)}.neg{color:var(--down)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent)}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;overflow:auto;font-size:12.5px;max-height:360px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;background:var(--line)}.badge.halt{background:var(--down);color:#fff}
+canvas{width:100%;height:220px;display:block}.muted{color:var(--muted)}a{color:var(--accent)}
+</style></head><body><main>
+<h1>Trading bot dashboard</h1>
+<div class="sub" id="sub">Loading signals/…</div>
+<div class="grid">
+  <div class="card"><h2>Equity</h2><div class="big" id="equity">–</div><div class="muted" id="equity2"></div></div>
+  <div class="card"><h2>Track record</h2><div class="big" id="ret">–</div><div class="muted" id="ret2"></div></div>
+  <div class="card"><h2>Status</h2><div id="status">–</div></div>
+  <div class="card"><h2>Regime</h2><div id="regime">–</div></div>
+</div>
+<div class="card" style="margin-bottom:14px"><h2>Equity curve</h2><canvas id="chart" width="1000" height="220"></canvas></div>
+<div class="grid">
+  <div class="card"><h2>Targets vs holdings</h2><table id="book"><thead><tr><th>Symbol</th><th class="n">Target</th><th class="n">Held</th><th class="n">Unrl.</th><th style="width:30%"></th></tr></thead><tbody></tbody></table></div>
+  <div class="card"><h2>Backtest reference</h2><div id="bt" class="muted">reports/backtest.md</div></div>
+</div>
+<div class="card" style="margin-top:14px"><h2>Last run</h2><pre id="log">–</pre></div>
+<p class="muted">Static page: reads <code>signals/*.json</code> and <code>reports/*.md</code> from this repo. Serve the repo root (GitHub Pages or <code>python -m http.server</code>).</p>
+</main>
+<script>
+const $=s=>document.querySelector(s);const fmt$=v=>'$'+Number(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});const pct=v=>(v>=0?'+':'')+(v*100).toFixed(1)+'%';
+async function j(p){try{const r=await fetch(p,{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}}
+async function t(p){try{const r=await fetch(p,{cache:'no-store'});return r.ok?await r.text():null}catch(e){return null}}
+(async()=>{
+ const [h,tg,st,pf,log,bt]=await Promise.all([j('signals/holdings.json'),j('signals/targets.json'),j('signals/state.json'),j('signals/performance.json'),t('reports/today.md'),t('reports/backtest.md')]);
+ if(!h&&!st){$('#sub').textContent='No runs yet. The trader workflow writes signals/ on its first run.';return}
+ const mode=(h&&h.mode||'').toUpperCase();$('#sub').textContent=`${mode} · updated ${h?h.updated_utc:'?'} · preset ${tg?tg.preset:'?'}`;
+ if(h){$('#equity').textContent=fmt$(h.equity);$('#equity2').textContent=`cash ${fmt$(h.cash)} · ${h.positions.length} positions`}
+ if(pf&&pf.equity&&pf.equity.total_return!=null){const e=pf.equity;$('#ret').textContent=pct(e.total_return);$('#ret').className='big '+(e.total_return>=0?'pos':'neg');$('#ret2').textContent=`since ${e.start} · max DD ${pct(e.max_drawdown)} · Sharpe ${(e.sharpe||0).toFixed(2)}${pf.trades&&pf.trades.n?` · ${pf.trades.n} trades, ${Math.round(pf.trades.win_rate*100)}% win`:''}`}else{$('#ret').textContent='–';$('#ret2').textContent='needs a few days of history'}
+ if(st){const halted=!!st.halted;$('#status').innerHTML=`<span class="badge ${halted?'halt':''}">${halted?'HALTED':'running'}</span><div class="muted" style="margin-top:6px">last run ${st.last_run_utc||'–'}<br>last trade day ${st.last_trade_date||'–'}<br>high-water mark ${st.hwm?fmt$(st.hwm):'–'}${halted?'<br><b>'+st.halt_reason+'</b>':''}</div>`}
+ if(tg&&tg.regime){const r=tg.regime;$('#regime').innerHTML=`breadth <b>${Math.round((r.breadth||0)*100)}%</b> of risk ETFs above 200d<br>exposure <b>${Math.round((r.exposure||0)*100)}%</b>${r.book_vol?` · book vol ${Math.round(r.book_vol*100)}%`:''}${r.risk_off?'<br><b>risk-off</b>':''}<br><span class="muted">momentum: ${(tg.momentum||[]).join(', ')||'none'}</span>`}
+ // book table
+ const tb=$('#book tbody');const held={};(h?h.positions:[]).forEach(p=>held[p.symbol]=p);const cap=tg&&tg.capital||(h&&h.equity)||1;const syms=new Set([...(tg?Object.keys(tg.weights):[]),...Object.keys(held)]);
+ [...syms].sort((a,b)=>((tg&&tg.weights[b])||0)-((tg&&tg.weights[a])||0)).forEach(s=>{const w=tg&&tg.weights[s]||0;const hv=held[s]?held[s].market_value/cap:0;const u=held[s]?held[s].unrealized_pct/100:null;const tr=document.createElement('tr');tr.innerHTML=`<td><b>${s}</b></td><td class="n">${(w*100).toFixed(1)}%</td><td class="n">${(hv*100).toFixed(1)}%</td><td class="n ${u==null?'':u>=0?'pos':'neg'}">${u==null?'–':pct(u)}</td><td><div class="bar"><i style="width:${Math.min(100,w*100/0.5)}%"></i></div></td>`;tb.appendChild(tr)});
+ if(log)$('#log').textContent=log.replace(/^# .*\n\n```\n?/,'').replace(/```\s*$/,'');
+ if(bt){const m=bt.match(/\| CAGR \|([^\n]*)/);const s=bt.match(/\| Sharpe[^|]*\|([^\n]*)/);const d=bt.match(/\| Max drawdown \|([^\n]*)/);$('#bt').innerHTML=`<table><tr><th></th><th class="n">Strategy</th><th class="n">SPY</th></tr>${[['CAGR',m],['Sharpe',s],['Max DD',d]].map(([k,x])=>x?`<tr><td>${k}</td>${x[1].split('|').filter(c=>c.trim()).map(c=>`<td class="n">${c.trim().replace(/\(.*\)/,'')}</td>`).join('')}</tr>`:'').join('')}</table><div class="muted" style="margin-top:6px">2008→today, same code as live. See reports/validation.md.</div>`}
+ // chart
+ const curve=(pf&&pf.equity_curve)||[];const c=$('#chart'),ctx=c.getContext('2d');const W=c.width,H=c.height;ctx.clearRect(0,0,W,H);
+ if(curve.length>1){const ys=curve.map(p=>p[1]);const lo=Math.min(...ys),hi=Math.max(...ys);const pad=(hi-lo)||1;const X=i=>20+(W-30)*i/(curve.length-1),Y=v=>H-18-(H-30)*(v-lo)/pad;
+  ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--line');ctx.lineWidth=1;[0,.5,1].forEach(f=>{ctx.beginPath();ctx.moveTo(20,Y(lo+f*pad));ctx.lineTo(W-10,Y(lo+f*pad));ctx.stroke()});
+  ctx.strokeStyle=ys[ys.length-1]>=ys[0]?getComputedStyle(document.documentElement).getPropertyValue('--up'):getComputedStyle(document.documentElement).getPropertyValue('--down');ctx.lineWidth=2;ctx.beginPath();curve.forEach((p,i)=>i?ctx.lineTo(X(i),Y(p[1])):ctx.moveTo(X(i),Y(p[1])));ctx.stroke();
+  ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--muted');ctx.font='11px system-ui';ctx.fillText(curve[0][0],20,H-4);ctx.fillText(curve[curve.length-1][0],W-90,H-4);ctx.fillText(fmt$(hi),24,14);ctx.fillText(fmt$(lo),24,H-22)}
+ else{ctx.fillStyle='#888';ctx.font='13px system-ui';ctx.fillText('Equity curve appears after a few runs.',20,40)}
+})();
+</script></body></html>

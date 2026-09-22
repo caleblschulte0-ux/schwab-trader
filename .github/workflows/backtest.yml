@@ -1,0 +1,34 @@
+name: backtest refresh
+# Weekly: re-download data, re-run the backtest + validation suite with the CURRENT
+# config, commit the reports. If a knob change quietly broke the edge, this is where
+# it shows up. Also runnable on demand from the Actions tab.
+on:
+  schedule:
+    - cron: '0 12 * * 0'   # Sundays 12:00 UTC
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Backtest + validation
+        run: |
+          python backtest.py --refresh
+          python validate.py > /dev/null
+      - name: Commit reports
+        run: |
+          git config user.name "backtest-bot"; git config user.email "bot@users.noreply.github.com"
+          git add reports/backtest.md reports/validation.md
+          git diff --cached --quiet && { echo "reports unchanged"; exit 0; }
+          git commit -m "backtest: weekly refresh [skip ci]"
+          git pull --rebase origin main || true
+          git push || echo "push failed -- non-fatal"
