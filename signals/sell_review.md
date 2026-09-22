@@ -1,21 +1,20 @@
-# Sell Review — 2026-09-22T12:36:02Z
+# Sell Review — 2026-09-22T15:36:10Z
 
 **1 SELL (routine, not urgent), 12 HOLD.**
 
-`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is still unchanged -- same 13 symbols,
-quantities, avg_price, and opened_utc as every prior pass (executor remains paused, no new
+`holdings.json` (updated_utc 2026-07-15T18:35:19Z) is unchanged -- same 13 symbols, quantities,
+avg_price, and opened_utc as the prior pass three hours ago (executor remains paused, no new
 fills/closes). `signals/candidates.json` remains the same stale Jul 15 funnel snapshot (~69 days
 old); none of the 13 held symbols appear in it, so it offers no fresh catalyst or adverse signal
 either way this run.
 
-**Web search this run:** MNKD (MannKind) -- oldest dedicated-checked name in the book (last
-individual check 2026-09-09). Findings: FUROSCIX ReadyFlow entered the Defense Health Agency's
-TRICARE formulary-review process (solicitation posted Sept 3, 2026, manufacturer pricing due
-Sept 24), with a P&T Committee review scheduled for Nov 4-5, 2026 -- a new payer-access expansion
-step beyond the commercial launch already tracked. Management also presented at the Cantor Global
-Healthcare Conference (Sept 10) and H.C. Wainwright Global Investment Conference (Sept 15). No
-adverse news, no fraud/halt/safety signal. Thesis intact and progressing on the reimbursement
-front, consistent with the prior pass.
+**Web search this run:** RXRX (Recursion Pharmaceuticals) -- oldest dedicated-checked name in the
+book (last individual check 2026-09-10). Findings: stock actually rebounded -- $3.83 as of Sept
+19, +19.7% over the trailing week, range-bound in the low-$3s. Q2 2026 revenue ~$7.3M, net loss
+~$131M, but cash position over $500M (ample runway). Three September Form 4 insider filings
+(Sept 2, 10, 16) with no clear buy/sell signal either way. No fraud, halt, restatement, or other
+adverse event found. Genentech partnership and REC-4881 Phase 2 data (due Nov 2026) from the prior
+check are unaffected. Thesis intact, price action improving if anything -- reaffirms HOLD.
 
 Everything else carries forward from dedicated checks in recent passes with no new adverse signal
 and no change to underlying data: EVTL re-confirmed broken -- no new facts since the certification
@@ -27,8 +26,8 @@ AVR (checked 2026-09-18, first US patients dosed in DurAVR pivotal trial, cash b
 $260.9M); BNAI (checked 2026-09-17, Cataneo showcased conversational AI platform at IBC2026, no
 fraud/delisting signal despite deepest drawdown); GASS (checked 2026-09-16, Q2 print reconfirmed,
 debt-free/$250M+ liquidity); PLSE (checked 2026-09-16, PRECISE-BTN trial completed enrollment,
-100 patients, thesis strengthening); RXRX (checked 2026-09-10, soft Q2 print but Genentech
-program advancing, REC-4881 data due Nov); CLLS (checked 2026-09-10, five-conference circuit
+100 patients, thesis strengthening); MNKD (checked 2026-09-22, FUROSCIX ReadyFlow entered TRICARE
+formulary review, P&T Committee review Nov 4-5); CLLS (checked 2026-09-10, five-conference circuit
 through mid-Nov, NATHALI-01/BALLI-01 intact); SLDB (checked 2026-09-18, INSPIRE DUCHENNE fully
 enrolled at 53 patients, FDA meeting on accelerated approval still expected Q4 2026); ATHE
 (checked 2026-09-11, FDA agreed on Ph3 pivotal design details, trial on track for year-end 2026);
@@ -36,7 +35,7 @@ TISI (checked 2026-09-11, ABL facility improved, insider buy, ownership consolid
 thesis stands). No holding shows a broken thesis, and no drawdown alone is being treated as a
 sell signal.
 
-Sources: [MannKind to Present at Upcoming September 2026 Investor Conferences - BioSpace](https://www.biospace.com/press-releases/mannkind-to-present-at-upcoming-september-2026-investor-conferences), [MannKind to Present at Upcoming Investor Conferences - GlobeNewswire](https://www.globenewswire.com/news-release/2026/09/02/3355137/29517/en/mannkind-to-present-at-upcoming-investor-conferences.html), [MannKind ($MNKD) Stock Hub: September Conferences, ReadyFlow Execution And Cash Discipline](https://www.merlintrader.com/mannkind-corporation-stock-hub/)
+Sources: [Is Recursion Pharmaceuticals (RXRX) A Bargain As Its Shares Rebound?](https://finance.yahoo.com/markets/stocks/articles/recursion-pharmaceuticals-rxrx-bargain-shares-121201225.html), [RXRX Stock Grinds Higher As Insider Filings Stack Up](https://www.timothysykes.com/news/recursion-pharmaceuticals-inc-rxrx-news-2026_09_21/), [RXRX Stock Holds Support As Insider Activity Draws Trader Focus](https://stockstotrade.com/news/recursion-pharmaceuticals-inc-rxrx-news-2026_09_17/)
 
 ---
 
@@ -81,7 +80,7 @@ call, a broken timeline. No new facts this run; carried forward.
 No new material news since the 09-04 Q2 print (net income $17.3M, EPS $0.46, liquidity above
 $250M, no debt). Debt-free, cash-rich thesis fully intact.
 
-**MNKD — HOLD** | opened Jun 10 | dedicated check this run
+**MNKD — HOLD** | opened Jun 10
 FUROSCIX ReadyFlow entered TRICARE formulary review (DHA solicitation Sept 3, pricing due Sept 24,
 P&T review Nov 4-5) -- a new reimbursement-expansion step on top of the on-schedule commercial
 launch and Q2 revenue +43% YoY. No adverse signal.
@@ -91,10 +90,11 @@ PRECISE-BTN thyroid-nodule trial completed enrollment 2026-09-15 (expanded 50→
 first patient already past 12-month follow-up, preliminary data expected at an upcoming medical
 conference. nsPFA platform actively progressing. No adverse news.
 
-**RXRX — HOLD** | opened Jun 5 | red on cost basis
-Q2 print was soft (Roche collaboration revenue declined, wider loss), but Genentech partnership
-advanced a new neuroscience target, REC-4881 Phase 2 data due Nov 2026. Multi-year AI
-drug-discovery platform thesis intact -- a soft quarter is not a broken thesis.
+**RXRX — HOLD** | opened Jun 5 | red on cost basis | dedicated check this run
+Stock actually rebounded (+19.7% over the trailing week to $3.83), not deteriorating. Cash >$500M
+funds ample runway against the Q2 net loss. Genentech collaboration and REC-4881 Phase 2 data
+(due Nov 2026) unaffected. No fraud/halt/adverse filing found. Soft Q2 print already priced in;
+multi-year AI drug-discovery platform thesis intact.
 
 **SLDB — HOLD** | opened Jun 4
 Underlying DMD gene-therapy conviction thesis holds: INSPIRE DUCHENNE fully enrolled at 53
@@ -122,6 +122,6 @@ fraud/halt/failed-binary-event found. Turnaround thesis stands.
 | GASS   | Jun 5  | **HOLD** | No new news since Q2 beat; debt-free, $250M+ liquidity confirmed again |
 | MNKD   | Jun 10 | **HOLD** | ReadyFlow entered TRICARE formulary review, Q2 revenue +43% YoY, 2026 target reaffirmed |
 | PLSE   | Jun 5  | **HOLD** | PRECISE-BTN trial completed enrollment (100 pts), no adverse news, platform progressing |
-| RXRX   | Jun 5  | **HOLD** | Soft Q2 print but Genentech program advancing, REC-4881 data due Nov -- thesis intact |
+| RXRX   | Jun 5  | **HOLD** | Stock rebounded +19.7% this week, cash >$500M, Genentech/REC-4881 unaffected -- thesis intact |
 | SLDB   | Jun 4  | **HOLD** | INSPIRE DUCHENNE fully enrolled/well tolerated, FDA meeting still expected Q4 2026 |
 | TISI   | Jun 4  | **HOLD** | ABL facility improved, insider buy, ownership consolidation -- turnaround thesis stands |
