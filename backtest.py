@@ -1,0 +1,355 @@
+"""Backtester for strategy.py on daily adjusted closes.
+
+    python backtest.py                     # full run since 2008, all sleeves
+    python backtest.py --start 2015-01-01  # sub-period
+    python backtest.py --grid              # robustness grid (is the edge a knife-edge?)
+    python backtest.py --refresh           # re-download data
+
+Assumptions (deliberately conservative):
+  * Signals computed on the close, fills AT that close (the live bot runs in the last
+    hour of the session, so this is close to reality) with SLIPPAGE_BPS per side.
+  * Zero commissions (Alpaca). Cash earns 0% (live cash actually earns interest).
+  * Dividends are included via adjusted closes.
+Pure stdlib; ~1 minute for 18 years x 34 symbols.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import math
+import os
+import sys
+from dataclasses import replace
+from typing import Dict, List, Optional, Tuple
+
+import data as datamod
+from strategy import (MR_UNIVERSE, UNIVERSE, Params, Signals, State, compute_targets)
+
+SLIPPAGE_BPS = 5.0
+
+
+# ----------------------------------------------------------------------------- #
+# Fast incremental indicators (same formulas as strategy.compute_signals)         #
+# ----------------------------------------------------------------------------- #
+class SymbolSeries:
+    def __init__(self, sym: str, bars: List[Tuple[str, float]], p: Params):
+        self.sym = sym
+        self.dates = [d for d, _ in bars]
+        self.closes = [c for _, c in bars]
+        self.index = {d: i for i, d in enumerate(self.dates)}
+        n = len(self.closes)
+        self.p = p
+        # prefix sums for SMAs
+        pref = [0.0] * (n + 1)
+        for i, c in enumerate(self.closes):
+            pref[i + 1] = pref[i] + c
+        self.pref = pref
+        # log returns prefix sums for vol
+        lr = [0.0] * n
+        for i in range(1, n):
+            a, b = self.closes[i - 1], self.closes[i]
+            lr[i] = math.log(b / a) if a > 0 and b > 0 else 0.0
+        self.lr_sum = [0.0] * (n + 1)
+        self.lr_sq = [0.0] * (n + 1)
+        for i in range(n):
+            self.lr_sum[i + 1] = self.lr_sum[i] + lr[i]
+            self.lr_sq[i + 1] = self.lr_sq[i] + lr[i] * lr[i]
+        # Wilder RSI computed sequentially over the whole series
+        self.rsi = [None] * n
+        k = p.mr_rsi_period
+        if n > k:
+            g = l = 0.0
+            for i in range(1, k + 1):
+                ch = self.closes[i] - self.closes[i - 1]
+                g += max(ch, 0.0); l += max(-ch, 0.0)
+            ag, al = g / k, l / k
+            self.rsi[k] = 100.0 if al == 0 else 100.0 - 100.0 / (1.0 + ag / al)
+            for i in range(k + 1, n):
+                ch = self.closes[i] - self.closes[i - 1]
+                ag = (ag * (k - 1) + max(ch, 0.0)) / k
+                al = (al * (k - 1) + max(-ch, 0.0)) / k
+                self.rsi[i] = 100.0 if al == 0 else 100.0 - 100.0 / (1.0 + ag / al)
+
+    def _sma(self, i: int, n: int) -> Optional[float]:
+        if i + 1 < n:
+            return None
+        return (self.pref[i + 1] - self.pref[i + 1 - n]) / n
+
+    def signals_at(self, i: int) -> Signals:
+        p = self.p
+        c = self.closes[i]
+        mom = None
+        if i >= max(p.mom_lookbacks):
+            rets = [c / self.closes[i - lb] - 1.0 for lb in p.mom_lookbacks]
+            mom = sum(rets) / len(rets)
+        vol = None
+        n = p.vol_lookback
+        if i >= n:
+            s = self.lr_sum[i + 1] - self.lr_sum[i + 1 - n]
+            sq = self.lr_sq[i + 1] - self.lr_sq[i + 1 - n]
+            m = s / n
+            var = (sq - n * m * m) / (n - 1)
+            vol = math.sqrt(max(var, 0.0)) * math.sqrt(252)
+        return Signals(
+            close=c,
+            sma_trend=self._sma(i, p.trend_sma),
+            sma_exit=self._sma(i, p.mr_exit_sma),
+            rsi=self.rsi[i],
+            mom_score=mom,
+            vol=vol,
+            n_bars=i + 1,
+        )
+
+
+# ----------------------------------------------------------------------------- #
+# Simulation                                                                      #
+# ----------------------------------------------------------------------------- #
+def run(hist: Dict[str, List[Tuple[str, float]]], p: Params, start: str, end: Optional[str] = None,
+        start_equity: float = 1000.0, verbose: bool = False) -> dict:
+    series = {s: SymbolSeries(s, bars, p) for s, bars in hist.items() if len(bars) > p.min_history}
+    calendar = sorted(set(series["SPY"].dates))
+    calendar = [d for d in calendar if d >= start and (end is None or d <= end)]
+
+    state = State()
+    holdings: Dict[str, float] = {}   # symbol -> dollars
+    cash = start_equity
+    equity_curve: List[Tuple[str, float]] = []
+    trades: List[dict] = []           # MR round trips + momentum swaps, for stats
+    last_close: Dict[str, float] = {}
+    turnover_total = 0.0
+    mr_entry: Dict[str, Tuple[str, float]] = {}
+
+    for d in calendar:
+        # 1) mark to market with today's close
+        for s in list(holdings):
+            ss = series[s]
+            i = ss.index.get(d)
+            if i is None:
+                continue
+            prev = last_close.get(s)
+            if prev:
+                holdings[s] *= ss.closes[i] / prev
+            last_close[s] = ss.closes[i]
+        equity = cash + sum(holdings.values())
+
+        # 2) signals for everything that has a bar today
+        sig: Dict[str, Signals] = {}
+        for s, ss in series.items():
+            i = ss.index.get(d)
+            if i is not None:
+                sig[s] = ss.signals_at(i)
+                last_close[s] = ss.closes[i]
+
+        # 3) decide
+        prev_mr = dict(state.mr_positions)
+        dec = compute_targets(None, state, p, today=d, signals=sig)
+        state = dec.state
+
+        # MR round-trip bookkeeping
+        for s, pos in prev_mr.items():
+            if s not in state.mr_positions and s in sig:
+                ep = pos.entry_price
+                trades.append({"sym": s, "sleeve": "MR", "entry": pos.entry_date, "exit": d,
+                               "ret": sig[s].close / ep - 1.0, "days": pos.days_held})
+
+        # 4) rebalance to targets at the close, pay slippage on turnover
+        targets = {s: w * equity for s, w in dec.weights.items()}
+        for s in set(holdings) | set(targets):
+            cur = holdings.get(s, 0.0)
+            tgt = targets.get(s, 0.0)
+            delta = tgt - cur
+            if abs(delta) < 1.0:
+                continue
+            cost = abs(delta) * SLIPPAGE_BPS / 10_000
+            cash -= delta + cost
+            turnover_total += abs(delta)
+            if tgt <= 0:
+                holdings.pop(s, None)
+            else:
+                holdings[s] = tgt
+        equity = cash + sum(holdings.values())
+        equity_curve.append((d, equity))
+        if verbose and dec.notes:
+            print(d, f"eq={equity:,.0f}", "; ".join(dec.notes))
+
+    return summarize(equity_curve, trades, turnover_total, start_equity, series, calendar)
+
+
+def summarize(curve, trades, turnover, start_equity, series, calendar) -> dict:
+    if not curve:
+        return {}
+    dates = [d for d, _ in curve]
+    eq = [e for _, e in curve]
+    years = (len(eq)) / 252.0
+    cagr = (eq[-1] / eq[0]) ** (1 / years) - 1 if years > 0 else 0.0
+    rets = [eq[i] / eq[i - 1] - 1 for i in range(1, len(eq))]
+    m = sum(rets) / len(rets)
+    sd = math.sqrt(sum((r - m) ** 2 for r in rets) / (len(rets) - 1))
+    sharpe = (m / sd) * math.sqrt(252) if sd > 0 else 0.0
+    downs = [r for r in rets if r < 0]
+    dsd = math.sqrt(sum(r * r for r in downs) / len(rets)) if downs else 0.0
+    sortino = (m / dsd) * math.sqrt(252) if dsd > 0 else 0.0
+    peak = eq[0]; mdd = 0.0; mdd_date = dates[0]
+    for d, e in zip(dates, eq):
+        peak = max(peak, e)
+        dd = e / peak - 1
+        if dd < mdd:
+            mdd, mdd_date = dd, d
+    # yearly returns
+    yearly: Dict[str, float] = {}
+    first_of_year: Dict[str, float] = {}
+    last_of_year: Dict[str, float] = {}
+    for d, e in zip(dates, eq):
+        y = d[:4]
+        first_of_year.setdefault(y, e)
+        last_of_year[y] = e
+    prev_end = None
+    for y in sorted(first_of_year):
+        base = prev_end if prev_end is not None else first_of_year[y]
+        yearly[y] = last_of_year[y] / base - 1
+        prev_end = last_of_year[y]
+    # SPY benchmark over the same dates
+    spy = series["SPY"]
+    spy_eq = []
+    for d in dates:
+        i = spy.index.get(d)
+        spy_eq.append(spy.closes[i] if i is not None else (spy_eq[-1] if spy_eq else None))
+    spy_cagr = (spy_eq[-1] / spy_eq[0]) ** (1 / years) - 1
+    spk = spy_eq[0]; spy_mdd = 0.0
+    for e in spy_eq:
+        spk = max(spk, e); spy_mdd = min(spy_mdd, e / spk - 1)
+    spy_rets = [spy_eq[i] / spy_eq[i - 1] - 1 for i in range(1, len(spy_eq))]
+    sm = sum(spy_rets) / len(spy_rets)
+    ssd = math.sqrt(sum((r - sm) ** 2 for r in spy_rets) / (len(spy_rets) - 1))
+    spy_sharpe = (sm / ssd) * math.sqrt(252) if ssd > 0 else 0.0
+    spy_yearly: Dict[str, float] = {}
+    fy: Dict[str, float] = {}; ly: Dict[str, float] = {}
+    for d, e in zip(dates, spy_eq):
+        fy.setdefault(d[:4], e); ly[d[:4]] = e
+    pe = None
+    for y in sorted(fy):
+        base = pe if pe is not None else fy[y]
+        spy_yearly[y] = ly[y] / base - 1; pe = ly[y]
+
+    mr = [t for t in trades if t["sleeve"] == "MR"]
+    wins = [t for t in mr if t["ret"] > 0]
+    return {
+        "start": dates[0], "end": dates[-1], "years": round(years, 2),
+        "start_equity": start_equity, "end_equity": round(eq[-1], 2),
+        "cagr": cagr, "vol": sd * math.sqrt(252), "sharpe": sharpe, "sortino": sortino,
+        "max_drawdown": mdd, "max_drawdown_date": mdd_date,
+        "calmar": (cagr / -mdd) if mdd < 0 else 0.0,
+        "annual_turnover": turnover / start_equity / years if years else 0.0,  # rough, in start-equity units
+        "yearly": yearly,
+        "spy": {"cagr": spy_cagr, "max_drawdown": spy_mdd, "sharpe": spy_sharpe, "yearly": spy_yearly},
+        "mr_trades": len(mr),
+        "mr_win_rate": (len(wins) / len(mr)) if mr else 0.0,
+        "mr_avg_ret": (sum(t["ret"] for t in mr) / len(mr)) if mr else 0.0,
+        "mr_avg_days": (sum(t["days"] for t in mr) / len(mr)) if mr else 0.0,
+        "curve": curve,
+    }
+
+
+def fmt_report(r: dict, title: str = "Backtest") -> str:
+    L = [f"# {title}", "",
+         f"Period: {r['start']} -> {r['end']} ({r['years']} yrs)   start ${r['start_equity']:,.0f} -> end ${r['end_equity']:,.0f}", "",
+         "| Metric | Strategy | SPY buy&hold |", "|---|---:|---:|",
+         f"| CAGR | {r['cagr']:+.1%} | {r['spy']['cagr']:+.1%} |",
+         f"| Annual vol | {r['vol']:.1%} | - |",
+         f"| Sharpe (rf=0) | {r['sharpe']:.2f} | {r['spy']['sharpe']:.2f} |",
+         f"| Sortino | {r['sortino']:.2f} | - |",
+         f"| Max drawdown | {r['max_drawdown']:.1%} ({r['max_drawdown_date']}) | {r['spy']['max_drawdown']:.1%} |",
+         f"| Calmar | {r['calmar']:.2f} | - |",
+         f"| MR round-trips | {r['mr_trades']} (win {r['mr_win_rate']:.0%}, avg {r['mr_avg_ret']:+.2%}, {r['mr_avg_days']:.1f}d) | - |",
+         "", "| Year | Strategy | SPY |", "|---|---:|---:|"]
+    for y in sorted(r["yearly"]):
+        L.append(f"| {y} | {r['yearly'][y]:+.1%} | {r['spy']['yearly'].get(y, 0):+.1%} |")
+    return "\n".join(L)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--start", default="2008-01-01")
+    ap.add_argument("--end", default=None)
+    ap.add_argument("--refresh", action="store_true")
+    ap.add_argument("--grid", action="store_true")
+    ap.add_argument("--grid2", action="store_true", help="structural variants")
+    ap.add_argument("--verbose", action="store_true")
+    ap.add_argument("--out", default="reports/backtest.md")
+    ap.add_argument("--curve", default=None, help="write equity curve CSV here")
+    args = ap.parse_args()
+
+    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | {"BIL"}), refresh=args.refresh, max_age_hours=None)
+    if "SPY" not in hist:
+        print("need SPY history"); return 1
+
+    if args.grid:
+        base = Params()
+        grid = [
+            ("baseline", base),
+            ("mom_top_n=3", replace(base, mom_top_n=3)),
+            ("mom_top_n=7", replace(base, mom_top_n=7)),
+            ("rebalance=monthly", replace(base, mom_rebalance_days=21)),
+            ("rsi_entry=5", replace(base, mr_rsi_entry=5)),
+            ("rsi_entry=15", replace(base, mr_rsi_entry=15)),
+            ("mr_weight=0.25", replace(base, mr_weight=0.25, mom_weight=0.75)),
+            ("mr_weight=0.50", replace(base, mr_weight=0.50, mom_weight=0.50)),
+            ("no_hard_stop", replace(base, mr_hard_stop_pct=-1.0)),
+            ("equal-weight mom", replace(base, mom_weighting="equal")),
+            ("no cash proxy", replace(base, cash_proxy=None)),
+            ("risk-assets-only mom", replace(base, mom_universe=[s for s in UNIVERSE if s not in ("SHY", "IEF", "LQD", "UUP")])),
+            ("equities+gold mom", replace(base, mom_universe=[s for s in UNIVERSE if s not in ("SHY", "IEF", "LQD", "UUP", "TLT", "HYG", "DBC", "USO", "SLV")])),
+            ("momentum only", replace(base, mr_weight=0.0, mom_weight=1.0)),
+            ("mean-reversion only", replace(base, mr_weight=1.0, mom_weight=0.0, mr_max_positions=5)),
+        ]
+        print(f"{'variant':<22}{'CAGR':>8}{'Sharpe':>8}{'MaxDD':>8}{'MR n':>7}{'MR win':>8}")
+        for name, prm in grid:
+            r = run(hist, prm, args.start, args.end)
+            print(f"{name:<22}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['mr_trades']:>7}{r['mr_win_rate']:>8.0%}")
+        return 0
+
+    if args.grid2:
+        base = Params()
+        risk = [s for s in UNIVERSE if s not in ("SHY", "IEF", "LQD", "UUP")]
+        broad = ["SPY", "QQQ", "IWM", "DIA", "MDY"]
+        grid = [
+            ("baseline", base),
+            ("mom-only", replace(base, mr_weight=0.0, mom_weight=1.0)),
+            ("mom-only equal", replace(base, mr_weight=0.0, mom_weight=1.0, mom_weighting="equal")),
+            ("mom-only top4", replace(base, mr_weight=0.0, mom_weight=1.0, mom_top_n=4)),
+            ("mom-only top4 equal", replace(base, mr_weight=0.0, mom_weight=1.0, mom_top_n=4, mom_weighting="equal")),
+            ("mom-only top6", replace(base, mr_weight=0.0, mom_weight=1.0, mom_top_n=6)),
+            ("mom-only risk univ", replace(base, mr_weight=0.0, mom_weight=1.0, mom_universe=risk)),
+            ("mom-only lb 3/6/12", replace(base, mr_weight=0.0, mom_weight=1.0, mom_lookbacks=(63, 126, 252))),
+            ("mom-only lb 1/3/6", replace(base, mr_weight=0.0, mom_weight=1.0, mom_lookbacks=(21, 63, 126))),
+            ("mom-only hyst=0", replace(base, mr_weight=0.0, mom_weight=1.0, mom_hysteresis=0)),
+            ("mom-only hyst=4", replace(base, mr_weight=0.0, mom_weight=1.0, mom_hysteresis=4)),
+            ("mom-only reb=10d", replace(base, mr_weight=0.0, mom_weight=1.0, mom_rebalance_days=10)),
+            ("mom .8 + MR .2 broad", replace(base, mr_weight=0.2, mom_weight=0.8, mr_max_positions=2)),
+            ("mom .75 + MR .25", replace(base, mr_weight=0.25, mom_weight=0.75)),
+            ("mom .75 + MR .25 rsi5", replace(base, mr_weight=0.25, mom_weight=0.75, mr_rsi_entry=5)),
+        ]
+        print(f"{'variant':<24}{'CAGR':>8}{'Sharpe':>8}{'MaxDD':>8}{'Calmar':>8}{'End$':>9}")
+        for name, prm in grid:
+            r = run(hist, prm, args.start, args.end)
+            print(f"{name:<24}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['calmar']:>8.2f}{r['end_equity']:>9,.0f}")
+        return 0
+
+    r = run(hist, Params(), args.start, args.end, verbose=args.verbose)
+    report = fmt_report(r, f"Backtest {args.start} -> {r['end']}")
+    print(report)
+    os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
+    with open(args.out, "w") as f:
+        f.write(report + "\n\n_Assumptions: fills at the close, "
+                f"{SLIPPAGE_BPS:.0f} bps slippage per side, zero commissions, cash earns 0%, dividends reinvested "
+                "(adjusted closes). Past performance is not a promise of future results._\n")
+    if args.curve:
+        with open(args.curve, "w") as f:
+            f.write("date,equity\n")
+            for d, e in r["curve"]:
+                f.write(f"{d},{e:.2f}\n")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

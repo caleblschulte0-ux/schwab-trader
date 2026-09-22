@@ -1,86 +1,88 @@
-name: schwab-trader-bot
+name: trader
 
-# Running in PAPER mode (DRY_RUN=true) while the ACH deposit clears — the bot
-# logs what it WOULD trade but places nothing real. Flip DRY_RUN to false (and
-# confirm funds cleared) to go live.
+# The executor (bot.py): ONE strategy step per trading day, in the last two hours of
+# the session. Paper by default (DRY_RUN=true -> Alpaca paper account). Flip the
+# DRY_RUN repo VARIABLE to false to trade the live account (see SETUP.md).
+#
+# Triggers:
+#   * GitHub's built-in schedule below is the primary trigger. For a once-a-day
+#     rebalance, GitHub's few-minutes jitter is irrelevant. Two firings cover EDT and
+#     EST; the bot itself refuses to trade outside its window, so the "wrong" one is
+#     a harmless no-op, and a second run on the same day only reconciles (idempotent).
+#   * workflow_dispatch: the Actions "Run workflow" button, or an external cron
+#     (cron-job.org) if you prefer -- point it at 15:30-15:45 ET on weekdays.
 on:
-  # Triggered EXTERNALLY via the GitHub API (workflow_dispatch) from a cloud cron
-  # service (e.g. cron-job.org) every 15 min, Mon-Fri, 13:00-21:00 UTC. GitHub's
-  # built-in `schedule:` cron is intentionally NOT used (unreliable timing for a
-  # trading loop). The Actions-tab "Run workflow" button also works.
-  workflow_dispatch: {}          # manual + external-cron trigger
+  schedule:
+    - cron: '35 19 * * 1-5'   # 15:35 ET during daylight time (EDT = UTC-4)
+    - cron: '35 20 * * 1-5'   # 15:35 ET during standard time (EST = UTC-5)
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Ignore the market-hours / trade-window guard (orders queue for the open if closed)'
+        type: boolean
+        default: false
+      no_trade:
+        description: 'Compute targets and report only; submit no orders'
+        type: boolean
+        default: false
 
 concurrency:
-  group: schwab-trader-bot
+  group: trader
   cancel-in-progress: false
 
 permissions:
-  contents: write   # allow committing holdings + paper-book snapshots back to the repo
+  contents: write   # commit state/holdings/report snapshots back to the repo
 
 jobs:
   trade:
     runs-on: ubuntu-latest
-    # Bound a hung run: the executor finishes in seconds, so 6 min is generous. A frozen
-    # network call now dies fast instead of sitting ~15 min and jamming the queued runs.
-    timeout-minutes: 6
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      # No pip install: everything is stdlib on purpose (nothing to break in CI).
 
-      - name: Install dependencies
-        run: pip install schwab-trader websockets
-
-      - name: Run the bot
+      - name: Run the executor
         env:
-          SCHWAB_APP_KEY: ${{ secrets.SCHWAB_APP_KEY }}
-          SCHWAB_APP_SECRET: ${{ secrets.SCHWAB_APP_SECRET }}
-          SCHWAB_REFRESH_TOKEN: ${{ secrets.SCHWAB_REFRESH_TOKEN }}
-          # Free fallback quote source: lets the DRY_RUN paper book keep marking even if
-          # the Schwab token is expired/unavailable (no Schwab dependency in paper mode).
-          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
+          MAX_CAPITAL: ${{ vars.MAX_CAPITAL }}
+          MAX_DRAWDOWN_HALT: ${{ vars.MAX_DRAWDOWN_HALT }}
+          TRADE_WINDOW_MIN: ${{ vars.TRADE_WINDOW_MIN }}
+          FORCE_RUN: ${{ github.event.inputs.force_run || 'false' }}
+          NO_TRADE: ${{ github.event.inputs.no_trade || 'false' }}
         run: python bot.py
 
-      # Refresh the edge scorecard from the closed-trades the bot just updated.
-      # Pure stdlib, no account/API access, zero trading side effects; never fail the
-      # run over the analyzer (|| true) — it's reporting, not trading.
-      - name: Analyze track record
+      - name: Refresh track record
         if: always()
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python analyze.py || true
 
-      - name: Commit data snapshots
+      - name: Commit snapshots
         if: always()
         run: |
-          git config user.name "schwab-bot"
+          git config user.name "trader-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md reports/track_record.md signals/performance.json 2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "No data changes to commit."
-            exit 0
-          fi
-          git commit -m "bot: update holdings + paper-book snapshot [skip ci]"
-          # Other pushers (the offset brain routines + concurrent runs) move main
-          # under us, so a plain push gets rejected. Rebase our snapshot onto the
-          # latest main and retry. These are regenerated each run, so "last writer
-          # wins" is fine; never fail the trading run over a snapshot-persist race.
+          FILES="signals/state.json signals/targets.json signals/holdings.json signals/performance.json reports/today.md reports/track_record.md reports/paper_ledger.md"
+          git add $FILES 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No data changes."; exit 0; fi
+          git commit -m "bot: daily snapshot [skip ci]"
           for i in 1 2 3 4 5; do
-            if git push; then
-              echo "pushed."
-              exit 0
-            fi
-            echo "push rejected (main moved); syncing to latest and retrying ($i)..."
+            if git push; then echo "pushed."; exit 0; fi
+            echo "push rejected (main moved); rebasing snapshot and retrying ($i)..."
             git fetch origin main
-            # --mixed (NOT --soft): reset index to fresh main, then re-stage ONLY our
-            # snapshot files — so we never commit a stale full tree that reverts the
-            # brain's orders/picks changed under us. (Mirror of the brain.yml fix.)
             git reset --mixed origin/main
-            git add signals/holdings.json signals/paper_account.json reports/paper_ledger.md reports/track_record.md signals/performance.json 2>/dev/null || true
+            git add $FILES 2>/dev/null || true
             git diff --cached --quiet && { echo "snapshot already current."; exit 0; }
-            git commit -m "bot: update holdings + paper-book snapshot [skip ci]"
+            git commit -m "bot: daily snapshot [skip ci]"
             sleep $((i * 3))
           done
-          echo "Could not push data snapshots after retries — non-fatal (next run will refresh)."
+          echo "Could not push snapshots after retries -- non-fatal (next run refreshes)."
           exit 0

@@ -15,3 +15,6 @@ env/
 .DS_Store
 .idea/
 .vscode/
+
+# Local market-data cache (regenerated on demand)
+data_cache/

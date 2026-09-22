@@ -1,246 +1,176 @@
-"""Track-record analyzer — turns the paper book's closed trades into an EDGE read.
+#!/usr/bin/env python3
+"""Track record from the broker's own books (not a home-grown ledger).
 
-WHY: the system records every closed trade (paper_account.json) but never measured
-whether the strategy actually makes money. Eyeballing a ledger can't answer that.
-This reads the closed trades and computes the numbers that matter — win rate,
-average win vs average loss, EXPECTANCY (the single number that says "edge or no
-edge"), profit factor, and max drawdown — then breaks them down by SIGNAL type,
-macro TAPE, catalyst FRESHNESS, exit REASON, and instrument KIND, so you learn
-WHICH setups pay and which bleed. It also estimates slippage (fill vs the brain's
-intended price, and fill vs last) so you can see if spread cost is eating the edge.
-
-Reads:  signals/paper_account.json  (the `closed_trades` array bot.py maintains)
-Writes: reports/track_record.md     (human scorecard)
-        signals/performance.json    (compact machine read — for a future brain digest)
-
-Pure stdlib, ZERO trading side effects, no API calls, no tokens. Trades that
-predate the attribution instrumentation simply fall into an "untagged" bucket.
-
-Run: `python analyze.py`
+Reads the Alpaca portfolio-history equity curve and every FILL, pairs fills into
+round-trip trades (FIFO per symbol), and writes:
+  reports/track_record.md   equity stats + trade stats + the strategy backtest for reference
+  reports/paper_ledger.md   recent equity curve + open positions
+  signals/performance.json  machine-readable summary
+Never fails the trading run: any error is printed and exit code stays 0.
 """
 from __future__ import annotations
 
 import json
+import math
 import os
+import sys
 from datetime import datetime, timezone
+from typing import Dict, List
 
-PAPER_ACCOUNT_FILE = "signals/paper_account.json"
-REPORT_FILE        = "reports/track_record.md"
-PERF_JSON_FILE     = "signals/performance.json"
-MIN_SAMPLE         = 20   # below this, results are directional only — not conclusive
+from alpaca import Alpaca
 
-
-def _load_closed() -> tuple[list[dict], dict]:
-    try:
-        with open(PAPER_ACCOUNT_FILE, encoding="utf-8") as fh:
-            book = json.load(fh)
-    except Exception:  # noqa: BLE001
-        return [], {}
-    return (book.get("closed_trades") or []), book
+PERIOD = os.environ.get("TRACK_PERIOD", "1A")
 
 
-def _stats(trades: list[dict]) -> dict:
-    """Core metrics for a set of trades (P/L in $ is the real money; pnl_pct is the
-    per-trade % for reference). Expectancy = average $ P/L per trade — the headline."""
-    n = len(trades)
-    if not n:
-        return {"n": 0, "win_rate": 0.0, "total": 0.0, "expectancy": 0.0,
-                "avg_win": 0.0, "avg_loss": 0.0, "payoff": 0.0, "profit_factor": 0.0,
-                "avg_pct": 0.0}
-    pnls = [t.get("pnl", 0.0) for t in trades]
-    wins = [p for p in pnls if p > 0]
-    losses = [p for p in pnls if p < 0]
-    gross_win = sum(wins)
-    gross_loss = -sum(losses)  # positive magnitude
-    avg_win = gross_win / len(wins) if wins else 0.0
-    avg_loss = (sum(losses) / len(losses)) if losses else 0.0   # negative
-    pcts = [t.get("pnl_pct", 0.0) for t in trades if t.get("pnl_pct") is not None]
+def env_bool(name: str, default: bool) -> bool:
+    v = os.environ.get(name, "").strip().lower()
+    return default if not v else v in ("1", "true", "yes", "on")
+
+
+def equity_stats(ts: List[int], eq: List[float]) -> dict:
+    pts = [(t, e) for t, e in zip(ts, eq) if e is not None and e > 0]
+    if len(pts) < 2:
+        return {}
+    eqs = [e for _, e in pts]
+    rets = [eqs[i] / eqs[i - 1] - 1 for i in range(1, len(eqs))]
+    m = sum(rets) / len(rets)
+    sd = math.sqrt(sum((r - m) ** 2 for r in rets) / max(1, len(rets) - 1))
+    peak = eqs[0]
+    mdd = 0.0
+    for e in eqs:
+        peak = max(peak, e)
+        mdd = min(mdd, e / peak - 1)
+    days = max(1, (pts[-1][0] - pts[0][0]) / 86400)
+    total = eqs[-1] / eqs[0] - 1
+    cagr = (eqs[-1] / eqs[0]) ** (365.0 / days) - 1 if days >= 30 else None
     return {
-        "n": n,
-        "win_rate": 100.0 * len(wins) / n,
-        "total": sum(pnls),
-        "expectancy": sum(pnls) / n,                       # avg $ per trade
-        "avg_win": avg_win,
-        "avg_loss": avg_loss,                              # negative number
-        "payoff": (avg_win / abs(avg_loss)) if avg_loss else 0.0,
-        "profit_factor": (gross_win / gross_loss) if gross_loss else float("inf") if gross_win else 0.0,
-        "avg_pct": (sum(pcts) / len(pcts)) if pcts else 0.0,
+        "start": datetime.fromtimestamp(pts[0][0], tz=timezone.utc).strftime("%Y-%m-%d"),
+        "end": datetime.fromtimestamp(pts[-1][0], tz=timezone.utc).strftime("%Y-%m-%d"),
+        "start_equity": eqs[0], "end_equity": eqs[-1], "total_return": total, "cagr": cagr,
+        "sharpe": (m / sd * math.sqrt(252)) if sd > 0 else 0.0,
+        "max_drawdown": mdd, "days": int(days), "n_points": len(eqs),
+        "curve": [(datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%d"), e) for t, e in pts],
     }
 
 
-def _max_drawdown(trades: list[dict]) -> float:
-    """Worst peak-to-trough drop of the REALIZED cumulative P/L curve (closed trades
-    in time order). Realized-only — it does not include open mark-to-market."""
-    ordered = sorted(trades, key=lambda t: str(t.get("closed_utc") or ""))
-    cum = peak = 0.0
-    max_dd = 0.0
-    for t in ordered:
-        cum += t.get("pnl", 0.0)
-        peak = max(peak, cum)
-        max_dd = min(max_dd, cum - peak)
-    return max_dd   # <= 0
-
-
-def _freshness_bucket(t: dict) -> str:
-    age = t.get("catalyst_age_h")
-    if age is None:
-        return "no-catalyst/untagged"
-    if age < 2:
-        return "<2h (fresh)"
-    if age < 12:
-        return "2-12h"
-    if age < 48:
-        return "12-48h"
-    return ">48h (stale)"
-
-
-def _exit_bucket(t: dict) -> str:
-    why = str(t.get("reason", "")).lower()
-    if "target" in why:
-        return "hit target"
-    if "stop" in why:
-        return "hit stop"
-    if "brain" in why:
-        return "brain SELL"
-    return why or "other"
-
-
-def _group(trades: list[dict], key_fn) -> dict[str, dict]:
-    """Group trades by key_fn (which may return a LIST to put a trade in several
-    buckets, e.g. a trade tagged both 'mover' and 'news_smallcap')."""
-    buckets: dict[str, list] = {}
-    for t in trades:
-        keys = key_fn(t)
-        if not isinstance(keys, (list, tuple, set)):
-            keys = [keys]
-        for k in (keys or ["untagged"]):
-            buckets.setdefault(str(k), []).append(t)
-    return {k: _stats(v) for k, v in buckets.items()}
-
-
-def _slippage(trades: list[dict]) -> dict:
-    """Average entry slippage. vs_ref = fill above the brain's intended price;
-    vs_last = fill above the last trade (a spread-cost proxy). Stocks only (option
-    premiums distort the %). Only trades carrying the fields count."""
-    ref_sl, last_sl = [], []
-    for t in trades:
-        if t.get("kind", "stock") != "stock":
+def round_trips(fills: List[dict]) -> List[dict]:
+    """FIFO-pair buys and sells per symbol into closed trades."""
+    lots: Dict[str, List[List[float]]] = {}  # sym -> [[qty, price, ts]]
+    trades: List[dict] = []
+    for f in sorted(fills, key=lambda x: x.get("transaction_time", "")):
+        sym = f.get("symbol")
+        qty = float(f.get("qty", 0) or 0)
+        px = float(f.get("price", 0) or 0)
+        side = f.get("side")
+        ts = f.get("transaction_time", "")
+        if not sym or qty <= 0 or px <= 0:
             continue
-        entry = t.get("entry")
-        ref = t.get("ref_price")
-        last = t.get("entry_last")
-        if entry and ref:
-            ref_sl.append((entry / ref - 1) * 100)
-        if entry and last:
-            last_sl.append((entry / last - 1) * 100)
+        if side == "buy":
+            lots.setdefault(sym, []).append([qty, px, ts])
+        elif side in ("sell", "sell_short"):
+            remaining = qty
+            while remaining > 1e-9 and lots.get(sym):
+                lot = lots[sym][0]
+                take = min(lot[0], remaining)
+                pnl = (px - lot[1]) * take
+                trades.append({"symbol": sym, "qty": take, "entry": lot[1], "exit": px,
+                               "pnl": round(pnl, 2), "pnl_pct": round((px / lot[1] - 1) * 100, 2),
+                               "opened": lot[2], "closed": ts})
+                lot[0] -= take
+                remaining -= take
+                if lot[0] <= 1e-9:
+                    lots[sym].pop(0)
+    return trades
+
+
+def trade_stats(trades: List[dict]) -> dict:
+    if not trades:
+        return {"n": 0}
+    wins = [t for t in trades if t["pnl"] > 0]
+    losses = [t for t in trades if t["pnl"] <= 0]
+    gp = sum(t["pnl"] for t in wins)
+    gl = -sum(t["pnl"] for t in losses)
     return {
-        "vs_ref_pct": (sum(ref_sl) / len(ref_sl)) if ref_sl else None,
-        "vs_ref_n": len(ref_sl),
-        "vs_last_pct": (sum(last_sl) / len(last_sl)) if last_sl else None,
-        "vs_last_n": len(last_sl),
+        "n": len(trades), "win_rate": len(wins) / len(trades),
+        "total_pnl": round(sum(t["pnl"] for t in trades), 2),
+        "expectancy": round(sum(t["pnl"] for t in trades) / len(trades), 2),
+        "avg_win": round(gp / len(wins), 2) if wins else 0.0,
+        "avg_loss": round(-gl / len(losses), 2) if losses else 0.0,
+        "profit_factor": round(gp / gl, 2) if gl > 0 else None,
     }
-
-
-def _fmt_group(title: str, groups: dict[str, dict]) -> list[str]:
-    if not groups:
-        return [f"### {title}", "", "_no data_", ""]
-    rows = ["### " + title, "",
-            "| Bucket | Trades | Win% | Total $ | Expectancy $ | Avg Win | Avg Loss | PF |",
-            "|--------|-------:|-----:|--------:|-------------:|--------:|---------:|---:|"]
-    for name, s in sorted(groups.items(), key=lambda kv: kv[1]["total"], reverse=True):
-        pf = "∞" if s["profit_factor"] == float("inf") else f"{s['profit_factor']:.2f}"
-        rows.append(f"| {name} | {s['n']} | {s['win_rate']:.0f}% | ${s['total']:+.2f} | "
-                    f"${s['expectancy']:+.2f} | ${s['avg_win']:+.2f} | ${s['avg_loss']:+.2f} | {pf} |")
-    rows.append("")
-    return rows
-
-
-def build_report(trades: list[dict], book: dict) -> tuple[str, dict]:
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    overall = _stats(trades)
-    dd = _max_drawdown(trades)
-    slip = _slippage(trades)
-    n = overall["n"]
-
-    verdict = "NO EDGE YET" if n == 0 else (
-        "POSITIVE EXPECTANCY ✅" if overall["expectancy"] > 0 else "NEGATIVE EXPECTANCY ❌")
-    pf = "∞" if overall["profit_factor"] == float("inf") else f"{overall['profit_factor']:.2f}"
-
-    lines = [
-        "# Track Record — Edge Analysis", "",
-        f"_Updated {now} · source: {PAPER_ACCOUNT_FILE} (paper / DRY_RUN)_", "",
-    ]
-    if n < MIN_SAMPLE:
-        lines += [f"> ⚠️ **SAMPLE TOO SMALL ({n} closed trades, need ≥{MIN_SAMPLE}).** "
-                  "Everything below is DIRECTIONAL ONLY — not statistically conclusive. "
-                  "Do not change strategy parameters or go live off this. Let it gather a "
-                  "clean sample first.", ""]
-    lines += [
-        "## Headline", "",
-        f"**Verdict: {verdict}**  ",
-        f"**Closed trades:** {n}   **Win rate:** {overall['win_rate']:.0f}%   "
-        f"**Total realized:** ${overall['total']:+.2f}  ",
-        f"**Expectancy (avg $/trade):** ${overall['expectancy']:+.2f}   "
-        f"**Avg %/trade:** {overall['avg_pct']:+.2f}%  ",
-        f"**Avg win:** ${overall['avg_win']:+.2f}   **Avg loss:** ${overall['avg_loss']:+.2f}   "
-        f"**Payoff ratio:** {overall['payoff']:.2f}   **Profit factor:** {pf}  ",
-        f"**Max drawdown (realized):** ${dd:+.2f}", "",
-    ]
-    # Slippage
-    lines += ["## Entry slippage (stocks)", ""]
-    if slip["vs_ref_pct"] is None and slip["vs_last_pct"] is None:
-        lines += ["_no attributed entries yet (pre-instrumentation trades)_", ""]
-    else:
-        if slip["vs_ref_pct"] is not None:
-            lines.append(f"- **Fill vs brain's intended price:** {slip['vs_ref_pct']:+.2f}% "
-                         f"(n={slip['vs_ref_n']}) — how much above the brain's limit we actually paid.")
-        if slip["vs_last_pct"] is not None:
-            lines.append(f"- **Fill vs last trade (spread proxy):** {slip['vs_last_pct']:+.2f}% "
-                         f"(n={slip['vs_last_n']}) — paid spread on entry. Doubles round-trip; "
-                         "compare to your ~5–10% targets.")
-        lines.append("")
-
-    # Breakdowns
-    lines += ["## Breakdowns", ""]
-    lines += _fmt_group("By signal", _group(trades, lambda t: t.get("signals") or ["untagged"]))
-    lines += _fmt_group("By macro tape at entry", _group(trades, lambda t: t.get("tape_tone") or "untagged"))
-    lines += _fmt_group("By catalyst freshness", _group(trades, _freshness_bucket))
-    lines += _fmt_group("By exit reason", _group(trades, _exit_bucket))
-    lines += _fmt_group("By kind", _group(trades, lambda t: t.get("kind", "stock")))
-
-    # Compact machine read for a future brain digest (Form 1 of the learning loop).
-    perf = {
-        "updated_utc": now,
-        "n": n,
-        "expectancy": round(overall["expectancy"], 4),
-        "win_rate": round(overall["win_rate"], 1),
-        "total_realized": round(overall["total"], 2),
-        "profit_factor": (None if overall["profit_factor"] == float("inf")
-                          else round(overall["profit_factor"], 3)),
-        "max_drawdown": round(dd, 2),
-        "by_signal": {k: {"n": v["n"], "win_rate": round(v["win_rate"], 1),
-                          "expectancy": round(v["expectancy"], 4)}
-                      for k, v in _group(trades, lambda t: t.get("signals") or ["untagged"]).items()},
-        "sample_sufficient": n >= MIN_SAMPLE,
-    }
-    return "\n".join(lines) + "\n", perf
 
 
 def main() -> int:
-    trades, book = _load_closed()
-    report, perf = build_report(trades, book)
-    for path, content in ((REPORT_FILE, report),
-                          (PERF_JSON_FILE, json.dumps(perf, indent=2) + "\n")):
-        try:
-            os.makedirs(os.path.dirname(path), exist_ok=True)
-            with open(path, "w", encoding="utf-8") as fh:
-                fh.write(content)
-        except Exception as exc:  # noqa: BLE001
-            print(f"(warn) could not write {path}: {exc}")
-    print(f"Analyzed {perf['n']} closed trades → expectancy ${perf['expectancy']:+.4f}/trade, "
-          f"win rate {perf['win_rate']:.0f}%. Wrote {REPORT_FILE} + {PERF_JSON_FILE}.")
+    key = os.environ.get("ALPACA_API_KEY", "").strip()
+    secret = os.environ.get("ALPACA_SECRET_KEY", "").strip()
+    if not key or not secret:
+        print("(analyze) no Alpaca credentials; skipping")
+        return 0
+    api = Alpaca(key, secret, paper=env_bool("DRY_RUN", True))
+    mode = "paper" if api.paper else "LIVE"
+
+    hist = api.portfolio_history(period=PERIOD, timeframe="1D")
+    es = equity_stats(hist.get("timestamp") or [], hist.get("equity") or [])
+    fills = api.fills(after="2000-01-01")
+    trades = round_trips(fills)
+    ts = trade_stats(trades)
+    positions = api.positions()
+    acct = api.account()
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    os.makedirs("reports", exist_ok=True)
+    os.makedirs("signals", exist_ok=True)
+    L = [f"# Track Record ({mode})", "", f"_Updated {now} · source: Alpaca account history_", ""]
+    if es:
+        cagr_txt = f"{es['cagr']:+.1%}" if es["cagr"] is not None else "n/a (<30d)"
+        L += ["## Equity", "",
+              f"| Since | Start | Now | Total | CAGR | Sharpe | Max DD |", "|---|---:|---:|---:|---:|---:|---:|",
+              f"| {es['start']} | ${es['start_equity']:,.2f} | ${es['end_equity']:,.2f} | {es['total_return']:+.2%} | "
+              f"{cagr_txt} | {es['sharpe']:.2f} | {es['max_drawdown']:.1%} |", ""]
+    else:
+        L += ["_No equity history yet._", ""]
+    L += ["## Closed trades (FIFO round-trips from broker fills)", ""]
+    if ts.get("n"):
+        L += [f"**{ts['n']} trades · win rate {ts['win_rate']:.0%} · total {ts['total_pnl']:+,.2f} · expectancy {ts['expectancy']:+,.2f}/trade · "
+              f"avg win {ts['avg_win']:+,.2f} · avg loss {ts['avg_loss']:+,.2f} · profit factor {ts['profit_factor']}**", "",
+              "| Symbol | Qty | Entry | Exit | P&L | % | Opened | Closed |", "|---|---:|---:|---:|---:|---:|---|---|"]
+        for t in trades[-40:]:
+            L.append(f"| {t['symbol']} | {t['qty']:g} | {t['entry']:.2f} | {t['exit']:.2f} | {t['pnl']:+.2f} | {t['pnl_pct']:+.2f}% | {t['opened'][:10]} | {t['closed'][:10]} |")
+        L.append("")
+        if ts["n"] < 30:
+            L.append("> Small sample: with fewer than ~30 closed trades these numbers are directional only.")
+    else:
+        L += ["_No closed trades yet._"]
+    L += ["", "## Reference: strategy backtest", "", "See `reports/backtest.md` (18 years of daily data, same code path as the live bot)."]
+    with open("reports/track_record.md", "w") as f:
+        f.write("\n".join(L) + "\n")
+
+    P = [f"# Ledger ({mode})", "", f"_Updated {now}_", "",
+         f"**Equity ${float(acct.get('equity', 0)):,.2f} · cash ${float(acct.get('cash', 0)):,.2f}**", "",
+         "## Open positions", "", "| Symbol | Qty | Avg entry | Last | Value | Unrealized |", "|---|---:|---:|---:|---:|---:|"]
+    for p in sorted(positions, key=lambda x: -float(x.get("market_value", 0) or 0)):
+        P.append(f"| {p['symbol']} | {float(p['qty']):g} | {float(p['avg_entry_price']):.2f} | {float(p.get('current_price') or 0):.2f} | "
+                 f"${float(p.get('market_value') or 0):,.2f} | {float(p.get('unrealized_plpc') or 0):+.2%} |")
+    if not positions:
+        P.append("| (none) | | | | | |")
+    if es:
+        P += ["", "## Equity curve (last 30 points)", "", "| Date | Equity |", "|---|---:|"]
+        for d, e in es["curve"][-30:]:
+            P.append(f"| {d} | ${e:,.2f} |")
+    with open("reports/paper_ledger.md", "w") as f:
+        f.write("\n".join(P) + "\n")
+
+    perf = {"updated_utc": now, "mode": mode, "equity": {k: v for k, v in es.items() if k != "curve"}, "trades": ts}
+    with open("signals/performance.json", "w") as f:
+        json.dump(perf, f, indent=2, sort_keys=True)
+        f.write("\n")
+    print(f"(analyze) {mode}: equity ${float(acct.get('equity', 0)):,.2f}, {ts.get('n', 0)} closed trades -> reports/track_record.md")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        sys.exit(main())
+    except Exception as exc:  # noqa: BLE001
+        print(f"(analyze) failed: {exc}")
+        sys.exit(0)
