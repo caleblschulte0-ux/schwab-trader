@@ -32,7 +32,7 @@ dividends reinvested, cash earns the T-bill ETF's return.
 | CAGR | +9.4% | +11.4% |
 | Sharpe | **0.82** | 0.65 |
 | Max drawdown | **-17%** | -52% |
-| Worst year | -3% (2018) | -36% (2008) |
+| Worst year | -8% (2022) | -36% (2008) |
 
 - **Walk-forward**: parameters selected on 2008–2016 alone, then run untouched on 2017–2026:
   Sharpe 0.97 out-of-sample vs 0.68 in-sample. Not overfit.
