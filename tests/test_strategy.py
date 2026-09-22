@@ -125,6 +125,23 @@ class TargetTests(unittest.TestCase):
         dec2 = compute_targets(hist, State(), p, today="d1")
         self.assertIsNone(dec2.regime.get("core"))
 
+    def test_leveraged_core_uses_underlying_trend(self):
+        p = Params(core_leveraged=True, core_weight=0.5, core_symbol="auto", core_candidates=("SPY", "QQQ"))
+        hist = self._hist()
+        hist["QQQ"] = [100 * math.exp(0.002 * i) for i in range(400)]
+        hist["SPY"] = [100 * math.exp(-0.001 * i) for i in range(400)]
+        hist["QLD"] = [100 * math.exp(0.004 * i) for i in range(400)]
+        hist["SSO"] = [100 * math.exp(-0.002 * i) for i in range(400)]
+        dec = compute_targets(hist, State(), p, today="d1")
+        self.assertEqual(dec.regime["core"], "QLD")
+        self.assertAlmostEqual(dec.weights["QLD"], 0.5, places=6)   # not clipped by the 35% cap
+        self.assertLessEqual(sum(dec.weights.values()), 1.0 + 1e-9)
+        # underlying breaks trend -> leveraged fund is dropped even if its own chart looks fine
+        hist["QQQ"] = [100 * math.exp(-0.001 * i) for i in range(400)]
+        dec2 = compute_targets(hist, State(), p, today="d1")
+        self.assertNotIn("QLD", dec2.weights)
+        self.assertIsNone(dec2.regime["core"])
+
     def test_bear_market_goes_to_cash_proxy(self):
         # everything trending down -> nothing eligible -> 100% cash proxy
         hist = {s: synth(7, 400, -0.002, 0.01) for s in UNIVERSE}

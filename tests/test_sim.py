@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import bot
 from broker_sim import SimBroker
-from strategy import DEFENSIVE, UNIVERSE
+from strategy import DEFENSIVE, LEVERAGED, UNIVERSE
 
 
 def synth(seed, n=400, drift=0.0005, vol=0.01, start=100.0):
@@ -41,7 +41,7 @@ def fake_history(seed=5, n=400):
     rnd = random.Random(seed)
     dates = trading_dates(n)
     out = {}
-    for s in sorted(set(UNIVERSE) | set(DEFENSIVE)):
+    for s in sorted(set(UNIVERSE) | set(DEFENSIVE) | set(LEVERAGED.values())):
         closes = synth(rnd.randint(0, 9999), n, rnd.uniform(-0.0005, 0.0015), 0.0002 if s == "BIL" else 0.012)
         out[s] = list(zip(dates, closes))
     return out
@@ -162,6 +162,24 @@ class ExecutorOnSimTests(unittest.TestCase):
         with open("signals/sim_account.json") as f:
             book = json.load(f)
         self.assertGreater(book["cash"], 480.0)              # only $500 deployed
+
+    def test_aggressive_preset_holds_2x_core_and_widens_halt(self):
+        import config as cfgmod
+        with open("config.json") as f:
+            cfg = json.load(f)
+        cfg["preset"] = "aggressive"
+        with open("config.json", "w") as f:
+            json.dump(cfg, f)
+        self.assertEqual(cfgmod.executor_settings(cfg)["max_drawdown_halt"], 0.45)
+        with mock.patch.dict(os.environ, {"MAX_DRAWDOWN_HALT": "0.4"}):
+            self.assertEqual(cfgmod.executor_settings(cfg)["max_drawdown_halt"], 0.4)   # env wins
+        self.assertEqual(bot.main(), 0)
+        with open("signals/targets.json") as f:
+            t = json.load(f)
+        core = t["regime"]["core"]
+        if core is not None:
+            self.assertIn(core, ("SSO", "QLD"))
+            self.assertAlmostEqual(t["weights"][core], 0.5, places=4)
 
     def test_unknown_config_key_is_fatal(self):
         with open("config.json") as f:

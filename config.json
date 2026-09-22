@@ -1,5 +1,5 @@
 {
-  "_comment": "Knobs live here. 'preset' picks a named bundle; 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits (env vars of the same name in UPPER_CASE win). Re-run `python backtest.py` after changing anything.",
+  "_comment": "Knobs live here. 'preset' picks a named bundle (balanced | aggressive | growth | us_only | rotation_only | conservative); 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits. Precedence for executor limits: env var (UPPER_CASE) > this file's executor block > the preset's executor block > defaults. Re-run `python backtest.py` after changing anything.",
   "preset": "balanced",
   "presets": {
     "balanced": {
@@ -26,6 +26,17 @@
     "conservative": {
       "core_symbol": "SPY",
       "vol_target": 0.12
+    },
+    "aggressive": {
+      "core_leveraged": true,
+      "core_weight": 0.5,
+      "core_candidates": [
+        "SPY",
+        "QQQ"
+      ],
+      "executor": {
+        "max_drawdown_halt": 0.45
+      }
     }
   },
   "strategy": {},

@@ -49,6 +49,29 @@ dividends reinvested, cash earns the T-bill ETF's return.
   through bear markets with a third of the drawdown, not to beat the index in a bull run.
   More upside with more concentration: the `growth` preset (+10.1% CAGR, Sharpe 0.84).
 
+## Want more return? The `aggressive` preset
+Set `"preset": "aggressive"` in `config.json`. Half the book goes into a **2x daily
+index fund** (SSO for the S&P 500, QLD for the Nasdaq-100, whichever index has stronger
+momentum), held **only while that index is above its 200-day average**; the other half
+runs the same momentum rotation. Still long-only with no margin: you cannot lose more
+than you put in.
+
+| 2008 → 2026 | balanced | **aggressive** | SPY |
+|---|---:|---:|---:|
+| CAGR | +9.9% | **+15.7%** | +11.4% |
+| $1,000 became | $5,900 | **$15,200** | $7,500 |
+| Sharpe | 0.81 | 0.81 | 0.65 |
+| Max drawdown | -18% | **-31%** | -52% |
+| Worst year | -8% | -15% | -36% |
+| Out-of-sample 2017+ CAGR | +12.6% | **+20.1%** | +15.4% |
+
+The Sharpe is identical: this is not a smarter strategy, it is the same one with the
+risk dial turned up. Expect a 25–30% drawdown in a typical 5-year stretch (bootstrap
+median -27%; 10% chance of -40%). The preset raises the kill switch to 45% for that
+reason; at 30% it would fire in 37% of normal 5-year stretches. Numbers use the real
+SSO/QLD price histories since 2008, so the funds' fees and daily-reset decay are included.
+A volatility cap on top was tested and rejected: it cut returns to below SPY.
+
 ## Hard guardrails (in `bot.py`)
 - Weights sum to ≤ 100%; buys capped to settled cash; sells before buys.
 - Only universe symbols are touched. Anything else in the account is ignored.

@@ -22,7 +22,7 @@ from typing import Dict, List, Tuple
 
 import data as datamod
 from backtest import SLIPPAGE_BPS, run
-from strategy import DEFENSIVE, MR_UNIVERSE, UNIVERSE, Params
+from strategy import DEFENSIVE, LEVERAGED, MR_UNIVERSE, UNIVERSE, Params
 
 IS_START, IS_END = "2008-01-01", "2016-12-31"
 OOS_START = "2017-01-01"
@@ -52,7 +52,7 @@ def stats_from_rets(rets: List[float]) -> Tuple[float, float, float]:
 
 
 def main() -> int:
-    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | set(DEFENSIVE)), max_age_hours=None)
+    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | set(DEFENSIVE) | set(LEVERAGED.values())), max_age_hours=None)
     base = Params()
     L: List[str] = ["# Validation report", "",
                     f"_Same engine as `backtest.py`: close fills, {SLIPPAGE_BPS:.0f} bps slippage/side, $0 commissions, dividends reinvested._", ""]
@@ -174,6 +174,8 @@ def main() -> int:
                 ("no core sleeve (100% rotation)", replace(base, core_weight=0.0)),
                 ("fixed SPY core instead of adaptive", replace(base, core_symbol="SPY")),
                 ("'growth' preset: fixed QQQ core", replace(base, core_symbol="QQQ")),
+                ("'aggressive' preset: 50% in 2x SPY/QQQ (SSO/QLD), trend-timed", replace(base, core_leveraged=True, core_weight=0.5, core_candidates=("SPY", "QQQ"))),
+                ("aggressive + 15% vol cap (rejected)", replace(base, core_leveraged=True, core_weight=0.5, core_candidates=("SPY", "QQQ"), vol_target=0.15)),
                 ("single rebalance tranche (no stagger)", replace(base, mom_tranches=1)),
                 ("no cluster cap", replace(base, cluster_cap=1.0)),
                 ("top 5 / weekly (previous defaults)", replace(base, mom_top_n=5, mom_rebalance_days=5)),

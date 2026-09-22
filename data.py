@@ -113,8 +113,8 @@ def load_history(symbols: List[str], refresh: bool = False, max_age_hours: Optio
 
 if __name__ == "__main__":
     import sys
-    from strategy import DEFENSIVE, UNIVERSE
-    syms = sorted(set(UNIVERSE) | set(DEFENSIVE))
+    from strategy import DEFENSIVE, LEVERAGED, UNIVERSE
+    syms = sorted(set(UNIVERSE) | set(DEFENSIVE) | set(LEVERAGED.values()))
     if "--seed" in sys.argv:
         load_history(syms, refresh=True, max_age_hours=None)
         print(f"(data) wrote seed for {write_seed(syms)} symbols -> {SEED_DIR}/")

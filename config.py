@@ -16,6 +16,10 @@ _EXEC_DEFAULTS: Dict[str, Any] = {
 }
 
 
+# If config.json's executor block merely restates the default for these, a preset's own value wins.
+_PRESET_OVERRIDABLE = {"max_drawdown_halt"}
+
+
 def load_config(path: str = CONFIG_FILE) -> dict:
     try:
         with open(path) as f:
@@ -30,21 +34,26 @@ def build_params(cfg: dict) -> Tuple[Params, str]:
     fields = {f.name for f in dataclasses.fields(Params)}
     preset = str(cfg.get("preset") or "balanced")
     over: Dict[str, Any] = {}
-    over.update((cfg.get("presets") or {}).get(preset) or {})
+    over.update({k: v for k, v in ((cfg.get("presets") or {}).get(preset) or {}).items() if k != "executor"})
     over.update(cfg.get("strategy") or {})
     bad = set(over) - fields
     if bad:
         raise ValueError(f"config.json: unknown strategy keys {sorted(bad)}")
-    for k in ("mom_lookbacks", "mom_universe"):
+    for k in ("mom_lookbacks", "mom_universe", "core_candidates"):
         if k in over and isinstance(over[k], list):
             over[k] = tuple(over[k])
     return Params(**over), preset
 
 
 def executor_settings(cfg: dict) -> Dict[str, Any]:
+    """defaults < preset's executor block < config executor block (non-null, non-default) < env."""
     out = dict(_EXEC_DEFAULTS)
-    for k, v in (cfg.get("executor") or {}).items():
+    preset = str(cfg.get("preset") or "balanced")
+    for k, v in (((cfg.get("presets") or {}).get(preset) or {}).get("executor") or {}).items():
         if k in out:
+            out[k] = v
+    for k, v in (cfg.get("executor") or {}).items():
+        if k in out and v is not None and not (k in _PRESET_OVERRIDABLE and v == _EXEC_DEFAULTS[k]):
             out[k] = v
     for k in out:
         env = os.environ.get(k.upper(), "").strip()

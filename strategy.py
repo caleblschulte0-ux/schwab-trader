@@ -48,6 +48,10 @@ MR_UNIVERSE: List[str] = [
     "XLB", "XLRE", "XLC", "SMH", "XBI", "VNQ", "EFA", "EEM", "VGK", "EWJ", "FXI",
 ]
 
+# Leveraged (2x daily) versions of core candidates. Held ONLY by the core sleeve, ONLY while
+# the UNDERLYING index is above its 200-day SMA (the trend filter reads the underlying).
+LEVERAGED: Dict[str, str] = {"SPY": "SSO", "QQQ": "QLD"}
+
 # Economic clusters for the per-cluster cap.
 CLUSTERS: Dict[str, str] = {
     "SPY": "us_equity", "QQQ": "us_equity", "IWM": "us_equity", "DIA": "us_equity", "MDY": "us_equity",
@@ -59,6 +63,7 @@ CLUSTERS: Dict[str, str] = {
     "TLT": "treasuries", "IEF": "treasuries", "SHY": "treasuries", "BIL": "treasuries",
     "LQD": "credit", "HYG": "credit",
     "GLD": "metals", "SLV": "metals", "DBC": "energy", "USO": "energy", "XLE": "energy", "UUP": "fx",
+    "SSO": "core_lev", "QLD": "core_lev",
 }
 
 
@@ -81,6 +86,7 @@ class Params:
     core_weight: float = 0.30                        # 0 = off. 'growth' preset uses QQQ
     core_symbol: str = "auto"                        # "auto": strongest of core_candidates by momentum, or a ticker
     core_candidates: Sequence[str] = ("SPY", "QQQ", "EFA")
+    core_leveraged: bool = False                     # hold the 2x ETF (LEVERAGED map) instead
     # Regime / defensive
     breadth_min: float = 0.0                         # 0 = off. e.g. 0.4 -> fully defensive when <40% of
                                                      # the risk universe is above its 200-day SMA
@@ -260,22 +266,28 @@ class Decision:
     regime: Dict[str, object] = field(default_factory=dict)
 
 
-def _apply_caps(weights: Dict[str, float], p: Params) -> float:
-    """Per-symbol and per-cluster caps. Returns the freed weight (to send to defensive)."""
+def _apply_caps(weights: Dict[str, float], p: Params, exempt: Optional[set] = None) -> float:
+    """Per-symbol and per-cluster caps. Returns the freed weight (to send to defensive).
+    `exempt`: the core sleeve's holding (sized deliberately by core_weight)."""
     freed = 0.0
+    exempt = exempt or set()
     for s in list(weights):
-        if weights[s] > p.max_position_weight:
+        if s in exempt:
+            continue
+        if weights[s] > max(p.max_position_weight, 0.0):
             freed += weights[s] - p.max_position_weight
             weights[s] = p.max_position_weight
     if p.cluster_cap < 1.0:
         totals: Dict[str, float] = {}
         for s, w in weights.items():
+            if s in exempt:
+                continue
             totals[CLUSTERS.get(s, s)] = totals.get(CLUSTERS.get(s, s), 0.0) + w
         for c, tot in totals.items():
             if tot > p.cluster_cap + 1e-12:
                 scale = p.cluster_cap / tot
                 for s in weights:
-                    if CLUSTERS.get(s, s) == c:
+                    if CLUSTERS.get(s, s) == c and s not in exempt:
                         freed += weights[s] * (1 - scale)
                         weights[s] *= scale
     return freed
@@ -421,8 +433,12 @@ def compute_targets(
         elif p.core_symbol in sig and sig[p.core_symbol].uptrend:
             core_pick = p.core_symbol
         if core_pick:
-            weights[core_pick] = weights.get(core_pick, 0.0) + p.core_weight
+            hold = LEVERAGED.get(core_pick, core_pick) if p.core_leveraged else core_pick
+            if hold not in sig:          # no data for the 2x fund -> fall back to the index
+                hold = core_pick
+            weights[hold] = weights.get(hold, 0.0) + p.core_weight
             core_used = p.core_weight
+            core_pick = hold
     regime["core"] = core_pick
     # ------------------------------------------------ momentum weights
     mr_used = slot * len(st.mr_positions)
@@ -438,7 +454,7 @@ def compute_targets(
             weights[s] = weights.get(s, 0.0) + sleeve_cap * v / tot
 
     # ------------------------------------------------ caps, vol targeting, defensive fill
-    freed = _apply_caps(weights, p)
+    freed = _apply_caps(weights, p, exempt={core_pick} if core_pick and weights.get(core_pick, 0) >= p.core_weight - 1e-9 and core_pick not in st.mom_holdings else None)
     total = sum(weights.values())
     if total > 1.0:
         weights = {s: w / total for s, w in weights.items()}

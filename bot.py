@@ -44,7 +44,7 @@ import config as cfgmod
 import data as datamod
 from alpaca import Alpaca, AlpacaError
 from broker_sim import SimBroker
-from strategy import UNIVERSE, Params, State, compute_targets
+from strategy import LEVERAGED, UNIVERSE, Params, State, compute_targets
 
 SIGNALS_DIR = "signals"
 REPORTS_DIR = "reports"
@@ -366,7 +366,7 @@ def main() -> int:
     minutes_to_close = (next_close - now).total_seconds() / 60.0
     is_open = bool(clock.get("is_open"))
 
-    managed = set(UNIVERSE) | ({params.cash_proxy} if params.cash_proxy else set())
+    managed = set(UNIVERSE) | set(LEVERAGED.values()) | ({params.cash_proxy} if params.cash_proxy else set())
     st_raw = load_json(STATE_FILE, {})
     st_raw["last_seen_date"] = today_et
     st_raw["last_mode"] = mode

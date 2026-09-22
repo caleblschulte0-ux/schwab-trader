@@ -12,7 +12,7 @@ from typing import Dict, Iterable, List, Optional, Tuple
 from zoneinfo import ZoneInfo
 
 import data as datamod
-from strategy import DEFENSIVE, UNIVERSE
+from strategy import DEFENSIVE, LEVERAGED, UNIVERSE
 
 ET = ZoneInfo("America/New_York")
 SIM_FILE = os.path.join("signals", "sim_account.json")
@@ -87,7 +87,7 @@ class SimBroker:
     # ------------------------------------------------------------ prices
     def _hist(self) -> Dict[str, List[Tuple[str, float]]]:
         if self._history is None:
-            syms = sorted(set(UNIVERSE) | set(DEFENSIVE) | set(self.book["positions"]))
+            syms = sorted(set(UNIVERSE) | set(DEFENSIVE) | set(LEVERAGED.values()) | set(self.book["positions"]))
             self._history = datamod.load_history(syms, refresh=True, max_age_hours=None)
         return self._history
 

@@ -23,7 +23,7 @@ from dataclasses import replace
 from typing import Dict, List, Optional, Tuple
 
 import data as datamod
-from strategy import (DEFENSIVE, MR_UNIVERSE, UNIVERSE, Params, Signals, State, compute_targets)
+from strategy import (DEFENSIVE, LEVERAGED, MR_UNIVERSE, UNIVERSE, Params, Signals, State, compute_targets)
 
 SLIPPAGE_BPS = 5.0
 
@@ -281,12 +281,13 @@ def main() -> int:
     ap.add_argument("--grid3", action="store_true", help="risk-overlay variants")
     ap.add_argument("--grid4", action="store_true", help="candidate defaults confirmation")
     ap.add_argument("--grid5", action="store_true", help="tranches + adaptive core")
+    ap.add_argument("--grid6", action="store_true", help="leveraged core")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--out", default="reports/backtest.md")
     ap.add_argument("--curve", default=None, help="write equity curve CSV here")
     args = ap.parse_args()
 
-    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | set(DEFENSIVE)), refresh=args.refresh, max_age_hours=None)
+    hist = datamod.load_history(sorted(set(UNIVERSE) | set(MR_UNIVERSE) | set(DEFENSIVE) | set(LEVERAGED.values())), refresh=args.refresh, max_age_hours=None)
     if "SPY" not in hist:
         print("need SPY history"); return 1
 
@@ -313,6 +314,22 @@ def main() -> int:
         for name, prm in grid:
             r = run(hist, prm, args.start, args.end)
             print(f"{name:<22}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['mr_trades']:>7}{r['mr_win_rate']:>8.0%}")
+        return 0
+
+    if args.grid6:
+        base = Params()
+        us = ("SPY", "QQQ")
+        grid = [("balanced (current)", base)]
+        for cw in (0.3, 0.5, 0.7, 1.0):
+            grid.append((f"2x core {cw:.0%} auto SPY/QQQ", replace(base, core_leveraged=True, core_weight=cw, core_candidates=us)))
+        grid.append(("2x core 50% QQQ only", replace(base, core_leveraged=True, core_weight=0.5, core_symbol="QQQ")))
+        grid.append(("1x core 100% auto (control)", replace(base, core_weight=1.0, core_candidates=us)))
+        for start, label in (("2008-01-01", "2008+ (includes GFC)"), ("2015-01-01", "2015+"), ("2017-01-01", "OOS 2017+")):
+            print(f"--- {label} ---")
+            print(f"{'variant':<30}{'CAGR':>8}{'Sharpe':>8}{'MaxDD':>8}{'Calmar':>8}{'$1k->':>10}{'SPY':>8}")
+            for name, prm in grid:
+                r = run(hist, prm, start, args.end)
+                print(f"{name:<30}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['calmar']:>8.2f}{r['end_equity']:>10,.0f}{r['spy']['cagr']:>8.1%}")
         return 0
 
     if args.grid5:
