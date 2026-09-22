@@ -154,6 +154,27 @@ class Alpaca:
                 break
         return out
 
+    def cash_flows(self, after: Optional[str] = None) -> float:
+        """Net external cash movement (deposits - withdrawals, journals, ACATS) since `after`.
+        Used to keep the drawdown high-water mark honest when money moves in or out."""
+        total = 0.0
+        page_token: Optional[str] = None
+        while True:
+            params = {"activity_types": "CSD,CSW,JNLC,ACATC,ACATS", "after": after, "page_size": 100,
+                      "direction": "asc", "page_token": page_token}
+            page = self._t("GET", "/v2/account/activities", params=params) or []
+            for act in page:
+                try:
+                    total += float(act.get("net_amount") or 0.0)
+                except (TypeError, ValueError):
+                    pass
+            if len(page) < 100:
+                break
+            page_token = page[-1].get("id")
+            if not page_token:
+                break
+        return total
+
     # ----------------------------------------------------------------- data
     def daily_bars(self, symbols: Iterable[str], start: str, end: Optional[str] = None,
                    adjustment: str = "all", feed: Optional[str] = None) -> Dict[str, List[Tuple[str, float]]]:

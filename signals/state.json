@@ -1,7 +1,10 @@
 {
+  "bought_today": [],
   "hwm": 1000.0,
   "last_decision_date": "2026-09-22",
-  "last_run_utc": "2026-09-22T20:53:44Z",
+  "last_mode": "SIM",
+  "last_run_utc": "2026-09-22T21:12:22Z",
+  "last_seen_date": "2026-09-22",
   "last_trade_date": "2026-09-22",
   "strategy": {
     "mom_days_since_rebalance": 0,

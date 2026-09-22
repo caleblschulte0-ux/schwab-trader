@@ -28,6 +28,27 @@ account with the same code.
 | **Ops** | `doctor.py` preflight on every run, a rolling **"📈 Trading log"** issue with every run, a **"🔴 Executor error"** issue with the traceback on any crash (auto-closed when healthy), a **watchdog** issue on a missed day, weekly backtest + validation refresh, CI tests on every push, a static dashboard. |
 | **No LLM in the loop** | The old Claude "brains" are gone from the trading path. An optional weekly Claude review (`analyst.yml`) can only write a report. |
 
+## Is it ready for real money?
+
+**Not yet, and the code will refuse until it is.** Live trading is gated on three things
+the executor checks itself (`bot.py: live_gate`):
+
+1. **20 clean Alpaca paper runs** recorded in `signals/state.json` (`paper_clean_runs`).
+   The simulator does not count; the real API has to be exercised for a month.
+2. Repo variable **`MAX_CAPITAL`** set: an explicit dollar cap you chose on purpose.
+3. Repo variable **`LIVE_CONFIRM`** equal to `I UNDERSTAND THE RISKS`.
+
+What is verified today | What is not
+---|---
+Strategy logic, 18 years, walk-forward, bootstrap | Behaviour against Alpaca's *real* API (contract-tested against documented shapes only)
+Executor end-to-end on a fake broker and the simulator | Real fills, real slippage, partial fills, settlement timing
+No same-day sells (no day trades / PDT / good-faith violations) | A live account with pre-existing positions the bot does not manage
+Deposits/withdrawals don't move the drawdown kill switch | Broker outages mid-rebalance (it reconciles next day, but untested for real)
+Retry-safe orders (deterministic `client_order_id`) | Tax consequences of ~30 trades a year
+
+`python doctor.py --probe` with paper keys sweeps every endpoint the bot uses and does a
+$1 SPY buy/close round trip, so the API contract is proven before the first real dollar.
+
 ## How it works
 
 ```mermaid
@@ -75,7 +96,7 @@ Edit `config.json` (then run `python backtest.py` to see what you did):
 ```json
 { "preset": "balanced",          // balanced | growth (QQQ core) | us_only | rotation_only | conservative
   "strategy": { "mom_top_n": 6 },  // any strategy.Params field
-  "executor": { "max_capital": null, "max_drawdown_halt": 0.30, "trade_window_min": 120 } }
+  "executor": { "max_capital": null, "max_drawdown_halt": 0.30, "trade_window_min": 60 } }
 ```
 Repo **variables** of the same name in upper case (`MAX_CAPITAL`, `MAX_DRAWDOWN_HALT`,
 `TRADE_WINDOW_MIN`) override the file; `DRY_RUN=false` switches Alpaca to the live account.

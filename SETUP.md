@@ -25,10 +25,20 @@ Optional repo **variables** (Settings → Secrets and variables → Actions → 
 - `python doctor.py` locally (or read its output in the workflow) for a preflight checklist.
 - The **watchdog** workflow opens an issue if a trading day passes without a run.
 
-## 3. Going live **[HUMAN]**
-1. Fund the live account; generate **Live** keys; replace the two secrets.
-2. Set repo variable `DRY_RUN=false`.
-3. Keep `MAX_CAPITAL` at what you can watch fall 30% without touching the keyboard.
+## 3. Going live **[HUMAN]** — the bot enforces this order
+1. **Burn in on paper.** After adding paper keys, let it run for **20 trading days**
+   (`signals/state.json` → `paper_clean_runs`). Read the Trading log. Compare
+   `signals/holdings.json` to the Alpaca dashboard.
+2. **Probe the API** once during market hours: locally,
+   `ALPACA_API_KEY=... ALPACA_SECRET_KEY=... python doctor.py --probe`
+   (paper keys only; it does a $1 SPY buy/close and sweeps every endpoint).
+3. Fund the live account; generate **Live** keys; replace the two secrets.
+4. Set repo variables `MAX_CAPITAL` (the dollars you can watch fall 30%),
+   `LIVE_CONFIRM` = `I UNDERSTAND THE RISKS`, then `DRY_RUN=false`.
+   Missing any of these → the run logs "LIVE requested but REFUSED" and exits non-zero
+   (which opens the error issue, so you will notice).
+5. The live account should hold nothing but what the bot manages, or set `MAX_CAPITAL`
+   well below its equity; positions outside the ETF universe are ignored, never sold.
 
 ## Optional: weekly Claude review
 Add `CLAUDE_CODE_OAUTH_TOKEN` and `analyst.yml` writes `reports/analyst.md` every Friday.

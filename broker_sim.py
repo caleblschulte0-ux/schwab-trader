@@ -185,6 +185,9 @@ class SimBroker:
                         "filled_qty": f["qty"], "filled_avg_price": f["price"]}
         return {"id": order_id, "status": "unknown"}
 
+    def cash_flows(self, after: Optional[str] = None) -> float:
+        return 0.0
+
     def open_orders(self) -> List[dict]:
         return []
 

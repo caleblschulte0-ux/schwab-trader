@@ -111,7 +111,16 @@ class FakeAlpaca:
         self.orders[oid] = {"id": oid, "status": "filled", "filled_qty": str(qty), "filled_avg_price": str(self.px[symbol]), "symbol": symbol}
         return self.orders[oid]
 
+    flows = 0.0
+    coids = []
+
+    def cash_flows(self, after=None):
+        return FakeAlpaca.flows
+
     def submit_order(self, symbol, side, notional=None, qty=None, order_type="market", tif="day", client_order_id=None):
+        assert client_order_id, "every order must carry a deterministic client_order_id"
+        assert client_order_id not in FakeAlpaca.coids, f"duplicate client_order_id {client_order_id}"
+        FakeAlpaca.coids.append(client_order_id)
         q = qty if qty is not None else notional / self.px[symbol]
         if side == "buy":
             cost = q * self.px[symbol]
@@ -148,6 +157,8 @@ class BotTests(unittest.TestCase):
         os.chdir(self.tmp)
         FakeAlpaca.instances.clear()
         FakeAlpaca.book = {"cash": 1000.0, "pos": {}}
+        FakeAlpaca.flows = 0.0
+        FakeAlpaca.coids = []
         self.env = {"ALPACA_API_KEY": "k", "ALPACA_SECRET_KEY": "s", "DRY_RUN": "true"}
         self.patches = [mock.patch.object(bot, "Alpaca", FakeAlpaca),
                         mock.patch.object(bot.datamod, "load_history", side_effect=AssertionError("network call in test")),
@@ -273,6 +284,71 @@ class BotTests(unittest.TestCase):
         self.assertIn("suspect live prices ignored: SPY", body)
         self.assertGreater(len(FakeAlpaca.instances[-1].calls), 0)  # still traded, on sane prices
 
+    def test_no_same_day_sells_after_buying(self):
+        self.assertEqual(bot.main(), 0)
+        st = self._state()
+        self.assertTrue(st["bought_today"])
+        # prices jump so every position is now overweight -> a naive reconcile would SELL
+        api = FakeAlpaca.instances[-1]
+        for s in api.pos:
+            api.px[s] *= 1.5
+        orig_init = FakeAlpaca.__init__
+
+        def keep_px(self, *a, **k):
+            orig_init(self, *a, **k)
+            self.px = dict(api.px)
+        with mock.patch.object(FakeAlpaca, "__init__", keep_px):
+            self.assertEqual(bot.main(), 0)
+        api2 = FakeAlpaca.instances[-1]
+        self.assertFalse(any(k in ("sell", "close") for _, k, _ in api2.calls), api2.calls)
+
+    def test_withdrawal_does_not_trip_kill_switch(self):
+        os.makedirs("signals", exist_ok=True)
+        with open("signals/state.json", "w") as f:
+            json.dump({"hwm": 1500.0, "last_run_utc": "2026-09-21T19:40:00Z"}, f)
+        FakeAlpaca.flows = -500.0          # owner withdrew $500; equity 1000 vs hwm 1500 is NOT a loss
+        self.assertEqual(bot.main(), 0)
+        st = self._state()
+        self.assertFalse(st.get("halted"))
+        self.assertAlmostEqual(st["hwm"], 1000.0, places=2)
+        self.assertGreater(len(FakeAlpaca.instances[-1].calls), 0)
+
+    def test_deposit_raises_hwm(self):
+        os.makedirs("signals", exist_ok=True)
+        with open("signals/state.json", "w") as f:
+            json.dump({"hwm": 400.0, "last_run_utc": "2026-09-21T19:40:00Z"}, f)
+        FakeAlpaca.flows = 600.0
+        self.assertEqual(bot.main(), 0)
+        self.assertAlmostEqual(self._state()["hwm"], 1000.0, places=2)
+
+    def test_live_is_refused_without_burn_in(self):
+        with mock.patch.dict(os.environ, {"DRY_RUN": "false"}):
+            self.assertEqual(bot.main(), 1)
+        self.assertEqual(FakeAlpaca.instances[-1].calls, [])
+        with open("reports/today.md") as f:
+            body = f.read()
+        self.assertIn("LIVE_CONFIRM", body)
+        self.assertIn("MAX_CAPITAL", body)
+        self.assertIn("PAPER runs", body)
+
+    def test_live_allowed_after_burn_in_and_confirmation(self):
+        os.makedirs("signals", exist_ok=True)
+        with open("signals/state.json", "w") as f:
+            json.dump({"paper_clean_runs": 25}, f)
+        with mock.patch.dict(os.environ, {"DRY_RUN": "false", "LIVE_CONFIRM": bot.LIVE_PHRASE, "MAX_CAPITAL": "500"}):
+            self.assertEqual(bot.main(), 0)
+        api = FakeAlpaca.instances[-1]
+        self.assertFalse(api.paper)
+        self.assertGreater(len(api.calls), 0)
+        buys = sum(v for side, _, v in api.calls if side == "buy")
+        self.assertLessEqual(buys, 500.0 + 1e-6)
+
+    def test_paper_runs_are_counted_once_per_day(self):
+        self.assertEqual(bot.main(), 0)
+        self.assertEqual(self._state()["paper_clean_runs"], 1)
+        self.assertEqual(bot.main(), 0)
+        self.assertEqual(self._state()["paper_clean_runs"], 1)
+
     def test_plan_orders_sells_first_and_closes_zero_targets(self):
         plan = bot.plan_orders({"SPY": 500.0, "GLD": 300.0}, {"SPY": 200.0, "TLT": 150.0}, 5.0)
         kinds = [k for _, k, _ in plan]
@@ -280,6 +356,9 @@ class BotTests(unittest.TestCase):
         self.assertEqual(plan[0][0], "TLT")
         self.assertIn(("SPY", "buy", 300.0), plan)
         self.assertIn(("GLD", "buy", 300.0), plan)
+        # no_sell suppresses sells/closes but never buys
+        plan2 = bot.plan_orders({"SPY": 100.0}, {"SPY": 200.0, "TLT": 150.0}, 5.0, no_sell={"SPY", "TLT"})
+        self.assertEqual(plan2, [])
 
     def test_parse_ts_handles_nanoseconds(self):
         d = bot.parse_ts("2026-09-22T15:40:00.123456789-04:00")

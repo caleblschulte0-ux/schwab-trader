@@ -1,6 +1,6 @@
 name: trader
 
-# The executor (bot.py): ONE strategy step per trading day, in the last two hours of
+# The executor (bot.py): ONE strategy step per trading day, in the last hour of
 # the session. Paper by default (DRY_RUN=true -> Alpaca paper account). Flip the
 # DRY_RUN repo VARIABLE to false to trade the live account (see SETUP.md).
 #
@@ -13,8 +13,14 @@ name: trader
 #     (cron-job.org) if you prefer -- point it at 15:30-15:45 ET on weekdays.
 on:
   schedule:
-    - cron: '35 19 * * 1-5'   # 15:35 ET during daylight time (EDT = UTC-4)
-    - cron: '35 20 * * 1-5'   # 15:35 ET during standard time (EST = UTC-5)
+    # Primary 15:35 ET + backup 15:50 ET, for both UTC offsets. The bot's trade window is the
+    # last 60 minutes of the session, so the "wrong-offset" firings (14:35/14:50 in winter,
+    # 16:35/16:50 in summer) are harmless no-ops. If GitHub runs the primary late, the backup
+    # trades; if the primary ran, the backup only reconciles.
+    - cron: '35 19 * * 1-5'   # 15:35 EDT
+    - cron: '50 19 * * 1-5'   # 15:50 EDT (backup)
+    - cron: '35 20 * * 1-5'   # 15:35 EST
+    - cron: '50 20 * * 1-5'   # 15:50 EST (backup)
   workflow_dispatch:
     inputs:
       force_run:
@@ -58,6 +64,7 @@ jobs:
           MAX_CAPITAL: ${{ vars.MAX_CAPITAL }}
           MAX_DRAWDOWN_HALT: ${{ vars.MAX_DRAWDOWN_HALT }}
           TRADE_WINDOW_MIN: ${{ vars.TRADE_WINDOW_MIN }}
+          LIVE_CONFIRM: ${{ vars.LIVE_CONFIRM }}
           FORCE_RUN: ${{ github.event.inputs.force_run || 'false' }}
           NO_TRADE: ${{ github.event.inputs.no_trade || 'false' }}
         run: python bot.py

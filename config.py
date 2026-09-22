@@ -10,8 +10,9 @@ from strategy import Params
 
 CONFIG_FILE = os.environ.get("CONFIG_FILE", "config.json")
 _EXEC_DEFAULTS: Dict[str, Any] = {
-    "max_capital": None, "max_drawdown_halt": 0.30, "trade_window_min": 120.0,
+    "max_capital": None, "max_drawdown_halt": 0.30, "trade_window_min": 60.0,
     "min_trade_dollars": 5.0, "sim_start_cash": 1000.0,
+    "live_min_paper_runs": 20.0,   # clean Alpaca PAPER runs required before LIVE is allowed
 }
 
 
@@ -52,7 +53,7 @@ def executor_settings(cfg: dict) -> Dict[str, Any]:
                 out[k] = float(env)
             except ValueError:
                 pass
-    for k in ("max_drawdown_halt", "trade_window_min", "min_trade_dollars", "sim_start_cash"):
+    for k in ("max_drawdown_halt", "trade_window_min", "min_trade_dollars", "sim_start_cash", "live_min_paper_runs"):
         if out[k] is not None:
             out[k] = float(out[k])
     if out["max_capital"] is not None:

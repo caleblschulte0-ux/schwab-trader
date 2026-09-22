@@ -3,6 +3,9 @@
 
     python doctor.py            # human-readable
     python doctor.py --strict   # non-zero exit on any FAIL (used by CI)
+    python doctor.py --probe    # PAPER keys only: sweep every endpoint the bot uses and do a
+                                # $1 SPY buy -> close round trip, so the real API contract is
+                                # verified before any live order is ever placed.
 """
 from __future__ import annotations
 
@@ -55,6 +58,17 @@ def main() -> int:
             check("alpaca data", OK if len(bars.get("SPY", [])) > 50 else WARN, f"{len(bars.get('SPY', []))} SPY bars this year")
         except Exception as exc:  # noqa: BLE001
             check("alpaca", FAIL, str(exc)[:200])
+        if "--probe" in sys.argv:
+            _probe(api)
+        # live-readiness gate (same function the executor uses)
+        try:
+            import bot as botmod
+            st = json.load(open("signals/state.json")) if os.path.exists("signals/state.json") else {}
+            reasons = botmod.live_gate(ex, st)
+            check("live readiness", OK if not reasons else WARN,
+                  "all gates satisfied -- LIVE would be accepted" if not reasons else "; ".join(reasons))
+        except Exception as exc:  # noqa: BLE001
+            check("live readiness", WARN, str(exc)[:120])
     else:
         check("alpaca keys", WARN, "not set: bot trades the built-in simulator (fine for now; see SETUP.md)")
     # --- market data fallback
@@ -84,6 +98,46 @@ def main() -> int:
     except Exception as exc:  # noqa: BLE001
         check("unit tests", WARN, str(exc)[:100])
     return _report(strict)
+
+
+def _probe(api) -> None:
+    """Exercise the real API surface on the PAPER account. Never runs against live."""
+    if not api.paper:
+        check("probe", FAIL, "refusing to probe a LIVE account")
+        return
+    try:
+        cal = api.calendar(datetime.now(timezone.utc).strftime("%Y-%m-%d"), datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+        pos = api.positions()
+        opn = api.open_orders()
+        a = api.asset("SPY")
+        px = api.latest_prices(["SPY", "BIL", "GLD"])
+        bars = api.daily_bars(["SPY", "BIL"], start=(datetime.now(timezone.utc).strftime("%Y-01-01")))
+        hist = api.portfolio_history(period="1M", timeframe="1D")
+        fills = api.fills(after="2000-01-01")
+        flows = api.cash_flows(after="2000-01-01")
+        check("probe: reads", OK, f"calendar={len(cal)} positions={len(pos)} open_orders={len(opn)} SPY fractionable={a.get('fractionable')} "
+                                  f"prices={len(px)} bars(SPY)={len(bars.get('SPY', []))} history_pts={len(hist.get('equity') or [])} "
+                                  f"fills={len(fills)} net_flows={flows:+.2f}")
+    except Exception as exc:  # noqa: BLE001
+        check("probe: reads", FAIL, str(exc)[:200])
+        return
+    try:
+        clock = api.clock()
+        if not clock.get("is_open"):
+            check("probe: order round-trip", WARN, "market closed; skipped the $1 SPY buy/close (run during market hours)")
+            return
+        o = api.submit_order("SPY", "buy", notional=1.0, client_order_id=f"probe-{int(time.time())}")
+        o = api.wait_for_fill(o["id"], timeout_s=60)
+        if o.get("status") != "filled":
+            check("probe: order round-trip", FAIL, f"buy status {o.get('status')}")
+            return
+        qty = float(o.get("filled_qty") or 0)
+        c = api.submit_order("SPY", "sell", qty=qty, client_order_id=f"probe-close-{int(time.time())}")
+        c = api.wait_for_fill(c["id"], timeout_s=60)
+        check("probe: order round-trip", OK if c.get("status") == "filled" else WARN,
+              f"bought {qty:g} SPY @ {o.get('filled_avg_price')}, sold @ {c.get('filled_avg_price')} ({c.get('status')})")
+    except Exception as exc:  # noqa: BLE001
+        check("probe: order round-trip", FAIL, str(exc)[:200])
 
 
 def _report(strict: bool) -> int:

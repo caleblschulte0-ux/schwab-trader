@@ -53,7 +53,7 @@ dividends reinvested, cash earns the T-bill ETF's return.
 - Weights sum to ≤ 100%; buys capped to settled cash; sells before buys.
 - Only universe symbols are touched. Anything else in the account is ignored.
 - One strategy step per trading day; re-runs the same day only reconcile.
-- Trades only inside the last `trade_window_min` (120) minutes of a session.
+- Trades only inside the last `trade_window_min` (60) minutes of a session.
 - **Kill switch** at `max_drawdown_halt` (30%) below the high-water mark: liquidate and
   halt until a human deletes `halted` from `signals/state.json`. Why 30% and not 20%: the
   bootstrap shows a 20% halt would fire in ~18% of normal 5-year stretches and sell the low.
@@ -61,6 +61,14 @@ dividends reinvested, cash earns the T-bill ETF's return.
 - **Stale-data guard**: no trades unless bars reach the previous session and live prices
   cover ≥80% of the universe. **Bad-tick guard**: a live price more than 25% away from the
   last close is treated as a glitch and replaced by the last close.
+- **No same-day sells**: anything bought today cannot be sold today, so the bot can never
+  create a day trade (pattern-day-trader rule) or a good-faith violation on a cash account.
+- **Retry-safe orders**: every order carries a deterministic `client_order_id`; if a run is
+  retried after a network error, Alpaca rejects the duplicate instead of buying twice.
+- **Deposits and withdrawals** are read from the broker's activity log and shift the
+  high-water mark, so moving money in or out can neither trigger nor mask the kill switch.
+- **Live gate**: `DRY_RUN=false` is refused unless 20 clean paper runs are on record,
+  `MAX_CAPITAL` is set, and `LIVE_CONFIRM` says `I UNDERSTAND THE RISKS`.
 
 ## Account notes
 - Simulator: starts at $1,000 (`executor.sim_start_cash`), 5 bps slippage, book in

@@ -42,6 +42,7 @@ def main() -> int:
             print(f"(watchdog) calendar check failed ({exc}); assuming weekday = trading day")
 
     stalled = False
+    warn = False
     detail = ""
     if not trading_day:
         detail = f"{today} is not a trading day; nothing expected."
@@ -49,15 +50,20 @@ def main() -> int:
         detail = f"Executor is intentionally HALTED ({st.get('halt_reason')}). Not a stall."
     elif st.get("last_trade_date") == today:
         detail = f"OK: executor completed its trading-window run today ({st.get('last_run_utc')})."
+    elif st.get("last_seen_date") == today:
+        warn = True
+        detail = (f"The executor RAN today ({st.get('last_run_utc')}) but did not complete a trading-window step "
+                  "(market closed early? stale data? refused live?). Read reports/today.md.")
     else:
         stalled = True
-        detail = (f"No trading-window run recorded for {today}. last_trade_date={st.get('last_trade_date')}, "
-                  f"last_run_utc={st.get('last_run_utc')}. Check the trader workflow's recent runs and the cron trigger.")
-    print(f"(watchdog) stalled={stalled} :: {detail}")
+        detail = (f"No executor run recorded for {today}. last_seen_date={st.get('last_seen_date')}, "
+                  f"last_run_utc={st.get('last_run_utc')}. Check the trader workflow's recent runs / schedule.")
+    print(f"(watchdog) stalled={stalled} warn={warn} :: {detail}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a") as f:
             f.write(f"stalled={'true' if stalled else 'false'}\n")
+            f.write(f"warn={'true' if warn else 'false'}\n")
             f.write(f"detail={detail}\n")
     return 0
 

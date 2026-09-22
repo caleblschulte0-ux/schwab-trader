@@ -47,6 +47,15 @@ jobs:
             gh issue create --title "⚠️ Executor stalled — bot.py did not run today" --body "$BODY"
           fi
 
+      - name: Note a run that did not trade
+        if: steps.check.outputs.warn == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DETAIL: ${{ steps.check.outputs.detail }}
+        run: |
+          NUM=$(gh issue list --state open --search "Trading log in:title" --json number --jq '.[0].number // empty')
+          [ -n "$NUM" ] && gh issue comment "$NUM" --body "$(printf '%b' "⚠️ watchdog: ${DETAIL}")" || true
+
       - name: Close stall alert if recovered
         if: steps.check.outputs.stalled == 'false'
         env:

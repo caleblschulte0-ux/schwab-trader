@@ -32,8 +32,9 @@
   "executor": {
     "max_capital": null,
     "max_drawdown_halt": 0.3,
-    "trade_window_min": 120,
+    "trade_window_min": 60,
     "min_trade_dollars": 5,
-    "sim_start_cash": 1000
+    "sim_start_cash": 1000,
+    "live_min_paper_runs": 20
   }
 }

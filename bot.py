@@ -12,7 +12,7 @@ Environment
                      and builds a track record before any brokerage exists.
   DRY_RUN            "true" (default) -> paper-api.alpaca.markets; "false" -> real money
   MAX_CAPITAL        cap on the dollars this bot manages (default: whole account equity)
-  TRADE_WINDOW_MIN   only trade within this many minutes of the close (default 120)
+  TRADE_WINDOW_MIN   only trade within this many minutes of the close (default 60)
   MAX_DRAWDOWN_HALT  kill switch: liquidate + halt if equity falls this far below its
                      high-water mark (default 0.30; see reports/validation.md for why not
                      0.20). Reset by deleting "halted" from signals/state.json.
@@ -178,16 +178,39 @@ def load_market_history(api: Alpaca, symbols: List[str], today_et: str, log: Log
     return hist
 
 
+LIVE_PHRASE = "I UNDERSTAND THE RISKS"
+
+
+def live_gate(ex: dict, st: dict) -> List[str]:
+    """Reasons LIVE trading is refused (empty list = allowed). All must be satisfied."""
+    reasons = []
+    if os.environ.get("LIVE_CONFIRM", "").strip() != LIVE_PHRASE:
+        reasons.append(f'repo variable LIVE_CONFIRM must be exactly "{LIVE_PHRASE}"')
+    if not ex.get("max_capital"):
+        reasons.append("MAX_CAPITAL must be set for live trading (an explicit dollar cap)")
+    need = int(ex.get("live_min_paper_runs") or 0)
+    have = int(st.get("paper_clean_runs", 0) or 0)
+    if have < need:
+        reasons.append(f"only {have}/{need} clean Alpaca PAPER runs recorded (burn-in not complete)")
+    return reasons
+
+
 # ----------------------------------------------------------------------------- #
 # Reconciliation                                                                #
 # ----------------------------------------------------------------------------- #
-def plan_orders(targets: Dict[str, float], current: Dict[str, float], min_trade: float) -> List[Tuple[str, str, float]]:
-    """[(symbol, 'sell'|'buy'|'close', dollars)] -- sells first, largest first."""
+def plan_orders(targets: Dict[str, float], current: Dict[str, float], min_trade: float,
+                no_sell: Optional[set] = None) -> List[Tuple[str, str, float]]:
+    """[(symbol, 'sell'|'buy'|'close', dollars)] -- sells first, largest first.
+    `no_sell`: symbols bought today; never sold the same day (no day trades, no PDT flags,
+    no good-faith violations on a cash account)."""
     plan: List[Tuple[str, str, float]] = []
+    no_sell = no_sell or set()
     for s in sorted(set(targets) | set(current)):
         tgt = targets.get(s, 0.0)
         cur = current.get(s, 0.0)
         delta = tgt - cur
+        if delta < 0 and s in no_sell:
+            continue
         if tgt <= 0 and cur > 0:
             plan.append((s, "close", cur))
         elif delta <= -min_trade:
@@ -200,8 +223,11 @@ def plan_orders(targets: Dict[str, float], current: Dict[str, float], min_trade:
 
 
 def execute(api: Alpaca, plan: List[Tuple[str, str, float]], prices: Dict[str, float], log: Log,
-            no_trade: bool, asset_cache: Dict[str, dict]) -> List[dict]:
+            no_trade: bool, asset_cache: Dict[str, dict], tag: str = "") -> List[dict]:
     fills: List[dict] = []
+
+    def coid(sym: str, side: str, amt: float) -> str:
+        return f"{tag}-{sym}-{side}-{int(round(amt))}"[:48]
     # ---- sells / closes
     for sym, kind, dollars in [o for o in plan if o[1] != "buy"]:
         if no_trade:
@@ -211,7 +237,7 @@ def execute(api: Alpaca, plan: List[Tuple[str, str, float]], prices: Dict[str, f
             if kind == "close":
                 o = api.close_position(sym)
             else:
-                o = api.submit_order(sym, "sell", notional=round(dollars, 2))
+                o = api.submit_order(sym, "sell", notional=round(dollars, 2), client_order_id=coid(sym, "sell", dollars))
             o = api.wait_for_fill(o["id"])
             log(f"  {kind.upper()} {sym} ${dollars:,.2f} -> {o.get('status')} filled_qty={o.get('filled_qty')} avg={o.get('filled_avg_price')}")
             fills.append(o)
@@ -240,14 +266,14 @@ def execute(api: Alpaca, plan: List[Tuple[str, str, float]], prices: Dict[str, f
                 log(f"  BUY {sym} skipped: not tradable")
                 continue
             if a.get("fractionable", False):
-                o = api.submit_order(sym, "buy", notional=round(amt, 2))
+                o = api.submit_order(sym, "buy", notional=round(amt, 2), client_order_id=coid(sym, "buy", amt))
             else:
                 px = prices.get(sym) or 0.0
                 qty = int(amt // px) if px > 0 else 0
                 if qty < 1:
                     log(f"  BUY {sym} skipped: not fractionable and ${amt:,.2f} < 1 share (${px:,.2f})")
                     continue
-                o = api.submit_order(sym, "buy", qty=qty)
+                o = api.submit_order(sym, "buy", qty=qty, client_order_id=coid(sym, "buy", amt))
                 amt = qty * px
             o = api.wait_for_fill(o["id"])
             spent = float(o.get("filled_avg_price") or 0) * float(o.get("filled_qty") or 0) or amt
@@ -317,6 +343,14 @@ def main() -> int:
         api = Alpaca(key, secret, paper=dry_run)
         mode = "PAPER" if dry_run else "LIVE"
         api.mode = mode.lower()
+        if mode == "LIVE":
+            gate = live_gate(ex, load_json(STATE_FILE, {}))
+            if gate:
+                log("=== Executor | LIVE requested but REFUSED ===")
+                for g in gate:
+                    log(f"  - {g}")
+                write_today(log, "live refused")
+                return 1
     else:
         api = SimBroker(start_cash=ex["sim_start_cash"])
         mode = "SIM"
@@ -334,6 +368,8 @@ def main() -> int:
 
     managed = set(UNIVERSE) | ({params.cash_proxy} if params.cash_proxy else set())
     st_raw = load_json(STATE_FILE, {})
+    st_raw["last_seen_date"] = today_et
+    st_raw["last_mode"] = mode
     state = State.from_dict(st_raw.get("strategy"))
     hwm = float(st_raw.get("hwm", 0.0) or 0.0)
 
@@ -365,6 +401,17 @@ def main() -> int:
         return 1
     equity = float(acct["equity"])
     cash = float(acct["cash"])
+    # External money movements are not performance: shift the high-water mark by the net
+    # flow so a withdrawal cannot look like a crash (and a deposit cannot hide one).
+    flows = 0.0
+    if st_raw.get("last_run_utc"):
+        try:
+            flows = float(api.cash_flows(after=st_raw["last_run_utc"]))
+        except Exception as exc:  # noqa: BLE001
+            log(f"(warn) could not read cash flows ({exc}); assuming none")
+    if abs(flows) >= 1.0 and hwm > 0:
+        log(f"external cash flow since last run: {flows:+,.2f} -> high-water mark {hwm:,.2f} -> {hwm + flows:,.2f}")
+        hwm = max(0.0, hwm + flows)
     hwm = max(hwm, equity)
     capital = min(equity, max_capital) if max_capital else equity
     log(f"account: equity=${equity:,.2f} cash=${cash:,.2f} hwm=${hwm:,.2f} managed_capital=${capital:,.2f} "
@@ -392,6 +439,7 @@ def main() -> int:
     positions = {p["symbol"]: p for p in api.positions()}
     current = {s: float(p.get("market_value", 0) or 0) for s, p in positions.items() if s in managed}
 
+    bought_today = set(st_raw.get("bought_today") or []) if st_raw.get("last_decision_date") == today_et else set()
     if st_raw.get("last_decision_date") == today_et and os.path.exists(TARGETS_FILE):
         tj = load_json(TARGETS_FILE, {})
         weights = {s: float(w) for s, w in (tj.get("weights") or {}).items()}
@@ -434,17 +482,26 @@ def main() -> int:
 
     # ------------------------------------------------------------ reconcile
     targets = {s: w * capital for s, w in weights.items()}
-    plan = plan_orders(targets, current, min_trade)
+    plan = plan_orders(targets, current, min_trade, no_sell=bought_today)
+    if bought_today:
+        log(f"no same-day sells for {sorted(bought_today)} (bought today)")
     log("targets: " + ", ".join(f"{s} {w:.0%}" for s, w in sorted(weights.items(), key=lambda x: -x[1])) if weights else "targets: 100% cash")
     if not plan:
         log("portfolio already at target -- no orders.")
     else:
         log(f"{len(plan)} order(s):")
         asset_cache: Dict[str, dict] = {}
-        execute(api, plan, prices, log, no_trade, asset_cache)
+        fills = execute(api, plan, prices, log, no_trade, asset_cache, tag=today_et)
+        for o in fills:
+            if o.get("side") == "buy" or any(k == "buy" and s == o.get("symbol") for s, k, _ in plan):
+                bought_today.add(str(o.get("symbol")))
+    st_raw["bought_today"] = sorted(bought_today)
 
     if not no_trade:
         st_raw["last_trade_date"] = today_et
+        if mode == "PAPER":
+            st_raw["paper_clean_runs"] = int(st_raw.get("paper_clean_runs", 0) or 0) + (0 if st_raw.get("_counted_today") == today_et else 1)
+            st_raw["_counted_today"] = today_et
     st_raw["last_run_utc"] = now_utc
     st_raw["hwm"] = hwm
     save_json(STATE_FILE, st_raw)
