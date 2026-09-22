@@ -4,30 +4,35 @@
   "mean_reversion": [],
   "mode": "SIM",
   "momentum": [
-    "USO",
-    "SMH",
-    "XBI",
-    "XLK",
     "DBC",
-    "XLE"
+    "SMH",
+    "USO",
+    "XBI",
+    "XLE",
+    "XLK"
   ],
   "notes": [
-    "momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --"
+    "tranche 1/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --",
+    "tranche 2/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --",
+    "tranche 3/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --",
+    "tranche 4/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --",
+    "tranche 5/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE'] --"
   ],
   "preset": "balanced",
   "rebalanced": true,
   "regime": {
     "breadth": 0.793,
+    "core": "QQQ",
     "exposure": 1.0,
     "risk_off": false
   },
   "weights": {
-    "DBC": 0.155589,
-    "SMH": 0.078549,
-    "SPY": 0.3,
-    "USO": 0.065552,
-    "XBI": 0.119911,
-    "XLE": 0.158629,
-    "XLK": 0.12177
+    "DBC": 0.155742,
+    "QQQ": 0.3,
+    "SMH": 0.078451,
+    "USO": 0.065703,
+    "XBI": 0.12007,
+    "XLE": 0.158399,
+    "XLK": 0.121635
   }
 }

@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from strategy import (MR_UNIVERSE, UNIVERSE, MRPosition, Params, State, annual_vol, compute_signals,
                       compute_targets, momentum_score, rsi, sma)
+P1 = Params(mom_tranches=1)
 
 
 def synth(seed: int, n: int = 400, drift: float = 0.0004, vol: float = 0.01, start: float = 100.0):
@@ -53,11 +54,13 @@ class TargetTests(unittest.TestCase):
         return hist
 
     def test_weights_sum_leq_one_and_capped(self):
-        dec = compute_targets(self._hist(), State(), Params(), today="2026-01-02")
+        p = Params()
+        dec = compute_targets(self._hist(), State(), p, today="2026-01-02")
         total = sum(dec.weights.values())
         self.assertLessEqual(total, 1.0 + 1e-9)
         for s, w in dec.weights.items():
-            self.assertLessEqual(w, Params().max_position_weight + 1e-9)
+            if s != p.cash_proxy:  # the cash proxy IS cash; it may hold the whole book
+                self.assertLessEqual(w, p.max_position_weight + 1e-9)
             self.assertGreater(w, 0)
 
     def test_first_run_rebalances_and_selects_top_n(self):
@@ -68,12 +71,59 @@ class TargetTests(unittest.TestCase):
         self.assertEqual(dec.state.mom_days_since_rebalance, 0)
 
     def test_no_rebalance_between_weeks(self):
-        p = Params()
+        p = P1
         hist = self._hist()
         dec1 = compute_targets(hist, State(), p, today="2026-01-02")
         dec2 = compute_targets(hist, dec1.state, p, today="2026-01-05")
         self.assertFalse(dec2.rebalanced_momentum)
         self.assertEqual(dec2.mom_selected, dec1.mom_selected)
+
+    def test_tranches_full_entry_then_staggered(self):
+        p = Params(mom_tranches=5, mom_rebalance_days=10)
+        hist = self._hist()
+        d1 = compute_targets(hist, State(), p, today="d1")
+        self.assertEqual(len(d1.state.tranches), 5)
+        self.assertTrue(d1.rebalanced_momentum)
+        # day one: every tranche invested (no under-investment during warm-up)
+        self.assertTrue(all(tr.holdings for tr in d1.state.tranches))
+        self.assertEqual([tr.days_since_rebalance for tr in d1.state.tranches], [0, 2, 4, 6, 8])
+        # then the clocks are staggered: only one tranche comes due at a time
+        due_days = []
+        st = d1.state
+        for day in range(2, 13):
+            d = compute_targets(hist, st, p, today=f"d{day}")
+            st = d.state
+            if d.rebalanced_momentum:
+                due_days.append(day)
+        self.assertEqual(due_days, [3, 5, 7, 9, 11])
+        # persistence round-trip keeps tranche clocks
+        st2 = State.from_dict(st.to_dict())
+        self.assertEqual([t.days_since_rebalance for t in st2.tranches], [t.days_since_rebalance for t in st.tranches])
+
+    def test_tranche_migration_keeps_holdings(self):
+        # a single-tranche state upgraded to 5 tranches must not dump its book
+        p = Params(mom_tranches=5)
+        hist = self._hist()
+        d0 = compute_targets(hist, State(), Params(mom_tranches=1), today="d0")
+        held = set(d0.mom_selected)
+        d1 = compute_targets(hist, d0.state, p, today="d1")
+        self.assertTrue(held & set(d1.mom_selected))
+        self.assertTrue(all(tr.holdings for tr in d1.state.tranches))
+
+    def test_adaptive_core_picks_strongest(self):
+        p = Params(core_symbol="auto", core_candidates=("SPY", "QQQ", "EFA"), core_weight=0.3)
+        hist = self._hist()
+        # make QQQ the runaway leader and SPY/EFA broken
+        hist["QQQ"] = [100 * math.exp(0.002 * i) for i in range(400)]
+        hist["SPY"] = [100 * math.exp(-0.001 * i) for i in range(400)]
+        hist["EFA"] = [100 * math.exp(-0.001 * i) for i in range(400)]
+        dec = compute_targets(hist, State(), p, today="d1")
+        self.assertEqual(dec.regime.get("core"), "QQQ")
+        self.assertGreaterEqual(dec.weights["QQQ"], 0.3 - 1e-9)
+        # all candidates broken -> no core, capital goes defensive
+        hist["QQQ"] = hist["SPY"]
+        dec2 = compute_targets(hist, State(), p, today="d1")
+        self.assertIsNone(dec2.regime.get("core"))
 
     def test_bear_market_goes_to_cash_proxy(self):
         # everything trending down -> nothing eligible -> 100% cash proxy

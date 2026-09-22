@@ -25,12 +25,25 @@ def synth(seed, n=400, drift=0.0005, vol=0.01, start=100.0):
     return c
 
 
+def trading_dates(n, last="2026-09-22"):
+    """n consecutive weekdays ending on `last` (oldest first)."""
+    from datetime import date, timedelta
+    d = date.fromisoformat(last)
+    out = []
+    while len(out) < n:
+        if d.weekday() < 5:
+            out.append(d.isoformat())
+        d -= timedelta(days=1)
+    return out[::-1]
+
+
 def fake_history(seed=5, n=400):
     rnd = random.Random(seed)
+    dates = trading_dates(n)
     out = {}
     for s in sorted(set(UNIVERSE) | set(DEFENSIVE)):
         closes = synth(rnd.randint(0, 9999), n, rnd.uniform(-0.0005, 0.0015), 0.0002 if s == "BIL" else 0.012)
-        out[s] = [(f"2025-{(i // 28) + 1:02d}-{(i % 28) + 1:02d}" if i < n - 1 else "2026-09-22", c) for i, c in enumerate(closes)]
+        out[s] = list(zip(dates, closes))
     return out
 
 
@@ -102,6 +115,7 @@ class ExecutorOnSimTests(unittest.TestCase):
             def __init__(self, path=os.path.join("signals", "sim_account.json"), start_cash=1000.0, history=None, now=None):
                 super().__init__(path=path, start_cash=start_cash, history=hist, now=NOW)
         self.patches = [mock.patch.object(bot, "SimBroker", TestSim),
+                        mock.patch.object(bot.datamod, "load_history", side_effect=AssertionError("network call in test")),
                         mock.patch.dict(os.environ, {"ALPACA_API_KEY": "", "ALPACA_SECRET_KEY": ""})]
         for p in self.patches:
             p.start()

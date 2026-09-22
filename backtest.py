@@ -280,6 +280,7 @@ def main() -> int:
     ap.add_argument("--grid2", action="store_true", help="structural variants")
     ap.add_argument("--grid3", action="store_true", help="risk-overlay variants")
     ap.add_argument("--grid4", action="store_true", help="candidate defaults confirmation")
+    ap.add_argument("--grid5", action="store_true", help="tranches + adaptive core")
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--out", default="reports/backtest.md")
     ap.add_argument("--curve", default=None, help="write equity curve CSV here")
@@ -312,6 +313,30 @@ def main() -> int:
         for name, prm in grid:
             r = run(hist, prm, args.start, args.end)
             print(f"{name:<22}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['mr_trades']:>7}{r['mr_win_rate']:>8.0%}")
+        return 0
+
+    if args.grid5:
+        base = Params()
+        grid = [
+            ("defaults", base),
+            ("2 tranches", replace(base, mom_tranches=2)),
+            ("5 tranches (daily stagger)", replace(base, mom_tranches=5)),
+            ("core auto SPY/QQQ", replace(base, core_symbol="auto", core_candidates=("SPY", "QQQ"))),
+            ("core auto SPY/QQQ/EFA", replace(base, core_symbol="auto")),
+            ("core auto SPY/QQQ/EFA/EEM", replace(base, core_symbol="auto", core_candidates=("SPY", "QQQ", "EFA", "EEM"))),
+            ("core auto SPY/EFA (GEM)", replace(base, core_symbol="auto", core_candidates=("SPY", "EFA"))),
+            ("2 tranches + auto SPY/QQQ/EFA", replace(base, mom_tranches=2, core_symbol="auto")),
+        ]
+        for start, label in ((args.start, "from " + args.start), ("2015-01-01", "from 2015"), ("2017-01-01", "OOS 2017+")):
+            print(f"--- {label} ---")
+            print(f"{'variant':<32}{'CAGR':>8}{'Sharpe':>8}{'MaxDD':>8}{'Calmar':>8}{'Turn/yr':>9}")
+            for name, prm in grid:
+                r = run(hist, prm, start, args.end)
+                print(f"{name:<32}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['calmar']:>8.2f}{r['annual_turnover']:>9.1f}")
+        # timing-luck dispersion with tranches
+        for name, prm in (("defaults", base), ("2 tranches", replace(base, mom_tranches=2)), ("5 tranches", replace(base, mom_tranches=5))):
+            sh = [run(hist, prm, s)["sharpe"] for s in ("2008-01-02", "2008-01-03", "2008-01-04", "2008-01-07", "2008-01-08")]
+            print(f"timing luck {name:<12}: Sharpe {min(sh):.2f} - {max(sh):.2f} (spread {max(sh)-min(sh):.2f})")
         return 0
 
     if args.grid4:

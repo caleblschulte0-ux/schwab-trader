@@ -5,75 +5,75 @@
   "mode": "sim",
   "positions": [
     {
-      "avg_entry": 32.3662,
-      "last": 32.35,
+      "avg_entry": 32.4562,
+      "last": 32.44,
       "managed": true,
-      "market_value": 155.5,
-      "qty": 4.80687,
+      "market_value": 155.66,
+      "qty": 4.798464,
       "symbol": "DBC",
       "unrealized_pct": -0.05,
       "unrealized_pl": -0.08
     },
     {
-      "avg_entry": 607.3836,
-      "last": 607.08,
+      "avg_entry": 747.8338,
+      "last": 747.46,
       "managed": true,
-      "market_value": 78.5,
-      "qty": 0.129309,
+      "market_value": 299.85,
+      "qty": 0.401159,
+      "symbol": "QQQ",
+      "unrealized_pct": -0.05,
+      "unrealized_pl": -0.15
+    },
+    {
+      "avg_entry": 607.7638,
+      "last": 607.46,
+      "managed": true,
+      "market_value": 78.41,
+      "qty": 0.12908,
       "symbol": "SMH",
       "unrealized_pct": -0.05,
       "unrealized_pl": -0.04
     },
     {
-      "avg_entry": 774.8872,
-      "last": 774.5,
+      "avg_entry": 144.152,
+      "last": 144.08,
       "managed": true,
-      "market_value": 299.85,
-      "qty": 0.387153,
-      "symbol": "SPY",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.15
-    },
-    {
-      "avg_entry": 143.2416,
-      "last": 143.17,
-      "managed": true,
-      "market_value": 63.54,
-      "qty": 0.443796,
+      "market_value": 63.68,
+      "qty": 0.441964,
       "symbol": "USO",
       "unrealized_pct": -0.05,
       "unrealized_pl": -0.03
     },
     {
-      "avg_entry": 162.2911,
-      "last": 162.21,
+      "avg_entry": 161.9509,
+      "last": 161.87,
       "managed": true,
-      "market_value": 119.85,
-      "qty": 0.738857,
+      "market_value": 120.01,
+      "qty": 0.741397,
       "symbol": "XBI",
       "unrealized_pct": -0.05,
       "unrealized_pl": -0.06
     },
     {
-      "avg_entry": 61.8359,
-      "last": 61.805,
+      "avg_entry": 61.8109,
+      "last": 61.78,
       "managed": true,
-      "market_value": 158.54,
-      "qty": 2.565176,
+      "market_value": 158.31,
+      "qty": 2.562493,
       "symbol": "XLE",
       "unrealized_pct": -0.05,
       "unrealized_pl": -0.08
     },
     {
-      "avg_entry": 196.3031,
-      "last": 196.205,
+      "avg_entry": 196.3681,
+      "last": 196.27,
       "managed": true,
-      "market_value": 121.71,
-      "qty": 0.620316,
+      "market_value": 121.57,
+      "qty": 0.619398,
       "symbol": "XLK",
       "unrealized_pct": -0.05,
       "unrealized_pl": -0.06
     }
   ],
-  "updated_utc": "2026-09-22T19:41:35Z"
+  "updated_utc": "2026-09-22T20:53:44Z"
 }

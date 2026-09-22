@@ -46,7 +46,11 @@ jobs:
           python-version: "3.11"
       # No pip install: everything is stdlib on purpose (nothing to break in CI).
 
+      - name: Preflight
+        run: python doctor.py || true
+
       - name: Run the executor
+        id: run
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -65,6 +69,25 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           DRY_RUN: ${{ vars.DRY_RUN || 'true' }}
         run: python analyze.py || true
+
+      # A crash (non-zero exit) opens or refreshes ONE alert issue with the traceback, so a
+      # broken run is impossible to miss. The watchdog separately catches a run that never happened.
+      - name: Alert on executor error
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NUM=$(gh issue list --state open --search "Executor error in:title" --json number --jq '.[0].number // empty')
+          { echo "🔴 The executor exited with an error on $(date -u +%Y-%m-%d\ %H:%MZ). Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"; echo; echo '```'; tail -c 4000 reports/today.md 2>/dev/null || echo "(no report written)"; echo '```'; } > /tmp/err.md
+          if [ -n "$NUM" ]; then gh issue comment "$NUM" --body-file /tmp/err.md; else gh issue create --title "🔴 Executor error — bot.py failed" --body-file /tmp/err.md; fi
+
+      - name: Close error alert if healthy
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NUM=$(gh issue list --state open --search "Executor error in:title" --json number --jq '.[0].number // empty')
+          [ -n "$NUM" ] && gh issue close "$NUM" --comment "✅ Executor ran cleanly on $(date -u +%Y-%m-%d) — closing." || true
 
       # One rolling issue holds the daily log, so the whole history is readable in one thread
       # and you get a GitHub notification per run if you subscribe to it.

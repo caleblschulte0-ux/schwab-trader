@@ -25,6 +25,28 @@ def synth(seed, n=400, drift=0.0005, vol=0.01, start=100.0):
     return c
 
 
+def _dates(n, last="2026-09-21"):
+    from datetime import date, timedelta
+    d = date.fromisoformat(last)
+    out = []
+    while len(out) < n:
+        if d.weekday() < 5:
+            out.append(d.isoformat())
+        d -= timedelta(days=1)
+    return out[::-1]
+
+
+def _fresh_bars(self, symbols, start, end=None, adjustment="all", feed=None):
+    """Consecutive weekday bars whose newest date is 'yesterday' relative to the fake clock."""
+    out = {}
+    for s in symbols:
+        if s not in self.hist:
+            continue
+        closes = self.hist[s][:-1]
+        out[s] = list(zip(_dates(len(closes)), closes))
+    return out
+
+
 class FakeAlpaca:
     """Enough of alpaca.Alpaca for bot.main(): instant fills at the live price."""
     instances = []
@@ -113,7 +135,7 @@ class FakeAlpaca:
 
     # data
     def daily_bars(self, symbols, start, end=None, adjustment="all", feed=None):
-        return {s: [(f"2025-{i:02d}", c) for i, c in enumerate(self.hist[s][:-1])] for s in symbols if s in self.hist}
+        return _fresh_bars(self, symbols, start, end, adjustment, feed)
 
     def latest_prices(self, symbols, feed="iex"):
         return {s: self.px[s] for s in symbols if s in self.px}
@@ -127,7 +149,9 @@ class BotTests(unittest.TestCase):
         FakeAlpaca.instances.clear()
         FakeAlpaca.book = {"cash": 1000.0, "pos": {}}
         self.env = {"ALPACA_API_KEY": "k", "ALPACA_SECRET_KEY": "s", "DRY_RUN": "true"}
-        self.patches = [mock.patch.object(bot, "Alpaca", FakeAlpaca), mock.patch.dict(os.environ, self.env, clear=False)]
+        self.patches = [mock.patch.object(bot, "Alpaca", FakeAlpaca),
+                        mock.patch.object(bot.datamod, "load_history", side_effect=AssertionError("network call in test")),
+                        mock.patch.dict(os.environ, self.env, clear=False)]
         for p in self.patches:
             p.start()
 
@@ -215,6 +239,39 @@ class BotTests(unittest.TestCase):
         # halted state blocks trading on the next run
         self.assertEqual(bot.main(), 0)
         self.assertEqual(FakeAlpaca.instances[-1].calls, [])
+
+    def test_stale_data_refuses_to_trade(self):
+        orig_bars = FakeAlpaca.daily_bars
+
+        def old_bars(self, symbols, start, end=None, adjustment="all", feed=None):
+            return {s: [(f"2025-{(i % 12) + 1:02d}-{(i % 28) + 1:02d}", c) for i, c in enumerate(self.hist[s][:-1])] for s in symbols if s in self.hist}
+        # newest bar in 2025 is far older than today (2026-09-22) -> stale
+        with mock.patch.object(FakeAlpaca, "daily_bars", old_bars):
+            self.assertEqual(bot.main(), 0)
+        api = FakeAlpaca.instances[-1]
+        self.assertEqual(api.calls, [])
+        self.assertNotIn("last_trade_date", self._state())
+        with open("reports/today.md") as f:
+            self.assertIn("STALE DATA", f.read())
+
+    def test_missing_live_prices_refuses_to_trade(self):
+        with mock.patch.object(FakeAlpaca, "latest_prices", lambda self, symbols, feed="iex": {"SPY": self.px["SPY"]}):
+            with mock.patch.object(FakeAlpaca, "daily_bars", _fresh_bars):
+                self.assertEqual(bot.main(), 0)
+        self.assertEqual(FakeAlpaca.instances[-1].calls, [])
+
+    def test_bad_tick_is_ignored(self):
+        def spiky(self, symbols, feed="iex"):
+            out = {s: self.px[s] for s in symbols if s in self.px}
+            out["SPY"] = self.px["SPY"] * 3.0   # +200% "print"
+            return out
+        with mock.patch.object(FakeAlpaca, "latest_prices", spiky):
+            with mock.patch.object(FakeAlpaca, "daily_bars", _fresh_bars):
+                self.assertEqual(bot.main(), 0)
+        with open("reports/today.md") as f:
+            body = f.read()
+        self.assertIn("suspect live prices ignored: SPY", body)
+        self.assertGreater(len(FakeAlpaca.instances[-1].calls), 0)  # still traded, on sane prices
 
     def test_plan_orders_sells_first_and_closes_zero_targets(self):
         plan = bot.plan_orders({"SPY": 500.0, "GLD": 300.0}, {"SPY": 200.0, "TLT": 150.0}, 5.0)

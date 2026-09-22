@@ -3,7 +3,8 @@
 ## 0. It already runs
 Merge to `main` and the `trader` workflow runs every weekday at 15:35 ET on the built-in
 **simulator** (real prices, no accounts). Watch it in:
-- the **📈 Trading log** issue (one comment per run),
+- the **📈 Trading log** issue (one comment per run); a **🔴 Executor error** issue appears
+  only if a run crashes and closes itself when the next run is clean,
 - `reports/today.md`, `signals/targets.json`, `reports/track_record.md`,
 - the dashboard: Settings → Pages → *Deploy from branch* → `main` / `/ (root)`, then open
   the Pages URL.

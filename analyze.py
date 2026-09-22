@@ -132,6 +132,20 @@ def main() -> int:
               f"| Since | Start | Now | Total | CAGR | Sharpe | Max DD |", "|---|---:|---:|---:|---:|---:|---:|",
               f"| {es['start']} | ${es['start_equity']:,.2f} | ${es['end_equity']:,.2f} | {es['total_return']:+.2%} | "
               f"{cagr_txt} | {es['sharpe']:.2f} | {es['max_drawdown']:.1%} |", ""]
+        # monthly returns table
+        months: Dict[str, List[float]] = {}
+        for d, e in es["curve"]:
+            months.setdefault(d[:7], []).append(e)
+        keys = sorted(months)
+        if len(keys) >= 2:
+            L += ["### Monthly returns", "", "| Month | Return | End equity |", "|---|---:|---:|"]
+            prev_end = None
+            for k in keys:
+                start = prev_end if prev_end is not None else months[k][0]
+                end = months[k][-1]
+                L.append(f"| {k} | {end / start - 1:+.2%} | ${end:,.2f} |")
+                prev_end = end
+            L.append("")
     else:
         L += ["_No equity history yet._", ""]
     L += ["## Closed trades (FIFO round-trips from broker fills)", ""]

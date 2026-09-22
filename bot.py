@@ -54,6 +54,13 @@ HOLDINGS_FILE = os.path.join(SIGNALS_DIR, "holdings.json")
 TODAY_FILE = os.path.join(REPORTS_DIR, "today.md")
 
 HISTORY_DAYS = 420  # calendar days of bars to load (>= 260 trading days + slack)
+MAX_DAILY_MOVE = 0.25       # bad-tick guard for live prices
+MAX_BAR_AGE_DAYS = 5        # stale-data guard: newest bar must be within this many days
+MIN_LIVE_COVERAGE = 0.80    # stale-data guard: live prices needed for this share of symbols
+
+
+class StaleData(RuntimeError):
+    pass
 
 
 def env_bool(name: str, default: bool) -> bool:
@@ -141,14 +148,33 @@ def load_market_history(api: Alpaca, symbols: List[str], today_et: str, log: Log
         log(f"(data) live prices unavailable ({exc}); using last close")
 
     hist: Dict[str, List[float]] = {}
+    suspect: List[str] = []
     for s in symbols:
         closes = [c for _, c in bars.get(s, [])]
         if not closes:
             continue
         p = live.get(s)
         if p:
+            # Bad-tick guard: an ETF does not move 25% in a day. Treat it as a data glitch,
+            # mark from the last close instead, and say so.
+            if abs(p / closes[-1] - 1.0) > MAX_DAILY_MOVE:
+                suspect.append(f"{s} {p:.2f} vs {closes[-1]:.2f}")
+                p = closes[-1]
             closes.append(p)
         hist[s] = closes
+    if suspect:
+        log(f"(data) suspect live prices ignored: {', '.join(suspect)}")
+
+    # Stale-data guard: never trade on old prices. Bars must reach the previous session
+    # and live prices must cover nearly the whole universe, else this run only snapshots.
+    last_bar = max((str(bars[s][-1][0])[:10] for s in symbols if bars.get(s)), default="1970-01-01")
+    try:
+        age_days = (datetime.strptime(today_et, "%Y-%m-%d") - datetime.strptime(last_bar, "%Y-%m-%d")).days
+    except ValueError:
+        age_days = 999  # unparseable bar date -> treat as stale
+    coverage = len(live) / max(1, len(symbols))
+    if age_days > MAX_BAR_AGE_DAYS or coverage < MIN_LIVE_COVERAGE:
+        raise StaleData(f"last bar {last_bar} ({age_days}d old), live coverage {coverage:.0%}")
     return hist
 
 
@@ -377,7 +403,15 @@ def main() -> int:
         log(f"strategy already stepped today ({today_et}); re-using targets.json and reconciling only")
     else:
         symbols = sorted(managed | set(current))
-        hist = load_market_history(api, symbols, today_et, log)
+        try:
+            hist = load_market_history(api, symbols, today_et, log)
+        except StaleData as exc:
+            log(f"STALE DATA -- refusing to trade: {exc}. Snapshot only; will retry next run.")
+            st_raw["last_run_utc"] = now_utc
+            save_json(STATE_FILE, st_raw)
+            write_holdings(api, managed, now_utc, log)
+            write_today(log, f"{today_et} stale data")
+            return 0
         prices = {s: v[-1] for s, v in hist.items()}
         dec = compute_targets(hist, state, params, today=today_et)
         weights = dec.weights

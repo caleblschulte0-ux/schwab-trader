@@ -20,12 +20,12 @@ account with the same code.
 
 | | |
 |---|---|
-| **Strategy** | Trend-timed SPY core (30%) + top-6 momentum rotation over 34 ETFs, inverse-vol weights, 40% cluster cap, T-bills when defensive. Every knob in `config.json`. |
-| **Evidence** | 18-year backtest: **Sharpe 0.82 vs SPY 0.65, max drawdown -17% vs -52%**. Walk-forward: parameters chosen on 2008–2016 score **Sharpe 0.97 out-of-sample** on 2017–2026. Bootstrap, sensitivity and timing-luck tests in `reports/validation.md`. |
-| **Runs today** | No keys → the executor trades a built-in simulator at real prices and commits its book to the repo. First run already happened (see `reports/today.md`). |
+| **Strategy** | Adaptive core (30% in the strongest of SPY/QQQ/EFA while it is above its 200-day average) + top-6 momentum rotation over 34 ETFs in five staggered tranches, inverse-vol weights, 40% cluster cap, T-bills when defensive. Every knob in `config.json`. |
+| **Evidence** | 18-year backtest: **Sharpe 0.81 vs SPY 0.65, max drawdown -17% vs -52%**. Walk-forward: parameters chosen on 2008–2016 alone score **Sharpe 0.95 out-of-sample** on 2017–2026. Bootstrap, sensitivity and timing-luck tests in `reports/validation.md`. Every idea that did not survive the backtest is documented there and switched off. |
+| **Runs today** | No keys → the executor trades a built-in simulator at real prices and commits its book to the repo. The first run is already in `reports/today.md`. |
 | **Broker** | Alpaca: static keys (no 7-day OAuth expiry), paper and live from the same code, fractional shares. |
-| **Safety** | Long-only, never leveraged, sells before buys, one strategy step per day, only touches its own universe, 30% drawdown kill switch, broker-block detection. |
-| **Ops** | `doctor.py` preflight, `watchdog` issue on a missed day, a rolling **"📈 Trading log"** issue with every run, weekly backtest refresh, CI tests on every push, a static dashboard. |
+| **Safety** | Long-only, never leveraged, sells before buys, one strategy step per day, only touches its own universe, 30% drawdown kill switch, broker-block detection, **stale-data guard** (no trades on old prices), **bad-tick guard** (a 25% "print" on an ETF is ignored), committed fallback data so a Yahoo outage cannot break a run. |
+| **Ops** | `doctor.py` preflight on every run, a rolling **"📈 Trading log"** issue with every run, a **"🔴 Executor error"** issue with the traceback on any crash (auto-closed when healthy), a **watchdog** issue on a missed day, weekly backtest + validation refresh, CI tests on every push, a static dashboard. |
 | **No LLM in the loop** | The old Claude "brains" are gone from the trading path. An optional weekly Claude review (`analyst.yml`) can only write a report. |
 
 ## How it works
@@ -52,18 +52,18 @@ flowchart LR
 | File | What it is |
 |------|------------|
 | `strategy.py` | The rules as pure functions. `Params` = every knob. Optional sleeves (mean reversion, vol targeting, breadth regime, defensive momentum) are implemented, tested, and off. |
-| `config.json` / `config.py` | Presets (`balanced`, `growth`, `rotation_only`, `conservative`) and executor limits. Unknown keys are fatal on purpose. |
+| `config.json` / `config.py` | Presets (`balanced`, `growth`, `us_only`, `rotation_only`, `conservative`) and executor limits. Unknown keys are fatal on purpose. |
 | `bot.py` | The executor. Picks Alpaca if keys exist, else the simulator. |
 | `broker_sim.py` | File-backed simulator with the Alpaca interface, real prices, 5 bps slippage. |
 | `alpaca.py` | Minimal stdlib Alpaca client (trading + data). |
-| `data.py` | Keyless Yahoo daily bars with a local cache. |
+| `data.py` | Keyless Yahoo daily bars with a local cache; `data_seed/` is a committed 2-year fallback (`python data.py --seed`). |
 | `backtest.py` | Backtester + grids (`--grid`, `--grid2`, `--grid3`, `--grid4`). |
 | `validate.py` | Walk-forward, sensitivity, timing luck, bootstrap, rolling windows → `reports/validation.md`. |
 | `analyze.py` | Track record from the broker's fills and equity curve. |
 | `doctor.py` | Preflight checklist (`--strict` for CI). |
 | `watchdog.py` | Daily heartbeat check. |
 | `index.html` | Dashboard. Serve the repo root (GitHub Pages → main, `/`). |
-| `tests/` | 29 tests: indicators, targets, backtest/live parity, executor end-to-end on a fake broker and on the simulator. |
+| `tests/` | 35 tests: indicators, targets, tranches, adaptive core, backtest/live parity, data guards, executor end-to-end on a fake broker and on the simulator. No network. |
 | `signals/` | `state.json`, `targets.json`, `holdings.json`, `performance.json`, `sim_account.json`. |
 | `reports/` | `backtest.md`, `validation.md`, `today.md`, `track_record.md`, `paper_ledger.md`. |
 | `legacy/` | The retired Schwab + Claude-brain version. |
@@ -73,7 +73,7 @@ flowchart LR
 Edit `config.json` (then run `python backtest.py` to see what you did):
 
 ```json
-{ "preset": "balanced",          // balanced | growth (QQQ core) | rotation_only | conservative
+{ "preset": "balanced",          // balanced | growth (QQQ core) | us_only | rotation_only | conservative
   "strategy": { "mom_top_n": 6 },  // any strategy.Params field
   "executor": { "max_capital": null, "max_drawdown_halt": 0.30, "trade_window_min": 120 } }
 ```
@@ -83,7 +83,7 @@ Repo **variables** of the same name in upper case (`MAX_CAPITAL`, `MAX_DRAWDOWN_
 ## Run locally
 
 ```bash
-python -m unittest discover -s tests -v   # 29 tests, no network
+python -m unittest discover -s tests -v   # 35 tests, no network, <1s
 python doctor.py                          # preflight
 python backtest.py --grid4                # candidate-defaults comparison
 python validate.py                        # ~2 min, writes reports/validation.md

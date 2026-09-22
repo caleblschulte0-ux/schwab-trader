@@ -12,7 +12,9 @@ from typing import Dict, List, Optional, Tuple
 
 Bar = Tuple[str, float]  # (YYYY-MM-DD, adjusted close)
 
-CACHE_DIR = os.environ.get("DATA_CACHE_DIR", "data_cache")
+CACHE_DIR = os.environ.get("DATA_CACHE_DIR", "data_cache")   # full history, gitignored
+SEED_DIR = "data_seed"                                          # trimmed copy, committed: outage fallback
+SEED_ROWS = 520
 YAHOO_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{sym}?period1={p1}&period2={p2}&interval=1d&events=div"
 
 
@@ -60,8 +62,35 @@ def load_cache(symbol: str, max_age_hours: Optional[float] = None) -> Optional[L
         return [(row[0], float(row[1])) for row in rd if len(row) >= 2]
 
 
+def load_seed(symbol: str) -> Optional[List[Bar]]:
+    p = os.path.join(SEED_DIR, f"{symbol}.csv")
+    if not os.path.exists(p):
+        return None
+    with open(p) as f:
+        rd = csv.reader(f)
+        next(rd, None)
+        return [(row[0], float(row[1])) for row in rd if len(row) >= 2]
+
+
+def write_seed(symbols: List[str], rows: int = SEED_ROWS) -> int:
+    """Copy the newest `rows` bars of each cached symbol into data_seed/ (committed)."""
+    os.makedirs(SEED_DIR, exist_ok=True)
+    n = 0
+    for s in symbols:
+        bars = load_cache(s, None)
+        if not bars:
+            continue
+        with open(os.path.join(SEED_DIR, f"{s}.csv"), "w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["date", "adjclose"])
+            w.writerows(bars[-rows:])
+        n += 1
+    return n
+
+
 def load_history(symbols: List[str], refresh: bool = False, max_age_hours: Optional[float] = 12) -> Dict[str, List[Bar]]:
-    """Cached Yahoo history for each symbol. Skips (and reports) symbols that fail."""
+    """Yahoo history per symbol: local cache -> Yahoo -> stale cache -> committed seed.
+    Symbols that fail everywhere are skipped (and reported)."""
     out: Dict[str, List[Bar]] = {}
     for s in symbols:
         bars = None if refresh else load_cache(s, max_age_hours)
@@ -71,12 +100,26 @@ def load_history(symbols: List[str], refresh: bool = False, max_age_hours: Optio
                 save_cache(s, bars)
                 time.sleep(0.25)
             except Exception as exc:  # noqa: BLE001
-                stale = load_cache(s, None)
-                if stale:
-                    print(f"(data) {s}: fetch failed ({exc}); using stale cache")
-                    bars = stale
+                fallback = load_cache(s, None) or load_seed(s)
+                if fallback:
+                    print(f"(data) {s}: fetch failed ({exc}); using fallback data ending {fallback[-1][0]}")
+                    bars = fallback
                 else:
                     print(f"(data) {s}: fetch failed ({exc}); skipping")
                     continue
         out[s] = bars
     return out
+
+
+if __name__ == "__main__":
+    import sys
+    from strategy import DEFENSIVE, UNIVERSE
+    syms = sorted(set(UNIVERSE) | set(DEFENSIVE))
+    if "--seed" in sys.argv:
+        load_history(syms, refresh=True, max_age_hours=None)
+        print(f"(data) wrote seed for {write_seed(syms)} symbols -> {SEED_DIR}/")
+    else:
+        h = load_history(syms, refresh="--refresh" in sys.argv, max_age_hours=None)
+        for s in syms:
+            b = h.get(s)
+            print(f"{s:5} {len(b) if b else 0:5} bars  {b[-1][0] if b else '-'}")

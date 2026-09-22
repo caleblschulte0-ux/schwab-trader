@@ -1,18 +1,80 @@
 {
   "hwm": 1000.0,
   "last_decision_date": "2026-09-22",
-  "last_run_utc": "2026-09-22T19:41:35Z",
+  "last_run_utc": "2026-09-22T20:53:44Z",
   "last_trade_date": "2026-09-22",
   "strategy": {
     "mom_days_since_rebalance": 0,
     "mom_holdings": [
-      "USO",
-      "SMH",
-      "XBI",
-      "XLK",
       "DBC",
-      "XLE"
+      "SMH",
+      "USO",
+      "XBI",
+      "XLE",
+      "XLK"
     ],
-    "mr_positions": {}
+    "mr_positions": {},
+    "tranches": [
+      {
+        "days_since_rebalance": 0,
+        "holdings": [
+          "USO",
+          "SMH",
+          "XBI",
+          "XLK",
+          "DBC",
+          "XLE"
+        ],
+        "next_offset": 0
+      },
+      {
+        "days_since_rebalance": 2,
+        "holdings": [
+          "USO",
+          "SMH",
+          "XBI",
+          "XLK",
+          "DBC",
+          "XLE"
+        ],
+        "next_offset": 0
+      },
+      {
+        "days_since_rebalance": 4,
+        "holdings": [
+          "USO",
+          "SMH",
+          "XBI",
+          "XLK",
+          "DBC",
+          "XLE"
+        ],
+        "next_offset": 0
+      },
+      {
+        "days_since_rebalance": 6,
+        "holdings": [
+          "USO",
+          "SMH",
+          "XBI",
+          "XLK",
+          "DBC",
+          "XLE"
+        ],
+        "next_offset": 0
+      },
+      {
+        "days_since_rebalance": 8,
+        "holdings": [
+          "USO",
+          "SMH",
+          "XBI",
+          "XLK",
+          "DBC",
+          "XLE"
+        ],
+        "next_offset": 0
+      }
+    ]
   }
 }

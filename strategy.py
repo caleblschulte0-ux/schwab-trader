@@ -75,9 +75,12 @@ class Params:
     mom_rebalance_days: int = 10                     # every 2 weeks (walk-forward pick); 1 = daily
     mom_weighting: str = "inverse_vol"               # or "equal"
     mom_universe: Optional[Sequence[str]] = None     # None = UNIVERSE
+    mom_tranches: int = 5                            # split the sleeve into N staggered rebalance
+                                                     # cycles to average out rebalance-timing luck
     # Optional core sleeve: fixed slice in `core_symbol` while it is above its 200-day SMA
     core_weight: float = 0.30                        # 0 = off. 'growth' preset uses QQQ
-    core_symbol: str = "SPY"
+    core_symbol: str = "auto"                        # "auto": strongest of core_candidates by momentum, or a ticker
+    core_candidates: Sequence[str] = ("SPY", "QQQ", "EFA")
     # Regime / defensive
     breadth_min: float = 0.0                         # 0 = off. e.g. 0.4 -> fully defensive when <40% of
                                                      # the risk universe is above its 200-day SMA
@@ -111,10 +114,18 @@ class MRPosition:
 
 
 @dataclass
+class Tranche:
+    holdings: List[str] = field(default_factory=list)
+    days_since_rebalance: int = 9999
+    next_offset: int = 0   # after its FIRST rebalance a tranche restarts its clock here (stagger)
+
+
+@dataclass
 class State:
-    mom_holdings: List[str] = field(default_factory=list)
-    mom_days_since_rebalance: int = 9999
+    mom_holdings: List[str] = field(default_factory=list)      # union of tranche holdings (reporting)
+    mom_days_since_rebalance: int = 9999                      # tranche 0 (kept for compatibility)
     mr_positions: Dict[str, MRPosition] = field(default_factory=dict)
+    tranches: List[Tranche] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -126,6 +137,9 @@ class State:
             return s
         s.mom_holdings = list(d.get("mom_holdings", []))
         s.mom_days_since_rebalance = int(d.get("mom_days_since_rebalance", 9999))
+        for t in d.get("tranches") or []:
+            s.tranches.append(Tranche(list(t.get("holdings", [])), int(t.get("days_since_rebalance", 9999)),
+                                      int(t.get("next_offset", 0))))
         for sym, p in (d.get("mr_positions") or {}).items():
             s.mr_positions[sym] = MRPosition(sym, str(p.get("entry_date", "")), float(p.get("entry_price", 0.0)),
                                              int(p.get("days_held", 0)))
@@ -308,32 +322,54 @@ def compute_targets(
                 if s in mom_univ and g.mom_score is not None and g.mom_score > 0 and g.uptrend and g.vol}
     ranked = sorted(eligible, key=lambda s: eligible[s].mom_score, reverse=True)
 
-    if risk_off:
-        if st.mom_holdings:
-            notes.append(f"regime risk-off (breadth {breadth:.0%} < {p.breadth_min:.0%}): exiting {st.mom_holdings}")
-        st.mom_holdings = []
-        if rebalance:
-            st.mom_days_since_rebalance = 0
-    elif rebalance:
-        keep_zone = set(ranked[: p.mom_top_n + p.mom_hysteresis])
-        selected = [s for s in st.mom_holdings if s in keep_zone]
-        for s in ranked:
-            if len(selected) >= p.mom_top_n:
-                break
-            if s not in selected:
-                selected.append(s)
-        added = [s for s in selected if s not in st.mom_holdings]
-        dropped = [s for s in st.mom_holdings if s not in selected]
-        if added or dropped:
-            notes.append(f"momentum rebalance: +{added or '-'} -{dropped or '-'}")
-        st.mom_holdings = selected
-        st.mom_days_since_rebalance = 0
-    else:
-        still = [s for s in st.mom_holdings if s in sig and sig[s].uptrend]
-        broke = [s for s in st.mom_holdings if s not in still]
-        if broke:
-            notes.append(f"momentum trend-break exit: {broke}")
-        st.mom_holdings = still
+    # tranches: initialise (staggered) or migrate a single-tranche state
+    n_tr = max(1, int(p.mom_tranches))
+    if len(st.tranches) != n_tr:
+        # Fresh start or tranche-count change: every tranche inherits the current holdings and
+        # rebalances NOW (full investment on day one); after that first rebalance tranche k
+        # restarts its clock at k*step so the cycles are staggered from then on.
+        step = max(1, p.mom_rebalance_days // n_tr)
+        st.tranches = [Tranche(list(st.mom_holdings), 9999, k * step) for k in range(n_tr)]
+        st.mom_days_since_rebalance = 9999
+    rebalance = False
+    for k, tr in enumerate(st.tranches):
+        if k > 0:
+            tr.days_since_rebalance += 1
+        else:
+            tr.days_since_rebalance = st.mom_days_since_rebalance
+        tr_reb = tr.days_since_rebalance >= p.mom_rebalance_days
+        rebalance = rebalance or tr_reb
+        tag = f"tranche {k + 1}/{n_tr} " if n_tr > 1 else ""
+        if risk_off:
+            if tr.holdings:
+                notes.append(f"{tag}regime risk-off (breadth {breadth:.0%} < {p.breadth_min:.0%}): exiting {tr.holdings}")
+            tr.holdings = []
+            if tr_reb:
+                tr.days_since_rebalance = tr.next_offset
+                tr.next_offset = 0
+        elif tr_reb:
+            keep_zone = set(ranked[: p.mom_top_n + p.mom_hysteresis])
+            selected = [s for s in tr.holdings if s in keep_zone]
+            for s in ranked:
+                if len(selected) >= p.mom_top_n:
+                    break
+                if s not in selected:
+                    selected.append(s)
+            added = [s for s in selected if s not in tr.holdings]
+            dropped = [s for s in tr.holdings if s not in selected]
+            if added or dropped:
+                notes.append(f"{tag}momentum rebalance: +{added or '-'} -{dropped or '-'}")
+            tr.holdings = selected
+            tr.days_since_rebalance = tr.next_offset
+            tr.next_offset = 0
+        else:
+            still = [s for s in tr.holdings if s in sig and sig[s].uptrend]
+            broke = [s for s in tr.holdings if s not in still]
+            if broke:
+                notes.append(f"{tag}momentum trend-break exit: {broke}")
+            tr.holdings = still
+    st.mom_days_since_rebalance = st.tranches[0].days_since_rebalance
+    st.mom_holdings = sorted({s for tr in st.tranches for s in tr.holdings})
 
     weights: Dict[str, float] = {}
 
@@ -376,19 +412,28 @@ def compute_targets(
 
     # ------------------------------------------------ core sleeve
     core_used = 0.0
-    if p.core_weight > 0 and p.core_symbol in sig and not risk_off:
-        g = sig[p.core_symbol]
-        if g.uptrend:
-            weights[p.core_symbol] = weights.get(p.core_symbol, 0.0) + p.core_weight
+    core_pick: Optional[str] = None
+    if p.core_weight > 0 and not risk_off:
+        if p.core_symbol == "auto":
+            cands = [s for s in p.core_candidates if s in sig and sig[s].mom_score is not None
+                     and sig[s].mom_score > 0 and sig[s].uptrend]
+            core_pick = max(cands, key=lambda s: sig[s].mom_score) if cands else None
+        elif p.core_symbol in sig and sig[p.core_symbol].uptrend:
+            core_pick = p.core_symbol
+        if core_pick:
+            weights[core_pick] = weights.get(core_pick, 0.0) + p.core_weight
             core_used = p.core_weight
+    regime["core"] = core_pick
     # ------------------------------------------------ momentum weights
     mr_used = slot * len(st.mr_positions)
     mom_budget = max(0.0, 1.0 - mr_used - p.core_weight) if p.mr_weight + p.mom_weight >= 0.999 else p.mom_weight + (p.mr_weight - mr_used) - p.core_weight
     mom_budget = max(0.0, mom_budget)
-    if st.mom_holdings:
-        raw = {s: (1.0 if p.mom_weighting == "equal" else 1.0 / max(sig[s].vol, 0.02)) for s in st.mom_holdings}
+    for tr in st.tranches:
+        if not tr.holdings:
+            continue
+        raw = {s: (1.0 if p.mom_weighting == "equal" else 1.0 / max(sig[s].vol, 0.02)) for s in tr.holdings}
         tot = sum(raw.values())
-        sleeve_cap = mom_budget * len(st.mom_holdings) / p.mom_top_n
+        sleeve_cap = (mom_budget / n_tr) * len(tr.holdings) / p.mom_top_n
         for s, v in raw.items():
             weights[s] = weights.get(s, 0.0) + sleeve_cap * v / tot
 

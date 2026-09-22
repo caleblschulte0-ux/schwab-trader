@@ -171,8 +171,10 @@ def main() -> int:
           "Each row flips ONE thing relative to the shipped defaults (`python backtest.py --grid3` for more).", "",
           "| Variant | 2008→ CAGR / Sharpe / MaxDD | 2015→ CAGR / Sharpe / MaxDD | OOS 2017→ CAGR / Sharpe / MaxDD |", "|---|---|---|---|"]
     variants = [("✅ Shipped defaults", base),
-                ("no SPY core sleeve (100% rotation)", replace(base, core_weight=0.0)),
-                ("'growth' preset: QQQ core instead of SPY", replace(base, core_symbol="QQQ")),
+                ("no core sleeve (100% rotation)", replace(base, core_weight=0.0)),
+                ("fixed SPY core instead of adaptive", replace(base, core_symbol="SPY")),
+                ("'growth' preset: fixed QQQ core", replace(base, core_symbol="QQQ")),
+                ("single rebalance tranche (no stagger)", replace(base, mom_tranches=1)),
                 ("no cluster cap", replace(base, cluster_cap=1.0)),
                 ("top 5 / weekly (previous defaults)", replace(base, mom_top_n=5, mom_rebalance_days=5)),
                 ("defensive asset by momentum (TLT/IEF/GLD)", replace(base, defensive_mode="momentum")),
