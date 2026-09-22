@@ -142,6 +142,17 @@ class TargetTests(unittest.TestCase):
         self.assertNotIn("QLD", dec2.weights)
         self.assertIsNone(dec2.regime["core"])
 
+    def test_core_overlapping_momentum_pick_is_not_clipped(self):
+        # QQQ is both the core pick and the top momentum pick: the core's 50% must survive
+        p = Params(core_weight=0.5, core_symbol="QQQ", mom_top_n=3)
+        hist = self._hist()
+        hist["QQQ"] = [100 * math.exp(0.004 * i) for i in range(400)]
+        dec = compute_targets(hist, State(), p, today="d1")
+        self.assertIn("QQQ", dec.mom_selected)
+        self.assertGreaterEqual(dec.weights["QQQ"], 0.5 - 1e-6)
+        self.assertLessEqual(dec.weights["QQQ"], 0.5 + p.max_position_weight + 1e-6)
+        self.assertLessEqual(sum(dec.weights.values()), 1.0 + 1e-9)
+
     def test_bear_market_goes_to_cash_proxy(self):
         # everything trending down -> nothing eligible -> 100% cash proxy
         hist = {s: synth(7, 400, -0.002, 0.01) for s in UNIVERSE}

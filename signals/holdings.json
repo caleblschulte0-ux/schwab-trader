@@ -5,16 +5,6 @@
   "mode": "sim",
   "positions": [
     {
-      "avg_entry": 91.6158,
-      "last": 91.57,
-      "managed": true,
-      "market_value": 232.81,
-      "qty": 2.542466,
-      "symbol": "BIL",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.12
-    },
-    {
       "avg_entry": 32.4562,
       "last": 32.44,
       "managed": true,
@@ -38,11 +28,11 @@
       "avg_entry": 747.8338,
       "last": 747.46,
       "managed": true,
-      "market_value": 349.83,
-      "qty": 0.468018,
+      "market_value": 582.64,
+      "qty": 0.779491,
       "symbol": "QQQ",
       "unrealized_pct": -0.05,
-      "unrealized_pl": -0.17
+      "unrealized_pl": -0.29
     },
     {
       "avg_entry": 607.7638,
@@ -95,5 +85,5 @@
       "unrealized_pl": -0.03
     }
   ],
-  "updated_utc": "2026-09-22T23:07:02Z"
+  "updated_utc": "2026-09-22T23:12:10Z"
 }

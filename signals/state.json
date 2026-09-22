@@ -1,6 +1,5 @@
 {
   "bought_today": [
-    "BIL",
     "DBC",
     "EEM",
     "QQQ",
@@ -13,7 +12,7 @@
   "hwm": 1000.0,
   "last_decision_date": "2026-09-22",
   "last_mode": "SIM",
-  "last_run_utc": "2026-09-22T23:07:02Z",
+  "last_run_utc": "2026-09-22T23:12:10Z",
   "last_seen_date": "2026-09-22",
   "last_trade_date": "2026-09-22",
   "strategy": {

@@ -21,7 +21,7 @@ account with the same code.
 | | |
 |---|---|
 | **Strategy** | Trend-timed core (50% in the strongest of SPY/QQQ/EFA while above its 150-day average) + top-8 momentum rotation over 34 ETFs in five staggered tranches, inverse-vol weights, 40% cluster cap, T-bills when defensive. Tuned to lose money less often. Every knob in `config.json`. |
-| **Evidence** | 18-year backtest: **Sharpe 0.86 vs SPY 0.65, max drawdown -14% vs -52%**, losing months, 12-month stretches and time underwater all measured. Out-of-sample 2017–2026 Sharpe 1.09. Bootstrap, sensitivity and timing-luck tests in `reports/validation.md`. Every idea that did not survive the backtest is documented there and switched off. |
+| **Evidence** | 18-year backtest: **Sharpe 0.79 vs SPY 0.65, max drawdown -18% vs -52%**, losing months, 12-month stretches and time underwater all measured. Out-of-sample 2017–2026: +13.1%/yr, Sharpe 0.96. Bootstrap, sensitivity and timing-luck tests in `reports/validation.md`. Every idea that did not survive the backtest is documented there and switched off. |
 | **Runs today** | No keys → the executor trades a built-in simulator at real prices and commits its book to the repo. The first run is already in `reports/today.md`. |
 | **Broker** | Alpaca: static keys (no 7-day OAuth expiry), paper and live from the same code, fractional shares. |
 | **Safety** | Long-only, never leveraged, sells before buys, one strategy step per day, only touches its own universe, 30% drawdown kill switch, broker-block detection, **stale-data guard** (no trades on old prices), **bad-tick guard** (a 25% "print" on an ETF is ignored), committed fallback data so a Yahoo outage cannot break a run. |

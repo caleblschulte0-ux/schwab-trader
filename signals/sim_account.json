@@ -1,6 +1,6 @@
 {
-  "cash": 2.0000000000000036,
-  "created_utc": "2026-09-22T23:07:02Z",
+  "cash": 2.0000000000000604,
+  "created_utc": "2026-09-22T23:12:10Z",
   "equity_curve": [
     [
       "2026-09-22",
@@ -11,82 +11,70 @@
     {
       "id": "sim-1",
       "price": "747.8338",
-      "qty": "0.468018",
+      "qty": "0.779491",
       "side": "buy",
       "symbol": "QQQ",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
       "id": "sim-2",
-      "price": "91.6158",
-      "qty": "2.542466",
-      "side": "buy",
-      "symbol": "BIL",
-      "transaction_time": "2026-09-22T23:07:24Z"
-    },
-    {
-      "id": "sim-3",
       "price": "61.8109",
       "qty": "1.275342",
       "side": "buy",
       "symbol": "XLE",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
-      "id": "sim-4",
+      "id": "sim-3",
       "price": "32.4562",
       "qty": "2.388140",
       "side": "buy",
       "symbol": "DBC",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
-      "id": "sim-5",
+      "id": "sim-4",
       "price": "69.1345",
       "qty": "0.993281",
       "side": "buy",
       "symbol": "EEM",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
-      "id": "sim-6",
+      "id": "sim-5",
       "price": "196.3681",
       "qty": "0.308248",
       "side": "buy",
       "symbol": "XLK",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
-      "id": "sim-7",
+      "id": "sim-6",
       "price": "161.9509",
       "qty": "0.368939",
       "side": "buy",
       "symbol": "XBI",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
-      "id": "sim-8",
+      "id": "sim-7",
       "price": "607.7638",
       "qty": "0.064235",
       "side": "buy",
       "symbol": "SMH",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     },
     {
-      "id": "sim-9",
+      "id": "sim-8",
       "price": "144.1520",
       "qty": "0.213247",
       "side": "buy",
       "symbol": "USO",
-      "transaction_time": "2026-09-22T23:07:24Z"
+      "transaction_time": "2026-09-22T23:12:34Z"
     }
   ],
-  "n": 9,
+  "n": 8,
   "positions": {
-    "BIL": {
-      "avg_entry": 91.61578469467163,
-      "qty": 2.5424658073528152
-    },
     "DBC": {
       "avg_entry": 32.456218626022334,
       "qty": 2.3881401864188523
@@ -97,7 +85,7 @@
     },
     "QQQ": {
       "avg_entry": 747.8337519836425,
-      "qty": 0.46801845874383
+      "qty": 0.7794914290158309
     },
     "SMH": {
       "avg_entry": 607.7637519836426,

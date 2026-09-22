@@ -18,25 +18,20 @@
     "tranche 2/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE', 'QQQ', 'EEM'] --",
     "tranche 3/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE', 'QQQ', 'EEM'] --",
     "tranche 4/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE', 'QQQ', 'EEM'] --",
-    "tranche 5/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE', 'QQQ', 'EEM'] --",
-    "defensive 23% -> ['BIL']"
+    "tranche 5/5 momentum rebalance: +['USO', 'SMH', 'XBI', 'XLK', 'DBC', 'XLE', 'QQQ', 'EEM'] --"
   ],
   "preset": "balanced",
   "rebalanced": true,
   "regime": {
     "breadth": 0.655,
     "core": "QQQ",
-    "defensive": [
-      "BIL"
-    ],
-    "exposure": 0.767,
+    "exposure": 1.0,
     "risk_off": false
   },
   "weights": {
-    "BIL": 0.232937,
     "DBC": 0.077511,
     "EEM": 0.068676,
-    "QQQ": 0.35,
+    "QQQ": 0.582937,
     "SMH": 0.039044,
     "USO": 0.0327,
     "XBI": 0.059758,

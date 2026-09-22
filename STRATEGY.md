@@ -15,6 +15,8 @@ for the `aggressive` preset. No single stocks.
    total returns (the last month is excluded: 1-month returns mean-revert). Eligible =
    positive score **and** price above its 150-day average. Hold the top 8,
    inverse-volatility weighted; a holding keeps its slot while it ranks in the top 11.
+   (If the core's index is also a rotation pick, the two slices add up; the 35% cap applies
+   to the rotation's slice only.)
    Five staggered tranches on a 10-day cycle, so a fifth of the sleeve rebalances every
    other day. A holding is dropped the day it breaks its 150-day average.
 3. **Caps**: 35% per ETF and 40% per economic cluster in the rotation.
@@ -30,30 +32,30 @@ dividends reinvested; SSO/QLD use their real price histories (fees and decay inc
 
 | 2008 → 2026 | **balanced** | **aggressive** | SPY |
 |---|---:|---:|---:|
-| Yearly return | +8.6% | +15.6% | +11.4% |
-| $1,000 became | $4,700 | $15,000 | $7,500 |
-| Sharpe | 0.86 | 0.83 | 0.65 |
-| Max drawdown | -14% | -28% | -52% |
-| Losing months | 36% | 37% | – |
-| Losing 12-month stretches | 20% | 22% | – |
-| Losing calendar years | 5 of 19 | 4 of 19 | 4 of 19 |
-| Worst year | -11% (2022) | -17% (2022) | -36% (2008) |
-| Out-of-sample 2017+ | +11.8% | +20.0% | +15.4% |
+| Yearly return | +9.8% | +15.6% | +11.4% |
+| $1,000 became | $5,800 | $15,000 | $7,500 |
+| Sharpe | 0.79 | 0.83 | 0.65 |
+| Max drawdown | -18% | -28% | -52% |
+| Losing months | 38% | 37% | – |
+| Losing 12-month stretches | 22% | 22% | – |
+| Losing calendar years | 4 of 19 | 4 of 19 | 4 of 19 |
+| Worst year | -12% (2022) | -17% (2022) | -36% (2008) |
+| Out-of-sample 2017+ | +13.1% | +20.0% | +15.4% |
 
-Versus the previous defaults, `balanced` loses a little less often (38% → 36% losing months,
-21% → 20% losing 12-month stretches; 34% → 31% and 23% → 18% since 2017) and its worst
-drawdown shrinks from -18% to -14%. The costs: about 1.3 points a year less return, and a
-worse 2022 (-11% instead of -8%). `aggressive` gets the same settings: same return as
-before, fewer losing years (5 → 4) and 12-month stretches (26% → 22%), drawdown -31% → -28%.
+Versus the previous settings (30% core, 6 names, 200-day), measured on the same corrected
+code: losing years 5 → 4 of 19, losing 12-month stretches 27% → 24% (2015+) and 26% → 23%
+(2017+), max drawdown -20% → -18%, return about the same. The cost: the worst 12-month
+stretch is a little deeper (-13.5% vs -11.2% since 2017). The `aggressive` preset gets the
+same settings: same return as before, losing 12-month stretches 26% → 22%, drawdown -31% → -28%.
 
 What no setting can do: make losing months rare. About a third of months are down for
 anything that earns stock-like returns, SPY included. What the strategy controls is how
 deep and how long the losses are.
 
 - **Walk-forward**: parameters picked on 2008–2016 alone hold up on 2017–2026 (Sharpe
-  1.09 out-of-sample for the shipped settings).
+  in the out-of-sample column of `reports/validation.md` §1 and §6).
 - **Bootstrap** (1,000 synthetic 5-year paths): 3% chance of a negative 5-year stretch;
-  1% chance of a -30% drawdown for `balanced`.
+  see `reports/validation.md` §4 for drawdown odds.
 - **The catch**: `balanced` trails SPY in most bull markets. `aggressive` is the preset
   that beats it, with bigger swings. The `aggressive` kill switch sits at 45%.
 

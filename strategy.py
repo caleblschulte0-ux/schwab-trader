@@ -454,7 +454,14 @@ def compute_targets(
             weights[s] = weights.get(s, 0.0) + sleeve_cap * v / tot
 
     # ------------------------------------------------ caps, vol targeting, defensive fill
-    freed = _apply_caps(weights, p, exempt={core_pick} if core_pick and weights.get(core_pick, 0) >= p.core_weight - 1e-9 and core_pick not in st.mom_holdings else None)
+    # Caps apply to the rotation only: take the core slice out, cap, put it back.
+    if core_pick and core_used > 0:
+        weights[core_pick] -= core_used
+        if weights[core_pick] <= 1e-12:
+            del weights[core_pick]
+    freed = _apply_caps(weights, p)
+    if core_pick and core_used > 0:
+        weights[core_pick] = weights.get(core_pick, 0.0) + core_used
     total = sum(weights.values())
     if total > 1.0:
         weights = {s: w / total for s, w in weights.items()}
