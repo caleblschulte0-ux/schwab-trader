@@ -104,6 +104,9 @@ class Alpaca:
     def open_orders(self) -> List[dict]:
         return self._t("GET", "/v2/orders", params={"status": "open", "limit": 500}) or []
 
+    def cancel_order(self, order_id: str) -> Any:
+        return self._t("DELETE", f"/v2/orders/{order_id}")
+
     def cancel_all_orders(self) -> Any:
         return self._t("DELETE", "/v2/orders")
 

@@ -435,6 +435,18 @@ def main() -> int:
         write_today(log, f"{today_et} HALTED")
         return 0
 
+    # ------------------------------------------------------------ stale open orders
+    # An unfilled order left over from an earlier run would be double-counted by the
+    # reconcile below (it isn't a position yet). Cancel ours before planning.
+    if not no_trade:
+        try:
+            for o in api.open_orders():
+                if o.get("symbol") in managed:
+                    api.cancel_order(o["id"])
+                    log(f"cancelled stale open order {o.get('side')} {o.get('symbol')} ({o.get('status')})")
+        except Exception as exc:  # noqa: BLE001
+            log(f"(warn) could not check open orders ({exc})")
+
     # ------------------------------------------------------------ decide (once per trading day)
     positions = {p["symbol"]: p for p in api.positions()}
     current = {s: float(p.get("market_value", 0) or 0) for s, p in positions.items() if s in managed}

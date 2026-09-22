@@ -139,6 +139,16 @@ class FakeAlpaca:
     def get_order(self, oid):
         return self.orders[oid]
 
+    stale = []
+    cancelled = []
+
+    def open_orders(self):
+        return list(FakeAlpaca.stale)
+
+    def cancel_order(self, oid):
+        FakeAlpaca.cancelled.append(oid)
+        FakeAlpaca.stale = [o for o in FakeAlpaca.stale if o["id"] != oid]
+
     def asset(self, symbol):
         return {"symbol": symbol, "tradable": True, "fractionable": True}
 
@@ -159,6 +169,8 @@ class BotTests(unittest.TestCase):
         FakeAlpaca.book = {"cash": 1000.0, "pos": {}}
         FakeAlpaca.flows = 0.0
         FakeAlpaca.coids = []
+        FakeAlpaca.stale = []
+        FakeAlpaca.cancelled = []
         self.env = {"ALPACA_API_KEY": "k", "ALPACA_SECRET_KEY": "s", "DRY_RUN": "true"}
         self.patches = [mock.patch.object(bot, "Alpaca", FakeAlpaca),
                         mock.patch.object(bot.datamod, "load_history", side_effect=AssertionError("network call in test")),
@@ -348,6 +360,12 @@ class BotTests(unittest.TestCase):
         self.assertEqual(self._state()["paper_clean_runs"], 1)
         self.assertEqual(bot.main(), 0)
         self.assertEqual(self._state()["paper_clean_runs"], 1)
+
+    def test_stale_open_orders_are_cancelled_first(self):
+        FakeAlpaca.stale = [{"id": "old1", "symbol": "SPY", "side": "buy", "status": "new"},
+                            {"id": "old2", "symbol": "AAPL", "side": "buy", "status": "new"}]
+        self.assertEqual(bot.main(), 0)
+        self.assertEqual(FakeAlpaca.cancelled, ["old1"])   # only our universe; AAPL untouched
 
     def test_plan_orders_sells_first_and_closes_zero_targets(self):
         plan = bot.plan_orders({"SPY": 500.0, "GLD": 300.0}, {"SPY": 200.0, "TLT": 150.0}, 5.0)

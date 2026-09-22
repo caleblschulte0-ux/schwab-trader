@@ -191,6 +191,9 @@ class SimBroker:
     def open_orders(self) -> List[dict]:
         return []
 
+    def cancel_order(self, order_id: str):
+        return None
+
     def cancel_all_orders(self):
         return []
 
