@@ -138,7 +138,7 @@ class ExecutorOnSimTests(unittest.TestCase):
         self.assertEqual(h["mode"], "sim")
         with open("signals/targets.json") as f:
             t = json.load(f)
-        self.assertEqual(t["preset"], "balanced")
+        self.assertEqual(t["preset"], json.load(open("config.json"))["preset"])
         self.assertIn("regime", t)
         # second run same day: reconciles only, no meaningful new orders
         n = len(book["fills"])
