@@ -1,5 +1,5 @@
 {
-  "_comment": "Knobs live here. 'preset' picks a named bundle (balanced | aggressive | growth | us_only | rotation_only | conservative); 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits. Precedence for executor limits: env var (UPPER_CASE) > this file's executor block > the preset's executor block > defaults. Re-run `python backtest.py` after changing anything.",
+  "_comment": "Knobs live here. 'preset' picks a named bundle (balanced | conservative | guarded_growth | aggressive | growth | us_only | rotation_only | conservative); 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits. Precedence for executor limits: env var (UPPER_CASE) > this file's executor block > the preset's executor block > defaults. Re-run `python backtest.py` after changing anything.",
   "preset": "balanced",
   "presets": {
     "balanced": {
@@ -24,8 +24,9 @@
       "core_weight": 0.0
     },
     "conservative": {
-      "core_symbol": "SPY",
-      "vol_target": 0.12
+      "credit_filter": true,
+      "credit_sma": 50,
+      "credit_scale": 0.5
     },
     "aggressive": {
       "core_leveraged": true,
@@ -36,6 +37,19 @@
       ],
       "executor": {
         "max_drawdown_halt": 0.45
+      }
+    },
+    "guarded_growth": {
+      "core_leveraged": true,
+      "core_candidates": [
+        "SPY",
+        "QQQ"
+      ],
+      "credit_filter": true,
+      "credit_sma": 50,
+      "credit_scale": 0.5,
+      "executor": {
+        "max_drawdown_halt": 0.4
       }
     }
   },

@@ -30,17 +30,23 @@ losing-12-month frequency in all three windows tested, versus the earlier 30% / 
 Daily bars 2008–2026, fills at the close, 5 bps slippage per side, $0 commissions,
 dividends reinvested; SSO/QLD use their real price histories (fees and decay included).
 
-| 2008 → 2026 | **balanced** | **aggressive** | SPY |
-|---|---:|---:|---:|
-| Yearly return | +9.8% | +15.6% | +11.4% |
-| $1,000 became | $5,800 | $15,000 | $7,500 |
-| Sharpe | 0.79 | 0.83 | 0.65 |
-| Max drawdown | -18% | -28% | -52% |
-| Losing months | 38% | 37% | – |
-| Losing 12-month stretches | 22% | 22% | – |
-| Losing calendar years | 4 of 19 | 4 of 19 | 4 of 19 |
-| Worst year | -12% (2022) | -17% (2022) | -36% (2008) |
-| Out-of-sample 2017+ | +13.1% | +20.0% | +15.4% |
+| 2008 → 2026 | conservative | **balanced** | guarded_growth | aggressive | SPY |
+|---|---:|---:|---:|---:|---:|
+| Yearly return | +8.1% | +9.8% | +13.2% | +15.6% | +11.4% |
+| $1,000 became | $4,300 | $5,800 | $10,100 | $15,000 | $7,500 |
+| Max drawdown | -14% | -18% | -22% | -28% | -52% |
+| Losing 12-month stretches | 19% | 22% | 18% | 22% | – |
+| Losing months | 38% | 38% | 40% | 37% | – |
+| Out-of-sample 2017+ | +11.1% | +13.1% | +16.8% | +20.0% | +15.4% |
+| Kill switch | 30% | 30% | 40% | 45% | – |
+
+- **conservative** = balanced + the credit-stress signal (junk bonds lagging Treasuries → halve
+  risk). Smallest drawdowns, lowest return.
+- **guarded_growth** = aggressive + the credit-stress signal. Beats SPY in every window with
+  under half its drawdown; fewer losing 12-month stretches than balanced, but slightly more
+  losing months. A middle ground, not a free lunch.
+- The credit signal is insurance: it trims 3–6 points off the worst drawdown and costs
+  1.5–3 points of yearly return. It can't be tuned to be free; faster versions cost more.
 
 Versus the previous settings (30% core, 6 names, 200-day), measured on the same corrected
 code: losing years 5 → 4 of 19, losing 12-month stretches 27% → 24% (2015+) and 26% → 23%

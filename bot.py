@@ -45,7 +45,7 @@ import news_overlay
 import data as datamod
 from alpaca import Alpaca, AlpacaError
 from broker_sim import SimBroker
-from strategy import LEVERAGED, UNIVERSE, Params, State, compute_targets
+from strategy import CREDIT, LEVERAGED, UNIVERSE, Params, State, add_credit_series, compute_targets
 
 SIGNALS_DIR = "signals"
 REPORTS_DIR = "reports"
@@ -55,6 +55,7 @@ HOLDINGS_FILE = os.path.join(SIGNALS_DIR, "holdings.json")
 TODAY_FILE = os.path.join(REPORTS_DIR, "today.md")
 NEWS_FILE = os.path.join(SIGNALS_DIR, "news_risk.json")
 NEWS_LOG = os.path.join(SIGNALS_DIR, "news_log.json")
+EXEC_LOG = os.path.join(SIGNALS_DIR, "executions.json")
 
 HISTORY_DAYS = 420  # calendar days of bars to load (>= 260 trading days + slack)
 MAX_DAILY_MOVE = 0.25       # bad-tick guard for live prices
@@ -288,6 +289,34 @@ def execute(api: Alpaca, plan: List[Tuple[str, str, float]], prices: Dict[str, f
     return fills
 
 
+def record_executions(fills: List[dict], decision_prices: Dict[str, float], today: str, mode: str, log: Log) -> None:
+    """Append decision price vs actual fill price per order: real trading costs, measured."""
+    rows = load_json(EXEC_LOG, [])
+    for o in fills:
+        sym = o.get("symbol")
+        dp = decision_prices.get(sym)
+        try:
+            fp = float(o.get("filled_avg_price") or 0)
+            qty = float(o.get("filled_qty") or 0)
+        except (TypeError, ValueError):
+            continue
+        if not sym or not dp or fp <= 0 or qty <= 0:
+            continue
+        side = o.get("side") or ("buy" if fp >= dp else "sell")
+        # cost in bps: positive = we paid more than the decision price (buy) / got less (sell)
+        cost = (fp / dp - 1.0) * 1e4 * (1 if side == "buy" else -1)
+        rows.append({"date": today, "mode": mode, "symbol": sym, "side": side, "qty": qty,
+                     "decision_price": round(dp, 4), "fill_price": round(fp, 4), "cost_bps": round(cost, 2),
+                     "notional": round(fp * qty, 2)})
+    if fills:
+        rows = rows[-5000:]
+        save_json(EXEC_LOG, rows)
+        today_rows = [r for r in rows if r["date"] == today]
+        if today_rows:
+            avg = sum(r["cost_bps"] * r["notional"] for r in today_rows) / max(1e-9, sum(r["notional"] for r in today_rows))
+            log(f"execution cost today: {avg:+.1f} bps vs decision prices over {len(today_rows)} fills (backtest assumes 5)")
+
+
 # ----------------------------------------------------------------------------- #
 # Snapshots                                                                     #
 # ----------------------------------------------------------------------------- #
@@ -478,6 +507,7 @@ def main() -> int:
             write_today(log, f"{today_et} stale data")
             return 0
         prices = {s: v[-1] for s, v in hist.items()}
+        add_credit_series(hist)
         dec = compute_targets(hist, state, params, today=today_et)
         weights = dec.weights
         for n in dec.notes:
@@ -538,6 +568,7 @@ def main() -> int:
         log(f"{len(plan)} order(s):")
         asset_cache: Dict[str, dict] = {}
         fills = execute(api, plan, prices, log, no_trade, asset_cache, tag=today_et)
+        record_executions(fills, prices, today_et, getattr(api, "mode", mode), log)
         for o in fills:
             if o.get("side") == "buy" or any(k == "buy" and s == o.get("symbol") for s, k, _ in plan):
                 bought_today.add(str(o.get("symbol")))

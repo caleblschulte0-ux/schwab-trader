@@ -160,6 +160,59 @@ def main() -> int:
             L.append("> Small sample: with fewer than ~30 closed trades these numbers are directional only.")
     else:
         L += ["_No closed trades yet._"]
+    # ---- execution quality (decision price vs fill)
+    try:
+        ex = json.load(open("signals/executions.json"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        ex = []
+    L += ["", "## Execution quality", ""]
+    if ex:
+        tot = sum(r["notional"] for r in ex) or 1.0
+        wavg = sum(r["cost_bps"] * r["notional"] for r in ex) / tot
+        worst = max(ex, key=lambda r: r["cost_bps"])
+        L += [f"{len(ex)} fills, ${tot:,.0f} traded · **average cost {wavg:+.1f} bps** vs the decision price "
+              f"(the backtest assumes 5 bps) · worst {worst['cost_bps']:+.1f} bps ({worst['symbol']} {worst['date']})."]
+        if wavg > 15:
+            L.append("> ⚠️ Real costs are well above the backtest assumption. Expect live returns below the backtest.")
+    else:
+        L.append("_No fills recorded yet._")
+
+    # ---- wash sales (same ETF bought within 30 days of a loss sale)
+    from datetime import datetime as _dt
+    ws = []
+    for t in trades:
+        if t["pnl"] >= 0:
+            continue
+        ct = t["closed"][:10]
+        for f in fills:
+            if f.get("symbol") == t["symbol"] and f.get("side") == "buy":
+                d = str(f.get("transaction_time", ""))[:10]
+                try:
+                    gap = abs((_dt.fromisoformat(d) - _dt.fromisoformat(ct)).days)
+                except ValueError:
+                    continue
+                if 0 < gap <= 30 and d != t["opened"][:10]:
+                    ws.append((t["symbol"], ct, t["pnl"], d))
+                    break
+    L += ["", "## Tax: possible wash sales", ""]
+    if ws:
+        L += [f"{len(ws)} loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the "
+              "loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.", "",
+              "| ETF | Loss sold | Loss | Rebought |", "|---|---|---:|---|"]
+        L += [f"| {s} | {c} | {p:+.2f} | {d} |" for s, c, p, d in ws[-20:]]
+    else:
+        L.append("_None detected._")
+    held_days = []
+    for t in trades:
+        try:
+            held_days.append((_dt.fromisoformat(t["closed"][:10]) - _dt.fromisoformat(t["opened"][:10])).days)
+        except ValueError:
+            pass
+    if held_days:
+        lt = sum(1 for d in held_days if d > 365) / len(held_days)
+        L.append(f"\nHolding periods: median {sorted(held_days)[len(held_days)//2]} days; {lt:.0%} of closed lots were long-term (>1 year). "
+                 "Most gains from a rotation strategy are short-term; a tax-advantaged account (IRA) avoids that drag entirely.")
+
     try:
         import news_overlay
         nl = json.load(open("signals/news_log.json"))

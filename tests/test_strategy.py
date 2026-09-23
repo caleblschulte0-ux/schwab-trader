@@ -153,6 +153,21 @@ class TargetTests(unittest.TestCase):
         self.assertLessEqual(dec.weights["QQQ"], 0.5 + p.max_position_weight + 1e-6)
         self.assertLessEqual(sum(dec.weights.values()), 1.0 + 1e-9)
 
+    def test_credit_stress_scales_risk_assets(self):
+        from strategy import add_credit_series
+        p = Params(credit_filter=True, credit_sma=50, credit_scale=0.5)
+        hist = self._hist()
+        hist["IEF"] = [100.0] * 400
+        hist["HYG"] = [100.0] * 380 + [100.0 - 2 * i for i in range(1, 21)]   # junk bonds sliding
+        add_credit_series(hist)
+        dec = compute_targets(hist, State(), p, today="d1")
+        self.assertTrue(dec.regime["credit_stress"])
+        risk = sum(w for s, w in dec.weights.items() if s not in ("BIL", "SHY", "IEF", "TLT", "GLD"))
+        self.assertLessEqual(risk, 0.5 + 1e-6)
+        hist["HYG"] = [100.0 + 0.1 * i for i in range(400)]                   # healthy credit
+        add_credit_series(hist)
+        self.assertFalse(compute_targets(hist, State(), p, today="d1").regime["credit_stress"])
+
     def test_bear_market_goes_to_cash_proxy(self):
         # everything trending down -> nothing eligible -> 100% cash proxy
         hist = {s: synth(7, 400, -0.002, 0.01) for s in UNIVERSE}

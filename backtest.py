@@ -102,6 +102,7 @@ class SymbolSeries:
             vol=vol,
             n_bars=i + 1,
             rets=self.rets[i + 1 - n:i + 1] if i >= n else (),
+            sma_credit=self._sma(i, p.credit_sma),
         )
 
 
@@ -110,6 +111,9 @@ class SymbolSeries:
 # ----------------------------------------------------------------------------- #
 def run(hist: Dict[str, List[Tuple[str, float]]], p: Params, start: str, end: Optional[str] = None,
         start_equity: float = 1000.0, verbose: bool = False) -> dict:
+    from strategy import add_credit_series
+    hist = dict(hist)
+    add_credit_series(hist, dated=True)
     series = {s: SymbolSeries(s, bars, p) for s, bars in hist.items() if len(bars) > p.min_history}
     calendar = sorted(set(series["SPY"].dates))
     calendar = [d for d in calendar if d >= start and (end is None or d <= end)]

@@ -48,6 +48,22 @@ MR_UNIVERSE: List[str] = [
     "XLB", "XLRE", "XLC", "SMH", "XBI", "VNQ", "EFA", "EEM", "VGK", "EWJ", "FXI",
 ]
 
+CREDIT = "CREDIT"   # synthetic series HYG/IEF, built by add_credit_series()
+
+
+def add_credit_series(history: Dict[str, Sequence], dated: bool = False) -> None:
+    """Add CREDIT = HYG/IEF to a history dict in place. `dated`: values are (date, close)."""
+    h, i = history.get("HYG"), history.get("IEF")
+    if not h or not i:
+        return
+    if dated:
+        im = dict(i)
+        history[CREDIT] = [(d, c / im[d]) for d, c in h if d in im and im[d]]
+    else:
+        n = min(len(h), len(i))
+        history[CREDIT] = [a / b for a, b in zip(h[-n:], i[-n:]) if b]
+
+
 # Leveraged (2x daily) versions of core candidates. Held ONLY by the core sleeve, ONLY while
 # the UNDERLYING index is above its 200-day SMA (the trend filter reads the underlying).
 LEVERAGED: Dict[str, str] = {"SPY": "SSO", "QQQ": "QLD"}
@@ -87,6 +103,11 @@ class Params:
     core_symbol: str = "auto"                        # "auto": strongest of core_candidates by momentum, or a ticker
     core_candidates: Sequence[str] = ("SPY", "QQQ", "EFA")
     core_leveraged: bool = False                     # hold the 2x ETF (LEVERAGED map) instead
+    # Credit-stress filter: synthetic CREDIT = HYG/IEF (junk vs treasuries). When it is below its
+    # own `credit_sma`, risk assets are scaled by `credit_scale` (rest -> defensive).
+    credit_filter: bool = False
+    credit_sma: int = 100
+    credit_scale: float = 0.5
     # Regime / defensive
     breadth_min: float = 0.0                         # 0 = off. e.g. 0.4 -> fully defensive when <40% of
                                                      # the risk universe is above its 200-day SMA
@@ -162,6 +183,7 @@ class Signals:
     vol: Optional[float]
     n_bars: int
     rets: Sequence[float] = ()   # last `vol_lookback` daily returns (for portfolio vol)
+    sma_credit: Optional[float] = None
 
     @property
     def uptrend(self) -> bool:
@@ -235,6 +257,7 @@ def compute_signals(closes: Sequence[float], p: Params) -> Signals:
         vol=annual_vol(closes, p.vol_lookback),
         n_bars=len(closes),
         rets=daily_returns(closes, p.vol_lookback) if len(closes) > p.vol_lookback else (),
+        sma_credit=sma(closes, p.credit_sma),
     )
 
 
@@ -466,6 +489,19 @@ def compute_targets(
     if total > 1.0:
         weights = {s: w / total for s, w in weights.items()}
         total = 1.0
+    # ------------------------------------------------ credit stress (junk bonds lagging treasuries)
+    if p.credit_filter and CREDIT in sig:
+        cg = sig[CREDIT]
+        c_sma = cg.sma_credit
+        stressed = c_sma is not None and cg.close < c_sma
+        regime["credit_stress"] = stressed
+        if stressed and p.credit_scale < 1.0:
+            for s_ in list(weights):
+                if s_ not in ("BIL", "SHY", "IEF", "TLT", "GLD"):
+                    weights[s_] *= p.credit_scale
+            notes.append(f"credit stress (HYG/IEF below {p.credit_sma}d avg): risk exposure x{p.credit_scale:.2f}")
+
+    total = sum(weights.values())
     scale = 1.0
     if p.vol_target and weights:
         pv = portfolio_vol(weights, sig)

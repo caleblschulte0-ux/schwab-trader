@@ -108,7 +108,7 @@ class FakeAlpaca:
     def _order(self, symbol, side, qty):
         self.n += 1
         oid = f"o{self.n}"
-        self.orders[oid] = {"id": oid, "status": "filled", "filled_qty": str(qty), "filled_avg_price": str(self.px[symbol]), "symbol": symbol}
+        self.orders[oid] = {"id": oid, "status": "filled", "filled_qty": str(qty), "filled_avg_price": str(self.px[symbol]), "symbol": symbol, "side": side}
         return self.orders[oid]
 
     flows = 0.0
@@ -394,6 +394,15 @@ class BotTests(unittest.TestCase):
         self.assertIsNone(nl[0]["effect"])
         # stale verdict tomorrow is ignored
         self.assertEqual(bot.news_overlay.apply(raw, {"date": "2026-09-21", "market_risk": 3}, "2026-09-22")[1], [])
+
+    def test_execution_costs_are_recorded(self):
+        self.assertEqual(bot.main(), 0)
+        with open("signals/executions.json") as f:
+            rows = json.load(f)
+        self.assertGreater(len(rows), 0)
+        self.assertTrue(all(abs(r["cost_bps"]) < 1e-6 for r in rows))   # fake broker fills at the decision price
+        with open("reports/today.md") as f:
+            self.assertIn("execution cost today", f.read())
 
     def test_plan_orders_sells_first_and_closes_zero_targets(self):
         plan = bot.plan_orders({"SPY": 500.0, "GLD": 300.0}, {"SPY": 200.0, "TLT": 150.0}, 5.0)
