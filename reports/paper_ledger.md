@@ -1,6 +1,6 @@
 # Ledger (sim)
 
-_Updated 2026-09-23T22:26:43Z_
+_Updated 2026-09-23T22:27:54Z_
 
 **Equity $1,000.00 · cash $1,000.00**
 
