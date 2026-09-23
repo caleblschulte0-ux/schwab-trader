@@ -1,0 +1,50 @@
+name: intraday monitor
+# Mid-session watch. Never trades. On a big drop: opens an alert issue and forces a fresh
+# news scan so the afternoon executor run (15:35 ET) decides with current information.
+on:
+  schedule:
+    - cron: '30 15 * * 1-5'   # 11:30 EDT / 10:30 EST
+    - cron: '30 17 * * 1-5'   # 13:30 EDT / 12:30 EST
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: monitor
+  cancel-in-progress: true
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check prices
+        id: m
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python monitor.py
+      - name: Forced news re-scan
+        if: steps.m.outputs.alert == 'true'
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          NEWS_FORCE: "1"
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ] && [ -n "$CLAUDE_CODE_OAUTH_TOKEN" ]; then npm install -g @anthropic-ai/claude-code >/dev/null 2>&1 || true; fi
+          python news_brain.py
+      - name: Alert issue + commit
+        if: steps.m.outputs.alert == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DETAIL: ${{ steps.m.outputs.detail }}
+        run: |
+          SUMMARY=$(python -c "import json;d=json.load(open('signals/news_risk.json'));print(f\"news risk level {d.get('market_risk')}: {d.get('summary','')}\")" 2>/dev/null || echo "no news verdict")
+          gh issue create --title "🚨 Big move: ${DETAIL}" --body "$(printf '%b' "Intraday monitor ($(date -u +%H:%MZ)): ${DETAIL}\n\n${SUMMARY}\n\nThe bot does NOT sell mid-crash (historically the market bounces more often than not after big down days). The 15:35 ET run will apply the fresh news verdict and the strategy's own trend rules.")" || true
+          git config user.name "monitor-bot"; git config user.email "bot@users.noreply.github.com"
+          git add signals/alert.json signals/news_risk.json 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "monitor: intraday alert [skip ci]"; git pull --rebase origin main || true; git push || true; }
