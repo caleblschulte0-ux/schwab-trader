@@ -36,7 +36,7 @@ keeping drawdowns under half of SPY's.
 | **Intraday watch** | At 11:30 and 13:30 ET, `monitor.py` checks SPY/QQQ and every holding. On a big drop it opens a 🚨 issue and forces a fresh news scan for the afternoon decision. It deliberately never panic-sells: since 2000, after a -5% day SPY rose the next day 70% of the time. |
 | **Credit-stress signal** | When junk bonds lag Treasuries (a classic early-warning sign), risk is halved. Used by the `conservative` and `guarded_growth` presets; off in `balanced`. |
 | **More return, if you want it** | `aggressive` preset: half the book in a trend-timed 2x index fund. Backtest **+15.6%/yr since 2008 ($1k → $15k) vs SPY +11.4%**, with a -28% worst drawdown vs SPY's -52%. Same risk-adjusted return, bigger swings. See STRATEGY.md. |
-| **Reads the news** | Every trading day at 15:35 ET, `news_brain.py` pulls ~180 fresh headlines (Google News, Yahoo Finance, MarketWatch) and Claude acts as a **risk officer**: it can lower risk on a crisis-grade event or veto up to 3 ETFs exposed to a specific shock, and it must cite the headlines. It can never buy anything. Every override is scored against what would have happened without it (`reports/track_record.md`). If it fails, the bot trades on the strategy alone. |
+| **Reads the news** | Every trading day, before the first trade, `news_brain.py` pulls ~180 fresh headlines (Google News, Yahoo Finance, MarketWatch) and Claude acts as a **risk officer**: it can lower risk on a crisis-grade event or veto up to 3 ETFs exposed to a specific shock, and it must cite the headlines. It can never buy anything. Every override is scored against what would have happened without it (`reports/track_record.md`). If it fails, the bot trades on the strategy alone. |
 
 ## Is it ready for real money?
 
@@ -63,7 +63,7 @@ $1 SPY buy/close round trip, so the API contract is proven before the first real
 
 ```mermaid
 flowchart LR
-    S([GitHub schedule<br/>15:35 ET Mon-Fri]) --> T[trader.yml]
+    S([GitHub schedule<br/>every 30 min, Mon-Fri]) --> T[trader.yml]
     T --> B[bot.py<br/>executor]
     C[(config.json)] --> B
     B -->|daily bars + live prices| D[(Alpaca data<br/>or Yahoo)]

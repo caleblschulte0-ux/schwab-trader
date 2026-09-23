@@ -1,6 +1,6 @@
 name: intraday monitor
 # Mid-session watch. Never trades. On a big drop: opens an alert issue and forces a fresh
-# news scan so the afternoon executor run (15:35 ET) decides with current information.
+# news scan so the next executor run decides with current information.
 on:
   schedule:
     - cron: '30 15 * * 1-5'   # 11:30 EDT / 10:30 EST
@@ -44,7 +44,7 @@ jobs:
           DETAIL: ${{ steps.m.outputs.detail }}
         run: |
           SUMMARY=$(python -c "import json;d=json.load(open('signals/news_risk.json'));print(f\"news risk level {d.get('market_risk')}: {d.get('summary','')}\")" 2>/dev/null || echo "no news verdict")
-          gh issue create --title "🚨 Big move: ${DETAIL}" --body "$(printf '%b' "Intraday monitor ($(date -u +%H:%MZ)): ${DETAIL}\n\n${SUMMARY}\n\nThe bot does NOT sell mid-crash (historically the market bounces more often than not after big down days). The 15:35 ET run will apply the fresh news verdict and the strategy's own trend rules.")" || true
+          gh issue create --title "🚨 Big move: ${DETAIL}" --body "$(printf '%b' "Intraday monitor ($(date -u +%H:%MZ)): ${DETAIL}\n\n${SUMMARY}\n\nThe bot does NOT sell mid-crash (historically the market bounces more often than not after big down days). The next executor run will apply the fresh news verdict and the strategy's own trend rules.")" || true
           git config user.name "monitor-bot"; git config user.email "bot@users.noreply.github.com"
           for f in signals/alert.json signals/news_risk.json; do [ -e "$f" ] && git add "$f"; done
           git diff --cached --quiet || { git commit -m "monitor: intraday alert [skip ci]"; git pull --rebase origin main || true; git push || true; }

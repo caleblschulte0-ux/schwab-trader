@@ -93,7 +93,7 @@ net negative after ~20 scored overrides, set `"news": {"enabled": false}` in `co
 - Weights sum to ≤ 100%; buys capped to settled cash; sells before buys.
 - Only universe symbols are touched. Anything else in the account is ignored.
 - One strategy step per trading day; re-runs the same day only reconcile.
-- Trades only inside the last `trade_window_min` (60) minutes of a session.
+- Trades from 30 minutes after the open (`trade_window_min` = 360).
 - **Kill switch** at `max_drawdown_halt` (30%) below the high-water mark: liquidate and
   halt until a human deletes `halted` from `signals/state.json`. Why 30% and not 20%: the
   bootstrap shows a 20% halt would fire in ~18% of normal 5-year stretches and sell the low.

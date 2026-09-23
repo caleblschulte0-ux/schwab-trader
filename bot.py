@@ -12,7 +12,8 @@ Environment
                      and builds a track record before any brokerage exists.
   DRY_RUN            "true" (default) -> paper-api.alpaca.markets; "false" -> real money
   MAX_CAPITAL        cap on the dollars this bot manages (default: whole account equity)
-  TRADE_WINDOW_MIN   only trade within this many minutes of the close (default 60)
+  TRADE_WINDOW_MIN   only trade within this many minutes of the close (default 360 = from 30 min
+                     after the open; GitHub's scheduler runs hours late on this repo)
   MAX_DRAWDOWN_HALT  kill switch: liquidate + halt if equity falls this far below its
                      high-water mark (default 0.30; see reports/validation.md for why not
                      0.20). Reset by deleting "halted" from signals/state.json.

@@ -176,9 +176,8 @@ def main() -> int:
             age_min = (now - datetime.strptime(prev["generated_utc"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)).total_seconds() / 60
         except (KeyError, ValueError):
             age_min = 1e9
-        if age_min < 90:
-            print(f"(news) verdict for {today} is {age_min:.0f} min old; reusing (one LLM call per day)")
-            return 0
+        print(f"(news) verdict for {today} already exists ({age_min:.0f} min old); reusing (one LLM call per day)")
+        return 0
     port = portfolio_view()
     syms = set(port) | {"SPY", "QQQ"}
     heads = news.collect(syms)

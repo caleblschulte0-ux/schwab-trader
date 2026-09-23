@@ -10,7 +10,7 @@ from strategy import Params
 
 CONFIG_FILE = os.environ.get("CONFIG_FILE", "config.json")
 _EXEC_DEFAULTS: Dict[str, Any] = {
-    "max_capital": None, "max_drawdown_halt": 0.30, "trade_window_min": 60.0,
+    "max_capital": None, "max_drawdown_halt": 0.30, "trade_window_min": 360.0,
     "min_trade_dollars": 5.0, "sim_start_cash": 1000.0,
     "live_min_paper_runs": 20.0,   # clean Alpaca PAPER runs required before LIVE is allowed
 }
