@@ -1,13 +1,26 @@
 {
-  "market_risk": 0,
-  "market_reason": "",
-  "market_evidence": [],
-  "market_headlines": [],
+  "market_risk": 1,
+  "market_reason": "10-year Treasury yields spiked to 19-year highs above 5.1% alongside oil back above $100 on Iran-related supply risk, pushing broad equity indices lower, though this is a continuation of a known rates/inflation theme rather than a sudden new shock.",
+  "market_evidence": [
+    26,
+    27,
+    25,
+    20,
+    118,
+    119,
+    148,
+    160
+  ],
+  "market_headlines": [
+    "10-year Treasury yield hits 5.1% for first time in 19 years - CNN",
+    "US Treasury yields soar most since \u2018liberation day\u2019 tariffs shook markets - Financial Times",
+    "Treasury yields surge to near 20-year high as oil jumps back above $103 per barrel - NBC News"
+  ],
   "vetoes": [],
-  "summary": "Markets are at record highs with the Nasdaq closing at new peaks on AI/chip strength, while elevated but already-known themes (10-year yield near 5%, tariffs, oil volatility) are being actively priced in without a fresh acute shock. No portfolio is specified, so no vetoes apply.",
+  "summary": "A sharp surge in Treasury yields (10-year above 5.1%, highest since 2007) combined with elevated oil prices on Iran tensions is pressuring the broad market and tech/growth names today, warranting modest caution but no fund-specific veto since no single ETF faces new, material, idiosyncratic bad news. Biotech (XBI) saw notable weakness in scattered names, but it reads as broad market/rate-driven multiple compression rather than a specific new catalyst justifying a veto.",
   "dropped": [],
-  "date": "2026-09-22",
-  "generated_utc": "2026-09-23T02:14:57Z",
-  "n_headlines": 144,
+  "date": "2026-09-23",
+  "generated_utc": "2026-09-23T22:26:28Z",
+  "n_headlines": 183,
   "model": "claude-sonnet-5"
 }

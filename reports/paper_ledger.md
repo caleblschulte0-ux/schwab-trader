@@ -1,6 +1,6 @@
 # Ledger (sim)
 
-_Updated 2026-09-23T02:15:23Z_
+_Updated 2026-09-23T22:26:43Z_
 
 **Equity $1,000.00 · cash $1,000.00**
 
@@ -9,3 +9,10 @@ _Updated 2026-09-23T02:15:23Z_
 | Symbol | Qty | Avg entry | Last | Value | Unrealized |
 |---|---:|---:|---:|---:|---:|
 | (none) | | | | | |
+
+## Equity curve (last 30 points)
+
+| Date | Equity |
+|---|---:|
+| 2026-09-22 | $1,000.00 |
+| 2026-09-23 | $1,000.00 |
