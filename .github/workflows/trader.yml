@@ -129,7 +129,7 @@ jobs:
           git config user.name "trader-bot"
           git config user.email "bot@users.noreply.github.com"
           FILES="signals/state.json signals/targets.json signals/holdings.json signals/performance.json signals/sim_account.json signals/news_risk.json signals/news_log.json signals/executions.json reports/today.md reports/track_record.md reports/paper_ledger.md"
-          git add $FILES 2>/dev/null || true
+          for f in $FILES; do [ -e "$f" ] && git add "$f"; done
           if git diff --cached --quiet; then echo "No data changes."; exit 0; fi
           git commit -m "bot: daily snapshot [skip ci]"
           for i in 1 2 3 4 5; do
@@ -137,7 +137,7 @@ jobs:
             echo "push rejected (main moved); rebasing snapshot and retrying ($i)..."
             git fetch origin main
             git reset --mixed origin/main
-            git add $FILES 2>/dev/null || true
+            for f in $FILES; do [ -e "$f" ] && git add "$f"; done
             git diff --cached --quiet && { echo "snapshot already current."; exit 0; }
             git commit -m "bot: daily snapshot [skip ci]"
             sleep $((i * 3))
