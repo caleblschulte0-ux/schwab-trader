@@ -1,0 +1,55 @@
+name: analyst (optional)
+
+# OPTIONAL and NOT in the trading loop. Once a week, ask Claude to read the bot's own
+# reports and write a plain-English review to reports/analyst.md: what it holds and
+# why, how the live track record compares to the backtest, anything that looks off.
+# It has no ability to trade or change strategy files. If CLAUDE_CODE_OAUTH_TOKEN is
+# missing or the subscription is out of quota, this job is a green no-op -- the bot
+# does not care. Enable by adding the secret; disable by removing it.
+on:
+  schedule:
+    - cron: '0 22 * * 5'   # Fridays after the close
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analyst
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gate on token
+        id: gate
+        env:
+          TOK: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$TOK" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; echo "No CLAUDE_CODE_OAUTH_TOKEN; skipping."; else echo "ready=true" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.ready == 'true'
+        with:
+          node-version: '20'
+      - name: Install Claude Code
+        if: steps.gate.outputs.ready == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Write the weekly review
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "You are reviewing an automated ETF momentum trading bot. Read STRATEGY.md, reports/backtest.md, reports/track_record.md, reports/paper_ledger.md, signals/targets.json and signals/holdings.json. Write reports/analyst.md: a concise plain-English weekly review (what it holds and why per the strategy rules, how live results compare to the backtest, any anomalies such as a stalled run, a halted state, or holdings that do not match targets). Do NOT modify any other file, do NOT run shell or git commands." \
+            --allowedTools "Read,Write" --model sonnet --permission-mode acceptEdits --output-format text || echo "analyst run failed (quota?) -- ignoring"
+      - name: Commit review
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          git config user.name "analyst-bot"; git config user.email "bot@users.noreply.github.com"
+          git add reports/analyst.md 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "analyst: weekly review [skip ci]"
+          git pull --rebase origin main || true
+          git push || echo "push failed -- non-fatal"

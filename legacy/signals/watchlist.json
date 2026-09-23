@@ -1,0 +1,126 @@
+{
+  "generated_utc": "2026-06-16T17:52:15Z",
+  "watch": [
+    {
+      "symbol": "NRIX",
+      "trigger": "breakout",
+      "trigger_price": 16.50,
+      "quantity": 4,
+      "limit_price": 16.60,
+      "take_profit": 19.50,
+      "stop_loss": 15.50,
+      "good_until": "2026-06-18",
+      "note": "Roche deal $700M upfront + $2.3B total for BTK degrader bexobrutideg. EHA Congress data: 83% ORR, 22.1mo mPFS in 2nd-line CLL. Non-dilutive. Breakout above $16.50 on volume."
+    },
+    {
+      "symbol": "GHRS",
+      "trigger": "breakout",
+      "trigger_price": 26.50,
+      "quantity": 5,
+      "limit_price": 26.75,
+      "take_profit": 31.00,
+      "stop_loss": 24.50,
+      "good_until": "2026-06-18",
+      "note": "GH Research Phase 2b TRD met primary endpoint (MADRS -15.5 vs placebo, p<0.0001). CINP World Congress June 26-29 next catalyst. Enter on breakout above $26.50."
+    },
+    {
+      "symbol": "SPRY",
+      "trigger": "breakout",
+      "trigger_price": 10.20,
+      "quantity": 14,
+      "limit_price": 10.30,
+      "take_profit": 12.50,
+      "stop_loss": 9.50,
+      "good_until": "2026-06-18",
+      "note": "ARS Pharma neffy: CVS Caremark formulary inclusion update pending (Q1 call: definitive update early June). Breakout above $10.20 confirms announcement."
+    },
+    {
+      "symbol": "YEXT",
+      "trigger": "pullback",
+      "trigger_price": 3.72,
+      "quantity": 20,
+      "limit_price": 3.75,
+      "take_profit": 4.50,
+      "stop_loss": 3.45,
+      "good_until": "2026-06-18",
+      "note": "Director Seth Waugh bought $498k in company stock (June 12). Substantial insider conviction on $379M mktcap name. Pullback to $3.72 gives clean r/r. 20x$3.75=$75."
+    },
+    {
+      "symbol": "HLIT",
+      "trigger": "breakout",
+      "trigger_price": 15.50,
+      "quantity": 9,
+      "limit_price": 15.60,
+      "take_profit": 18.00,
+      "stop_loss": 14.20,
+      "good_until": "2026-06-18",
+      "note": "Harmonic Q1 2026: broadband revenue +43% YoY, EPS +143%, full-year guidance raised. Breakout above $15.50 signals momentum resuming. 9x$15.60=$140.40."
+    },
+    {
+      "symbol": "CRML",
+      "trigger": "pullback",
+      "trigger_price": 10.00,
+      "quantity": 14,
+      "limit_price": 10.10,
+      "take_profit": 12.50,
+      "stop_loss": 9.25,
+      "good_until": "2026-06-18",
+      "note": "Critical Metals Corp: Japan reportedly eyes Greenland rare earths — Tanbreez mine angle. Critical minerals diversification theme. Pullback to $10 is cleaner entry. 14x$10.10=$141.40."
+    },
+    {
+      "symbol": "EVTC",
+      "trigger": "pullback",
+      "trigger_price": 26.50,
+      "quantity": 5,
+      "limit_price": 26.75,
+      "take_profit": 30.50,
+      "stop_loss": 24.75,
+      "good_until": "2026-06-18",
+      "note": "Evertec: director insider purchase June 15. LatAm payments, $1.7B cap. Pullback to $26.50 improves r/r. 5x$26.75=$133.75."
+    },
+    {
+      "symbol": "RCAT",
+      "trigger": "pullback",
+      "trigger_price": 11.25,
+      "quantity": 13,
+      "limit_price": 11.35,
+      "take_profit": 13.50,
+      "stop_loss": 10.40,
+      "good_until": "2026-06-19",
+      "note": "Red Cat Holdings defense drone; Industrials still strongest sector today (+5.21%). Buy consolidation pullback to ~$11.25 for better r/r. 13x$11.35=$147.55."
+    },
+    {
+      "symbol": "UMAC",
+      "trigger": "breakout",
+      "trigger_price": 25.00,
+      "quantity": 5,
+      "limit_price": 25.20,
+      "take_profit": 28.50,
+      "stop_loss": 23.00,
+      "good_until": "2026-06-19",
+      "note": "Unusual Machines $30M strategic equity deal; drone company, Industrials theme. Breakout above $25 confirms strength. 5x$25.20=$126."
+    },
+    {
+      "symbol": "VNCE",
+      "trigger": "breakout",
+      "trigger_price": 5.20,
+      "quantity": 28,
+      "limit_price": 5.30,
+      "take_profit": 6.25,
+      "stop_loss": 4.60,
+      "good_until": "2026-06-18",
+      "note": "Vince Holding Corp Q2 2026 earnings guidance 8-K bullish sentiment 0.512. $64M microcap. Breakout above $5.20 confirms buyers accept the guidance. 28x$5.30=$148.40."
+    },
+    {
+      "symbol": "TOYO",
+      "trigger": "breakout",
+      "trigger_price": 13.00,
+      "quantity": 11,
+      "limit_price": 13.10,
+      "take_profit": 15.50,
+      "stop_loss": 11.75,
+      "good_until": "2026-06-19",
+      "note": "$357M 1.5GW HJT solar cell factory launch in Houston; Industrials-aligned; coiling near $12.52 on muted +0.97% move today; buy the break above $13 on volume. 11x$13.10=$144.10."
+    }
+  ]
+}

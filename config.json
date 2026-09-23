@@ -1,0 +1,73 @@
+{
+  "_comment": "Knobs live here. 'preset' picks a named bundle (balanced | conservative | guarded_growth | aggressive | growth | us_only | rotation_only | conservative); 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits. Precedence for executor limits: env var (UPPER_CASE) > this file's executor block > the preset's executor block > defaults. Re-run `python backtest.py` after changing anything.",
+  "preset": "guarded_growth",
+  "presets": {
+    "balanced": {
+      "core_symbol": "auto",
+      "core_candidates": [
+        "SPY",
+        "QQQ",
+        "EFA"
+      ]
+    },
+    "growth": {
+      "core_symbol": "QQQ"
+    },
+    "us_only": {
+      "core_symbol": "auto",
+      "core_candidates": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    "rotation_only": {
+      "core_weight": 0.0
+    },
+    "conservative": {
+      "credit_filter": true,
+      "credit_sma": 50,
+      "credit_scale": 0.5
+    },
+    "aggressive": {
+      "core_leveraged": true,
+      "core_weight": 0.5,
+      "core_candidates": [
+        "SPY",
+        "QQQ"
+      ],
+      "executor": {
+        "max_drawdown_halt": 0.45
+      }
+    },
+    "guarded_growth": {
+      "core_leveraged": true,
+      "core_candidates": [
+        "SPY",
+        "QQQ"
+      ],
+      "credit_filter": true,
+      "credit_sma": 50,
+      "credit_scale": 0.5,
+      "executor": {
+        "max_drawdown_halt": 0.4
+      }
+    }
+  },
+  "strategy": {},
+  "executor": {
+    "max_capital": null,
+    "max_drawdown_halt": 0.3,
+    "trade_window_min": 60,
+    "min_trade_dollars": 5,
+    "sim_start_cash": 1000,
+    "live_min_paper_runs": 20
+  },
+  "news": {
+    "enabled": true,
+    "scale": {
+      "2": 0.75,
+      "3": 0.5
+    },
+    "_comment": "Defensive-only news overlay (news_brain.py -> signals/news_risk.json). Can shrink risk or veto up to 3 ETFs for the day; never buys. Scored daily in signals/news_log.json."
+  }
+}

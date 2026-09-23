@@ -1,161 +1,124 @@
-# schwab-trader 🤖📈
+# schwab-trader → systematic ETF momentum bot 🤖📈
 
-An AI-driven, guardrailed **day-trading bot** for Charles Schwab. **Two Claude "brains"** run
-the strategy — one **picks buys**, a separate one **decides exits by judgment** (no mechanical
-stop-losses) — and an executor places the trades. It's **hands-off by default**: it trades on
-its own and only pings you to approve selling a *significant* position (a big winner, a
-long-held name, or a large chunk of the book). All on GitHub Actions, no server to babysit.
+A fully automated, **backtested and out-of-sample validated** trading bot that runs on
+GitHub Actions with nothing to babysit. It holds a trend-timed slice of the S&P 500 plus
+a momentum rotation across 34 liquid ETFs, steps into T-bills when nothing is trending,
+and trades once a day. **It runs today with zero accounts or keys** on a built-in
+simulator; add [Alpaca](https://alpaca.markets) keys later to trade a real paper or live
+account with the same code.
 
-> **Status: paper-trading experiment.** It ships in **paper mode** (`DRY_RUN=true`) — it
-> simulates trades and tracks a P&L scorecard without touching real money. Prove it works
-> on paper before ever going live. Trading is risky; you run this at your own risk.
+> Trading is risky. Nothing here is a guarantee of profit or financial advice. The
+> numbers below are historical simulations with realistic costs, not promises.
 
-**👉 To set up your own copy, follow [SETUP.md](SETUP.md).** This page explains what it is,
-how it works, how to tune it, and where to see results.
+**Setup: [SETUP.md](SETUP.md) · Rules: [STRATEGY.md](STRATEGY.md) · Evidence:
+[reports/backtest.md](reports/backtest.md) and [reports/validation.md](reports/validation.md)
+· Live view: [index.html](index.html) (enable GitHub Pages on the repo root)**
 
 ---
+
+**Live preset: `guarded_growth`.** Half the book in a trend-timed 2x S&P 500 / Nasdaq-100 fund,
+half in a momentum rotation across 34 ETFs, risk halved when credit markets show stress.
+Backtest 2008–2026: **+13.2%/yr vs SPY +11.4%, worst drawdown -22% vs -52%**, ahead of SPY in
+every window tested. Chosen because it is the only preset that beat SPY everywhere while
+keeping drawdowns under half of SPY's.
+
+## What you get
+
+| | |
+|---|---|
+| **Strategy** | Trend-timed core (50% in the strongest of SPY/QQQ/EFA while above its 150-day average) + top-8 momentum rotation over 34 ETFs in five staggered tranches, inverse-vol weights, 40% cluster cap, T-bills when defensive. Tuned to lose money less often. Every knob in `config.json`. |
+| **Evidence** | 18-year backtest: **Sharpe 0.79 vs SPY 0.65, max drawdown -18% vs -52%**, losing months, 12-month stretches and time underwater all measured. Out-of-sample 2017–2026: +13.1%/yr, Sharpe 0.96. Bootstrap, sensitivity and timing-luck tests in `reports/validation.md`. Every idea that did not survive the backtest is documented there and switched off. |
+| **Runs today** | No keys → the executor trades a built-in simulator at real prices and commits its book to the repo. The first run is already in `reports/today.md`. |
+| **Broker** | Alpaca: static keys (no 7-day OAuth expiry), paper and live from the same code, fractional shares. |
+| **Safety** | Long-only, never leveraged, sells before buys, one strategy step per day, only touches its own universe, 30% drawdown kill switch, broker-block detection, **stale-data guard** (no trades on old prices), **bad-tick guard** (a 25% "print" on an ETF is ignored), committed fallback data so a Yahoo outage cannot break a run. |
+| **Ops** | `doctor.py` preflight on every run, a rolling **"📈 Trading log"** issue with every run, a **"🔴 Executor error"** issue with the traceback on any crash (auto-closed when healthy), a **watchdog** issue on a missed day, weekly backtest + validation refresh, CI tests on every push, a static dashboard. |
+| **Real costs and taxes, measured** | Every fill is compared to the price the bot decided on (`signals/executions.json`); the track record shows average cost vs the backtest's 5 bps assumption, flags possible wash sales and reports holding periods. |
+| **Intraday watch** | At 11:30 and 13:30 ET, `monitor.py` checks SPY/QQQ and every holding. On a big drop it opens a 🚨 issue and forces a fresh news scan for the afternoon decision. It deliberately never panic-sells: since 2000, after a -5% day SPY rose the next day 70% of the time. |
+| **Credit-stress signal** | When junk bonds lag Treasuries (a classic early-warning sign), risk is halved. Used by the `conservative` and `guarded_growth` presets; off in `balanced`. |
+| **More return, if you want it** | `aggressive` preset: half the book in a trend-timed 2x index fund. Backtest **+15.6%/yr since 2008 ($1k → $15k) vs SPY +11.4%**, with a -28% worst drawdown vs SPY's -52%. Same risk-adjusted return, bigger swings. See STRATEGY.md. |
+| **Reads the news** | Every trading day at 15:35 ET, `news_brain.py` pulls ~180 fresh headlines (Google News, Yahoo Finance, MarketWatch) and Claude acts as a **risk officer**: it can lower risk on a crisis-grade event or veto up to 3 ETFs exposed to a specific shock, and it must cite the headlines. It can never buy anything. Every override is scored against what would have happened without it (`reports/track_record.md`). If it fails, the bot trades on the strategy alone. |
+
+## Is it ready for real money?
+
+**Not yet, and the code will refuse until it is.** Live trading is gated on three things
+the executor checks itself (`bot.py: live_gate`):
+
+1. **20 clean Alpaca paper runs** recorded in `signals/state.json` (`paper_clean_runs`).
+   The simulator does not count; the real API has to be exercised for a month.
+2. Repo variable **`MAX_CAPITAL`** set: an explicit dollar cap you chose on purpose.
+3. Repo variable **`LIVE_CONFIRM`** equal to `I UNDERSTAND THE RISKS`.
+
+What is verified today | What is not
+---|---
+Strategy logic, 18 years, walk-forward, bootstrap | Behaviour against Alpaca's *real* API (contract-tested against documented shapes only)
+Executor end-to-end on a fake broker and the simulator | Real fills, real slippage, partial fills, settlement timing
+No same-day sells (no day trades / PDT / good-faith violations) | A live account with pre-existing positions the bot does not manage
+Deposits/withdrawals don't move the drawdown kill switch | Broker outages mid-rebalance (it reconciles next day, but untested for real)
+Retry-safe orders (deterministic `client_order_id`) | Tax consequences of ~30 trades a year
+
+`python doctor.py --probe` with paper keys sweeps every endpoint the bot uses and does a
+$1 SPY buy/close round trip, so the API contract is proven before the first real dollar.
 
 ## How it works
 
-Independent pieces, wired together through files in `signals/` and triggered by an external
-cron. The **brains decide**, the **executor acts** — they never run in the same process, so the
-bot executes fast without a brain in the loop. Buying and selling are **two separate brains** on
-purpose: selling is where the edge and the pain live, so it gets its own dedicated judgment.
-
 ```mermaid
 flowchart LR
-    cron([cron-job.org]) -->|triggers| BW[brain.yml<br/>BUY brain]
-    cron -->|triggers| SW[sell-brain.yml<br/>SELL brain]
-    cron -->|triggers| TW[trader.yml]
-
-    BW --> C[candidates.py<br/>market funnel]
-    C --> CJ[(candidates.json)]
-    CJ --> B{{Claude BUY brain<br/>BRAIN.md}}
-    H[(holdings.json)] --> B
-    B --> O[(orders.json)]
-
-    H --> SB{{Claude SELL brain<br/>SELL_BRAIN.md}}
-    SB -->|exit judgment| PS[(proposed_sells.json)]
-    PS --> R[route_sells.py<br/>significance gate]
-    R -->|routine churn| SO[(sell_orders.json)]
-    R -->|significant| PEND[(pending_sells.json)]
-    PEND -.->|approval issue| AP[approve-sell.yml]
-    AP -->|you comment approve| SO
-
-    TW --> E[bot.py<br/>executor + guardrails]
-    O --> E
-    SO --> E
-    E <-->|live quotes / orders| S[(Schwab API)]
-    E --> H
-    E --> L[(reports/paper_ledger.md)]
-    E --> A[analyze.py] --> TR[(reports/track_record.md)]
-
-    WD([watchdog.yml]) -.->|alerts if it stalls| E
+    S([GitHub schedule<br/>15:35 ET Mon-Fri]) --> T[trader.yml]
+    T --> B[bot.py<br/>executor]
+    C[(config.json)] --> B
+    B -->|daily bars + live prices| D[(Alpaca data<br/>or Yahoo)]
+    D --> ST[strategy.py]
+    ST -->|target weights| B
+    B <-->|positions / orders| A[(Alpaca account<br/>or broker_sim.py)]
+    B --> F[(signals/ + reports/<br/>committed)]
+    T --> AN[analyze.py] --> TR[(track_record.md)]
+    T --> I[(📈 Trading log issue)]
+    F --> DASH[index.html]
+    W([watchdog.yml]) -.->|stall issue| F
+    BT[backtest.py + validate.py] -.->|same code| ST
 ```
-
-1. **`candidates.py`** builds a wide funnel — movers, upcoming earnings, trading halts, fresh
-   SEC 8-Ks, news — into `signals/candidates.json`.
-2. **The BUY brain** (`brain.yml` running Claude against **`BRAIN.md`**) reads that funnel + what
-   it holds, researches, and writes BUY picks to `signals/orders.json`. It never sells.
-3. **The SELL brain** (`sell-brain.yml` against **`SELL_BRAIN.md`**) judges each holding on
-   *thesis health, not price* — biases hard toward HOLD, never sells on a drawdown alone — and
-   writes the names it wants to exit to `signals/proposed_sells.json`.
-4. **`route_sells.py`** is the money-gate: routine exits sell **autonomously**; only *significant*
-   positions (long-held, big winner, or a large share of the book) get parked in
-   `pending_sells.json` and raise a GitHub issue for you to **approve**. A true catastrophe sells
-   immediately anyway.
-5. **`bot.py`** reads the BUY picks + the approved/autonomous sells, prices off Schwab's *live*
-   quote, enforces the guardrails, places the trades, and re-writes `holdings.json` + the ledger.
-6. **`analyze.py`** scores closed trades (win rate, expectancy, by-signal breakdown);
-   **`watchdog.yml`** alerts you if the executor stalls during market hours.
-
----
 
 ## Repo map
 
 | File | What it is |
 |------|------------|
-| **`bot.py`** | The executor. Places/exits trades, enforces all risk guardrails, manages the paper book. |
-| **`candidates.py`** | Market-data funnel → `signals/candidates.json`. Pure stdlib, no Schwab needed. |
-| **`BRAIN.md`** | **The BUY strategy, in plain English.** Edit this to change how the buy brain thinks. |
-| **`SELL_BRAIN.md`** | **The EXIT playbook, in plain English.** How the sell brain decides what to hold vs. sell. |
-| **`route_sells.py`** | The money-gate: routes each proposed sell to autonomous vs. needs-your-approval. |
-| **`STRATEGY.md`** | The high-level risk rules / prime directive. |
-| **`analyze.py`** | Track-record analyzer → `reports/track_record.md` (win rate, expectancy, attribution). |
-| **`.github/workflows/`** | `brain.yml` (buys), `sell-brain.yml` (exits), `approve-sell.yml` (approve a significant sell), `trader.yml` (executes), `watchdog.yml` (stall alert). |
-| **`auth_setup.py`** | One-time Schwab OAuth login → refresh token. |
-| **`accounts.py` / `place_order.py`** | Manual helpers: view balances, place a single order by hand. |
-| **`config.py` / `schwab_session.py`** | Credential loading + authenticated Schwab client. |
-| **`signals/`** | Live state the pieces pass between each other (orders, holdings, candidates, latest read). |
-| **`reports/`** | Human-readable output: `paper_ledger.md` (P&L) and `track_record.md` (edge analysis). |
-| **`SETUP.md`** | Step-by-step guide to run your own copy (built for a human *or* a Claude agent). |
-| **`dashboard_cell.py` / `index.html`** | Optional viewers for your data (set your repo path inside). |
+| `strategy.py` | The rules as pure functions. `Params` = every knob. Optional sleeves (mean reversion, vol targeting, breadth regime, defensive momentum) are implemented, tested, and off. |
+| `config.json` / `config.py` | Presets (`balanced`, `aggressive`, `growth`, `us_only`, `rotation_only`, `conservative`) and executor limits. Unknown keys are fatal on purpose. |
+| `bot.py` | The executor. Picks Alpaca if keys exist, else the simulator. |
+| `broker_sim.py` | File-backed simulator with the Alpaca interface, real prices, 5 bps slippage. |
+| `alpaca.py` | Minimal stdlib Alpaca client (trading + data). |
+| `data.py` | Keyless Yahoo daily bars with a local cache; `data_seed/` is a committed 2-year fallback (`python data.py --seed`). |
+| `backtest.py` | Backtester + grids (`--grid`, `--grid2`, `--grid3`, `--grid4`). |
+| `validate.py` | Walk-forward, sensitivity, timing luck, bootstrap, rolling windows → `reports/validation.md`. |
+| `analyze.py` | Track record from the broker's fills and equity curve. |
+| `doctor.py` | Preflight checklist (`--strict` for CI). |
+| `watchdog.py` | Daily heartbeat check. |
+| `index.html` | Dashboard. Serve the repo root (GitHub Pages → main, `/`). |
+| `tests/` | 53 tests: indicators, targets, tranches, adaptive core, backtest/live parity, data guards, executor end-to-end on a fake broker and on the simulator. No network. |
+| `signals/` | `state.json`, `targets.json`, `holdings.json`, `performance.json`, `sim_account.json`. |
+| `reports/` | `backtest.md`, `validation.md`, `today.md`, `track_record.md`, `paper_ledger.md`. |
+| `legacy/` | The retired Schwab + Claude-brain version. |
 
----
+## Knobs
 
-## ⚙️ Tune it (the knobs you'll actually touch)
+Edit `config.json` (then run `python backtest.py` to see what you did):
 
-Two ways to change behavior — pick whichever is easier:
-- **Just ask your Claude:** e.g. *"change the per-trade cap to $200"* — these are all clearly
-  labeled constants at the top of the file.
-- **Or edit it yourself** — here's where each common knob lives:
+```json
+{ "preset": "guarded_growth",    // balanced | conservative | guarded_growth | aggressive | growth | us_only | rotation_only
+  "strategy": { "mom_top_n": 6 },  // any strategy.Params field
+  "executor": { "max_capital": null, "max_drawdown_halt": 0.30, "trade_window_min": 60 } }
+```
+Repo **variables** of the same name in upper case (`MAX_CAPITAL`, `MAX_DRAWDOWN_HALT`,
+`TRADE_WINDOW_MIN`) override the file; `DRY_RUN=false` switches Alpaca to the live account.
 
-| Want to change… | Set this | Where | Default |
-|-----------------|----------|-------|---------|
-| Paper vs. **real money** | `DRY_RUN` variable | GitHub repo Variables | `true` (paper) |
-| **Max $ per trade** | `MAX_DOLLARS_PER_TRADE` | `bot.py` (top) | `150` |
-| **Starting paper cash** | `PAPER_START_EQUITY` | `bot.py` (top) | `1000` |
-| **Trading window** (buffer before/after the session) | `SESSION_BUFFER_MIN` | `bot.py` (top) | `60` min |
-| **Penny-stock floor** | `MIN_SHARE_PRICE` | `bot.py` (top) | `$2` |
-| **Anti-chase slippage cap** | `MAX_SLIPPAGE` | `bot.py` (top) | `5%` |
-| **How it BUYS / picks** | edit the prose | **`BRAIN.md`** | — |
-| **How it SELLS / exits** | edit the prose | **`SELL_BRAIN.md`** | — |
-| **"Long-held" approval threshold** | `LONG_HELD_DAYS` | GitHub repo Variables | `10` days |
-| **"Big winner" approval threshold** | `TOP_GAIN_PCT` | GitHub repo Variables | `+25%` |
-| **"Large position" approval threshold** | `TOP_SIZE_PCT` | GitHub repo Variables | `35%` of book |
-| Funnel sources & limits | the `KNOBS` block | `candidates.py` (top) | — |
-
-The whole strategy is **plain-English in `BRAIN.md`** — change the trading style by editing that
-file, no code required.
-
----
-
-## 📊 Where to see results
-
-After it runs, check these (they auto-update each cycle):
-- **`reports/paper_ledger.md`** — running equity, cash, open positions, realized P&L, every closed trade.
-- **`reports/track_record.md`** — the edge analysis: win rate, **expectancy**, drawdown, and a
-  breakdown of which *signals* actually make money.
-- **`signals/latest.md`** — the BUY brain's reasoning for its most recent run (what it saw, why it picked).
-- **`signals/sell_review.md`** — the SELL brain's per-position rulings (hold vs. sell, and why) each run.
-
----
-
-## ❓ Troubleshooting / FAQ
-
-| Symptom | Cause & fix |
-|---------|-------------|
-| Bot runs fail with **`invalid_grant` / HTTP 400** | The Schwab refresh token expired (~7-day limit). Re-run `python auth_setup.py` and update the `SCHWAB_REFRESH_TOKEN` secret. |
-| **"Market CLOSED — no-op"** in the logs | Working as intended — the bot only trades **08:30–17:00 ET**, Mon–Fri. |
-| **No trades / nothing happening** | Check: `DRY_RUN` value, market hours, the token is valid, and `signals/orders.json` is fresh. |
-| **Weak or empty picks** | Missing `FMP_API_KEY` / `ALPHA_API_KEY` — the funnel degrades without them. |
-| **Either brain never runs** | `CLAUDE_CODE_OAUTH_TOKEN` secret isn't set, or the brain's cron isn't pointed at the right workflow file (see SETUP.md). |
-| **GitHub issue: "🤔 Sell approval needed"** | Working as intended — the sell brain wants to exit a *significant* position. Comment **`approve`** (all) / **`approve SYM`** (one) to sell, or **`hold`** to keep. Routine sells never ask. |
-| **It never auto-sells on a loss** | By design — there are no stop-losses. The sell brain exits on a broken *thesis*, not on price, so a normal drawdown is held. |
-| Bot stopped and nobody noticed | The `executor-watchdog` workflow opens an alert issue when it stalls during market hours. |
-| **How do I go live?** | Only after `track_record.md` shows positive expectancy over a real sample — then set `DRY_RUN=false`. See SETUP.md. |
-| **How do I change the strategy?** | Edit **`BRAIN.md`** (buys) and **`SELL_BRAIN.md`** (exits) — plain English, no code. |
-
----
-
-## Running the manual scripts locally (optional)
-
-The repo also includes hand-operated helpers (not needed for the automated bot):
+## Run locally
 
 ```bash
-pip install -r requirements.txt
-cp .env.example .env          # fill in your Schwab app key/secret
-python auth_setup.py          # one-time login -> token.json
-python accounts.py            # view balances & positions
-python place_order.py BUY AAPL 1 185.00   # place one order by hand
+python -m unittest discover -s tests -v   # 53 tests, no network, <1s
+python doctor.py                          # preflight
+python backtest.py --grid4                # candidate-defaults comparison
+python validate.py                        # ~2 min, writes reports/validation.md
+NO_TRADE=true FORCE_RUN=true python bot.py   # what would it do right now
+python -m http.server                     # then open http://localhost:8000/index.html
 ```
+Python 3.11, stdlib only.
