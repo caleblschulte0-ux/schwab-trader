@@ -1,16 +1,12 @@
 name: trader
 
-# The executor (bot.py): ONE strategy step per trading day, from 30 min after the open,
-# the session. Paper by default (DRY_RUN=true -> Alpaca paper account). Flip the
-# DRY_RUN repo VARIABLE to false to trade the live account (see SETUP.md).
+# The executor (bot.py): ONE strategy step per trading day, any time from 30 min after the
+# open to the close. Paper by default (DRY_RUN=true). With no Alpaca keys it trades the
+# built-in simulator. Flip the DRY_RUN repo VARIABLE to false for live (see SETUP.md; the
+# bot also enforces its own live gate).
 #
-# Triggers:
-#   * GitHub's built-in schedule below is the primary trigger. For a once-a-day
-#     rebalance, GitHub's few-minutes jitter is irrelevant. Two firings cover EDT and
-#     EST; the bot itself refuses to trade outside its window, so the "wrong" one is
-#     a harmless no-op, and a second run on the same day only reconciles (idempotent).
-#   * workflow_dispatch: the Actions "Run workflow" button, or an external cron
-#     (cron-job.org) if you prefer -- point it at 15:30-15:45 ET on weekdays.
+# Triggers: GitHub's schedule (below, every 30 min because it runs late on this repo), the
+# Actions "Run workflow" button, or an external cron (cron-job.org) if you want exact timing.
 on:
   schedule:
     # GitHub runs this repo's schedules up to ~3 hours late (observed 2026-06 and 2026-09).
