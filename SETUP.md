@@ -1,7 +1,7 @@
 # SETUP
 
 ## 0. It already runs
-Merge to `main` and the `trader` workflow runs every weekday at 15:35 ET on the built-in
+Merge to `main` and the `trader` workflow runs every 30 minutes through each weekday session (trading once per day) on the built-in
 **simulator** (real prices, no accounts). Watch it in:
 - the **📈 Trading log** issue (one comment per run); a **🔴 Executor error** issue appears
   only if a run crashes and closes itself when the next run is clean,

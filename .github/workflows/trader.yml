@@ -1,6 +1,6 @@
 name: trader
 
-# The executor (bot.py): ONE strategy step per trading day, in the last hour of
+# The executor (bot.py): ONE strategy step per trading day, from 30 min after the open,
 # the session. Paper by default (DRY_RUN=true -> Alpaca paper account). Flip the
 # DRY_RUN repo VARIABLE to false to trade the live account (see SETUP.md).
 #
@@ -13,14 +13,11 @@ name: trader
 #     (cron-job.org) if you prefer -- point it at 15:30-15:45 ET on weekdays.
 on:
   schedule:
-    # Primary 15:35 ET + backup 15:50 ET, for both UTC offsets. The bot's trade window is the
-    # last 60 minutes of the session, so the "wrong-offset" firings (14:35/14:50 in winter,
-    # 16:35/16:50 in summer) are harmless no-ops. If GitHub runs the primary late, the backup
-    # trades; if the primary ran, the backup only reconciles.
-    - cron: '35 19 * * 1-5'   # 15:35 EDT
-    - cron: '50 19 * * 1-5'   # 15:50 EDT (backup)
-    - cron: '35 20 * * 1-5'   # 15:35 EST
-    - cron: '50 20 * * 1-5'   # 15:50 EST (backup)
+    # GitHub runs this repo's schedules up to ~3 hours late (observed 2026-06 and 2026-09).
+    # So fire every 30 minutes through the session: the first run that lands inside the
+    # trade window (30 min after the open -> close) trades; later ones only reconcile, and
+    # the executor is idempotent per day. Off-hours firings are harmless no-ops.
+    - cron: '15,45 13-20 * * 1-5'
   workflow_dispatch:
     inputs:
       force_run:
@@ -116,6 +113,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           [ -f reports/today.md ] || exit 0
+          # Only post runs that did something worth reading (orders, news overrides, halts, data problems).
+          grep -qE "order\(s\):|NEWS OVERRIDE|KILL SWITCH|HALTED|STALE DATA|REFUSED|FAILED|scorecard: override" reports/today.md || { echo "quiet run; not posting"; exit 0; }
           NUM=$(gh issue list --state open --search "Trading log in:title" --json number --jq '.[0].number // empty')
           if [ -z "$NUM" ]; then
             NUM=$(gh issue create --title "📈 Trading log" --body "One comment per executor run. Latest state: see index.html / reports/today.md." | grep -o '[0-9]*$')
