@@ -367,6 +367,34 @@ class BotTests(unittest.TestCase):
         self.assertEqual(bot.main(), 0)
         self.assertEqual(FakeAlpaca.cancelled, ["old1"])   # only our universe; AAPL untouched
 
+    def test_news_veto_and_risk_level_are_applied_and_scored(self):
+        os.makedirs("signals", exist_ok=True)
+        # first see what the strategy wants with no news
+        with mock.patch.dict(os.environ, {"NO_TRADE": "true"}):
+            self.assertEqual(bot.main(), 0)
+        with open("signals/targets.json") as f:
+            raw = json.load(f)["weights"]
+        victim = max((s for s in raw if s != "BIL"), key=lambda s: raw[s])
+        os.remove("signals/state.json"); os.remove("signals/targets.json")
+        with open("signals/news_risk.json", "w") as f:
+            json.dump({"date": "2026-09-22", "market_risk": 2, "market_reason": "test shock",
+                       "vetoes": [{"symbol": victim, "reason": "test"}], "summary": "s"}, f)
+        self.assertEqual(bot.main(), 0)
+        api = FakeAlpaca.instances[-1]
+        bought = {s for side, s, _ in api.calls if side == "buy"}
+        self.assertNotIn(victim, bought)
+        self.assertIn("BIL", bought)
+        with open("reports/today.md") as f:
+            body = f.read()
+        self.assertIn("NEWS OVERRIDE: veto " + victim, body)
+        self.assertIn("NEWS OVERRIDE: market risk 2", body)
+        with open("signals/news_log.json") as f:
+            nl = json.load(f)
+        self.assertEqual(len(nl), 1)
+        self.assertIsNone(nl[0]["effect"])
+        # stale verdict tomorrow is ignored
+        self.assertEqual(bot.news_overlay.apply(raw, {"date": "2026-09-21", "market_risk": 3}, "2026-09-22")[1], [])
+
     def test_plan_orders_sells_first_and_closes_zero_targets(self):
         plan = bot.plan_orders({"SPY": 500.0, "GLD": 300.0}, {"SPY": 200.0, "TLT": 150.0}, 5.0)
         kinds = [k for _, k, _ in plan]

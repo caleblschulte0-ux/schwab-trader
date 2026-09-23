@@ -27,7 +27,7 @@ account with the same code.
 | **Safety** | Long-only, never leveraged, sells before buys, one strategy step per day, only touches its own universe, 30% drawdown kill switch, broker-block detection, **stale-data guard** (no trades on old prices), **bad-tick guard** (a 25% "print" on an ETF is ignored), committed fallback data so a Yahoo outage cannot break a run. |
 | **Ops** | `doctor.py` preflight on every run, a rolling **"📈 Trading log"** issue with every run, a **"🔴 Executor error"** issue with the traceback on any crash (auto-closed when healthy), a **watchdog** issue on a missed day, weekly backtest + validation refresh, CI tests on every push, a static dashboard. |
 | **More return, if you want it** | `aggressive` preset: half the book in a trend-timed 2x index fund. Backtest **+15.6%/yr since 2008 ($1k → $15k) vs SPY +11.4%**, with a -28% worst drawdown vs SPY's -52%. Same risk-adjusted return, bigger swings. See STRATEGY.md. |
-| **No LLM in the loop** | The old Claude "brains" are gone from the trading path. An optional weekly Claude review (`analyst.yml`) can only write a report. |
+| **Reads the news** | Every trading day at 15:35 ET, `news_brain.py` pulls ~180 fresh headlines (Google News, Yahoo Finance, MarketWatch) and Claude acts as a **risk officer**: it can lower risk on a crisis-grade event or veto up to 3 ETFs exposed to a specific shock, and it must cite the headlines. It can never buy anything. Every override is scored against what would have happened without it (`reports/track_record.md`). If it fails, the bot trades on the strategy alone. |
 
 ## Is it ready for real money?
 

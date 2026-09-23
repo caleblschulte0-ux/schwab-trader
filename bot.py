@@ -41,6 +41,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Tuple
 
 import config as cfgmod
+import news_overlay
 import data as datamod
 from alpaca import Alpaca, AlpacaError
 from broker_sim import SimBroker
@@ -52,6 +53,8 @@ STATE_FILE = os.path.join(SIGNALS_DIR, "state.json")
 TARGETS_FILE = os.path.join(SIGNALS_DIR, "targets.json")
 HOLDINGS_FILE = os.path.join(SIGNALS_DIR, "holdings.json")
 TODAY_FILE = os.path.join(REPORTS_DIR, "today.md")
+NEWS_FILE = os.path.join(SIGNALS_DIR, "news_risk.json")
+NEWS_LOG = os.path.join(SIGNALS_DIR, "news_log.json")
 
 HISTORY_DAYS = 420  # calendar days of bars to load (>= 260 trading days + slack)
 MAX_DAILY_MOVE = 0.25       # bad-tick guard for live prices
@@ -461,7 +464,9 @@ def main() -> int:
         except Exception as exc:  # noqa: BLE001
             log(f"(data) live prices unavailable ({exc})")
         log(f"strategy already stepped today ({today_et}); re-using targets.json and reconciling only")
+        fresh_decision = False
     else:
+        fresh_decision = True
         symbols = sorted(managed | set(current))
         try:
             hist = load_market_history(api, symbols, today_et, log)
@@ -491,6 +496,35 @@ def main() -> int:
         st_raw["hwm"] = hwm
         st_raw["last_run_utc"] = now_utc
         save_json(STATE_FILE, st_raw)
+
+    # ------------------------------------------------------------ news risk overlay (defensive only)
+    news_cfg = cfg.get("news") or {}
+    verdict = load_json(NEWS_FILE, {})
+    news_log = load_json(NEWS_LOG, [])
+    if fresh_decision:
+        scored = news_overlay.score_previous(news_log, prices)
+        if scored:
+            log(f"news scorecard: override of {scored['date']} {'SAVED' if scored['effect'] >= 0 else 'COST'} "
+                f"${abs(scored['effect_dollars']):,.2f} ({scored['effect']:+.2%} of capital)")
+    raw_weights = dict(weights)
+    weights, news_actions = news_overlay.apply(weights, verdict, today_et, news_cfg.get("scale"),
+                                               enabled=bool(news_cfg.get("enabled", True)))
+    if verdict.get("date") == today_et:
+        log(f"news: risk level {verdict.get('market_risk')} | vetoes {[v['symbol'] for v in verdict.get('vetoes', [])]} | {verdict.get('summary', '')}")
+    else:
+        log("news: no verdict for today (overlay off; trading on the strategy alone)")
+    for a in news_actions:
+        log(f"  NEWS OVERRIDE: {a}")
+    if news_actions and not any(e.get("date") == today_et for e in news_log):
+        news_log.append({"date": today_et, "raw": raw_weights, "final": weights, "actions": news_actions,
+                         "prices": {s: prices.get(s) for s in set(raw_weights) | set(weights) if prices.get(s)},
+                         "capital": capital, "effect": None})
+    if news_log:
+        news_log = news_log[-500:]
+        save_json(NEWS_LOG, news_log)
+        sm = news_overlay.summary(news_log)
+        log(f"news scorecard to date: {sm['override_days']} override days, {sm['helped']} helped / {sm['hurt']} hurt, "
+            f"net {sm['net_dollars']:+,.2f}")
 
     # ------------------------------------------------------------ reconcile
     targets = {s: w * capital for s, w in weights.items()}

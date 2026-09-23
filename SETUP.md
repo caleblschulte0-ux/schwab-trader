@@ -40,6 +40,11 @@ Optional repo **variables** (Settings → Secrets and variables → Actions → 
 5. The live account should hold nothing but what the bot manages, or set `MAX_CAPITAL`
    well below its equity; positions outside the ETF universe are ignored, never sold.
 
+## The news layer
+Add **one** of these secrets so the daily news scan can run (it is skipped otherwise):
+- `ANTHROPIC_API_KEY` — an Anthropic API key (about one short call per trading day), or
+- `CLAUDE_CODE_OAUTH_TOKEN` — your Claude subscription token (`claude setup-token`).
+
 ## Optional: weekly Claude review
 Add `CLAUDE_CODE_OAUTH_TOKEN` and `analyst.yml` writes `reports/analyst.md` every Friday.
 It cannot trade and the bot never waits for it.

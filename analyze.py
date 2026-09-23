@@ -160,6 +160,20 @@ def main() -> int:
             L.append("> Small sample: with fewer than ~30 closed trades these numbers are directional only.")
     else:
         L += ["_No closed trades yet._"]
+    try:
+        import news_overlay
+        nl = json.load(open("signals/news_log.json"))
+        sm = news_overlay.summary(nl)
+        L += ["", "## News layer scorecard", "",
+              f"Days the news layer overrode the strategy: **{sm['override_days']}** · scored: {sm['scored']} · "
+              f"helped: {sm['helped']} · hurt: {sm['hurt']} · **net effect {sm['net_dollars']:+,.2f}**", "",
+              "| Date | Action | Effect |", "|---|---|---:|"]
+        for e in nl[-30:]:
+            eff = "pending" if e.get("effect") is None else f"{e['effect_dollars']:+,.2f}"
+            L.append(f"| {e['date']} | {'; '.join(e['actions'])[:160]} | {eff} |")
+        L.append("\nIf this stays negative after ~20 scored overrides, turn it off: `\"news\": {\"enabled\": false}` in config.json.")
+    except (FileNotFoundError, json.JSONDecodeError):
+        L += ["", "## News layer scorecard", "", "_No news overrides yet._"]
     L += ["", "## Reference: strategy backtest", "", "See `reports/backtest.md` (18 years of daily data, same code path as the live bot)."]
     with open("reports/track_record.md", "w") as f:
         f.write("\n".join(L) + "\n")

@@ -47,5 +47,13 @@
     "min_trade_dollars": 5,
     "sim_start_cash": 1000,
     "live_min_paper_runs": 20
+  },
+  "news": {
+    "enabled": true,
+    "scale": {
+      "2": 0.75,
+      "3": 0.5
+    },
+    "_comment": "Defensive-only news overlay (news_brain.py -> signals/news_risk.json). Can shrink risk or veto up to 3 ETFs for the day; never buys. Scored daily in signals/news_log.json."
   }
 }

@@ -59,6 +59,30 @@ deep and how long the losses are.
 - **The catch**: `balanced` trails SPY in most bull markets. `aggressive` is the preset
   that beats it, with bigger swings. The `aggressive` kill switch sits at 45%.
 
+## The news layer (defensive only)
+Price data can't see an indictment, a war or an emergency Fed move until the market reacts.
+So every trading day, before the executor runs, `news_brain.py` collects the last ~24 hours of
+headlines and asks Claude to act as a risk officer for the portfolio the bot is about to hold.
+It returns a market risk level and up to 3 vetoes, as strict JSON:
+
+| Level | Meaning | Effect |
+|---|---|---|
+| 0 | normal (most days) | none |
+| 1 | elevated | logged only |
+| 2 | serious market-wide shock | risk assets ×0.75, rest to T-bills |
+| 3 | crisis (9/11, Lehman, March 2020) | risk assets ×0.50 |
+| veto | concrete new shock to a specific ETF (e.g. sanctions on a sector, scandal at a mega-cap that dominates a fund) | that ETF → T-bills for the day |
+
+Why it can't pick buys: public news is priced within seconds, and the old bot that traded
+headlines lost on 12 of 14 trades. Avoiding damage is where a daily news read can plausibly
+help. Every claim must cite real headline ids or it is discarded. Overrides last one day;
+the strategy's own state is untouched, so the book returns to normal when the news clears.
+
+**It cannot be backtested** (there is no archive of what a model would have said on past
+days), so it is scored live: each override records prices, and the next day the bot computes
+whether it saved or cost money. The running tally is in `reports/track_record.md`. If it's
+net negative after ~20 scored overrides, set `"news": {"enabled": false}` in `config.json`.
+
 ## Hard guardrails (in `bot.py`)
 - Weights sum to ≤ 100%; buys capped to settled cash; sells before buys.
 - Only universe symbols are touched. Anything else in the account is ignored.
