@@ -1,6 +1,6 @@
 {
   "_comment": "Knobs live here. 'preset' picks a named bundle (balanced | conservative | guarded_growth | aggressive | growth | us_only | rotation_only | conservative); 'strategy' overrides individual Params fields on top; 'executor' holds runtime limits. Precedence for executor limits: env var (UPPER_CASE) > this file's executor block > the preset's executor block > defaults. Re-run `python backtest.py` after changing anything.",
-  "preset": "balanced",
+  "preset": "guarded_growth",
   "presets": {
     "balanced": {
       "core_symbol": "auto",

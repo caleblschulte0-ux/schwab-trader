@@ -489,8 +489,10 @@ def main() -> int:
             print(f"{name:<24}{r['cagr']:>8.1%}{r['sharpe']:>8.2f}{r['max_drawdown']:>8.1%}{r['calmar']:>8.2f}{r['end_equity']:>9,.0f}")
         return 0
 
-    r = run(hist, Params(), args.start, args.end, verbose=args.verbose)
-    report = fmt_report(r, f"Backtest {args.start} -> {r['end']}")
+    import config as cfgmod
+    live_params, preset = cfgmod.build_params(cfgmod.load_config())
+    r = run(hist, live_params, args.start, args.end, verbose=args.verbose)
+    report = fmt_report(r, f"Backtest {args.start} -> {r['end']} (preset: {preset}, exactly what the bot trades)")
     print(report)
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     with open(args.out, "w") as f:

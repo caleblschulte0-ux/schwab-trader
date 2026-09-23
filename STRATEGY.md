@@ -4,7 +4,7 @@
 Never lose more than the cash put in. Enforced in code: long-only, never short, never
 leveraged, never options. The bot can only buy ETFs with settled cash and sell ETFs it holds.
 
-## The portfolio (preset `balanced`)
+## The portfolio (base settings; the live preset is `guarded_growth`, see the table below)
 Universe: 34 liquid, commission-free, fractional ETFs (US indices and sectors,
 international, bonds, gold/silver/commodities/dollar), plus the 2x index funds SSO/QLD
 for the `aggressive` preset. No single stocks.

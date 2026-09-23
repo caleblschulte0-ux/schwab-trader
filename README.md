@@ -16,6 +16,12 @@ account with the same code.
 
 ---
 
+**Live preset: `guarded_growth`.** Half the book in a trend-timed 2x S&P 500 / Nasdaq-100 fund,
+half in a momentum rotation across 34 ETFs, risk halved when credit markets show stress.
+Backtest 2008–2026: **+13.2%/yr vs SPY +11.4%, worst drawdown -22% vs -52%**, ahead of SPY in
+every window tested. Chosen because it is the only preset that beat SPY everywhere while
+keeping drawdowns under half of SPY's.
+
 ## What you get
 
 | | |
@@ -98,7 +104,7 @@ flowchart LR
 Edit `config.json` (then run `python backtest.py` to see what you did):
 
 ```json
-{ "preset": "balanced",          // balanced | conservative | guarded_growth | aggressive | growth | us_only | rotation_only
+{ "preset": "guarded_growth",    // balanced | conservative | guarded_growth | aggressive | growth | us_only | rotation_only
   "strategy": { "mom_top_n": 6 },  // any strategy.Params field
   "executor": { "max_capital": null, "max_drawdown_halt": 0.30, "trade_window_min": 60 } }
 ```

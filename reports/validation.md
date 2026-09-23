@@ -69,7 +69,7 @@ Everything below is implemented in `strategy.py`; the shipped default is the row
 | ✅ Shipped defaults | +9.8% / 0.79 / -18% | +11.3% / 0.87 / -18% | +13.1% / 0.96 / -18% |
 | previous defaults (core 30%, top 6, 200-day) | +10.2% / 0.79 / -20% | +10.8% / 0.82 / -18% | +13.0% / 0.92 / -18% |
 | no core sleeve (100% rotation) | +8.5% / 0.74 / -14% | +8.7% / 0.75 / -15% | +10.7% / 0.87 / -15% |
-| fixed SPY core instead of adaptive | +8.7% / 0.80 / -17% | +8.8% / 0.81 / -16% | +10.9% / 0.94 / -16% |
+| fixed SPY core instead of adaptive | +8.7% / 0.80 / -17% | +8.8% / 0.81 / -16% | +10.8% / 0.94 / -16% |
 | 'growth' preset: fixed QQQ core | +11.3% / 0.90 / -18% | +12.7% / 0.97 / -18% | +15.0% / 1.09 / -18% |
 | 'aggressive' preset: 50% in 2x SPY/QQQ (SSO/QLD), trend-timed | +15.6% / 0.83 / -28% | +17.4% / 0.89 / -28% | +20.0% / 0.96 / -28% |
 | aggressive + 15% vol cap (rejected) | +10.7% / 0.80 / -23% | +11.3% / 0.82 / -23% | +12.7% / 0.90 / -23% |
@@ -80,7 +80,7 @@ Everything below is implemented in `strategy.py`; the shipped default is the row
 | breadth regime switch (<40% → all defensive) | +9.1% / 0.77 / -20% | +10.9% / 0.88 / -15% | +12.3% / 0.94 / -15% |
 | portfolio vol target 12% | +8.2% / 0.78 / -16% | +8.9% / 0.82 / -16% | +10.2% / 0.90 / -16% |
 | daily rebalance + hysteresis | +9.8% / 0.78 / -19% | +11.4% / 0.87 / -17% | +13.1% / 0.96 / -17% |
-| + mean-reversion sleeve 25% | +9.3% / 0.75 / -18% | +10.9% / 0.84 / -18% | +12.8% / 0.93 / -18% |
+| + mean-reversion sleeve 25% | +9.3% / 0.75 / -18% | +11.0% / 0.84 / -18% | +12.8% / 0.93 / -18% |
 | include 1-month lookback | +9.7% / 0.78 / -18% | +10.6% / 0.83 / -18% | +12.4% / 0.91 / -18% |
 | equal weights instead of inverse-vol | +10.5% / 0.81 / -19% | +12.0% / 0.88 / -20% | +13.7% / 0.96 / -20% |
 
