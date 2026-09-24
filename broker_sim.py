@@ -101,7 +101,16 @@ class SimBroker:
         return {s: [(d, c) for d, c in h.get(s, []) if d >= start and (end is None or d <= end)] for s in symbols}
 
     def latest_prices(self, symbols: Iterable[str], feed: str = "iex") -> Dict[str, float]:
-        return {s: self.price(s) for s in symbols if self.price(s) > 0}
+        """Only prices dated TODAY count as live. Before the open, or if Yahoo failed and the
+        history came from the committed seed, nothing qualifies -> the executor's stale-data
+        guard refuses to trade instead of trading the simulator at days-old prices."""
+        today = self.now_et().strftime("%Y-%m-%d")
+        out = {}
+        for s in symbols:
+            h = self._hist().get(s) or []
+            if h and h[-1][0] == today and h[-1][1] > 0:
+                out[s] = h[-1][1]
+        return out
 
     # ------------------------------------------------------------ account
     def _equity(self) -> float:
