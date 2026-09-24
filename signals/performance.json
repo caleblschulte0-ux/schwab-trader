@@ -1,19 +1,19 @@
 {
   "account": {
-    "cash": 1000.0,
-    "equity": 1000.0
+    "cash": 2.01,
+    "equity": 999.32
   },
   "equity": {
     "cagr": null,
-    "days": 1,
-    "end": "2026-09-23",
-    "end_equity": 1000.0,
-    "max_drawdown": 0.0,
-    "n_points": 2,
-    "sharpe": 0.0,
+    "days": 2,
+    "end": "2026-09-24",
+    "end_equity": 999.5,
+    "max_drawdown": -0.0004999999999999449,
+    "n_points": 3,
+    "sharpe": -11.224972160321824,
     "start": "2026-09-22",
     "start_equity": 1000.0,
-    "total_return": 0.0
+    "total_return": -0.0004999999999999449
   },
   "equity_curve": [
     [
@@ -23,12 +23,71 @@
     [
       "2026-09-23",
       1000.0
+    ],
+    [
+      "2026-09-24",
+      999.5
     ]
   ],
   "mode": "sim",
-  "positions": [],
+  "positions": [
+    {
+      "market_value": 78.16,
+      "qty": 2.352473,
+      "symbol": "DBC",
+      "unrealized_plpc": -0.0005
+    },
+    {
+      "market_value": 66.29,
+      "qty": 0.986191,
+      "symbol": "EEM",
+      "unrealized_plpc": -0.0005
+    },
+    {
+      "market_value": 499.52,
+      "qty": 5.220686,
+      "symbol": "QLD",
+      "unrealized_plpc": -0.00097
+    },
+    {
+      "market_value": 38.4,
+      "qty": 0.064212,
+      "symbol": "SMH",
+      "unrealized_plpc": -0.000374
+    },
+    {
+      "market_value": 30.33,
+      "qty": 0.197433,
+      "symbol": "USO",
+      "unrealized_plpc": -8.4e-05
+    },
+    {
+      "market_value": 58.75,
+      "qty": 0.380543,
+      "symbol": "XBI",
+      "unrealized_plpc": -0.000306
+    },
+    {
+      "market_value": 77.93,
+      "qty": 1.237529,
+      "symbol": "XLE",
+      "unrealized_plpc": -0.000341
+    },
+    {
+      "market_value": 59.12,
+      "qty": 0.304348,
+      "symbol": "XLK",
+      "unrealized_plpc": -0.000294
+    },
+    {
+      "market_value": 88.82,
+      "qty": 0.523399,
+      "symbol": "XLV",
+      "unrealized_plpc": -0.0005
+    }
+  ],
   "trades": {
     "n": 0
   },
-  "updated_utc": "2026-09-23T22:27:54Z"
+  "updated_utc": "2026-09-24T17:52:33Z"
 }

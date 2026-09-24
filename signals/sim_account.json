@@ -1,5 +1,5 @@
 {
-  "cash": 1000.0,
+  "cash": 2.0100000000000406,
   "created_utc": "2026-09-23T02:15:06Z",
   "equity_curve": [
     [
@@ -9,10 +9,124 @@
     [
       "2026-09-23",
       1000.0
+    ],
+    [
+      "2026-09-24",
+      999.5
     ]
   ],
-  "fills": [],
-  "n": 0,
-  "positions": {},
+  "fills": [
+    {
+      "id": "sim-1",
+      "price": "95.7729",
+      "qty": "5.220686",
+      "side": "buy",
+      "symbol": "QLD",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-2",
+      "price": "169.7748",
+      "qty": "0.523399",
+      "side": "buy",
+      "symbol": "XLV",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-3",
+      "price": "33.2416",
+      "qty": "2.352473",
+      "side": "buy",
+      "symbol": "DBC",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-4",
+      "price": "62.9965",
+      "qty": "1.237529",
+      "side": "buy",
+      "symbol": "XLE",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-5",
+      "price": "67.2486",
+      "qty": "0.986191",
+      "side": "buy",
+      "symbol": "EEM",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-6",
+      "price": "194.3171",
+      "qty": "0.304348",
+      "side": "buy",
+      "symbol": "XLK",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-7",
+      "price": "154.4372",
+      "qty": "0.380543",
+      "side": "buy",
+      "symbol": "XBI",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-8",
+      "price": "598.1789",
+      "qty": "0.064212",
+      "side": "buy",
+      "symbol": "SMH",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    },
+    {
+      "id": "sim-9",
+      "price": "153.6220",
+      "qty": "0.197433",
+      "side": "buy",
+      "symbol": "USO",
+      "transaction_time": "2026-09-24T17:52:10Z"
+    }
+  ],
+  "n": 9,
+  "positions": {
+    "DBC": {
+      "avg_entry": 33.24161097335815,
+      "qty": 2.352473231898245
+    },
+    "EEM": {
+      "avg_entry": 67.24860383605957,
+      "qty": 0.9861914778435645
+    },
+    "QLD": {
+      "avg_entry": 95.77286097335815,
+      "qty": 5.220685640153203
+    },
+    "SMH": {
+      "avg_entry": 598.1789448852538,
+      "qty": 0.064211554633318
+    },
+    "USO": {
+      "avg_entry": 153.6219691314697,
+      "qty": 0.19743269905649743
+    },
+    "XBI": {
+      "avg_entry": 154.43718061065672,
+      "qty": 0.38054307756473416
+    },
+    "XLE": {
+      "avg_entry": 62.996482652664184,
+      "qty": 1.2375294098535354
+    },
+    "XLK": {
+      "avg_entry": 194.31711122131347,
+      "qty": 0.3043478756363546
+    },
+    "XLV": {
+      "avg_entry": 169.77484744262694,
+      "qty": 0.5233990861339399
+    }
+  },
   "start_cash": 1000.0
 }

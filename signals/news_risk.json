@@ -1,26 +1,34 @@
 {
   "market_risk": 1,
-  "market_reason": "10-year Treasury yields spiked to 19-year highs above 5.1% alongside oil back above $100 on Iran-related supply risk, pushing broad equity indices lower, though this is a continuation of a known rates/inflation theme rather than a sudden new shock.",
+  "market_reason": "A sharp, broad-based bond market rout has pushed the 30-year Treasury yield to its highest level since 2004, with multiple Fed officials reinforcing more-hikes expectations, and tech/growth names (including Nvidia) already selling off in response, which is a material headwind for this QLD-heavy, rat",
   "market_evidence": [
+    25,
     26,
     27,
-    25,
-    20,
-    118,
-    119,
-    148,
-    160
+    28,
+    29,
+    32,
+    33,
+    34,
+    35,
+    36,
+    30,
+    6,
+    12,
+    13,
+    15,
+    22
   ],
   "market_headlines": [
-    "10-year Treasury yield hits 5.1% for first time in 19 years - CNN",
-    "US Treasury yields soar most since \u2018liberation day\u2019 tariffs shook markets - Financial Times",
-    "Treasury yields surge to near 20-year high as oil jumps back above $103 per barrel - NBC News"
+    "Global bond rout rolls on, pushing US 30-year yield to highest since 2004 - Reuters",
+    "30-year Treasury yield hits highest level since 2004 as bond market rout continues - CNBC",
+    "U.S. Treasury Yields Hit Multiyear Highs on Economic Data, Fed Rate-Boost Expectations - WSJ"
   ],
   "vetoes": [],
-  "summary": "A sharp surge in Treasury yields (10-year above 5.1%, highest since 2007) combined with elevated oil prices on Iran tensions is pressuring the broad market and tech/growth names today, warranting modest caution but no fund-specific veto since no single ETF faces new, material, idiosyncratic bad news. Biotech (XBI) saw notable weakness in scattered names, but it reads as broad market/rate-driven multiple compression rather than a specific new catalyst justifying a veto.",
+  "summary": "The dominant fresh story is a synchronized global bond selloff driving multi-decade-high yields, which is pressuring rate-sensitive growth/tech stocks and is the main risk to this QLD/XLK/SMH-heavy book today. Middle East oil-supply headlines (Houthi strike on Saudi Arabia, Iran diesel-export-ban talk) are moving crude but appear already reflected in oil prices, so no ETF-specific veto is warranted.",
   "dropped": [],
-  "date": "2026-09-23",
-  "generated_utc": "2026-09-23T22:26:28Z",
-  "n_headlines": 183,
+  "date": "2026-09-24",
+  "generated_utc": "2026-09-24T17:51:10Z",
+  "n_headlines": 192,
   "model": "claude-sonnet-5"
 }

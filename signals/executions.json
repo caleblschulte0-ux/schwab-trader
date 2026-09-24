@@ -1,0 +1,101 @@
+[
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 95.725,
+    "fill_price": 95.7729,
+    "mode": "sim",
+    "notional": 500.0,
+    "qty": 5.220686,
+    "side": "buy",
+    "symbol": "QLD"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 169.69,
+    "fill_price": 169.7748,
+    "mode": "sim",
+    "notional": 88.86,
+    "qty": 0.523399,
+    "side": "buy",
+    "symbol": "XLV"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 33.225,
+    "fill_price": 33.2416,
+    "mode": "sim",
+    "notional": 78.2,
+    "qty": 2.352473,
+    "side": "buy",
+    "symbol": "DBC"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 62.965,
+    "fill_price": 62.9965,
+    "mode": "sim",
+    "notional": 77.96,
+    "qty": 1.237529,
+    "side": "buy",
+    "symbol": "XLE"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 67.215,
+    "fill_price": 67.2486,
+    "mode": "sim",
+    "notional": 66.32,
+    "qty": 0.986191,
+    "side": "buy",
+    "symbol": "EEM"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 194.22,
+    "fill_price": 194.3171,
+    "mode": "sim",
+    "notional": 59.14,
+    "qty": 0.304348,
+    "side": "buy",
+    "symbol": "XLK"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 154.36,
+    "fill_price": 154.4372,
+    "mode": "sim",
+    "notional": 58.77,
+    "qty": 0.380543,
+    "side": "buy",
+    "symbol": "XBI"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 597.88,
+    "fill_price": 598.1789,
+    "mode": "sim",
+    "notional": 38.41,
+    "qty": 0.064212,
+    "side": "buy",
+    "symbol": "SMH"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-09-24",
+    "decision_price": 153.5452,
+    "fill_price": 153.622,
+    "mode": "sim",
+    "notional": 30.33,
+    "qty": 0.197433,
+    "side": "buy",
+    "symbol": "USO"
+  }
+]
