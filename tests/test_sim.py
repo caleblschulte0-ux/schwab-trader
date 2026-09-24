@@ -96,6 +96,13 @@ class SimBrokerTests(unittest.TestCase):
         self.assertEqual(len(h["equity"]), 1)
         self.assertAlmostEqual(h["equity"][0], 1000.0, places=2)
 
+    def test_latest_prices_require_todays_bar(self):
+        hist = fake_history()
+        for s in hist:
+            hist[s] = hist[s][:-1]          # newest bar is yesterday (pre-market / seed fallback)
+        api = SimBroker(path=self.path, history=hist, now=NOW)
+        self.assertEqual(api.latest_prices(["SPY", "QQQ"]), {})
+
     def test_daily_bars_and_latest(self):
         bars = self.api.daily_bars(["SPY"], start="2025-01-01", end="2026-09-21")
         self.assertTrue(all(d <= "2026-09-21" for d, _ in bars["SPY"]))
