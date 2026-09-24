@@ -1,99 +1,99 @@
 {
   "buying_power": 2.01,
   "cash": 2.01,
-  "equity": 999.5,
+  "equity": 1001.9,
   "mode": "sim",
   "positions": [
     {
       "avg_entry": 33.2416,
-      "last": 33.225,
+      "last": 33.18,
       "managed": true,
-      "market_value": 78.16,
+      "market_value": 78.06,
       "qty": 2.352473,
       "symbol": "DBC",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.04
+      "unrealized_pct": -0.19,
+      "unrealized_pl": -0.14
     },
     {
       "avg_entry": 67.2486,
-      "last": 67.215,
+      "last": 67.25,
       "managed": true,
-      "market_value": 66.29,
+      "market_value": 66.32,
       "qty": 0.986191,
       "symbol": "EEM",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.03
+      "unrealized_pct": 0.0,
+      "unrealized_pl": 0.0
     },
     {
       "avg_entry": 95.7729,
-      "last": 95.725,
+      "last": 96.1,
       "managed": true,
-      "market_value": 499.75,
+      "market_value": 501.71,
       "qty": 5.220686,
       "symbol": "QLD",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.25
+      "unrealized_pct": 0.34,
+      "unrealized_pl": 1.71
     },
     {
       "avg_entry": 598.1789,
-      "last": 597.88,
+      "last": 600.52,
       "managed": true,
-      "market_value": 38.39,
+      "market_value": 38.56,
       "qty": 0.064212,
       "symbol": "SMH",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.02
+      "unrealized_pct": 0.39,
+      "unrealized_pl": 0.15
     },
     {
       "avg_entry": 153.622,
-      "last": 153.5452,
+      "last": 153.09,
       "managed": true,
-      "market_value": 30.31,
+      "market_value": 30.22,
       "qty": 0.197433,
       "symbol": "USO",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.02
+      "unrealized_pct": -0.35,
+      "unrealized_pl": -0.11
     },
     {
       "avg_entry": 154.4372,
-      "last": 154.36,
+      "last": 156.05,
       "managed": true,
-      "market_value": 58.74,
+      "market_value": 59.38,
       "qty": 0.380543,
       "symbol": "XBI",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.03
+      "unrealized_pct": 1.04,
+      "unrealized_pl": 0.61
     },
     {
       "avg_entry": 62.9965,
-      "last": 62.965,
+      "last": 62.6,
       "managed": true,
-      "market_value": 77.92,
+      "market_value": 77.47,
       "qty": 1.237529,
       "symbol": "XLE",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.04
+      "unrealized_pct": -0.63,
+      "unrealized_pl": -0.49
     },
     {
       "avg_entry": 194.3171,
-      "last": 194.22,
+      "last": 194.71,
       "managed": true,
-      "market_value": 59.11,
+      "market_value": 59.26,
       "qty": 0.304348,
       "symbol": "XLK",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.03
+      "unrealized_pct": 0.2,
+      "unrealized_pl": 0.12
     },
     {
       "avg_entry": 169.7748,
-      "last": 169.69,
+      "last": 169.87,
       "managed": true,
-      "market_value": 88.82,
+      "market_value": 88.91,
       "qty": 0.523399,
       "symbol": "XLV",
-      "unrealized_pct": -0.05,
-      "unrealized_pl": -0.04
+      "unrealized_pct": 0.06,
+      "unrealized_pl": 0.05
     }
   ],
-  "updated_utc": "2026-09-24T17:51:48Z"
+  "updated_utc": "2026-09-24T21:28:06Z"
 }
