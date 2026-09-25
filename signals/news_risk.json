@@ -1,34 +1,13 @@
 {
-  "market_risk": 1,
-  "market_reason": "A sharp, broad-based bond market rout has pushed the 30-year Treasury yield to its highest level since 2004, with multiple Fed officials reinforcing more-hikes expectations, and tech/growth names (including Nvidia) already selling off in response, which is a material headwind for this QLD-heavy, rat",
-  "market_evidence": [
-    25,
-    26,
-    27,
-    28,
-    29,
-    32,
-    33,
-    34,
-    35,
-    36,
-    30,
-    6,
-    12,
-    13,
-    15,
-    22
-  ],
-  "market_headlines": [
-    "Global bond rout rolls on, pushing US 30-year yield to highest since 2004 - Reuters",
-    "30-year Treasury yield hits highest level since 2004 as bond market rout continues - CNBC",
-    "U.S. Treasury Yields Hit Multiyear Highs on Economic Data, Fed Rate-Boost Expectations - WSJ"
-  ],
+  "market_risk": 0,
+  "market_reason": "",
+  "market_evidence": [],
+  "market_headlines": [],
   "vetoes": [],
-  "summary": "The dominant fresh story is a synchronized global bond selloff driving multi-decade-high yields, which is pressuring rate-sensitive growth/tech stocks and is the main risk to this QLD/XLK/SMH-heavy book today. Middle East oil-supply headlines (Houthi strike on Saudi Arabia, Iran diesel-export-ban talk) are moving crude but appear already reflected in oil prices, so no ETF-specific veto is warranted.",
+  "summary": "Today's news is dominated by an ongoing, well-known trend of surging Treasury yields (10yr near 5%, 19-year highs) and hawkish Fed commentary ahead of midterms, plus a long-running Iran/Hormuz oil standoff that is currently pushing crude lower on diplomacy hopes rather than higher on escalation. Nothing here is a sudden, unpriced, fund-specific shock, so no risk-level change or vetoes are warranted.",
   "dropped": [],
-  "date": "2026-09-24",
-  "generated_utc": "2026-09-24T17:51:10Z",
-  "n_headlines": 192,
+  "date": "2026-09-25",
+  "generated_utc": "2026-09-25T17:56:07Z",
+  "n_headlines": 184,
   "model": "claude-sonnet-5"
 }
