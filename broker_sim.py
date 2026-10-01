@@ -208,8 +208,17 @@ class SimBroker:
 
     # ------------------------------------------------------------ history / reporting
     def snapshot(self) -> None:
-        """Record today's equity (one point per day) and persist."""
+        """Record today's equity (one point per day) and persist -- but only if every held
+        symbol has a price dated today. Yahoo sometimes omits the newest bar (seen around
+        00:00 UTC), and marking with older prices would overwrite a correct point."""
         today = self.now_et().strftime("%Y-%m-%d")
+        if self.now_et().weekday() >= 5:
+            return
+        h = self._hist()
+        stale = [s for s in self.book["positions"] if not h.get(s) or h[s][-1][0] != today]
+        if stale:
+            print(f"(sim) snapshot skipped: no price dated {today} for {stale}")
+            return
         eq = round(self._equity(), 2)
         curve = [pt for pt in self.book["equity_curve"] if pt[0] != today]
         curve.append([today, eq])

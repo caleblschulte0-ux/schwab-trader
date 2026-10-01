@@ -103,6 +103,17 @@ class SimBrokerTests(unittest.TestCase):
         api = SimBroker(path=self.path, history=hist, now=NOW)
         self.assertEqual(api.latest_prices(["SPY", "QQQ"]), {})
 
+    def test_snapshot_refuses_stale_marks(self):
+        hist = fake_history()
+        api = SimBroker(path=self.path, start_cash=1000.0, history=hist, now=NOW)
+        api.submit_order("SPY", "buy", notional=500.0)
+        api.snapshot()
+        good = api.book["equity_curve"][-1]
+        stale = {s: v[:-1] for s, v in hist.items()}          # newest bar missing (Yahoo quirk)
+        api2 = SimBroker(path=self.path, history=stale, now=NOW)
+        api2.snapshot()
+        self.assertEqual(api2.book["equity_curve"][-1], good)  # not overwritten
+
     def test_daily_bars_and_latest(self):
         bars = self.api.daily_bars(["SPY"], start="2025-01-01", end="2026-09-21")
         self.assertTrue(all(d <= "2026-09-21" for d, _ in bars["SPY"]))

@@ -99,6 +99,7 @@ jobs:
 
       - name: Close error alert if healthy
         if: success()
+        continue-on-error: true   # a GitHub API hiccup here must not mark a good trading run as failed
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -109,6 +110,7 @@ jobs:
       # and you get a GitHub notification per run if you subscribe to it.
       - name: Append run log to the Trading log issue
         if: always()
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
