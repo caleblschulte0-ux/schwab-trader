@@ -1,23 +1,22 @@
 {
   "market_risk": 1,
-  "market_reason": "Treasury yields at multiyear highs, oil elevated amid Iran war tensions, and reports of record market leverage after the Situational Awareness collapse raise tail risk, but markets are rallying on soft inflation data and nothing is crisis-grade.",
+  "market_reason": "A global bond rout has pushed the 10-year Treasury yield to its highest level since 2002 and European stocks to three-month lows. The move is significant but widely reported, and equities are down only modestly.",
   "market_evidence": [
-    1,
-    25,
-    35,
-    37,
-    86
+    28,
+    6,
+    11,
+    12
   ],
   "market_headlines": [
-    "Troubles at Situational Awareness Point to Record Stock Market Leverage - The New York Times",
-    "U.S. Treasury Yields Hit Multiyear Highs on Economic Data, Fed Rate-Boost Expectations - WSJ",
-    "Treasury Yields Climb to Fresh Highs While Oil Rises - WSJ"
+    "U.S. Bond Yields Hit Highest Level Since 2002 - The New York Times",
+    "European stocks close at three-month lows as surging bond yields hammer banks - Reuters",
+    "Stock Market Midday, Oct. 1: Stocks Edge Lower as Treasury Yields Surge to 24-Year High - Yahoo Finance"
   ],
   "vetoes": [],
-  "summary": "Stocks rallied on mild inflation data, but the 10-year yield is near 25-year highs and oil is rising on Middle East and Iran tensions. The Situational Awareness collapse and reports of record leverage are worth watching, though none of it is a fresh shock large enough to justify a veto.",
+  "summary": "Surging Treasury yields (24-year high), rate-hike expectations and a global bond sell-off are pressuring equities, which matters most for the leveraged Nasdaq position (QLD). China's fuel export suspension is lifting oil, which helps the energy and commodity holdings, and no ETF-specific shock calls for a veto.",
   "dropped": [],
-  "date": "2026-09-30",
-  "generated_utc": "2026-09-30T18:25:41Z",
-  "n_headlines": 191,
+  "date": "2026-10-01",
+  "generated_utc": "2026-10-01T18:50:50Z",
+  "n_headlines": 188,
   "model": "claude-sonnet-5"
 }

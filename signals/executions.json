@@ -97,5 +97,16 @@
     "qty": 0.197433,
     "side": "buy",
     "symbol": "USO"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-01",
+    "decision_price": 166.51,
+    "fill_price": 166.5932,
+    "mode": "sim",
+    "notional": 2.0,
+    "qty": 0.012005,
+    "side": "buy",
+    "symbol": "XLV"
   }
 ]
