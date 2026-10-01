@@ -3,12 +3,15 @@ name: intraday monitor
 # news scan so the next executor run decides with current information.
 on:
   schedule:
-    - cron: '30 15 * * 1-5'   # 11:30 EDT / 10:30 EST
-    - cron: '30 17 * * 1-5'   # 13:30 EDT / 12:30 EST
+    # Hourly at an odd minute. Doubles as a BACKUP TRIGGER for the trader: GitHub drops most
+    # scheduled runs on this repo (observed ~2 of 16 trader firings per day), so every
+    # monitor run that lands during market hours kicks the trader if today hasn't traded.
+    - cron: '23 13-20 * * 1-5'
   workflow_dispatch: {}
 permissions:
   contents: write
   issues: write
+  actions: write   # to dispatch trader.yml as a backup trigger
 concurrency:
   group: monitor
   cancel-in-progress: true
@@ -21,6 +24,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Backup trigger for the trader
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NOW_ET=$(TZ=America/New_York date +%H%M); DOW=$(TZ=America/New_York date +%u); TODAY=$(TZ=America/New_York date +%Y-%m-%d)
+          LAST=$(python -c "import json;print(json.load(open('signals/state.json')).get('last_trade_date',''))" 2>/dev/null || echo "")
+          if [ "$DOW" -le 5 ] && [ "$NOW_ET" -ge 1000 ] && [ "$NOW_ET" -lt 1555 ] && [ "$LAST" != "$TODAY" ]; then
+            echo "market hours and no trade yet today (last=$LAST): dispatching trader"
+            gh workflow run trader.yml --ref main || echo "dispatch failed (non-fatal)"
+          else
+            echo "no dispatch needed (time=$NOW_ET dow=$DOW last_trade=$LAST)"
+          fi
+
       - name: Check prices
         id: m
         env:
