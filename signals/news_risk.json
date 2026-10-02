@@ -1,22 +1,13 @@
 {
-  "market_risk": 1,
-  "market_reason": "A global bond rout has pushed the 10-year Treasury yield to its highest level since 2002 and European stocks to three-month lows. The move is significant but widely reported, and equities are down only modestly.",
-  "market_evidence": [
-    28,
-    6,
-    11,
-    12
-  ],
-  "market_headlines": [
-    "U.S. Bond Yields Hit Highest Level Since 2002 - The New York Times",
-    "European stocks close at three-month lows as surging bond yields hammer banks - Reuters",
-    "Stock Market Midday, Oct. 1: Stocks Edge Lower as Treasury Yields Surge to 24-Year High - Yahoo Finance"
-  ],
+  "market_risk": 0,
+  "market_reason": "",
+  "market_evidence": [],
+  "market_headlines": [],
   "vetoes": [],
-  "summary": "Surging Treasury yields (24-year high), rate-hike expectations and a global bond sell-off are pressuring equities, which matters most for the leveraged Nasdaq position (QLD). China's fuel export suspension is lifting oil, which helps the energy and commodity holdings, and no ETF-specific shock calls for a veto.",
+  "summary": "A soft jobs report lowered October Fed hike odds, the Nasdaq and Nvidia hit record highs, and Treasury yields eased from multi-decade highs. Oil fell on the G7 fuel reserve release despite Hormuz and Iran tensions, which is already priced in and not a new shock, so no action is needed.",
   "dropped": [],
-  "date": "2026-10-01",
-  "generated_utc": "2026-10-01T18:50:50Z",
+  "date": "2026-10-02",
+  "generated_utc": "2026-10-02T18:22:37Z",
   "n_headlines": 188,
   "model": "claude-sonnet-5"
 }

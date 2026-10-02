@@ -108,5 +108,27 @@
     "qty": 0.012005,
     "side": "buy",
     "symbol": "XLV"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-02",
+    "decision_price": 97.84,
+    "fill_price": 97.7911,
+    "mode": "sim",
+    "notional": 6.22,
+    "qty": 0.063644,
+    "side": "sell",
+    "symbol": "QLD"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-02",
+    "decision_price": 165.69,
+    "fill_price": 165.7728,
+    "mode": "sim",
+    "notional": 6.06,
+    "qty": 0.036556,
+    "side": "buy",
+    "symbol": "XLV"
   }
 ]
