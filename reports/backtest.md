@@ -1,13 +1,13 @@
-# Backtest 2008-01-01 -> 2026-09-25 (preset: guarded_growth, exactly what the bot trades)
+# Backtest 2008-01-01 -> 2026-10-02 (preset: guarded_growth, exactly what the bot trades)
 
-Period: 2008-01-02 -> 2026-09-25 (18.7 yrs)   start $1,000 -> end $9,996
+Period: 2008-01-02 -> 2026-10-02 (18.72 yrs)   start $1,000 -> end $10,080
 
 | Metric | Strategy | SPY buy&hold |
 |---|---:|---:|
-| CAGR | +13.1% | +11.4% |
+| CAGR | +13.1% | +11.3% |
 | Annual vol | 16.9% | - |
-| Sharpe (rf=0) | 0.81 | 0.64 |
-| Sortino | 1.12 | - |
+| Sharpe (rf=0) | 0.82 | 0.64 |
+| Sortino | 1.13 | - |
 | Max drawdown | -22.0% (2023-03-15) | -51.9% |
 | Calmar | 0.60 | - |
 | Losing months | 40% | - |
@@ -36,6 +36,6 @@ Period: 2008-01-02 -> 2026-09-25 (18.7 yrs)   start $1,000 -> end $9,996
 | 2023 | +16.8% | +26.2% |
 | 2024 | +18.6% | +24.9% |
 | 2025 | +17.2% | +17.7% |
-| 2026 | +23.9% | +14.0% |
+| 2026 | +24.9% | +13.7% |
 
 _Assumptions: fills at the close, 5 bps slippage per side, zero commissions, cash earns 0%, dividends reinvested (adjusted closes). Past performance is not a promise of future results._
