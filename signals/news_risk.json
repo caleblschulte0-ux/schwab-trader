@@ -1,13 +1,22 @@
 {
-  "market_risk": 0,
-  "market_reason": "",
-  "market_evidence": [],
-  "market_headlines": [],
+  "market_risk": 1,
+  "market_reason": "10-year Treasury yield at a 2002 high with an ongoing oil/Hormuz shipping disruption keeps conditions elevated, but markets are at record highs and nothing new is crisis-grade.",
+  "market_evidence": [
+    27,
+    30,
+    38,
+    50
+  ],
+  "market_headlines": [
+    "10-year Treasury yield rises to fresh 2002 high to start the week - CNBC",
+    "Treasury yields hit 2002 highs as bond market selloff deepens - mpamag.com",
+    "Oil Prices Fall as G-7 Plans Crude, Diesel Release But Hormuz Shipping Risks Persist - WSJ"
+  ],
   "vetoes": [],
-  "summary": "A soft jobs report lowered October Fed hike odds, the Nasdaq and Nvidia hit record highs, and Treasury yields eased from multi-decade highs. Oil fell on the G7 fuel reserve release despite Hormuz and Iran tensions, which is already priced in and not a new shock, so no action is needed.",
+  "summary": "Treasury yields are at multi-decade highs and Hormuz shipping risks persist, but oil prices are easing after the G-7 stock release and the Nasdaq closed at a record. There is no fresh, concrete shock aimed at a specific holding.",
   "dropped": [],
-  "date": "2026-10-02",
-  "generated_utc": "2026-10-02T18:22:37Z",
-  "n_headlines": 188,
+  "date": "2026-10-05",
+  "generated_utc": "2026-10-05T21:05:17Z",
+  "n_headlines": 186,
   "model": "claude-sonnet-5"
 }
