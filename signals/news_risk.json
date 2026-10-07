@@ -1,22 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "10-year Treasury yield at a 2002 high with an ongoing oil/Hormuz shipping disruption keeps conditions elevated, but markets are at record highs and nothing new is crisis-grade.",
+  "market_reason": "Treasury yields at 24-year highs, a hawkish Fed with another hike expected, and oil above $100 on Hormuz/Houthi attacks add elevated macro pressure, but these are widely known and being absorbed by markets.",
   "market_evidence": [
-    27,
-    30,
-    38,
-    50
+    13,
+    23,
+    24,
+    36,
+    46,
+    131
   ],
   "market_headlines": [
-    "10-year Treasury yield rises to fresh 2002 high to start the week - CNBC",
-    "Treasury yields hit 2002 highs as bond market selloff deepens - mpamag.com",
-    "Oil Prices Fall as G-7 Plans Crude, Diesel Release But Hormuz Shipping Risks Persist - WSJ"
+    "Fed officials see another hike coming, but no sign as to when, minutes show - CNBC",
+    "Global bond sell-off pushes U.S. Treasury yields to fresh 24-year highs - NBC News",
+    "US bonds selloff resumes as 10-year, 30-yields hit new 24-year high - Reuters"
   ],
   "vetoes": [],
-  "summary": "Treasury yields are at multi-decade highs and Hormuz shipping risks persist, but oil prices are easing after the G-7 stock release and the Nasdaq closed at a record. There is no fresh, concrete shock aimed at a specific holding.",
+  "summary": "Stocks retreated from record highs as 10-year and 30-year yields hit 24-year highs, Fed minutes signaled another hike this year, and oil rebounded above $100 on Middle East supply risks. These are ongoing, largely priced themes, with no discrete new shock warranting a higher risk level or a fund-specific veto.",
   "dropped": [],
-  "date": "2026-10-05",
-  "generated_utc": "2026-10-05T21:05:17Z",
-  "n_headlines": 186,
+  "date": "2026-10-07",
+  "generated_utc": "2026-10-07T19:19:04Z",
+  "n_headlines": 189,
   "model": "claude-sonnet-5"
 }

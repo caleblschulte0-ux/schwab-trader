@@ -1,6 +1,6 @@
 {
-  "capital": 1029.15,
-  "date": "2026-10-06",
+  "capital": 1021.38,
+  "date": "2026-10-07",
   "mean_reversion": [],
   "mode": "SIM",
   "momentum": [
@@ -15,23 +15,23 @@
   ],
   "notes": [],
   "preset": "guarded_growth",
-  "rebalanced": false,
+  "rebalanced": true,
   "regime": {
-    "breadth": 0.552,
+    "breadth": 0.483,
     "core": "QLD",
     "credit_stress": false,
     "exposure": 1.0,
     "risk_off": false
   },
   "weights": {
-    "DBC": 0.073577,
-    "EEM": 0.067653,
+    "DBC": 0.073549,
+    "EEM": 0.067194,
     "QLD": 0.5,
-    "SMH": 0.041455,
-    "USO": 0.030447,
-    "XBI": 0.053892,
-    "XLE": 0.075948,
-    "XLK": 0.062335,
-    "XLV": 0.09469
+    "SMH": 0.041549,
+    "USO": 0.03062,
+    "XBI": 0.053635,
+    "XLE": 0.07674,
+    "XLK": 0.063004,
+    "XLV": 0.093705
   }
 }
