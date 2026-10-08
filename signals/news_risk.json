@@ -1,24 +1,25 @@
 {
   "market_risk": 1,
-  "market_reason": "Treasury yields at 24-year highs, a hawkish Fed with another hike expected, and oil above $100 on Hormuz/Houthi attacks add elevated macro pressure, but these are widely known and being absorbed by markets.",
+  "market_reason": "Oil above $105 on repeated Hormuz tanker attacks, 24-year-high bond yields and Fed hikes weigh on stretched equities, but the Treasury auction passed and Trump pledged no Iran strike before the midterms, so it falls short of a serious market-wide shock.",
   "market_evidence": [
-    13,
-    23,
-    24,
-    36,
-    46,
-    131
+    3,
+    33,
+    39,
+    38,
+    28,
+    30,
+    37
   ],
   "market_headlines": [
-    "Fed officials see another hike coming, but no sign as to when, minutes show - CNBC",
-    "Global bond sell-off pushes U.S. Treasury yields to fresh 24-year highs - NBC News",
-    "US bonds selloff resumes as 10-year, 30-yields hit new 24-year high - Reuters"
+    "Stocks are tumbling as oil prices surge and bond yields hit 24-year highs - Business Insider",
+    "Dow futures fall 500 points as oil prices surge above $105 - Quartz",
+    "Oil prices jump amid record tanker attacks in Hormuz - CNN"
   ],
   "vetoes": [],
-  "summary": "Stocks retreated from record highs as 10-year and 30-year yields hit 24-year highs, Fed minutes signaled another hike this year, and oil rebounded above $100 on Middle East supply risks. These are ongoing, largely priced themes, with no discrete new shock warranting a higher risk level or a fund-specific veto.",
+  "summary": "Oil is spiking on tanker attacks in Hormuz and Gulf supply fears, while Treasury yields sit at 24-year highs and the Fed is signaling more hikes, which pressures QLD and tech. Yields eased after a strong auction and TSMC reported record revenue, and nothing new is specific enough to veto an ETF.",
   "dropped": [],
-  "date": "2026-10-07",
-  "generated_utc": "2026-10-07T19:19:04Z",
+  "date": "2026-10-08",
+  "generated_utc": "2026-10-08T19:15:37Z",
   "n_headlines": 189,
   "model": "claude-sonnet-5"
 }
