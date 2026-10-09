@@ -1,25 +1,13 @@
 {
-  "market_risk": 1,
-  "market_reason": "Oil above $105 on repeated Hormuz tanker attacks, 24-year-high bond yields and Fed hikes weigh on stretched equities, but the Treasury auction passed and Trump pledged no Iran strike before the midterms, so it falls short of a serious market-wide shock.",
-  "market_evidence": [
-    3,
-    33,
-    39,
-    38,
-    28,
-    30,
-    37
-  ],
-  "market_headlines": [
-    "Stocks are tumbling as oil prices surge and bond yields hit 24-year highs - Business Insider",
-    "Dow futures fall 500 points as oil prices surge above $105 - Quartz",
-    "Oil prices jump amid record tanker attacks in Hormuz - CNN"
-  ],
+  "market_risk": 0,
+  "market_reason": "",
+  "market_evidence": [],
+  "market_headlines": [],
   "vetoes": [],
-  "summary": "Oil is spiking on tanker attacks in Hormuz and Gulf supply fears, while Treasury yields sit at 24-year highs and the Fed is signaling more hikes, which pressures QLD and tech. Yields eased after a strong auction and TSMC reported record revenue, and nothing new is specific enough to veto an ETF.",
+  "summary": "Stocks are near record highs, and oil eased after Trump appeared to rule out Iran strikes before the midterms. Rising Treasury yields, the Trump probe into Fed governor Cook, ICC sanctions and Hurricane Isaias shutting in Gulf oil output are worth watching, but none is a fresh market-wide shock or a direct hit to a specific holding.",
   "dropped": [],
-  "date": "2026-10-08",
-  "generated_utc": "2026-10-08T19:15:37Z",
-  "n_headlines": 189,
+  "date": "2026-10-09",
+  "generated_utc": "2026-10-09T18:47:16Z",
+  "n_headlines": 186,
   "model": "claude-sonnet-5"
 }
