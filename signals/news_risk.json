@@ -1,13 +1,23 @@
 {
-  "market_risk": 0,
-  "market_reason": "",
-  "market_evidence": [],
-  "market_headlines": [],
+  "market_risk": 1,
+  "market_reason": "Oil is spiking after Houthi attacks on Saudi airports, Brent is above $106, and Treasury yields are rising with Fed officials leaning toward more hikes. The oil shock and rate pressure are ongoing, and equities are only mixed with indexes near records, so this is elevated but not a market-wide shock",
+  "market_evidence": [
+    39,
+    41,
+    36,
+    26,
+    13
+  ],
+  "market_headlines": [
+    "Oil prices spike after Houthi attacks on Saudi airports - The Hill",
+    "Brent tops $106 after deadly Saudi airport attack, Ukraine says Russia violated energy ceasefire - CNBC",
+    "Oil Prices Rebound Amid Persistent Middle East Supply Risks - WSJ"
+  ],
   "vetoes": [],
-  "summary": "Stocks are near record highs, and oil eased after Trump appeared to rule out Iran strikes before the midterms. Rising Treasury yields, the Trump probe into Fed governor Cook, ICC sanctions and Hurricane Isaias shutting in Gulf oil output are worth watching, but none is a fresh market-wide shock or a direct hit to a specific holding.",
+  "summary": "The main risks are the Middle East oil spike, which follows the Russia-Ukraine energy ceasefire failing, and the bond-yield surge with a hawkish Fed. That is a headwind for the heavy QLD (2x Nasdaq-100) position, but nothing today directly impairs a specific held ETF.",
   "dropped": [],
-  "date": "2026-10-09",
-  "generated_utc": "2026-10-09T18:47:16Z",
-  "n_headlines": 186,
+  "date": "2026-10-12",
+  "generated_utc": "2026-10-12T21:43:04Z",
+  "n_headlines": 187,
   "model": "claude-sonnet-5"
 }
