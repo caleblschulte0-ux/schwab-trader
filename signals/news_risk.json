@@ -1,23 +1,22 @@
 {
   "market_risk": 1,
-  "market_reason": "Oil is spiking after Houthi attacks on Saudi airports, Brent is above $106, and Treasury yields are rising with Fed officials leaning toward more hikes. The oil shock and rate pressure are ongoing, and equities are only mixed with indexes near records, so this is elevated but not a market-wide shock",
+  "market_reason": "Hot September CPI (3.7%) is pushing rate-hike bets and Treasury yields above 5%, and attacks on Hormuz shipping are escalating. Both are widely known and largely priced, with the Nasdaq down about 1.65%.",
   "market_evidence": [
-    39,
-    41,
-    36,
-    26,
-    13
+    3,
+    15,
+    22,
+    39
   ],
   "market_headlines": [
-    "Oil prices spike after Houthi attacks on Saudi airports - The Hill",
-    "Brent tops $106 after deadly Saudi airport attack, Ukraine says Russia violated energy ceasefire - CNBC",
-    "Oil Prices Rebound Amid Persistent Middle East Supply Risks - WSJ"
+    "Wall St tumbles as hot CPI boosts rate-hike bets; banks, AI stocks weigh - Reuters",
+    "Inflation rose to 3.7 percent in September: BLS - The Hill",
+    "10-year Treasury yield jumps as September core inflation comes in hotter than expected - CNBC"
   ],
   "vetoes": [],
-  "summary": "The main risks are the Middle East oil spike, which follows the Russia-Ukraine energy ceasefire failing, and the bond-yield surge with a hawkish Fed. That is a headwind for the heavy QLD (2x Nasdaq-100) position, but nothing today directly impairs a specific held ETF.",
+  "summary": "Hot CPI, rising yields and rate-hike bets are weighing on QLD and tech, while the Iran war and Hormuz attacks keep oil elevated, which helps XLE, USO and DBC. No fund-specific or new crisis-grade event warrants a veto today.",
   "dropped": [],
-  "date": "2026-10-12",
-  "generated_utc": "2026-10-12T21:43:04Z",
-  "n_headlines": 187,
+  "date": "2026-10-14",
+  "generated_utc": "2026-10-14T17:58:39Z",
+  "n_headlines": 184,
   "model": "claude-sonnet-5"
 }

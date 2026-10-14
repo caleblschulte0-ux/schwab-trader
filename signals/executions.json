@@ -163,5 +163,126 @@
     "qty": 0.089923,
     "side": "buy",
     "symbol": "QLD"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 92.345,
+    "fill_price": 92.2988,
+    "mode": "sim",
+    "notional": 232.69,
+    "qty": 2.52102,
+    "side": "sell",
+    "symbol": "QLD"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 64.3502,
+    "fill_price": 64.318,
+    "mode": "sim",
+    "notional": 63.43,
+    "qty": 0.986191,
+    "side": "sell",
+    "symbol": "EEM"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 173.44,
+    "fill_price": 173.3533,
+    "mode": "sim",
+    "notional": 53.38,
+    "qty": 0.307906,
+    "side": "sell",
+    "symbol": "XLV"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 33.37,
+    "fill_price": 33.3533,
+    "mode": "sim",
+    "notional": 41.35,
+    "qty": 1.239716,
+    "side": "sell",
+    "symbol": "DBC"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 67.585,
+    "fill_price": 67.5512,
+    "mode": "sim",
+    "notional": 40.36,
+    "qty": 0.597467,
+    "side": "sell",
+    "symbol": "XLE"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 147.38,
+    "fill_price": 147.3063,
+    "mode": "sim",
+    "notional": 29.85,
+    "qty": 0.20264,
+    "side": "sell",
+    "symbol": "XBI"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 190.35,
+    "fill_price": 190.2548,
+    "mode": "sim",
+    "notional": 27.28,
+    "qty": 0.143401,
+    "side": "sell",
+    "symbol": "XLK"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 565.32,
+    "fill_price": 565.0373,
+    "mode": "sim",
+    "notional": 15.66,
+    "qty": 0.027723,
+    "side": "sell",
+    "symbol": "SMH"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 154.3299,
+    "fill_price": 154.2527,
+    "mode": "sim",
+    "notional": 14.83,
+    "qty": 0.09611,
+    "side": "sell",
+    "symbol": "USO"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 91.52,
+    "fill_price": 91.5658,
+    "mode": "sim",
+    "notional": 515.51,
+    "qty": 5.629943,
+    "side": "buy",
+    "symbol": "BIL"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-14",
+    "decision_price": 727.931,
+    "fill_price": 728.295,
+    "mode": "sim",
+    "notional": 6.54,
+    "qty": 0.00898,
+    "side": "buy",
+    "symbol": "QQQ"
   }
 ]

@@ -1,16 +1,19 @@
 {
-  "bought_today": [],
+  "bought_today": [
+    "BIL",
+    "QQQ"
+  ],
   "hwm": 1029.15,
-  "last_decision_date": "2026-10-13",
+  "last_decision_date": "2026-10-14",
   "last_mode": "SIM",
-  "last_run_utc": "2026-10-13T23:43:05Z",
-  "last_seen_date": "2026-10-13",
-  "last_trade_date": "2026-10-13",
+  "last_run_utc": "2026-10-14T17:58:52Z",
+  "last_seen_date": "2026-10-14",
+  "last_trade_date": "2026-10-14",
   "strategy": {
-    "mom_days_since_rebalance": 1,
+    "mom_days_since_rebalance": 2,
     "mom_holdings": [
       "DBC",
-      "EEM",
+      "QQQ",
       "SMH",
       "USO",
       "XBI",
@@ -21,7 +24,7 @@
     "mr_positions": {},
     "tranches": [
       {
-        "days_since_rebalance": 1,
+        "days_since_rebalance": 2,
         "holdings": [
           "USO",
           "SMH",
@@ -29,13 +32,12 @@
           "XLK",
           "DBC",
           "XLE",
-          "EEM",
           "XLV"
         ],
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 3,
+        "days_since_rebalance": 4,
         "holdings": [
           "USO",
           "SMH",
@@ -43,13 +45,12 @@
           "XLK",
           "DBC",
           "XLE",
-          "EEM",
           "XLV"
         ],
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 5,
+        "days_since_rebalance": 6,
         "holdings": [
           "USO",
           "SMH",
@@ -57,13 +58,12 @@
           "XLK",
           "DBC",
           "XLE",
-          "EEM",
           "XLV"
         ],
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 7,
+        "days_since_rebalance": 8,
         "holdings": [
           "USO",
           "SMH",
@@ -71,13 +71,12 @@
           "XLK",
           "DBC",
           "XLE",
-          "EEM",
           "XLV"
         ],
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 9,
+        "days_since_rebalance": 0,
         "holdings": [
           "USO",
           "SMH",
@@ -85,8 +84,8 @@
           "XLK",
           "DBC",
           "XLE",
-          "EEM",
-          "XLV"
+          "XLV",
+          "QQQ"
         ],
         "next_offset": 0
       }
