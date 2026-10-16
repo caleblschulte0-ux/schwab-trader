@@ -1,23 +1,23 @@
 # Track Record (sim)
 
-_Updated 2026-10-15T23:17:35Z · source: Alpaca account history_
+_Updated 2026-10-16T17:23:29Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $982.22 | -1.78% | n/a (<30d) | -1.78 | -4.4% |
+| 2026-09-22 | $1,000.00 | $969.71 | -3.03% | n/a (<30d) | -2.88 | -5.5% |
 
 ### Monthly returns
 
 | Month | Return | End equity |
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
-| 2026-10 | -1.28% | $982.22 |
+| 2026-10 | -2.54% | $969.71 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
-**12 trades · win rate 58% · total -9.88 · expectancy -0.82/trade · avg win +0.67 · avg loss -2.92 · profit factor 0.32**
+**16 trades · win rate 56% · total -13.09 · expectancy -0.82/trade · avg win +0.59 · avg loss -2.63 · profit factor 0.29**
 
 | Symbol | Qty | Entry | Exit | P&L | % | Opened | Closed |
 |---|---:|---:|---:|---:|---:|---|---|
@@ -33,12 +33,16 @@ _Updated 2026-10-15T23:17:35Z · source: Alpaca account history_
 | XLK | 0.143401 | 194.32 | 190.25 | -0.58 | -2.09% | 2026-09-24 | 2026-10-14 |
 | SMH | 0.027723 | 598.18 | 565.04 | -0.92 | -5.54% | 2026-09-24 | 2026-10-14 |
 | USO | 0.09611 | 153.62 | 154.25 | +0.06 | +0.41% | 2026-09-24 | 2026-10-14 |
+| XBI | 0.177903 | 154.44 | 144.03 | -1.85 | -6.74% | 2026-09-24 | 2026-10-16 |
+| SMH | 0.036489 | 598.18 | 543.81 | -1.98 | -9.09% | 2026-09-24 | 2026-10-16 |
+| XLV | 0.038282 | 169.77 | 176.41 | +0.25 | +3.91% | 2026-09-24 | 2026-10-16 |
+| XLE | 0.076584 | 63.00 | 67.83 | +0.37 | +7.67% | 2026-09-24 | 2026-10-16 |
 
 > Small sample: with fewer than ~30 closed trades these numbers are directional only.
 
 ## Execution quality
 
-26 fills, $2,075 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-09-24).
+34 fills, $2,190 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-09-24).
 
 ## Tax: possible wash sales
 
