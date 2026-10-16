@@ -1,19 +1,19 @@
 {
   "account": {
     "cash": 0.12,
-    "equity": 968.95
+    "equity": 969.03
   },
   "equity": {
     "cagr": null,
     "days": 24,
     "end": "2026-10-16",
-    "end_equity": 968.95,
-    "max_drawdown": -0.056229789223516624,
+    "end_equity": 969.03,
+    "max_drawdown": -0.05615186815755646,
     "n_points": 19,
-    "sharpe": -2.9348529820082785,
+    "sharpe": -2.929017314755485,
     "start": "2026-09-22",
     "start_equity": 1000.0,
-    "total_return": -0.03104999999999991
+    "total_return": -0.030970000000000053
   },
   "equity_curve": [
     [
@@ -90,7 +90,7 @@
     ],
     [
       "2026-10-16",
-      968.95
+      969.03
     ]
   ],
   "mode": "sim",
@@ -102,16 +102,16 @@
       "unrealized_plpc": 2.5e-05
     },
     {
-      "market_value": 37.53,
+      "market_value": 37.54,
       "qty": 1.112757,
       "symbol": "DBC",
-      "unrealized_plpc": 0.014728
+      "unrealized_plpc": 0.014993
     },
     {
-      "market_value": 241.21,
+      "market_value": 241.27,
       "qty": 2.750439,
       "symbol": "QLD",
-      "unrealized_plpc": -0.0821
+      "unrealized_plpc": -0.08189
     },
     {
       "market_value": 9.92,
@@ -123,13 +123,13 @@
       "market_value": 10.64,
       "qty": 0.013944,
       "symbol": "SPY",
-      "unrealized_plpc": 0.000203
+      "unrealized_plpc": 0.000229
     },
     {
       "market_value": 16.39,
       "qty": 0.101323,
       "symbol": "USO",
-      "unrealized_plpc": 0.052909
+      "unrealized_plpc": 0.052974
     },
     {
       "market_value": 32.07,
@@ -141,13 +141,13 @@
       "market_value": 29.53,
       "qty": 0.160947,
       "symbol": "XLK",
-      "unrealized_plpc": -0.055925
+      "unrealized_plpc": -0.055822
     },
     {
-      "market_value": 39.89,
+      "market_value": 39.9,
       "qty": 0.225772,
       "symbol": "XLV",
-      "unrealized_plpc": 0.042653
+      "unrealized_plpc": 0.04283
     }
   ],
   "trades": {
@@ -159,5 +159,5 @@
     "total_pnl": -13.09,
     "win_rate": 0.5625
   },
-  "updated_utc": "2026-10-16T20:04:42Z"
+  "updated_utc": "2026-10-16T22:49:11Z"
 }

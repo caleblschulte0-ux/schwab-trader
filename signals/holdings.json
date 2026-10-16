@@ -1,7 +1,7 @@
 {
   "buying_power": 0.12,
   "cash": 0.12,
-  "equity": 968.95,
+  "equity": 969.03,
   "mode": "sim",
   "positions": [
     {
@@ -16,23 +16,23 @@
     },
     {
       "avg_entry": 33.2416,
-      "last": 33.7312,
+      "last": 33.74,
       "managed": true,
-      "market_value": 37.53,
+      "market_value": 37.54,
       "qty": 1.112757,
       "symbol": "DBC",
-      "unrealized_pct": 1.47,
-      "unrealized_pl": 0.54
+      "unrealized_pct": 1.5,
+      "unrealized_pl": 0.55
     },
     {
       "avg_entry": 95.5441,
-      "last": 87.7,
+      "last": 87.72,
       "managed": true,
-      "market_value": 241.21,
+      "market_value": 241.27,
       "qty": 2.750439,
       "symbol": "QLD",
-      "unrealized_pct": -8.21,
-      "unrealized_pl": -21.57
+      "unrealized_pct": -8.19,
+      "unrealized_pl": -21.52
     },
     {
       "avg_entry": 722.3019,
@@ -46,7 +46,7 @@
     },
     {
       "avg_entry": 763.075,
-      "last": 763.23,
+      "last": 763.25,
       "managed": true,
       "market_value": 10.64,
       "qty": 0.013944,
@@ -56,12 +56,12 @@
     },
     {
       "avg_entry": 153.622,
-      "last": 161.75,
+      "last": 161.76,
       "managed": true,
       "market_value": 16.39,
       "qty": 0.101323,
       "symbol": "USO",
-      "unrealized_pct": 5.29,
+      "unrealized_pct": 5.3,
       "unrealized_pl": 0.82
     },
     {
@@ -76,24 +76,24 @@
     },
     {
       "avg_entry": 194.3171,
-      "last": 183.45,
+      "last": 183.47,
       "managed": true,
       "market_value": 29.53,
       "qty": 0.160947,
       "symbol": "XLK",
-      "unrealized_pct": -5.59,
+      "unrealized_pct": -5.58,
       "unrealized_pl": -1.75
     },
     {
       "avg_entry": 169.4523,
-      "last": 176.68,
+      "last": 176.71,
       "managed": true,
-      "market_value": 39.89,
+      "market_value": 39.9,
       "qty": 0.225772,
       "symbol": "XLV",
-      "unrealized_pct": 4.27,
-      "unrealized_pl": 1.63
+      "unrealized_pct": 4.28,
+      "unrealized_pl": 1.64
     }
   ],
-  "updated_utc": "2026-10-16T20:03:58Z"
+  "updated_utc": "2026-10-16T22:48:14Z"
 }
