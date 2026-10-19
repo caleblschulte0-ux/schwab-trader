@@ -1,19 +1,19 @@
 {
   "account": {
     "cash": 0.12,
-    "equity": 969.03
+    "equity": 975.75
   },
   "equity": {
     "cagr": null,
-    "days": 24,
-    "end": "2026-10-16",
-    "end_equity": 969.03,
+    "days": 27,
+    "end": "2026-10-19",
+    "end_equity": 975.79,
     "max_drawdown": -0.05615186815755646,
-    "n_points": 19,
-    "sharpe": -2.929017314755485,
+    "n_points": 20,
+    "sharpe": -2.1542204981433386,
     "start": "2026-09-22",
     "start_equity": 1000.0,
-    "total_return": -0.030970000000000053
+    "total_return": -0.024210000000000065
   },
   "equity_curve": [
     [
@@ -91,6 +91,10 @@
     [
       "2026-10-16",
       969.03
+    ],
+    [
+      "2026-10-19",
+      975.79
     ]
   ],
   "mode": "sim",
@@ -102,52 +106,52 @@
       "unrealized_plpc": 2.5e-05
     },
     {
-      "market_value": 37.54,
+      "market_value": 37.43,
       "qty": 1.112757,
       "symbol": "DBC",
-      "unrealized_plpc": 0.014993
+      "unrealized_plpc": 0.011985
     },
     {
-      "market_value": 241.27,
+      "market_value": 247.87,
       "qty": 2.750439,
       "symbol": "QLD",
-      "unrealized_plpc": -0.08189
+      "unrealized_plpc": -0.056771
     },
     {
-      "market_value": 9.92,
+      "market_value": 10.06,
       "qty": 0.013969,
       "symbol": "QQQ",
-      "unrealized_plpc": -0.017308
+      "unrealized_plpc": -0.003443
     },
     {
-      "market_value": 10.64,
+      "market_value": 10.71,
       "qty": 0.013944,
       "symbol": "SPY",
-      "unrealized_plpc": 0.000229
+      "unrealized_plpc": 0.006323
     },
     {
-      "market_value": 16.39,
+      "market_value": 16.28,
       "qty": 0.101323,
       "symbol": "USO",
-      "unrealized_plpc": 0.052974
+      "unrealized_plpc": 0.046211
     },
     {
-      "market_value": 32.07,
+      "market_value": 31.88,
       "qty": 0.46994,
       "symbol": "XLE",
-      "unrealized_plpc": 0.083235
+      "unrealized_plpc": 0.076885
     },
     {
-      "market_value": 29.53,
+      "market_value": 29.98,
       "qty": 0.160947,
       "symbol": "XLK",
-      "unrealized_plpc": -0.055822
+      "unrealized_plpc": -0.041464
     },
     {
-      "market_value": 39.9,
+      "market_value": 39.77,
       "qty": 0.225772,
       "symbol": "XLV",
-      "unrealized_plpc": 0.04283
+      "unrealized_plpc": 0.039437
     }
   ],
   "trades": {
@@ -159,5 +163,5 @@
     "total_pnl": -13.09,
     "win_rate": 0.5625
   },
-  "updated_utc": "2026-10-16T22:49:11Z"
+  "updated_utc": "2026-10-19T19:17:36Z"
 }

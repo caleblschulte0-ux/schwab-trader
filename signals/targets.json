@@ -1,6 +1,6 @@
 {
-  "capital": 969.77,
-  "date": "2026-10-16",
+  "capital": 975.79,
+  "date": "2026-10-19",
   "mean_reversion": [],
   "mode": "SIM",
   "momentum": [
@@ -14,18 +14,13 @@
     "XLV"
   ],
   "notes": [
-    "tranche 1/5 momentum trend-break exit: ['SMH', 'XBI']",
-    "tranche 2/5 momentum trend-break exit: ['SMH', 'XBI']",
-    "tranche 3/5 momentum trend-break exit: ['SMH', 'XBI']",
-    "tranche 4/5 momentum rebalance: +['EWJ', 'QQQ', 'SPY'] -['SMH', 'XBI']",
-    "tranche 5/5 momentum trend-break exit: ['SMH', 'XBI']",
     "credit stress (HYG/IEF below 50d avg): risk exposure x0.50",
     "defensive 57% -> ['BIL']"
   ],
   "preset": "guarded_growth",
-  "rebalanced": true,
+  "rebalanced": false,
   "regime": {
-    "breadth": 0.448,
+    "breadth": 0.483,
     "core": "QLD",
     "credit_stress": true,
     "defensive": [
@@ -36,14 +31,14 @@
   },
   "weights": {
     "BIL": 0.56875,
-    "DBC": 0.034191,
-    "EWJ": 0.006388,
+    "DBC": 0.034221,
+    "EWJ": 0.006573,
     "QLD": 0.25,
-    "QQQ": 0.014067,
-    "SPY": 0.010972,
-    "USO": 0.014338,
-    "XLE": 0.032888,
-    "XLK": 0.027322,
-    "XLV": 0.04108
+    "QQQ": 0.014044,
+    "SPY": 0.010978,
+    "USO": 0.014325,
+    "XLE": 0.03247,
+    "XLK": 0.027625,
+    "XLV": 0.04101
   }
 }
