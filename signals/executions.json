@@ -372,5 +372,38 @@
     "qty": 0.004989,
     "side": "buy",
     "symbol": "QQQ"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-20",
+    "decision_price": 91.59,
+    "fill_price": 91.5442,
+    "mode": "sim",
+    "notional": 14.86,
+    "qty": 0.162273,
+    "side": "sell",
+    "symbol": "BIL"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-20",
+    "decision_price": 95.595,
+    "fill_price": 95.6428,
+    "mode": "sim",
+    "notional": 13.94,
+    "qty": 0.145751,
+    "side": "buy",
+    "symbol": "EWJ"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-20",
+    "decision_price": 719.54,
+    "fill_price": 719.8997,
+    "mode": "sim",
+    "notional": 1.0,
+    "qty": 0.001389,
+    "side": "buy",
+    "symbol": "QQQ"
   }
 ]
