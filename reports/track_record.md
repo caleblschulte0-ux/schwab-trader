@@ -1,23 +1,23 @@
 # Track Record (sim)
 
-_Updated 2026-10-20T21:34:35Z · source: Alpaca account history_
+_Updated 2026-10-21T18:01:05Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $974.83 | -2.52% | n/a (<30d) | -2.20 | -5.6% |
+| 2026-09-22 | $1,000.00 | $981.22 | -1.88% | n/a (<30d) | -1.55 | -5.6% |
 
 ### Monthly returns
 
 | Month | Return | End equity |
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
-| 2026-10 | -2.02% | $974.83 |
+| 2026-10 | -1.38% | $981.22 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
-**17 trades · win rate 53% · total -13.09 · expectancy -0.77/trade · avg win +0.59 · avg loss -2.30 · profit factor 0.29**
+**18 trades · win rate 50% · total -13.40 · expectancy -0.74/trade · avg win +0.59 · avg loss -2.08 · profit factor 0.28**
 
 | Symbol | Qty | Entry | Exit | P&L | % | Opened | Closed |
 |---|---:|---:|---:|---:|---:|---|---|
@@ -38,20 +38,22 @@ _Updated 2026-10-20T21:34:35Z · source: Alpaca account history_
 | XLV | 0.038282 | 169.77 | 176.41 | +0.25 | +3.91% | 2026-09-24 | 2026-10-16 |
 | XLE | 0.076584 | 63.00 | 67.83 | +0.37 | +7.67% | 2026-09-24 | 2026-10-16 |
 | BIL | 0.162273 | 91.57 | 91.54 | -0.00 | -0.02% | 2026-10-14 | 2026-10-20 |
+| QLD | 0.078493 | 95.77 | 91.76 | -0.31 | -4.19% | 2026-09-24 | 2026-10-21 |
 
 > Small sample: with fewer than ~30 closed trades these numbers are directional only.
 
 ## Execution quality
 
-37 fills, $2,220 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-09-24).
+39 fills, $2,235 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-09-24).
 
 ## Tax: possible wash sales
 
-1 loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.
+2 loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.
 
 | ETF | Loss sold | Loss | Rebought |
 |---|---|---:|---|
 | QLD | 2026-10-14 | -8.76 | 2026-10-08 |
+| QLD | 2026-10-21 | -0.31 | 2026-10-08 |
 
 Holding periods: median 20 days; 0% of closed lots were long-term (>1 year). Most gains from a rotation strategy are short-term; a tax-advantaged account (IRA) avoids that drag entirely.
 

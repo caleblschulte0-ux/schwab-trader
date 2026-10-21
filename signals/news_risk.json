@@ -1,22 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "Oil near $100-105 with Iran escalating Hormuz attacks, Indonesia's worst selloff since 1998, and AI-led tech weakness (Nasdaq-100 down ~3.5% on the week) are elevated risks, but the broader market is holding up.",
+  "market_reason": "Ongoing Iran/Strait of Hormuz tension with WTI near $100, sticky inflation, and Treasury yields near 5% are elevated background risks, but nothing fresh enough to count as a new shock; stocks are rising on strong earnings.",
   "market_evidence": [
-    137,
-    75,
-    10,
-    24
+    14,
+    16,
+    18,
+    42,
+    43,
+    138
   ],
   "market_headlines": [
-    "U.S. crude oil tops $100 as Iran escalates Hormuz attacks, Ukraine vows to hit Russian refineries - CNBC",
-    "Oil Prices Are Stuck at $105 as Geopolitical Risks Mount - Yahoo Finance",
-    "Indonesian stocks sink most since 1998 on MSCI downgrade warning - Reuters"
+    "Fed\u2019s Beige Book Shows Price Pressures May Be Intensifying - WSJ",
+    "Sticky Inflation Is Testing the Fed\u2019s Resolve - Bloomberg.com",
+    "Forget 3% US Inflation. It\u2019s Heading for 4%: McGeever - EnergyNow.com"
   ],
   "vetoes": [],
-  "summary": "Oil is above $100 as Iran escalates Hormuz attacks. Tech and AI names are under pressure, with the Nasdaq-100 down about 3.5% on the week, and Fed Chair Warsh gave no new rate signals. None of this is a fresh, crisis-grade shock that justifies a higher level or a veto.",
+  "summary": "US stocks are rallying on strong earnings (SpaceX, Supermicro) while oil stays elevated around $100 on Iran/Hormuz supply risk and inflation fears keep yields near 5%. There is no concrete new event that directly hits a held ETF, so no vetoes.",
   "dropped": [],
-  "date": "2026-10-16",
-  "generated_utc": "2026-10-16T17:22:32Z",
-  "n_headlines": 185,
+  "date": "2026-10-21",
+  "generated_utc": "2026-10-21T18:00:10Z",
+  "n_headlines": 190,
   "model": "claude-sonnet-5"
 }
