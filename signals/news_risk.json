@@ -1,24 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "Ongoing Iran/Strait of Hormuz tension with WTI near $100, sticky inflation, and Treasury yields near 5% are elevated background risks, but nothing fresh enough to count as a new shock; stocks are rising on strong earnings.",
+  "market_reason": "Tech/AI-capex sell-off, oil at a five-month high on Iran/Houthi/Saudi tensions, and a flight into Treasurys are elevated but largely priced and not crisis-grade.",
   "market_evidence": [
-    14,
-    16,
-    18,
-    42,
-    43,
-    138
+    2,
+    3,
+    36,
+    40,
+    145
   ],
   "market_headlines": [
-    "Fed\u2019s Beige Book Shows Price Pressures May Be Intensifying - WSJ",
-    "Sticky Inflation Is Testing the Fed\u2019s Resolve - Bloomberg.com",
-    "Forget 3% US Inflation. It\u2019s Heading for 4%: McGeever - EnergyNow.com"
+    "Surging oil prices and fresh tech jitters are hammering stocks - Business Insider",
+    "Market sell-off gains steam as concerns about Iran war and high AI spending collide - NBC News",
+    "Oil prices jump to five-month high as attacks threaten global supply - The Guardian"
   ],
   "vetoes": [],
-  "summary": "US stocks are rallying on strong earnings (SpaceX, Supermicro) while oil stays elevated around $100 on Iran/Hormuz supply risk and inflation fears keep yields near 5%. There is no concrete new event that directly hits a held ETF, so no vetoes.",
+  "summary": "Stocks are falling as AI-spending worries (Meta) hit tech and oil rises to a five-month high on renewed Iran and Saudi attacks, while Treasury yields fall below 5% on safe-haven demand. This is a risk-off day that markets are already pricing, with no single new event large enough to justify a higher risk level or a veto.",
   "dropped": [],
-  "date": "2026-10-21",
-  "generated_utc": "2026-10-21T18:00:10Z",
-  "n_headlines": 190,
+  "date": "2026-10-22",
+  "generated_utc": "2026-10-22T17:57:30Z",
+  "n_headlines": 184,
   "model": "claude-sonnet-5"
 }
