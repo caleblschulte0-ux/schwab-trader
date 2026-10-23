@@ -1,23 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "Tech/AI-capex sell-off, oil at a five-month high on Iran/Houthi/Saudi tensions, and a flight into Treasurys are elevated but largely priced and not crisis-grade.",
+  "market_reason": "Tech/AI selloff and oil spiking to about $117 on fears of renewed US strikes on Iran, with a Treasury yield swing. These are elevated and worth watching, but they are not crisis-grade and are largely priced in.",
   "market_evidence": [
-    2,
-    3,
-    36,
+    37,
     40,
-    145
+    129,
+    24,
+    25
   ],
   "market_headlines": [
-    "Surging oil prices and fresh tech jitters are hammering stocks - Business Insider",
-    "Market sell-off gains steam as concerns about Iran war and high AI spending collide - NBC News",
-    "Oil prices jump to five-month high as attacks threaten global supply - The Guardian"
+    "Global Oil Price Hits $117 a Barrel, Highest Since April - The New York Times",
+    "Oil price rises above $117 a barrel amid fears US will renew strikes on Iran - The Guardian",
+    "S&P 500, Nasdaq end sharply lower as revived AI doubts ignite tech selloff - Reuters"
   ],
   "vetoes": [],
-  "summary": "Stocks are falling as AI-spending worries (Meta) hit tech and oil rises to a five-month high on renewed Iran and Saudi attacks, while Treasury yields fall below 5% on safe-haven demand. This is a risk-off day that markets are already pricing, with no single new event large enough to justify a higher risk level or a veto.",
+  "summary": "An AI-driven tech selloff and an oil surge to multi-month highs on Middle East escalation risk dominate the news. This hurts the QLD, QQQ and XLK positions and helps XLE, USO and DBC. None of it is a fresh, specific, material event that justifies a veto.",
   "dropped": [],
-  "date": "2026-10-22",
-  "generated_utc": "2026-10-22T17:57:30Z",
-  "n_headlines": 184,
+  "date": "2026-10-23",
+  "generated_utc": "2026-10-23T17:51:42Z",
+  "n_headlines": 192,
   "model": "claude-sonnet-5"
 }
