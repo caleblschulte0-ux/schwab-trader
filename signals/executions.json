@@ -471,5 +471,49 @@
     "qty": 0.048034,
     "side": "buy",
     "symbol": "XLP"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-26",
+    "decision_price": 91.6465,
+    "fill_price": 91.6007,
+    "mode": "sim",
+    "notional": 14.39,
+    "qty": 0.157047,
+    "side": "sell",
+    "symbol": "BIL"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-26",
+    "decision_price": 186.81,
+    "fill_price": 186.7166,
+    "mode": "sim",
+    "notional": 5.03,
+    "qty": 0.026966,
+    "side": "sell",
+    "symbol": "XLK"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-26",
+    "decision_price": 94.38,
+    "fill_price": 94.4272,
+    "mode": "sim",
+    "notional": 14.94,
+    "qty": 0.158217,
+    "side": "buy",
+    "symbol": "EWJ"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-26",
+    "decision_price": 713.4714,
+    "fill_price": 713.8281,
+    "mode": "sim",
+    "notional": 4.49,
+    "qty": 0.00629,
+    "side": "buy",
+    "symbol": "QQQ"
   }
 ]

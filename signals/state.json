@@ -1,13 +1,16 @@
 {
-  "bought_today": [],
+  "bought_today": [
+    "EWJ",
+    "QQQ"
+  ],
   "hwm": 1029.15,
-  "last_decision_date": "2026-10-23",
+  "last_decision_date": "2026-10-26",
   "last_mode": "SIM",
-  "last_run_utc": "2026-10-23T21:20:30Z",
-  "last_seen_date": "2026-10-23",
-  "last_trade_date": "2026-10-23",
+  "last_run_utc": "2026-10-26T19:14:18Z",
+  "last_seen_date": "2026-10-26",
+  "last_trade_date": "2026-10-26",
   "strategy": {
-    "mom_days_since_rebalance": 9,
+    "mom_days_since_rebalance": 0,
     "mom_holdings": [
       "DBC",
       "EWJ",
@@ -23,32 +26,7 @@
     "mr_positions": {},
     "tranches": [
       {
-        "days_since_rebalance": 9,
-        "holdings": [
-          "USO",
-          "XLK",
-          "DBC",
-          "XLE",
-          "XLV"
-        ],
-        "next_offset": 0
-      },
-      {
-        "days_since_rebalance": 1,
-        "holdings": [
-          "USO",
-          "XLK",
-          "DBC",
-          "XLE",
-          "XLV",
-          "XBI",
-          "EWJ",
-          "XLP"
-        ],
-        "next_offset": 0
-      },
-      {
-        "days_since_rebalance": 3,
+        "days_since_rebalance": 0,
         "holdings": [
           "USO",
           "XLK",
@@ -62,7 +40,35 @@
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 5,
+        "days_since_rebalance": 2,
+        "holdings": [
+          "USO",
+          "XLK",
+          "DBC",
+          "XLE",
+          "XLV",
+          "XBI",
+          "EWJ",
+          "XLP"
+        ],
+        "next_offset": 0
+      },
+      {
+        "days_since_rebalance": 4,
+        "holdings": [
+          "USO",
+          "XLK",
+          "DBC",
+          "XLE",
+          "XLV",
+          "XBI",
+          "EWJ",
+          "QQQ"
+        ],
+        "next_offset": 0
+      },
+      {
+        "days_since_rebalance": 6,
         "holdings": [
           "USO",
           "XLK",
@@ -76,7 +82,7 @@
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 7,
+        "days_since_rebalance": 8,
         "holdings": [
           "USO",
           "XLK",
