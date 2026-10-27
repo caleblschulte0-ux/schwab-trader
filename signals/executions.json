@@ -515,5 +515,16 @@
     "qty": 0.00629,
     "side": "buy",
     "symbol": "QQQ"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-27",
+    "decision_price": 90.08,
+    "fill_price": 90.035,
+    "mode": "sim",
+    "notional": 7.25,
+    "qty": 0.080555,
+    "side": "sell",
+    "symbol": "QLD"
   }
 ]
