@@ -1,17 +1,21 @@
 {
-  "bought_today": [],
+  "bought_today": [
+    "QQQ",
+    "XBI"
+  ],
   "hwm": 1029.15,
-  "last_decision_date": "2026-10-27",
+  "last_decision_date": "2026-10-28",
   "last_mode": "SIM",
-  "last_run_utc": "2026-10-27T22:36:20Z",
-  "last_seen_date": "2026-10-27",
-  "last_trade_date": "2026-10-27",
+  "last_run_utc": "2026-10-28T18:49:15Z",
+  "last_seen_date": "2026-10-28",
+  "last_trade_date": "2026-10-28",
   "strategy": {
-    "mom_days_since_rebalance": 1,
+    "mom_days_since_rebalance": 2,
     "mom_holdings": [
       "DBC",
       "EWJ",
       "QQQ",
+      "SMH",
       "SPY",
       "USO",
       "XBI",
@@ -23,7 +27,7 @@
     "mr_positions": {},
     "tranches": [
       {
-        "days_since_rebalance": 1,
+        "days_since_rebalance": 2,
         "holdings": [
           "USO",
           "XLK",
@@ -37,7 +41,7 @@
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 3,
+        "days_since_rebalance": 4,
         "holdings": [
           "USO",
           "XLK",
@@ -51,7 +55,7 @@
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 5,
+        "days_since_rebalance": 6,
         "holdings": [
           "USO",
           "XLK",
@@ -65,7 +69,7 @@
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 7,
+        "days_since_rebalance": 8,
         "holdings": [
           "USO",
           "XLK",
@@ -79,14 +83,16 @@
         "next_offset": 0
       },
       {
-        "days_since_rebalance": 9,
+        "days_since_rebalance": 0,
         "holdings": [
           "USO",
           "XLK",
           "DBC",
           "XLE",
           "XLV",
-          "QQQ"
+          "QQQ",
+          "SMH",
+          "XBI"
         ],
         "next_offset": 0
       }

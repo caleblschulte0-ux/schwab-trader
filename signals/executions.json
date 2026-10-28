@@ -526,5 +526,38 @@
     "qty": 0.080555,
     "side": "sell",
     "symbol": "QLD"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-28",
+    "decision_price": 91.665,
+    "fill_price": 91.6192,
+    "mode": "sim",
+    "notional": 7.75,
+    "qty": 0.084614,
+    "side": "sell",
+    "symbol": "BIL"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-28",
+    "decision_price": 156.91,
+    "fill_price": 156.9885,
+    "mode": "sim",
+    "notional": 7.84,
+    "qty": 0.04994,
+    "side": "buy",
+    "symbol": "XBI"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-10-28",
+    "decision_price": 724.6299,
+    "fill_price": 724.9922,
+    "mode": "sim",
+    "notional": 6.22,
+    "qty": 0.008579,
+    "side": "buy",
+    "symbol": "QQQ"
   }
 ]
