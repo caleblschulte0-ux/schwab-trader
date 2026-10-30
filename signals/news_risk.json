@@ -1,23 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "Alphabet's record single-day loss and AI-spending fears are pushing the Nasdaq-100 down 1.5%, and the 10-year yield is near 5%, but these are already priced and are not crisis-grade.",
+  "market_reason": "A sharp AI-driven tech selloff (Nasdaq down 800+ points, worst day since June) alongside hawkish Fed rate-hike talk and elevated oil from the Hormuz tanker attack is an elevated-risk backdrop, but it is widely known and not crisis-grade.",
   "market_evidence": [
-    1,
-    4,
-    5,
-    6,
-    18
+    3,
+    7,
+    9,
+    14,
+    38
   ],
   "market_headlines": [
-    "Nasdaq 100 Falls 1.5% as AI Trade Shows New Cracks: Markets Wrap - Bloomberg.com",
-    "A potentially historic drop for Alphabet\u2019s stock drags the US market lower - AP News",
-    "Nasdaq falls as Alphabet set for record loss amid AI spending woes - Reuters"
+    "Tech stocks crushed as Nasdaq tumbles more than 800 points - CBS News",
+    "The sell-off for tech stocks deepens and drags Wall Street toward its worst day since June - AP News",
+    "Tech stocks set to wipe out more than $1 trillion as concerns deepen about the AI boom - NBC News"
   ],
   "vetoes": [],
-  "summary": "Tech is selling off on Alphabet's record drop and AI-capex worries, which hits QLD, QQQ and XLK, while the 10-year yield sits near 5%. Oil is swinging between Iran peace-talk hopes and conflict fears, and no news is concrete and new enough to justify a veto.",
+  "summary": "Tech and chip stocks are being hit hard by AI-spending fears after weak Amazon, Intel and Alphabet results, which matters for the QLD, QQQ and XLK positions. Fed officials are signaling more rate hikes and oil is rising on shipping attacks, but nothing here is crisis-grade or a fund-specific problem that calls for a veto.",
   "dropped": [],
-  "date": "2026-10-29",
-  "generated_utc": "2026-10-29T18:56:19Z",
-  "n_headlines": 188,
+  "date": "2026-10-30",
+  "generated_utc": "2026-10-30T18:34:12Z",
+  "n_headlines": 195,
   "model": "claude-sonnet-5"
 }

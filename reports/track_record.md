@@ -1,23 +1,23 @@
 # Track Record (sim)
 
-_Updated 2026-10-29T23:15:52Z · source: Alpaca account history_
+_Updated 2026-10-30T18:35:06Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $976.62 | -2.34% | -20.8% | -1.54 | -5.9% |
+| 2026-09-22 | $1,000.00 | $952.56 | -4.74% | -37.3% | -2.80 | -7.2% |
 
 ### Monthly returns
 
 | Month | Return | End equity |
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
-| 2026-10 | -1.84% | $976.62 |
+| 2026-10 | -4.26% | $952.56 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
-**23 trades · win rate 43% · total -14.05 · expectancy -0.61/trade · avg win +0.53 · avg loss -1.49 · profit factor 0.28**
+**36 trades · win rate 28% · total -56.99 · expectancy -1.58/trade · avg win +0.53 · avg loss -2.40 · profit factor 0.09**
 
 | Symbol | Qty | Entry | Exit | P&L | % | Opened | Closed |
 |---|---:|---:|---:|---:|---:|---|---|
@@ -44,16 +44,28 @@ _Updated 2026-10-29T23:15:52Z · source: Alpaca account history_
 | XLK | 0.026966 | 194.32 | 186.72 | -0.20 | -3.91% | 2026-09-24 | 2026-10-26 |
 | QLD | 0.080555 | 95.77 | 90.03 | -0.46 | -5.99% | 2026-09-24 | 2026-10-27 |
 | BIL | 0.084614 | 91.57 | 91.62 | +0.00 | +0.06% | 2026-10-14 | 2026-10-28 |
+| QLD | 2.41053 | 95.77 | 81.08 | -35.42 | -15.34% | 2026-09-24 | 2026-10-30 |
+| QLD | 0.089923 | 97.08 | 81.08 | -1.44 | -16.48% | 2026-10-08 | 2026-10-30 |
+| QLD | 0.09094 | 88.19 | 81.08 | -0.65 | -8.06% | 2026-10-16 | 2026-10-30 |
+| QLD | 0.123693 | 86.42 | 81.08 | -0.66 | -6.18% | 2026-10-22 | 2026-10-30 |
+| EWJ | 0.145751 | 95.64 | 92.11 | -0.52 | -3.69% | 2026-10-20 | 2026-10-30 |
+| EWJ | 0.158217 | 94.43 | 92.11 | -0.37 | -2.46% | 2026-10-26 | 2026-10-30 |
+| QQQ | 0.00898 | 728.29 | 684.24 | -0.40 | -6.05% | 2026-10-14 | 2026-10-30 |
+| QQQ | 0.004989 | 711.52 | 684.24 | -0.14 | -3.83% | 2026-10-16 | 2026-10-30 |
+| QQQ | 0.001389 | 719.90 | 684.24 | -0.05 | -4.95% | 2026-10-20 | 2026-10-30 |
+| QQQ | 0.009932 | 726.92 | 684.24 | -0.42 | -5.87% | 2026-10-21 | 2026-10-30 |
+| QQQ | 0.00629 | 713.83 | 684.24 | -0.19 | -4.15% | 2026-10-26 | 2026-10-30 |
+| QQQ | 0.008579 | 724.99 | 684.24 | -0.35 | -5.62% | 2026-10-28 | 2026-10-30 |
+| XLK | 0.133981 | 194.32 | 176.94 | -2.33 | -8.94% | 2026-09-24 | 2026-10-30 |
 
-> Small sample: with fewer than ~30 closed trades these numbers are directional only.
 
 ## Execution quality
 
-51 fills, $2,350 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-09-24).
+58 fills, $2,948 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
 
 ## Tax: possible wash sales
 
-5 loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.
+17 loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.
 
 | ETF | Loss sold | Loss | Rebought |
 |---|---|---:|---|
@@ -62,6 +74,18 @@ _Updated 2026-10-29T23:15:52Z · source: Alpaca account history_
 | XBI | 2026-10-16 | -1.85 | 2026-10-22 |
 | QLD | 2026-10-21 | -0.31 | 2026-10-08 |
 | QLD | 2026-10-27 | -0.46 | 2026-10-08 |
+| QLD | 2026-10-30 | -35.42 | 2026-10-08 |
+| QLD | 2026-10-30 | -1.44 | 2026-10-16 |
+| QLD | 2026-10-30 | -0.65 | 2026-10-08 |
+| QLD | 2026-10-30 | -0.66 | 2026-10-08 |
+| EWJ | 2026-10-30 | -0.52 | 2026-10-26 |
+| EWJ | 2026-10-30 | -0.37 | 2026-10-20 |
+| QQQ | 2026-10-30 | -0.40 | 2026-10-16 |
+| QQQ | 2026-10-30 | -0.14 | 2026-10-14 |
+| QQQ | 2026-10-30 | -0.05 | 2026-10-14 |
+| QQQ | 2026-10-30 | -0.42 | 2026-10-14 |
+| QQQ | 2026-10-30 | -0.19 | 2026-10-14 |
+| QQQ | 2026-10-30 | -0.35 | 2026-10-14 |
 
 Holding periods: median 20 days; 0% of closed lots were long-term (>1 year). Most gains from a rotation strategy are short-term; a tax-advantaged account (IRA) avoids that drag entirely.
 
