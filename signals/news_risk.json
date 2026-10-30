@@ -1,23 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "A sharp tech/AI-spending selloff (Nasdaq down 800+ points, worst S&P day since June) amid hawkish Fed talk of more hikes is elevated but largely a priced, orderly rotation rather than a crisis-grade shock.",
+  "market_reason": "Sharp AI-driven tech selloff (Nasdaq in correction, ~$1T wiped in a day) alongside hawkish Fed talk of more hikes and elevated oil, but it is orderly and not crisis-grade.",
   "market_evidence": [
     3,
-    4,
-    12,
+    5,
+    9,
+    115,
     14,
-    16
+    18
   ],
   "market_headlines": [
-    "Tech stocks crushed as Nasdaq tumbles more than 800 points - CBS News",
-    "US tech stocks see sharp falls as AI spending nears $1tn - BBC",
-    "The sell-off for tech stocks deepens and drags Wall Street toward its worst day since June - AP News"
+    "Wall Street closes sharply lower as AI cash burn fears spark tech selloff - Reuters",
+    "Tech stocks wipe out $1 trillion in value as concerns deepen about the AI boom - NBC News",
+    "Stock market rocked as investors dump tech shares; Nasdaq suffers worst day since June - CNBC"
   ],
   "vetoes": [],
-  "summary": "Big Tech earnings-driven selloff and hawkish Fed commentary raise volatility, which matters for the leveraged SSO position, but the broader market is holding and there is no systemic failure. Oil is rising on a Hormuz tanker attack, which supports energy and commodity holdings rather than threatening them.",
+  "summary": "A deepening AI-spending selloff hit tech hard (Alphabet, Intel, Amazon), with the Nasdaq in correction and Fed officials signaling more rate hikes. Oil is at six-month highs on Iran and tanker-attack supply risks, which helps the energy holdings. The 2x S&P exposure in SSO is the main risk, but nothing here calls for a veto.",
   "dropped": [],
   "date": "2026-10-30",
-  "generated_utc": "2026-10-30T18:40:42Z",
+  "generated_utc": "2026-10-30T23:02:20Z",
   "n_headlines": 188,
   "model": "claude-sonnet-5"
 }
