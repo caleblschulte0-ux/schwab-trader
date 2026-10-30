@@ -1,23 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "A sharp AI-driven tech selloff (Nasdaq down 800+ points, worst day since June) alongside hawkish Fed rate-hike talk and elevated oil from the Hormuz tanker attack is an elevated-risk backdrop, but it is widely known and not crisis-grade.",
+  "market_reason": "A sharp tech/AI-spending selloff (Nasdaq down 800+ points, worst S&P day since June) amid hawkish Fed talk of more hikes is elevated but largely a priced, orderly rotation rather than a crisis-grade shock.",
   "market_evidence": [
     3,
-    7,
-    9,
+    4,
+    12,
     14,
-    38
+    16
   ],
   "market_headlines": [
     "Tech stocks crushed as Nasdaq tumbles more than 800 points - CBS News",
-    "The sell-off for tech stocks deepens and drags Wall Street toward its worst day since June - AP News",
-    "Tech stocks set to wipe out more than $1 trillion as concerns deepen about the AI boom - NBC News"
+    "US tech stocks see sharp falls as AI spending nears $1tn - BBC",
+    "The sell-off for tech stocks deepens and drags Wall Street toward its worst day since June - AP News"
   ],
   "vetoes": [],
-  "summary": "Tech and chip stocks are being hit hard by AI-spending fears after weak Amazon, Intel and Alphabet results, which matters for the QLD, QQQ and XLK positions. Fed officials are signaling more rate hikes and oil is rising on shipping attacks, but nothing here is crisis-grade or a fund-specific problem that calls for a veto.",
+  "summary": "Big Tech earnings-driven selloff and hawkish Fed commentary raise volatility, which matters for the leveraged SSO position, but the broader market is holding and there is no systemic failure. Oil is rising on a Hormuz tanker attack, which supports energy and commodity holdings rather than threatening them.",
   "dropped": [],
   "date": "2026-10-30",
-  "generated_utc": "2026-10-30T18:34:12Z",
-  "n_headlines": 195,
+  "generated_utc": "2026-10-30T18:40:42Z",
+  "n_headlines": 188,
   "model": "claude-sonnet-5"
 }
