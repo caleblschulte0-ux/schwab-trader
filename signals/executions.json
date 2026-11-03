@@ -636,5 +636,16 @@
     "qty": 0.11519,
     "side": "buy",
     "symbol": "XLP"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-03",
+    "decision_price": 52.595,
+    "fill_price": 52.6213,
+    "mode": "sim",
+    "notional": 1.41,
+    "qty": 0.026795,
+    "side": "buy",
+    "symbol": "XLB"
   }
 ]

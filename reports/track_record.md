@@ -1,12 +1,12 @@
 # Track Record (sim)
 
-_Updated 2026-11-02T22:18:18Z · source: Alpaca account history_
+_Updated 2026-11-03T20:05:08Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $945.88 | -5.41% | -39.1% | -3.17 | -7.9% |
+| 2026-09-22 | $1,000.00 | $946.91 | -5.31% | -37.8% | -3.05 | -7.9% |
 
 ### Monthly returns
 
@@ -14,7 +14,7 @@ _Updated 2026-11-02T22:18:18Z · source: Alpaca account history_
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
 | 2026-10 | -4.12% | $954.00 |
-| 2026-11 | -0.85% | $945.88 |
+| 2026-11 | -0.74% | $946.91 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
@@ -62,7 +62,7 @@ _Updated 2026-11-02T22:18:18Z · source: Alpaca account history_
 
 ## Execution quality
 
-58 fills, $2,948 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
+59 fills, $2,950 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
 
 ## Tax: possible wash sales
 
