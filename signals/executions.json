@@ -647,5 +647,71 @@
     "qty": 0.026795,
     "side": "buy",
     "symbol": "XLB"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-04",
+    "decision_price": 91.43,
+    "fill_price": 91.3843,
+    "mode": "sim",
+    "notional": 15.71,
+    "qty": 0.171958,
+    "side": "sell",
+    "symbol": "BIL"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-04",
+    "decision_price": 69.7825,
+    "fill_price": 69.7476,
+    "mode": "sim",
+    "notional": 8.6,
+    "qty": 0.123322,
+    "side": "sell",
+    "symbol": "SSO"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-04",
+    "decision_price": 189.87,
+    "fill_price": 189.7751,
+    "mode": "sim",
+    "notional": 5.83,
+    "qty": 0.030743,
+    "side": "sell",
+    "symbol": "XLV"
+  },
+  {
+    "cost_bps": 5.01,
+    "date": "2026-11-04",
+    "decision_price": 53.71,
+    "fill_price": 53.7369,
+    "mode": "sim",
+    "notional": 14.13,
+    "qty": 0.262948,
+    "side": "buy",
+    "symbol": "XLB"
+  },
+  {
+    "cost_bps": 4.99,
+    "date": "2026-11-04",
+    "decision_price": 59.06,
+    "fill_price": 59.0895,
+    "mode": "sim",
+    "notional": 8.38,
+    "qty": 0.141819,
+    "side": "buy",
+    "symbol": "XLF"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-04",
+    "decision_price": 92.05,
+    "fill_price": 92.096,
+    "mode": "sim",
+    "notional": 5.95,
+    "qty": 0.064606,
+    "side": "buy",
+    "symbol": "XLP"
   }
 ]

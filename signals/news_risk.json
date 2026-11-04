@@ -1,22 +1,13 @@
 {
-  "market_risk": 1,
-  "market_reason": "Nasdaq-100 entered a correction on AI-earnings fears, the US struck Iran amid peace-talk hopes and Treasury yields are near 5%, but stocks recovered and nothing looks crisis-grade.",
-  "market_evidence": [
-    102,
-    106,
-    39,
-    28
-  ],
-  "market_headlines": [
-    "The Nasdaq 100 Is Now Officially in a Correction - Yahoo Finance",
-    "Nasdaq-100 in correction again as AI earnings \u2018not good enough\u2019 - Yahoo Finance",
-    "Oil prices swing after U.S. attacks Iran - Transport Topics"
-  ],
+  "market_risk": 0,
+  "market_reason": "",
+  "market_evidence": [],
+  "market_headlines": [],
   "vetoes": [],
-  "summary": "Markets are volatile around the midterms, with an AI-driven Nasdaq correction, high yields and Iran strikes that came alongside diplomacy hopes and falling oil. Nothing material and new directly hits the held ETFs, so no vetoes.",
+  "summary": "Markets are rallying after the Democratic midterm win, with yields lower, oil falling on hopes for an end to the Iran war, and no new crisis-grade shock. Paraguay's Ueno Bank failure and the data center stock slide are regional or narrow and don't directly threaten any held ETF.",
   "dropped": [],
-  "date": "2026-11-03",
-  "generated_utc": "2026-11-04T00:34:23Z",
-  "n_headlines": 178,
+  "date": "2026-11-04",
+  "generated_utc": "2026-11-04T20:24:54Z",
+  "n_headlines": 181,
   "model": "claude-sonnet-5"
 }
