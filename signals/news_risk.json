@@ -1,24 +1,22 @@
 {
   "market_risk": 1,
-  "market_reason": "Sharp AI-driven tech selloff (Nasdaq in correction, ~$1T wiped in a day) alongside hawkish Fed talk of more hikes and elevated oil, but it is orderly and not crisis-grade.",
+  "market_reason": "Nasdaq-100 entered a correction on AI-earnings fears, the US struck Iran amid peace-talk hopes and Treasury yields are near 5%, but stocks recovered and nothing looks crisis-grade.",
   "market_evidence": [
-    3,
-    5,
-    9,
-    115,
-    14,
-    18
+    102,
+    106,
+    39,
+    28
   ],
   "market_headlines": [
-    "Wall Street closes sharply lower as AI cash burn fears spark tech selloff - Reuters",
-    "Tech stocks wipe out $1 trillion in value as concerns deepen about the AI boom - NBC News",
-    "Stock market rocked as investors dump tech shares; Nasdaq suffers worst day since June - CNBC"
+    "The Nasdaq 100 Is Now Officially in a Correction - Yahoo Finance",
+    "Nasdaq-100 in correction again as AI earnings \u2018not good enough\u2019 - Yahoo Finance",
+    "Oil prices swing after U.S. attacks Iran - Transport Topics"
   ],
   "vetoes": [],
-  "summary": "A deepening AI-spending selloff hit tech hard (Alphabet, Intel, Amazon), with the Nasdaq in correction and Fed officials signaling more rate hikes. Oil is at six-month highs on Iran and tanker-attack supply risks, which helps the energy holdings. The 2x S&P exposure in SSO is the main risk, but nothing here calls for a veto.",
+  "summary": "Markets are volatile around the midterms, with an AI-driven Nasdaq correction, high yields and Iran strikes that came alongside diplomacy hopes and falling oil. Nothing material and new directly hits the held ETFs, so no vetoes.",
   "dropped": [],
-  "date": "2026-10-30",
-  "generated_utc": "2026-10-30T23:02:20Z",
-  "n_headlines": 188,
+  "date": "2026-11-03",
+  "generated_utc": "2026-11-04T00:34:23Z",
+  "n_headlines": 178,
   "model": "claude-sonnet-5"
 }
