@@ -1,12 +1,12 @@
 # Track Record (sim)
 
-_Updated 2026-11-05T01:03:03Z · source: Alpaca account history_
+_Updated 2026-11-05T20:38:52Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $953.70 | -4.63% | -33.1% | -2.56 | -7.9% |
+| 2026-09-22 | $1,000.00 | $929.36 | -7.06% | -45.5% | -3.55 | -9.5% |
 
 ### Monthly returns
 
@@ -14,15 +14,14 @@ _Updated 2026-11-05T01:03:03Z · source: Alpaca account history_
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
 | 2026-10 | -4.12% | $954.00 |
-| 2026-11 | -0.03% | $953.70 |
+| 2026-11 | -2.58% | $929.36 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
-**39 trades · win rate 31% · total -56.11 · expectancy -1.44/trade · avg win +0.52 · avg loss -2.31 · profit factor 0.1**
+**41 trades · win rate 29% · total -68.89 · expectancy -1.68/trade · avg win +0.52 · avg loss -2.59 · profit factor 0.08**
 
 | Symbol | Qty | Entry | Exit | P&L | % | Opened | Closed |
 |---|---:|---:|---:|---:|---:|---|---|
-| QLD | 0.063644 | 95.77 | 97.79 | +0.13 | +2.11% | 2026-09-24 | 2026-10-02 |
 | QLD | 0.066445 | 95.77 | 101.03 | +0.35 | +5.49% | 2026-09-24 | 2026-10-06 |
 | XLE | 0.093538 | 63.00 | 65.36 | +0.22 | +3.76% | 2026-09-24 | 2026-10-08 |
 | QLD | 2.52102 | 95.77 | 92.30 | -8.76 | -3.63% | 2026-09-24 | 2026-10-14 |
@@ -61,11 +60,13 @@ _Updated 2026-11-05T01:03:03Z · source: Alpaca account history_
 | BIL | 0.171958 | 91.57 | 91.38 | -0.03 | -0.20% | 2026-10-14 | 2026-11-04 |
 | SSO | 0.123322 | 67.29 | 69.75 | +0.30 | +3.65% | 2026-10-30 | 2026-11-04 |
 | XLV | 0.030743 | 169.77 | 189.78 | +0.61 | +11.78% | 2026-09-24 | 2026-11-04 |
+| SSO | 3.4168 | 67.29 | 63.67 | -12.37 | -5.38% | 2026-10-30 | 2026-11-05 |
+| SPY | 0.013944 | 763.08 | 733.84 | -0.41 | -3.83% | 2026-10-16 | 2026-11-05 |
 
 
 ## Execution quality
 
-65 fills, $3,008 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
+68 fills, $3,461 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
 
 ## Tax: possible wash sales
 

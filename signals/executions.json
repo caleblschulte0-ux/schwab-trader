@@ -713,5 +713,38 @@
     "qty": 0.064606,
     "side": "buy",
     "symbol": "XLP"
+  },
+  {
+    "cost_bps": 4.99,
+    "date": "2026-11-05",
+    "decision_price": 63.7,
+    "fill_price": 63.6682,
+    "mode": "sim",
+    "notional": 217.54,
+    "qty": 3.416801,
+    "side": "sell",
+    "symbol": "SSO"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-05",
+    "decision_price": 734.21,
+    "fill_price": 733.8429,
+    "mode": "sim",
+    "notional": 10.23,
+    "qty": 0.013944,
+    "side": "sell",
+    "symbol": "SPY"
+  },
+  {
+    "cost_bps": 5.0,
+    "date": "2026-11-05",
+    "decision_price": 91.435,
+    "fill_price": 91.4807,
+    "mode": "sim",
+    "notional": 224.89,
+    "qty": 2.458332,
+    "side": "buy",
+    "symbol": "BIL"
   }
 ]
