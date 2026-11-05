@@ -1,24 +1,22 @@
 {
   "market_risk": 1,
-  "market_reason": "Sharp AI/tech-led selloff (S&P down ~3%, VIX jump largest since Liberation Day) is significant but is a widely priced, ongoing market move with no systemic financial failure in the US.",
+  "market_reason": "Sharp AI-led tech selloff (S&P -3%, Nasdaq correction, VIX jump) is large but appears to be an orderly equity repricing, not a systemic crisis; Paraguay bank collapse is regional.",
   "market_evidence": [
     1,
-    3,
     6,
-    9,
-    11,
+    12,
     116
   ],
   "market_headlines": [
     "Nasdaq set for biggest daily drop in 19 months on fears of AI regulations - Reuters",
-    "Stocks crater as investors recoil from tech companies amid AI risks - CBS News",
-    "Wall Street fear gauge jumps most since 'Liberation Day' as AI trade stumbles - Reuters"
+    "Wall Street fear gauge jumps most since 'Liberation Day' as AI trade stumbles - Reuters",
+    "Nasdaq set to confirm correction as AI spending worries mount - Reuters"
   ],
   "vetoes": [],
-  "summary": "A severe AI-driven tech selloff (S&P down more than 3%, VIX spiking) dominates the day, hurting the 2x S&P position SSO, while Treasuries rally on haven demand. Oil is volatile on Iran-war diplomacy and the Paraguay bank collapse has no direct exposure to the portfolio's ETFs.",
+  "summary": "A large AI/tech-driven equity selloff dominates the day, but the portfolio is 81% T-bills with small defensive and commodity sleeves that have no concentrated exposure to the hit sectors. No ETF held faces a concrete fund-specific or sector-specific shock that warrants a veto.",
   "dropped": [],
   "date": "2026-11-05",
-  "generated_utc": "2026-11-05T20:37:52Z",
-  "n_headlines": 192,
+  "generated_utc": "2026-11-05T20:43:56Z",
+  "n_headlines": 167,
   "model": "claude-sonnet-5"
 }
