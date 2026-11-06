@@ -1,22 +1,22 @@
 {
   "market_risk": 1,
-  "market_reason": "Sharp AI-led tech selloff (S&P -3%, Nasdaq correction, VIX jump) is large but appears to be an orderly equity repricing, not a systemic crisis; Paraguay bank collapse is regional.",
+  "market_reason": "A sharp AI/tech-led equity rout (Nasdaq 100 -6.4%, Nvidia in bear territory) is the main story, but dip-buying has stabilized markets by the afternoon and the macro backdrop is a hawkish Fed with strong jobs data.",
   "market_evidence": [
     1,
-    6,
-    12,
-    116
+    2,
+    111,
+    113
   ],
   "market_headlines": [
-    "Nasdaq set for biggest daily drop in 19 months on fears of AI regulations - Reuters",
-    "Wall Street fear gauge jumps most since 'Liberation Day' as AI trade stumbles - Reuters",
-    "Nasdaq set to confirm correction as AI spending worries mount - Reuters"
+    "US Stock Rout Pauses as Dip Buyers Offer Support: Markets Wrap - Bloomberg.com",
+    "Nasdaq rebounds as chip stocks recover from steep losses - Reuters",
+    "Nasdaq Enters Correction Territory, Dow Plunges Over 1,800 Points as Investors Dump Big Tech - marketscreener.com"
   ],
   "vetoes": [],
-  "summary": "A large AI/tech-driven equity selloff dominates the day, but the portfolio is 81% T-bills with small defensive and commodity sleeves that have no concentrated exposure to the hit sectors. No ETF held faces a concrete fund-specific or sector-specific shock that warrants a veto.",
+  "summary": "Tech and AI stocks sold off hard on Thursday and have partly rebounded. Oil is falling sharply on Iran peace hopes, which matters for the portfolio's energy holdings (XLE, USO, DBC), but this is priced-in price action and not a reason for vetoes. The Paraguay bank collapse and the midterm results don't directly hit any held ETF.",
   "dropped": [],
-  "date": "2026-11-05",
-  "generated_utc": "2026-11-05T20:43:56Z",
-  "n_headlines": 167,
+  "date": "2026-11-06",
+  "generated_utc": "2026-11-06T19:56:18Z",
+  "n_headlines": 186,
   "model": "claude-sonnet-5"
 }
