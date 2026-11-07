@@ -1,12 +1,12 @@
 # Track Record (sim)
 
-_Updated 2026-11-06T19:57:23Z · source: Alpaca account history_
+_Updated 2026-11-07T00:05:29Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $929.83 | -7.02% | -44.6% | -3.47 | -9.5% |
+| 2026-09-22 | $1,000.00 | $929.35 | -7.06% | -44.8% | -3.49 | -9.5% |
 
 ### Monthly returns
 
@@ -14,7 +14,7 @@ _Updated 2026-11-06T19:57:23Z · source: Alpaca account history_
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
 | 2026-10 | -4.12% | $954.00 |
-| 2026-11 | -2.53% | $929.83 |
+| 2026-11 | -2.58% | $929.35 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
