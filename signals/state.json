@@ -6,8 +6,8 @@
   "hwm": 1029.15,
   "last_decision_date": "2026-11-06",
   "last_mode": "SIM",
-  "last_run_utc": "2026-11-07T00:04:46Z",
-  "last_seen_date": "2026-11-06",
+  "last_run_utc": "2026-11-09T22:58:02Z",
+  "last_seen_date": "2026-11-09",
   "last_trade_date": "2026-11-06",
   "strategy": {
     "mom_days_since_rebalance": 8,
