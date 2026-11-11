@@ -1,12 +1,12 @@
 # Track Record (sim)
 
-_Updated 2026-11-11T00:54:49Z · source: Alpaca account history_
+_Updated 2026-11-11T20:14:36Z · source: Alpaca account history_
 
 ## Equity
 
 | Since | Start | Now | Total | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|---:|---:|---:|
-| 2026-09-22 | $1,000.00 | $930.54 | -6.95% | -41.5% | -3.33 | -9.5% |
+| 2026-09-22 | $1,000.00 | $937.74 | -6.23% | -37.5% | -2.88 | -9.5% |
 
 ### Monthly returns
 
@@ -14,15 +14,14 @@ _Updated 2026-11-11T00:54:49Z · source: Alpaca account history_
 |---|---:|---:|
 | 2026-09 | -0.50% | $994.97 |
 | 2026-10 | -4.12% | $954.00 |
-| 2026-11 | -2.46% | $930.54 |
+| 2026-11 | -1.70% | $937.74 |
 
 ## Closed trades (FIFO round-trips from broker fills)
 
-**43 trades · win rate 28% · total -69.22 · expectancy -1.61/trade · avg win +0.52 · avg loss -2.43 · profit factor 0.08**
+**44 trades · win rate 27% · total -69.24 · expectancy -1.57/trade · avg win +0.52 · avg loss -2.36 · profit factor 0.08**
 
 | Symbol | Qty | Entry | Exit | P&L | % | Opened | Closed |
 |---|---:|---:|---:|---:|---:|---|---|
-| QLD | 2.52102 | 95.77 | 92.30 | -8.76 | -3.63% | 2026-09-24 | 2026-10-14 |
 | EEM | 0.986191 | 67.25 | 64.32 | -2.89 | -4.36% | 2026-09-24 | 2026-10-14 |
 | XLV | 0.307906 | 169.77 | 173.35 | +1.10 | +2.11% | 2026-09-24 | 2026-10-14 |
 | DBC | 1.23972 | 33.24 | 33.35 | +0.14 | +0.34% | 2026-09-24 | 2026-10-14 |
@@ -62,19 +61,19 @@ _Updated 2026-11-11T00:54:49Z · source: Alpaca account history_
 | SPY | 0.013944 | 763.08 | 733.84 | -0.41 | -3.83% | 2026-10-16 | 2026-11-05 |
 | BIL | 0.126536 | 91.57 | 91.42 | -0.02 | -0.15% | 2026-10-14 | 2026-11-06 |
 | BIL | 2.53977 | 91.57 | 91.44 | -0.31 | -0.13% | 2026-10-14 | 2026-11-10 |
+| BIL | 0.148563 | 91.57 | 91.45 | -0.02 | -0.12% | 2026-10-14 | 2026-11-11 |
 
 
 ## Execution quality
 
-73 fills, $3,952 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
+76 fills, $3,980 traded · **average cost +5.0 bps** vs the decision price (the backtest assumes 5 bps) · worst +5.0 bps (QLD 2026-10-30).
 
 ## Tax: possible wash sales
 
-21 loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.
+22 loss sale(s) with a repurchase of the same ETF within 30 days. In a taxable account the loss is deferred, not lost (added to the new lot's basis). Irrelevant in an IRA.
 
 | ETF | Loss sold | Loss | Rebought |
 |---|---|---:|---|
-| XBI | 2026-10-14 | -1.45 | 2026-10-22 |
 | XBI | 2026-10-16 | -1.85 | 2026-10-22 |
 | QLD | 2026-10-21 | -0.31 | 2026-10-08 |
 | QLD | 2026-10-27 | -0.46 | 2026-10-08 |
@@ -94,6 +93,7 @@ _Updated 2026-11-11T00:54:49Z · source: Alpaca account history_
 | SSO | 2026-11-05 | -12.37 | 2026-11-10 |
 | BIL | 2026-11-06 | -0.02 | 2026-10-16 |
 | BIL | 2026-11-10 | -0.31 | 2026-10-16 |
+| BIL | 2026-11-11 | -0.02 | 2026-10-16 |
 
 Holding periods: median 20 days; 0% of closed lots were long-term (>1 year). Most gains from a rotation strategy are short-term; a tax-advantaged account (IRA) avoids that drag entirely.
 

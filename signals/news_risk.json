@@ -1,22 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "Hot CPI pushed the 10-year yield to 5% and raised bets on a large Fed hike, but the move is widely known and being priced in, so it is not a crisis-grade shock.",
+  "market_reason": "Hot inflation print has the Fed weighing 50bp hikes, with yields and the dollar surging and a recent tech/Nasdaq correction, but stocks are rebounding today and nothing is crisis-grade.",
   "market_evidence": [
-    6,
-    14,
-    25,
+    13,
+    15,
+    16,
+    31,
+    115,
     118
   ],
   "market_headlines": [
-    "Stock market today: Dow, S&P 500 slip after CPI data raises Fed rate-hike bets - Yahoo Finance",
-    "Fed officials open door to a quicker round of rate hikes as inflation worsens - Reuters",
-    "U.S. 10-Year Treasury Tops 5% on Expectations of Higher Interest Rates - WSJ"
+    "The Fed Has to Raise Rates. How Fast to Go Has Officials Divided. - The New York Times",
+    "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes - CNBC",
+    "Dollar Rises to 19-Month High on Fed Rate-Hike Bets - WSJ"
   ],
   "vetoes": [],
-  "summary": "Hot CPI and Fed signals of a possible half-point hike pushed the 10-year Treasury above 5% and weighed on stocks, which is a risk for the leveraged SSO position. Oil is falling on hopes the Iran war is ending, and the Paraguay bank collapse looks regional with no direct exposure for these ETFs.",
+  "summary": "Rate-hike fears after a hot October CPI dominate, with the dollar at a 19-month high and yields up, while AI worries eased on CoreWeave results and stocks rebounded. Oil is choppy on Iran/Hormuz headlines and Paraguay's bank collapse is local, so no vetoes are warranted for this portfolio.",
   "dropped": [],
-  "date": "2026-11-10",
-  "generated_utc": "2026-11-11T00:53:52Z",
-  "n_headlines": 187,
+  "date": "2026-11-11",
+  "generated_utc": "2026-11-11T20:13:51Z",
+  "n_headlines": 195,
   "model": "claude-sonnet-5"
 }

@@ -1,6 +1,6 @@
 {
-  "capital": 930.13,
-  "date": "2026-11-10",
+  "capital": 937.76,
+  "date": "2026-11-11",
   "mean_reversion": [],
   "mode": "SIM",
   "momentum": [
@@ -14,31 +14,32 @@
     "XLV"
   ],
   "notes": [
+    "tranche 1/5 momentum rebalance: +['XLP', 'XLB', 'XLF'] --",
     "credit stress (HYG/IEF below 50d avg): risk exposure x0.50",
-    "defensive 54% -> ['BIL']"
+    "defensive 52% -> ['BIL']"
   ],
   "preset": "guarded_growth",
-  "rebalanced": false,
+  "rebalanced": true,
   "regime": {
-    "breadth": 0.552,
+    "breadth": 0.586,
     "core": "SSO",
     "credit_stress": true,
     "defensive": [
       "BIL"
     ],
-    "exposure": 0.456,
+    "exposure": 0.475,
     "risk_off": false
   },
   "weights": {
-    "BIL": 0.54375,
-    "DBC": 0.037787,
+    "BIL": 0.524999,
+    "DBC": 0.036737,
     "SSO": 0.25,
-    "USO": 0.016634,
-    "XBI": 0.020633,
-    "XLB": 0.024399,
-    "XLE": 0.030213,
-    "XLF": 0.016401,
-    "XLP": 0.022295,
-    "XLV": 0.037883
+    "USO": 0.016114,
+    "XBI": 0.019993,
+    "XLB": 0.032407,
+    "XLE": 0.028939,
+    "XLF": 0.02455,
+    "XLP": 0.029721,
+    "XLV": 0.036535
   }
 }
