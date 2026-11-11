@@ -1,22 +1,22 @@
 {
   "market_risk": 1,
-  "market_reason": "A sharp AI/tech-led equity rout (Nasdaq 100 -6.4%, Nvidia in bear territory) is the main story, but dip-buying has stabilized markets by the afternoon and the macro backdrop is a hawkish Fed with strong jobs data.",
+  "market_reason": "Hot CPI pushed the 10-year yield to 5% and raised bets on a large Fed hike, but the move is widely known and being priced in, so it is not a crisis-grade shock.",
   "market_evidence": [
-    1,
-    2,
-    111,
-    113
+    6,
+    14,
+    25,
+    118
   ],
   "market_headlines": [
-    "US Stock Rout Pauses as Dip Buyers Offer Support: Markets Wrap - Bloomberg.com",
-    "Nasdaq rebounds as chip stocks recover from steep losses - Reuters",
-    "Nasdaq Enters Correction Territory, Dow Plunges Over 1,800 Points as Investors Dump Big Tech - marketscreener.com"
+    "Stock market today: Dow, S&P 500 slip after CPI data raises Fed rate-hike bets - Yahoo Finance",
+    "Fed officials open door to a quicker round of rate hikes as inflation worsens - Reuters",
+    "U.S. 10-Year Treasury Tops 5% on Expectations of Higher Interest Rates - WSJ"
   ],
   "vetoes": [],
-  "summary": "Tech and AI stocks sold off hard on Thursday and have partly rebounded. Oil is falling sharply on Iran peace hopes, which matters for the portfolio's energy holdings (XLE, USO, DBC), but this is priced-in price action and not a reason for vetoes. The Paraguay bank collapse and the midterm results don't directly hit any held ETF.",
+  "summary": "Hot CPI and Fed signals of a possible half-point hike pushed the 10-year Treasury above 5% and weighed on stocks, which is a risk for the leveraged SSO position. Oil is falling on hopes the Iran war is ending, and the Paraguay bank collapse looks regional with no direct exposure for these ETFs.",
   "dropped": [],
-  "date": "2026-11-06",
-  "generated_utc": "2026-11-06T19:56:18Z",
-  "n_headlines": 186,
+  "date": "2026-11-10",
+  "generated_utc": "2026-11-11T00:53:52Z",
+  "n_headlines": 187,
   "model": "claude-sonnet-5"
 }
