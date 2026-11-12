@@ -1,24 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "Hot inflation print has the Fed weighing 50bp hikes, with yields and the dollar surging and a recent tech/Nasdaq correction, but stocks are rebounding today and nothing is crisis-grade.",
+  "market_reason": "10-year Treasury yield above 5% with accelerating global bond selloff and expectations of further Fed hikes, plus Nvidia CEO resignation shock, but equities are roughly flat and recovering, so not a crisis-grade event.",
   "market_evidence": [
-    13,
-    15,
-    16,
-    31,
-    115,
-    118
+    25,
+    26,
+    28,
+    2,
+    4,
+    45
   ],
   "market_headlines": [
-    "The Fed Has to Raise Rates. How Fast to Go Has Officials Divided. - The New York Times",
-    "Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes - CNBC",
-    "Dollar Rises to 19-Month High on Fed Rate-Hike Bets - WSJ"
+    "Treasury Selloff Accelerates, European Bonds Follow Suit - WSJ",
+    "10-year Treasury yield jumps back above 5% as oil gains and more Fed rate hikes expected - CNBC",
+    "U.S. 10-Year Treasury Tops 5% on Expectations of Higher Interest Rates - WSJ"
   ],
   "vetoes": [],
-  "summary": "Rate-hike fears after a hot October CPI dominate, with the dollar at a 19-month high and yields up, while AI worries eased on CoreWeave results and stocks rebounded. Oil is choppy on Iran/Hormuz headlines and Paraguay's bank collapse is local, so no vetoes are warranted for this portfolio.",
+  "summary": "Nvidia's CEO resignation and a Treasury selloff (10-year above 5%, Fed hike talk) are the main stories, yet equity indexes are little changed and recovered most early losses. Oil is rebounding on Iran tensions, which supports the energy holdings, and the Paraguay bank collapse and Mexico tariff threat are not directly material to these ETFs.",
   "dropped": [],
-  "date": "2026-11-11",
-  "generated_utc": "2026-11-11T20:13:51Z",
-  "n_headlines": 195,
+  "date": "2026-11-12",
+  "generated_utc": "2026-11-12T21:10:55Z",
+  "n_headlines": 193,
   "model": "claude-sonnet-5"
 }
