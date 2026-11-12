@@ -1,7 +1,7 @@
 {
   "account": {
     "cash": 0.03,
-    "equity": 937.73
+    "equity": 930.45
   },
   "equity": {
     "cagr": -0.3743906267155753,
@@ -168,64 +168,64 @@
   "mode": "sim",
   "positions": [
     {
-      "market_value": 492.3,
+      "market_value": 492.28,
       "qty": 5.380723,
       "symbol": "BIL",
-      "unrealized_plpc": -0.00065
+      "unrealized_plpc": -0.000694
     },
     {
-      "market_value": 34.29,
+      "market_value": 34.23,
       "qty": 1.112757,
       "symbol": "DBC",
-      "unrealized_plpc": -0.072999
+      "unrealized_plpc": -0.074654
     },
     {
-      "market_value": 239.26,
+      "market_value": 232.87,
       "qty": 3.508662,
       "symbol": "SSO",
-      "unrealized_plpc": 0.028924
+      "unrealized_plpc": 0.001462
     },
     {
-      "market_value": 14.34,
+      "market_value": 14.33,
       "qty": 0.101323,
       "symbol": "USO",
-      "unrealized_plpc": -0.078485
+      "unrealized_plpc": -0.079233
     },
     {
-      "market_value": 16.86,
+      "market_value": 16.76,
       "qty": 0.108079,
       "symbol": "XBI",
-      "unrealized_plpc": 0.015331
+      "unrealized_plpc": 0.008954
     },
     {
-      "market_value": 30.39,
+      "market_value": 30.25,
       "qty": 0.572467,
       "symbol": "XLB",
-      "unrealized_plpc": -0.000772
+      "unrealized_plpc": -0.005102
     },
     {
-      "market_value": 29.67,
+      "market_value": 29.23,
       "qty": 0.46994,
       "symbol": "XLE",
-      "unrealized_plpc": 0.002199
+      "unrealized_plpc": -0.012485
     },
     {
-      "market_value": 23.02,
+      "market_value": 22.89,
       "qty": 0.39269,
       "symbol": "XLF",
-      "unrealized_plpc": 0.00338
+      "unrealized_plpc": -0.002183
     },
     {
-      "market_value": 20.79,
+      "market_value": 20.74,
       "qty": 0.22783,
       "symbol": "XLP",
-      "unrealized_plpc": 0.009746
+      "unrealized_plpc": 0.007256
     },
     {
-      "market_value": 36.78,
+      "market_value": 36.84,
       "qty": 0.195029,
       "symbol": "XLV",
-      "unrealized_plpc": 0.112821
+      "unrealized_plpc": 0.11465
     }
   ],
   "trades": {
@@ -237,5 +237,5 @@
     "total_pnl": -69.24,
     "win_rate": 0.2727272727272727
   },
-  "updated_utc": "2026-11-11T20:16:18Z"
+  "updated_utc": "2026-11-12T01:53:40Z"
 }
