@@ -1,24 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "10-year Treasury yield above 5% with accelerating global bond selloff and expectations of further Fed hikes, plus Nvidia CEO resignation shock, but equities are roughly flat and recovering, so not a crisis-grade event.",
+  "market_reason": "Treasury 10-year yields are around 5% after a hot inflation reading, and the Fed looks likely to raise rates in December. Nvidia is in turmoil after its CEO resigned and Congress opened a probe. These are serious but widely known and partly priced, and they are not crisis-grade.",
   "market_evidence": [
+    8,
+    21,
     25,
-    26,
-    28,
-    2,
-    4,
-    45
+    30,
+    5
   ],
   "market_headlines": [
-    "Treasury Selloff Accelerates, European Bonds Follow Suit - WSJ",
-    "10-year Treasury yield jumps back above 5% as oil gains and more Fed rate hikes expected - CNBC",
-    "U.S. 10-Year Treasury Tops 5% on Expectations of Higher Interest Rates - WSJ"
+    "Stock Market Midday, Nov. 13: Nasdaq Plunges as Nvidia Turmoil Deepens and Treasury Yields Hit 5% - Yahoo Finance",
+    "Fed on Track to Raise Interest Rates Next Month And Maybe Again in January - Bloomberg.com",
+    "Investors Warn Bond Rout Isn\u2019t Over After Week of Soaring Yields - Bloomberg.com"
   ],
   "vetoes": [],
-  "summary": "Nvidia's CEO resignation and a Treasury selloff (10-year above 5%, Fed hike talk) are the main stories, yet equity indexes are little changed and recovered most early losses. Oil is rebounding on Iran tensions, which supports the energy holdings, and the Paraguay bank collapse and Mexico tariff threat are not directly material to these ETFs.",
+  "summary": "Bond yields are near 5% on hot inflation, and the Fed is signaling rate hikes. Nvidia's turmoil is hurting tech, which adds risk for the 2x S&P exposure in SSO. Oil is range-bound, with the IEA reporting a supply surplus. I see no ETF-specific event that justifies a veto.",
   "dropped": [],
-  "date": "2026-11-12",
-  "generated_utc": "2026-11-12T21:10:55Z",
-  "n_headlines": 193,
+  "date": "2026-11-13",
+  "generated_utc": "2026-11-13T20:27:55Z",
+  "n_headlines": 195,
   "model": "claude-sonnet-5"
 }
