@@ -1,24 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "Hawkish Fed minutes (almost all officials expect more hikes, half-point hike discussed), 5%+ Treasury yields, a 19-month high in the dollar and a tech/AI-led selloff make conditions elevated. Nothing here looks like a crisis-grade shock.",
+  "market_reason": "Sharp equity selloff (Dow -1,084, Nasdaq -2.2%, S&P on a sixth straight loss) amid rate-hike fears and AI-bubble worries, plus a string of bank and tech outages, but nothing indicating crisis-grade systemic failure.",
   "market_evidence": [
-    15,
-    16,
-    21,
-    22,
-    29,
-    2
+    2,
+    3,
+    5,
+    13,
+    89,
+    155
   ],
   "market_headlines": [
-    "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show - CNBC",
-    "Fed\u2019s Waller says officials may need to \u2018shock\u2019 with half-point rate hike - The Hill",
-    "Fed Minutes Show Almost All Officials Expect More Rate Hikes - Bloomberg.com"
+    "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor - Reuters",
+    "Stock Market Today, November 19, 2026: Dow Sinks 1,084 Points, Nasdaq Drops 2.2% After Anthropic Debut - Eurasia Business News",
+    "Anthropic Jumps 27% in Record Debut, S&P 500 Eyes Sixth Straight Loss: Stock Market Today - Benzinga"
   ],
   "vetoes": [],
-  "summary": "Fed minutes point to more rate hikes, long yields are above 5% and the dollar is at a 19-month high. Equities are choppy after Nvidia earnings, and oil is mixed between supply-surplus expectations and Iran/Gulf tensions. None of this is a fresh, unpriced, ETF-specific shock.",
+  "summary": "US equities sold off hard despite Anthropic's record IPO, with J.P. Morgan now calling for Fed hikes at the next three meetings and the S&P on a sixth straight loss. Tech and bank outages and the Paraguay bank failure add to the stress. None of these is a crisis-grade, fresh shock that justifies a level above 1 or an ETF-specific veto, though the 2x S&P (SSO) position is exposed to further downside.",
   "dropped": [],
-  "date": "2026-11-18",
-  "generated_utc": "2026-11-18T21:22:35Z",
-  "n_headlines": 197,
+  "date": "2026-11-19",
+  "generated_utc": "2026-11-19T21:26:53Z",
+  "n_headlines": 200,
   "model": "claude-sonnet-5"
 }
