@@ -1,24 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "Sharp equity selloff (Dow -1,084, Nasdaq -2.2%, S&P on a sixth straight loss) amid rate-hike fears and AI-bubble worries, plus a string of bank and tech outages, but nothing indicating crisis-grade systemic failure.",
+  "market_reason": "AI-driven equity sell-off is accelerating, with Nvidia's worst weekly losing streak since 2008, a hawkish Fed signaling rate hikes and a record reversal, but there is no crisis-grade event or market-structure failure.",
   "market_evidence": [
+    79,
+    140,
+    147,
     2,
-    3,
-    5,
-    13,
-    89,
-    155
+    4
   ],
   "market_headlines": [
-    "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor - Reuters",
-    "Stock Market Today, November 19, 2026: Dow Sinks 1,084 Points, Nasdaq Drops 2.2% After Anthropic Debut - Eurasia Business News",
-    "Anthropic Jumps 27% in Record Debut, S&P 500 Eyes Sixth Straight Loss: Stock Market Today - Benzinga"
+    "US stocks tumble, and the S&P 500 drops as the sell-off for AI stocks accelerates - Barchart.com",
+    "The S&P 500 Just Had Its Biggest Reversal Since March 2020",
+    "Nvidia\u2019s stock heads for a stretch of weekly losses not seen since 2008"
   ],
   "vetoes": [],
-  "summary": "US equities sold off hard despite Anthropic's record IPO, with J.P. Morgan now calling for Fed hikes at the next three meetings and the S&P on a sixth straight loss. Tech and bank outages and the Paraguay bank failure add to the stress. None of these is a crisis-grade, fresh shock that justifies a level above 1 or an ETF-specific veto, though the 2x S&P (SSO) position is exposed to further downside.",
+  "summary": "The market is in an AI-led sell-off while Fed officials argue for rate hikes. That is elevated risk for the 2x S&P position (SSO), but it is mostly priced in and there is no crisis-grade shock. Oil headlines are mixed, with Gulf exports returning to prewar levels and Iran/Houthi tensions persisting. None of that is a specific ETF-level event that warrants a veto.",
   "dropped": [],
-  "date": "2026-11-19",
-  "generated_utc": "2026-11-19T21:26:53Z",
-  "n_headlines": 200,
+  "date": "2026-11-20",
+  "generated_utc": "2026-11-20T21:02:06Z",
+  "n_headlines": 150,
   "model": "claude-sonnet-5"
 }
