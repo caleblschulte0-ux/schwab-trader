@@ -1,23 +1,26 @@
 {
-  "market_risk": 1,
-  "market_reason": "AI-driven equity sell-off is accelerating, with Nvidia's worst weekly losing streak since 2008, a hawkish Fed signaling rate hikes and a record reversal, but there is no crisis-grade event or market-structure failure.",
+  "market_risk": 2,
+  "market_reason": "A sharp AI/tech-led selloff (S&P 500 -3.7% in a day, Nasdaq negative for the year, S&P and Dow in correction, longest S&P losing streak since 2020) is unfolding alongside hawkish Fed rate-hike talk and a flight to Treasuries.",
   "market_evidence": [
-    79,
-    140,
-    147,
     2,
-    4
+    5,
+    8,
+    118,
+    124,
+    121,
+    25,
+    27
   ],
   "market_headlines": [
-    "US stocks tumble, and the S&P 500 drops as the sell-off for AI stocks accelerates - Barchart.com",
-    "The S&P 500 Just Had Its Biggest Reversal Since March 2020",
-    "Nvidia\u2019s stock heads for a stretch of weekly losses not seen since 2008"
+    "S&P 500 Is Set for Longest Losing Run Since 2020: Markets Wrap - Bloomberg.com",
+    "Markets plunge: Nasdaq erases 2026 gains, S&P and Dow enter corrections - NBC News",
+    "Chips are crashing like it's 2008 as the Nasdaq 100 nears a bear market - Yahoo Finance"
   ],
   "vetoes": [],
-  "summary": "The market is in an AI-led sell-off while Fed officials argue for rate hikes. That is elevated risk for the 2x S&P position (SSO), but it is mostly priced in and there is no crisis-grade shock. Oil headlines are mixed, with Gulf exports returning to prewar levels and Iran/Houthi tensions persisting. None of that is a specific ETF-level event that warrants a veto.",
+  "summary": "A broad AI-driven equity rout with the S&P 500 down about 3.7% and in correction is the main risk for the 2x S&P 500 position (SSO), and Fed officials are openly discussing rate hikes. Oil is mixed and there are no ETF-specific events that justify a veto.",
   "dropped": [],
   "date": "2026-11-20",
-  "generated_utc": "2026-11-20T21:02:06Z",
-  "n_headlines": 150,
+  "generated_utc": "2026-11-20T21:17:49Z",
+  "n_headlines": 196,
   "model": "claude-sonnet-5"
 }
