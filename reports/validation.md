@@ -8,8 +8,8 @@ Parameters chosen on **2008-01-01 → 2016-12-31** only (best Sharpe among 48 co
 
 | Parameter set | In-sample CAGR | In-sample Sharpe | **Out-of-sample CAGR** | **Out-of-sample Sharpe** | OOS Max DD | OOS SPY CAGR |
 |---|---:|---:|---:|---:|---:|---:|
-| Best in-sample: top 4, lookbacks [126, 252], rebalance 5d | +7.7% | 0.65 | +12.5% | 0.83 | -19.6% | +14.8% |
-| Shipped defaults: top 8, lookbacks [63, 126, 252], rebalance 10d | +6.2% | 0.57 | +12.0% | 0.89 | -18.0% | +14.8% |
+| Best in-sample: top 4, lookbacks [126, 252], rebalance 5d | +7.7% | 0.65 | +12.1% | 0.81 | -19.6% | +13.8% |
+| Shipped defaults: top 8, lookbacks [63, 126, 252], rebalance 10d | +6.2% | 0.57 | +11.7% | 0.86 | -18.0% | +13.8% |
 
 If the out-of-sample Sharpe collapsed relative to in-sample, the edge was fitted. A modest decay is normal; a similar number means the rules generalise.
 
@@ -17,12 +17,12 @@ If the out-of-sample Sharpe collapsed relative to in-sample, the edge was fitted
 
 | top_n \ lookbacks | [63, 126, 252] | [21, 63, 126, 252] | [126, 252] | [63, 126] | [252] |
 |---|---:|---:|---:|---:|---:|
-| **3** | 0.75 | 0.71 | 0.72 | 0.54 | 0.71 |
-| **4** | 0.75 | 0.70 | 0.75 | 0.57 | 0.71 |
-| **5** | 0.73 | 0.74 | 0.74 | 0.55 | 0.70 |
-| **6** | 0.74 | 0.75 | 0.73 | 0.57 | 0.69 |
-| **7** | 0.75 | 0.74 | 0.72 | 0.60 | 0.66 |
-| **8** | **0.75** | 0.75 | 0.73 | 0.62 | 0.67 |
+| **3** | 0.74 | 0.70 | 0.71 | 0.52 | 0.69 |
+| **4** | 0.73 | 0.69 | 0.73 | 0.55 | 0.69 |
+| **5** | 0.72 | 0.73 | 0.73 | 0.54 | 0.69 |
+| **6** | 0.73 | 0.74 | 0.72 | 0.56 | 0.67 |
+| **7** | 0.74 | 0.73 | 0.70 | 0.58 | 0.65 |
+| **8** | **0.73** | 0.73 | 0.72 | 0.60 | 0.65 |
 
 A robust strategy shows a plateau, not a single spike. The shipped cell is bold.
 
@@ -32,13 +32,13 @@ Same rules, weekly cycle started on five different days:
 
 | Start | CAGR | Sharpe | Max DD |
 |---|---:|---:|---:|
-| 2008-01-02 | +9.3% | 0.75 | -17.8% |
-| 2008-01-03 | +9.1% | 0.74 | -18.0% |
-| 2008-01-04 | +9.4% | 0.76 | -17.8% |
-| 2008-01-07 | +9.3% | 0.75 | -18.0% |
-| 2008-01-08 | +9.4% | 0.76 | -17.8% |
+| 2008-01-02 | +9.1% | 0.73 | -17.8% |
+| 2008-01-03 | +8.9% | 0.73 | -18.0% |
+| 2008-01-04 | +9.2% | 0.75 | -17.8% |
+| 2008-01-07 | +9.1% | 0.74 | -18.0% |
+| 2008-01-08 | +9.2% | 0.74 | -17.8% |
 
-Sharpe spread across start days: 0.74 – 0.76.
+Sharpe spread across start days: 0.73 – 0.75.
 
 ## 4. Block-bootstrap: what a random 5-year stretch could look like
 
@@ -66,22 +66,22 @@ Everything below is implemented in `strategy.py`; the shipped default is the row
 
 | Variant | 2008→ CAGR / Sharpe / MaxDD | 2015→ CAGR / Sharpe / MaxDD | OOS 2017→ CAGR / Sharpe / MaxDD |
 |---|---|---|---|
-| ✅ Shipped defaults | +9.3% / 0.75 / -18% | +10.4% / 0.81 / -18% | +12.0% / 0.89 / -18% |
-| previous defaults (core 30%, top 6, 200-day) | +9.7% / 0.75 / -20% | +10.0% / 0.76 / -18% | +12.0% / 0.86 / -18% |
-| no core sleeve (100% rotation) | +8.1% / 0.71 / -14% | +8.3% / 0.72 / -15% | +10.2% / 0.83 / -15% |
-| fixed SPY core instead of adaptive | +8.4% / 0.77 / -17% | +8.3% / 0.77 / -16% | +10.2% / 0.89 / -16% |
-| 'growth' preset: fixed QQQ core | +10.8% / 0.87 / -18% | +12.0% / 0.92 / -18% | +14.1% / 1.03 / -18% |
-| 'aggressive' preset: 50% in 2x SPY/QQQ (SSO/QLD), trend-timed | +14.6% / 0.79 / -28% | +15.9% / 0.82 / -28% | +18.1% / 0.88 / -28% |
-| aggressive + 15% vol cap (rejected) | +9.9% / 0.75 / -23% | +10.2% / 0.75 / -23% | +11.3% / 0.81 / -23% |
-| single rebalance tranche (no stagger) | +9.0% / 0.73 / -18% | +9.9% / 0.77 / -19% | +12.2% / 0.90 / -17% |
-| no cluster cap | +9.3% / 0.75 / -18% | +10.4% / 0.81 / -18% | +12.0% / 0.89 / -18% |
-| top 5 / weekly (previous defaults) | +9.9% / 0.75 / -19% | +11.0% / 0.80 / -18% | +12.6% / 0.87 / -18% |
-| defensive asset by momentum (TLT/IEF/GLD) | +9.9% / 0.73 / -26% | +11.1% / 0.81 / -26% | +13.2% / 0.91 / -26% |
-| breadth regime switch (<40% → all defensive) | +8.6% / 0.73 / -20% | +10.0% / 0.82 / -15% | +11.2% / 0.87 / -15% |
-| portfolio vol target 12% | +7.7% / 0.74 / -16% | +8.1% / 0.75 / -16% | +9.2% / 0.82 / -16% |
-| daily rebalance + hysteresis | +9.2% / 0.74 / -19% | +10.5% / 0.81 / -17% | +12.0% / 0.89 / -17% |
-| + mean-reversion sleeve 25% | +8.7% / 0.71 / -18% | +10.0% / 0.78 / -18% | +11.6% / 0.86 / -18% |
-| include 1-month lookback | +9.2% / 0.75 / -18% | +9.9% / 0.77 / -18% | +11.4% / 0.85 / -18% |
-| equal weights instead of inverse-vol | +9.9% / 0.77 / -19% | +11.0% / 0.82 / -20% | +12.6% / 0.89 / -20% |
+| ✅ Shipped defaults | +9.1% / 0.73 / -18% | +10.1% / 0.79 / -18% | +11.7% / 0.86 / -18% |
+| previous defaults (core 30%, top 6, 200-day) | +9.4% / 0.73 / -20% | +9.5% / 0.73 / -18% | +11.4% / 0.82 / -18% |
+| no core sleeve (100% rotation) | +7.9% / 0.69 / -14% | +7.9% / 0.69 / -15% | +9.7% / 0.80 / -15% |
+| fixed SPY core instead of adaptive | +8.2% / 0.76 / -17% | +8.0% / 0.74 / -16% | +9.8% / 0.86 / -16% |
+| 'growth' preset: fixed QQQ core | +10.7% / 0.86 / -18% | +11.7% / 0.91 / -18% | +13.8% / 1.02 / -18% |
+| 'aggressive' preset: 50% in 2x SPY/QQQ (SSO/QLD), trend-timed | +14.4% / 0.78 / -28% | +15.5% / 0.80 / -28% | +17.6% / 0.86 / -28% |
+| aggressive + 15% vol cap (rejected) | +9.7% / 0.73 / -23% | +9.8% / 0.72 / -23% | +10.9% / 0.78 / -23% |
+| single rebalance tranche (no stagger) | +8.8% / 0.72 / -18% | +9.6% / 0.75 / -19% | +11.8% / 0.87 / -17% |
+| no cluster cap | +9.1% / 0.73 / -18% | +10.1% / 0.79 / -18% | +11.7% / 0.86 / -18% |
+| top 5 / weekly (previous defaults) | +9.6% / 0.74 / -19% | +10.6% / 0.78 / -18% | +12.2% / 0.85 / -18% |
+| defensive asset by momentum (TLT/IEF/GLD) | +9.7% / 0.72 / -26% | +10.8% / 0.79 / -26% | +12.8% / 0.88 / -26% |
+| breadth regime switch (<40% → all defensive) | +8.5% / 0.72 / -20% | +9.8% / 0.81 / -15% | +11.0% / 0.86 / -15% |
+| portfolio vol target 12% | +7.5% / 0.72 / -16% | +7.8% / 0.72 / -16% | +8.8% / 0.79 / -16% |
+| daily rebalance + hysteresis | +9.1% / 0.73 / -19% | +10.2% / 0.79 / -17% | +11.7% / 0.86 / -17% |
+| + mean-reversion sleeve 25% | +8.5% / 0.69 / -18% | +9.7% / 0.75 / -18% | +11.2% / 0.83 / -18% |
+| include 1-month lookback | +9.0% / 0.73 / -18% | +9.6% / 0.76 / -18% | +11.1% / 0.83 / -18% |
+| equal weights instead of inverse-vol | +9.7% / 0.75 / -19% | +10.7% / 0.80 / -20% | +12.1% / 0.86 / -20% |
 
 _Past performance is not a promise of future results._
