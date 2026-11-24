@@ -1,26 +1,23 @@
 {
-  "market_risk": 2,
-  "market_reason": "A sharp AI/tech-led selloff (S&P 500 -3.7% in a day, Nasdaq negative for the year, S&P and Dow in correction, longest S&P losing streak since 2020) is unfolding alongside hawkish Fed rate-hike talk and a flight to Treasuries.",
+  "market_risk": 1,
+  "market_reason": "A violent Nvidia-driven swing (a sharp sell-off last week, then a 31% Nvidia rebound and a Nasdaq gain of about 7% today) with rising Treasury yields and growing Fed rate-hike odds makes conditions volatile. The rebound itself reduces the immediate crisis risk.",
   "market_evidence": [
     2,
-    5,
-    8,
-    118,
-    124,
-    121,
-    25,
-    27
+    4,
+    12,
+    14,
+    21
   ],
   "market_headlines": [
-    "S&P 500 Is Set for Longest Losing Run Since 2020: Markets Wrap - Bloomberg.com",
-    "Markets plunge: Nasdaq erases 2026 gains, S&P and Dow enter corrections - NBC News",
-    "Chips are crashing like it's 2008 as the Nasdaq 100 nears a bear market - Yahoo Finance"
+    "Stocks surge in best day since 2025, adding trillions in value after Jensen Huang returns to Nvidia - NBC News",
+    "Stock market rebounds sharply after sell-off, Nvidia closes up more than 31% - ABC News - Breaking News, Latest News and Videos",
+    "US stocks surge and recover half of last week\u2019s plunge after Jensen Huang returns as Nvidia\u2019s CEO - AP News"
   ],
   "vetoes": [],
-  "summary": "A broad AI-driven equity rout with the S&P 500 down about 3.7% and in correction is the main risk for the 2x S&P 500 position (SSO), and Fed officials are openly discussing rate hikes. Oil is mixed and there are no ETF-specific events that justify a veto.",
+  "summary": "Stocks recovered about half of last week's plunge after Jensen Huang was reinstated as Nvidia CEO. Rate-hike odds are rising, yields are up, and oil is falling on supply recovery, so the news is volatile but not a crisis. No ETF has a specific new exposure that justifies a veto.",
   "dropped": [],
-  "date": "2026-11-20",
-  "generated_utc": "2026-11-20T21:17:49Z",
-  "n_headlines": 196,
+  "date": "2026-11-23",
+  "generated_utc": "2026-11-24T00:47:26Z",
+  "n_headlines": 190,
   "model": "claude-sonnet-5"
 }
