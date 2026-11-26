@@ -1,23 +1,23 @@
 {
   "market_risk": 1,
-  "market_reason": "AI-led selloff pushed the Nasdaq 100 into a bear market, and new tariffs and hot inflation add pressure, but the S&P recovered most of its intraday losses and the move is already priced and widely known.",
+  "market_reason": "Tech/AI selloff (Nasdaq-100 near bear market, S&P down ~3% earlier), new tariff proposals, a hawkish Fed poised to hike, and fresh Gulf attacks lifting oil. These are elevated but largely priced, and US markets are closed for Thanksgiving.",
   "market_evidence": [
-    113,
+    116,
     125,
-    122,
-    1,
-    61
+    5,
+    61,
+    44
   ],
   "market_headlines": [
-    "Nasdaq 100 Enters Bear Market Territory as AI Angst Fuels Losses - Bloomberg",
-    "AI rout drags Wall Street lower, S&P 500 slumps 3% - Barchart.com",
-    "Wall Street recovers most early losses as pullback in AI stocks eases - CBC"
+    "Nasdaq 100 teeters comes close to bear market as Wall Street tech stocks fall further - Sky News",
+    "AI rout drags Wall Street lower, S&P 500 slumps 3% - Anchorage Daily News",
+    "Hawkish Fed poised to raise rates despite stock market turmoil - Financial Times"
   ],
   "vetoes": [],
-  "summary": "The AI-driven selloff, new tariffs on 14 trading partners and hot PCE inflation are pressuring equities. The S&P recovered intraday, and the Middle East oil tensions are ongoing rather than a new shock. No ETF-specific event justifies a veto.",
+  "summary": "Risk is elevated from the AI-driven equity slide, new Trump tariff proposals and a hawkish Fed, which matter for the 25% SSO position. Renewed Middle East and Strait of Hormuz attacks are lifting crude to a 3-week high, which mostly helps the small XLE, USO and DBC holdings and doesn't justify a veto.",
   "dropped": [],
-  "date": "2026-11-25",
-  "generated_utc": "2026-11-25T22:28:01Z",
-  "n_headlines": 195,
+  "date": "2026-11-26",
+  "generated_utc": "2026-11-26T22:16:37Z",
+  "n_headlines": 196,
   "model": "claude-sonnet-5"
 }
