@@ -1,19 +1,19 @@
 {
   "account": {
     "cash": 0.03,
-    "equity": 904.91
+    "equity": 913.63
   },
   "equity": {
-    "cagr": -0.43439257648639074,
-    "days": 64,
-    "end": "2026-11-25",
-    "end_equity": 904.91,
+    "cagr": -0.393196388563413,
+    "days": 66,
+    "end": "2026-11-27",
+    "end_equity": 913.63,
     "max_drawdown": -0.1401799976623681,
-    "n_points": 47,
-    "sharpe": -3.395603546374429,
+    "n_points": 48,
+    "sharpe": -2.983037949200234,
     "start": "2026-09-22",
     "start_equity": 1000.0,
-    "total_return": -0.09509000000000001
+    "total_return": -0.08637000000000006
   },
   "equity_curve": [
     [
@@ -203,69 +203,73 @@
     [
       "2026-11-25",
       904.91
+    ],
+    [
+      "2026-11-27",
+      913.63
     ]
   ],
   "mode": "sim",
   "positions": [
     {
-      "market_value": 493.09,
+      "market_value": 493.25,
       "qty": 5.380723,
       "symbol": "BIL",
-      "unrealized_plpc": 0.000945
+      "unrealized_plpc": 0.001272
     },
     {
-      "market_value": 32.57,
+      "market_value": 32.88,
       "qty": 1.112757,
       "symbol": "DBC",
-      "unrealized_plpc": -0.119477
+      "unrealized_plpc": -0.111054
     },
     {
-      "market_value": 211.15,
+      "market_value": 218.06,
       "qty": 3.508662,
       "symbol": "SSO",
-      "unrealized_plpc": -0.09194
+      "unrealized_plpc": -0.062214
     },
     {
-      "market_value": 14.17,
+      "market_value": 13.96,
       "qty": 0.101323,
       "symbol": "USO",
-      "unrealized_plpc": -0.089388
+      "unrealized_plpc": -0.103188
     },
     {
-      "market_value": 16.93,
+      "market_value": 17.13,
       "qty": 0.108079,
       "symbol": "XBI",
-      "unrealized_plpc": 0.018975
+      "unrealized_plpc": 0.031338
     },
     {
-      "market_value": 29.32,
+      "market_value": 29.85,
       "qty": 0.572467,
       "symbol": "XLB",
-      "unrealized_plpc": -0.035975
+      "unrealized_plpc": -0.018279
     },
     {
-      "market_value": 28.62,
+      "market_value": 28.98,
       "qty": 0.46994,
       "symbol": "XLE",
-      "unrealized_plpc": -0.033279
+      "unrealized_plpc": -0.021056
     },
     {
-      "market_value": 22.19,
+      "market_value": 22.45,
       "qty": 0.39269,
       "symbol": "XLF",
-      "unrealized_plpc": -0.032654
+      "unrealized_plpc": -0.021527
     },
     {
-      "market_value": 21.03,
+      "market_value": 21.12,
       "qty": 0.22783,
       "symbol": "XLP",
-      "unrealized_plpc": 0.021309
+      "unrealized_plpc": 0.025514
     },
     {
-      "market_value": 35.82,
+      "market_value": 35.92,
       "qty": 0.195029,
       "symbol": "XLV",
-      "unrealized_plpc": 0.083963
+      "unrealized_plpc": 0.087032
     }
   ],
   "trades": {
@@ -277,5 +281,5 @@
     "total_pnl": -69.24,
     "win_rate": 0.2727272727272727
   },
-  "updated_utc": "2026-11-26T22:17:22Z"
+  "updated_utc": "2026-11-27T21:56:42Z"
 }

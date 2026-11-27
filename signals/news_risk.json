@@ -1,23 +1,24 @@
 {
   "market_risk": 1,
-  "market_reason": "Tech/AI selloff (Nasdaq-100 near bear market, S&P down ~3% earlier), new tariff proposals, a hawkish Fed poised to hike, and fresh Gulf attacks lifting oil. These are elevated but largely priced, and US markets are closed for Thanksgiving.",
+  "market_reason": "Markets are volatile after a November tech rout and S&P correction, with long yields near 5.3%, new US tariff hikes, a Fed rate hike, and Middle East tensions, but equities rebounded strongly today and nothing here is crisis-grade.",
   "market_evidence": [
-    116,
-    125,
-    5,
-    61,
-    44
+    8,
+    10,
+    14,
+    27,
+    65,
+    45
   ],
   "market_headlines": [
-    "Nasdaq 100 teeters comes close to bear market as Wall Street tech stocks fall further - Sky News",
-    "AI rout drags Wall Street lower, S&P 500 slumps 3% - Anchorage Daily News",
-    "Hawkish Fed poised to raise rates despite stock market turmoil - Financial Times"
+    "Stocks snap from a $6 trillion washout to a $3.5 trillion surge as Nvidia, Micron, and SpaceX bounce back - Yahoo Finance",
+    "Market Wrap: Stocks Gain 5.69%, Led by Basic Materials and Communication Services - Morningstar",
+    "Federal Reserve raises interest rates for the 1st time since 2023 - ABC News - Breaking News, Latest News and Videos"
   ],
   "vetoes": [],
-  "summary": "Risk is elevated from the AI-driven equity slide, new Trump tariff proposals and a hawkish Fed, which matter for the 25% SSO position. Renewed Middle East and Strait of Hormuz attacks are lifting crude to a 3-week high, which mostly helps the small XLE, USO and DBC holdings and doesn't justify a veto.",
+  "summary": "Stocks rebounded sharply today after a bruising November, while long-end yields near 5.3%, new US tariffs on China and the EU, and Iran-linked drone and tanker attacks keep the backdrop elevated. No single fresh, concrete event directly threatens a specific held ETF enough to justify a veto.",
   "dropped": [],
-  "date": "2026-11-26",
-  "generated_utc": "2026-11-26T22:16:37Z",
-  "n_headlines": 196,
+  "date": "2026-11-27",
+  "generated_utc": "2026-11-27T21:55:46Z",
+  "n_headlines": 194,
   "model": "claude-sonnet-5"
 }
